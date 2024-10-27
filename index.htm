@@ -6,12 +6,12 @@
     <title>Clickable Table</title>
     <style>
         body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #F90;
-	text-align: center;
-	background-image: url();
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F90; /* Background color */
+            text-align: center;
+            background-image: url(); /* Add your background image URL here */
         }
         .header {
             margin: 20px 0;
@@ -21,7 +21,8 @@
             height: auto;
         }
         table {
-            width: 80%;
+            width: 100%; /* Full width for responsiveness */
+            max-width: 800px; /* Max width for larger screens */
             margin: 20px auto;
             border-collapse: collapse;
         }
@@ -30,6 +31,7 @@
             padding: 15px;
             cursor: pointer;
             transition: background-color 0.3s;
+            text-align: center; /* Center text */
         }
         th {
             background-color: #4CAF50;
@@ -39,20 +41,24 @@
             background-color: #f1f1f1; /* Hover effect for cells */
         }
     </style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 
 <div class="header">
-  <img src="images/banner.png" alt="Header Image">
-    </div>
-<table width="80%" height="268" border="1" cellpadding="1" cellspacing="1">
-  <tr>
-    <td width="50%"><div align="center"><a href="https://studio.youtube.com/channel/UCjtuQjCb7JF5IDsa5Tvjd_w/videos?o=U">Youtube Channel</a></div></td>
-    <td width="50%">&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="center"><a href="https://studio.youtube.com/channel/UCjtuQjCb7JF5IDsa5Tvjd_w/videos?o=U">Get Mobile App</a></div></td>
-  </tr>
+    <img src="images/banner.png" alt="Header Image">
+</div>
+
+<table>
+    <tr>
+        <td><a href="https://studio.youtube.com/channel/UCjtuQjCb7JF5IDsa5Tvjd_w/videos?o=U">Youtube Channel</a></td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><a href="https://studio.youtube.com/channel/UCjtuQjCb7JF5IDsa5Tvjd_w/videos?o=U">Get Mobile App</a></td>
+    </tr>
 </table>
+
+</body>
+</html>
