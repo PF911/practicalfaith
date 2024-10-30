@@ -15,20 +15,22 @@
         .header {
             margin: 20px 0;
         }
-        img {
+        .header img {
             max-width: 100%;
             height: auto;
         }
         table {
-            width: 80%;
+            width: 90%;
+            max-width: 800px;
             margin: 20px auto;
             border-collapse: collapse;
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 15px;
+            padding: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
+            vertical-align: middle;
         }
         th {
             background-color: #4CAF50;
@@ -36,6 +38,30 @@
         }
         td:hover {
             background-color: #f1f1f1;
+        }
+        td img {
+            max-width: 100%;
+            height: auto;
+        }
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+        .responsive-iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+            }
         }
     </style>
 </head>
@@ -47,41 +73,35 @@
 
 <table>
     <tr>
-        <p>Making the Bible Relevant for Today's Living </p>
         <td colspan="3">
-            <div align="center">
-              <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92" 
-                title="YouTube Playlist"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen> </iframe>
+            <p>Making the Bible Relevant for Today's Living</p>
+            <div class="responsive-iframe">
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92" 
+                    title="YouTube Playlist"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
-            <div align="center"></div>
         </td>
     </tr>
     <tr>
         <td>
-            <div align="center">
-                <a href="mailto:Rev@PracticalFaith.net?subject=Inquiry for Practical Faith">
-                    <img src="images/email.png" width="136" height="81" alt="Email Us">
-                </a>
-            </div>
+            <a href="mailto:Rev@PracticalFaith.net?subject=Inquiry for Practical Faith">
+                <img src="images/email.png" alt="Email Us">
+            </a>
         </td>
         <td>
-            <div align="center">
-                <a href="https://play.google.com/store/apps/details?id=com.gappsy.dashboard.www.android5f1e272990b8c&pli=1">
-                    <img src="images/google.png" width="313" height="122" alt="Google Play">
-                </a>
-            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.gappsy.dashboard.www.android5f1e272990b8c&pli=1">
+                <img src="images/google.png" alt="Google Play">
+            </a>
         </td>
-        <td><a href="https://form.jotform.com/242675311084151"><img src="images/topics.png" width="172" height="144" alt="JotForm Topics"></a></td>
-    </tr>
-    <tr>
-        <td colspan="3">
-        <!-- Embed YouTube Playlist --></td>
+        <td>
+            <a href="https://form.jotform.com/242675311084151">
+                <img src="images/topics.png" alt="JotForm Topics">
+            </a>
+        </td>
     </tr>
 </table>
 
