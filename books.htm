@@ -236,5 +236,12 @@
     container.scrollBy({ left: amount, behavior: 'smooth' });
   }
 </script>
-</body>
+<script>
+function scrollContainer(amount) {
+  const container = document.getElementById('book-scroll-container');
+  if (container) {
+    container.scrollBy({ left: amount, behavior: 'smooth' });
+  }
+}
+</script></body>
 </html>
