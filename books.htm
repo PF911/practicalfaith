@@ -123,73 +123,92 @@
       line-height: 1.2;
       font-weight: bold;
     }
-    </style>
+    
+    .book-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .book img {
+      width: 150px;
+      height: auto;
+      border-radius: 5px;
+    }
+    .book-details {
+      text-align: left;
+      flex: 1;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #333;
+      margin: 0.2rem 0 0.5rem 0;
+    }
+    .secure-note {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      color: #222;
+    }
+
+    .book {
+      width: 550px;
+      height: 445px;
+      overflow: hidden;
+    }
+    .book-inner {
+      height: 100%;
+    }
+
+    .arrow-fixed {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: #fc9101;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .arrow-fixed.left {
+      left: 10px;
+    }
+    .arrow-fixed.right {
+      right: 10px;
+    }
+</style>
 </head>
-<body>
+<body><div class="arrow-fixed left" onclick="scrollContainer(-300)">←</div><div class="arrow-fixed right" onclick="scrollContainer(300)">→</div>
 <div class="header">
 <img alt="Header Image" src="images/banner.png" style="max-width: 100%; height: auto;"/>
 </div>
 <h1 class="Red" style="text-align:center;">Explore Our Faith Book Collection</h1>
 <div class="wrapper">
 <div class="container" id="book-scroll-container">
-<div class="book">
-<img alt="Book Cover 1" height="445" src="images/books/disciple.jpg" width="289"/>
-<div class="book-title">Who Really Was The Disciple Whom Jesus Loved?</div>
-<div class="buttons">
+<div class="book"><div class="book-inner"><img alt="Book Cover 1" height="445" src="images/books/disciple.jpg" width="289"/><div class="book-details"><div class="book-title">Who Really Was The Disciple Whom Jesus Loved?</div><div class="buttons">
 <a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/>
 <a href="https://www.amazon.com/dp/B007VDEEL0" target="_blank">Amazon – $7.99</a>
-</div>
-</div>
-<div class="book">
-<img alt="Book Cover 2" height="445" src="images/books/messiah.jpg" width="289"/>
-<div class="book-title">
-<p>The Messianic Secret </p>
-<p>What Jesus Didn't Want</p>
-<p>Some People to Know</p>
-</div>
-<div class="buttons">
+</div><div class="secure-note">Secure purchase through PayPal or credit card</div></div></div></div>
+<div class="book"><div class="book-inner"><img alt="Book Cover 2" height="445" src="images/books/messiah.jpg" width="289"/><div class="book-details"><div class="book-title">The Messianic Secret</div><div class="subtitle">What Jesus Didn't Want Some People to Know</div><div class="buttons">
 <a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/>
 <a href="https://www.amazon.com/dp/B007WHZRIE" target="_blank">Amazon – $7.99</a>
-</div>
-</div>
-<div class="book">
-<img alt="Book Cover 3" height="445" src="images/books/people.jpg" width="289"/>
-<div class="book-title">
-<p>How to Help People In Trouble</p>
-<p>A Pastor's Perspective</p>
-</div>
-<div class="buttons">
+</div><div class="secure-note">Secure purchase through PayPal or credit card</div></div></div></div>
+<div class="book"><div class="book-inner"><img alt="Book Cover 3" height="445" src="images/books/people.jpg" width="289"/><div class="book-details"><div class="book-title">How to Help People In Trouble</div><div class="subtitle">A Pastor's Perspective</div><div class="buttons">
 <a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/>
 <a href="https://www.amazon.com/dp/B007WWK9IW" target="_blank">Amazon – $7.99</a>
-</div>
-</div>
-<div class="book">
-<img alt="Book Cover 4" height="445" src="images/books/prayer.jpg" width="289"/>
-<div class="book-title">
-<p>How to Talk To God</p>
-<p>Prerequisites Of Prayer</p>
-</div>
-<div class="buttons">
+</div><div class="secure-note">Secure purchase through PayPal or credit card</div></div></div></div>
+<div class="book"><div class="book-inner"><img alt="Book Cover 4" height="445" src="images/books/prayer.jpg" width="289"/><div class="book-details"><div class="book-title">How to Talk To God</div><div class="subtitle">Prerequisites Of Prayer</div><div class="buttons">
 <a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/>
 <a href="https://www.amazon.com/dp/B007X0AVKO" target="_blank">Amazon – $7.99</a>
-</div>
-</div>
-<div class="book">
-<img alt="Book Cover 5" height="445" src="images/books/theodicy.jpg" width="289"/>
-<div class="book-title">
-<p>Theodicy</p>
-<p>Why People Suffer</p>
-</div>
-<div class="buttons">
+</div><div class="secure-note">Secure purchase through PayPal or credit card</div></div></div></div>
+<div class="book"><div class="book-inner"><img alt="Book Cover 5" height="445" src="images/books/theodicy.jpg" width="289"/><div class="book-details"><div class="book-title">Theodicy</div><div class="subtitle">Why People Suffer</div><div class="buttons">
 <a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/>
 <a href="https://www.amazon.com/dp/B007WHS8HQ" target="_blank">Amazon – $7.99</a>
-</div>
-</div>
-<div class="book"><img alt="Book Cover 6" height="445" src="images/books/torah.jpg" width="289"/>
-<div class="book-title">
-<p>The Torah</p>
-<p>Owensian Color Coded Bible</p>
-</div><div class="buttons"><a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/><a href="https://www.amazon.com/dp/B007XJ6X3E" target="_blank">Amazon – $7.99</a></div></div></div>
+</div><div class="secure-note">Secure purchase through PayPal or credit card</div></div></div></div>
+<div class="book"><div class="book-inner"><img alt="Book Cover 6" height="445" src="images/books/torah.jpg" width="289"/><div class="book-details"><div class="book-title">The Torah</div><div class="subtitle">Owensian Color Coded Bible</div><div class="buttons"><a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><br/><a href="https://www.amazon.com/dp/B007XJ6X3E" target="_blank">Amazon – $7.99</a></div><div class="secure-note">Secure purchase through PayPal or credit card</div></div></div></div></div>
 <div class="arrow-controls">
 <button class="arrow-btn" onclick="scrollContainer(-300)">←</button>
 <button class="arrow-btn" onclick="scrollContainer(300)">→</button>
