@@ -7,7 +7,7 @@
 <title>Faith Books Collection</title>
 <style>
     body {
-      margin: 0;
+      margin: 1;
       font-family: Arial, sans-serif;
       background-image: linear-gradient(to bottom, #ffec00, #fc9101);
       color: #000;
@@ -211,17 +211,31 @@
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    overflow-x: hidden;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .book {
+    width: 100%;
+    max-width: 480px;
+    margin: 1rem auto;
+  }
+}
 </style>
 </head>
 <body><div class="arrow-fixed left" onclick="scrollContainer(-300)">←</div><div class="arrow-fixed right" onclick="scrollContainer(300)">→</div>
-<div class="header">
-<img alt="Header Image" src="images/banner.png" style="max-width: 65%; height: auto;"/>
+<div class="header"><br>
+<img alt="Header Image" src="images/banner.png" style="max-width: 70%; height: auto;"/>
 </div>
 <h1 class="Red" style="text-align:center;">Explore Our Faith Book Collection</h1>
 <div class="wrapper">
 <div class="container" id="book-scroll-container">
 <div class="book"><div class="book-inner"><img alt="Book Cover 1" height="445" src="images/books/disciple.jpg" width="289"/><div class="book-details"><div class="book-title">Who Really Was The Disciple Whom Jesus Loved?</div><div class="buttons">
-<a href="https://your-payhip-link" target="_blank">Buy Direct – $6.99</a><div class="secure-note">Secure purchase through PayPal or credit card</div><br/>
+<a href="https://payhip.com/b/jni9y?builder_mode=1&environment_id_encrypted=PVBrQR7qz8&show_builder_mode_previewing_notification=1" target="_blank">Buy Direct – $6.99</a><div class="secure-note">Secure purchase through PayPal or credit card</div><br/>
 <a href="https://www.amazon.com/dp/B007VDEEL0" target="_blank">Amazon – $7.99</a>
 </div></div></div></div>
 <div class="book"><div class="book-inner"><img alt="Book Cover 2" height="445" src="images/books/messiah.jpg" width="289"/><div class="book-details"><div class="book-title">The Messianic Secret</div><div class="subtitle">What Jesus Didn't Want Some People to Know</div><div class="buttons">
