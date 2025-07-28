@@ -231,6 +231,23 @@
     padding-left: 0.75rem;
   }
 }
+
+.back-button {
+  color: white !important;
+  display: inline-block;
+  background-color: #A569BD;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.back-link {
+  text-align: center;
+  margin: -1rem 0 0rem 0;
+}
 </style>
 </head>
 <body><div class="arrow-fixed left" onclick="scrollContainer(-300)">←</div><div class="arrow-fixed right" onclick="scrollContainer(300)">→</div>
@@ -264,7 +281,7 @@
 <div class="arrow-controls"></div>
 </div>
 <div class="back-link">
-<a href="index.htm">← Back to PracticalFaith.net</a>
+<a class="back-button" href="index.htm">← Back to PracticalFaith.net</a>
 </div>
 <script>
   function scrollContainer(amount) {
