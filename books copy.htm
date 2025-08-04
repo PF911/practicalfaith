@@ -35,8 +35,8 @@ body{padding-left:.75rem}}
 </style>
 </head>
 <body>
-<div class="arrow-fixed left" onclick="scrollContainer(-300)">←</div>
-<div class="arrow-fixed right" onclick="scrollContainer(300)">→</div>
+<div class="arrow-fixed left" onclick="scrollContainer(-573)">←</div>
+<div class="arrow-fixed right" onclick="scrollContainer(573)">→</div>
 <div class="header"><br/><img alt="Header Image" src="images/banner.png" style="max-width:70%;height:auto;"/></div>
 <h1 class="Red" style="text-align:center;">Explore Our Practical Faith Book Collection</h1>
 <div class="wrapper">
@@ -86,25 +86,30 @@ body{padding-left:.75rem}}
 <div id="synopsis-content" style="margin-top:20px;">[Your synopsis goes here]</div></div>
 
 <script>
-function scrollContainer(a){const c=document.getElementById('book-scroll-container');if(c)c.scrollBy({left:a,behavior:'smooth'})}
-let scrollInterval;
-document.querySelector('.arrow-fixed.left').addEventListener('mouseenter',()=>{scrollInterval=setInterval(()=>scrollContainer(-10),10)});
-document.querySelector('.arrow-fixed.right').addEventListener('mouseenter',()=>{scrollInterval=setInterval(()=>scrollContainer(10),10)});
-document.querySelector('.arrow-fixed.left').addEventListener('mouseleave',()=>clearInterval(scrollInterval));
-document.querySelector('.arrow-fixed.right').addEventListener('mouseleave',()=>clearInterval(scrollInterval));
-function showSynopsis(id){
-const content={
-1:"The Apostle John or accepted tradition? The true identity of the unnamed disciple whom Jesus loved. Re-read familiar verses with fresh eyes and discover truth hidden in plain sight.",
-2:"What if everything you thought you knew about the bride of Christ was incomplete? A clear and thought-provoking study, journey through biblical symbolism and prophecy to uncover the true identity of the Bride",
-3:"Was Jesus intentionally keeping His identity hidden? This book explores the 'Messianic Secret' — why Jesus sometimes told people not to speak of Him — and what it reveals about God's timing and purpose.",
-4:"A compassionate guide to understanding emotional and spiritual struggles, written from a pastor's heart. Learn how to truly help those who are hurting, with biblical wisdom and practical support.",
-5:"Prayer isn't just about words — it's about preparation. Discover what the Bible says are the true prerequisites to meaningful prayer and how to align your heart with God before you even begin.",
-6:"Why does God allow suffering? This book tackles the age-old question of human pain from a biblical perspective, offering insights into divine justice, purpose, and the hope that anchors the soul.",
-7:"An innovative tool for serious Bible study. This color-coded Torah offers a unique visual format to help you understand God's law, patterns, and principles through the eyes of Rev Owens' detailed analysis.",
-8:"A reluctant prophet, a great fish, and a lesson in divine mercy. Jonah's story isn't just ancient history—it's about us and our hearts today."
-};
-document.getElementById('synopsis-content').innerText=content[id]||"Synopsis coming soon.";
-document.getElementById('synopsis-modal').style.display='block';
+function scrollContainer(amount) {
+    var container = document.getElementById('book-scroll-container');
+    if (container) {
+        container.scrollBy({
+            left: amount,
+            behavior: 'smooth'
+        });
+    }
+}
+
+function showSynopsis(id) {
+    var content = {
+        1: "The Apostle John or accepted tradition? The true identity of the unnamed disciple whom Jesus loved. Re-read familiar verses with fresh eyes and discover truth hidden in plain sight.",
+        2: "What if everything you thought you knew about the bride of Christ was incomplete? A clear and thought-provoking study, journey through biblical symbolism and prophecy to uncover the true identity of the Bride",
+        3: "Was Jesus intentionally keeping His identity hidden? This book explores the 'Messianic Secret' — why Jesus sometimes told people not to speak of Him — and what it reveals about God's timing and purpose.",
+        4: "A compassionate guide to understanding emotional and spiritual struggles, written from a pastor's heart. Learn how to truly help those who are hurting, with biblical wisdom and practical support.",
+        5: "Prayer isn't just about words — it's about preparation. Discover what the Bible says are the true prerequisites to meaningful prayer and how to align your heart with God before you even begin.",
+        6: "Why does God allow suffering? This book tackles the age-old question of human pain from a biblical perspective, offering insights into divine justice, purpose, and the hope that anchors the soul.",
+        7: "An innovative tool for serious Bible study. This color-coded Torah offers a unique visual format to help you understand God's law, patterns, and principles through the eyes of Rev Owens' detailed analysis.",
+        8: "A reluctant prophet, a great fish, and a lesson in divine mercy. Jonah's story isn't just ancient history—it's about us and our hearts today."
+    };
+    
+    document.getElementById('synopsis-content').innerText = content[id] || "Synopsis coming soon.";
+    document.getElementById('synopsis-modal').style.display = 'block';
 }
 </script>
 </body>
