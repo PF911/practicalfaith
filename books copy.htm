@@ -1,160 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M57WTTEXXQ"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFLHGT7168"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-M57WTTEXXQ');
+    gtag('config', 'G-WFLHGT7168');
   </script>
-  
-  <!-- Your other head content -->
- 
 
-
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Faith Books Collection</title>
-<style>
-body{margin:1;font-family:Arial,sans-serif;background-image:linear-gradient(to bottom,#ffec00,#fc9101);color:#000}
-.header{text-align:center}.header img{width:100%;height:75%}
-.wrapper{display:flex;flex-direction:column;align-items:center;position:relative}
-.container{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:1rem 0 2rem 0;scroll-behavior:smooth;width:100%}
-.book{flex:0 0 auto;width:550px;margin:.1rem 1.5rem;background-color:rgba(255,255,255,.2);border-radius:10px;padding:1rem;scroll-snap-align:center;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.2);height:auto;overflow:hidden}
-.book img{width:150px;height:auto;border-radius:5px;max-width:100%}
-.book-inner{display:flex;flex-direction:row;align-items:flex-start;gap:2.5rem;height:100%}
-.book-details{text-align:left;flex:1}
-.book-title{font-size:1.1rem;color:#AA0012;margin:.15rem 0;line-height:1.2;font-weight:bold}
-.subtitle{font-size:.95rem;font-style:italic;color:#333;margin:.2rem 0 .5rem 0}
-.buttons{margin-top:1rem}
-.buttons a{display:inline-block;padding:.6rem 1rem;background-color:#fc9101;color:#000;text-decoration:none;border-radius:50px;font-weight:bold;font-size:16px;margin:.25rem .5rem .25rem 0}
-.buttons a:last-child{background-color:#4CAF50;color:white}
-.secure-note{font-size:.8rem;margin-top:.5rem;color:#222}
-.arrow-fixed{position:fixed;top:50%;transform:translateY(-50%);font-size:3rem;color:#fc9101;z-index:1000;background-color:rgba(0,0,0,.4);padding:.5rem 1rem;border-radius:10px;cursor:pointer;user-select:none}
-.arrow-fixed.left{left:10px}.arrow-fixed.right{right:10px}
-.arrow-fixed:hover{transform:translateY(-50%) scale(1.1);background-color:rgba(0,0,0,.6)}
-@media(max-width:768px){
-.container{flex-direction:column;overflow-x:hidden;align-items:center;padding:0 1rem}
-.book{width:100%;max-width:480px;margin:1rem auto}
-.book-inner{flex-direction:column;gap:1rem}
-.arrow-fixed{display:none}
-body{padding-left:.75rem}}
-.back-button{color:white!important;display:inline-block;background-color:#A569BD;text-decoration:none;padding:10px 20px;border-radius:30px;font-weight:bold;font-size:16px;margin-top:1rem}
-.back-link{display:flex;justify-content:center;align-items:flex-start;padding:0;margin-top:-1.5rem;margin-bottom:0}
-.synopsis-button{display:inline-block;background-color:#A569BD;color:white!important;text-decoration:none;padding:8px 16px;border-radius:30px;font-weight:bold;font-size:14px;margin:.5rem 0}
-.synopsis-button:hover{background-color:#4CAF50;color:white!important}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faith Books Collection</title>
+  <style>
+    body{margin:1;font-family:Arial,sans-serif;background-image:linear-gradient(to bottom,#ffec00,#fc9101);color:#000}
+    .header{text-align:center}.header img{width:100%;height:75%}
+    .wrapper{display:flex;flex-direction:column;align-items:center;position:relative}
+    .container{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:1rem 0 2rem 0;scroll-behavior:smooth;width:100%}
+    .book{flex:0 0 auto;width:550px;margin:.1rem 1.5rem;background-color:rgba(255,255,255,.2);border-radius:10px;padding:1rem;scroll-snap-align:center;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.2);height:auto;overflow:hidden}
+    .book img{width:150px;height:auto;border-radius:5px;max-width:100%}
+    .book-inner{display:flex;flex-direction:row;align-items:flex-start;gap:2.5rem;height:100%}
+    .book-details{text-align:left;flex:1}
+    .book-title{font-size:1.1rem;color:#AA0012;margin:.15rem 0;line-height:1.2;font-weight:bold}
+    .subtitle{font-size:.95rem;font-style:italic;color:#333;margin:.2rem 0 .5rem 0}
+    .buttons{margin-top:1rem}
+    .buttons a{display:inline-block;padding:.6rem 1rem;background-color:#fc9101;color:#000;text-decoration:none;border-radius:50px;font-weight:bold;font-size:16px;margin:.25rem .5rem .25rem 0}
+    .buttons a:last-child{background-color:#4CAF50;color:white}
+    .secure-note{font-size:.8rem;margin-top:.5rem;color:#222}
+    .arrow-fixed{position:fixed;top:50%;transform:translateY(-50%);font-size:3rem;color:#fc9101;z-index:1000;background-color:rgba(0,0,0,.4);padding:.5rem 1rem;border-radius:10px;cursor:pointer;user-select:none}
+    .arrow-fixed.left{left:10px}.arrow-fixed.right{right:10px}
+    .arrow-fixed:hover{transform:translateY(-50%) scale(1.1);background-color:rgba(0,0,0,.6)}
+    @media(max-width:768px){
+    .container{flex-direction:column;overflow-x:hidden;align-items:center;padding:0 1rem}
+    .book{width:100%;max-width:480px;margin:1rem auto}
+    .book-inner{flex-direction:column;gap:1rem}
+    .arrow-fixed{display:none}
+    body{padding-left:.75rem}}
+    .back-button{color:white!important;display:inline-block;background-color:#A569BD;text-decoration:none;padding:10px 20px;border-radius:30px;font-weight:bold;font-size:16px;margin-top:1rem}
+    .back-link{display:flex;justify-content:center;align-items:flex-start;padding:0;margin-top:-1.5rem;margin-bottom:0}
+    .synopsis-button{display:inline-block;background-color:#A569BD;color:white!important;text-decoration:none;padding:8px 16px;border-radius:30px;font-weight:bold;font-size:14px;margin:.5rem 0}
+    .synopsis-button:hover{background-color:#4CAF50;color:white!important}
+  </style>
 </head>
 <body>
-<div class="arrow-fixed left" onclick="scrollContainer(-573)">←</div>
-<div class="arrow-fixed right" onclick="scrollContainer(573)">→</div>
-<div class="header"><br/><img alt="Header Image" src="images/banner.png" style="max-width:70%;height:auto;"/></div>
-<h1 class="Red" style="text-align:center;">Explore Our Practical Faith Book Collection</h1>
-<div class="wrapper">
-<div class="container" id="book-scroll-container">
+  <div class="arrow-fixed left" onclick="scrollContainer(-573)">←</div>
+  <div class="arrow-fixed right" onclick="scrollContainer(573)">→</div>
+  <div class="header"><br/><img alt="Header Image" src="images/banner.png" style="max-width:70%;height:auto;"/></div>
+  <h1 class="Red" style="text-align:center;">Explore Our Practical Faith Book Collection</h1>
+  <div class="wrapper">
+    <div class="container" id="book-scroll-container">
 
-<!-- Books start -->
-<!-- NEW BOOK - Position 1 -->
-<div class="book">
-  <div class="book-inner">
-    <div style="display:flex;flex-direction:column;align-items:center;">
-      <img src="images/books/rev12.jpg" alt="Book 10" width="1126" height="1686"/>
-      <a class="synopsis-button" href="#" onclick="showSynopsis(10);return false;">Synopsis</a>
-    </div>
-    <div class="book-details">
-      <div class="book-title">The Woman- The Dragon and the Coming Storm</div>
-      <div class="subtitle">The Vision of Revelation Chapter 12</div>
-      <div class="buttons">
-        <a href="https://payhip.com/b/n3Sea" target="_blank">Buy Direct – $6.99</a>
-        <a href="https://payhip.com/b/IirCB" target="_blank">Audio – $8.99</a>
-        <div class="secure-note">Secure purchase through PayPal or credit card</div>
-        <br/>
-        <a href="https://www.amazon.com/dp/B0FLWFTPYB" target="_blank">Amazon – $7.99</a>
+      <!-- Books start -->
+      <!-- NEW BOOK - Position 1 -->
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/rev12.jpg" alt="Book 10" width="1126" height="1686"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(10);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">The Woman- The Dragon and the Coming Storm</div>
+            <div class="subtitle">The Vision of Revelation Chapter 12</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/n3Sea" target="_blank">Buy Direct – $6.99</a>
+              <a href="https://payhip.com/b/IirCB" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B0FLWFTPYB" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/disciple.jpg" alt="Book 1" width="289" height="445"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(1);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">Who Really Was The Disciple Whom Jesus Loved?</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/jni9y" target="_blank">Buy Direct – $6.99</a>
+              <a href="https://payhip.com/b/wvZlk" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B007VDEEL0" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/bride.jpg" alt="Book 2" width="1121" height="1686"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(2);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">Who or What is the Bride of Christ</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/tMIGn" target="_blank">Buy Direct – $6.99</a>
+              <a href="https://payhip.com/b/nwDXy" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B0FL1KP7K2" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jonah Book -->
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/jonah.jpg" alt="Book 8" width="1024" height="1536"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(8);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">Jonah: The Prophet Who Said 'No'</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/BmMFD" target="_blank">Buy Direct – $6.99</a>
+              <a href="https://payhip.com/b/gA4Yr" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B0FKXFQXXV" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/messiah.jpg" alt="Book 3" width="289" height="445"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(3);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">The Messianic Secret</div>
+            <div class="subtitle">What Jesus Didn't Want Some People to Know</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/pCNwe" target="_blank">Buy Direct – $6.99</a> 
+              <a href="https://payhip.com/b/dkaMH" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B007WHZRIE" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/people.jpg" alt="Book 4" width="289" height="445"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(4);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">How to Help People In Trouble</div>
+            <div class="subtitle">A Pastor's Perspective</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/OfFZ8" target="_blank">Buy Direct – $6.99</a> 
+              <a href="https://payhip.com/b/PD4j1" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B007WWK9IW" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/prayer.jpg" alt="Book 5" width="289" height="445"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(5);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">How to Talk To God</div>
+            <div class="subtitle">Prerequisites Of Prayer</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/uEP7J" target="_blank">Buy Direct – $6.99</a> 
+              <a href="https://payhip.com/b/4QmD7" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B007X0AVKO" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/theodicy.jpg" alt="Book 6" width="289" height="445"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(6);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">Theodicy</div>
+            <div class="subtitle">Why People Suffer</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/auRx7" target="_blank">Buy Direct – $6.99</a> 
+              <a href="https://payhip.com/b/mPVF6" target="_blank">Audio – $8.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B007WHS8HQ" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book-inner">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <img src="images/books/torah.jpg" alt="Book 7" width="289" height="445"/>
+            <a class="synopsis-button" href="#" onclick="showSynopsis(7);return false;">Synopsis</a>
+          </div>
+          <div class="book-details">
+            <div class="book-title">The Torah</div>
+            <div class="subtitle">Owensian Color Coded Bible</div>
+            <div class="buttons">
+              <a href="https://payhip.com/b/1v3pz" target="_blank">Buy Direct – $6.99</a>
+              <div class="secure-note">Secure purchase through PayPal or credit card</div>
+              <br/>
+              <a href="https://www.amazon.com/dp/B007XJ6X3E" target="_blank">Amazon – $7.99</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
 
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/disciple.jpg" alt="Book 1" width="289" height="445"/><a class="synopsis-button" href="#" onclick="showSynopsis(1);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">Who Really Was The Disciple Whom Jesus Loved?</div><div class="buttons"><a href="https://payhip.com/b/jni9y" target="_blank">Buy Direct – $6.99</a><a href="https://payhip.com/b/wvZlk" target="_blank">Audio – $8.99</a><div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B007VDEEL0" target="_blank">Amazon – $7.99</a></div></div></div></div>
+  <div class="back-link"><a class="back-button" href="index.htm">← Back to PracticalFaith.net</a></div>
 
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/bride.jpg" alt="Book 2" width="1121" height="1686"/><a class="synopsis-button" href="#" onclick="showSynopsis(2);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">Who or What is the Bride of Christ</div><div class="buttons"><a href="https://payhip.com/b/tMIGn" target="_blank">Buy Direct – $6.99</a><a href="https://payhip.com/b/nwDXy" target="_blank">Audio – $8.99</a><div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B0FL1KP7K2" target="_blank">Amazon – $7.99</a></div></div></div></div>
-
-<!-- Jonah Book -->
-<div class="book">
-  <div class="book-inner">
-    <div style="display:flex;flex-direction:column;align-items:center;">
-      <img src="images/books/jonah.jpg" alt="Book 8" width="1024" height="1536"/>
-      <a class="synopsis-button" href="#" onclick="showSynopsis(8);return false;">Synopsis</a>
-    </div>
-    <div class="book-details">
-      <div class="book-title">Jonah: The Prophet Who Said 'No'</div>
-      <div class="buttons">
-        <a href="https://payhip.com/b/BmMFD" target="_blank">Buy Direct – $6.99</a>
-        <a href="https://payhip.com/b/gA4Yr" target="_blank">Audio – $8.99</a>
-        <div class="secure-note">Secure purchase through PayPal or credit card</div>
-        <br/>
-        <a href="https://www.amazon.com/dp/B0FKXFQXXV" target="_blank">Amazon – $7.99</a>
-      </div>
-    </div>
+  <div id="synopsis-modal" style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);background:white;padding:20px;border-radius:10px;max-width:500px;width:90%;box-shadow:0 0 15px rgba(0,0,0,.5);z-index:9999;">
+    <span onclick="document.getElementById('synopsis-modal').style.display='none'" style="cursor:pointer;float:right;font-weight:bold;font-size:20px;">×</span>
+    <div id="synopsis-content" style="margin-top:20px;">[Your synopsis goes here]</div>
   </div>
-</div>
 
-<!-- NEW BOOK SLOT - Position 4 - Replace this content with your new book -->
-
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/messiah.jpg" alt="Book 3" width="289" height="445"/><a class="synopsis-button" href="#" onclick="showSynopsis(3);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">The Messianic Secret</div><div class="subtitle">What Jesus Didn't Want Some People to Know</div><div class="buttons"><a href="https://payhip.com/b/pCNwe" target="_blank">Buy Direct – $6.99</a> <a href="https://payhip.com/b/dkaMH" target="_blank">Audio – $8.99</a>
-  <div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B007WHZRIE" target="_blank">Amazon – $7.99</a></div></div></div></div>
-
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/people.jpg" alt="Book 4" width="289" height="445"/><a class="synopsis-button" href="#" onclick="showSynopsis(4);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">How to Help People In Trouble</div><div class="subtitle">A Pastor's Perspective</div><div class="buttons"><a href="https://payhip.com/b/OfFZ8" target="_blank">Buy Direct – $6.99</a> <a href="https://payhip.com/b/PD4j1" target="_blank">Audio – $8.99</a>
-  <div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B007WWK9IW" target="_blank">Amazon – $7.99</a></div></div></div></div>
-
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/prayer.jpg" alt="Book 5" width="289" height="445"/><a class="synopsis-button" href="#" onclick="showSynopsis(5);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">How to Talk To God</div><div class="subtitle">Prerequisites Of Prayer</div><div class="buttons"><a href="https://payhip.com/b/uEP7J" target="_blank">Buy Direct – $6.99</a> <a href="https://payhip.com/b/4QmD7" target="_blank">Audio – $8.99</a>
-  <div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B007X0AVKO" target="_blank">Amazon – $7.99</a></div></div></div></div>
-
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/theodicy.jpg" alt="Book 6" width="289" height="445"/><a class="synopsis-button" href="#" onclick="showSynopsis(6);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">Theodicy</div><div class="subtitle">Why People Suffer</div><div class="buttons"><a href="https://payhip.com/b/auRx7" target="_blank">Buy Direct – $6.99</a> <a href="https://payhip.com/b/mPVF6" target="_blank">Audio – $8.99</a>
-  <div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B007WHS8HQ" target="_blank">Amazon – $7.99</a></div></div></div></div>
-
-<div class="book"><div class="book-inner"><div style="display:flex;flex-direction:column;align-items:center;"><img src="images/books/torah.jpg" alt="Book 7" width="289" height="445"/><a class="synopsis-button" href="#" onclick="showSynopsis(7);return false;">Synopsis</a></div><div class="book-details"><div class="book-title">The Torah</div><div class="subtitle">Owensian Color Coded Bible</div><div class="buttons"><a href="https://payhip.com/b/1v3pz" target="_blank">Buy Direct – $6.99</a><div class="secure-note">Secure purchase through PayPal or credit card</div><br/><a href="https://www.amazon.com/dp/B007XJ6X3E" target="_blank">Amazon – $7.99</a></div></div></div></div>
-
-</div></div>
-
-<div class="back-link"><a class="back-button" href="index.htm">← Back to PracticalFaith.net</a></div>
-
-<div id="synopsis-modal" style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);background:white;padding:20px;border-radius:10px;max-width:500px;width:90%;box-shadow:0 0 15px rgba(0,0,0,.5);z-index:9999;">
-<span onclick="document.getElementById('synopsis-modal').style.display='none'" style="cursor:pointer;float:right;font-weight:bold;font-size:20px;">×</span>
-<div id="synopsis-content" style="margin-top:20px;">[Your synopsis goes here]</div></div>
-
-<script>
-function scrollContainer(amount) {
-    var container = document.getElementById('book-scroll-container');
-    if (container) {
-        container.scrollBy({
-            left: amount,
-            behavior: 'smooth'
-        });
+  <script>
+    function scrollContainer(amount) {
+        var container = document.getElementById('book-scroll-container');
+        if (container) {
+            container.scrollBy({
+                left: amount,
+                behavior: 'smooth'
+            });
+        }
     }
-}
 
-function showSynopsis(id) {
-    var content = {
-        1: "The Apostle John or accepted tradition? The true identity of the unnamed disciple whom Jesus loved. Re-read familiar verses with fresh eyes and discover truth hidden in plain sight.",
-        2: "What if everything you thought you knew about the bride of Christ was incomplete? A clear and thought-provoking study, journey through biblical symbolism and prophecy to uncover the true identity of the Bride",
-        3: "Why did Jesus, the promised Messiah, repeatedly tell His followers not to tell anyone who He was? Uncover the divine strategy behind Jesus's silence and the revelation of God's greater plan.",
-        4: "A compassionate guide to understanding emotional and spiritual struggles, written from a pastor's heart. Learn how to truly help those who are hurting, with biblical wisdom and practical support.",
-        5: "Move beyond casual prayers to life-changing conversations with God, grounded in biblical principles for effective, faith-filled prayer.",
-        6: "Why does God allow suffering? This book tackles the age-old question of human pain from a biblical perspective, offering insights into divine justice, purpose, and the hope that anchors the soul.",
-        7: "An innovative tool for serious Bible study. This color-coded Torah offers a unique visual format to help you understand God's law, patterns, and principles through the eyes of Rev Owens' detailed analysis.",
-        8: "A reluctant prophet, a great fish, and a lesson in divine mercy. Jonah's story isn't just ancient history—it's about us and our hearts today.",
-        9: "YOUR SYNOPSIS TEXT HERE - Replace this with your book's synopsis.",
-        10: "The Prophecy Unveiled. Revelation 12 is more than a vision. Unlocks the symbols of the woman, the child, and the dragon, revealing their role in God's final plan."
-    };
-    
-    document.getElementById('synopsis-content').innerText = content[id] || "Synopsis coming soon.";
-    document.getElementById('synopsis-modal').style.display = 'block';
-}
-</script>
+    function showSynopsis(id) {
+        var content = {
+            1: "The Apostle John or accepted tradition? The true identity of the unnamed disciple whom Jesus loved. Re-read familiar verses with fresh eyes and discover truth hidden in plain sight.",
+            2: "What if everything you thought you knew about the bride of Christ was incomplete? A clear and thought-provoking study, journey through biblical symbolism and prophecy to uncover the true identity of the Bride",
+            3: "Why did Jesus, the promised Messiah, repeatedly tell His followers not to tell anyone who He was? Uncover the divine strategy behind Jesus's silence and the revelation of God's greater plan.",
+            4: "A compassionate guide to understanding emotional and spiritual struggles, written from a pastor's heart. Learn how to truly help those who are hurting, with biblical wisdom and practical support.",
+            5: "Move beyond casual prayers to life-changing conversations with God, grounded in biblical principles for effective, faith-filled prayer.",
+            6: "Why does God allow suffering? This book tackles the age-old question of human pain from a biblical perspective, offering insights into divine justice, purpose, and the hope that anchors the soul.",
+            7: "An innovative tool for serious Bible study. This color-coded Torah offers a unique visual format to help you understand God's law, patterns, and principles through the eyes of Rev Owens' detailed analysis.",
+            8: "A reluctant prophet, a great fish, and a lesson in divine mercy. Jonah's story isn't just ancient history—it's about us and our hearts today.",
+            9: "YOUR SYNOPSIS TEXT HERE - Replace this with your book's synopsis.",
+            10: "The Prophecy Unveiled. Revelation 12 is more than a vision. Unlocks the symbols of the woman, the child, and the dragon, revealing their role in God's final plan."
+        };
+        
+        document.getElementById('synopsis-content').innerText = content[id] || "Synopsis coming soon.";
+        document.getElementById('synopsis-modal').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
