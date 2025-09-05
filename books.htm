@@ -4,6 +4,16 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Faith Books Collection</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFLHGT7168"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-WFLHGT7168'); /* page_view auto */
+</script>
+
 <style>
 body{margin:1;font-family:Arial,sans-serif;background-image:linear-gradient(to bottom,#ffec00,#fc9101);color:#000}
 .header{text-align:center}.header img{width:100%;height:75%}
@@ -43,15 +53,11 @@ body{padding-left:.75rem}}
 <div class="container" id="book-scroll-container">
 
 <!-- Books start -->
-<!-- NEW BOOK SLOT #1 - Replace this content with your newest book -->
-
-<!-- NEW BOOK SLOT #2 - Replace this content with your second newest book -->
-
-<!-- NEW BOOK SLOT #3 - Replace this content with your third newest book -->
-
-<!-- NEW BOOK SLOT #4 - Replace this content with your fourth newest book -->
-
-<!-- NEW BOOK SLOT #5 - Replace this content with your fifth newest book -->
+<!-- NEW BOOK SLOT #1 -->
+<!-- NEW BOOK SLOT #2 -->
+<!-- NEW BOOK SLOT #3 -->
+<!-- NEW BOOK SLOT #4 -->
+<!-- NEW BOOK SLOT #5 -->
 
 <!-- EXISTING BOOKS SECTION -->
 <!-- Position 6 - The Power of Faith -->
@@ -137,6 +143,7 @@ body{padding-left:.75rem}}
     </div>
     <div class="book-details">
       <div class="book-title">Who or What is the Bride of Christ</div>
+      <div class="subtitle">The Untold Story of Proverbs 31</div>
       <div class="buttons">
         <a href="https://payhip.com/b/tMIGn" target="_blank">Buy Direct – $6.99</a>
         <a href="https://payhip.com/b/nwDXy" target="_blank">Audio – $8.99</a>
@@ -349,21 +356,67 @@ body{padding-left:.75rem}}
 <script>
 // Simplified scroll function
 function scrollContainer(amount) {
-    var container = document.getElementById('book-scroll-container');
-    if (container) {
-        container.scrollBy({
-            left: amount,
-            behavior: 'smooth'
-        });
-    }
+  var container = document.getElementById('book-scroll-container');
+  if (container) {
+    container.scrollBy({ left: amount, behavior: 'smooth' });
+  }
 }
 
-// Simplified synopsis function - no more ID management!
+// Simplified synopsis function
 function showSynopsis(button) {
-    var synopsis = button.getAttribute('data-synopsis');
-    document.getElementById('synopsis-content').innerText = synopsis || "Synopsis coming soon.";
-    document.getElementById('synopsis-modal').style.display = 'block';
+  var synopsis = button.getAttribute('data-synopsis');
+  document.getElementById('synopsis-content').innerText = synopsis || "Synopsis coming soon.";
+  document.getElementById('synopsis-modal').style.display = 'block';
 }
+
+/* ---------- GA4: Auto-track clicks on key elements ---------- */
+(function(){
+  function eventNameForLink(a, host){
+    if (a.classList.contains('synopsis-button')) return 'synopsis_open';
+    if (a.classList.contains('back-button')) return 'back_to_home';
+    if (host.includes('payhip.com')) {
+      if ((a.textContent||'').toLowerCase().includes('audio')) return 'audio_buy';
+      return 'buy_direct';
+    }
+    if (host.includes('amazon.com')) return 'amazon_click';
+    return 'external_click';
+  }
+  function getBookTitle(el){
+    var book = el.closest('.book');
+    if (!book) return null;
+    var t = book.querySelector('.book-title');
+    return t ? t.textContent.trim() : null;
+  }
+  function toHost(href){
+    try { return new URL(href, location.href).hostname; } catch(e){ return ''; }
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var host = toHost(href);
+    var book = getBookTitle(a);
+    var action = eventNameForLink(a, host);
+    try {
+      gtag('event', action, {
+        book: book || '(no book)',
+        href: href,
+        host: host
+      });
+    } catch(_) {}
+  });
+
+  // Track arrow nudges
+  document.querySelectorAll('.arrow-fixed').forEach(function(el){
+    el.addEventListener('click', function(){
+      try {
+        gtag('event', 'carousel_nudge', {
+          direction: el.classList.contains('left') ? 'left' : 'right'
+        });
+      } catch(_) {}
+    });
+  });
+})();
 </script>
 </body>
 </html>
