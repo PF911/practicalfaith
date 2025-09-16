@@ -34,4 +34,115 @@
       border-bottom-right-radius: 40px;
     }
     .hero .avatar{
-      width: 104px; height:104
+      width: 104px; height:104px; border-radius:999px;
+      background:#fff; display:grid; place-items:center; margin: 0 auto 12px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero .avatar img{
+      width:100%; height:100%; object-fit:cover; border-radius:999px;
+    }
+    h1{margin:0; font-size:clamp(24px, 4.5vw, 34px); color:#111;}
+    .icons{
+      display:flex; gap:12px; justify-content:center; margin-top:12px;
+    }
+    .icons a{
+      width:44px; height:44px; border-radius:999px; background:#fff;
+      display:grid; place-items:center; color:#111; text-decoration:none;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .2s ease;
+      font-size:20px;
+    }
+    .icons a:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.12); }
+    .wrap{
+      max-width: 860px; margin: -52px auto 40px; padding: 0 16px;
+    }
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow: var(--shadow);
+      padding: clamp(16px, 3.5vw, 22px);
+    }
+    .row{ display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid #eee; }
+    .row:last-child{ border-bottom:0; }
+    .k{ color:var(--muted); font-size:14px; }
+    .v{ font-weight:600; }
+    .row a{ color:var(--accent); text-decoration:none; }
+    .row a:hover{ text-decoration:underline; }
+    .section-title{ margin:26px 0 8px; font-size:18px; color:#111;}
+    .social{
+      background:var(--card); border-radius:var(--radius); box-shadow: var(--shadow);
+      padding:16px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .yt{
+      display:flex; align-items:center; gap:12px; text-decoration:none; color:#111;
+    }
+    .yt .logo{
+      width:32px; height:32px; background:#fff; border-radius:6px; display:grid; place-items:center; box-shadow: inset 0 0 0 999px #ff0000;
+    }
+    .cta{
+      margin-top:18px; display:block; width:100%; background:#f5a800; color:#111; border:0;
+      border-radius:12px; padding:14px 18px; font-weight:700; cursor:pointer; text-align:center; text-decoration:none;
+      box-shadow: var(--shadow);
+    }
+    .cta:hover{ filter: brightness(0.96); }
+    footer{ text-align:center; color:var(--muted); font-size:13px; padding:24px 0 40px; }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="avatar">
+      <img src="path/images/revlogo.png" alt="Rev Owens logo" />
+    </div>
+    <h1>Rev Owens</h1>
+    <div class="icons" aria-label="Quick actions">
+      <a href="tel:+14013238582" title="Call">📞</a>
+      <a href="mailto:Rev@PracticalFaith.net" title="Email">✉️</a>
+      <a href="https://practicalfaith.net" title="Website">🌐</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="card" aria-labelledby="contact-info">
+      <div class="row">
+        <div class="k">Phone</div>
+        <div class="v"><a href="tel:+14013238582">(401) 323-8582</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:Rev@PracticalFaith.net">Rev@PracticalFaith.net</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Website</div>
+        <div class="v"><a href="https://practicalfaith.net" target="_blank" rel="noopener">PracticalFaith.net</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Location</div>
+        <div class="v">
+          74 Almond Pt, St. Augustine, Florida 32095 —
+          <a href="https://www.google.com/maps/search/?api=1&query=74+Almond+Pt,+St.+Augustine,+FL+32095" target="_blank" rel="noopener">Open Map</a>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Find me on</h2>
+    <section class="social">
+      <a class="yt" href="http://tiny.cc/PracticalFaithVideos" target="_blank" rel="noopener">
+        <span class="logo"></span>
+        <div>
+          <div style="font-weight:700">YouTube</div>
+          <div style="color:var(--muted); font-size:14px;">Practical Faith Videos</div>
+        </div>
+      </a>
+      <a class="cta" href="rev-owens.vcf" download>➕ Add Contact</a>
+    </section>
+
+    <footer>
+      &copy; <span id="y"></span> PracticalFaith.net
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
