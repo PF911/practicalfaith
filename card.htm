@@ -71,17 +71,22 @@
     .social{
       background:var(--card); border-radius:var(--radius); box-shadow: var(--shadow);
       padding:16px; display:flex; align-items:center; justify-content:space-between;
+      gap: 14px;
+      flex-wrap: wrap;
     }
     .yt{
       display:flex; align-items:center; gap:12px; text-decoration:none; color:#111;
+      padding: 12px 14px; border-radius: 10px; background: #fff; box-shadow: var(--shadow);
+      flex: 1 1 320px;
     }
     .yt .logo{
       width:32px; height:32px; background:#fff; border-radius:6px; display:grid; place-items:center; box-shadow: inset 0 0 0 999px #ff0000;
     }
     .cta{
-      margin-top:18px; display:block; width:100%; background:#f5a800; color:#111; border:0;
+      display:block; background:#f5a800; color:#111; border:0;
       border-radius:12px; padding:14px 18px; font-weight:700; cursor:pointer; text-align:center; text-decoration:none;
       box-shadow: var(--shadow);
+      flex: 0 0 auto;
     }
     .cta:hover{ filter: brightness(0.96); }
     footer{ text-align:center; color:var(--muted); font-size:13px; padding:24px 0 40px; }
@@ -126,11 +131,15 @@
 
     <h2 class="section-title">Find me on</h2>
     <section class="social">
-      <a class="yt" href="http://tiny.cc/PracticalFaithVideos" target="_blank" rel="noopener">
-        <span class="logo"></span>
+      <a class="yt" href="https://www.youtube.com/channel/UCjtuQjCb7JF5IDsa5Tvjd_w?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Practical Faith Videos on YouTube">
+        <span class="logo" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 15l5.19-3L10 9v6z" />
+          </svg>
+        </span>
         <div>
-          <div style="font-weight:700">YouTube</div>
-          <div style="color:var(--muted); font-size:14px;">Practical Faith Videos</div>
+          <div style="font-weight:700">Practical Faith Videos</div>
+          <div style="color:var(--muted); font-size:14px;">YouTube</div>
         </div>
       </a>
       <a class="cta" href="rev-owens.vcf" download>➕ Add Contact</a>
