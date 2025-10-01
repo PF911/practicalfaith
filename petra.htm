@@ -39,15 +39,18 @@
       <header>
         <div class="logo" aria-hidden="true">PF</div>
         <div>
-          <h1>Download <strong>PETRA</strong> (Android APK)</h1>
-          <p>Hosted by <strong>PracticalFaith.net</strong>. Scan the code or tap the button to install.</p>
+          <h1>Download <strong>PETRA</strong> BAPTIST CHURCH APP (Android APK)</h1>
+          <p>Scan the code or tap the button to install.</p>
         </div>
       </header>
 
       <div class="grid">
         <!-- QR CODE PANEL -->
         <div class="qr">
-          <div id="qrcode" aria-label="QR code to download PETRA APK"></div>
+          <div id="qrcode" aria-label="QR code to download PETRA APK">
+  <!-- No-JS fallback QR -->
+  <img id="qrimg" width="210" height="210" alt="QR code to download PETRA APK" src="https://api.qrserver.com/v1/create-qr-code/?size=210x210&data=https%3A%2F%2Fpracticalfaith.net%2Fpetra.apk" />
+</div>
         </div>
 
         <!-- ACTIONS / INFO PANEL -->
@@ -76,17 +79,36 @@
     </div>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-MN6F7iaX3kQ4pO7hJkE0Yp2tC2X4xE+0Yzbb4Sc8W5q4UOq1xQkWzF5T8C9jvX9z2r2hH3i1Z3+u3a8j3i0N8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" referrerpolicy="no-referrer"></script>
   <script>
-    const APK_URL = 'https://practicalfaith.net/petra.apk';
-    new QRCode(document.getElementById('qrcode'), {
-      text: APK_URL,
-      width: 210,
-      height: 210,
-      correctLevel: QRCode.CorrectLevel.M
-    });
-    document.getElementById('downloadBtn').setAttribute('href', APK_URL);
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  const APK_URL = 'https://practicalfaith.net/petra.apk';
+
+  function renderQR(){
+    const container = document.getElementById('qrcode');
+    if (!container) return;
+    if (window.QRCode) {
+      container.innerHTML = '';
+      new QRCode(container, { text: APK_URL, width:210, height:210, correctLevel: QRCode.CorrectLevel.M });
+    } else {
+      // Fallback: static PNG QR from public API (no JS lib required)
+      const img = new Image();
+      img.width = 210; img.height = 210; img.alt = 'QR code to download PETRA APK';
+      img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=210x210&data=' + encodeURIComponent(APK_URL);
+      container.innerHTML = '';
+      container.appendChild(img);
+    }
+  }
+
+  // Keep button/link in sync
+  const btn = document.getElementById('downloadBtn');
+  if (btn) btn.setAttribute('href', APK_URL);
+
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  // Render immediately and once again after window load (covers CDN timing)
+  renderQR();
+  window.addEventListener('load', renderQR);
+</script>
 </body>
 </html>
