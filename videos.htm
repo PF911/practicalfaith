@@ -8,56 +8,72 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      text-align: center;
       background-image: linear-gradient(to bottom, #ffec00, #fc9101);
     }
-    .header { margin: 20px 0; }
-    .header img { max-width: 100%; height: auto; }
 
-    .responsive-iframe {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      padding-bottom: 56.25%;
-      height: 0;
-      margin: 0 auto;
+    .header {
+      text-align: center;
+      padding: 20px 0;
     }
-    .responsive-iframe video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 10px;
+    .header img {
+      max-width: 90%;
+      height: auto;
     }
 
+    /* --- Two-column layout --- */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    /* Left: menu */
     .video-list {
-      text-align: left;
-      margin: 20px auto;
-      max-width: 700px;
+      background: #fff;
+      border-radius: 10px;
+      border: 2px solid #f2b14b;
+      width: 260px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
     }
     .video-item {
-      background: #ffffff;
-      border-radius: 8px;
-      margin: 6px 0;
-      padding: 10px 15px;
+      border-radius: 6px;
+      margin: 5px 0;
+      padding: 8px 12px;
       cursor: pointer;
       transition: background 0.2s;
-      border: 1px solid #f0a33a;
+      border: 1px solid #eee;
     }
-    .video-item:hover {
-      background: #f5f5f5;
-    }
+    .video-item:hover { background: #f5f5f5; }
     .video-item.active {
       background: #4CAF50;
       color: white;
       font-weight: bold;
     }
 
+    /* Right: video player */
+    .player {
+      flex: 1;
+      min-width: 320px;
+      max-width: 900px;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    }
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
     .book-store-button {
-      display: inline-block;
+      display: block;
       background-color: #1DB954;
       color: white;
       text-decoration: none;
@@ -65,68 +81,75 @@
       border-radius: 50px;
       font-size: 16px;
       font-weight: bold;
+      text-align: center;
       margin: 20px auto;
+      width: fit-content;
     }
     .book-store-button:hover { background-color: #1AA34A; }
 
-    .Red, .red { color: #AA0012; }
+    .Red, .red { color: #AA0012; text-align: center; }
+
+    @media (max-width: 800px) {
+      .content { flex-direction: column; align-items: center; }
+      .video-list { width: 90%; max-height: none; }
+      .player { width: 90%; }
+    }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="images/banner.png" alt="Header Image" width="707" height="172"/>
+    <img src="images/banner.png" alt="Header Image"/>
+    <h2 class="red">Brick Church of Dighton, MA</h2>
+    <h3 class="Red">Making the Bible Relevant for Today's Living</h3>
   </div>
 
-  <h2 class="red">Brick Church of Dighton, MA</h2>
+  <div class="content">
+    <!-- Left: Video Menu -->
+    <div class="video-list" id="videoList">
+      <div class="video-item active" data-src="videos/wwg.m4v">
+        The Wonderful Word of God
+      </div>
+      <div class="video-item" data-src="videos/2023.m4v">
+        Year in Review
+      </div>
+      <div class="video-item" data-src="videos/christmas2022.m4v">
+        Christmas 2023
+      </div>
+      <div class="video-item" data-src="videos/christmas.m4v">
+        Christmas 2022
+      </div>
+      <div class="video-item" data-src="videos/easter2023.m4v">
+        Easter 2023
+      </div>
+      <div class="video-item" data-src="videos/easter.m4v">
+        Easter 2022
+      </div>
+      <div class="video-item" data-src="videos/fathersday2019.m4v">
+        Father's Day 2019
+      </div>
+      <div class="video-item" data-src="videos/fathersday2018.m4v">
+        Father's Day 2018
+      </div>
+      <div class="video-item" data-src="videos/fathersday2017.m4v">
+        Father's Day 2017
+      </div>
+      <div class="video-item" data-src="videos/fathersday2023.m4v">
+        Father's Day 2023
+      </div>
+      <div class="video-item" data-src="videos/mothersday2022.m4v">
+        Mother's Day 2022
+      </div>
+      <div class="video-item" data-src="videos/everypraise.m4v">
+        Every Praise
+      </div>
+    </div>
 
-  <!-- Main video player -->
-  <div class="responsive-iframe">
-    <video id="mainVideo" controls preload="metadata" poster="images/banner.png">
-      <!-- Default video when page loads -->
-      <source src="videos/wwg.m4v" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <h2 class="Red">Making the Bible Relevant for Today's Living</h2>
-
-  <!-- ✅ Corrected and Complete Video Menu -->
-  <div class="video-list" id="videoList">
-    <div class="video-item active" data-src="videos/wwg.m4v">
-      The Wonderful Word of God
-    </div>
-    <div class="video-item" data-src="videos/2023.m4v">
-      Year in Review
-    </div>
-    <div class="video-item" data-src="videos/2023.m4v">
-      Christmas 2023
-    </div>
-    <div class="video-item" data-src="videos/christmas.m4v">
-      Christmas 2022
-    </div>
-    <div class="video-item" data-src="videos/easter2023.m4v">
-      Easter 2023
-    </div>
-    <div class="video-item" data-src="videos/easter.m4v">
-      Easter 2022
-    </div>
-    <div class="video-item" data-src="videos/fathersday2019.m4v">
-      Father's Day 2019
-    </div>
-    <div class="video-item" data-src="videos/fathersday2018.m4v">
-      Father's Day 2018
-    </div>
-    <div class="video-item" data-src="videos/fathersday2017.m4v">
-      Father's Day 2017
-    </div>
-    <div class="video-item" data-src="videos/fathersday2023.m4v">
-      Father's Day 2023
-    </div>
-    <div class="video-item" data-src="videos/mothersday2022.m4v">
-      Mother's Day 2022
-    </div>
-    <div class="video-item" data-src="videos/everypraise.m4v">
-      Every Praise
+    <!-- Right: Player -->
+    <div class="player">
+      <video id="mainVideo" controls preload="metadata" poster="images/banner.png">
+        <source src="videos/wwg.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 
@@ -140,7 +163,6 @@
       item.addEventListener('click', () => {
         items.forEach(i => i.classList.remove('active'));
         item.classList.add('active');
-
         const newSrc = item.getAttribute('data-src');
         video.pause();
         video.querySelector('source').setAttribute('src', newSrc);
