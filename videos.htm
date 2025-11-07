@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practical Faith – Videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: linear-gradient(to bottom, #ffec00, #fc9101);
+    }
+    .header { margin: 20px 0; }
+    .header img { max-width: 100%; height: auto; }
+    .responsive-iframe {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .responsive-iframe video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+    .video-list {
+      text-align: left;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+    .video-item {
+      background: white;
+      border-radius: 8px;
+      margin: 6px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .video-item:hover {
+      background: #f5f5f5;
+    }
+    .video-item.active {
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+    .book-store-button {
+      display: inline-block;
+      background-color: #1DB954;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      margin: 20px auto;
+    }
+    .book-store-button:hover { background-color: #1AA34A; }
+    .Red, .red { color: #AA0012; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="images/banner.png" alt="Header Image" width="707" height="172"/>
+  </div>
+
+  <h2 class="red">Making the Bible Relevant for Today's Living</h2>
+
+  <div class="responsive-iframe">
+    <video id="mainVideo" controls preload="metadata" poster="images/banner.png">
+      <source src="https://practicalfaith.net/samplevideo.m4v" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <h2 class="Red">Videos from the Brick Church of Dighton, MA</h2>
+
+  <!-- 📺 Video Menu -->
+  <div class="video-list" id="videoList">
+    <div class="video-item" data-src="videos/wwg.m4v">
+      <div align="center">The Wonderful Word of God</div>
+    </div>
+    <div class="video-item" data-src="videos/fathersday2023.m4v">
+      <div align="center">Father's Day 2023 </div>
+    </div>
+    <div class="video-item" data-src="videos/easter2024.m4v">
+      <div align="center">Easter 2024 – The Empty Tomb </div>
+    </div>
+    <div class="video-item" data-src="videos/easter2023.m4v">
+      <div align="center">The Power of the Resurrection </div>
+    </div>
+    <div class="video-item" data-src="videos/goodfriday.m4v">
+      <div align="center">Good Friday Message </div>
+    </div>
+    <div class="video-item" data-src="videos/palmSunday.m4v">
+      <div align="center">Palm Sunday Reflections </div>
+    </div>
+    <div class="video-item" data-src="videos/faithworks.m4v">
+      <div align="center">Faith That Works </div>
+    </div>
+    <div class="video-item" data-src="videos/lightoftheworld.m4v">
+      <div align="center">The Light of the World </div>
+    </div>
+    <div class="video-item" data-src="videos/christmas2023.m4v">
+      <div align="center">Christmas Message 2023 </div>
+    </div>
+  </div>
+
+  <a href="books.htm" class="book-store-button">View Practical Faith Book Store</a>
+
+  <script>
+    // 🎬 Video switcher
+    const items = document.querySelectorAll('.video-item');
+    const video = document.getElementById('mainVideo');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        const newSrc = item.getAttribute('data-src');
+        video.pause();
+        video.querySelector('source').setAttribute('src', newSrc);
+        video.load();
+        video.play();
+      });
+    });
+  </script>
+</body>
+</html>
