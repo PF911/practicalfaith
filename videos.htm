@@ -20,6 +20,7 @@
       height: auto;
     }
 
+    /* --- Two-column layout --- */
     .content {
       display: flex;
       flex-wrap: wrap;
@@ -29,6 +30,7 @@
       padding: 10px;
     }
 
+    /* Left: menu */
     .video-list {
       background: #fff;
       border-radius: 10px;
@@ -54,6 +56,7 @@
       font-weight: bold;
     }
 
+    /* Right: video player */
     .player {
       flex: 1;
       min-width: 320px;
@@ -95,25 +98,50 @@
 </head>
 <body>
   <div class="header">
-    <img src="images/banner.png" alt="PracticalFaith.net"/>
-    <h2 class="red">Videos of the Brick Church of Dighton, MA</h2>
+    <img src="images/banner.png" alt="Header Image"/>
+    <h2 class="red">Brick Church of Dighton, MA</h2>
+    <h3 class="Red">Making the Bible Relevant for Today's Living</h3>
   </div>
 
   <div class="content">
     <!-- Left: Video Menu -->
     <div class="video-list" id="videoList">
-      <div class="video-item active" data-src="videos/wwg.m4v">The Wonderful Word of God</div>
-      <div class="video-item" data-src="videos/2023.m4v">Year in Review</div>
-      <div class="video-item" data-src="videos/christmas2022.m4v">Christmas 2023</div>
-      <div class="video-item" data-src="videos/christmas.m4v">Christmas 2022</div>
-      <div class="video-item" data-src="videos/easter2023.m4v">Easter 2023</div>
-      <div class="video-item" data-src="videos/easter.m4v">Easter 2022</div>
-      <div class="video-item" data-src="videos/fathersday2019.m4v">Father's Day 2019</div>
-      <div class="video-item" data-src="videos/fathersday2018.m4v">Father's Day 2018</div>
-      <div class="video-item" data-src="videos/fathersday2017.m4v">Father's Day 2017</div>
-      <div class="video-item" data-src="videos/fathersday2023.m4v">Father's Day 2023</div>
-      <div class="video-item" data-src="videos/mothersday2022.m4v">Mother's Day 2022</div>
-      <div class="video-item" data-src="videos/everypraise.m4v">Every Praise</div>
+      <div class="video-item active" data-src="videos/wwg.m4v">
+        The Wonderful Word of God
+      </div>
+      <div class="video-item" data-src="videos/2023.m4v">
+        Year in Review
+      </div>
+      <div class="video-item" data-src="videos/2023.m4v">
+        Christmas 2023
+      </div>
+      <div class="video-item" data-src="videos/christmas.m4v">
+        Christmas 2022
+      </div>
+      <div class="video-item" data-src="videos/easter2023.m4v">
+        Easter 2023
+      </div>
+      <div class="video-item" data-src="videos/easter.m4v">
+        Easter 2022
+      </div>
+      <div class="video-item" data-src="videos/fathersday2019.m4v">
+        Father's Day 2019
+      </div>
+      <div class="video-item" data-src="videos/fathersday2018.m4v">
+        Father's Day 2018
+      </div>
+      <div class="video-item" data-src="videos/fathersday2017.m4v">
+        Father's Day 2017
+      </div>
+      <div class="video-item" data-src="videos/fathersday2023.m4v">
+        Father's Day 2023
+      </div>
+      <div class="video-item" data-src="videos/mothersday2022.m4v">
+        Mother's Day 2022
+      </div>
+      <div class="video-item" data-src="videos/everypraise.m4v">
+        Every Praise
+      </div>
     </div>
 
     <!-- Right: Player -->
@@ -125,7 +153,7 @@
     </div>
   </div>
 
-  <a href="index.htm" class="book-store-button">Practical Faith Home</a>
+  <a href="books.htm" class="book-store-button">View Practical Faith Book Store</a>
 
   <script>
     const items = document.querySelectorAll('.video-item');
