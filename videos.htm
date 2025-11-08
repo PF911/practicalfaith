@@ -10,8 +10,15 @@
       margin: 0;
       background-image: linear-gradient(to bottom, #ffec00, #fc9101);
     }
-    .header { text-align: center; padding: 20px 0; }
-    .header img { max-width: 90%; height: auto; }
+
+    .header {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header img {
+      max-width: 90%;
+      height: auto;
+    }
 
     .content {
       display: flex;
@@ -88,11 +95,12 @@
 </head>
 <body>
   <div class="header">
-    <img src="images/banner.png" alt="Header Image"/>
+    <img src="images/banner.png" alt="PracticalFaith.net"/>
     <h2 class="red">Videos of the Brick Church of Dighton, MA</h2>
   </div>
 
   <div class="content">
+    <!-- Left: Video Menu -->
     <div class="video-list" id="videoList">
       <div class="video-item active" data-src="videos/wwg.m4v">The Wonderful Word of God</div>
       <div class="video-item" data-src="videos/2023.m4v">Year in Review</div>
@@ -108,6 +116,7 @@
       <div class="video-item" data-src="videos/everypraise.m4v">Every Praise</div>
     </div>
 
+    <!-- Right: Player -->
     <div class="player">
       <video id="mainVideo" controls preload="metadata" poster="images/banner.png">
         <source src="videos/wwg.m4v" type="video/mp4">
