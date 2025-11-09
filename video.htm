@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFLHGT7168"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WFLHGT7168'); // page_view is sent automatically
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Practical Faith</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: linear-gradient(to bottom, #ffec00, #fc9101);
+    }
+    .header { margin: 20px 0; }
+    .header img { max-width: 100%; height: auto; }
+    table {
+      width: 90%; max-width: 800px; margin: 20px auto; border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd; padding: 10px; cursor: pointer;
+      transition: background-color 0.3s; vertical-align: middle;
+    }
+    th { background-color: #4CAF50; color: white; }
+    td:hover { background-color: #f1f1f1; }
+    td img { max-width: 100%; height: auto; text-align: center; }
+    .responsive-iframe { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; }
+    .responsive-iframe iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
+    .spotify-button, .book-store-button {
+      display: inline-block; background-color: #1DB954; color: white; text-decoration: none;
+      padding: 10px 20px; border-radius: 50px; font-size: 16px; font-family: Arial, sans-serif;
+      font-weight: bold; text-align: center; cursor: pointer; border: none; margin: 20px auto;
+      display: block; width: fit-content;
+    }
+    .spotify-button:hover, .book-store-button:hover { background-color: #1AA34A; }
+    @media (max-width: 600px) { th, td { padding: 8px; } }
+    .Red { color: #AA0012; }
+    .red { color: #AA0012; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img alt="Header Image" height="100" src="images/banner.png" width="800"/>
+</div>
+
+  <table>
+    <tr>
+      <td width="100%">
+        <h2 align="center" class="red">Videos from the Brick Church of Dighton, MA</h2>
+        <div class="responsive-iframe">
+          <iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            frameborder="0"
+            src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG&index=6"
+            title="YouTube Playlist">
+          </iframe>
+        </div></td>
+    </tr>
+
+    <tr>
+      <td><a id="btnBookStore" class="book-store-button" href="index.htm">Practical Faith Home</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- GA4 event bindings for key actions -->
+<script>
+    function track(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var bindings = [
+        ['btnBookStore',       'bookstore_click',       {event_category: 'engagement', event_label: 'Book Store Button'}],
+        ['lnkYouTubePlaylist', 'youtube_playlist_click',{event_category: 'engagement', event_label: 'YouTube Playlist'}],
+        ['lnkGooglePlay',      'app_click',             {event_category: 'engagement', store: 'Google Play'}],
+        ['lnkAppleApp',        'app_click',             {event_category: 'engagement', store: 'Apple App Store'}],
+        ['lnkSpotify',         'spotify_click',         {event_category: 'engagement', event_label: 'Spotify'}],
+        ['lnkEmail',           'email_click',           {event_category: 'engagement', event_label: 'Email Link'}],
+        ['lnkJotForm',         'topics_click',          {event_category: 'engagement', event_label: 'JotForm Topics'}],
+      ];
+      bindings.forEach(function (row) {
+        var el = document.getElementById(row[0]);
+        if (el) el.addEventListener('click', function(){ track(row[1], row[2]); });
+      });
+    });
+  </script>
+
+  <!-- Cloudflare email decode (keep as-is) -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+</html>
