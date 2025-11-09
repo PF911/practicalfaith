@@ -56,14 +56,14 @@
     <img src="images/banner.png" alt="Practical Faith Header" width="800" height="100">
   </div>
 
-  <h2>Videos from the Brick Church of Dighton- MA</h2>
+  <h2>Videos from the Brick Church of Dighton, MA</h2>
   <div id="playlist" class="gallery">Loading videos...</div>
 
   <a class="book-store-button" href="index.htm">Practical Faith Home</a>
 
   <script>
     const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
-    const apiKey = "AIzaSyAQX_WfTUak_uDu5jmhAKts4J-VViTklxoE"; // 👈 paste your key here locally
+    const apiKey = "AIzaSyAQX_WfTUak_uDu5jmhAKts4J-VViTklxo"; // 👈 paste your key here locally
 
     fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=${playlistId}&key=${apiKey}`)
       .then(response => response.json())
