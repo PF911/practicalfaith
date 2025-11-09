@@ -16,6 +16,7 @@
     .header img { max-width: 100%; height: auto; }
     h2 { color: #AA0012; }
 
+    /* Video Player */
     iframe {
       width: 90%;
       max-width: 960px;
@@ -26,18 +27,17 @@
       margin-top: 10px;
     }
 
+    /* Responsive Grid Layout */
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
       padding: 20px;
       max-width: 1100px;
       margin: 0 auto;
     }
 
     .video {
-      width: 100px;
       background: white;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -66,6 +66,13 @@
       margin: 25px auto 40px;
     }
     .book-store-button:hover { background-color: #1AA34A; }
+
+    /* Optional: single column on tiny screens */
+    @media (max-width: 400px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -104,7 +111,6 @@
           const title = item.title;
           const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
-          // Add thumbnail cards
           container.innerHTML += `
             <div class="video" onclick="playVideo('${videoId}')">
               <img src="${thumb}" alt="${title}">
@@ -112,7 +118,7 @@
             </div>
           `;
 
-          // Automatically load the first video
+          // Load first video automatically
           if (index === 0) {
             document.getElementById("videoPlayer").src = `https://www.youtube.com/embed/${videoId}`;
           }
@@ -131,3 +137,4 @@
   </script>
 </body>
 </html>
+
