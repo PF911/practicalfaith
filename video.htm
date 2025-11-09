@@ -62,21 +62,29 @@
   <a class="book-store-button" href="index.htm">Practical Faith Home</a>
 
   <script>
+    // --- YouTube Playlist Loader ---
     const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
-    const apiKey = "AIzaSyAQX_WfTUak_uDu5jmhAKts4J-VViTklxo"; // 👈 paste your key here locally
+
+    // IMPORTANT: Replace this placeholder with your actual API key
+    // only on your live website copy (never commit it to GitHub).
+    const apiKey = "YOUR_API_KEY_HERE";
 
     fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=${playlistId}&key=${apiKey}`)
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById('playlist');
         container.innerHTML = "";
+        if (!data.items) {
+          container.innerHTML = "<p>Unable to load videos right now.</p>";
+          return;
+        }
         data.items.forEach(item => {
           const vid = item.snippet.resourceId.videoId;
           const title = item.snippet.title;
           const thumb = item.snippet.thumbnails.medium.url;
           container.innerHTML += `
             <div class="video">
-              <a href="https://www.youtube.com/watch?v=${vid}" target="_blank">
+              <a href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noopener">
                 <img src="${thumb}" alt="${title}">
                 <div class="video-title">${title}</div>
               </a>
@@ -85,7 +93,7 @@
       })
       .catch(err => {
         document.getElementById('playlist').innerHTML = "<p>Unable to load videos right now.</p>";
-        console.error(err);
+        console.error('YouTube API error:', err);
       });
   </script>
 </body>
