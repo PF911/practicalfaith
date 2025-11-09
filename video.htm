@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFLHGT7168"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-WFLHGT7168'); // page_view is sent automatically
-  </script>
-
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Practical Faith</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practical Faith | Video Messages</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -23,82 +14,79 @@
     }
     .header { margin: 20px 0; }
     .header img { max-width: 100%; height: auto; }
-    table {
-      width: 90%; max-width: 800px; margin: 20px auto; border-collapse: collapse;
+    h2 { color: #AA0012; }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
     }
-    th, td {
-      border: 1px solid #ddd; padding: 10px; cursor: pointer;
-      transition: background-color 0.3s; vertical-align: middle;
+    .video {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.2s;
     }
-    th { background-color: #4CAF50; color: white; }
-    td:hover { background-color: #f1f1f1; }
-    td img { max-width: 100%; height: auto; text-align: center; }
-    .responsive-iframe { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; }
-    .responsive-iframe iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    .video:hover { transform: scale(1.02); }
+    .video img { width: 100%; height: auto; }
+    .video-title {
+      padding: 10px;
+      font-weight: bold;
+      color: #AA0012;
     }
-    .spotify-button, .book-store-button {
-      display: inline-block; background-color: #1DB954; color: white; text-decoration: none;
-      padding: 10px 20px; border-radius: 50px; font-size: 16px; font-family: Arial, sans-serif;
-      font-weight: bold; text-align: center; cursor: pointer; border: none; margin: 20px auto;
-      display: block; width: fit-content;
+    .book-store-button {
+      display: inline-block;
+      background-color: #1DB954;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 25px auto;
     }
-    .spotify-button:hover, .book-store-button:hover { background-color: #1AA34A; }
-    @media (max-width: 600px) { th, td { padding: 8px; } }
-    .Red { color: #AA0012; }
-    .red { color: #AA0012; }
+    .book-store-button:hover { background-color: #1AA34A; }
   </style>
 </head>
 <body>
   <div class="header">
-    <img alt="Header Image" height="100" src="images/banner.png" width="800"/>
-</div>
+    <img src="images/banner.png" alt="Practical Faith Header" width="800" height="100">
+  </div>
 
-  <table>
-    <tr>
-      <td width="100%">
-        <h2 align="center" class="red">Videos from the Brick Church of Dighton MA</h2>
-        <div class="responsive-iframe">
-        <iframe 
-  width="100%" height="500"
-  src="https://www.youtube.com/embed/?listType=playlist&list=PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG"
-  title="YouTube playlist"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+  <h2>Videos from the Brick Church of Dighton, MA</h2>
+  <div id="playlist" class="gallery">Loading videos...</div>
 
-      </div></td>
-    </tr>
+  <a class="book-store-button" href="index.htm">Practical Faith Home</a>
 
-    <tr>
-      <td><a id="btnBookStore" class="book-store-button" href="index.htm">Practical Faith Home</a>
-      </td>
-    </tr>
-  </table>
+  <script>
+    const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
+    const apiKey = "AIzaSyAQX_WfTUak_uDu5jmhAKts4J-VViTklxoE"; // 👈 paste your key here locally
 
-  <!-- GA4 event bindings for key actions -->
-<script>
-    function track(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var bindings = [
-        ['btnBookStore',       'bookstore_click',       {event_category: 'engagement', event_label: 'Book Store Button'}],
-        ['lnkYouTubePlaylist', 'youtube_playlist_click',{event_category: 'engagement', event_label: 'YouTube Playlist'}],
-        ['lnkGooglePlay',      'app_click',             {event_category: 'engagement', store: 'Google Play'}],
-        ['lnkAppleApp',        'app_click',             {event_category: 'engagement', store: 'Apple App Store'}],
-        ['lnkSpotify',         'spotify_click',         {event_category: 'engagement', event_label: 'Spotify'}],
-        ['lnkEmail',           'email_click',           {event_category: 'engagement', event_label: 'Email Link'}],
-        ['lnkJotForm',         'topics_click',          {event_category: 'engagement', event_label: 'JotForm Topics'}],
-      ];
-      bindings.forEach(function (row) {
-        var el = document.getElementById(row[0]);
-        if (el) el.addEventListener('click', function(){ track(row[1], row[2]); });
+    fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=${playlistId}&key=${apiKey}`)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('playlist');
+        container.innerHTML = "";
+        data.items.forEach(item => {
+          const vid = item.snippet.resourceId.videoId;
+          const title = item.snippet.title;
+          const thumb = item.snippet.thumbnails.medium.url;
+          container.innerHTML += `
+            <div class="video">
+              <a href="https://www.youtube.com/watch?v=${vid}" target="_blank">
+                <img src="${thumb}" alt="${title}">
+                <div class="video-title">${title}</div>
+              </a>
+            </div>`;
+        });
+      })
+      .catch(err => {
+        document.getElementById('playlist').innerHTML = "<p>Unable to load videos right now.</p>";
+        console.error(err);
       });
-    });
   </script>
-
-  <!-- Cloudflare email decode (keep as-is) -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
