@@ -15,28 +15,16 @@
     .header { margin: 20px 0; }
     .header img { max-width: 100%; height: auto; }
     h2 { color: #AA0012; }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
+
+    iframe {
+      width: 90%;
+      max-width: 960px;
+      height: 540px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
-    .video {
-      width: 300px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
-    .video:hover { transform: scale(1.02); }
-    .video img { width: 100%; height: auto; }
-    .video-title {
-      padding: 10px;
-      font-weight: bold;
-      color: #AA0012;
-    }
+
     .book-store-button {
       display: inline-block;
       background-color: #1DB954;
@@ -46,7 +34,7 @@
       border-radius: 50px;
       font-size: 16px;
       font-weight: bold;
-      margin: 25px auto;
+      margin: 25px auto 40px;
     }
     .book-store-button:hover { background-color: #1AA34A; }
   </style>
@@ -56,45 +44,17 @@
     <img src="images/banner.png" alt="Practical Faith Header" width="800" height="100">
   </div>
 
-  <h2>Videos from the Brick Church of Dighton MA</h2>
-  <div id="playlist" class="gallery">Loading videos...</div>
+  <h2>Videos from the Brick Church of Dighton, MA</h2>
+
+  <!-- YouTube embedded playlist -->
+  <div style="margin-top: 20px;">
+    <iframe 
+      src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG"
+      allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </div>
 
   <a class="book-store-button" href="index.htm">Practical Faith Home</a>
-
-  <script>
-    // --- YouTube Playlist Loader ---
-    const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
-
-    // IMPORTANT: Replace this placeholder with your actual API key
-    // only on your live website copy (never commit it to GitHub).
-    const apiKey = "YOUR_API_KEY_HERE";
-
-    fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=${playlistId}&key=${apiKey}`)
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('playlist');
-        container.innerHTML = "";
-        if (!data.items) {
-          container.innerHTML = "<p>Unable to load videos right now.</p>";
-          return;
-        }
-        data.items.forEach(item => {
-          const vid = item.snippet.resourceId.videoId;
-          const title = item.snippet.title;
-          const thumb = item.snippet.thumbnails.medium.url;
-          container.innerHTML += `
-            <div class="video">
-              <a href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noopener">
-                <img src="${thumb}" alt="${title}">
-                <div class="video-title">${title}</div>
-              </a>
-            </div>`;
-        });
-      })
-      .catch(err => {
-        document.getElementById('playlist').innerHTML = "<p>Unable to load videos right now.</p>";
-        console.error('YouTube API error:', err);
-      });
-  </script>
 </body>
 </html>
