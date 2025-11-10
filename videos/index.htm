@@ -16,7 +16,6 @@
     .header img { max-width: 100%; height: auto; }
     h2 { color: #AA0012; }
 
-    /* Player box with fade animation */
     #player-container {
       position: relative;
       display: inline-block;
@@ -37,7 +36,6 @@
       opacity: 1;
     }
 
-    /* Thumbnail grid */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -90,13 +88,12 @@
 <body>
   <div class="header">
     <a href="https://practicalfaith.net/index.htm">
-      <img src="../images/banner.png" alt="Practical Faith Header" width="707" height="172" />
+      <img src="../images/banner.png" alt="Practical Faith Header" width="560" height="122" />
     </a>
 </div>
 
-  <h2>Videos from the Brick Church of Dighton MA</h2>
+  <h2>Videos from the Brick Church of Dighton, MA</h2>
 
-  <!-- The video player -->
   <div id="player-container">
     <iframe
       id="videoPlayer"
@@ -105,7 +102,6 @@
     </iframe>
   </div>
 
-  <!-- Video thumbnails -->
   <div class="gallery" id="video-gallery">Loading videos...</div>
 
   <a class="book-store-button" href="https://practicalfaith.net/">Practical Faith Home</a>
@@ -137,6 +133,18 @@
             loadVideo(videoId, false);
           }
         });
+
+        // ✅ Manually add Easter 2022 if not yet in feed
+        const missingId = "Hfqz7RuIyi0";
+        const exists = data.items.some(item => item.link.includes(missingId));
+        if (!exists) {
+          container.innerHTML += `
+            <div class="video" onclick="playVideo('${missingId}')">
+              <img src="https://img.youtube.com/vi/${missingId}/hqdefault.jpg" alt="Easter 2022">
+              <div class="video-title">Easter 2022</div>
+            </div>
+          `;
+        }
       })
       .catch(err => {
         document.getElementById("video-gallery").innerHTML =
@@ -152,7 +160,7 @@
       const player = document.getElementById("videoPlayer");
       player.classList.remove("visible");
       const autoplayFlag = autoplay ? "?autoplay=1" : "";
-      player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;--
+      player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;
       player.onload = () => player.classList.add("visible");
       window.scrollTo({ top: player.offsetTop - 20, behavior: "smooth" });
     }
