@@ -89,10 +89,10 @@
 </head>
 <body>
   <div class="header">
-    <a href="https://practicalfaith.net/">
-      <img src="images/banner.png" alt="Practical Faith Header" width="556" height="118" />
+    <a href="https://practicalfaith.net/index.htm">
+      <img src="../images/banner.png" alt="Practical Faith Header" width="707" height="172" />
     </a>
-  </div>
+</div>
 
   <h2>Videos from the Brick Church of Dighton MA</h2>
 
@@ -152,7 +152,7 @@
       const player = document.getElementById("videoPlayer");
       player.classList.remove("visible");
       const autoplayFlag = autoplay ? "?autoplay=1" : "";
-      player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;
+      player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;--
       player.onload = () => player.classList.add("visible");
       window.scrollTo({ top: player.offsetTop - 20, behavior: "smooth" });
     }
