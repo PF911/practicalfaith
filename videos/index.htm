@@ -33,14 +33,12 @@
       opacity: 0;
       transition: opacity 0.6s ease-in-out;
     }
-    #videoPlayer.visible {
-      opacity: 1;
-    }
+    #videoPlayer.visible { opacity: 1; }
 
     /* Responsive Grid Layout */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 15px;
       padding: 20px;
       max-width: 1100px;
@@ -89,8 +87,9 @@
   </style>
 </head>
 <body>
-  <div class="header"> <a href="https://practicalfaith.net/"><img src="../images/banner.png" alt="Practical Faith Header" width="556" height="118" /></a>
-</div>
+  <div class="header">
+    <img src="images/banner.png" alt="Practical Faith Header" width="800" height="100" />
+  </div>
 
   <h2>Videos from the Brick Church of Dighton, MA</h2>
 
@@ -106,13 +105,14 @@
   <!-- Video thumbnails -->
   <div class="gallery" id="video-gallery">Loading videos...</div>
 
-  <a class="book-store-button" href="https://practicalfaith.net/">Practical Faith Home</a>
+  <a class="book-store-button" href="index.htm">Practical Faith Home</a>
 
   <script>
     const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
     const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
 
-    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`)
+    // Force fresh fetch + show up to 25 videos
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}&count=25&_=${new Date().getTime()}`)
       .then(res => res.json())
       .then(data => {
         const container = document.getElementById("video-gallery");
@@ -126,7 +126,7 @@
 
           // Create each thumbnail card
           container.innerHTML += `
-            <div class="video" onclick="playVideo('${videoId}')">
+            <div class="video" onclick="playVideo('${videoId}', '${title.replace(/'/g, "\\'")}')">
               <img src="${thumb}" alt="${title}">
               <div class="video-title">${title}</div>
             </div>
@@ -134,7 +134,7 @@
 
           // Load first video automatically
           if (index === 0) {
-            loadVideo(videoId, false);
+            loadVideo(videoId, title, false);
           }
         });
       })
@@ -144,16 +144,15 @@
         console.error(err);
       });
 
-    function playVideo(videoId) {
-      loadVideo(videoId, true);
+    function playVideo(videoId, title) {
+      loadVideo(videoId, title, true);
     }
 
-    function loadVideo(videoId, autoplay) {
+    function loadVideo(videoId, title, autoplay) {
       const player = document.getElementById("videoPlayer");
       player.classList.remove("visible");
       const autoplayFlag = autoplay ? "?autoplay=1" : "";
       player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;
-      // fade in once loaded
       player.onload = () => player.classList.add("visible");
       window.scrollTo({ top: player.offsetTop - 20, behavior: "smooth" });
     }
