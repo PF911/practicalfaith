@@ -16,28 +16,36 @@
     .header img { max-width: 100%; height: auto; }
     h2 { color: #AA0012; }
 
-    iframe {
+    #player-container {
+      position: relative;
+      display: inline-block;
       width: 90%;
       max-width: 960px;
-      height: 540px;
-      border: none;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      margin-top: 10px;
+      overflow: hidden;
+    }
+    #videoPlayer {
+      width: 100%;
+      height: 540px;
+      border: none;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+    #videoPlayer.visible {
+      opacity: 1;
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
       padding: 20px;
       max-width: 1100px;
       margin: 0 auto;
     }
 
     .video {
-      width: 100px;
       background: white;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -66,29 +74,37 @@
       margin: 25px auto 40px;
     }
     .book-store-button:hover { background-color: #1AA34A; }
+
+    @media (max-width: 400px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      #videoPlayer {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="images/banner.png" alt="Practical Faith Header" width="800" height="100" />
+    <a href="https://practicalfaith.net/">
+      <img src="images/banner.png" alt="Practical Faith Header" width="556" height="118" />
+    </a>
   </div>
 
   <h2>Videos from the Brick Church of Dighton, MA</h2>
 
-  <!-- The video player -->
   <div id="player-container">
-    <iframe 
+    <iframe
       id="videoPlayer"
-      src="https://www.youtube.com/embed/?list=PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG"
       allowfullscreen
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
     </iframe>
   </div>
 
-  <!-- Video thumbnails -->
   <div class="gallery" id="video-gallery">Loading videos...</div>
 
-  <a class="book-store-button" href="index.htm">Practical Faith Home</a>
+  <a class="book-store-button" href="https://practicalfaith.net/">Practical Faith Home</a>
 
   <script>
     const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
@@ -98,13 +114,14 @@
       .then(res => res.json())
       .then(data => {
         const container = document.getElementById("video-gallery");
+        const player = document.getElementById("videoPlayer");
         container.innerHTML = "";
+
         data.items.forEach((item, index) => {
           const videoId = item.link.split("v=")[1];
           const title = item.title;
           const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
-          // Add thumbnail cards
           container.innerHTML += `
             <div class="video" onclick="playVideo('${videoId}')">
               <img src="${thumb}" alt="${title}">
@@ -112,20 +129,39 @@
             </div>
           `;
 
-          // Automatically load the first video
           if (index === 0) {
-            document.getElementById("videoPlayer").src = `https://www.youtube.com/embed/${videoId}`;
+            loadVideo(videoId, false);
           }
         });
+
+        // ✅ Manually add Easter 2022 if not yet in feed
+        const missingId = "Hfqz7RuIyi0";
+        const exists = data.items.some(item => item.link.includes(missingId));
+        if (!exists) {
+          container.innerHTML += `
+            <div class="video" onclick="playVideo('${missingId}')">
+              <img src="https://img.youtube.com/vi/${missingId}/hqdefault.jpg" alt="Easter 2022">
+              <div class="video-title">Easter 2022</div>
+            </div>
+          `;
+        }
       })
       .catch(err => {
-        document.getElementById("video-gallery").innerHTML = "<p>Unable to load videos right now.</p>";
+        document.getElementById("video-gallery").innerHTML =
+          "<p>Unable to load videos right now.</p>";
         console.error(err);
       });
 
     function playVideo(videoId) {
+      loadVideo(videoId, true);
+    }
+
+    function loadVideo(videoId, autoplay) {
       const player = document.getElementById("videoPlayer");
-      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      player.classList.remove("visible");
+      const autoplayFlag = autoplay ? "?autoplay=1" : "";
+      player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;
+      player.onload = () => player.classList.add("visible");
       window.scrollTo({ top: player.offsetTop - 20, behavior: "smooth" });
     }
   </script>
