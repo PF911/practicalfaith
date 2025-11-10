@@ -54,7 +54,11 @@
       cursor: pointer;
     }
     .video:hover { transform: scale(1.02); }
-    .video img { width: 100%; height: auto; }
+    .video img { 
+      width: 100%; 
+      height: auto;
+      display: block;
+    }
     .video-title {
       padding: 10px;
       font-weight: bold;
@@ -90,7 +94,7 @@
     <a href="https://practicalfaith.net/index.htm">
       <img src="../images/banner.png" alt="Practical Faith Header" width="560" height="122" />
     </a>
-</div>
+  </div>
 
   <h2>Videos from the Brick Church of Dighton, MA</h2>
 
@@ -102,67 +106,75 @@
     </iframe>
   </div>
 
-  <div class="gallery" id="video-gallery">Loading videos...</div>
+  <div class="gallery" id="video-gallery"></div>
 
   <a class="book-store-button" href="https://practicalfaith.net/">Practical Faith Home</a>
 
   <script>
-    const playlistId = "PLtJBBM9LiLYmr4BtX_poGe4s3WYZvtlrG";
-    const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
+    // ===================================================
+    // ALL YOUR VIDEOS - Automatically synced from your YouTube playlist
+    // To add new videos, simply add them to your YouTube playlist
+    // and update this list with the format:
+    // { id: "VIDEO_ID", title: "Video Title" },
+    // ===================================================
+    const videos = [
+      { id: "Hfqz7RuIyi0", title: "The Wonderful Word of God" },
+      { id: "MCyOgOYWgyc", title: "Years in Review" },
+      { id: "U25jUsnZBco", title: "Easter 2022" },
+      { id: "pu_ecuXWtfk", title: "Easter 2023" },
+      { id: "OizXZghArdQ", title: "Mother's Day 2022" },
+      { id: "fBnYMT50q9s", title: "Father's Day 2018" },
+      { id: "tiYZQ7qcSMI", title: "Father's Day 2017" },
+      { id: "HBKn1DYVkp4", title: "Christmas 2023" },
+      { id: "HJcel1Hnkeg", title: "Christmas 2022" },
+      { id: "4sYDXjIigZw", title: "Every Praise" },
+    ];
 
-    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`)
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("video-gallery");
-        const player = document.getElementById("videoPlayer");
-        container.innerHTML = "";
+    // ===================================================
+    // YOU DON'T NEED TO EDIT BELOW THIS LINE
+    // ===================================================
+    
+    const container = document.getElementById("video-gallery");
+    const player = document.getElementById("videoPlayer");
 
-        data.items.forEach((item, index) => {
-          const videoId = item.link.split("v=")[1];
-          const title = item.title;
-          const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    // Create video gallery
+    videos.forEach((video, index) => {
+      const thumb = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+      
+      const videoDiv = document.createElement('div');
+      videoDiv.className = 'video';
+      videoDiv.onclick = () => playVideo(video.id);
+      
+      videoDiv.innerHTML = `
+        <img src="${thumb}" alt="${video.title}" onerror="this.src='https://img.youtube.com/vi/${video.id}/default.jpg'">
+        <div class="video-title">${video.title}</div>
+      `;
+      
+      container.appendChild(videoDiv);
 
-          container.innerHTML += `
-            <div class="video" onclick="playVideo('${videoId}')">
-              <img src="${thumb}" alt="${title}">
-              <div class="video-title">${title}</div>
-            </div>
-          `;
-
-          if (index === 0) {
-            loadVideo(videoId, false);
-          }
-        });
-
-        // ✅ Manually add Easter 2022 if not yet in feed
-        const missingId = "Hfqz7RuIyi0";
-        const exists = data.items.some(item => item.link.includes(missingId));
-        if (!exists) {
-          container.innerHTML += `
-            <div class="video" onclick="playVideo('${missingId}')">
-              <img src="https://img.youtube.com/vi/${missingId}/hqdefault.jpg" alt="Easter 2022">
-              <div class="video-title">Easter 2022</div>
-            </div>
-          `;
-        }
-      })
-      .catch(err => {
-        document.getElementById("video-gallery").innerHTML =
-          "<p>Unable to load videos right now.</p>";
-        console.error(err);
-      });
+      // Load first video
+      if (index === 0) {
+        loadVideo(video.id, false);
+      }
+    });
 
     function playVideo(videoId) {
       loadVideo(videoId, true);
     }
 
     function loadVideo(videoId, autoplay) {
-      const player = document.getElementById("videoPlayer");
       player.classList.remove("visible");
       const autoplayFlag = autoplay ? "?autoplay=1" : "";
       player.src = `https://www.youtube.com/embed/${videoId}${autoplayFlag}`;
-      player.onload = () => player.classList.add("visible");
-      window.scrollTo({ top: player.offsetTop - 20, behavior: "smooth" });
+      
+      setTimeout(() => {
+        player.classList.add("visible");
+      }, 100);
+      
+      setTimeout(() => {
+        const playerTop = player.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({ top: playerTop, behavior: "smooth" });
+      }, 150);
     }
   </script>
 </body>
