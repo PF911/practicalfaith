@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Practical Faith</string>
+    <string name="title_activity_main">Practical Faith</string>
+    <string name="package_name">com.practicalfaith.app2</string>
+    <string name="custom_url_scheme">com.practicalfaith.app2</string>
+</resources>

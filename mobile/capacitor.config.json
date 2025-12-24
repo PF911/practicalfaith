@@ -1,0 +1,14 @@
+{
+  "appId": "com.practicalfaith.app2",
+  "appName": "Practical Faith",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  },
+  "server": {
+    "url": "https://PracticalFaith.net/app",
+    "cleartext": true
+  }
+}
