@@ -8,8 +8,7 @@
     }
   },
   "server": {
-    "url": "https://practicalfaith.net/app",
-    "cleartext": true,
-    "androidScheme": "https"
+    "url": "https://PracticalFaith.net/app",
+    "cleartext": true
   }
 }
