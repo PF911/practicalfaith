@@ -1,99 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Faith Books Collection</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background-image:linear-gradient(to bottom,#ffec00,#fc9101);
-  color:#000;
-}
+body{margin:0;font-family:Arial,sans-serif;background-image:linear-gradient(to bottom,#ffec00,#fc9101);color:#000}
 .header{text-align:center}
 .header img{max-width:70%;height:auto}
 .wrapper{display:flex;flex-direction:column;align-items:center}
-.container{
-  display:flex;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  -webkit-overflow-scrolling:touch;
-  padding:1rem 0 2rem 0;
-  width:100%;
-}
-.book{
-  flex:0 0 auto;
-  width:550px;
-  margin:.5rem 1.5rem;
-  background-color:rgba(255,255,255,.2);
-  border-radius:10px;
-  padding:1rem;
-  scroll-snap-align:center;
-  box-shadow:0 4px 8px rgba(0,0,0,.2);
-}
-.book-inner{
-  display:flex;
-  gap:2rem;
-}
-.book img{
-  width:150px;
-  height:auto;
-  border-radius:5px;
-}
+.container{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:1rem 0 2rem;width:100%}
+.book{flex:0 0 auto;width:550px;margin:.5rem 1.5rem;background:rgba(255,255,255,.2);border-radius:10px;padding:1rem;scroll-snap-align:center;box-shadow:0 4px 8px rgba(0,0,0,.2)}
+.book-inner{display:flex;gap:2.5rem}
+.book img{width:150px;height:auto;border-radius:5px}
 .book-details{flex:1;text-align:left}
-.book-title{
-  font-size:1.1rem;
-  color:#AA0012;
-  font-weight:bold;
-}
-.subtitle{
-  font-size:.95rem;
-  font-style:italic;
-  margin:.25rem 0 .5rem;
-}
-.buttons a{
-  display:inline-block;
-  padding:.6rem 1rem;
-  margin:.25rem .5rem .25rem 0;
-  background:#fc9101;
-  color:#000;
-  text-decoration:none;
-  border-radius:50px;
-  font-weight:bold;
-}
-.buttons a:last-child{
-  background:#4CAF50;
-  color:#fff;
-}
-.secure-note{
-  font-size:.8rem;
-  margin-top:.5rem;
-}
-.synopsis-button{
-  display:inline-block;
-  background:#A569BD;
-  color:#fff;
-  text-decoration:none;
-  padding:8px 16px;
-  border-radius:30px;
-  font-size:14px;
-  margin-top:.5rem;
-}
-.back-link{
-  display:flex;
-  justify-content:center;
-  margin:1rem 0;
-}
-.back-button{
-  background:#A569BD;
-  color:#fff;
-  padding:10px 20px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-}
+.book-title{font-size:1.1rem;color:#AA0012;font-weight:bold}
+.subtitle{font-size:.95rem;font-style:italic;margin:.25rem 0 .5rem}
+.buttons a{display:inline-block;padding:.6rem 1rem;margin:.25rem .5rem .25rem 0;background:#fc9101;color:#000;text-decoration:none;border-radius:50px;font-weight:bold}
+.buttons a:last-child{background:#4CAF50;color:#fff}
+.secure-note{font-size:.8rem;margin-top:.5rem}
+.synopsis-button{display:inline-block;background:#A569BD;color:#fff;text-decoration:none;padding:8px 16px;border-radius:30px;font-size:14px;margin:.5rem 0}
+.back-link{display:flex;justify-content:center;margin:1rem 0}
+.back-button{background:#A569BD;color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:bold}
 @media(max-width:768px){
   .container{flex-direction:column;overflow-x:hidden}
   .book{width:100%;max-width:480px}
@@ -106,7 +35,7 @@ body{
 
 <div class="header">
   <br>
-  <img src="images/banner.png" alt="Practical Faith">
+  <img src="https://practicalfaith.net/app/images/banner.png" alt="Practical Faith">
 </div>
 
 <h1 style="text-align:center;">Explore Our Practical Faith Book Collection</h1>
@@ -114,12 +43,12 @@ body{
 <div class="wrapper">
 <div class="container">
 
-<!-- BOOK -->
+<!-- God's Will -->
 <div class="book">
   <div class="book-inner">
     <div>
-      <img src="images/books/godswill.jpg" alt="God's Will">
-      <a class="synopsis-button" href="#" onclick="showSynopsis('Discover God’s will as a relationship to live, not a mystery to solve.')">Synopsis</a>
+      <img src="https://practicalfaith.net/app/images/books/godswill.jpg" alt="God's Will">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Discover God's will not as a mystery to solve, but as a relationship to live.">Synopsis</a>
     </div>
     <div class="book-details">
       <div class="book-title">God's Will</div>
@@ -128,17 +57,16 @@ body{
         <a href="https://payhip.com/b/2egYB" target="_blank">Buy – $6.99</a>
         <a href="https://www.amazon.com/dp/B0FTYPTYQZ" target="_blank">Amazon – $7.99</a>
       </div>
-      <div class="secure-note">Secure checkout</div>
     </div>
   </div>
 </div>
 
-<!-- BOOK -->
+<!-- Messy Love Life of King David -->
 <div class="book">
   <div class="book-inner">
     <div>
-      <img src="images/books/david.jpg" alt="King David">
-      <a class="synopsis-button" href="#" onclick="showSynopsis('A revealing look at King David’s life, love, power, and failure.')">Synopsis</a>
+      <img src="https://practicalfaith.net/app/images/books/david.jpg" alt="King David">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Marriage, ambition, failure, and grace—King David’s story.">Synopsis</a>
     </div>
     <div class="book-details">
       <div class="book-title">The Messy Love Life of King David</div>
@@ -150,12 +78,30 @@ body{
   </div>
 </div>
 
-<!-- BOOK -->
+<!-- Messy Love Life of King David – Illustrated -->
 <div class="book">
   <div class="book-inner">
     <div>
-      <img src="images/books/faith.jpg" alt="The Power of Faith">
-      <a class="synopsis-button" href="#" onclick="showSynopsis('Faith as heaven’s language—how belief becomes reality.')">Synopsis</a>
+      <img src="https://practicalfaith.net/app/images/books/david_illustrated.jpg" alt="King David Illustrated">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Illustrated edition bringing Scripture to life.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">The Messy Love Life of King David</div>
+      <div class="subtitle">Illustrated Edition</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/8oJ75" target="_blank">Buy – $11.99</a>
+        <a href="https://www.amazon.com/dp/B0FV2DWFRG" target="_blank">Amazon – $12.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Power of Faith -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/faith.jpg" alt="The Power of Faith">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Faith as heaven’s language—belief into reality.">Synopsis</a>
     </div>
     <div class="book-details">
       <div class="book-title">The Power of Faith</div>
@@ -168,6 +114,200 @@ body{
   </div>
 </div>
 
+<!-- Revelation 12 -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/rev12.jpg" alt="Revelation 12">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="The woman, the dragon, and the coming storm.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">The Woman, the Dragon, and the Coming Storm</div>
+      <div class="subtitle">Revelation 12</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/n3Sea" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B0FLWFTPYB" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Disciple -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/disciple.jpg" alt="Disciple Jesus Loved">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Who really was the disciple whom Jesus loved?">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">Who Really Was the Disciple Whom Jesus Loved?</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/jni9y" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B007VDEEL0" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bride -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/bride.jpg" alt="Bride of Christ">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="A fresh look at the identity of the Bride of Christ.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">Who or What Is the Bride of Christ?</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/tMIGn" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B0FL1KP7K2" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Jonah -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/jonah.jpg" alt="Jonah">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="The prophet who said no—and what it means for us.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">Jonah: The Prophet Who Said “No”</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/BmMFD" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B0FKXFQXXV" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Virtuous Woman -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/prov31.jpg" alt="Virtuous Woman">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="The untold story behind Proverbs 31.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">The Secret Behind the Virtuous Woman</div>
+      <div class="subtitle">Proverbs 31</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/T1edI" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B0FLLZZMK8" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Messianic Secret -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/messiah.jpg" alt="Messianic Secret">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Why Jesus told some people to keep quiet.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">The Messianic Secret</div>
+      <div class="subtitle">What Jesus Didn’t Want Some to Know</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/pCNwe" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B007WHZRIE" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Help People -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/people.jpg" alt="Help People">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="How to help people in emotional and spiritual trouble.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">How to Help People in Trouble</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/OfFZ8" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B007WWK9IW" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Talk to God -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/prayer.jpg" alt="Talk to God">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="From casual prayer to real conversation with God.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">How to Talk to God</div>
+      <div class="subtitle">Prerequisites of Prayer</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/uEP7J" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B007X0AVKO" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Theodicy -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/theodicy.jpg" alt="Theodicy">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Why people suffer—and where hope is found.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">Theodicy</div>
+      <div class="subtitle">Why People Suffer</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/auRx7" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B007WHS8HQ" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pentateuch -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/torah.jpg" alt="Pentateuch">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Color-coded Torah for serious Bible study.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">The Pentateuch</div>
+      <div class="subtitle">Owensian Color-Coded Bible</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/1v3pz" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B007XJ6X3E" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Job -->
+<div class="book">
+  <div class="book-inner">
+    <div>
+      <img src="https://practicalfaith.net/app/images/books/job.jpg" alt="Book of Job">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;" data-synopsis="Why God allows suffering—made clear.">Synopsis</a>
+    </div>
+    <div class="book-details">
+      <div class="book-title">The Book of Job</div>
+      <div class="subtitle">Owensian Color-Coded Bible</div>
+      <div class="buttons">
+        <a href="https://payhip.com/b/1v3pz" target="_blank">Buy – $6.99</a>
+        <a href="https://www.amazon.com/dp/B0FN763LDJ" target="_blank">Amazon – $7.99</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 </div>
 
@@ -175,15 +315,14 @@ body{
   <a class="back-button" href="index.htm">← Back</a>
 </div>
 
-<!-- SYNOPSIS MODAL -->
 <div id="synopsis-modal" style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);background:#fff;padding:20px;border-radius:10px;max-width:600px;width:90%;box-shadow:0 0 15px rgba(0,0,0,.4);z-index:9999;">
   <span onclick="closeSynopsis()" style="float:right;font-size:20px;cursor:pointer;">×</span>
   <div id="synopsis-text" style="margin-top:1rem;font-size:16px;"></div>
 </div>
 
 <script>
-function showSynopsis(text){
-  document.getElementById('synopsis-text').innerText = text;
+function showSynopsis(btn){
+  document.getElementById('synopsis-text').innerText = btn.getAttribute('data-synopsis') || '';
   document.getElementById('synopsis-modal').style.display = 'block';
 }
 function closeSynopsis(){
