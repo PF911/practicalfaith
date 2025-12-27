@@ -6,9 +6,9 @@
     "SplashScreen": {
       "launchAutoHide": false
     }
-  },
-  "server": {
-    "url": "https://PracticalFaith.net/app",
-    "cleartext": true
   }
+  // "server": {
+  //   "url": "https://PracticalFaith.net/app",
+  //   "cleartext": true
+  // }
 }
