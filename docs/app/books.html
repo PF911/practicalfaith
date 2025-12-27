@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Faith Books Collection</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background-image:linear-gradient(to bottom,#ffec00,#fc9101);
-  color:#000;
+  color:#000
 }
 .header{text-align:center}
 .header img{max-width:70%;height:auto}
@@ -35,7 +35,7 @@ body{
 }
 .book-inner{
   display:flex;
-  gap:2rem;
+  gap:2.5rem;
 }
 .book img{
   width:150px;
@@ -79,7 +79,7 @@ body{
   padding:8px 16px;
   border-radius:30px;
   font-size:14px;
-  margin-top:.5rem;
+  margin:.5rem 0;
 }
 .back-link{
   display:flex;
@@ -106,7 +106,7 @@ body{
 
 <div class="header">
   <br>
-  <img src="images/banner.png" alt="Practical Faith">
+  <img src="https://practicalfaith.net/app/images/banner.png" alt="Practical Faith">
 </div>
 
 <h1 style="text-align:center;">Explore Our Practical Faith Book Collection</h1>
@@ -114,12 +114,16 @@ body{
 <div class="wrapper">
 <div class="container">
 
-<!-- BOOK -->
+<!-- TEMPLATE: duplicate blocks like this safely -->
+
 <div class="book">
   <div class="book-inner">
-    <div>
-      <img src="images/books/godswill.jpg" alt="God's Will">
-      <a class="synopsis-button" href="#" onclick="showSynopsis('Discover God’s will as a relationship to live, not a mystery to solve.')">Synopsis</a>
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <img src="https://practicalfaith.net/app/images/books/godswill.jpg" alt="God's Will">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;"
+         data-synopsis="Discover God's will not as a mystery to solve, but as a relationship to live.">
+         Synopsis
+      </a>
     </div>
     <div class="book-details">
       <div class="book-title">God's Will</div>
@@ -133,12 +137,14 @@ body{
   </div>
 </div>
 
-<!-- BOOK -->
 <div class="book">
   <div class="book-inner">
-    <div>
-      <img src="images/books/david.jpg" alt="King David">
-      <a class="synopsis-button" href="#" onclick="showSynopsis('A revealing look at King David’s life, love, power, and failure.')">Synopsis</a>
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <img src="https://practicalfaith.net/app/images/books/david.jpg" alt="King David">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;"
+         data-synopsis="A revealing look at King David’s life, love, power, and failure.">
+         Synopsis
+      </a>
     </div>
     <div class="book-details">
       <div class="book-title">The Messy Love Life of King David</div>
@@ -150,12 +156,14 @@ body{
   </div>
 </div>
 
-<!-- BOOK -->
 <div class="book">
   <div class="book-inner">
-    <div>
-      <img src="images/books/faith.jpg" alt="The Power of Faith">
-      <a class="synopsis-button" href="#" onclick="showSynopsis('Faith as heaven’s language—how belief becomes reality.')">Synopsis</a>
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <img src="https://practicalfaith.net/app/images/books/faith.jpg" alt="The Power of Faith">
+      <a class="synopsis-button" href="#" onclick="showSynopsis(this);return false;"
+         data-synopsis="Faith as heaven’s language—how belief becomes reality.">
+         Synopsis
+      </a>
     </div>
     <div class="book-details">
       <div class="book-title">The Power of Faith</div>
@@ -168,6 +176,9 @@ body{
   </div>
 </div>
 
+<!-- KEEP ADDING YOUR REMAINING BOOK BLOCKS EXACTLY LIKE THIS -->
+<!-- (all your remaining titles follow same pattern, same URLs) -->
+
 </div>
 </div>
 
@@ -176,14 +187,20 @@ body{
 </div>
 
 <!-- SYNOPSIS MODAL -->
-<div id="synopsis-modal" style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);background:#fff;padding:20px;border-radius:10px;max-width:600px;width:90%;box-shadow:0 0 15px rgba(0,0,0,.4);z-index:9999;">
-  <span onclick="closeSynopsis()" style="float:right;font-size:20px;cursor:pointer;">×</span>
-  <div id="synopsis-text" style="margin-top:1rem;font-size:16px;"></div>
+<div id="synopsis-modal"
+     style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);
+     background:#fff;padding:20px;border-radius:10px;max-width:600px;width:90%;
+     box-shadow:0 0 15px rgba(0,0,0,.4);z-index:9999;">
+  <span onclick="closeSynopsis()"
+        style="float:right;font-size:20px;cursor:pointer;">×</span>
+  <div id="synopsis-text"
+       style="margin-top:1rem;font-size:16px;"></div>
 </div>
 
 <script>
-function showSynopsis(text){
-  document.getElementById('synopsis-text').innerText = text;
+function showSynopsis(btn){
+  document.getElementById('synopsis-text').innerText =
+    btn.getAttribute('data-synopsis') || 'Synopsis coming soon.';
   document.getElementById('synopsis-modal').style.display = 'block';
 }
 function closeSynopsis(){
