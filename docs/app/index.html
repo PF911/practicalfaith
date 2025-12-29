@@ -63,12 +63,21 @@ nav button:active {
 </style>
 
 <script>
-// Hide splash screen after app loads
+// All initialization in one place
 document.addEventListener('DOMContentLoaded', function() {
+  // Hide splash screen
   if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen) {
     setTimeout(() => {
       window.Capacitor.Plugins.SplashScreen.hide();
     }, 500);
+  }
+  
+  // Handle iOS back button - prevent crash
+  if (window.Capacitor && window.Capacitor.getPlatform() === 'ios') {
+    window.addEventListener('popstate', function(event) {
+      event.preventDefault();
+      return false;
+    });
   }
 });
 
