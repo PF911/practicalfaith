@@ -4,11 +4,20 @@
   "webDir": "../docs/app",
   "plugins": {
     "SplashScreen": {
-      "launchAutoHide": false
+      "launchAutoHide": false,
+      "launchShowDuration": 6000,
+      "backgroundColor": "#ffeb3b",
+      "androidSpinnerStyle": "small",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#f59b23"
     }
   },
   "server": {
     "url": "https://PracticalFaith.net/app",
     "cleartext": true
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "limitsNavigationsToAppBoundDomains": true
   }
 }
