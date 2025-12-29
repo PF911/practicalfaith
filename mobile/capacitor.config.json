@@ -13,11 +13,6 @@
     }
   },
   "server": {
-    "url": "https://PracticalFaith.net/app",
-    "cleartext": true
-  },
-  "ios": {
-    "contentInset": "automatic",
-    "limitsNavigationsToAppBoundDomains": true
+    "allowNavigation": ["practicalfaith.net"]
   }
 }
