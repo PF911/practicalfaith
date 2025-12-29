@@ -8,56 +8,53 @@
 <style>
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 30px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     background: #f7f7f7;
-  }
-
-  .video-wrap {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 */
-    background: #000;
-  }
-
-  .video-wrap iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  .external-link {
     text-align: center;
-    padding: 12px;
-    background: #f7f7f7;
   }
 
-  .external-link a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #c00000;
+  h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #c00000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:active {
+    opacity: 0.85;
   }
 </style>
 </head>
 
 <body>
 
-<div class="video-wrap">
-<iframe
-  src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92&playsinline=1"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<h2>Current Sermons</h2>
+<p>Watch recent messages from Practical Faith</p>
 
-</div>
+<button
+  onclick="parent.openExternal('https://www.youtube.com/playlist?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92')">
+  ▶ Watch Sermons
+</button>
 
-<div class="external-link">
-  <a href="https://www.youtube.com/playlist?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92" target="_blank">
-    Click to view more sermons from Practical Faith
-  </a>
-</div>
+<p style="margin-top:18px; font-size:0.85rem;">
+  Opens securely inside the app
+</p>
 
 </body>
 </html>
