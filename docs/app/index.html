@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shell Test</title>
+<title>Practical Faith</title>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom,#ffeb3b,#ffd54f,#ffb74d,#f59b23);
+}
+
+header {
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#content {
+  flex: 1;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.15);
+}
+
+nav button {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function loadPage(page) {
+  document.getElementById("content").innerHTML =
+    `<iframe src="${page}"></iframe>`;
+}
+</script>
 </head>
-<body style="margin:0">
-  <iframe
-    src="test.html"
-    style="border:none;width:100vw;height:100vh">
-  </iframe>
+
+<body>
+
+<header>Practical Faith</header>
+
+<div id="content">
+  <iframe src="home.html"></iframe>
+</div>
+
+<nav>
+  <button onclick="loadPage('home.html')">Home</button>
+  <button onclick="loadPage('sermons.html')">Sermons</button>
+  <button onclick="loadPage('spotify.html')">Spotify</button>
+  <button onclick="loadPage('books.html')">Books</button>
+  <button onclick="loadPage('contact.html')">Contact</button>
+</nav>
+
 </body>
 </html>
