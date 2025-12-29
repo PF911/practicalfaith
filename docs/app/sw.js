@@ -1,4 +1,4 @@
-const CACHE_NAME = 'practical-faith-v1';
+const CACHE_NAME = 'practical-faith-v2';
 const urlsToCache = [
   '/app/',
   '/app/index.html',
