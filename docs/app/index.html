@@ -26,7 +26,6 @@ body {
   );
 }
 
-/* ---------- HEADER ---------- */
 header {
   padding: 14px;
   text-align: center;
@@ -34,7 +33,6 @@ header {
   background: rgba(255,255,255,0.9);
 }
 
-/* ---------- CONTENT ---------- */
 #content {
   flex: 1;
   overflow: hidden;
@@ -44,10 +42,8 @@ iframe {
   width: 100%;
   height: 100%;
   border: none;
-  overscroll-behavior: none;
 }
 
-/* ---------- NAV ---------- */
 nav {
   display: flex;
   justify-content: space-around;
@@ -60,7 +56,6 @@ nav button {
   background: none;
   border: none;
   font-size: 0.75rem;
-  cursor: pointer;
 }
 </style>
 
@@ -77,15 +72,15 @@ function loadPage(page) {
 <header>Practical Faith</header>
 
 <div id="content">
-  <iframe src="/app/home.html"></iframe>
+  <iframe src="home.html"></iframe>
 </div>
 
 <nav>
-  <button onclick="loadPage('/app/home.html')">Home</button>
-  <button onclick="loadPage('/app/sermons.html')">Sermons</button>
-  <button onclick="loadPage('/app/spotify.html')">Spotify</button>
-  <button onclick="loadPage('/app/books.html')">Books</button>
-  <button onclick="loadPage('/app/contact.html')">Contact</button>
+  <button onclick="loadPage('home.html')">Home</button>
+  <button onclick="loadPage('sermons.html')">Sermons</button>
+  <button onclick="loadPage('spotify.html')">Spotify</button>
+  <button onclick="loadPage('books.html')">Books</button>
+  <button onclick="loadPage('contact.html')">Contact</button>
 </nav>
 
 </body>
