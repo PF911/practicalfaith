@@ -72,15 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Register service worker for caching
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/app/sw.js').catch(function(err) {
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-
 function loadPage(page) {
   document.getElementById("content").innerHTML =
     `<iframe src="${page}"></iframe>`;
