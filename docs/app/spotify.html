@@ -14,8 +14,21 @@ body {
   text-align: center;
 }
 
+.topbar {
+  padding: 12px;
+  text-align: left;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 header {
-  padding: 40px 20px 20px;
+  padding: 20px;
 }
 
 header h1 {
@@ -34,7 +47,7 @@ header p {
 
 .spotify-btn {
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 15px 22px;
   background: #1DB954;
   color: #000;
@@ -58,15 +71,19 @@ footer {
 
 <body>
 
+<div class="topbar">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+</div>
+
 <header>
   <h1>Practical Faith Podcast</h1>
-  <p>Listen to recent episodes on Spotify</p>
+  <p>Listen on Spotify</p>
 </header>
 
 <div class="main">
   <a
     class="spotify-btn"
-    href="https://open.spotify.com/show/YOUR_SHOW_ID"
+    href="https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh"
     onclick="window.open(this.href, '_system'); return false;">
     🎧 Open in Spotify
   </a>
