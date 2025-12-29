@@ -5,32 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Practical Faith</title>
 
+<!-- DNS prefetch for faster loading -->
+<link rel="dns-prefetch" href="https://PracticalFaith.net">
+
+<!-- Preload critical resources -->
+<link rel="preload" href="home.html" as="document">
+
 <style>
 html, body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Arial, sans-serif;
-  overscroll-behavior: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    to bottom,
-    #ffeb3b 0%,
-    #ffd54f 45%,
-    #ffb74d 70%,
-    #f59b23 100%
-  );
+  background: linear-gradient(to bottom,#ffeb3b,#ffd54f,#ffb74d,#f59b23);
 }
 
 header {
   padding: 14px;
   text-align: center;
   font-weight: 600;
-  background: rgba(255,255,255,0.9);
 }
 
 #content {
@@ -47,19 +44,43 @@ iframe {
 nav {
   display: flex;
   justify-content: space-around;
-  padding: 10px 4px;
-  background: #ffffff;
-  border-top: 1px solid rgba(0,0,0,0.15);
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.15);
 }
 
 nav button {
   background: none;
   border: none;
   font-size: 0.75rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+nav button:active {
+  opacity: 0.7;
 }
 </style>
 
 <script>
+// All initialization in one place
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide splash screen
+  if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen) {
+    setTimeout(() => {
+      window.Capacitor.Plugins.SplashScreen.hide();
+    }, 500);
+  }
+  
+  // Handle iOS back button - prevent crash
+  if (window.Capacitor && window.Capacitor.getPlatform() === 'ios') {
+    window.addEventListener('popstate', function(event) {
+      event.preventDefault();
+      return false;
+    });
+  }
+});
+
 function loadPage(page) {
   document.getElementById("content").innerHTML =
     `<iframe src="${page}"></iframe>`;
@@ -80,6 +101,7 @@ function loadPage(page) {
   <button onclick="loadPage('sermons.html')">Sermons</button>
   <button onclick="loadPage('spotify.html')">Spotify</button>
   <button onclick="loadPage('books.html')">Books</button>
+  <button onclick="loadPage('share.html')">Share</button>
   <button onclick="loadPage('contact.html')">Contact</button>
 </nav>
 
