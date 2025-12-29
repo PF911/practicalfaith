@@ -1,80 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Practical Faith Podcast</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+        }
 
-<style>
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: #0f172a;
-  color: #ffffff;
-  text-align: center;
-}
-
-header {
-  padding: 40px 20px 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-header p {
-  margin-top: 10px;
-  color: #cbd5e1;
-}
-
-.main {
-  padding: 30px 20px;
-}
-
-.spotify-btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 15px 22px;
-  background: #1DB954;
-  color: #000;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 30px;
-}
-
-.spotify-btn:active {
-  opacity: 0.8;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #94a3b8;
-}
-</style>
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
-
 <body>
-
-<header>
-  <h1>Practical Faith Podcast</h1>
-  <p>Listen to recent episodes on Spotify</p>
-</header>
-
-<div class="main">
-  <a
-    class="spotify-btn"
-    href="https://open.spotify.com/show/YOUR_SHOW_ID"
-    onclick="window.open(this.href, '_system'); return false;">
-    🎧 Open in Spotify
-  </a>
-</div>
-
-<footer>
-  <p>Spotify opens outside the app for best playback.</p>
-</footer>
-
+    <iframe
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
+        src="https://open.spotify.com/embed/show/0cn7xr3CSJCFsvvYB9Hiuh"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
 </body>
 </html>
