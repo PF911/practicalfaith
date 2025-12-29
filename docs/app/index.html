@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Practical Faith</title>
 
+<!-- DNS prefetch for faster loading -->
+<link rel="dns-prefetch" href="https://PracticalFaith.net">
+
+<!-- Preload critical resources -->
+<link rel="preload" href="home.html" as="document">
+
 <style>
 html, body {
   height: 100%;
@@ -48,10 +54,33 @@ nav button {
   border: none;
   font-size: 0.75rem;
   cursor: pointer;
+  padding: 8px;
+}
+
+nav button:active {
+  opacity: 0.7;
 }
 </style>
 
 <script>
+// Hide splash screen after app loads
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen) {
+    setTimeout(() => {
+      window.Capacitor.Plugins.SplashScreen.hide();
+    }, 500);
+  }
+});
+
+// Register service worker for caching
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/app/sw.js').catch(function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
 function loadPage(page) {
   document.getElementById("content").innerHTML =
     `<iframe src="${page}"></iframe>`;
@@ -72,7 +101,7 @@ function loadPage(page) {
   <button onclick="loadPage('sermons.html')">Sermons</button>
   <button onclick="loadPage('spotify.html')">Spotify</button>
   <button onclick="loadPage('books.html')">Books</button>
-   <button onclick="loadPage('share.html')">Share</button>
+  <button onclick="loadPage('share.html')">Share</button>
   <button onclick="loadPage('contact.html')">Contact</button>
 </nav>
 
