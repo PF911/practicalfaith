@@ -7,54 +7,88 @@
 <style>
 body {
   margin: 0;
-  padding: 36px 20px;
-  text-align: center;
+  padding: 0;
   background: transparent;
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* Full-height layout */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Gappsy-like vertical positioning */
+.content {
+  margin-top: 26vh;   /* lowered to match Gappsy */
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Cross logo */
 .logo {
+  margin-bottom: 12px;
+}
+
+.logo img {
+  width: 200px;   /* reduced again */
+  height: auto;
+}
+
+/* Practical Faith wordmark */
+.banner {
   margin-bottom: 14px;
 }
 
-.banner {
-  margin-bottom: 18px;
+.banner img {
+  width: 288px;
+  height: auto;
 }
 
+/* Tagline */
 .tagline {
   color: #3C3E56;
-  font-size: 0.95rem;
+  font-size: 1.08rem;
   line-height: 1.25;
-  margin: 0 auto 10px;
-  max-width: 90%;
+  max-width: 92%;
+  margin: 0 auto 6px;
 }
 
+/* Author line */
 .author {
   color: #3C3E56;
-  font-size: 0.9rem;
-  margin-top: 6px;
+  font-size: 1.0rem;
+  margin-top: 2px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="logo">
-  <img src="images/Logo.png" width="246" height="258" alt="Practical Faith Logo">
-</div>
+<div class="wrapper">
+  <div class="content">
 
-<div class="banner">
-  <img src="images/banner2.png" width="288" height="76" alt="Practical Faith">
-</div>
+    <div class="logo">
+      <img src="images/Logo.png" alt="Practical Faith Cross Logo">
+    </div>
 
-<div class="tagline">
-  Making the Bible Relevant<br>for Today’s Living
-</div>
+    <div class="banner">
+      <img src="images/banner2.png" alt="Practical Faith">
+    </div>
 
-<div class="author">
-  with Pastor Rev Owens
+    <div class="tagline">
+      Making the Bible Relevant<br>for Today’s Living
+    </div>
+
+    <div class="author">
+      with Pastor Rev Owens
+    </div>
+
+  </div>
 </div>
 
 </body>
