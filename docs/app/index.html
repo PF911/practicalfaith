@@ -6,25 +6,20 @@
 <title>Practical Faith</title>
 
 <link rel="dns-prefetch" href="https://practicalfaith.net">
-<link rel="preload" href="home.html" as="document">
 
 <style>
 html, body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom,#ffeb3b,#ffd54f,#ffb74d,#f59b23);
-}
-
-header {
-  padding: 14px;
-  text-align: center;
-  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 #content {
@@ -41,17 +36,25 @@ iframe {
 nav {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,.15);
+  align-items: center;
+  padding: 8px 6px env(safe-area-inset-bottom);
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.15);
 }
 
 nav button {
+  flex: 1;
   background: none;
   border: none;
+  text-align: center;
   font-size: 0.75rem;
-  cursor: pointer;
-  padding: 8px;
+  color: #333;
+  padding: 6px 0;
+}
+
+nav img {
+  display: block;
+  margin: 0 auto 2px;
 }
 
 nav button:active {
@@ -60,36 +63,22 @@ nav button:active {
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  // Hide splash screen safely
+document.addEventListener('DOMContentLoaded', () => {
   if (window.Capacitor?.Plugins?.SplashScreen) {
     setTimeout(() => {
       window.Capacitor.Plugins.SplashScreen.hide();
-    }, 500);
-  }
-
-  // iOS safety guard
-  if (window.Capacitor?.getPlatform() === 'ios') {
-    window.addEventListener('popstate', function (event) {
-      event.preventDefault();
-    });
+    }, 400);
   }
 });
 
-// Load pages into iframe
 function loadPage(page) {
   document.getElementById("content").innerHTML =
     `<iframe src="${page}"></iframe>`;
 }
 
-// Open external links safely (YouTube, etc.)
 function openExternal(url) {
   if (window.Capacitor?.Plugins?.Browser) {
-    window.Capacitor.Plugins.Browser.open({
-      url: url,
-      presentationStyle: 'popover'
-    });
+    window.Capacitor.Plugins.Browser.open({ url });
   } else {
     window.open(url, '_blank');
   }
@@ -99,20 +88,34 @@ function openExternal(url) {
 
 <body>
 
-<header></header>
 <div id="content">
   <iframe src="home.html"></iframe>
 </div>
 
 <nav>
-  <button onclick="loadPage('home.html')"><img src="images/Logo.png" width="35" height="35">Home</button>
-  <button onclick="loadPage('sermons.html')">
-  <div align="center"><img src="images/YouTube.png" width="35" height="35">Sermons</div>
+  <button onclick="loadPage('home.html')">
+    <img src="images/Logo.png" width="35" height="35">Home
   </button>
-  <button onclick="loadPage('spotify.html')"><img src="images/stotify.png" width="35" height="35">Spotify</button>
-  <button onclick="loadPage('books.html')"><img src="images/books.png" width="35" height="35">Books</button>
-  <button onclick="loadPage('share.html')"><img src="images/share.png" width="35" height="35">Share</button>
-  <button onclick="loadPage('contact.html')"><img src="images/contact.png" width="35" height="35">Contact</button>
+
+  <button onclick="loadPage('sermons.html')">
+    <img src="images/YouTube.png" width="35" height="35">Sermons
+  </button>
+
+  <button onclick="loadPage('spotify.html')">
+    <img src="images/stotify.png" width="35" height="35">Spotify
+  </button>
+
+  <button onclick="loadPage('books.html')">
+    <img src="images/books.png" width="35" height="35">Books
+  </button>
+
+  <button onclick="loadPage('share.html')">
+    <img src="images/share.png" width="35" height="35">Share
+  </button>
+
+  <button onclick="loadPage('contact.html')">
+    <img src="images/contact.png" width="35" height="35">Contact
+  </button>
 </nav>
 
 </body>
