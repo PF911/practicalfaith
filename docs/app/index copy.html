@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Practical Faith</title>
 
-<!-- DNS prefetch for faster loading -->
-<link rel="dns-prefetch" href="https://PracticalFaith.net">
-
-<!-- Preload critical resources -->
+<link rel="dns-prefetch" href="https://practicalfaith.net">
 <link rel="preload" href="home.html" as="document">
 
 <style>
@@ -63,27 +60,39 @@ nav button:active {
 </style>
 
 <script>
-// All initialization in one place
-document.addEventListener('DOMContentLoaded', function() {
-  // Hide splash screen
-  if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen) {
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Hide splash screen safely
+  if (window.Capacitor?.Plugins?.SplashScreen) {
     setTimeout(() => {
       window.Capacitor.Plugins.SplashScreen.hide();
     }, 500);
   }
-  
-  // Handle iOS back button - prevent crash
-  if (window.Capacitor && window.Capacitor.getPlatform() === 'ios') {
-    window.addEventListener('popstate', function(event) {
+
+  // iOS safety guard
+  if (window.Capacitor?.getPlatform() === 'ios') {
+    window.addEventListener('popstate', function (event) {
       event.preventDefault();
-      return false;
     });
   }
 });
 
+// Load pages into iframe
 function loadPage(page) {
   document.getElementById("content").innerHTML =
     `<iframe src="${page}"></iframe>`;
+}
+
+// Open external links safely (YouTube, etc.)
+function openExternal(url) {
+  if (window.Capacitor?.Plugins?.Browser) {
+    window.Capacitor.Plugins.Browser.open({
+      url: url,
+      presentationStyle: 'popover'
+    });
+  } else {
+    window.open(url, '_blank');
+  }
 }
 </script>
 </head>
