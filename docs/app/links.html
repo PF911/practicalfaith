@@ -10,12 +10,12 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
+        background: #ffffff;
         text-align: center;
-        background: #fff;
     }
 
     .container {
-        max-width: 420px;   /* phone-first */
+        max-width: 420px;
         margin: 0 auto;
         padding: 20px 15px;
     }
@@ -27,6 +27,10 @@
         margin: 0 auto;
     }
 
+    .banner {
+        margin-bottom: 20px;
+    }
+
     .logo {
         max-width: 260px;
         margin: 20px auto 30px;
@@ -36,37 +40,41 @@
         max-width: 320px;
         margin: 15px auto;
     }
-
-    .banner {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container">
+<div class="container">
 
-        <!-- Banner -->
-        <img src="images/banner.png" alt="Banner" class="banner">
+    <!-- Banner -->
+    <img src="images/banner.png" alt="Practical Faith" class="banner">
 
-        <!-- Logo -->
-        <img src="images/Logo.png" alt="Practical Faith Logo" width="400" height="600" class="logo">
+    <!-- Logo -->
+    <img src="images/Logo.png" alt="Practical Faith Logo" class="logo">
 
-        <!-- Google Play -->
-        <a href="https://play.google.com/store/apps/details?id=com.gappsy.dashboard.www.android5f1e272990b8c&pli=1">
-            <img src="images/google.png" alt="Get it on Google Play" width="380" height="120" class="store-btn">
-        </a>
+    <!-- Google Play (opens system browser) -->
+    <a href="https://play.google.com/store/apps/details?id=com.gappsy.dashboard.www.android5f1e272990b8c&pli=1"
+       target="_blank"
+       rel="noopener">
+        <img src="images/google.png" alt="Get it on Google Play" class="store-btn">
+    </a>
 
-        <!-- Apple App Store -->
-        <a href="https://apps.apple.com/us/app/practical-faith/id6737707537?platform=iphone">
-            <img src="images/apple.png" alt="Download on the App Store" width="380" height="120" class="store-btn">
-        </a>
+    <!-- Apple App Store (opens system browser) -->
+    <a href="https://apps.apple.com/us/app/practical-faith/id6737707537"
+       target="_blank"
+       rel="noopener">
+        <img src="images/apple.png" alt="Download on the App Store" class="store-btn">
+    </a>
 
-    <!-- YouTube --></div>
-</header>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/playlist?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92"
+       target="_blank"
+       rel="noopener">
+        <img src="images/youtube3.png" alt="Watch on YouTube" class="store-btn">
+    </a>
+
+</div>
 
 </body>
 </html>
