@@ -19,6 +19,7 @@
       padding: 20px;
       border-bottom: 1px solid #ddd;
       text-align: center;
+      position: relative;
     }
 
     .header h1 {
@@ -77,11 +78,12 @@
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
+      border: none;
+      cursor: pointer;
     }
 
     .saved-list {
       display: none;
-      /* For future when you actually have saved items */
     }
 
     .saved-item {
@@ -118,10 +120,9 @@
       <div class="empty-icon">📚</div>
       <h2>No Saved Teachings Yet</h2>
       <p>When you save teachings from sermons, Spotify, or books, they'll appear here.</p>
-      <a href="home.html" class="home-btn">Return Home</a>
+      <button class="home-btn" onclick="goHome()">Return Home</button>
     </div>
 
-    <!-- Hidden for now, will be shown when user actually saves items -->
     <div class="saved-list">
       <div class="saved-item">
         <h3>Sample Teaching Title</h3>
@@ -132,7 +133,19 @@
 
   <script>
     function goBack() {
-      window.history.back();
+      if (window.parent && window.parent.loadPage) {
+        window.parent.loadPage('home.html');
+      } else {
+        window.history.back();
+      }
+    }
+
+    function goHome() {
+      if (window.parent && window.parent.loadPage) {
+        window.parent.loadPage('home.html');
+      } else {
+        window.location.href = 'home.html';
+      }
     }
   </script>
 </body>

@@ -14,7 +14,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Full-height layout */
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -22,14 +21,12 @@ body {
   align-items: flex-start;
 }
 
-/* Gappsy-like vertical positioning */
 .content {
   margin-top: 26vh;
   text-align: center;
   padding: 0 20px;
 }
 
-/* Cross logo */
 .logo {
   margin-bottom: 12px;
 }
@@ -39,7 +36,6 @@ body {
   height: auto;
 }
 
-/* Practical Faith wordmark */
 .banner {
   margin-bottom: 14px;
 }
@@ -49,7 +45,6 @@ body {
   height: auto;
 }
 
-/* Tagline */
 .tagline {
   color: #3C3E56;
   font-size: 1.08rem;
@@ -59,16 +54,14 @@ body {
   font-weight: 600;
 }
 
-/* Author line */
 .author {
   color: #3C3E56;
   font-size: 1.0rem;
   margin-top: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   font-weight: 500;
 }
 
-/* Save button - the ONE thing Apple needs to see */
 .save-button {
   display: inline-block;
   background: #f59b23;
@@ -76,18 +69,28 @@ body {
   padding: 14px 40px;
   border-radius: 25px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(245, 155, 35, 0.3);
   border: none;
   cursor: pointer;
   font-family: inherit;
   margin-top: 8px;
+  transition: all 0.2s;
 }
 
 .save-button:active {
   transform: scale(0.98);
   box-shadow: 0 2px 6px rgba(245, 155, 35, 0.3);
+}
+
+.view-saved {
+  display: block;
+  margin-top: 16px;
+  color: #f59b23;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 </style>
 </head>
@@ -113,13 +116,35 @@ body {
       with Pastor Rev Owens
     </div>
 
-    <!-- THE ONE BUTTON APPLE NEEDS TO SEE -->
-    <button class="save-button" onclick="parent.loadPage('saved.html')">
+    <button class="save-button" onclick="saveTeaching()">
       Save Teaching
     </button>
 
+    <a href="#" class="view-saved" onclick="viewSaved(); return false;">
+      View Saved Teachings
+    </a>
+
   </div>
 </div>
+
+<script>
+function saveTeaching() {
+  alert('Teaching saved! View it in Saved Teachings.');
+  if (window.parent && window.parent.loadPage) {
+    window.parent.loadPage('saved.html');
+  } else {
+    window.location.href = 'saved.html';
+  }
+}
+
+function viewSaved() {
+  if (window.parent && window.parent.loadPage) {
+    window.parent.loadPage('saved.html');
+  } else {
+    window.location.href = 'saved.html';
+  }
+}
+</script>
 
 </body>
 </html>
