@@ -12,29 +12,128 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background: #f5f5f5;
       color: #222;
+    }
+
+    .header {
+      background: white;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
       text-align: center;
     }
 
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background: none;
+      border: none;
+      color: #f59b23;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+
     .container {
-      padding: 60px 20px;
+      padding: 20px;
+      text-align: center;
     }
 
-    h1 {
-      font-size: 26px;
+    .empty-state {
+      margin-top: 80px;
+    }
+
+    .empty-icon {
+      font-size: 60px;
       margin-bottom: 20px;
+      opacity: 0.3;
     }
 
-    p {
-      font-size: 18px;
-      color: #555;
+    .empty-state h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .empty-state p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 300px;
+      margin: 0 auto 30px;
+    }
+
+    .home-btn {
+      display: inline-block;
+      background: #f59b23;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .saved-list {
+      display: none;
+      /* For future when you actually have saved items */
+    }
+
+    .saved-item {
+      background: white;
+      padding: 16px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .saved-item h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .saved-item p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="header">
+    <button class="back-btn" onclick="goBack()">← Back</button>
     <h1>Saved Teachings</h1>
-    <p>You have 0 saved teachings.</p>
   </div>
+
+  <div class="container">
+    <div class="empty-state">
+      <div class="empty-icon">📚</div>
+      <h2>No Saved Teachings Yet</h2>
+      <p>When you save teachings from sermons, Spotify, or books, they'll appear here.</p>
+      <a href="home.html" class="home-btn">Return Home</a>
+    </div>
+
+    <!-- Hidden for now, will be shown when user actually saves items -->
+    <div class="saved-list">
+      <div class="saved-item">
+        <h3>Sample Teaching Title</h3>
+        <p>Saved from: Sermons • Jan 12, 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 </html>
