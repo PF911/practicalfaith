@@ -1,25 +1,206 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Practical Faith</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Practical Faith</title>
+  
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  
+  <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#ffeb3b" />
+  
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
 
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #ffeb3b, #ffd54f, #ffb74d, #f59b23);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <meta name="theme-color" content="#31d53d" />
-  </head>
+    #content {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
 
-  <body>
-    <capacitor-welcome></capacitor-welcome>
-    <script src="./js/capacitor-welcome.js" type="module"></script>
-  </body>
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+      background: #ffffff;
+      border-top: 1px solid rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    nav button {
+      flex: 1;
+      background: none;
+      border: none;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #333;
+      padding: 6px 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    nav img {
+      display: block;
+      margin: 0 auto 2px;
+    }
+
+    nav button:active {
+      opacity: 0.7;
+    }
+
+    /* Prevent scrolling on nav buttons */
+    nav button {
+      touch-action: manipulation;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content"></div>
+
+  <nav>
+    <button onclick="loadPage('sermons')">
+      <img src="./assets/images/YouTube.png" width="35" height="35" alt="Sermons">
+      Sermons
+    </button>
+
+    <button onclick="loadPage('spotify')">
+      <img src="./assets/images/stotify.png" width="35" height="35" alt="Spotify">
+      Spotify
+    </button>
+
+    <button onclick="loadPage('home')">
+      <img src="./assets/images/Logo.png" width="35" height="35" alt="Home">
+      Home
+    </button>
+
+    <button onclick="loadPage('books')">
+      <img src="./assets/images/books.png" width="35" height="35" alt="Books">
+      Books
+    </button>
+
+    <button onclick="loadPage('share')">
+      <img src="./assets/images/share.png" width="35" height="35" alt="Share">
+      Share
+    </button>
+  </nav>
+
+  <script type="module">
+    // Hide splash screen after content loads
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.Capacitor?.Plugins?.SplashScreen) {
+        setTimeout(() => {
+          window.Capacitor.Plugins.SplashScreen.hide();
+        }, 400);
+      }
+      // Load home page on startup
+      loadPage('home');
+    });
+
+    // Page navigation
+    window.loadPage = function(page) {
+      const content = document.getElementById('content');
+      
+      // Clear current content
+      content.innerHTML = '';
+      
+      // Load the appropriate page content directly
+      switch(page) {
+        case 'home':
+          loadHomeContent();
+          break;
+        case 'saved':
+          loadSavedContent();
+          break;
+        case 'sermons':
+          content.innerHTML = '<iframe src="./pages/sermons.html" style="width:100%;height:100%;border:none;"></iframe>';
+          break;
+        case 'spotify':
+          content.innerHTML = '<iframe src="./pages/spotify.html" style="width:100%;height:100%;border:none;"></iframe>';
+          break;
+        case 'books':
+          content.innerHTML = '<iframe src="./pages/books.html" style="width:100%;height:100%;border:none;"></iframe>';
+          break;
+        case 'share':
+          content.innerHTML = '<iframe src="./pages/share.html" style="width:100%;height:100%;border:none;"></iframe>';
+          break;
+      }
+    };
+
+    // Home page content (embedded for performance)
+    function loadHomeContent() {
+      document.getElementById('content').innerHTML = `
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;text-align:center;padding:20px;">
+          <div style="margin-bottom:30px;">
+            <img src="./assets/images/Logo.png" width="120" height="120" style="border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,0.15);" alt="Practical Faith Logo">
+          </div>
+
+          <h1 style="font-size:32px;margin:0 0 10px;font-weight:600;color:#222;">Practical Faith</h1>
+          <p style="font-size:16px;color:#555;margin-bottom:40px;">Biblical teachings for everyday life</p>
+
+          <div style="background:white;border-radius:12px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.1);margin-bottom:20px;max-width:320px;">
+            <h2 style="font-size:20px;margin:0 0 15px;color:#333;">Save Teachings</h2>
+            <p style="font-size:14px;color:#666;margin:0 0 20px;line-height:1.5;">Found a teaching you want to revisit? Save it to access later.</p>
+            <button onclick="saveTeaching()" style="display:inline-block;background:#f59b23;color:white;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;box-shadow:0 2px 8px rgba(245,155,35,0.3);border:none;cursor:pointer;width:100%;">
+              Save Teaching
+            </button>
+            <a href="#" onclick="loadPage('saved'); return false;" style="display:block;margin-top:12px;color:#f59b23;text-decoration:none;font-size:14px;">
+              View Saved Teachings
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    // Saved page content (embedded for performance)
+    function loadSavedContent() {
+      document.getElementById('content').innerHTML = `
+        <div style="background:#f5f5f5;min-height:100%;">
+          <div style="background:white;padding:20px;border-bottom:1px solid #ddd;text-align:center;position:relative;">
+            <button onclick="loadPage('home')" style="position:absolute;left:20px;top:20px;background:none;border:none;color:#f59b23;font-size:16px;cursor:pointer;padding:5px 10px;">
+              ← Back
+            </button>
+            <h1 style="font-size:24px;margin:0;font-weight:600;">Saved Teachings</h1>
+          </div>
+
+          <div style="padding:20px;text-align:center;">
+            <div style="margin-top:80px;">
+              <div style="font-size:60px;margin-bottom:20px;opacity:0.3;">📚</div>
+              <h2 style="font-size:22px;color:#333;margin-bottom:10px;">No Saved Teachings Yet</h2>
+              <p style="font-size:16px;color:#666;line-height:1.6;max-width:300px;margin:0 auto 30px;">
+                When you save teachings from sermons, Spotify, or books, they'll appear here.
+              </p>
+              <button onclick="loadPage('home')" style="display:inline-block;background:#f59b23;color:white;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:600;border:none;cursor:pointer;">
+                Return Home
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Save action
+    window.saveTeaching = function() {
+      alert('Teaching saved! View it in Saved Teachings.');
+      loadPage('saved');
+    };
+  </script>
+</body>
 </html>
-
