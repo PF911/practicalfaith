@@ -107,6 +107,7 @@
       text-align: center;
       padding: 40px;
       color: #666;
+      font-size: 14px;
     }
     .error {
       text-align: center;
@@ -115,6 +116,7 @@
       background: #fff;
       border-radius: 12px;
       margin: 20px 0;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -139,97 +141,62 @@
     import { Browser } from '@capacitor/browser';
 
     const STORAGE_KEY = "pf_saved_teachings_v1";
-    const SPOTIFY_RSS = "https://anchor.fm/s/ff0d794c/podcast/rss";
-    const YOUTUBE_PLAYLIST = "https://www.youtube.com/playlist?list=PLxaBH-TdMi2-RSBZMPODyMJQ5aWdAFcjI"; // Your actual playlist
     
     let teachings = [];
     let currentTab = 'all';
     let savedTeachings = [];
 
-    // Manual YouTube videos (since YouTube RSS requires channel ID, not playlist)
-    // You'll update these when you post new videos
+    // YouTube videos
     const youtubeVideos = [
       {
         title: "Learning to Let Go",
         platform: "YouTube",
-        date: "2026-01-12",
-        url: "https://www.youtube.com/watch?v=YOUR_ACTUAL_VIDEO_ID",
+        date: "January 12, 2026",
+        url: "https://www.youtube.com/watch?v=u0DRlNpp4Wo",
         duration: "40:48",
         description: "Making the Bible Relevant for Today's Living"
       },
       {
         title: "When God Changes the Menu - A Message for the New Year",
         platform: "YouTube",
-        date: "2026-01-05",
-        url: "https://www.youtube.com/watch?v=YOUR_ACTUAL_VIDEO_ID",
+        date: "January 5, 2026",
+        url: "https://www.youtube.com/watch?v=e8ZfqKCEgPM",
         duration: "35:22",
         description: "Starting the year with faith and purpose"
       }
     ];
 
-    async function fetchSpotifyEpisodes() {
-      try {
-        const response = await fetch(SPOTIFY_RSS);
-        if (!response.ok) throw new Error('Failed to fetch RSS');
-        
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, 'text/xml');
-        
-        const items = xml.querySelectorAll('item');
-        const episodes = [];
-        
-        items.forEach(item => {
-          const title = item.querySelector('title')?.textContent || 'Untitled';
-          const link = item.querySelector('enclosure')?.getAttribute('url') || 
-                      item.querySelector('link')?.textContent || '';
-          const pubDate = item.querySelector('pubDate')?.textContent || '';
-          const description = item.querySelector('description')?.textContent || '';
-          const duration = item.querySelector('duration')?.textContent || '';
-          
-          // Convert Anchor URL to Spotify URL if needed
-          let spotifyUrl = link;
-          if (link.includes('anchor.fm')) {
-            // Extract episode ID and construct Spotify URL
-            // This might need adjustment based on your RSS structure
-            spotifyUrl = link;
-          }
-          
-          // Format date
-          let formattedDate = '';
-          if (pubDate) {
-            try {
-              const date = new Date(pubDate);
-              formattedDate = date.toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              });
-            } catch (e) {
-              formattedDate = pubDate;
-            }
-          }
-          
-          episodes.push({
-            title,
-            platform: "Spotify",
-            date: formattedDate,
-            url: spotifyUrl,
-            duration: duration || 'Unknown',
-            description: description.replace(/<[^>]*>/g, '').substring(0, 150) + '...'
-          });
-        });
-        
-        return episodes;
-      } catch (e) {
-        console.error('Error fetching Spotify RSS:', e);
-        return [];
+    // Hardcoded Spotify episodes (manually maintained for now)
+    const spotifyEpisodes = [
+      {
+        title: "Faith and Perseverance",
+        platform: "Spotify",
+        date: "December 29, 2025",
+        url: "https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh",
+        duration: "42:00",
+        description: "Practical Faith Podcast episode on maintaining faith through challenges"
+      },
+      {
+        title: "Walking in God's Purpose",
+        platform: "Spotify",
+        date: "December 15, 2025",
+        url: "https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh",
+        duration: "38:00",
+        description: "Understanding and living out your divine calling"
+      },
+      {
+        title: "The Power of Prayer",
+        platform: "Spotify",
+        date: "December 1, 2025",
+        url: "https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh",
+        duration: "36:00",
+        description: "How to develop a meaningful prayer life"
       }
-    }
+    ];
 
     async function loadAllTeachings() {
       try {
-        const spotifyEpisodes = await fetchSpotifyEpisodes();
+        // Combine YouTube and Spotify content
         teachings = [...youtubeVideos, ...spotifyEpisodes];
         
         // Sort by date (newest first)
@@ -300,7 +267,7 @@
       const filtered = getFilteredTeachings();
       
       if (filtered.length === 0) {
-        container.innerHTML = '<div class="loading">No teachings found</div>';
+        container.innerHTML = '<div class="loading">No teachings found in this category</div>';
         return;
       }
 
@@ -318,7 +285,7 @@
           <div class="teaching-title">${teaching.title}</div>
           <div class="teaching-meta">
             <span class="platform-badge ${teaching.platform.toLowerCase()}">${teaching.platform}</span>
-            ${teaching.date}${teaching.duration !== 'Unknown' ? ' • ' + teaching.duration : ''}
+            ${teaching.date}${teaching.duration ? ' • ' + teaching.duration : ''}
           </div>
           ${descriptionHtml}
           <div class="buttons">
@@ -363,7 +330,7 @@
         renderTeachings();
       } else {
         document.getElementById('teachings-list').innerHTML = 
-          '<div class="error">Unable to load teachings. Please check your connection and try again.</div>';
+          '<div class="error">Unable to load teachings. Please try again.</div>';
       }
     })();
   </script>
