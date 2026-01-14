@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saved Teachings</title>
+  <script src="capacitor.js"></script>
   <style>
     body {
       margin: 0;
@@ -116,19 +117,26 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', async function() {
-      await new Promise(resolve => setTimeout(resolve, 100));
-      
-      const { Preferences } = window.Capacitor.Plugins;
-      const { Browser } = window.Capacitor.Plugins;
-
+    (function() {
       const STORAGE_KEY = "pf_saved_teachings_v1";
       let savedTeachings = [];
+      let Preferences, Browser;
+
+      function initialize() {
+        if (window.Capacitor && window.Capacitor.Plugins) {
+          Preferences = window.Capacitor.Plugins.Preferences;
+          Browser = window.Capacitor.Plugins.Browser;
+        }
+        
+        loadSavedTeachings().then(renderTeachings);
+      }
 
       async function loadSavedTeachings() {
         try {
-          const result = await Preferences.get({ key: STORAGE_KEY });
-          savedTeachings = JSON.parse(result.value || "[]");
+          if (Preferences) {
+            const result = await Preferences.get({ key: STORAGE_KEY });
+            savedTeachings = JSON.parse(result.value || "[]");
+          }
           return savedTeachings;
         } catch (e) {
           console.error('Error loading saved:', e);
@@ -139,10 +147,12 @@
       async function removeTeaching(id) {
         try {
           savedTeachings = savedTeachings.filter(t => t.id !== id);
-          await Preferences.set({
-            key: STORAGE_KEY,
-            value: JSON.stringify(savedTeachings)
-          });
+          if (Preferences) {
+            await Preferences.set({
+              key: STORAGE_KEY,
+              value: JSON.stringify(savedTeachings)
+            });
+          }
           renderTeachings();
         } catch (e) {
           alert("Error removing teaching");
@@ -152,7 +162,9 @@
       window.clearAll = async function() {
         if (confirm("Clear all saved teachings?")) {
           try {
-            await Preferences.remove({ key: STORAGE_KEY });
+            if (Preferences) {
+              await Preferences.remove({ key: STORAGE_KEY });
+            }
             savedTeachings = [];
             renderTeachings();
           } catch (e) {
@@ -163,9 +175,13 @@
 
       async function openTeaching(url) {
         try {
-          await Browser.open({ url: url });
+          if (Browser) {
+            await Browser.open({ url: url });
+          } else {
+            window.open(url, '_blank');
+          }
         } catch (e) {
-          window.open(url, '_system');
+          window.open(url, '_blank');
         }
       }
 
@@ -179,7 +195,7 @@
             <div class="empty">
               <div class="empty-icon">📚</div>
               <h2>No Saved Teachings Yet</h2>
-              <p>When you save teachings from sermons, Spotify, or books, they'll appear here.</p>
+              <p>When you save teachings from sermons,<br>Spotify, or books, they'll appear here.</p>
             </div>
           `;
           return;
@@ -226,10 +242,12 @@
         });
       }
 
-      // Initialize
-      await loadSavedTeachings();
-      renderTeachings();
-    });
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize);
+      } else {
+        setTimeout(initialize, 100);
+      }
+    })();
   </script>
 </body>
 </html>

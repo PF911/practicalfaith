@@ -22,7 +22,6 @@ body {
 #content {
   flex: 1;
   overflow-y: auto;
-  background: #f5f5f5;
 }
 
 nav {
@@ -69,7 +68,7 @@ nav button:active {
     <img src="images/stotify.png" width="35" height="35">Spotify
   </button>
 
-  <button onclick="loadPage('home.html')">
+  <button onclick="loadPage('home-content.html')">
     <img src="images/Logo.png" width="35" height="35">Home
   </button>
 
@@ -91,29 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 400);
   }
   
-  // Load home page by default
-  loadPage('home.html');
+  loadPage('home-content.html');
 });
 
-async function loadPage(page) {
+window.loadPage = async function(page) {
   try {
     const response = await fetch(page);
     const html = await response.text();
     
-    // Extract body content
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
-    const bodyContent = doc.body.innerHTML;
+    const bodyContent = doc.body ? doc.body.innerHTML : html;
     
     document.getElementById("content").innerHTML = bodyContent;
     
-    // Re-execute scripts from loaded page
     const scripts = doc.querySelectorAll('script');
     scripts.forEach(oldScript => {
       const newScript = document.createElement('script');
-      Array.from(oldScript.attributes).forEach(attr => {
-        newScript.setAttribute(attr.name, attr.value);
-      });
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      }
       newScript.textContent = oldScript.textContent;
       document.body.appendChild(newScript);
     });
