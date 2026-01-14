@@ -19,6 +19,7 @@
       margin: 0 0 8px 0;
       font-size: 28px;
       font-weight: 700;
+      color: #000;
     }
     .header p {
       margin: 0;
@@ -28,15 +29,16 @@
     .teaching {
       background: white;
       border-radius: 12px;
-      padding: 14px;
+      padding: 16px;
       margin-bottom: 12px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     .teaching-title {
       font-weight: 600;
-      font-size: 16px;
-      margin: 0 0 6px 0;
+      font-size: 17px;
+      margin: 0 0 8px 0;
       line-height: 1.3;
+      color: #000;
     }
     .teaching-meta {
       font-size: 13px;
@@ -51,7 +53,7 @@
     }
     .platform-badge {
       display: inline-block;
-      padding: 3px 8px;
+      padding: 4px 8px;
       border-radius: 4px;
       font-size: 11px;
       font-weight: 700;
@@ -67,10 +69,14 @@
       flex: 1;
       padding: 12px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 15px;
       font-weight: 600;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
     .btn-watch {
       background: #007AFF;
@@ -110,7 +116,7 @@
       let savedTeachings = [];
       let Preferences, Browser;
 
-      // YouTube videos - ADD YOUR REAL VIDEO IDs HERE
+      // YouTube videos - UPDATE WITH YOUR REAL VIDEO IDs
       const youtubeVideos = [
         {
           title: "Learning to Let Go",
@@ -136,7 +142,6 @@
           duration: "38:10",
           description: "Living as children of light"
         }
-        // ADD MORE VIDEOS HERE AS YOU POST THEM
       ];
 
       function loadAllTeachings() {
@@ -231,7 +236,7 @@
             '<div class="teaching-title">' + teaching.title + '</div>' +
             '<div class="teaching-meta">' +
               '<span class="platform-badge">YouTube</span>' +
-              teaching.date + (teaching.duration ? ' • ' + teaching.duration : '') +
+              teaching.date + ' • ' + teaching.duration +
             '</div>' +
             descriptionHtml +
             '<div class="buttons">' +
