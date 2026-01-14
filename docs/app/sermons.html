@@ -2,115 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sermons & Teachings</title>
   <script src="capacitor.js"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(to bottom, #ffeb3b, #ffd54f, #ffb74d, #f59b23);
-      padding: 0;
-      min-height: 100vh;
-    }
-    .container {
-      padding: 20px;
-      min-height: 100vh;
-    }
-    .header {
-      margin-bottom: 24px;
-    }
-    .header h1 {
-      margin: 0 0 10px 0;
-      font-size: 32px;
-      font-weight: 700;
-      color: #1a1a1a;
-    }
-    .header p {
-      margin: 0;
-      color: #4a4a4a;
-      font-size: 17px;
-    }
-    .teaching {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-    .teaching-title {
-      font-weight: 600;
-      font-size: 20px;
-      margin: 0 0 10px 0;
-      line-height: 1.4;
-      color: #1a1a1a;
-    }
-    .teaching-meta {
-      font-size: 15px;
-      color: #666;
-      margin: 0 0 10px 0;
-    }
-    .teaching-desc {
-      font-size: 16px;
-      color: #4a4a4a;
-      margin: 0 0 16px 0;
-      line-height: 1.5;
-    }
-    .platform-badge {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-right: 8px;
-      background: #ff0000;
-      color: white;
-    }
-    .buttons {
-      display: flex;
-      gap: 10px;
-    }
-    .btn {
-      flex: 1;
-      padding: 14px;
-      border: none;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .btn-watch {
-      background: #007AFF;
-      color: white;
-    }
-    .btn-save {
-      background: #E5E5EA;
-      color: #000;
-    }
-    .btn-save.saved {
-      background: #34C759;
-      color: white;
-    }
-    .btn-view-saved {
-      width: 100%;
-      padding: 16px;
-      background: #f59b23;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      font-size: 17px;
-      font-weight: 600;
-      margin-top: 20px;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    .loading {
-      text-align: center;
-      padding: 40px;
-      color: #666;
-      font-size: 16px;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -119,13 +11,13 @@
       <p>Watch and save for later</p>
     </div>
 
-    <div id="teachings-list">
-      <div class="loading">Loading teachings...</div>
-    </div>
-
     <button class="btn-view-saved" onclick="parent.loadPage('saved.html')">
       📚 View Saved Teachings
     </button>
+
+    <div id="teachings-list">
+      <div class="loading">Loading teachings...</div>
+    </div>
   </div>
 
   <script>
@@ -136,7 +28,6 @@
       let savedTeachings = [];
       let Preferences, Browser;
 
-      // YouTube videos - UPDATE WITH YOUR REAL VIDEO IDs
       const youtubeVideos = [
         {
           title: "Learning to Let Go",
@@ -167,9 +58,7 @@
       function loadAllTeachings() {
         teachings = youtubeVideos;
         teachings.sort(function(a, b) {
-          const dateA = new Date(a.date);
-          const dateB = new Date(b.date);
-          return dateB - dateA;
+          return new Date(b.date) - new Date(a.date);
         });
         return true;
       }
@@ -181,7 +70,6 @@
             savedTeachings = JSON.parse(result.value || "[]");
           }
         } catch (e) {
-          console.error('Error loading saved:', e);
           savedTeachings = [];
         }
       }
@@ -211,12 +99,9 @@
               value: JSON.stringify(savedTeachings)
             });
             alert("✓ Saved! View in Saved Teachings.");
-          } else {
-            alert("Storage not available");
           }
           renderTeachings();
         } catch (e) {
-          console.error('Save error:', e);
           alert("Error saving: " + e.message);
         }
       }
@@ -229,7 +114,6 @@
             window.open(url, '_blank');
           }
         } catch (e) {
-          console.error('Browser error:', e);
           window.open(url, '_blank');
         }
       }
@@ -249,16 +133,13 @@
           const div = document.createElement('div');
           div.className = 'teaching';
           
-          const descriptionHtml = teaching.description ? 
-            '<div class="teaching-desc">' + teaching.description + '</div>' : '';
-          
           div.innerHTML = 
             '<div class="teaching-title">' + teaching.title + '</div>' +
             '<div class="teaching-meta">' +
               '<span class="platform-badge">YouTube</span>' +
               teaching.date + ' • ' + teaching.duration +
             '</div>' +
-            descriptionHtml +
+            '<div class="teaching-desc">' + teaching.description + '</div>' +
             '<div class="buttons">' +
               '<button class="btn btn-watch">▶️ Watch</button>' +
               '<button class="btn btn-save ' + (saved ? 'saved' : '') + '">' +
@@ -266,15 +147,12 @@
               '</button>' +
             '</div>';
           
-          const watchBtn = div.querySelector('.btn-watch');
-          const saveBtn = div.querySelector('.btn-save');
-          
-          watchBtn.addEventListener('click', function() {
+          div.querySelector('.btn-watch').addEventListener('click', function() {
             openTeaching(teaching.url);
           });
           
           if (!saved) {
-            saveBtn.addEventListener('click', function() {
+            div.querySelector('.btn-save').addEventListener('click', function() {
               saveTeaching(teaching);
             });
           }
