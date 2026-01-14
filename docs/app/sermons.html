@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sermons & Teachings</title>
+  <script src="capacitor.js"></script>
   <style>
     body {
       margin: 0;
@@ -128,19 +129,13 @@
   </div>
 
   <script>
-    // Wait for Capacitor to be ready
-    document.addEventListener('DOMContentLoaded', async function() {
-      // Wait a moment for Capacitor plugins to load
-      await new Promise(resolve => setTimeout(resolve, 100));
-      
-      const { Preferences } = window.Capacitor.Plugins;
-      const { Browser } = window.Capacitor.Plugins;
-
+    (function() {
       const STORAGE_KEY = "pf_saved_teachings_v1";
       
       let teachings = [];
       let currentTab = 'all';
       let savedTeachings = [];
+      let Preferences, Browser;
 
       // YouTube videos
       const youtubeVideos = [
@@ -205,13 +200,15 @@
           const dateB = new Date(b.date);
           return dateB - dateA;
         });
-        return teachings.length > 0;
+        return true;
       }
 
       async function loadSavedTeachings() {
         try {
-          const result = await Preferences.get({ key: STORAGE_KEY });
-          savedTeachings = JSON.parse(result.value || "[]");
+          if (Preferences) {
+            const result = await Preferences.get({ key: STORAGE_KEY });
+            savedTeachings = JSON.parse(result.value || "[]");
+          }
         } catch (e) {
           console.error('Error loading saved:', e);
           savedTeachings = [];
@@ -237,12 +234,15 @@
             savedAt: new Date().toISOString()
           });
 
-          await Preferences.set({
-            key: STORAGE_KEY,
-            value: JSON.stringify(savedTeachings)
-          });
-
-          alert("✓ Saved! View in Saved Teachings.");
+          if (Preferences) {
+            await Preferences.set({
+              key: STORAGE_KEY,
+              value: JSON.stringify(savedTeachings)
+            });
+            alert("✓ Saved! View in Saved Teachings.");
+          } else {
+            alert("Storage not available");
+          }
           renderTeachings();
         } catch (e) {
           console.error('Save error:', e);
@@ -252,11 +252,14 @@
 
       async function openTeaching(url) {
         try {
-          await Browser.open({ url: url });
+          if (Browser) {
+            await Browser.open({ url: url });
+          } else {
+            window.open(url, '_blank');
+          }
         } catch (e) {
           console.error('Browser error:', e);
-          // Fallback to window.open
-          window.open(url, '_system');
+          window.open(url, '_blank');
         }
       }
 
@@ -331,17 +334,26 @@
         });
       });
 
-      // Initialize
-      await loadSavedTeachings();
-      const success = loadAllTeachings();
-      
-      if (success) {
-        renderTeachings();
-      } else {
-        document.getElementById('teachings-list').innerHTML = 
-          '<div class="loading">Unable to load teachings.</div>';
+      // Initialize when ready
+      function initialize() {
+        if (window.Capacitor && window.Capacitor.Plugins) {
+          Preferences = window.Capacitor.Plugins.Preferences;
+          Browser = window.Capacitor.Plugins.Browser;
+        }
+        
+        loadSavedTeachings().then(function() {
+          loadAllTeachings();
+          renderTeachings();
+        });
       }
-    });
+
+      // Try multiple initialization methods
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize);
+      } else {
+        setTimeout(initialize, 100);
+      }
+    })();
   </script>
 </body>
 </html>
