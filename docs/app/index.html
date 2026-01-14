@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Practical Faith</title>
 
-<link rel="dns-prefetch" href="https://practicalfaith.net">
-
 <style>
 html, body {
   height: 100%;
@@ -19,18 +17,12 @@ body {
   background: linear-gradient(to bottom,#ffeb3b,#ffd54f,#ffb74d,#f59b23);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 #content {
   flex: 1;
-  overflow: hidden;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+  overflow-y: auto;
+  background: #f5f5f5;
 }
 
 nav {
@@ -50,6 +42,7 @@ nav button {
   font-size: 0.75rem;
   color: #333;
   padding: 6px 0;
+  cursor: pointer;
 }
 
 nav img {
@@ -61,36 +54,11 @@ nav button:active {
   opacity: 0.7;
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.Capacitor?.Plugins?.SplashScreen) {
-    setTimeout(() => {
-      window.Capacitor.Plugins.SplashScreen.hide();
-    }, 400);
-  }
-});
-
-function loadPage(page) {
-  document.getElementById("content").innerHTML =
-    `<iframe src="${page}"></iframe>`;
-}
-
-function openExternal(url) {
-  if (window.Capacitor?.Plugins?.Browser) {
-    window.Capacitor.Plugins.Browser.open({ url });
-  } else {
-    window.open(url, '_blank');
-  }
-}
-</script>
 </head>
 
 <body>
 
-<div id="content">
-  <iframe src="home.html"></iframe>
-</div>
+<div id="content"></div>
 
 <nav>
   <button onclick="loadPage('sermons.html')">
@@ -113,6 +81,49 @@ function openExternal(url) {
     <img src="images/share.png" width="35" height="35">Share
   </button>
 </nav>
+
+<script src="capacitor.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.Capacitor?.Plugins?.SplashScreen) {
+    setTimeout(() => {
+      window.Capacitor.Plugins.SplashScreen.hide();
+    }, 400);
+  }
+  
+  // Load home page by default
+  loadPage('home.html');
+});
+
+async function loadPage(page) {
+  try {
+    const response = await fetch(page);
+    const html = await response.text();
+    
+    // Extract body content
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const bodyContent = doc.body.innerHTML;
+    
+    document.getElementById("content").innerHTML = bodyContent;
+    
+    // Re-execute scripts from loaded page
+    const scripts = doc.querySelectorAll('script');
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement('script');
+      Array.from(oldScript.attributes).forEach(attr => {
+        newScript.setAttribute(attr.name, attr.value);
+      });
+      newScript.textContent = oldScript.textContent;
+      document.body.appendChild(newScript);
+    });
+  } catch (e) {
+    console.error('Error loading page:', e);
+    document.getElementById("content").innerHTML = 
+      '<div style="padding:20px;text-align:center;color:#666;">Error loading page</div>';
+  }
+}
+</script>
 
 </body>
 </html>
