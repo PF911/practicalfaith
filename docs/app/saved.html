@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sermons & Teachings</title>
+  <title>Saved Teachings</title>
   <style>
     body {
       margin: 0;
@@ -12,37 +12,25 @@
       padding: 16px;
     }
     .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 20px;
     }
     .header h1 {
-      margin: 0 0 8px 0;
+      margin: 0;
       font-size: 28px;
       font-weight: 700;
     }
-    .header p {
-      margin: 0;
-      color: #666;
-      font-size: 15px;
-    }
-    .tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-      overflow-x: auto;
-    }
-    .tab {
-      padding: 10px 20px;
-      background: white;
+    .btn-clear {
+      padding: 8px 16px;
+      background: #ff3b30;
+      color: white;
       border: none;
-      border-radius: 20px;
-      font-size: 15px;
+      border-radius: 8px;
+      font-size: 14px;
       font-weight: 600;
       cursor: pointer;
-      white-space: nowrap;
-    }
-    .tab.active {
-      background: #007AFF;
-      color: white;
     }
     .teaching {
       background: white;
@@ -60,13 +48,7 @@
     .teaching-meta {
       font-size: 13px;
       color: #666;
-      margin: 0 0 8px 0;
-    }
-    .teaching-desc {
-      font-size: 14px;
-      color: #333;
       margin: 0 0 12px 0;
-      line-height: 1.4;
     }
     .platform-badge {
       display: inline-block;
@@ -91,162 +73,91 @@
       font-weight: 600;
       cursor: pointer;
     }
-    .btn-watch {
+    .btn-open {
       background: #007AFF;
       color: white;
     }
-    .btn-save {
+    .btn-remove {
       background: #E5E5EA;
       color: #000;
     }
-    .btn-save.saved {
-      background: #34C759;
-      color: white;
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: #666;
+    }
+    .empty-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    .empty h2 {
+      margin: 0 0 8px 0;
+      font-size: 22px;
+    }
+    .empty p {
+      margin: 0;
+      font-size: 15px;
     }
     .loading {
       text-align: center;
       padding: 40px;
       color: #666;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1>Sermons & Teachings</h1>
-    <p>Watch, listen, and save for later</p>
-  </div>
-
-  <div class="tabs">
-    <button class="tab active" data-tab="all">All</button>
-    <button class="tab" data-tab="youtube">YouTube</button>
-    <button class="tab" data-tab="spotify">Spotify</button>
+    <h1>Saved Teachings</h1>
+    <button class="btn-clear" onclick="clearAll()" style="display:none;" id="clear-btn">Clear All</button>
   </div>
 
   <div id="teachings-list">
-    <div class="loading">Loading teachings...</div>
+    <div class="loading">Loading saved teachings...</div>
   </div>
 
   <script>
-    // Wait for Capacitor to be ready
     document.addEventListener('DOMContentLoaded', async function() {
-      // Wait a moment for Capacitor plugins to load
       await new Promise(resolve => setTimeout(resolve, 100));
       
       const { Preferences } = window.Capacitor.Plugins;
       const { Browser } = window.Capacitor.Plugins;
 
       const STORAGE_KEY = "pf_saved_teachings_v1";
-      
-      let teachings = [];
-      let currentTab = 'all';
       let savedTeachings = [];
-
-      // YouTube videos
-      const youtubeVideos = [
-        {
-          title: "Learning to Let Go",
-          platform: "YouTube",
-          date: "January 12, 2026",
-          url: "https://www.youtube.com/watch?v=u0DRlNpp4Wo",
-          duration: "40:48",
-          description: "Making the Bible Relevant for Today's Living"
-        },
-        {
-          title: "When God Changes the Menu - A Message for the New Year",
-          platform: "YouTube",
-          date: "January 5, 2026",
-          url: "https://www.youtube.com/watch?v=e8ZfqKCEgPM",
-          duration: "35:22",
-          description: "Starting the year with faith and purpose"
-        },
-        {
-          title: "Walking in God's Light",
-          platform: "YouTube",
-          date: "December 22, 2025",
-          url: "https://www.youtube.com/watch?v=EXAMPLE3",
-          duration: "38:10",
-          description: "Living as children of light"
-        }
-      ];
-
-      // Spotify episodes
-      const spotifyEpisodes = [
-        {
-          title: "Faith and Perseverance",
-          platform: "Spotify",
-          date: "December 29, 2025",
-          url: "https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh",
-          duration: "42:00",
-          description: "Maintaining faith through life's challenges"
-        },
-        {
-          title: "Walking in God's Purpose",
-          platform: "Spotify",
-          date: "December 15, 2025",
-          url: "https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh",
-          duration: "38:00",
-          description: "Understanding your divine calling"
-        },
-        {
-          title: "The Power of Prayer",
-          platform: "Spotify",
-          date: "December 1, 2025",
-          url: "https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh",
-          duration: "36:00",
-          description: "Developing a meaningful prayer life"
-        }
-      ];
-
-      function loadAllTeachings() {
-        teachings = [...youtubeVideos, ...spotifyEpisodes];
-        teachings.sort(function(a, b) {
-          const dateA = new Date(a.date);
-          const dateB = new Date(b.date);
-          return dateB - dateA;
-        });
-        return teachings.length > 0;
-      }
 
       async function loadSavedTeachings() {
         try {
           const result = await Preferences.get({ key: STORAGE_KEY });
           savedTeachings = JSON.parse(result.value || "[]");
+          return savedTeachings;
         } catch (e) {
           console.error('Error loading saved:', e);
-          savedTeachings = [];
+          return [];
         }
       }
 
-      function isTeachingSaved(url) {
-        return savedTeachings.some(function(t) { return t.url === url; });
-      }
-
-      async function saveTeaching(teaching) {
+      async function removeTeaching(id) {
         try {
-          if (isTeachingSaved(teaching.url)) {
-            alert("This teaching is already saved!");
-            return;
-          }
-
-          savedTeachings.unshift({
-            id: String(Date.now()),
-            title: teaching.title,
-            url: teaching.url,
-            source: teaching.platform,
-            savedAt: new Date().toISOString()
-          });
-
+          savedTeachings = savedTeachings.filter(t => t.id !== id);
           await Preferences.set({
             key: STORAGE_KEY,
             value: JSON.stringify(savedTeachings)
           });
-
-          alert("✓ Saved! View in Saved Teachings.");
           renderTeachings();
         } catch (e) {
-          console.error('Save error:', e);
-          alert("Error saving: " + e.message);
+          alert("Error removing teaching");
+        }
+      }
+
+      window.clearAll = async function() {
+        if (confirm("Clear all saved teachings?")) {
+          try {
+            await Preferences.remove({ key: STORAGE_KEY });
+            savedTeachings = [];
+            renderTeachings();
+          } catch (e) {
+            alert("Error clearing teachings");
+          }
         }
       }
 
@@ -254,93 +165,70 @@
         try {
           await Browser.open({ url: url });
         } catch (e) {
-          console.error('Browser error:', e);
-          // Fallback to window.open
           window.open(url, '_system');
         }
       }
 
-      function getFilteredTeachings() {
-        if (currentTab === 'all') return teachings;
-        return teachings.filter(function(t) { 
-          return t.platform.toLowerCase() === currentTab; 
-        });
-      }
-
       function renderTeachings() {
         const container = document.getElementById('teachings-list');
-        const filtered = getFilteredTeachings();
+        const clearBtn = document.getElementById('clear-btn');
         
-        if (filtered.length === 0) {
-          container.innerHTML = '<div class="loading">No teachings found</div>';
+        if (savedTeachings.length === 0) {
+          clearBtn.style.display = 'none';
+          container.innerHTML = `
+            <div class="empty">
+              <div class="empty-icon">📚</div>
+              <h2>No Saved Teachings Yet</h2>
+              <p>When you save teachings from sermons, Spotify, or books, they'll appear here.</p>
+            </div>
+          `;
           return;
         }
 
+        clearBtn.style.display = 'block';
         container.innerHTML = '';
         
-        filtered.forEach(function(teaching) {
-          const saved = isTeachingSaved(teaching.url);
+        savedTeachings.forEach(function(teaching) {
           const div = document.createElement('div');
           div.className = 'teaching';
           
-          const descriptionHtml = teaching.description ? 
-            '<div class="teaching-desc">' + teaching.description + '</div>' : '';
+          const savedDate = new Date(teaching.savedAt).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+          });
           
           div.innerHTML = 
             '<div class="teaching-title">' + teaching.title + '</div>' +
             '<div class="teaching-meta">' +
-              '<span class="platform-badge ' + teaching.platform.toLowerCase() + '">' + teaching.platform + '</span>' +
-              teaching.date + (teaching.duration ? ' • ' + teaching.duration : '') +
+              '<span class="platform-badge ' + teaching.source.toLowerCase() + '">' + teaching.source + '</span>' +
+              'Saved ' + savedDate +
             '</div>' +
-            descriptionHtml +
             '<div class="buttons">' +
-              '<button class="btn btn-watch">' +
-                (teaching.platform === 'YouTube' ? '▶️ Watch' : '🎧 Listen') +
+              '<button class="btn btn-open">' +
+                (teaching.source === 'YouTube' ? '▶️ Watch' : '🎧 Listen') +
               '</button>' +
-              '<button class="btn btn-save ' + (saved ? 'saved' : '') + '">' +
-                (saved ? '✓ Saved' : '💾 Save') +
-              '</button>' +
+              '<button class="btn btn-remove">🗑️ Remove</button>' +
             '</div>';
           
-          const watchBtn = div.querySelector('.btn-watch');
-          const saveBtn = div.querySelector('.btn-save');
+          const openBtn = div.querySelector('.btn-open');
+          const removeBtn = div.querySelector('.btn-remove');
           
-          watchBtn.addEventListener('click', function() {
+          openBtn.addEventListener('click', function() {
             openTeaching(teaching.url);
           });
           
-          if (!saved) {
-            saveBtn.addEventListener('click', function() {
-              saveTeaching(teaching);
-            });
-          }
+          removeBtn.addEventListener('click', function() {
+            removeTeaching(teaching.id);
+          });
           
           container.appendChild(div);
         });
       }
 
-      // Tab switching
-      document.querySelectorAll('.tab').forEach(function(tab) {
-        tab.addEventListener('click', function() {
-          document.querySelectorAll('.tab').forEach(function(t) {
-            t.classList.remove('active');
-          });
-          tab.classList.add('active');
-          currentTab = tab.dataset.tab;
-          renderTeachings();
-        });
-      });
-
       // Initialize
       await loadSavedTeachings();
-      const success = loadAllTeachings();
-      
-      if (success) {
-        renderTeachings();
-      } else {
-        document.getElementById('teachings-list').innerHTML = 
-          '<div class="loading">Unable to load teachings.</div>';
-      }
+      renderTeachings();
     });
   </script>
 </body>
