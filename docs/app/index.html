@@ -12,18 +12,16 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom,#ffeb3b,#ffd54f,#ffb74d,#f59b23);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  display: block;
 }
 
+
 #content {
-  flex: 1;
-  overflow-y: scroll;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 
 /* Sermons page styles */
 .container {
