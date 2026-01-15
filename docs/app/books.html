@@ -4,8 +4,13 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Faith Books Collection</title>
+<script src="capacitor.js"></script>
+</head>
+
+<body style="margin:0; overflow-y:auto;">
 
 <style>
+/* Inline styles that will be preserved when loaded into #content */
 body{margin:0;font-family:Arial,sans-serif;background-image:linear-gradient(to bottom,#ffec00,#fc9101);color:#000}
 .header{text-align:center}
 .header img{max-width:70%;height:auto}
@@ -29,9 +34,6 @@ body{margin:0;font-family:Arial,sans-serif;background-image:linear-gradient(to b
   .book-inner{flex-direction:column;align-items:center}
 }
 </style>
-</head>
-
-<body style="margin:0; overflow-y:auto;">
 
 
 <div class="header">
@@ -160,8 +162,8 @@ The Messy Love Life of King David — Illustrated Edition brings Scripture to li
     <div class="book-details">
       <div class="book-title">Who or What Is the Bride of Christ?</div>
       <div class="buttons">
-        <a href="https://payhip.com/b/n3Sea" target="_blank">Buy Direct —</a> <a href="https://payhip.com/b/tMIGn" target="_blank"> $6.99</a>
-        <a href="https://www.amazon.com/dp/B0FL1KP7K2" target="_blank">Amazon — $7.99</a>
+        <a href="https://payhip.com/b/n3Sea" target="_blank">Buy Direct —</a> <a href="https://payhip.com/b/axuSL" target="_blank">$6.99</a>
+        <a href="https://www.amazon.com/dp/B007VFBSV6" target="_blank">Amazon — $7.99</a>
       </div>
     </div>
   </div>
@@ -313,7 +315,7 @@ The Messy Love Life of King David — Illustrated Edition brings Scripture to li
 </div>
 
 <div class="back-link">
-  <a class="back-button" href="index.html">← Back</a>
+  <a class="back-button" onclick="parent.loadPage('home-content.html'); return false;" href="#">← Back to Home</a>
 </div>
 
 <div id="synopsis-modal" style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);background:#fff;padding:20px;border-radius:10px;max-width:600px;width:90%;box-shadow:0 0 15px rgba(0,0,0,.4);z-index:9999;">
