@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="capacitor.js"></script>
+</head>
+
+<body style="margin:0; padding:0;">
 
 <style>
+/* Inline styles that will be preserved when loaded into #content */
 body {
   margin: 0;
   padding: 0;
@@ -15,42 +20,43 @@ body {
 }
 
 /* Full-height layout */
-.wrapper {
+.home-wrapper {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  background: transparent;
 }
 
-/* Gappsy-like vertical positioning */
-.content {
-  margin-top: 26vh;   /* lowered to match Gappsy */
+/* Vertical positioning */
+.home-content {
+  margin-top: 26vh;
   text-align: center;
   padding: 0 20px;
 }
 
 /* Cross logo */
-.logo {
+.home-logo {
   margin-bottom: 12px;
 }
 
-.logo img {
-  width: 200px;   /* reduced again */
+.home-logo img {
+  width: 200px;
   height: auto;
 }
 
 /* Practical Faith wordmark */
-.banner {
+.home-banner {
   margin-bottom: 14px;
 }
 
-.banner img {
+.home-banner img {
   width: 288px;
   height: auto;
 }
 
 /* Tagline */
-.tagline {
+.home-tagline {
   color: #3C3E56;
   font-size: 1.08rem;
   line-height: 1.25;
@@ -60,33 +66,30 @@ body {
 }
 
 /* Author line */
-.author {
+.home-author {
   color: #3C3E56;
   font-size: 1.0rem;
   margin-top: 2px;
   font-weight: 500;
 }
 </style>
-</head>
 
-<body>
+<div class="home-wrapper">
+  <div class="home-content">
 
-<div class="wrapper">
-  <div class="content">
-
-    <div class="logo">
+    <div class="home-logo">
       <img src="images/Logo.png" alt="Practical Faith Cross Logo">
     </div>
 
-    <div class="banner">
+    <div class="home-banner">
       <img src="images/banner2.png" alt="Practical Faith">
     </div>
 
-    <div class="tagline">
-      Making the Bible Relevant<br>for Today’s Living
+    <div class="home-tagline">
+      Making the Bible Relevant<br>for Today's Living
     </div>
 
-    <div class="author">
+    <div class="home-author">
       with Pastor Rev Owens
     </div>
 
