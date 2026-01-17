@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rev Owens — Contact Card</title>
+  <meta name="description" content="Contact card for Rev Owens — phone, email, website, address, and links." />
+
+  <style>
+    :root{
+      --brand:#f5a800;
+      --brand2:#ffd84d;
+      --text:#222;
+      --muted:#6b7280;
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --radius:16px;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --accent:#111827;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      background: var(--bg); color:var(--text);
+      -webkit-text-size-adjust: 100%;
+    }
+    .hero{
+      background: linear-gradient(to top, var(--brand), var(--brand2));
+      padding: clamp(36px, 7vw, 72px) 16px 80px;
+      text-align:center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    .hero .avatar{
+      width: 104px; height:104px; border-radius:999px;
+      background:#fff; display:grid; place-items:center; margin: 0 auto 12px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero .avatar img{
+      width:100%; height:100%; object-fit:cover; border-radius:999px;
+    }
+    h1{margin:0; font-size:clamp(24px, 4.5vw, 34px); color:#111;}
+    .icons{
+      display:flex; gap:12px; justify-content:center; margin-top:12px;
+    }
+    .icons a{
+      width:44px; height:44px; border-radius:999px; background:#fff;
+      display:grid; place-items:center; color:#111; text-decoration:none;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .2s ease;
+      font-size:20px;
+    }
+    .icons a:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.12); }
+    .wrap{
+      max-width: 860px; margin: -52px auto 40px; padding: 0 16px;
+    }
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow: var(--shadow);
+      padding: clamp(16px, 3.5vw, 22px);
+    }
+    .row{ display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid #eee; }
+    .row:last-child{ border-bottom:0; }
+    .k{ color:var(--muted); font-size:14px; }
+    .v{ font-weight:600; }
+    .row a{ color:var(--accent); text-decoration:none; }
+    .row a:hover{ text-decoration:underline; }
+    .section-title{ margin:26px 0 8px; font-size:18px; color:#111;}
+    .social{
+      display:flex; flex-direction:column; gap:14px;
+    }
+    .social-card{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; text-decoration:none; color:#111;
+      padding:12px 14px; border-radius:10px; background:#fff; box-shadow: var(--shadow);
+      width:100%;
+    }
+    .social-card .left{
+      display:flex; align-items:center; gap:12px; min-width:0;
+    }
+    .social-card .logo{
+      flex:0 0 auto; width:32px; height:32px; border-radius:6px; display:grid; place-items:center;
+    }
+    .social-card .text{
+      display:flex; flex-direction:column; min-width:0;
+    }
+    .social-card .text .title{ font-weight:700; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+    .social-card .text .sub{ color:var(--muted); font-size:14px; }
+    .subscribe-badge{
+      background:#ff0000; color:#fff; font-size:12px; font-weight:700;
+      padding:6px 10px; border-radius:999px; flex:0 0 auto;
+    }
+    .cta{
+      display:block; background:#f5a800; color:#111; border:0;
+      border-radius:12px; padding:14px 18px; font-weight:700; cursor:pointer; text-align:center; text-decoration:none;
+      box-shadow: var(--shadow);
+      margin-top:10px;
+    }
+    .cta:hover{ filter: brightness(0.96); }
+    footer{ text-align:center; color:var(--muted); font-size:13px; padding:24px 0 40px; }
+    @media (max-width: 420px){
+      .social-card{ flex-direction:column; align-items:flex-start; }
+      .subscribe-badge{ margin-top:8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="avatar">
+      <img src="/images/revlogo.png" alt="Rev Owens logo" />
+    </div>
+    <h1>Rev Owens</h1>
+    <div class="icons" aria-label="Quick actions">
+      <a href="tel:+14013238582" title="Call">📞</a>
+      <a href="mailto:Rev@PracticalFaith.net" title="Email">✉️</a>
+      <a href="https://practicalfaith.net" title="Website">🌐</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="card" aria-labelledby="contact-info">
+      <div class="row">
+        <div class="k">Phone</div>
+        <div class="v"><a href="tel:+14013238582">(401) 323-8582</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:Rev@PracticalFaith.net">Rev@PracticalFaith.net</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Website</div>
+        <div class="v"><a href="https://practicalfaith.net" target="_blank" rel="noopener">PracticalFaith.net</a></div>
+      </div>
+      <div class="row">
+        <div class="k">Location</div>
+        <div class="v">
+          74 Almond Pt, St. Augustine, Florida 32095 —
+          <a href="https://www.google.com/maps/search/?api=1&query=74+Almond+Pt,+St.+Augustine,+FL+32095" target="_blank" rel="noopener">Open Map</a>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Find me on</h2>
+    <section class="social">
+      <!-- Facebook -->
+      <a class="social-card" href="https://www.facebook.com/RevOwens/" target="_blank" rel="noopener" aria-label="Rev Owens on Facebook">
+        <div class="left">
+          <span class="logo" style="background:#1877f2;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.2 3-3.2.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.9h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/>
+            </svg>
+          </span>
+          <div class="text">
+            <div class="title">Facebook</div>
+            <div class="sub">Rev Owens</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- YouTube -->
+      <a class="social-card" href="https://www.youtube.com/channel/UCjtuQjCb7JF5IDsa5Tvjd_w?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Practical Faith Videos on YouTube">
+        <div class="left">
+          <span class="logo" style="background:#ff0000;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 15l5.19-3L10 9v6z" />
+            </svg>
+          </span>
+          <div class="text">
+            <div class="title">Practical Faith Videos</div>
+            <div class="sub">YouTube</div>
+          </div>
+        </div>
+        <span class="subscribe-badge">Subscribe</span>
+      </a>
+
+      <!-- Contact -->
+      <a class="cta" href="rev-owens.vcf" download>➕ Add Contact</a>
+    </section>
+
+    <footer>
+      &copy; <span id="y"></span> PracticalFaith.net
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

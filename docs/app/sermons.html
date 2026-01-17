@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="capacitor.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sermons & Teachings</h1>
+      <p>Watch and save for later</p>
+    </div>
+
+    <button class="btn-view-saved" onclick="parent.loadPage('saved.html')">
+      📚 View Saved Teachings
+    </button>
+    <div id="teachings-list">
+      <div class="loading">Loading teachings...</div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const STORAGE_KEY = "pf_saved_teachings_v1";
+      
+      let teachings = [];
+      let savedTeachings = [];
+      let Preferences, Browser;
+
+      const youtubeVideos = [
+        {
+          title: "Learning to Let Go",
+          platform: "YouTube",
+          date: "January 12, 2026",
+          url: "https://youtu.be/62uvyJpHvws",
+          duration: "40:48",
+        description: "A Rebroadcast from May 2023"
+        },
+        {
+          title: "When God Changes the Menu",
+          platform: "YouTube",
+          date: "January 5, 2026",
+          url: "https://youtu.be/DB0hiASOono",
+          duration: "35:22",
+          description: "A Message for the New Year"
+        },
+        {
+          title: "Love Up Close",
+          platform: "YouTube",
+          date: "December 22, 2025",
+          url: "https://youtu.be/1CK8Sx5VM9Y",
+          duration: "38:10",
+          description: "A Christmas Message"
+        },
+         {
+          title: "Giving Thanks to the God Who Gives",
+          platform: "YouTube",
+          date: "November 25, 2025",
+          url: "https://youtu.be/7YL37u7qLKA",
+          duration: "35:22",
+          description: "A Thanksgiving Message"
+        },
+           {
+          title: "When It Comes To Jesus, He's No Angel",
+          platform: "YouTube",
+          date: "November 4, 2025",
+          url: "https://youtu.be/AHT-VgJ3wAg",
+          duration: "35:22",
+          description: "A Rebroadcast from January 2020"
+        },
+           {
+          title: "The Message From The Table",
+          platform: "YouTube",
+          date: "October 5, 2025",
+          url: "https://youtu.be/e2R4zpoWS4g",
+          duration: "35:22",
+          description: "A Communion Message "
+        },
+           {
+            title: "The Messy Love Life of King David",
+          platform: "YouTube",
+          date: "September 21, 2025",
+          url: "https://youtu.be/m8mqDvtbNmU",
+          duration: "35:22",
+          description: "A Bible Teaching "
+        },
+          {
+            title: "The Messy Love Life of King David",
+          platform: "YouTube",
+          date: "August 30, 2025",
+          url: "https://youtu.be/uQOZMWa6zHo",
+          duration: "35:22",
+          description: "A Bible Teaching "
+        },
+            {
+            title: "A Brand New Point of View",
+          platform: "YouTube",
+          date: "August 19, 2025",
+          url: "https://youtu.be/cUYfBuK3EZI",
+          duration: "35:22",
+          description: "A Rebroadcast from January 2019"
+        },
+             {
+            title: "Who or What is the Bride of Christ, Part One",
+          platform: "YouTube",
+          date: "July 21, 2025",
+          url: "https://youtu.be/Btiiuf3-b1w",
+          duration: "35:22",
+          description: "A Bible Teaching"
+        },
+             {
+            title: "Who or What is the Bride of Christ, Part Two",
+          platform: "YouTube",
+          date: "July 21, 2025",
+          url: "https://youtu.be/j6ApptWkOKM",
+          duration: "35:22",
+          description: "A Bible Teaching"
+        }
+      ];
+
+      function loadAllTeachings() {
+        teachings = youtubeVideos;
+        teachings.sort(function(a, b) {
+          return new Date(b.date) - new Date(a.date);
+        });
+        return true;
+      }
+
+      async function loadSavedTeachings() {
+        try {
+          if (Preferences) {
+            const result = await Preferences.get({ key: STORAGE_KEY });
+            savedTeachings = JSON.parse(result.value || "[]");
+          }
+        } catch (e) {
+          savedTeachings = [];
+        }
+      }
+
+      function isTeachingSaved(url) {
+        return savedTeachings.some(function(t) { return t.url === url; });
+      }
+
+      async function saveTeaching(teaching) {
+        try {
+          if (isTeachingSaved(teaching.url)) {
+            alert("This teaching is already saved!");
+            return;
+          }
+
+          savedTeachings.unshift({
+            id: String(Date.now()),
+            title: teaching.title,
+            url: teaching.url,
+            source: teaching.platform,
+            savedAt: new Date().toISOString()
+          });
+
+          if (Preferences) {
+            await Preferences.set({
+              key: STORAGE_KEY,
+              value: JSON.stringify(savedTeachings)
+            });
+            alert("✓ Saved! View in Saved Teachings.");
+          }
+          renderTeachings();
+        } catch (e) {
+          alert("Error saving: " + e.message);
+        }
+      }
+
+      async function openTeaching(url) {
+        try {
+          if (Browser) {
+            await Browser.open({ url: url });
+          } else {
+            window.open(url, '_blank');
+          }
+        } catch (e) {
+          window.open(url, '_blank');
+        }
+      }
+
+      function renderTeachings() {
+        const container = document.getElementById('teachings-list');
+        
+        if (teachings.length === 0) {
+          container.innerHTML = '<div class="loading">No teachings found</div>';
+          return;
+        }
+
+        container.innerHTML = '';
+        
+        teachings.forEach(function(teaching) {
+          const saved = isTeachingSaved(teaching.url);
+          const div = document.createElement('div');
+          div.className = 'teaching';
+          
+          div.innerHTML = 
+            '<div class="teaching-title">' + teaching.title + '</div>' +
+            '<div class="teaching-meta">' +
+              '<span class="platform-badge">YouTube</span>' +
+              teaching.date + ' • ' + teaching.duration +
+            '</div>' +
+            '<div class="teaching-desc">' + teaching.description + '</div>' +
+            '<div class="buttons">' +
+              '<button class="btn btn-watch">▶️ Watch</button>' +
+              '<button class="btn btn-save ' + (saved ? 'saved' : '') + '">' +
+                (saved ? '✓ Saved' : '💾 Save') +
+              '</button>' +
+            '</div>';
+          
+          div.querySelector('.btn-watch').addEventListener('click', function() {
+            openTeaching(teaching.url);
+          });
+          
+          if (!saved) {
+            div.querySelector('.btn-save').addEventListener('click', function() {
+              saveTeaching(teaching);
+            });
+          }
+          
+          container.appendChild(div);
+        });
+      }
+
+      function initialize() {
+        if (window.Capacitor && window.Capacitor.Plugins) {
+          Preferences = window.Capacitor.Plugins.Preferences;
+          Browser = window.Capacitor.Plugins.Browser;
+        }
+        
+        loadSavedTeachings().then(function() {
+          loadAllTeachings();
+          renderTeachings();
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize);
+      } else {
+        setTimeout(initialize, 100);
+      }
+    })();
+  </script>
+</body>
+</html>

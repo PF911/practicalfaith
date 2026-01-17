@@ -1,0 +1,18 @@
+{
+  "appId": "com.practicalfaith.app2",
+  "appName": "Practical Faith",
+  "webDir": "../docs/app",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "launchShowDuration": 6000,
+      "backgroundColor": "#ffeb3b",
+      "androidSpinnerStyle": "small",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#f59b23"
+    }
+  },
+  "server": {
+    "allowNavigation": ["practicalfaith.net"]
+  }
+}
