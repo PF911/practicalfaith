@@ -3,7 +3,6 @@
 *.apk
 *.zip
 *.mov
-*.mp4
 node_modules/
 build/
 dist/
