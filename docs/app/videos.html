@@ -20,34 +20,40 @@ body {
 .videos-wrapper {
   min-height: 100vh;
   padding-bottom: 140px;
-  background: linear-gradient(to bottom, #ffeb3b, #ffd54f, #ffb74d, #f59b23);
+  background: #2c3e50;
 }
 
 .videos-header {
   padding: 20px;
   text-align: center;
+  background: linear-gradient(to bottom, #34495e, #2c3e50);
 }
 
 .videos-header h1 {
   margin: 0 0 8px 0;
   font-size: 28px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #ecf0f1;
 }
 
 .videos-header p {
   margin: 0;
   font-size: 16px;
-  color: #34495e;
+  color: #bdc3c7;
 }
 
 /* Video Player */
 .video-player-container {
-  margin: 0 16px 24px 16px;
+  margin: 16px;
   background: #000;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  display: none;
+}
+
+.video-player-container.active {
+  display: block;
 }
 
 .video-player {
@@ -57,29 +63,55 @@ body {
 }
 
 .video-info {
-  background: rgba(255,255,255,0.95);
+  background: #34495e;
   padding: 16px;
 }
 
 .video-title {
   font-size: 18px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #ecf0f1;
   margin: 0 0 8px 0;
   line-height: 1.3;
 }
 
 .video-meta {
   font-size: 14px;
-  color: #666;
+  color: #bdc3c7;
   margin: 0 0 8px 0;
 }
 
 .video-description {
   font-size: 14px;
-  color: #555;
+  color: #95a5a6;
   margin: 0;
   line-height: 1.4;
+}
+
+/* Placeholder when no video selected */
+.video-placeholder {
+  background: #34495e;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 16px;
+}
+
+.video-placeholder-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.video-placeholder h2 {
+  color: #ecf0f1;
+  font-size: 20px;
+  margin: 0 0 8px 0;
+}
+
+.video-placeholder p {
+  color: #95a5a6;
+  font-size: 15px;
+  margin: 0;
 }
 
 /* Thumbnail Gallery */
@@ -90,7 +122,7 @@ body {
 .gallery-title {
   font-size: 20px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #ecf0f1;
   margin: 0 0 16px 0;
   text-align: center;
 }
@@ -102,24 +134,29 @@ body {
 }
 
 .thumbnail-item {
-  background: rgba(255,255,255,0.9);
+  background: #34495e;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
   transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
 }
 
 .thumbnail-item:active {
   transform: scale(0.98);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.thumbnail-item.playing {
+  border: 2px solid #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.6);
 }
 
 .thumbnail-image {
   width: 100%;
   height: 100px;
   object-fit: cover;
-  background: #e0e0e0;
+  background: #2c3e50;
   display: block;
 }
 
@@ -130,7 +167,7 @@ body {
 .thumbnail-title {
   font-size: 13px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #ecf0f1;
   margin: 0 0 4px 0;
   line-height: 1.2;
   display: -webkit-box;
@@ -141,47 +178,48 @@ body {
 
 .thumbnail-date {
   font-size: 11px;
-  color: #666;
+  color: #95a5a6;
   margin: 0;
 }
 
 .loading {
   text-align: center;
   padding: 40px 20px;
-  color: #2c3e50;
+  color: #ecf0f1;
   font-size: 16px;
 }
 
 .error {
   text-align: center;
   padding: 40px 20px;
-  color: #c0392b;
+  color: #e74c3c;
   font-size: 16px;
-}
-
-/* Currently Playing Indicator */
-.thumbnail-item.playing {
-  border: 3px solid #3498db;
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
 }
 </style>
 
 <div class="videos-wrapper">
   
   <div class="videos-header">
-    <h1>Video Messages</h1>
-    <p>Native in-app video playback</p>
+    <h1>Video Teachings</h1>
+    <p>Select a video to watch</p>
   </div>
 
-  <!-- Video Player -->
-  <div class="video-player-container" id="player-container" style="display:none;">
+  <!-- Placeholder when no video selected -->
+  <div class="video-placeholder" id="video-placeholder">
+    <div class="video-placeholder-icon">🎬</div>
+    <h2>Select a Video to Play</h2>
+    <p>Tap any thumbnail below to start watching</p>
+  </div>
+
+  <!-- Video Player (hidden until video selected) -->
+  <div class="video-player-container" id="player-container">
     <video id="video-player" class="video-player" controls controlsList="nodownload" preload="metadata">
       <source id="video-source" src="" type="video/mp4">
       Your browser does not support video playback.
     </video>
     
     <div class="video-info">
-      <div class="video-title" id="current-title">Select a video to play</div>
+      <div class="video-title" id="current-title"></div>
       <div class="video-meta" id="current-meta"></div>
       <div class="video-description" id="current-description"></div>
     </div>
@@ -189,7 +227,7 @@ body {
 
   <!-- Thumbnail Gallery -->
   <div class="gallery-section">
-    <div class="gallery-title">All Sermons and Teachings</div>
+    <div class="gallery-title">All Teachings</div>
     <div id="thumbnail-grid" class="thumbnail-grid">
       <div class="loading">Loading videos...</div>
     </div>
@@ -205,6 +243,7 @@ body {
   const videoPlayer = document.getElementById('video-player');
   const videoSource = document.getElementById('video-source');
   const playerContainer = document.getElementById('player-container');
+  const videoPlaceholder = document.getElementById('video-placeholder');
   const currentTitle = document.getElementById('current-title');
   const currentMeta = document.getElementById('current-meta');
   const currentDescription = document.getElementById('current-description');
@@ -219,10 +258,7 @@ body {
       videos = await response.json();
       renderThumbnails();
       
-      // Auto-play first video
-      if (videos.length > 0) {
-        playVideo(0);
-      }
+      // DO NOT auto-play - wait for user selection
     } catch (error) {
       console.error('Error loading videos:', error);
       thumbnailGrid.innerHTML = '<div class="error">Error loading videos. Please check your connection.</div>';
@@ -268,6 +304,10 @@ body {
     currentVideoIndex = index;
     const video = videos[index];
     
+    // Hide placeholder, show player
+    videoPlaceholder.style.display = 'none';
+    playerContainer.classList.add('active');
+    
     // Update video source
     videoSource.src = `https://practicalfaith.net/app/videos/${video.file}`;
     videoPlayer.load();
@@ -276,9 +316,6 @@ body {
     currentTitle.textContent = video.title;
     currentMeta.textContent = video.date;
     currentDescription.textContent = video.description || '';
-    
-    // Show player
-    playerContainer.style.display = 'block';
     
     // Update thumbnails to show current
     renderThumbnails();
