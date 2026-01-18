@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practical Faith</title>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom,#ffeb3b,#ffd54f,#ffb74d,#f59b23);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Sermons page styles */
+.container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.header p {
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 17px;
+}
+
+.btn-view-saved {
+  width: 100%;
+  padding: 16px;
+  background: #f59b23;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.teaching {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.teaching-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.teaching-meta {
+  font-size: 15px;
+  color: #666;
+  margin: 0 0 10px 0;
+}
+
+.teaching-desc {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.platform-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 8px;
+  background: #ff0000;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-watch {
+  background: #007AFF;
+  color: white;
+}
+
+.btn-save {
+  background: #E5E5EA;
+  color: #000;
+}
+
+.btn-save.saved {
+  background: #34C759;
+  color: white;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Saved page styles */
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #4a4a4a;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty h2 {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.empty p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.btn-clear {
+  padding: 10px 18px;
+  background: #ff3b30;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-open {
+  background: #007AFF;
+  color: white;
+}
+
+.btn-remove {
+  background: #E5E5EA;
+  color: #000;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 6px env(safe-area-inset-bottom);
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+nav button {
+  flex: 1;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #333;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+nav img {
+  display: block;
+  margin: 0 auto 2px;
+}
+
+nav button:active {
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div id="content"></div>
+
+<nav>
+  <button onclick="loadPage('videos.html')">
+    <img src="images/YouTube.png" width="35" height="35">Videos
+  </button>
+
+  <button onclick="loadPage('spotify.html')">
+    <img src="images/stotify.png" width="35" height="35">Spotify
+  </button>
+
+  <button onclick="loadPage('home-content.html')">
+    <img src="images/Logo.png" width="35" height="35">Home
+  </button>
+
+  <button onclick="loadPage('books.html')">
+    <img src="images/books.png" width="35" height="35">Books
+  </button>
+
+  <button onclick="loadPage('share.html')">
+    <img src="images/share.png" width="35" height="35">Share
+  </button>
+</nav>
+
+<script src="capacitor.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.Capacitor?.Plugins?.SplashScreen) {
+    setTimeout(() => {
+      window.Capacitor.Plugins.SplashScreen.hide();
+    }, 400);
+  }
+  
+  loadPage('home-content.html');
+});
+
+window.loadPage = async function(page) {
+  try {
+    const response = await fetch(page);
+    const html = await response.text();
+    
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const bodyContent = doc.body ? doc.body.innerHTML : html;
+    
+    document.getElementById("content").innerHTML = bodyContent;
+    
+    const scripts = doc.querySelectorAll('script');
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement('script');
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      }
+      newScript.textContent = oldScript.textContent;
+      document.body.appendChild(newScript);
+    });
+  } catch (e) {
+    console.error('Error loading page:', e);
+    document.getElementById("content").innerHTML = 
+      '<div style="padding:20px;text-align:center;color:#666;">Error loading page</div>';
+  }
+}
+</script>
+
+</body>
+</html>
