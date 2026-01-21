@@ -19,6 +19,7 @@
     "@capacitor/core": "latest",
     "@capacitor/ios": "^8.0.0",
     "@capacitor/preferences": "^8.0.0",
+    "@capacitor/share": "^8.0.0",
     "@capacitor/splash-screen": "latest"
   },
   "devDependencies": {

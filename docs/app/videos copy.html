@@ -20,7 +20,7 @@ body {
 .videos-wrapper {
   min-height: 100vh;
   padding-bottom: 140px;
-  background: #2c3e50;
+  background: #ffb03b;
 }
 
 .videos-header {
@@ -84,31 +84,8 @@ body {
 .video-description {
   font-size: 14px;
   color: #95a5a6;
-  margin: 0 0 12px 0;
+  margin: 0;
   line-height: 1.4;
-}
-
-.share-button {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.2s;
-}
-
-.share-button:active {
-  background: #2980b9;
-}
-
-.share-icon {
-  font-size: 18px;
 }
 
 /* Placeholder when no video selected */
@@ -164,7 +141,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
   transition: transform 0.2s, box-shadow 0.2s;
   border: 2px solid transparent;
-  position: relative;
 }
 
 .thumbnail-item:active {
@@ -203,27 +179,7 @@ body {
 .thumbnail-date {
   font-size: 11px;
   color: #95a5a6;
-  margin: 0 0 6px 0;
-}
-
-.thumbnail-share {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-}
-
-.thumbnail-share:active {
-  background: #2980b9;
+  margin: 0;
 }
 
 .loading {
@@ -266,10 +222,6 @@ body {
       <div class="video-title" id="current-title"></div>
       <div class="video-meta" id="current-meta"></div>
       <div class="video-description" id="current-description"></div>
-      <button class="share-button" id="share-current-video">
-        <span class="share-icon">📤</span>
-        <span>Share This Teaching</span>
-      </button>
     </div>
   </div>
 
@@ -296,33 +248,6 @@ body {
   const currentMeta = document.getElementById('current-meta');
   const currentDescription = document.getElementById('current-description');
   const thumbnailGrid = document.getElementById('thumbnail-grid');
-  const shareCurrentButton = document.getElementById('share-current-video');
-
-  // Share functionality using Capacitor Share plugin
-  async function shareVideo(video, index) {
-    try {
-      const { Share } = window.Capacitor.Plugins;
-      
-      if (!Share) {
-        console.error('Share plugin not available');
-        alert('Share feature not available');
-        return;
-      }
-
-      await Share.share({
-        title: video.title,
-        text: `Check out this teaching: "${video.title}" from Practical Faith`,
-        url: `https://practicalfaith.net/app/videos/${video.file}`,
-        dialogTitle: 'Share Teaching'
-      });
-    } catch (error) {
-      console.error('Error sharing:', error);
-      // Don't show error if user cancelled
-      if (error.message !== 'Share canceled') {
-        alert('Unable to share at this time');
-      }
-    }
-  }
 
   // Load videos from JSON
   async function loadVideos() {
@@ -364,25 +289,10 @@ body {
         <div class="thumbnail-info">
           <div class="thumbnail-title">${video.title}</div>
           <div class="thumbnail-date">${video.date}</div>
-          <button class="thumbnail-share" data-index="${index}">
-            📤 Share
-          </button>
         </div>
       `;
       
-      // Click thumbnail image to play
-      const img = item.querySelector('.thumbnail-image');
-      const titleDiv = item.querySelector('.thumbnail-title');
-      img.addEventListener('click', () => playVideo(index));
-      titleDiv.addEventListener('click', () => playVideo(index));
-      
-      // Click share button to share (prevent playing video)
-      const shareBtn = item.querySelector('.thumbnail-share');
-      shareBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        shareVideo(video, index);
-      });
-      
+      item.addEventListener('click', () => playVideo(index));
       thumbnailGrid.appendChild(item);
     });
   }
@@ -418,13 +328,6 @@ body {
       console.error('Error playing video:', err);
     });
   }
-
-  // Share current video button
-  shareCurrentButton.addEventListener('click', () => {
-    if (currentVideoIndex >= 0) {
-      shareVideo(videos[currentVideoIndex], currentVideoIndex);
-    }
-  });
 
   // Auto-advance to next video when current finishes
   videoPlayer.addEventListener('ended', () => {
