@@ -122,7 +122,7 @@
     "file": "video-2025-7-21b.mp4",
     "thumb": "video-2025-7-21b.jpg",
     "date": "Jul 21, 2025",
-    "description": "A Bible Teaching Serie",
+    "description": "A Bible Teaching Series",
     "location": "remote"
     },
   
@@ -154,6 +154,109 @@
     "date": "Jun 15, 2025",
     "description": "A Father's Day Message",
     "location": "remote"
+  }, 
+
+
+    
+  {
+    "title": "Why People Leave The Church Part 1",
+    "file": "video-2025-6-3.mp4",
+    "thumb": "video-2025-6-3.jpg",
+    "date": "Jun 3, 2025",
+    "description": "A Bible Teaching Series",
+    "location": "remote"
+  },
+  
+    
+  {
+    "title": "Why People Leave The Church Part 2",
+    "file": "video-2025-6-6.mp4",
+    "thumb": "video-2025-6-6.jpg",
+    "date": "Jun 6, 2025",
+    "description": "A Bible Teaching Series",
+    "location": "remote"
+  },
+    
+    
+  {
+    "title": "Unmatched Love",
+    "file": "video-2025-5-11.mp4",
+    "thumb": "video-2025-5-11.jpg",
+    "date": "Jun 6, 2025",
+    "description": "A Mother's Day Message",
+    "location": "remote"
+  },
+     
+    
+  {
+    "title": "Proof of Life",
+    "file": "video-2025-4-24.mp4",
+    "thumb": "video-2025-4-24.jpg",
+    "date": "Apr 4, 2025",
+    "description": "An Easter Message",
+    "location": "remote"
+  },
+      
+    
+  {
+    "title": "Did God forsake Jesus on the Cross?",
+    "file": "video-2025-4-13.mp4",
+    "thumb": "video-2025-4-13.jpg",
+    "date": "Apr 4, 2025",
+    "description": "An Good Friday Message",
+    "location": "remote"
+  }, 
+      
+    
+  {
+    "title": "The Pearl of a Great Price",
+    "file": "video-2025-3-15.mp4",
+    "thumb": "video-2025-3-15.jpg",
+    "date": "Mar 15, 2025",
+    "description": "The Parables Unlocked",
+    "location": "remote"
+  }, 
+       
+    
+  {
+    "title": "My Heart Belongs To Jesus",
+    "file": "video-2025-2-14.mp4",
+    "thumb": "video-2025-2-14.jpg",
+    "date": "Mar 15, 2025",
+    "description": "A Valentines Message",
+    "location": "remote"
+  },
+      
+  {
+    "title": "The Good Samaritan",
+    "file": "video-2025-2-10.mp4",
+    "thumb": "video-2025-2-10.jpg",
+    "date": "Feb 10, 2025",
+    "description": "The Parables Unlocked",
+    "location": "remote"
+  },
+  
+        
+  {
+    "title": "The Story and the Mystery of the Sabbath",
+    "file": "video-2025-1-14.mp4",
+    "thumb": "video-2025-1-14.jpg",
+    "date": "Jan 14, 2025",
+    "description": "A Bible Teaching",
+    "location": "remote"
+  }, 
+ 
+        
+  {
+    "title": "2020 Vision",
+    "file": "video-2025-1-1.mp4",
+    "thumb": "video-2025-1-1.jpg",
+    "date": "Jan 1, 2025",
+    "description": "A New Year's Message",
+    "location": "remote"
   } 
+ 
+ 
+ 
 
 ]
