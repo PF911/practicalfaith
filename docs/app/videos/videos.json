@@ -254,9 +254,96 @@
     "date": "Jan 1, 2025",
     "description": "A New Year's Message",
     "location": "remote"
-  } 
+  },
+   
+        
+  {
+    "title": "God's Perfect Re-gifting Gift",
+    "file": "video-2024-12-22.mp4",
+    "thumb": "video-2024-12-22.jpg",
+    "date": "Dec 22, 2024",
+    "description": "A Christmas Message",
+    "location": "remote"
+  },
+     
+        
+  {
+    "title": "A Marriage Seminar - Part 1",
+    "file": "video-2024-7-25a.mp4",
+    "thumb": "video-2024-7-25a.jpg",
+    "date": "Jul 7, 2024",
+    "description": "A Teaching Series",
+    "location": "remote"
+  }, 
+          
+  {
+    "title": "A Marriage Seminar - Part 2",
+    "file": "video-2024-7-25b.mp4",
+    "thumb": "video-2024-7-25b.jpg",
+    "date": "Jul 7, 2024",
+    "description": "A Teaching Series",
+    "location": "remote"
+  },  
  
+   {
+    "title": "A Marriage Seminar - Part 3",
+    "file": "video-2024-7-25c.mp4",
+    "thumb": "video-2024-7-25c.jpg",
+    "date": "Jul 7, 2024",
+    "description": "A Teaching Series",
+    "location": "remote"
+  },
+  
+  
+    {
+    "title": "A Marriage Seminar - Part 4",
+    "file": "video-2024-7-25b.mp4",
+    "thumb": "video-2024-7-25b.jpg",
+    "date": "Jul 7, 2024",
+    "description": "A Teaching Series",
+    "location": "remote"
+  },
  
- 
-
+    {
+    "title": "World Communion Day",
+    "file": "video-2024-10-5.mp4",
+    "thumb": "video-2024-10-5.jpg",
+    "date": "Oct 5, 2024",
+    "description": "A Communion Message",
+    "location": "remote"
+  },
+  
+  
+  
+    {
+    "title": "The Virtuos Woman",
+    "file": "video-2024-10-20.mp4",
+    "thumb": "video-2024-10-20.jpg",
+    "date": "Oct 10, 2024",
+    "description": "A Teaching on Proverbs 31",
+    "location": "remote"
+  },
+  
+    
+  
+    {
+    "title": "Revelation 12 Part One",
+    "file": "video-2024-12-8.mp4",
+    "thumb": "video-2024-12-8.jpg",
+    "date": "Dec 8, 2024",
+    "description": "A Bible Teaching Series",
+    "location": "remote"
+  },
+      
+  
+    {
+    "title": "Revelation 12 Part Two",
+    "file": "video-2024-12-8.mp4",
+    "thumb": "video-2024-12-8.jpg",
+    "date": "Dec 8, 2024",
+    "description": "A Bible Teaching Series",
+    "location": "remote"
+  }
+  
+  
 ]
