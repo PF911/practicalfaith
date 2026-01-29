@@ -1,5 +1,13 @@
 [
   
+    {
+    "title": "Dealing with Defeat",
+    "file": "video-2026-1-29.mp4",
+    "thumb": "video-2026-1-29.jpg",
+    "date": "Jan 11, 2026",
+    "description": "A Rebroadcast from November 2018",
+    "location": "local"
+  },
   
   {
     "title": "Learning to Let Go",
@@ -103,7 +111,7 @@
     "thumb": "video-2025-8-19.jpg",
     "date": "Aug 19, 2025",
     "description": "A Rebroadcast from March 2019",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -328,8 +336,8 @@
   
     {
     "title": "A Marriage Seminar - Part 4",
-    "file": "video-2024-7-25b.mp4",
-    "thumb": "video-2024-7-25b.jpg",
+    "file": "video-2024-7-25d.mp4",
+    "thumb": "video-2024-7-25d.jpg",
     "date": "Jul 7, 2024",
     "description": "A Teaching Series",
     "location": "remote"
