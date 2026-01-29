@@ -254,9 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.loadPage = async function(page) {
   try {
-    // Load from web to always get latest version
-    const baseUrl = 'https://practicalfaith.net/app/';
-    const response = await fetch(baseUrl + page);
+    const response = await fetch(page);
     const html = await response.text();
     
     const parser = new DOMParser();
