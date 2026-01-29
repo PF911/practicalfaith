@@ -10,7 +10,6 @@
 <body style="margin:0; padding:0;">
 
 <style>
-/* Inline styles preserved when loaded into #content */
 body {
   margin: 0;
   padding: 0;
@@ -42,7 +41,6 @@ body {
   color: #bdc3c7;
 }
 
-/* Video Player */
 .video-player-container {
   margin: 16px;
   background: #000;
@@ -111,7 +109,6 @@ body {
   font-size: 18px;
 }
 
-/* Placeholder when no video selected */
 .video-placeholder {
   background: #34495e;
   padding: 60px 20px;
@@ -137,7 +134,6 @@ body {
   margin: 0;
 }
 
-/* Thumbnail Gallery */
 .gallery-section {
   padding: 0 16px 20px 16px;
 }
@@ -176,9 +172,10 @@ body {
 
 .search-results-count {
   font-size: 14px;
-  color: #ecf0f1;
+  color: #4d4f6b;
   margin: 8px 0 0 0;
   text-align: center;
+  font-weight: 600;
 }
 
 .thumbnail-grid {
@@ -260,8 +257,9 @@ body {
 .loading {
   text-align: center;
   padding: 40px 20px;
-  color: #ecf0f1;
+  color: #4d4f6b;
   font-size: 16px;
+  font-weight: 600;
 }
 
 .error {
@@ -269,6 +267,19 @@ body {
   padding: 40px 20px;
   color: #e74c3c;
   font-size: 16px;
+  font-weight: 600;
+}
+
+.offline-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(46, 204, 113, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
 }
 </style>
 
@@ -279,14 +290,12 @@ body {
     <p>Select a video to watch</p>
   </div>
 
-  <!-- Placeholder when no video selected -->
   <div class="video-placeholder" id="video-placeholder">
     <div class="video-placeholder-icon">🎬</div>
     <h2>Select a Video to Play</h2>
     <p>Tap any thumbnail below to start watching</p>
   </div>
 
-  <!-- Video Player (hidden until video selected) -->
   <div class="video-player-container" id="player-container">
     <video id="video-player" class="video-player" controls controlsList="nodownload" preload="metadata">
       <source id="video-source" src="" type="video/mp4">
@@ -304,11 +313,9 @@ body {
     </div>
   </div>
 
-  <!-- Thumbnail Gallery -->
   <div class="gallery-section">
     <div class="gallery-title">All Videos</div>
     
-    <!-- Search Bar -->
     <div class="search-container">
       <input 
         type="text" 
@@ -343,10 +350,31 @@ body {
   const searchInput = document.getElementById('search-input');
   const searchResultsCount = document.getElementById('search-results-count');
   
-  let allVideos = []; // Store all videos
-  let filteredVideos = []; // Store filtered results
+  let allVideos = [];
+  let filteredVideos = [];
 
-  // Share functionality using Capacitor Share plugin
+  // HYBRID SYSTEM: Get video path based on location
+  function getVideoPath(video) {
+    const location = video.location || 'local';
+    
+    if (location === 'local') {
+      return `https://practicalfaith.net/app/videos/${video.file}`;
+    } else {
+      return `https://practicalfaith.net/videos-archive/${video.file}`;
+    }
+  }
+
+  // HYBRID SYSTEM: Get thumbnail path based on location
+  function getThumbPath(video) {
+    const location = video.location || 'local';
+    
+    if (location === 'local') {
+      return `https://practicalfaith.net/app/videos/${video.thumb}`;
+    } else {
+      return `https://practicalfaith.net/videos-archive/${video.thumb}`;
+    }
+  }
+
   async function shareVideo(video, index) {
     try {
       const { Share } = window.Capacitor.Plugins;
@@ -360,37 +388,33 @@ body {
       await Share.share({
         title: video.title,
         text: `Check out this teaching: "${video.title}" from Practical Faith`,
-        url: `https://practicalfaith.net/app/videos/${video.file}`,
+        url: getVideoPath(video),
         dialogTitle: 'Share Teaching'
       });
     } catch (error) {
       console.error('Error sharing:', error);
-      // Don't show error if user cancelled
       if (error.message !== 'Share canceled') {
         alert('Unable to share at this time');
       }
     }
   }
 
-  // Load videos from JSON
   async function loadVideos() {
     try {
       const response = await fetch('https://practicalfaith.net/app/videos/videos.json');
       if (!response.ok) throw new Error('Failed to load videos');
       
       allVideos = await response.json();
-      filteredVideos = allVideos; // Initially show all
+      filteredVideos = allVideos;
       videos = filteredVideos;
       renderThumbnails();
       
-      // DO NOT auto-play - wait for user selection
     } catch (error) {
       console.error('Error loading videos:', error);
       thumbnailGrid.innerHTML = '<div class="error">Error loading videos. Please check your connection.</div>';
     }
   }
 
-  // Render thumbnail grid
   function renderThumbnails() {
     if (videos.length === 0) {
       thumbnailGrid.innerHTML = '<div class="error">No videos found</div>';
@@ -398,7 +422,6 @@ body {
       return;
     }
 
-    // Update results count
     if (searchInput.value.trim()) {
       searchResultsCount.textContent = `Showing ${videos.length} of ${allVideos.length} teachings`;
     } else {
@@ -414,8 +437,13 @@ body {
         item.classList.add('playing');
       }
       
+      const offlineBadge = video.location === 'local' 
+        ? '<div class="offline-badge">OFFLINE</div>' 
+        : '';
+      
       item.innerHTML = `
-        <img src="https://practicalfaith.net/app/videos/${video.thumb}" 
+        ${offlineBadge}
+        <img src="${getThumbPath(video)}" 
              alt="${video.title}" 
              class="thumbnail-image"
              onerror="this.style.display='none'">
@@ -428,13 +456,11 @@ body {
         </div>
       `;
       
-      // Click thumbnail image to play
       const img = item.querySelector('.thumbnail-image');
       const titleDiv = item.querySelector('.thumbnail-title');
       img.addEventListener('click', () => playVideo(index));
       titleDiv.addEventListener('click', () => playVideo(index));
       
-      // Click share button to share (prevent playing video)
       const shareBtn = item.querySelector('.thumbnail-share');
       shareBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -445,72 +471,59 @@ body {
     });
   }
 
-  // Play selected video
   function playVideo(index) {
     if (index < 0 || index >= videos.length) return;
     
     currentVideoIndex = index;
     const video = videos[index];
     
-    // Hide placeholder, show player
     videoPlaceholder.style.display = 'none';
     playerContainer.classList.add('active');
     
-    // Update video source
-    videoSource.src = `https://practicalfaith.net/app/videos/${video.file}`;
+    videoSource.src = getVideoPath(video);
     videoPlayer.load();
     
-    // Update info
     currentTitle.textContent = video.title;
-    currentMeta.textContent = video.date;
+    currentMeta.textContent = video.date + (video.location === 'local' ? ' • Available Offline' : ' • Streaming');
     currentDescription.textContent = video.description || '';
     
-    // Update thumbnails to show current
     renderThumbnails();
     
-    // Scroll to player
     playerContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
-    // Play video
     videoPlayer.play().catch(err => {
       console.error('Error playing video:', err);
     });
   }
 
-  // Share current video button
   shareCurrentButton.addEventListener('click', () => {
     if (currentVideoIndex >= 0) {
       shareVideo(videos[currentVideoIndex], currentVideoIndex);
     }
   });
 
-  // Auto-advance to next video when current finishes
   videoPlayer.addEventListener('ended', () => {
     if (currentVideoIndex < videos.length - 1) {
       playVideo(currentVideoIndex + 1);
     }
   });
 
-  // Search functionality
   searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase().trim();
     
     if (!searchTerm) {
-      // No search term - show all videos
       filteredVideos = allVideos;
     } else {
-      // Filter videos by title
       filteredVideos = allVideos.filter(video => 
         video.title.toLowerCase().includes(searchTerm)
       );
     }
     
     videos = filteredVideos;
-    currentVideoIndex = -1; // Reset current video
+    currentVideoIndex = -1;
     renderThumbnails();
   });
 
-  // Initialize
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadVideos);
   } else {

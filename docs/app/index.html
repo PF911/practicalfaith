@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.loadPage = async function(page) {
   try {
-    // Load from web to always get latest version
+    // CRITICAL: Load from web to always get latest version
     const baseUrl = 'https://practicalfaith.net/app/';
     const response = await fetch(baseUrl + page);
     const html = await response.text();
@@ -277,7 +277,7 @@ window.loadPage = async function(page) {
   } catch (e) {
     console.error('Error loading page:', e);
     document.getElementById("content").innerHTML = 
-      '<div style="padding:20px;text-align:center;color:#666;">Error loading page</div>';
+      '<div style="padding:20px;text-align:center;color:#666;">Error loading page. Please check your connection.</div>';
   }
 }
 </script>
