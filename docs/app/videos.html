@@ -269,18 +269,6 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
-
-.offline-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: rgba(46, 204, 113, 0.9);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 600;
-}
 </style>
 
 <div class="videos-wrapper">
@@ -437,12 +425,7 @@ body {
         item.classList.add('playing');
       }
       
-      const offlineBadge = video.location === 'local' 
-        ? '<div class="offline-badge">OFFLINE</div>' 
-        : '';
-      
       item.innerHTML = `
-        ${offlineBadge}
         <img src="${getThumbPath(video)}" 
              alt="${video.title}" 
              class="thumbnail-image"
@@ -484,7 +467,7 @@ body {
     videoPlayer.load();
     
     currentTitle.textContent = video.title;
-    currentMeta.textContent = video.date + (video.location === 'local' ? ' • Available Offline' : ' • Streaming');
+    currentMeta.textContent = video.date;
     currentDescription.textContent = video.description || '';
     
     renderThumbnails();
