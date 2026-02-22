@@ -6,7 +6,7 @@
     "thumb": "video-2026-2-16.jpg",
     "date": "Feb 16, 2026",
     "description": "A Rebroadcast from July 2021",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -14,9 +14,9 @@
     "title": "Dealing with Defeat",
     "file": "video-2026-1-29.mp4",
     "thumb": "video-2026-1-29.jpg",
-    "date": "Jan 11, 2026",
+    "date": "Jan 29, 2026",
     "description": "A Rebroadcast from November 2018",
-    "location": "local"
+    "location": "remote"
   },
   
   {
@@ -25,7 +25,7 @@
     "thumb": "video-2026-1-11.jpg",
     "date": "Jan 11, 2026",
     "description": "A Rebroadcast from May 2023",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -37,7 +37,7 @@
     "thumb": "video-2026-1-1.jpg",
     "date": "Jan 1, 2026",
     "description": "A Message for New Years",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -49,7 +49,7 @@
     "thumb": "video-2025-12-18.jpg",
     "date": "Dec 18, 2025",
     "description": "A Christmas Message",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -60,7 +60,7 @@
     "thumb": "video-2025-11-23.jpg",
     "date": "Nov 23, 2025",
     "description": "A Thanksgiving Message",
-    "location": "local"
+    "location": "remote"
   },
   
     
@@ -70,7 +70,7 @@
     "thumb": "video-2025-11-4.jpg",
     "date": "Nov 4, 2025",
     "description": "A Rebroadcast from January 2020",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -80,7 +80,7 @@
     "thumb": "video-2025-10-22.jpg",
     "date": "Oct 22, 2025",
     "description": "A Rebroadcast from February 2016",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -91,7 +91,7 @@
     "thumb": "video-2025-10-5.jpg",
     "date": "Oct 5, 2025",
     "description": "A Communion Message",
-    "location": "local"
+    "location": "remote"
   },
   {
     "title": "The Messy Love Life of King David",
@@ -99,7 +99,7 @@
     "thumb": "video-2025-9-21.jpg",
     "date": "Sep 21, 2025",
     "description": "A Bible Teaching",
-    "location": "local"
+    "location": "remote"
   },
   
   
@@ -209,7 +209,7 @@
     "title": "Unmatched Love",
     "file": "video-2025-5-11.mp4",
     "thumb": "video-2025-5-11.jpg",
-    "date": "Jun 6, 2025",
+    "date": "May 11, 2025",
     "description": "A Mother's Day Message",
     "location": "remote"
   },
@@ -220,7 +220,7 @@
     "title": "Proof of Life",
     "file": "video-2025-4-24.mp4",
     "thumb": "video-2025-4-24.jpg",
-    "date": "Apr 4, 2025",
+    "date": "Apr 24, 2025",
     "description": "An Easter Message",
     "location": "remote"
   },
@@ -232,7 +232,7 @@
     "title": "Did God forsake Jesus on the Cross?",
     "file": "video-2025-4-13.mp4",
     "thumb": "video-2025-4-13.jpg",
-    "date": "Apr 4, 2025",
+    "date": "Apr 13, 2025",
     "description": "An Good Friday Message",
     "location": "remote"
   }, 
@@ -256,7 +256,7 @@
     "title": "My Heart Belongs To Jesus",
     "file": "video-2025-2-14.mp4",
     "thumb": "video-2025-2-14.jpg",
-    "date": "Mar 15, 2025",
+    "date": "Feb 14, 2025",
     "description": "A Valentines Message",
     "location": "remote"
   },
