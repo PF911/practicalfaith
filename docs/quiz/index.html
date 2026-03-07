@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bible Quiz Challenge</title>
+  <style>
+    :root {
+      --purple: #5c21b6;
+      --purple-dark: #4a159d;
+      --orange-1: #f5b12d;
+      --orange-2: #f29a1f;
+      --orange-3: #ec8c17;
+      --panel: #e9e7df;
+      --blue: #3f74c9;
+      --blue-dark: #2f5fb0;
+      --text: #3d2f22;
+      --wrong: #c94c4c;
+      --right: #2f8a45;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #ddd;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .app {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 15%, rgba(255, 237, 162, 0.65), rgba(255, 237, 162, 0) 28%),
+        linear-gradient(180deg, var(--orange-1) 0%, var(--orange-2) 58%, var(--orange-3) 100%);
+    }
+
+    .app::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image:
+        radial-gradient(rgba(255,255,255,.8) 0.8px, transparent 0.8px),
+        radial-gradient(rgba(0,0,0,.18) 0.7px, transparent 0.7px);
+      background-size: 7px 7px, 11px 11px;
+      background-position: 0 0, 2px 3px;
+    }
+
+    .screen {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      padding: 24px 18px 28px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .screen.active {
+      display: flex;
+    }
+
+    .title {
+      margin: 6px 0 0;
+      text-align: center;
+      color: var(--purple);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 0 rgba(255,255,255,.15);
+    }
+
+    .title.large {
+      font-size: clamp(3rem, 12vw, 4.2rem);
+    }
+
+    .title.medium {
+      font-size: clamp(2.5rem, 10vw, 3.3rem);
+    }
+
+    .subtitle {
+      margin: 18px 0 8px;
+      text-align: center;
+      font-size: clamp(1.1rem, 5vw, 1.6rem);
+      color: var(--purple);
+      font-weight: 800;
+    }
+
+    .subline {
+      margin-top: 14px;
+      text-align: center;
+      font-size: clamp(1rem, 5vw, 1.4rem);
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .hero-img {
+      width: min(78%, 300px);
+      max-height: 40vh;
+      object-fit: contain;
+      margin: auto 0 16px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.12));
+      border-radius: 18px;
+    }
+
+    .primary-btn,
+    .answer-btn,
+    .mini-btn,
+    .category-btn {
+      border: 4px solid var(--purple);
+      border-radius: var(--radius);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.08s ease, opacity 0.2s ease, background 0.2s ease;
+    }
+
+    button:active { transform: scale(0.985); }
+
+    .primary-btn {
+      width: 82%;
+      max-width: 320px;
+      background: var(--blue);
+      border-color: transparent;
+      color: white;
+      font-size: 1rem;
+      padding: 18px 20px;
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      margin-bottom: 4px;
+    }
+
+    .primary-btn:hover { background: var(--blue-dark); }
+
+    .menu-wrap {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .category-btn {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      align-items: stretch;
+      gap: 0;
+      padding: 0;
+      background: transparent;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .category-icon {
+      display: grid;
+      place-items: center;
+      background: #f3f1ec;
+      color: var(--purple);
+      font-size: 1.9rem;
+      border-right: 4px solid var(--purple);
+      min-height: 64px;
+    }
+
+    .category-label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 18px;
+      background: var(--panel);
+      color: var(--purple);
+      font-size: 1rem;
+      min-height: 64px;
+      text-align: left;
+    }
+
+    .mini-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .mini-btn {
+      background: var(--panel);
+      color: var(--purple);
+      font-size: 0.75rem;
+      min-height: 54px;
+      box-shadow: var(--shadow);
+      padding: 8px 6px;
+    }
+
+    .quiz-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--purple);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .back-link {
+      background: none;
+      border: none;
+      color: var(--purple);
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+
+    .quiz-card,
+    .feedback-card,
+    .score-card {
+      width: 100%;
+      background: rgba(248, 244, 235, 0.96);
+      border: 4px solid var(--purple);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 18px 16px;
+    }
+
+    .quiz-card {
+      margin-top: 8px;
+    }
+
+    .category-name {
+      color: var(--purple);
+      font-size: 1rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .progress {
+      text-align: center;
+      color: var(--purple);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .question-text {
+      font-size: 1.3rem;
+      line-height: 1.32;
+      font-weight: 800;
+      text-align: center;
+      margin: 4px 0 0;
+    }
+
+    .answers {
+      width: 100%;
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .answer-btn {
+      width: 100%;
+      background: var(--panel);
+      color: var(--purple);
+      font-size: 1rem;
+      text-align: left;
+      padding: 14px 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .answer-btn.disabled {
+      cursor: default;
+      opacity: 0.68;
+    }
+
+    .answer-btn.wrong {
+      border-color: var(--wrong);
+      color: var(--wrong);
+      background: #f7e6e6;
+    }
+
+    .answer-btn.correct {
+      border-color: var(--right);
+      color: var(--right);
+      background: #e9f6ec;
+    }
+
+    .feedback-card {
+      margin-top: 16px;
+      display: none;
+      text-align: center;
+    }
+
+    .feedback-card.show {
+      display: block;
+    }
+
+    .feedback-head {
+      color: var(--purple);
+      font-weight: 900;
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .feedback-body {
+      font-size: 1rem;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .verse-ref {
+      color: var(--purple);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .secondary-btn {
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      cursor: pointer;
+      min-width: 170px;
+      box-shadow: var(--shadow);
+    }
+
+    .secondary-btn:hover { background: var(--blue-dark); }
+
+    .score-card {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .score-big {
+      color: var(--purple);
+      font-size: 2.3rem;
+      font-weight: 900;
+      margin: 10px 0;
+    }
+
+    .score-stats {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 10px 0 18px;
+    }
+
+    .score-actions {
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+    }
+
+    .note {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: rgba(61, 47, 34, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section id="screen-splash" class="screen active">
+      <h1 class="title large">Bible Quiz<br />Challenge</h1>
+      <div class="subtitle">1001 Questions</div>
+      <div class="subline">Test Your Bible Knowledge</div>
+    <img class="hero-img" src="images/splash.jpg" alt="Bible Quiz Challenge splash" />
+      <button id="startBtn" class="primary-btn">Start Quiz</button>
+    </section>
+
+    <section id="screen-menu" class="screen">
+      <h1 class="title medium">Bible Quiz<br />Challenge</h1>
+      <div class="subtitle">Choose Your Challenge</div>
+
+      <div class="menu-wrap">
+        <button class="category-btn" data-category="general">
+          <span class="category-icon">🎓</span>
+          <span class="category-label">General Bible Trivia</span>
+        </button>
+
+        <button class="category-btn" data-category="who_said_it">
+          <span class="category-icon">📣</span>
+          <span class="category-label">Who said it?</span>
+        </button>
+
+        <button class="category-btn" data-category="timeline">
+          <span class="category-icon">⏳</span>
+          <span class="category-label">Bible Timeline</span>
+        </button>
+
+        <button class="category-btn" data-category="finish_the_verse">
+          <span class="category-icon">📖</span>
+          <span class="category-label">Finish the Verse</span>
+        </button>
+
+        <button class="category-btn" data-category="prophecy">
+          <span class="category-icon">🔥</span>
+          <span class="category-label">Prophecy Quiz</span>
+        </button>
+      </div>
+
+      <div class="mini-row">
+        <button class="mini-btn">High Scores</button>
+        <button class="mini-btn">My Stats</button>
+        <button class="mini-btn">About</button>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-top">
+        <button id="backToMenuBtn" class="back-link">← Menu</button>
+        <div id="quizProgressTop">Question 1 / 10</div>
+      </div>
+
+      <div class="quiz-card">
+        <div id="quizCategoryName" class="category-name">General Bible Trivia</div>
+        <div id="quizProgress" class="progress">Question 1 of 10</div>
+        <div id="questionText" class="question-text"></div>
+      </div>
+
+      <div id="answersWrap" class="answers"></div>
+
+      <div id="feedbackCard" class="feedback-card">
+        <div id="feedbackHead" class="feedback-head"></div>
+        <div id="feedbackBody" class="feedback-body"></div>
+        <div id="verseRef" class="verse-ref"></div>
+        <button id="nextQuestionBtn" class="secondary-btn">Next Question →</button>
+      </div>
+    </section>
+
+    <section id="screen-results" class="screen">
+      <h1 class="title medium">Bible Quiz<br />Challenge</h1>
+      <div class="score-card">
+        <div class="feedback-head">🎉 Quiz Complete!</div>
+        <div id="resultsCategory" class="category-name"></div>
+        <div id="finalScore" class="score-big">0 / 20</div>
+        <div id="scoreStats" class="score-stats"></div>
+        <div class="score-actions">
+          <button id="playAgainBtn" class="secondary-btn">Play Again</button>
+          <button id="chooseAnotherBtn" class="secondary-btn">Choose Another Challenge</button>
+        </div>
+      </div>
+      <div class="note">Starter version with sample questions.</div>
+    </section>
+  </div>
+
+  <script>
+    const screens = {
+      splash: document.getElementById('screen-splash'),
+      menu: document.getElementById('screen-menu'),
+      quiz: document.getElementById('screen-quiz'),
+      results: document.getElementById('screen-results')
+    };
+
+    const startBtn = document.getElementById('startBtn');
+    const backToMenuBtn = document.getElementById('backToMenuBtn');
+    const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+    const playAgainBtn = document.getElementById('playAgainBtn');
+    const chooseAnotherBtn = document.getElementById('chooseAnotherBtn');
+
+    const quizCategoryName = document.getElementById('quizCategoryName');
+    const quizProgress = document.getElementById('quizProgress');
+    const quizProgressTop = document.getElementById('quizProgressTop');
+    const questionText = document.getElementById('questionText');
+    const answersWrap = document.getElementById('answersWrap');
+    const feedbackCard = document.getElementById('feedbackCard');
+    const feedbackHead = document.getElementById('feedbackHead');
+    const feedbackBody = document.getElementById('feedbackBody');
+    const verseRef = document.getElementById('verseRef');
+
+    const resultsCategory = document.getElementById('resultsCategory');
+    const finalScore = document.getElementById('finalScore');
+    const scoreStats = document.getElementById('scoreStats');
+
+    const categoryLabels = {
+      general: 'General Bible Trivia',
+      who_said_it: 'Who said it?',
+      timeline: 'Bible Timeline',
+      finish_the_verse: 'Finish the Verse',
+      prophecy: 'Prophecy Quiz'
+    };
+
+    const correctMessages = [
+      '🎉 Whoa! You got it!',
+      '✅ Correct! Nicely done.',
+      '👏 Great job!',
+      '💡 That\'s right!',
+      '⭐ Excellent!'
+    ];
+
+    const retryMessages = [
+      '😅 Ooh! Not quite. Try again.',
+      '🤔 Close! Give it another shot.',
+      '🙃 Not this time. Try again.',
+      '🧐 Hmm… take another look.',
+      '📖 Almost! Try again.'
+    ];
+
+    const finalWrongMessages = [
+      '❌ Good try!',
+      '📖 Not quite this time.',
+      '🙂 Nice effort.'
+    ];
+
+    const questionBank = {
+      general: [
+        {
+          question: 'Who built the ark?',
+          choices: ['Abraham', 'Noah', 'Moses', 'David'],
+          answer: 'Noah',
+          explanation: 'Noah built the ark at God\'s command.',
+          verse: 'Genesis 6:14'
+        },
+        {
+          question: 'Who was the first king of Israel?',
+          choices: ['Saul', 'David', 'Solomon', 'Samuel'],
+          answer: 'Saul',
+          explanation: 'Saul was anointed as Israel\'s first king.',
+          verse: '1 Samuel 10:1'
+        },
+        {
+          question: 'What river was Jesus baptized in?',
+          choices: ['Jordan', 'Nile', 'Euphrates', 'Tigris'],
+          answer: 'Jordan',
+          explanation: 'Jesus was baptized in the Jordan River.',
+          verse: 'Matthew 3:13'
+        },
+        {
+          question: 'Who led the Israelites out of Egypt?',
+          choices: ['Joshua', 'Moses', 'Aaron', 'Caleb'],
+          answer: 'Moses',
+          explanation: 'Moses led Israel out of Egypt.',
+          verse: 'Exodus 3:10'
+        }
+      ],
+      who_said_it: [
+        {
+          question: '“As for me and my house, we will serve the Lord.”',
+          choices: ['Samuel', 'Joshua', 'David', 'Caleb'],
+          answer: 'Joshua',
+          explanation: 'Joshua declared his household would serve the Lord.',
+          verse: 'Joshua 24:15'
+        },
+        {
+          question: '“Behold, the Lamb of God.”',
+          choices: ['Peter', 'John the Baptist', 'Paul', 'Andrew'],
+          answer: 'John the Baptist',
+          explanation: 'John the Baptist identified Jesus as the Lamb of God.',
+          verse: 'John 1:29'
+        },
+        {
+          question: '“Am I my brother\'s keeper?”',
+          choices: ['Jacob', 'Cain', 'Esau', 'Adam'],
+          answer: 'Cain',
+          explanation: 'Cain said this after Abel was killed.',
+          verse: 'Genesis 4:9'
+        },
+        {
+          question: '“Here am I; send me.”',
+          choices: ['Isaiah', 'Jeremiah', 'Ezekiel', 'Daniel'],
+          answer: 'Isaiah',
+          explanation: 'Isaiah answered the Lord\'s call with these words.',
+          verse: 'Isaiah 6:8'
+        }
+      ],
+      timeline: [
+        {
+          question: 'Which happened first?',
+          choices: ['Exodus', 'Flood', 'David becomes king', 'Birth of Jesus'],
+          answer: 'Flood',
+          explanation: 'The Flood happened long before the Exodus and David.',
+          verse: 'Genesis 7:12'
+        },
+        {
+          question: 'Which happened first?',
+          choices: ['David defeats Goliath', 'Building of Solomon\'s Temple', 'Exodus from Egypt', 'Babylonian exile'],
+          answer: 'Exodus from Egypt',
+          explanation: 'The Exodus came before David and Solomon.',
+          verse: 'Exodus 12:31'
+        },
+        {
+          question: 'Which happened first?',
+          choices: ['Birth of Abraham', 'Flood', 'David becomes king', 'Ministry of Elijah'],
+          answer: 'Flood',
+          explanation: 'The Flood happened before Abraham was born.',
+          verse: 'Genesis 7:12'
+        },
+        {
+          question: 'Which happened first?',
+          choices: ['Crucifixion of Jesus', 'Birth of Moses', 'Babylonian exile', 'Birth of David'],
+          answer: 'Birth of Moses',
+          explanation: 'Moses was born long before David, Babylon, and Jesus.',
+          verse: 'Exodus 2:2'
+        }
+      ],
+      finish_the_verse: [
+        {
+          question: '“The Lord is my shepherd; I shall not ____.”',
+          choices: ['fear', 'want', 'wander', 'stumble'],
+          answer: 'want',
+          explanation: 'Psalm 23 says, “I shall not want.”',
+          verse: 'Psalm 23:1'
+        },
+        {
+          question: '“In the beginning God created the ____ and the earth.”',
+          choices: ['heavens', 'sky', 'stars', 'universe'],
+          answer: 'heavens',
+          explanation: 'Genesis begins with “the heavens and the earth.”',
+          verse: 'Genesis 1:1'
+        },
+        {
+          question: '“I can do all things through Christ who ____ me.”',
+          choices: ['saves', 'strengthens', 'guides', 'calls'],
+          answer: 'strengthens',
+          explanation: 'Paul wrote that Christ strengthens him.',
+          verse: 'Philippians 4:13'
+        },
+        {
+          question: '“Your word is a lamp to my ____.”',
+          choices: ['soul', 'path', 'feet', 'heart'],
+          answer: 'feet',
+          explanation: 'God\'s word is a lamp to our feet.',
+          verse: 'Psalm 119:105'
+        }
+      ],
+      prophecy: [
+        {
+          question: 'Which prophet foretold the suffering servant?',
+          choices: ['Jeremiah', 'Isaiah', 'Ezekiel', 'Zechariah'],
+          answer: 'Isaiah',
+          explanation: 'Isaiah foretold the suffering servant.',
+          verse: 'Isaiah 53:5'
+        },
+        {
+          question: 'Which prophet foretold that the Messiah would be born in Bethlehem?',
+          choices: ['Micah', 'Amos', 'Joel', 'Nahum'],
+          answer: 'Micah',
+          explanation: 'Micah foretold the Messiah\'s birth in Bethlehem.',
+          verse: 'Micah 5:2'
+        },
+        {
+          question: 'Which prophet foretold the coming of a new covenant?',
+          choices: ['Hosea', 'Jeremiah', 'Zephaniah', 'Habakkuk'],
+          answer: 'Jeremiah',
+          explanation: 'Jeremiah foretold the new covenant.',
+          verse: 'Jeremiah 31:31'
+        },
+        {
+          question: 'Which prophet saw the vision of dry bones coming to life?',
+          choices: ['Daniel', 'Ezekiel', 'Joel', 'Amos'],
+          answer: 'Ezekiel',
+          explanation: 'Ezekiel saw the valley of dry bones.',
+          verse: 'Ezekiel 37:1'
+        }
+      ]
+    };
+
+    const state = {
+      currentCategory: null,
+      currentQuestions: [],
+      currentIndex: 0,
+      score: 0,
+      firstTryCorrect: 0,
+      secondTryCorrect: 0,
+      missed: 0,
+      wrongChoices: [],
+      isAnswered: false
+    };
+
+    function showScreen(name) {
+      Object.values(screens).forEach(screen => screen.classList.remove('active'));
+      screens[name].classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function shuffle(array) {
+      const copy = [...array];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function pickMessage(list) {
+      return list[Math.floor(Math.random() * list.length)];
+    }
+
+    function startCategory(categoryKey) {
+      state.currentCategory = categoryKey;
+      state.currentQuestions = shuffle(questionBank[categoryKey]).slice(0, 10);
+      if (state.currentQuestions.length < 10) {
+        while (state.currentQuestions.length < 10) {
+          state.currentQuestions.push(...shuffle(questionBank[categoryKey]));
+        }
+        state.currentQuestions = state.currentQuestions.slice(0, 10);
+      }
+      state.currentIndex = 0;
+      state.score = 0;
+      state.firstTryCorrect = 0;
+      state.secondTryCorrect = 0;
+      state.missed = 0;
+      loadQuestion();
+      showScreen('quiz');
+    }
+
+    function loadQuestion() {
+      const q = state.currentQuestions[state.currentIndex];
+      state.wrongChoices = [];
+      state.isAnswered = false;
+      feedbackCard.classList.remove('show');
+      quizCategoryName.textContent = categoryLabels[state.currentCategory];
+      quizProgress.textContent = `Question ${state.currentIndex + 1} of ${state.currentQuestions.length}`;
+      quizProgressTop.textContent = `Question ${state.currentIndex + 1} / ${state.currentQuestions.length}`;
+      questionText.textContent = q.question;
+      answersWrap.innerHTML = '';
+
+      q.choices.forEach((choice, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'answer-btn';
+        btn.innerHTML = `<strong>${String.fromCharCode(65 + index)}</strong> ${choice}`;
+        btn.addEventListener('click', () => handleAnswer(choice, btn));
+        answersWrap.appendChild(btn);
+      });
+    }
+
+    function handleAnswer(choice, buttonEl) {
+      if (state.isAnswered || buttonEl.classList.contains('disabled')) return;
+
+      const q = state.currentQuestions[state.currentIndex];
+      const firstAttempt = state.wrongChoices.length === 0;
+
+      if (choice === q.answer) {
+        buttonEl.classList.add('correct');
+        disableAllAnswers();
+        state.isAnswered = true;
+
+        if (firstAttempt) {
+          state.score += 2;
+          state.firstTryCorrect += 1;
+        } else {
+          state.score += 1;
+          state.secondTryCorrect += 1;
+        }
+
+        feedbackHead.textContent = pickMessage(correctMessages);
+        feedbackBody.textContent = q.explanation;
+        verseRef.textContent = q.verse;
+        nextQuestionBtn.textContent = state.currentIndex === state.currentQuestions.length - 1 ? 'See Results →' : 'Next Question →';
+        feedbackCard.classList.add('show');
+        return;
+      }
+
+      state.wrongChoices.push(choice);
+      buttonEl.classList.add('wrong', 'disabled');
+
+      if (state.wrongChoices.length === 1) {
+        feedbackHead.textContent = pickMessage(retryMessages);
+        feedbackBody.textContent = '';
+        verseRef.textContent = '';
+        feedbackCard.classList.add('show');
+        nextQuestionBtn.textContent = 'Keep Trying';
+      } else {
+        disableAllAnswers();
+        markCorrectAnswer(q.answer);
+        state.isAnswered = true;
+        state.missed += 1;
+        feedbackHead.textContent = pickMessage(finalWrongMessages);
+        feedbackBody.textContent = `Correct answer: ${q.answer}. ${q.explanation}`;
+        verseRef.textContent = q.verse;
+        nextQuestionBtn.textContent = state.currentIndex === state.currentQuestions.length - 1 ? 'See Results →' : 'Next Question →';
+        feedbackCard.classList.add('show');
+      }
+    }
+
+    function disableAllAnswers() {
+      document.querySelectorAll('.answer-btn').forEach(btn => btn.classList.add('disabled'));
+    }
+
+    function markCorrectAnswer(answer) {
+      document.querySelectorAll('.answer-btn').forEach(btn => {
+        if (btn.textContent.trim().endsWith(answer)) {
+          btn.classList.add('correct');
+        }
+      });
+    }
+
+    function goNext() {
+      if (!state.isAnswered) {
+        feedbackCard.classList.remove('show');
+        return;
+      }
+
+      if (state.currentIndex < state.currentQuestions.length - 1) {
+        state.currentIndex += 1;
+        loadQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      resultsCategory.textContent = categoryLabels[state.currentCategory];
+      finalScore.textContent = `${state.score} / ${state.currentQuestions.length * 2}`;
+      scoreStats.innerHTML = `
+        Correct on first try: <strong>${state.firstTryCorrect}</strong><br>
+        Correct on second try: <strong>${state.secondTryCorrect}</strong><br>
+        Missed: <strong>${state.missed}</strong>
+      `;
+      showScreen('results');
+    }
+
+    startBtn.addEventListener('click', () => showScreen('menu'));
+    backToMenuBtn.addEventListener('click', () => showScreen('menu'));
+    nextQuestionBtn.addEventListener('click', goNext);
+    playAgainBtn.addEventListener('click', () => startCategory(state.currentCategory));
+    chooseAnotherBtn.addEventListener('click', () => showScreen('menu'));
+
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.addEventListener('click', () => startCategory(btn.dataset.category));
+    });
+  </script>
+</body>
+</html>
