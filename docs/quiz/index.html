@@ -137,7 +137,7 @@ body{
 .small-btn{
   flex:1;
   padding:10px 18px;
-   height:50px;
+  height:50px;
   border-radius:16px;
   border:3px solid var(--purple);
   background:#eee;
@@ -149,6 +149,27 @@ body{
   align-items:center;
   justify-content:center;
   gap:6px;
+}
+
+.level-subtitle{
+  min-height:34px;
+}
+
+.level-note{
+  color:var(--purple);
+  font-size:18px;
+  font-weight:700;
+  margin:8px 0 14px;
+}
+
+.back-row{
+  width:90%;
+  max-width:350px;
+  margin:20px auto 0;
+}
+
+.back-row .small-btn{
+  width:100%;
 }
 
 </style>
@@ -182,18 +203,34 @@ body{
 
 <div class="subtitle">Choose Your Challenge</div>
 
-<button class="menu-btn"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
-<button class="menu-btn"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
-<button class="menu-btn"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
-<button class="menu-btn"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
-<button class="menu-btn"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
+<button class="menu-btn" onclick="openLevelMenu('General Bible Trivia')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
+<button class="menu-btn" onclick="openLevelMenu('Who said it?')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
+<button class="menu-btn" onclick="openLevelMenu('Bible Timeline')"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
+<button class="menu-btn" onclick="openLevelMenu('Finish the Verse')"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
+<button class="menu-btn" onclick="openLevelMenu('Prophecy Quiz')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
 
 <div class="bottom">
-
 <button class="small-btn">🏆 High Scores</button>
 <button class="small-btn">📊 My Stats</button>
 <button class="small-btn">ℹ️ About</button>
+</div>
 
+</section>
+
+<section id="levelMenu" class="screen">
+
+<h1 class="title">Bible Quiz<br>Challenge</h1>
+
+<div id="levelCategory" class="subtitle level-subtitle"></div>
+<div class="subline">Choose Your Level</div>
+<div class="level-note">Start where you feel comfortable</div>
+
+<button class="menu-btn" onclick="selectLevel('Beginner')"><img src="images/chick.png" class="menu-icon"> <span>Beginner</span></button>
+<button class="menu-btn" onclick="selectLevel('Student')"><img src="images/book.png" class="menu-icon"> <span>Student</span></button>
+<button class="menu-btn" onclick="selectLevel('Scholar')"><img src="images/cap2.png" class="menu-icon"> <span>Scholar</span></button>
+
+<div class="back-row">
+<button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button>
 </div>
 
 </section>
@@ -202,18 +239,26 @@ body{
 
 <script>
 
-document.getElementById("startBtn").onclick = () => {
+let currentCategory='';
 
-  const splash = document.getElementById("splash")
-  const menu = document.getElementById("menu")
+function showScreen(screenId){
+const screens=document.querySelectorAll('.screen');
+screens.forEach(screen=>screen.classList.remove('active'));
+document.getElementById(screenId).classList.add('active');
+}
 
-  splash.style.opacity = "0"
+document.getElementById('startBtn').onclick=()=>{
+showScreen('menu');
+};
 
-  setTimeout(()=>{
-    splash.classList.remove("active")
-    menu.classList.add("active")
-  },400)
+function openLevelMenu(category){
+currentCategory=category;
+document.getElementById('levelCategory').textContent=category;
+showScreen('levelMenu');
+}
 
+function selectLevel(level){
+alert(currentCategory+' - '+level+' coming next');
 }
 
 </script>
