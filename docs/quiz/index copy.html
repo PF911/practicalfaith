@@ -22,16 +22,12 @@ body{
   font-family:'Nunito', Arial, sans-serif;
   display:flex;
   justify-content:center;
-
-  background:
-    radial-gradient(circle at 50% 10%, rgba(255,236,160,.7), rgba(255,236,160,0) 35%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 2px, transparent 2px, transparent 6px),
-    linear-gradient(180deg, var(--orange1), var(--orange2), var(--orange3));
-
+  background:linear-gradient(180deg,var(--orange1),var(--orange2),var(--orange3));
   min-height:100vh;
 }
 
 .app{
+  position:relative;
   width:100%;
   max-width:430px;
   min-height:100vh;
@@ -90,8 +86,20 @@ body{
   margin-top:4px;
 }
 
-.screen{display:none;}
-.screen.active{display:block;}
+.screen{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .4s ease;
+}
+
+.screen.active{
+  opacity:1;
+  visibility:visible;
+}
 
 .menu-btn{
   width:90%;
@@ -109,6 +117,14 @@ body{
   justify-content:flex-start;
   gap:14px;
   cursor:pointer;
+}
+
+.menu-icon{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  flex-shrink:0;
+  display:block;
 }
 
 .menu-footer{
@@ -160,11 +176,11 @@ body{
 
 <div class="subtitle">Choose Your Challenge</div>
 
-<button class="menu-btn">🎓 General Bible Trivia</button>
-<button class="menu-btn">📣 Who said it?</button>
-<button class="menu-btn">⏳ Bible Timeline</button>
-<button class="menu-btn">📖 Finish the Verse</button>
-<button class="menu-btn">🔥 Prophecy Quiz</button>
+<button class="menu-btn"><img src="images/cap.png" class="menu-icon" alt="General Bible Trivia"> <span>General Bible Trivia</span></button>
+<button class="menu-btn"><img src="images/phone.png" class="menu-icon" alt="Who said it?"> <span>Who said it?</span></button>
+<button class="menu-btn"><img src="images/timeline.png" class="menu-icon" alt="Bible Timeline"> <span>Bible Timeline</span></button>
+<button class="menu-btn"><img src="images/verses.png" class="menu-icon" alt="Finish the Verse"> <span>Finish the Verse</span></button>
+<button class="menu-btn"><img src="images/prophecy.png" class="menu-icon" alt="Prophecy Quiz"> <span>Prophecy Quiz</span></button>
 
 <div class="menu-footer">
 <button class="footer-btn">High Scores</button>
@@ -177,10 +193,21 @@ body{
 </div>
 
 <script>
-document.getElementById("startBtn").onclick=()=>{
-document.getElementById("splash").classList.remove("active")
-document.getElementById("menu").classList.add("active")
+
+document.getElementById("startBtn").onclick = () => {
+
+  const splash = document.getElementById("splash")
+  const menu = document.getElementById("menu")
+
+  splash.style.opacity = "0"
+
+  setTimeout(()=>{
+    splash.classList.remove("active")
+    menu.classList.add("active")
+  },400)
+
 }
+
 </script>
 
 </body>

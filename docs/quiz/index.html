@@ -119,6 +119,14 @@ body{
   cursor:pointer;
 }
 
+.menu-icon{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  flex-shrink:0;
+  display:block;
+}
+
 .menu-footer{
   margin-top:20px;
   display:flex;
@@ -168,11 +176,11 @@ body{
 
 <div class="subtitle">Choose Your Challenge</div>
 
-<button class="menu-btn">🎓 General Bible Trivia</button>
-<button class="menu-btn">📣 Who said it?</button>
-<button class="menu-btn">⏳ Bible Timeline</button>
-<button class="menu-btn">📖 Finish the Verse</button>
-<button class="menu-btn">🔥 Prophecy Quiz</button>
+<button class="menu-btn"><img src="images/cap.png" class="menu-icon" alt="General Bible Trivia"> <span>General Bible Trivia</span></button>
+<button class="menu-btn"><img src="images/phone.png" class="menu-icon" alt="Who said it?"> <span>Who said it?</span></button>
+<button class="menu-btn"><img src="images/timeline.png" class="menu-icon" alt="Bible Timeline"> <span>Bible Timeline</span></button>
+<button class="menu-btn"><img src="images/verses.png" class="menu-icon" alt="Finish the Verse"> <span>Finish the Verse</span></button>
+<button class="menu-btn"><img src="images/prophecy.png" class="menu-icon" alt="Prophecy Quiz"> <span>Prophecy Quiz</span></button>
 
 <div class="menu-footer">
 <button class="footer-btn">High Scores</button>
