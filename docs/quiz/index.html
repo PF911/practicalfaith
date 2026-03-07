@@ -127,22 +127,28 @@ body{
   display:block;
 }
 
-.menu-footer{
+.bottom{
   margin-top:20px;
   display:flex;
   justify-content:space-between;
   gap:10px;
 }
 
-.footer-btn{
+.small-btn{
   flex:1;
-  padding:12px;
-  border-radius:10px;
+  padding:10px 18px;
+   height:50px;
+  border-radius:16px;
   border:3px solid var(--purple);
   background:#eee;
   color:var(--purple);
   font-weight:bold;
+  font-size:16px;
   cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
 }
 
 </style>
@@ -176,25 +182,17 @@ body{
 
 <div class="subtitle">Choose Your Challenge</div>
 
-<button class="menu-btn"><img src="images/cap.png" class="menu-icon" alt="General Bible Trivia"> <span>General Bible Trivia</span></button>
-<button class="menu-btn"><img src="images/phone.png" class="menu-icon" alt="Who said it?"> <span>Who said it?</span></button>
-<button class="menu-btn"><img src="images/timeline.png" class="menu-icon" alt="Bible Timeline"> <span>Bible Timeline</span></button>
-<button class="menu-btn"><img src="images/verses.png" class="menu-icon" alt="Finish the Verse"> <span>Finish the Verse</span></button>
-<button class="menu-btn"><img src="images/prophecy.png" class="menu-icon" alt="Prophecy Quiz"> <span>Prophecy Quiz</span></button>
+<button class="menu-btn"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
+<button class="menu-btn"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
+<button class="menu-btn"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
+<button class="menu-btn"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
+<button class="menu-btn"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
 
 <div class="bottom">
 
-<button class="small-btn">
-🏆 High Scores
-</button>
-
-<button class="small-btn">
-📊 My Stats
-</button>
-
-<button class="small-btn">
-ℹ️ About
-</button>
+<button class="small-btn">🏆 High Scores</button>
+<button class="small-btn">📊 My Stats</button>
+<button class="small-btn">ℹ️ About</button>
 
 </div>
 
