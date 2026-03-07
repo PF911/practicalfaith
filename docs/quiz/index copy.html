@@ -24,11 +24,9 @@ body{
   justify-content:center;
 
   background:
-    url("orange_texture_noise.png"),
     radial-gradient(circle at 50% 10%, rgba(255,236,160,.7), rgba(255,236,160,0) 35%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 2px, transparent 2px, transparent 6px),
     linear-gradient(180deg, var(--orange1), var(--orange2), var(--orange3));
-
-  background-size:300px, auto, auto;
 
   min-height:100vh;
 }
@@ -179,12 +177,10 @@ body{
 </div>
 
 <script>
-
 document.getElementById("startBtn").onclick=()=>{
 document.getElementById("splash").classList.remove("active")
 document.getElementById("menu").classList.add("active")
 }
-
 </script>
 
 </body>
