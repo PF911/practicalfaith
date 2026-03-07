@@ -231,10 +231,11 @@ body{
 }
 
 .feedback{
-  min-height:34px;
+  min-height:42px;
   font-size:22px;
   font-weight:900;
   margin-top:12px;
+  line-height:1.2;
 }
 
 .feedback.correct{
@@ -469,17 +470,52 @@ const quizzes = {
   }
 };
 
+const correctMessages = [
+  "Whoa, nice!",
+  "Great job!",
+  "Excellent!",
+  "You got it!",
+  "Well done!",
+  "Nice one!"
+];
+
+const incorrectMessages = [
+  "Ooh, I'm sorry, that's incorrect.",
+  "Close, but that's not right.",
+  "Not quite.",
+  "Good try, but that's incorrect.",
+  "Almost!",
+  "That's not the right answer."
+];
+
 let currentCategory = '';
 let currentLevel = '';
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let answered = false;
+let correctStreak = 0;
 
 function showScreen(screenId){
   const screens = document.querySelectorAll('.screen');
   screens.forEach(screen => screen.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
+}
+
+function randomFrom(list){
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+function correctFeedbackMessage(){
+  if(correctStreak >= 5) return "You're on fire!";
+  if(correctStreak === 4) return "Impressive streak!";
+  if(correctStreak === 3) return "Wow! You're on a roll!";
+  if(correctStreak === 2) return "Nice! You're getting warmed up!";
+  return randomFrom(correctMessages);
+}
+
+function incorrectFeedbackMessage(){
+  return randomFrom(incorrectMessages);
 }
 
 document.getElementById('startBtn').onclick = () => {
@@ -497,6 +533,7 @@ function selectLevel(level){
   currentQuestions = quizzes[currentCategory][currentLevel];
   currentQuestionIndex = 0;
   score = 0;
+  correctStreak = 0;
   loadQuestion();
   showScreen('quizScreen');
 }
@@ -538,11 +575,13 @@ function submitAnswer(index){
 
   if(index === q.correct){
     score++;
-    feedback.textContent = 'Correct!';
+    correctStreak++;
+    feedback.textContent = correctFeedbackMessage();
     feedback.classList.add('correct');
   } else {
+    correctStreak = 0;
     buttons[index].classList.add('wrong');
-    feedback.textContent = 'Incorrect';
+    feedback.textContent = incorrectFeedbackMessage();
     feedback.classList.add('wrong');
   }
 
@@ -579,6 +618,7 @@ function scoreText(score, total){
 function restartLevel(){
   currentQuestionIndex = 0;
   score = 0;
+  correctStreak = 0;
   loadQuestion();
   showScreen('quizScreen');
 }

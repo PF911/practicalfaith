@@ -5,310 +5,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bible Quiz Challenge</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
-
 <style>
-
-:root{
-  --purple:#6b2fbd;
-  --blue:#3f6fb4;
-  --orange1:#ffcf6e;
-  --orange2:#f39a3e;
-  --orange3:#e98026;
-  --green:#3e9b4f;
-  --red:#c84545;
-}
-
-body{
-  margin:0;
-  font-family:'Nunito', Arial, sans-serif;
-  display:flex;
-  justify-content:center;
-  background:linear-gradient(180deg,var(--orange1),var(--orange2),var(--orange3));
-  min-height:100vh;
-}
-
-.app{
-  position:relative;
-  width:100%;
-  max-width:430px;
-  min-height:100vh;
-  text-align:center;
-  padding:28px 20px 20px;
-  box-sizing:border-box;
-}
-
-.title{
-  font-family:'Fredoka One','Arial Black',sans-serif;
-  color:var(--purple);
-  line-height:1;
-  margin:0;
-  font-size:60px;
-  letter-spacing:1px;
-  text-shadow:2px 2px 4px rgba(0,0,0,.35);
-}
-
-.subtitle{
-  font-family:'Fredoka One','Arial Black',sans-serif;
-  font-size:28px;
-  color:var(--purple);
-  margin:8px 0 0;
-}
-
-.subline{
-  font-size:22px;
-  color:var(--purple);
-  font-weight:900;
-  margin:10px 0 0;
-  text-shadow:2px 2px 4px rgba(0,0,0,.35);
-}
-
-.hero{
-  margin-top:10px;
-}
-
-.hero img{
-  width:340px;
-  max-width:100%;
-  margin-bottom:-10px;
-}
-
-.primary-btn{
-  background:var(--blue);
-  color:white;
-  border:none;
-  font-family:'Fredoka One', Arial, sans-serif;
-  font-size:22px;
-  padding:18px 28px;
-  border-radius:40px;
-  cursor:pointer;
-  width:80%;
-  max-width:300px;
-  box-shadow:0 4px 14px rgba(0,0,0,.2);
-  margin-top:4px;
-}
-
-.screen{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  opacity:0;
-  visibility:hidden;
-  transition:opacity .4s ease;
-}
-
-.screen.active{
-  opacity:1;
-  visibility:visible;
-}
-
-.menu-btn{
-  width:90%;
-  max-width:350px;
-  margin:12px auto;
-  padding:18px;
-  border-radius:18px;
-  border:3px solid var(--purple);
-  background:#eee;
-  font-size:20px;
-  font-weight:bold;
-  color:var(--purple);
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap:14px;
-  cursor:pointer;
-}
-
-.menu-icon{
-  width:52px;
-  height:52px;
-  object-fit:contain;
-  flex-shrink:0;
-  display:block;
-}
-
-.bottom{
-  margin-top:20px;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.small-btn{
-  flex:1;
-  padding:10px 18px;
-  height:50px;
-  border-radius:16px;
-  border:3px solid var(--purple);
-  background:#eee;
-  color:var(--purple);
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:6px;
-}
-
-.level-subtitle{
-  min-height:34px;
-}
-
-.level-note{
-  color:var(--purple);
-  font-size:18px;
-  font-weight:700;
-  margin:8px 0 14px;
-}
-
-.back-row{
-  width:90%;
-  max-width:350px;
-  margin:20px auto 0;
-}
-
-.back-row .small-btn{
-  width:100%;
-}
-
-.quiz-card{
-  width:90%;
-  max-width:350px;
-  margin:14px auto 0;
-  padding:18px 16px;
-  border-radius:20px;
-  border:3px solid var(--purple);
-  background:#eee;
-  color:var(--purple);
-  box-sizing:border-box;
-}
-
-.quiz-meta{
-  font-size:16px;
-  font-weight:900;
-  margin-bottom:12px;
-}
-
-.question-text{
-  font-size:26px;
-  font-weight:900;
-  line-height:1.2;
-  margin:6px 0 10px;
-}
-
-.answer-btn{
-  width:100%;
-  margin:10px 0;
-  padding:14px 16px;
-  border-radius:16px;
-  border:3px solid var(--purple);
-  background:#fff;
-  color:var(--purple);
-  font-size:19px;
-  font-weight:800;
-  text-align:left;
-  cursor:pointer;
-}
-
-.answer-btn.correct{
-  background:#dff3e3;
-  border-color:var(--green);
-  color:#1f6f31;
-}
-
-.answer-btn.wrong{
-  background:#f9dede;
-  border-color:var(--red);
-  color:#8b2323;
-}
-
-.answer-btn:disabled{
-  cursor:default;
-}
-
-.feedback{
-  min-height:42px;
-  font-size:22px;
-  font-weight:900;
-  margin-top:12px;
-  line-height:1.2;
-}
-
-.feedback.correct{
-  color:var(--green);
-}
-
-.feedback.wrong{
-  color:var(--red);
-}
-
-.quiz-next{
-  margin-top:14px;
-}
-
-.score-big{
-  font-size:36px;
-  color:var(--purple);
-  font-weight:900;
-  margin:14px 0 6px;
-}
-
-.score-sub{
-  color:var(--purple);
-  font-size:22px;
-  font-weight:800;
-  margin:0 0 16px;
-}
-
-.result-actions{
-  width:90%;
-  max-width:350px;
-  margin:16px auto 0;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.result-actions .small-btn{
-  width:100%;
-  height:54px;
-}
-
+:root{--purple:#6b2fbd;--blue:#3f6fb4;--orange1:#ffcf6e;--orange2:#f39a3e;--orange3:#e98026;--green:#3e9b4f;--red:#c84545;}
+body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content:center;background:linear-gradient(180deg,var(--orange1),var(--orange2),var(--orange3));min-height:100vh;}
+.app{position:relative;width:100%;max-width:430px;min-height:100vh;text-align:center;padding:28px 20px 20px;box-sizing:border-box;}
+.title{font-family:'Fredoka One','Arial Black',sans-serif;color:var(--purple);line-height:1;margin:0;font-size:60px;letter-spacing:1px;text-shadow:2px 2px 4px rgba(0,0,0,.35);}
+.subtitle{font-family:'Fredoka One','Arial Black',sans-serif;font-size:28px;color:var(--purple);margin:8px 0 0;}
+.subline{font-size:22px;color:var(--purple);font-weight:900;margin:10px 0 0;text-shadow:2px 2px 4px rgba(0,0,0,.35);}
+.hero{margin-top:10px;}
+.hero img{width:340px;max-width:100%;margin-bottom:-10px;}
+.primary-btn{background:var(--blue);color:white;border:none;font-family:'Fredoka One',Arial,sans-serif;font-size:22px;padding:18px 28px;border-radius:40px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.2);margin-top:4px;}
+.screen{position:absolute;top:0;left:0;width:100%;opacity:0;visibility:hidden;transition:opacity .4s ease;}
+.screen.active{opacity:1;visibility:visible;}
+.menu-btn{width:90%;max-width:350px;margin:12px auto;padding:18px;border-radius:18px;border:3px solid var(--purple);background:#eee;font-size:20px;font-weight:bold;color:var(--purple);display:flex;align-items:center;justify-content:flex-start;gap:14px;cursor:pointer;}
+.menu-icon{width:52px;height:52px;object-fit:contain;flex-shrink:0;display:block;}
+.bottom{margin-top:20px;display:flex;justify-content:space-between;gap:10px;}
+.small-btn{flex:1;padding:10px 18px;height:50px;border-radius:16px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-weight:bold;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
+.level-subtitle{min-height:34px;}
+.level-note{color:var(--purple);font-size:18px;font-weight:700;margin:8px 0 14px;}
+.back-row{width:90%;max-width:350px;margin:20px auto 0;}
+.back-row .small-btn{width:100%;}
+.quiz-card{width:90%;max-width:350px;margin:14px auto 0;padding:18px 16px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);box-sizing:border-box;}
+.quiz-meta{font-size:16px;font-weight:900;margin-bottom:12px;}
+.question-text{font-size:26px;font-weight:900;line-height:1.2;margin:6px 0 10px;}
+.answer-btn{width:100%;margin:10px 0;padding:14px 16px;border-radius:16px;border:3px solid var(--purple);background:#fff;color:var(--purple);font-size:19px;font-weight:800;text-align:left;cursor:pointer;}
+.answer-btn.correct{background:#dff3e3;border-color:var(--green);color:#1f6f31;}
+.answer-btn.wrong{background:#f9dede;border-color:var(--red);color:#8b2323;}
+.answer-btn:disabled{cursor:default;}
+.feedback{min-height:42px;font-size:22px;font-weight:900;margin-top:12px;line-height:1.2;}
+.feedback.correct{color:var(--green);}
+.feedback.wrong{color:var(--red);}
+.quiz-next{margin-top:14px;}
+.score-big{font-size:36px;color:var(--purple);font-weight:900;margin:14px 0 6px;}
+.score-sub{color:var(--purple);font-size:22px;font-weight:800;margin:0 0 16px;}
+.result-actions{width:90%;max-width:350px;margin:16px auto 0;display:flex;flex-direction:column;gap:12px;}
+.result-actions .small-btn{width:100%;height:54px;}
 </style>
 </head>
-
 <body>
-
 <div class="app">
-
 <section id="splash" class="screen active">
   <h1 class="title">Bible Quiz<br>Challenge</h1>
   <div class="subtitle">1001 Questions</div>
   <div class="subline">Test Your Bible Knowledge</div>
-
-  <div class="hero">
-    <div align="left">
-      <img src="images/splash.png" width="250">
-    </div>
-  </div>
-
+  <div class="hero"><div align="left"><img src="images/splash.png" width="250"></div></div>
   <button id="startBtn" class="primary-btn">Start Quiz</button>
 </section>
 
 <section id="menu" class="screen">
   <h1 class="title">Bible Quiz<br>Challenge</h1>
   <div class="subtitle">Choose Your Challenge</div>
-
   <button class="menu-btn" onclick="openLevelMenu('General Bible Trivia')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
   <button class="menu-btn" onclick="openLevelMenu('Who said it?')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
   <button class="menu-btn" onclick="openLevelMenu('Bible Timeline')"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
   <button class="menu-btn" onclick="openLevelMenu('Finish the Verse')"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
   <button class="menu-btn" onclick="openLevelMenu('Prophecy Quiz')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
-
   <div class="bottom">
     <button class="small-btn">🏆 High Scores</button>
     <button class="small-btn">📊 My Stats</button>
@@ -318,66 +70,50 @@ body{
 
 <section id="levelMenu" class="screen">
   <h1 class="title">Bible Quiz<br>Challenge</h1>
-
   <div id="levelCategory" class="subtitle level-subtitle"></div>
   <div class="subline">Choose Your Level</div>
   <div class="level-note">Start where you feel comfortable</div>
-
   <button class="menu-btn" onclick="selectLevel('Beginner')"><img src="images/chick.png" class="menu-icon"> <span>Beginner</span></button>
   <button class="menu-btn" onclick="selectLevel('Student')"><img src="images/book.png" class="menu-icon"> <span>Student</span></button>
   <button class="menu-btn" onclick="selectLevel('Scholar')"><img src="images/cap2.png" class="menu-icon"> <span>Scholar</span></button>
-
-  <div class="back-row">
-    <button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button>
-  </div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
 </section>
 
 <section id="quizScreen" class="screen">
   <h1 class="title">Bible Quiz<br>Challenge</h1>
   <div id="quizCategory" class="subtitle level-subtitle"></div>
   <div id="quizLevel" class="level-note"></div>
-
   <div class="quiz-card">
     <div id="quizMeta" class="quiz-meta"></div>
     <div id="questionText" class="question-text"></div>
-
     <button class="answer-btn" id="answer0" onclick="submitAnswer(0)"></button>
     <button class="answer-btn" id="answer1" onclick="submitAnswer(1)"></button>
     <button class="answer-btn" id="answer2" onclick="submitAnswer(2)"></button>
     <button class="answer-btn" id="answer3" onclick="submitAnswer(3)"></button>
-
     <div id="feedback" class="feedback"></div>
-
     <button id="nextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextQuestion()">Next Question</button>
   </div>
-
-  <div class="back-row">
-    <button class="small-btn" onclick="showScreen('levelMenu')">← Back to Levels</button>
-  </div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('levelMenu')">← Back to Levels</button></div>
 </section>
 
 <section id="resultScreen" class="screen">
   <h1 class="title">Bible Quiz<br>Challenge</h1>
   <div id="resultCategory" class="subtitle level-subtitle"></div>
   <div id="resultLevel" class="level-note"></div>
-
   <div class="quiz-card">
     <div class="subline" style="margin-top:0;">Quiz Complete</div>
     <div id="scoreBig" class="score-big"></div>
     <div id="scoreSub" class="score-sub"></div>
   </div>
-
   <div class="result-actions">
     <button class="small-btn" onclick="restartLevel()">🔁 Play This Level Again</button>
     <button class="small-btn" onclick="showScreen('levelMenu')">📚 Choose Another Level</button>
     <button class="small-btn" onclick="showScreen('menu')">🏠 Back to Menu</button>
   </div>
 </section>
-
 </div>
 
 <script>
-
 const quizzes = {
   "General Bible Trivia": {
     "Beginner": [
@@ -396,25 +132,23 @@ const quizzes = {
       { question: "Who interpreted the handwriting on the wall for Belshazzar?", answers: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"], correct: 3 }
     ]
   },
-
   "Who said it?": {
     "Beginner": [
-      { question: "Who said, \"Let my people go\"?", answers: ["Moses", "Aaron", "Pharaoh", "Joshua"], correct: 0 },
-      { question: "Who said, \"Speak, Lord, for your servant is listening\"?", answers: ["Samuel", "David", "Solomon", "Isaiah"], correct: 0 },
-      { question: "Who said, \"Am I my brother's keeper?\"?", answers: ["Esau", "Cain", "Jacob", "Saul"], correct: 1 }
+      { question: 'Who said, "Let my people go"?', answers: ["Moses", "Aaron", "Pharaoh", "Joshua"], correct: 0 },
+      { question: 'Who said, "Speak, Lord, for your servant is listening"?', answers: ["Samuel", "David", "Solomon", "Isaiah"], correct: 0 },
+      { question: 'Who said, "Am I my brother\'s keeper?"', answers: ["Esau", "Cain", "Jacob", "Saul"], correct: 1 }
     ],
     "Student": [
-      { question: "Who said, \"Choose this day whom you will serve\"?", answers: ["Joshua", "Moses", "Elijah", "Peter"], correct: 0 },
-      { question: "Who said, \"Here am I; send me\"?", answers: ["Jeremiah", "Ezekiel", "Isaiah", "Samuel"], correct: 2 },
-      { question: "Who said, \"As for me and my house, we will serve the Lord\"?", answers: ["David", "Joshua", "Nehemiah", "Abraham"], correct: 1 }
+      { question: 'Who said, "Choose this day whom you will serve"?', answers: ["Joshua", "Moses", "Elijah", "Peter"], correct: 0 },
+      { question: 'Who said, "Here am I; send me"?', answers: ["Jeremiah", "Ezekiel", "Isaiah", "Samuel"], correct: 2 },
+      { question: 'Who said, "As for me and my house, we will serve the Lord"?', answers: ["David", "Joshua", "Nehemiah", "Abraham"], correct: 1 }
     ],
     "Scholar": [
-      { question: "Who said, \"Though he slay me, yet will I trust in him\"?", answers: ["David", "Job", "Jeremiah", "Paul"], correct: 1 },
-      { question: "Who said, \"I know that my redeemer lives\"?", answers: ["Isaiah", "Daniel", "Job", "Thomas"], correct: 2 },
-      { question: "Who said, \"Whom shall I send, and who will go for us?\"?", answers: ["The Lord", "Moses", "Isaiah", "Gabriel"], correct: 0 }
+      { question: 'Who said, "Though he slay me, yet will I trust in him"?', answers: ["David", "Job", "Jeremiah", "Paul"], correct: 1 },
+      { question: 'Who said, "I know that my redeemer lives"?', answers: ["Isaiah", "Daniel", "Job", "Thomas"], correct: 2 },
+      { question: 'Who said, "Whom shall I send, and who will go for us?"', answers: ["The Lord", "Moses", "Isaiah", "Gabriel"], correct: 0 }
     ]
   },
-
   "Bible Timeline": {
     "Beginner": [
       { question: "Which came first?", answers: ["The Flood", "Creation", "Exodus", "David becomes king"], correct: 1 },
@@ -432,25 +166,23 @@ const quizzes = {
       { question: "Which came before the rebuilding of Jerusalem's walls?", answers: ["Nehemiah", "Ezra's return", "Pentecost", "John the Baptist"], correct: 1 }
     ]
   },
-
   "Finish the Verse": {
     "Beginner": [
-      { question: "Finish the verse: \"The Lord is my shepherd; ____.\"", answers: ["I shall not want", "He is my rock", "I will fear no evil", "His mercy endures"], correct: 0 },
-      { question: "Finish the verse: \"In the beginning God created the ____ and the earth.\"", answers: ["light", "heavens", "angels", "sea"], correct: 1 },
-      { question: "Finish the verse: \"Jesus wept.\" This verse is found in:", answers: ["John 11:35", "Matthew 5:9", "Luke 2:10", "Psalm 23:1"], correct: 0 }
+      { question: 'Finish the verse: "The Lord is my shepherd; ____."', answers: ["I shall not want", "He is my rock", "I will fear no evil", "His mercy endures"], correct: 0 },
+      { question: 'Finish the verse: "In the beginning God created the ____ and the earth."', answers: ["light", "heavens", "angels", "sea"], correct: 1 },
+      { question: 'Finish the verse: "Jesus wept." This verse is found in:', answers: ["John 11:35", "Matthew 5:9", "Luke 2:10", "Psalm 23:1"], correct: 0 }
     ],
     "Student": [
-      { question: "Finish the verse: \"For all have sinned and fall short of the ____ of God.\"", answers: ["truth", "grace", "law", "glory"], correct: 3 },
-      { question: "Finish the verse: \"Trust in the Lord with all thine heart; and lean not unto thine own ____.\"", answers: ["strength", "understanding", "wisdom", "way"], correct: 1 },
-      { question: "Finish the verse: \"Thy word is a lamp unto my feet, and a ____ unto my path.\"", answers: ["light", "sword", "shield", "guide"], correct: 0 }
+      { question: 'Finish the verse: "For all have sinned and fall short of the ____ of God."', answers: ["truth", "grace", "law", "glory"], correct: 3 },
+      { question: 'Finish the verse: "Trust in the Lord with all thine heart; and lean not unto thine own ____."', answers: ["strength", "understanding", "wisdom", "way"], correct: 1 },
+      { question: 'Finish the verse: "Thy word is a lamp unto my feet, and a ____ unto my path."', answers: ["light", "sword", "shield", "guide"], correct: 0 }
     ],
     "Scholar": [
-      { question: "Finish the verse: \"Man shall not live by bread alone, but by every word that proceeds out of the mouth of ____.\"", answers: ["the prophets", "God", "Moses", "the Lord of hosts"], correct: 1 },
-      { question: "Finish the verse: \"The just shall live by ____.\"", answers: ["works", "grace", "faith", "hope"], correct: 2 },
-      { question: "Finish the verse: \"Be ye doers of the word, and not hearers only, deceiving your own ____.\"", answers: ["hearts", "selves", "minds", "souls"], correct: 1 }
+      { question: 'Finish the verse: "Man shall not live by bread alone, but by every word that proceeds out of the mouth of ____."', answers: ["the prophets", "God", "Moses", "the Lord of hosts"], correct: 1 },
+      { question: 'Finish the verse: "The just shall live by ____."', answers: ["works", "grace", "faith", "hope"], correct: 2 },
+      { question: 'Finish the verse: "Be ye doers of the word, and not hearers only, deceiving your own ____."', answers: ["hearts", "selves", "minds", "souls"], correct: 1 }
     ]
   },
-
   "Prophecy Quiz": {
     "Beginner": [
       { question: "Which prophet was swallowed by a great fish?", answers: ["Jonah", "Isaiah", "Elijah", "Amos"], correct: 0 },
@@ -460,33 +192,20 @@ const quizzes = {
     "Student": [
       { question: "Which prophet foretold the Messiah would be born in Bethlehem?", answers: ["Micah", "Nahum", "Obadiah", "Haggai"], correct: 0 },
       { question: "Which prophet saw a valley of dry bones?", answers: ["Isaiah", "Daniel", "Ezekiel", "Zechariah"], correct: 2 },
-      { question: "Which prophet declared, \"The just shall live by faith\"?", answers: ["Habakkuk", "Malachi", "Joel", "Zephaniah"], correct: 0 }
+      { question: 'Which prophet declared, "The just shall live by faith"?', answers: ["Habakkuk", "Malachi", "Joel", "Zephaniah"], correct: 0 }
     ],
     "Scholar": [
       { question: "Which prophet spoke of seventy weeks determined upon thy people?", answers: ["Isaiah", "Daniel", "Jeremiah", "Zechariah"], correct: 1 },
       { question: "Which prophet described the coming Messenger who would prepare the way?", answers: ["Malachi", "Amos", "Hosea", "Obadiah"], correct: 0 },
-      { question: "Which prophet said, \"They shall look upon me whom they have pierced\"?", answers: ["Zechariah", "Joel", "Isaiah", "Micah"], correct: 0 }
+      { question: 'Which prophet said, "They shall look upon me whom they have pierced"?', answers: ["Zechariah", "Joel", "Isaiah", "Micah"], correct: 0 }
     ]
   }
 };
 
-const correctMessages = [
-  "Whoa, nice!",
-  "Great job!",
-  "Excellent!",
-  "You got it!",
-  "Well done!",
-  "Nice one!"
-];
-
-const incorrectMessages = [
-  "Ooh, I'm sorry, that's incorrect.",
-  "Close, but that's not right.",
-  "Not quite.",
-  "Good try, but that's incorrect.",
-  "Almost!",
-  "That's not the right answer."
-];
+const correctMessages = ["Whoa, nice!","Great job!","Excellent!","You got it!","Well done!","Nice one!"];
+const incorrectMessages = ["Ooh, I'm sorry, that's incorrect.","Close, but that's not right.","Not quite.","Good try, but that's incorrect.","Almost!","That's not the right answer."];
+const tryAgainMessages = ["Close, but that's not right. Try again!","Not quite. Take one more shot!","Ooh, not that one. Try again!","Good try — give it one more go!","Almost! Try once more!"];
+const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the second try!","Well done — you found it!","There you go!"];
 
 let currentCategory = '';
 let currentLevel = '';
@@ -495,32 +214,26 @@ let currentQuestionIndex = 0;
 let score = 0;
 let answered = false;
 let correctStreak = 0;
+let attemptsThisQuestion = 0;
 
 function showScreen(screenId){
   const screens = document.querySelectorAll('.screen');
   screens.forEach(screen => screen.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
 }
-
-function randomFrom(list){
-  return list[Math.floor(Math.random() * list.length)];
-}
-
+function randomFrom(list){ return list[Math.floor(Math.random()*list.length)]; }
 function correctFeedbackMessage(){
+  if(attemptsThisQuestion === 2) return randomFrom(recoveryMessages);
   if(correctStreak >= 5) return "You're on fire!";
   if(correctStreak === 4) return "Impressive streak!";
   if(correctStreak === 3) return "Wow! You're on a roll!";
   if(correctStreak === 2) return "Nice! You're getting warmed up!";
   return randomFrom(correctMessages);
 }
+function incorrectFeedbackMessage(){ return randomFrom(incorrectMessages); }
+function tryAgainFeedbackMessage(){ return randomFrom(tryAgainMessages); }
 
-function incorrectFeedbackMessage(){
-  return randomFrom(incorrectMessages);
-}
-
-document.getElementById('startBtn').onclick = () => {
-  showScreen('menu');
-};
+document.getElementById('startBtn').onclick = () => showScreen('menu');
 
 function openLevelMenu(category){
   currentCategory = category;
@@ -540,14 +253,14 @@ function selectLevel(level){
 
 function loadQuestion(){
   answered = false;
+  attemptsThisQuestion = 0;
   const q = currentQuestions[currentQuestionIndex];
-
   document.getElementById('quizCategory').textContent = currentCategory;
   document.getElementById('quizLevel').textContent = currentLevel;
   document.getElementById('quizMeta').textContent = 'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
   document.getElementById('questionText').textContent = q.question;
 
-  const labels = ['A)', 'B)', 'C)', 'D)'];
+  const labels = ['A)','B)','C)','D)'];
   q.answers.forEach((answer, index) => {
     const btn = document.getElementById('answer' + index);
     btn.textContent = labels[index] + ' ' + answer;
@@ -564,27 +277,41 @@ function loadQuestion(){
 function submitAnswer(index){
   if(answered) return;
 
-  answered = true;
+  attemptsThisQuestion++;
   const q = currentQuestions[currentQuestionIndex];
   const buttons = document.querySelectorAll('.answer-btn');
-
-  buttons.forEach(btn => btn.disabled = true);
-  buttons[q.correct].classList.add('correct');
-
   const feedback = document.getElementById('feedback');
 
   if(index === q.correct){
+    answered = true;
     score++;
     correctStreak++;
+    buttons.forEach(btn => btn.disabled = true);
+    buttons[q.correct].classList.add('correct');
     feedback.textContent = correctFeedbackMessage();
-    feedback.classList.add('correct');
-  } else {
-    correctStreak = 0;
-    buttons[index].classList.add('wrong');
-    feedback.textContent = incorrectFeedbackMessage();
-    feedback.classList.add('wrong');
+    feedback.className = 'feedback correct';
+    const nextBtn = document.getElementById('nextBtn');
+    nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
+    nextBtn.style.display = 'flex';
+    return;
   }
 
+  buttons[index].classList.add('wrong');
+  buttons[index].disabled = true;
+
+  if(attemptsThisQuestion === 1){
+    correctStreak = 0;
+    feedback.textContent = tryAgainFeedbackMessage();
+    feedback.className = 'feedback wrong';
+    return;
+  }
+
+  answered = true;
+  correctStreak = 0;
+  buttons[q.correct].classList.add('correct');
+  buttons.forEach(btn => btn.disabled = true);
+  feedback.textContent = incorrectFeedbackMessage();
+  feedback.className = 'feedback wrong';
   const nextBtn = document.getElementById('nextBtn');
   nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
   nextBtn.style.display = 'flex';
@@ -592,12 +319,8 @@ function submitAnswer(index){
 
 function nextQuestion(){
   currentQuestionIndex++;
-
-  if(currentQuestionIndex < currentQuestions.length){
-    loadQuestion();
-  } else {
-    showResults();
-  }
+  if(currentQuestionIndex < currentQuestions.length) loadQuestion();
+  else showResults();
 }
 
 function showResults(){
@@ -607,14 +330,12 @@ function showResults(){
   document.getElementById('scoreSub').textContent = scoreText(score, currentQuestions.length);
   showScreen('resultScreen');
 }
-
 function scoreText(score, total){
   if(score === total) return 'Perfect score!';
   if(score >= total - 1) return 'Excellent work!';
   if(score >= Math.ceil(total / 2)) return 'Nice job!';
   return 'Good start — try again!';
 }
-
 function restartLevel(){
   currentQuestionIndex = 0;
   score = 0;
@@ -622,8 +343,6 @@ function restartLevel(){
   loadQuestion();
   showScreen('quizScreen');
 }
-
 </script>
-
 </body>
 </html>
