@@ -233,6 +233,33 @@ function showScreen(screenId){
 
 function randomFrom(list){ return list[Math.floor(Math.random()*list.length)]; }
 
+function shuffleArray(array){
+  const copy = [...array];
+  for(let i = copy.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function prepareQuestion(questionObj){
+  const answers = questionObj.answers.map((answer, index) => ({
+    text: answer,
+    isCorrect: index === questionObj.correct
+  }));
+
+  const shuffledAnswers = shuffleArray(answers);
+  const newCorrectIndex = shuffledAnswers.findIndex(answer => answer.isCorrect);
+
+  return {
+    question: questionObj.question,
+    answers: shuffledAnswers.map(answer => answer.text),
+    correct: newCorrectIndex,
+    verse: questionObj.verse,
+    verseText: questionObj.verseText
+  };
+}
+
 function correctFeedbackMessage(){
   if(attemptsThisQuestion === 2) return randomFrom(recoveryMessages);
   if(correctStreak >= 5) return "You're on fire!";
@@ -255,7 +282,8 @@ function openLevelMenu(category){
 
 function selectLevel(level){
   currentLevel = level;
-  currentQuestions = quizzes[currentCategory][currentLevel];
+  const sourceQuestions = quizzes[currentCategory][currentLevel];
+  currentQuestions = shuffleArray(sourceQuestions).map(prepareQuestion);
   currentQuestionIndex = 0;
   score = 0;
   correctStreak = 0;
@@ -366,6 +394,8 @@ function restartLevel(){
   currentQuestionIndex = 0;
   score = 0;
   correctStreak = 0;
+  const sourceQuestions = quizzes[currentCategory][currentLevel];
+  currentQuestions = shuffleArray(sourceQuestions).map(prepareQuestion);
   loadQuestion();
   showScreen('quizScreen');
 }
