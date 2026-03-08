@@ -1,8 +1,9 @@
-
 const correctMessages = ["Whoa, nice!","Great job!","Excellent!","You got it!","Well done!","Nice one!"];
 const incorrectMessages = ["Ooh, I'm sorry, that's incorrect.","Close, but that's not right.","Not quite.","Good try, but that's incorrect.","Almost!","That's not the right answer."];
 const tryAgainMessages = ["Close, but that's not right. Try again!","Not quite. Take one more shot!","Ooh, not that one. Try again!","Good try — give it one more go!","Almost! Try once more!"];
 const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the second try!","Well done — you found it!","There you go!"];
+
+const QUESTIONS_PER_ROUND = 10;
 
 let currentCategory = '';
 let currentLevel = '';
@@ -14,8 +15,7 @@ let correctStreak = 0;
 let attemptsThisQuestion = 0;
 
 function showScreen(screenId){
-  const screens = document.querySelectorAll('.screen');
-  screens.forEach(screen => screen.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
 }
 
@@ -46,10 +46,11 @@ function prepareQuestion(questionObj){
     answers: shuffledAnswers.map(answer => answer.text),
     correct: newCorrectIndex,
     verse: questionObj.reference,
-    verseText: "",
+    verseText: questionObj.verseText || "",
     category: questionObj.category,
     difficulty: questionObj.difficulty,
-    testament: questionObj.testament
+    testament: questionObj.testament,
+    game: questionObj.game
   };
 }
 
@@ -70,7 +71,12 @@ function tryAgainFeedbackMessage(){
   return randomFrom(tryAgainMessages);
 }
 
-document.getElementById('startBtn').onclick = () => showScreen('menu');
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('startBtn');
+  if (startBtn) {
+    startBtn.onclick = () => showScreen('menu');
+  }
+});
 
 function openLevelMenu(category){
   currentCategory = category;
@@ -78,12 +84,21 @@ function openLevelMenu(category){
   showScreen('levelMenu');
 }
 
+function getFilteredQuestions(category, level){
+  const filtered = quizQuestions.filter(q => q.game === category && q.difficulty === level);
+  const shuffled = shuffleArray(filtered);
+  const selected = shuffled.slice(0, Math.min(QUESTIONS_PER_ROUND, shuffled.length));
+  return selected.map(prepareQuestion);
+}
+
 function selectLevel(level){
   currentLevel = level;
+  currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
 
-  currentQuestions = shuffleArray(
-    quizQuestions.filter(q => q.difficulty === currentLevel)
-  ).map(prepareQuestion);
+  if(currentQuestions.length === 0){
+    alert('No questions loaded yet for ' + currentCategory + ' / ' + currentLevel + '.');
+    return;
+  }
 
   currentQuestionIndex = 0;
   score = 0;
@@ -101,6 +116,13 @@ function loadQuestion(){
   document.getElementById('quizCategory').textContent = currentCategory;
   document.getElementById('quizLevel').textContent = currentLevel;
   document.getElementById('quizMeta').textContent = 'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
+
+  const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+  const progressFill = document.getElementById('progressFill');
+  if(progressFill){
+    progressFill.style.width = progress + '%';
+  }
+
   document.getElementById('questionText').textContent = q.question;
 
   const labels = ['A)','B)','C)','D)'];
@@ -189,21 +211,31 @@ function showResults(){
 }
 
 function scoreText(score, total){
-  if(score === total) return 'Perfect score!';
-  if(score >= total - 1) return 'Excellent work!';
-  if(score >= Math.ceil(total / 2)) return 'Nice job!';
-  return 'Good start — try again!';
+
+  if(score === total){
+    return "🏆 Bible Master!";
+  }
+
+  if(score >= total - 1){
+    return "⭐ Bible Scholar!";
+  }
+
+  if(score >= Math.ceil(total * 0.7)){
+    return "📘 Solid Student!";
+  }
+
+  if(score >= Math.ceil(total * 0.5)){
+    return "🌱 Getting Warmer!";
+  }
+
+  return "🔍 Keep Studying!";
 }
 
 function restartLevel(){
   currentQuestionIndex = 0;
   score = 0;
   correctStreak = 0;
-
-  currentQuestions = shuffleArray(
-    quizQuestions.filter(q => q.difficulty === currentLevel)
-  ).map(prepareQuestion);
-
+  currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
   loadQuestion();
   showScreen('quizScreen');
 }
