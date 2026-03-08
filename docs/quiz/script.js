@@ -3,7 +3,25 @@ const soundWrong = new Audio("sounds/wrong.wav");
 const soundStreak = new Audio("sounds/streak.wav");
 const soundFinish = new Audio("sounds/finish.wav");
 
+function soundEnabled(){
+  const saved = localStorage.getItem(SOUND_KEY);
+  return saved !== "false";
+}
+
+function updateSoundToggleUI(){
+  const btn = document.getElementById('soundToggleBtn');
+  if(!btn) return;
+  btn.textContent = soundEnabled() ? "🔊 Sound: On" : "🔇 Sound: Off";
+}
+
+function toggleSound(){
+  const nextValue = !soundEnabled();
+  localStorage.setItem(SOUND_KEY, nextValue ? "true" : "false");
+  updateSoundToggleUI();
+}
+
 function safePlay(audio){
+  if(!soundEnabled()) return;
   try{
     audio.currentTime = 0;
     const p = audio.play();
@@ -23,6 +41,8 @@ const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the seco
 const QUESTIONS_PER_ROUND = 10;
 const SAVE_KEY = "bibleQuizSavedGame";
 const STATS_KEY = "bibleQuizStats";
+const DAILY_STREAK_KEY = "bibleQuizDailyStreak";
+const SOUND_KEY = "bibleQuizSoundEnabled";
 
 let currentCategory = '';
 let currentLevel = '';
@@ -295,7 +315,8 @@ function applySavedUiState(saved){
   feedback.textContent = saved.feedbackText || '';
   feedback.className = saved.feedbackClass || 'feedback';
   verseRef.textContent = saved.verseRef || '';
-  verseText.textContent = saved.verseText || '';
+  verseText.textContent = saved.verseText ? 'Click to see the verse' : '';
+  verseText.className = saved.verseText ? 'verse-link' : 'verse-link hidden';
   nextBtn.textContent = saved.nextBtnText || 'Next Question';
   nextBtn.style.display = saved.nextBtnDisplay || 'none';
 }
@@ -319,6 +340,7 @@ function renderQuestion(){
   document.getElementById('feedback').className = 'feedback';
   document.getElementById('verseRef').textContent = '';
   document.getElementById('verseText').textContent = '';
+  document.getElementById('verseText').className = 'verse-link hidden';
   document.getElementById('nextBtn').style.display = 'none';
 
   const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
@@ -334,10 +356,43 @@ function loadQuestion(){
   saveProgress();
 }
 
+
+function openVerseModal(){
+  const verseLink = document.getElementById('verseText');
+  const overlay = document.getElementById('verseModal');
+  const ref = document.getElementById('modalVerseRef');
+  const text = document.getElementById('modalVerseText');
+
+  if(!verseLink || !overlay) return;
+  if(!verseLink.dataset.verseText) return;
+
+  ref.textContent = verseLink.dataset.verseRef || '';
+  text.textContent = verseLink.dataset.verseText || '';
+  overlay.classList.add('active');
+}
+
+function closeVerseModal(event){
+  if(event && event.target && !event.target.classList.contains('modal-overlay')) return;
+  const overlay = document.getElementById('verseModal');
+  if(overlay) overlay.classList.remove('active');
+}
+
 function showVerse(q, showCorrect){
   document.getElementById('verseRef').textContent =
     showCorrect ? ('Correct answer: ' + q.choices[q.answer] + ' — ' + q.reference) : q.reference;
-  document.getElementById('verseText').textContent = q.verseText || '';
+
+  const verseLink = document.getElementById('verseText');
+  if(q.verseText){
+    verseLink.textContent = 'Click to see the verse';
+    verseLink.className = 'verse-link';
+    verseLink.dataset.verseRef = q.reference || '';
+    verseLink.dataset.verseText = q.verseText || '';
+  } else {
+    verseLink.textContent = '';
+    verseLink.className = 'verse-link hidden';
+    verseLink.dataset.verseRef = '';
+    verseLink.dataset.verseText = '';
+  }
 }
 
 function openLevelMenu(category){
@@ -457,9 +512,21 @@ function nextQuestion(){
 }
 
 function showResults(){
+  const wasDailyChallenge = localStorage.getItem("dailyChallengeActive") === "true";
+
+  if(wasDailyChallenge){
+    finishDailyChallenge();
+  }
+
   playFinish();
   updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, bestStreakThisQuiz);
   clearSavedProgress();
+
+  if(wasDailyChallenge){
+    openDailyRewardScreen();
+    return;
+  }
+
   document.getElementById('resultCategory').textContent = currentCategory;
   document.getElementById('resultLevel').textContent = currentLevel;
   document.getElementById('scoreBig').textContent = score + ' / ' + currentQuestions.length;
@@ -486,6 +553,133 @@ function restartLevel(){
   showScreen('quizScreen');
 }
 
+
+function defaultDailyStreak(){
+  return {
+    streak: 0,
+    best: 0,
+    lastCompleted: ""
+  };
+}
+
+function loadDailyStreak(){
+  try{
+    const raw = localStorage.getItem(DAILY_STREAK_KEY);
+    if(!raw) return defaultDailyStreak();
+    return { ...defaultDailyStreak(), ...JSON.parse(raw) };
+  }catch(e){
+    return defaultDailyStreak();
+  }
+}
+
+function saveDailyStreak(data){
+  localStorage.setItem(DAILY_STREAK_KEY, JSON.stringify(data));
+}
+
+function getYesterdayKey(){
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+}
+
+function updateDailyStreakUI(){
+  const line = document.getElementById('dailyStreakLine');
+  if(!line) return;
+
+  const streakData = loadDailyStreak();
+  let text = "🔥 Daily Streak: " + streakData.streak;
+  if(streakData.best > 0){
+    text += "   •   Best: " + streakData.best;
+  }
+  line.textContent = text;
+}
+
+function recordDailyChallengeCompletion(){
+  const today = getTodayKey();
+  const yesterday = getYesterdayKey();
+  const streakData = loadDailyStreak();
+
+  if(streakData.lastCompleted === today){
+    return;
+  }
+
+  if(streakData.lastCompleted === yesterday){
+    streakData.streak += 1;
+  } else {
+    streakData.streak = 1;
+  }
+
+  if(streakData.streak > streakData.best){
+    streakData.best = streakData.streak;
+  }
+
+  streakData.lastCompleted = today;
+  saveDailyStreak(streakData);
+  updateDailyStreakUI();
+}
+
+
+
+
+function getDailyBadge(streak){
+  if(streak >= 30){
+    return {
+      title: "👑 Bible Champion",
+      note: "Thirty days strong. That is outstanding."
+    };
+  }
+
+  if(streak >= 7){
+    return {
+      title: "🏅 Faithful",
+      note: "A full week of steady faithfulness."
+    };
+  }
+
+  if(streak >= 3){
+    return {
+      title: "🔥 On Fire",
+      note: "Your daily rhythm is building strong momentum."
+    };
+  }
+
+  return {
+    title: "🌟 Starter",
+    note: "Every streak begins with one faithful day."
+  };
+}
+
+function openDailyRewardScreen(){
+  const streakData = loadDailyStreak();
+  const streakEl = document.getElementById('dailyRewardStreak');
+  const msgEl = document.getElementById('dailyRewardMessage');
+  const badgeEl = document.getElementById('dailyRewardBadge');
+  const badgeNoteEl = document.getElementById('dailyRewardBadgeNote');
+  const badge = getDailyBadge(streakData.streak);
+
+  if(streakEl){
+    streakEl.textContent = "🔥 Daily Streak: " + streakData.streak;
+  }
+
+  if(msgEl){
+    msgEl.textContent = streakData.streak > 1
+      ? "You completed today's Daily Challenge and kept your streak alive."
+      : "You completed today's Daily Challenge.";
+  }
+
+  if(badgeEl){
+    badgeEl.textContent = badge.title;
+  }
+
+  if(badgeNoteEl){
+    badgeNoteEl.textContent = badge.note;
+  }
+
+  showScreen('dailyRewardScreen');
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('startBtn');
   const resumeBtn = document.getElementById('resumeBtn');
@@ -494,4 +688,61 @@ document.addEventListener('DOMContentLoaded', () => {
   if(resumeBtn) resumeBtn.onclick = resumeLastQuiz;
 
   updateResumeUI();
+  updateDailyStreakUI();
+  updateSoundToggleUI();
 });
+
+// ===============================
+// DAILY CHALLENGE SYSTEM
+// ===============================
+
+function getTodayKey(){
+  const d = new Date();
+  return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+}
+
+function startDailyChallenge(){
+  const today = getTodayKey();
+  const completed = localStorage.getItem("dailyChallengeDate");
+
+  if(completed === today){
+    alert("You've already completed today's Daily Challenge. Come back tomorrow!");
+    return;
+  }
+
+  localStorage.setItem("dailyChallengeActive","true");
+  loadDailyQuestion();
+}
+
+function finishDailyChallenge(){
+  const today = getTodayKey();
+  localStorage.setItem("dailyChallengeDate", today);
+  localStorage.removeItem("dailyChallengeActive");
+  recordDailyChallengeCompletion();
+  alert("Nice work! You completed today's Daily Challenge.");
+}
+
+function loadDailyQuestion(){
+  if(!Array.isArray(quizQuestions) || quizQuestions.length === 0){
+    alert("No daily questions are available right now.");
+    return;
+  }
+
+  const today = new Date();
+  const dayIndex = Math.floor(today.getTime() / 86400000);
+  const index = dayIndex % quizQuestions.length;
+  const dailyQuestion = quizQuestions[index];
+
+  currentCategory = "Daily Challenge";
+  currentLevel = "Special";
+  currentQuestions = [dailyQuestion];
+  currentQuestionIndex = 0;
+  score = 0;
+  correctStreak = 0;
+  bestStreakThisQuiz = 0;
+  attemptsThisQuestion = 0;
+  disabledAnswers = [];
+
+  showScreen('quizScreen');
+  loadQuestion();
+}
