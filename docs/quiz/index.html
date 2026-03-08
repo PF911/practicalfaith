@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,14 +27,16 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content
 .back-row .small-btn{width:100%;}
 .quiz-card{width:90%;max-width:350px;margin:14px auto 0;padding:18px 16px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);box-sizing:border-box;}
 .quiz-meta{font-size:16px;font-weight:900;margin-bottom:12px;}
-.question-text{font-size:26px;font-weight:900;line-height:1.2;margin:6px 0 10px;}
-.answer-btn{width:100%;margin:10px 0;padding:14px 16px;border-radius:16px;border:3px solid var(--purple);background:#fff;color:var(--purple);font-size:19px;font-weight:800;text-align:left;cursor:pointer;}
+.question-text{font-size:24px;font-weight:900;line-height:1.2;margin:6px 0 10px;}
+.answer-btn{width:100%;margin:10px 0;padding:14px 16px;border-radius:16px;border:3px solid var(--purple);background:#fff;color:var(--purple);font-size:18px;font-weight:800;text-align:left;cursor:pointer;}
 .answer-btn.correct{background:#dff3e3;border-color:var(--green);color:#1f6f31;}
 .answer-btn.wrong{background:#f9dede;border-color:var(--red);color:#8b2323;}
 .answer-btn:disabled{cursor:default;}
-.feedback{min-height:42px;font-size:22px;font-weight:900;margin-top:12px;line-height:1.2;}
+.feedback{min-height:42px;font-size:21px;font-weight:900;margin-top:12px;line-height:1.2;}
 .feedback.correct{color:var(--green);}
 .feedback.wrong{color:var(--red);}
+.verse-ref{min-height:22px;font-size:15px;font-weight:800;margin-top:6px;color:var(--purple);}
+.verse-text{min-height:34px;font-size:14px;font-weight:700;line-height:1.3;margin-top:4px;color:var(--purple);font-style:italic;}
 .quiz-next{margin-top:14px;}
 .score-big{font-size:36px;color:var(--purple);font-weight:900;margin:14px 0 6px;}
 .score-sub{color:var(--purple);font-size:22px;font-weight:800;margin:0 0 16px;}
@@ -45,6 +46,7 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content
 </head>
 <body>
 <div class="app">
+
 <section id="splash" class="screen active">
   <h1 class="title">Bible Quiz<br>Challenge</h1>
   <div class="subtitle">1001 Questions</div>
@@ -91,6 +93,8 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content
     <button class="answer-btn" id="answer2" onclick="submitAnswer(2)"></button>
     <button class="answer-btn" id="answer3" onclick="submitAnswer(3)"></button>
     <div id="feedback" class="feedback"></div>
+    <div id="verseRef" class="verse-ref"></div>
+    <div id="verseText" class="verse-text"></div>
     <button id="nextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextQuestion()">Next Question</button>
   </div>
   <div class="back-row"><button class="small-btn" onclick="showScreen('levelMenu')">← Back to Levels</button></div>
@@ -111,93 +115,98 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content
     <button class="small-btn" onclick="showScreen('menu')">🏠 Back to Menu</button>
   </div>
 </section>
+
 </div>
 
 <script>
 const quizzes = {
   "General Bible Trivia": {
     "Beginner": [
-      { question: "Who built the ark?", answers: ["Noah", "Moses", "Abraham", "David"], correct: 0 },
-      { question: "Who was swallowed by a great fish?", answers: ["Jonah", "Peter", "Samuel", "Joseph"], correct: 0 },
-      { question: "Who killed Goliath?", answers: ["Solomon", "David", "Saul", "Elijah"], correct: 1 }
+      { question: "Who built the ark?", answers: ["Noah", "Moses", "Abraham", "David"], correct: 0, verse: "Genesis 6:14", verseText: "Make yourself an ark of gopher wood." },
+      { question: "Who was swallowed by a great fish?", answers: ["Jonah", "Peter", "Samuel", "Joseph"], correct: 0, verse: "Jonah 1:17", verseText: "The Lord had prepared a great fish to swallow Jonah." },
+      { question: "Who killed Goliath?", answers: ["Solomon", "David", "Saul", "Elijah"], correct: 1, verse: "1 Samuel 17:50", verseText: "David prevailed over the Philistine with a sling and a stone." }
     ],
     "Student": [
-      { question: "How many days and nights did it rain during the Flood?", answers: ["30", "40", "50", "70"], correct: 1 },
-      { question: "How many brothers did Joseph have?", answers: ["10", "11", "12", "13"], correct: 1 },
-      { question: "Who led Israel after Moses died?", answers: ["Caleb", "Aaron", "Joshua", "Samuel"], correct: 2 }
+      { question: "How many days and nights did it rain during the Flood?", answers: ["30", "40", "50", "70"], correct: 1, verse: "Genesis 7:12", verseText: "The rain was on the earth forty days and forty nights." },
+      { question: "How many brothers did Joseph have?", answers: ["10", "11", "12", "13"], correct: 1, verse: "Genesis 37:2", verseText: "Joseph... was feeding the flock with his brothers." },
+      { question: "Who led Israel after Moses died?", answers: ["Caleb", "Aaron", "Joshua", "Samuel"], correct: 2, verse: "Joshua 1:1-2", verseText: "Moses my servant is dead... arise, go over this Jordan." }
     ],
     "Scholar": [
-      { question: "How old was Noah when the floodwaters came upon the earth?", answers: ["500", "550", "600", "650"], correct: 2 },
-      { question: "On what mountain did the ark come to rest?", answers: ["Sinai", "Ararat", "Carmel", "Hermon"], correct: 1 },
-      { question: "Who interpreted the handwriting on the wall for Belshazzar?", answers: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"], correct: 3 }
+      { question: "How old was Noah when the floodwaters came upon the earth?", answers: ["500", "550", "600", "650"], correct: 2, verse: "Genesis 7:6", verseText: "Noah was six hundred years old when the floodwaters were on the earth." },
+      { question: "On what mountain did the ark come to rest?", answers: ["Sinai", "Ararat", "Carmel", "Hermon"], correct: 1, verse: "Genesis 8:4", verseText: "The ark rested... upon the mountains of Ararat." },
+      { question: "Who interpreted the handwriting on the wall for Belshazzar?", answers: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"], correct: 3, verse: "Daniel 5:25-28", verseText: "This is the inscription that was written: MENE, MENE, TEKEL, UPHARSIN." }
     ]
   },
+
   "Who said it?": {
     "Beginner": [
-      { question: 'Who said, "Let my people go"?', answers: ["Moses", "Aaron", "Pharaoh", "Joshua"], correct: 0 },
-      { question: 'Who said, "Speak, Lord, for your servant is listening"?', answers: ["Samuel", "David", "Solomon", "Isaiah"], correct: 0 },
-      { question: 'Who said, "Am I my brother\'s keeper?"', answers: ["Esau", "Cain", "Jacob", "Saul"], correct: 1 }
+      { question: 'Who said, "Let my people go"?', answers: ["Moses", "Aaron", "Pharaoh", "Joshua"], correct: 0, verse: "Exodus 5:1", verseText: "Thus says the Lord God of Israel: Let My people go." },
+      { question: 'Who said, "Speak, Lord, for your servant is listening"?', answers: ["Samuel", "David", "Solomon", "Isaiah"], correct: 0, verse: "1 Samuel 3:10", verseText: "Speak, for Your servant hears." },
+      { question: 'Who said, "Am I my brother\\'s keeper?"', answers: ["Esau", "Cain", "Jacob", "Saul"], correct: 1, verse: "Genesis 4:9", verseText: "I do not know. Am I my brother's keeper?" }
     ],
     "Student": [
-      { question: 'Who said, "Choose this day whom you will serve"?', answers: ["Joshua", "Moses", "Elijah", "Peter"], correct: 0 },
-      { question: 'Who said, "Here am I; send me"?', answers: ["Jeremiah", "Ezekiel", "Isaiah", "Samuel"], correct: 2 },
-      { question: 'Who said, "As for me and my house, we will serve the Lord"?', answers: ["David", "Joshua", "Nehemiah", "Abraham"], correct: 1 }
+      { question: 'Who said, "Choose this day whom you will serve"?', answers: ["Joshua", "Moses", "Elijah", "Peter"], correct: 0, verse: "Joshua 24:15", verseText: "Choose for yourselves this day whom you will serve." },
+      { question: 'Who said, "Here am I; send me"?', answers: ["Jeremiah", "Ezekiel", "Isaiah", "Samuel"], correct: 2, verse: "Isaiah 6:8", verseText: "Here am I! Send me." },
+      { question: 'Who said, "As for me and my house, we will serve the Lord"?', answers: ["David", "Joshua", "Nehemiah", "Abraham"], correct: 1, verse: "Joshua 24:15", verseText: "As for me and my house, we will serve the Lord." }
     ],
     "Scholar": [
-      { question: 'Who said, "Though he slay me, yet will I trust in him"?', answers: ["David", "Job", "Jeremiah", "Paul"], correct: 1 },
-      { question: 'Who said, "I know that my redeemer lives"?', answers: ["Isaiah", "Daniel", "Job", "Thomas"], correct: 2 },
-      { question: 'Who said, "Whom shall I send, and who will go for us?"', answers: ["The Lord", "Moses", "Isaiah", "Gabriel"], correct: 0 }
+      { question: 'Who said, "Though he slay me, yet will I trust in him"?', answers: ["David", "Job", "Jeremiah", "Paul"], correct: 1, verse: "Job 13:15", verseText: "Though He slay me, yet will I trust Him." },
+      { question: 'Who said, "I know that my redeemer lives"?', answers: ["Isaiah", "Daniel", "Job", "Thomas"], correct: 2, verse: "Job 19:25", verseText: "For I know that my Redeemer lives." },
+      { question: 'Who said, "Whom shall I send, and who will go for us?"', answers: ["The Lord", "Moses", "Isaiah", "Gabriel"], correct: 0, verse: "Isaiah 6:8", verseText: "Whom shall I send, and who will go for Us?" }
     ]
   },
+
   "Bible Timeline": {
     "Beginner": [
-      { question: "Which came first?", answers: ["The Flood", "Creation", "Exodus", "David becomes king"], correct: 1 },
-      { question: "Which happened after Moses led Israel out of Egypt?", answers: ["Jesus was born", "The Temple was built", "Israel crossed the Red Sea", "David fought Goliath"], correct: 2 },
-      { question: "Which happened before the birth of Jesus?", answers: ["Paul's conversion", "The exile to Babylon", "Pentecost", "The resurrection"], correct: 1 }
+      { question: "Which came first?", answers: ["The Flood", "Creation", "Exodus", "David becomes king"], correct: 1, verse: "Genesis 1:1", verseText: "In the beginning God created the heavens and the earth." },
+      { question: "Which happened after Moses led Israel out of Egypt?", answers: ["Jesus was born", "The Temple was built", "Israel crossed the Red Sea", "David fought Goliath"], correct: 2, verse: "Exodus 14:21-22", verseText: "The children of Israel went into the midst of the sea on the dry ground." },
+      { question: "Which happened before the birth of Jesus?", answers: ["Paul's conversion", "The exile to Babylon", "Pentecost", "The resurrection"], correct: 1, verse: "2 Kings 25:8-11", verseText: "He carried into captivity all Jerusalem." }
     ],
     "Student": [
-      { question: "Which came first?", answers: ["David becomes king", "Abraham leaves Haran", "Solomon builds the Temple", "Israel enters Canaan"], correct: 1 },
-      { question: "Which happened after David became king?", answers: ["Solomon builds the Temple", "The Flood", "Joseph goes to Egypt", "The Exodus"], correct: 0 },
-      { question: "Which came first?", answers: ["The Babylonian exile", "The ministry of Elijah", "The resurrection of Christ", "Pentecost"], correct: 1 }
+      { question: "Which came first?", answers: ["David becomes king", "Abraham leaves Haran", "Solomon builds the Temple", "Israel enters Canaan"], correct: 1, verse: "Genesis 12:4", verseText: "Abram departed as the Lord had spoken to him." },
+      { question: "Which happened after David became king?", answers: ["Solomon builds the Temple", "The Flood", "Joseph goes to Egypt", "The Exodus"], correct: 0, verse: "1 Kings 6:1", verseText: "He began to build the house of the Lord." },
+      { question: "Which came first?", answers: ["The Babylonian exile", "The ministry of Elijah", "The resurrection of Christ", "Pentecost"], correct: 1, verse: "1 Kings 17:1", verseText: "Elijah the Tishbite... said to Ahab." }
     ],
     "Scholar": [
-      { question: "Which event belongs latest in the Old Testament timeline?", answers: ["The Flood", "Return from exile", "Exodus", "Judges"], correct: 1 },
-      { question: "Which happened first?", answers: ["Division of the kingdom", "Solomon's reign", "David's reign", "Samuel's ministry"], correct: 3 },
-      { question: "Which came before the rebuilding of Jerusalem's walls?", answers: ["Nehemiah", "Ezra's return", "Pentecost", "John the Baptist"], correct: 1 }
+      { question: "Which event belongs latest in the Old Testament timeline?", answers: ["The Flood", "Return from exile", "Exodus", "Judges"], correct: 1, verse: "Ezra 1:1-3", verseText: "Who is among you of all His people?... let him go up to Jerusalem." },
+      { question: "Which happened first?", answers: ["Division of the kingdom", "Solomon's reign", "David's reign", "Samuel's ministry"], correct: 3, verse: "1 Samuel 3:19-20", verseText: "Samuel grew, and the Lord was with him." },
+      { question: "Which came before the rebuilding of Jerusalem's walls?", answers: ["Nehemiah", "Ezra's return", "Pentecost", "John the Baptist"], correct: 1, verse: "Ezra 7:6-9", verseText: "Ezra came up from Babylon." }
     ]
   },
+
   "Finish the Verse": {
     "Beginner": [
-      { question: 'Finish the verse: "The Lord is my shepherd; ____."', answers: ["I shall not want", "He is my rock", "I will fear no evil", "His mercy endures"], correct: 0 },
-      { question: 'Finish the verse: "In the beginning God created the ____ and the earth."', answers: ["light", "heavens", "angels", "sea"], correct: 1 },
-      { question: 'Finish the verse: "Jesus wept." This verse is found in:', answers: ["John 11:35", "Matthew 5:9", "Luke 2:10", "Psalm 23:1"], correct: 0 }
+      { question: 'Finish the verse: "The Lord is my shepherd; ____."', answers: ["I shall not want", "He is my rock", "I will fear no evil", "His mercy endures"], correct: 0, verse: "Psalm 23:1", verseText: "The Lord is my shepherd; I shall not want." },
+      { question: 'Finish the verse: "In the beginning God created the ____ and the earth."', answers: ["light", "heavens", "angels", "sea"], correct: 1, verse: "Genesis 1:1", verseText: "In the beginning God created the heavens and the earth." },
+      { question: 'Finish the verse: "Jesus wept." This verse is found in:', answers: ["John 11:35", "Matthew 5:9", "Luke 2:10", "Psalm 23:1"], correct: 0, verse: "John 11:35", verseText: "Jesus wept." }
     ],
     "Student": [
-      { question: 'Finish the verse: "For all have sinned and fall short of the ____ of God."', answers: ["truth", "grace", "law", "glory"], correct: 3 },
-      { question: 'Finish the verse: "Trust in the Lord with all thine heart; and lean not unto thine own ____."', answers: ["strength", "understanding", "wisdom", "way"], correct: 1 },
-      { question: 'Finish the verse: "Thy word is a lamp unto my feet, and a ____ unto my path."', answers: ["light", "sword", "shield", "guide"], correct: 0 }
+      { question: 'Finish the verse: "For all have sinned and fall short of the ____ of God."', answers: ["truth", "grace", "law", "glory"], correct: 3, verse: "Romans 3:23", verseText: "For all have sinned and fall short of the glory of God." },
+      { question: 'Finish the verse: "Trust in the Lord with all thine heart; and lean not unto thine own ____."', answers: ["strength", "understanding", "wisdom", "way"], correct: 1, verse: "Proverbs 3:5", verseText: "Lean not on your own understanding." },
+      { question: 'Finish the verse: "Thy word is a lamp unto my feet, and a ____ unto my path."', answers: ["light", "sword", "shield", "guide"], correct: 0, verse: "Psalm 119:105", verseText: "Your word is a lamp to my feet and a light to my path." }
     ],
     "Scholar": [
-      { question: 'Finish the verse: "Man shall not live by bread alone, but by every word that proceeds out of the mouth of ____."', answers: ["the prophets", "God", "Moses", "the Lord of hosts"], correct: 1 },
-      { question: 'Finish the verse: "The just shall live by ____."', answers: ["works", "grace", "faith", "hope"], correct: 2 },
-      { question: 'Finish the verse: "Be ye doers of the word, and not hearers only, deceiving your own ____."', answers: ["hearts", "selves", "minds", "souls"], correct: 1 }
+      { question: 'Finish the verse: "Man shall not live by bread alone, but by every word that proceeds out of the mouth of ____."', answers: ["the prophets", "God", "Moses", "the Lord of hosts"], correct: 1, verse: "Matthew 4:4", verseText: "Man shall not live by bread alone, but by every word that proceeds from the mouth of God." },
+      { question: 'Finish the verse: "The just shall live by ____."', answers: ["works", "grace", "faith", "hope"], correct: 2, verse: "Habakkuk 2:4", verseText: "The just shall live by his faith." },
+      { question: 'Finish the verse: "Be ye doers of the word, and not hearers only, deceiving your own ____."', answers: ["hearts", "selves", "minds", "souls"], correct: 1, verse: "James 1:22", verseText: "Be doers of the word, and not hearers only, deceiving yourselves." }
     ]
   },
+
   "Prophecy Quiz": {
     "Beginner": [
-      { question: "Which prophet was swallowed by a great fish?", answers: ["Jonah", "Isaiah", "Elijah", "Amos"], correct: 0 },
-      { question: "Who interpreted dreams in Babylon?", answers: ["Daniel", "Jeremiah", "Micah", "Hosea"], correct: 0 },
-      { question: "Who confronted the prophets of Baal on Mount Carmel?", answers: ["Elijah", "Elisha", "Nathan", "Joel"], correct: 0 }
+      { question: "Which prophet was swallowed by a great fish?", answers: ["Jonah", "Isaiah", "Elijah", "Amos"], correct: 0, verse: "Jonah 1:17", verseText: "Now the Lord had prepared a great fish to swallow Jonah." },
+      { question: "Who interpreted dreams in Babylon?", answers: ["Daniel", "Jeremiah", "Micah", "Hosea"], correct: 0, verse: "Daniel 2:19", verseText: "The secret was revealed to Daniel in a night vision." },
+      { question: "Who confronted the prophets of Baal on Mount Carmel?", answers: ["Elijah", "Elisha", "Nathan", "Joel"], correct: 0, verse: "1 Kings 18:22", verseText: "I alone am left a prophet of the Lord; but Baal's prophets are four hundred and fifty men." }
     ],
     "Student": [
-      { question: "Which prophet foretold the Messiah would be born in Bethlehem?", answers: ["Micah", "Nahum", "Obadiah", "Haggai"], correct: 0 },
-      { question: "Which prophet saw a valley of dry bones?", answers: ["Isaiah", "Daniel", "Ezekiel", "Zechariah"], correct: 2 },
-      { question: 'Which prophet declared, "The just shall live by faith"?', answers: ["Habakkuk", "Malachi", "Joel", "Zephaniah"], correct: 0 }
+      { question: "Which prophet foretold the Messiah would be born in Bethlehem?", answers: ["Micah", "Nahum", "Obadiah", "Haggai"], correct: 0, verse: "Micah 5:2", verseText: "Out of you shall come forth to Me the One to be Ruler in Israel." },
+      { question: "Which prophet saw a valley of dry bones?", answers: ["Isaiah", "Daniel", "Ezekiel", "Zechariah"], correct: 2, verse: "Ezekiel 37:1-2", verseText: "He set me down in the midst of the valley; and it was full of bones." },
+      { question: 'Which prophet declared, "The just shall live by faith"?', answers: ["Habakkuk", "Malachi", "Joel", "Zephaniah"], correct: 0, verse: "Habakkuk 2:4", verseText: "The just shall live by his faith." }
     ],
     "Scholar": [
-      { question: "Which prophet spoke of seventy weeks determined upon thy people?", answers: ["Isaiah", "Daniel", "Jeremiah", "Zechariah"], correct: 1 },
-      { question: "Which prophet described the coming Messenger who would prepare the way?", answers: ["Malachi", "Amos", "Hosea", "Obadiah"], correct: 0 },
-      { question: 'Which prophet said, "They shall look upon me whom they have pierced"?', answers: ["Zechariah", "Joel", "Isaiah", "Micah"], correct: 0 }
+      { question: "Which prophet spoke of seventy weeks determined upon thy people?", answers: ["Isaiah", "Daniel", "Jeremiah", "Zechariah"], correct: 1, verse: "Daniel 9:24", verseText: "Seventy weeks are determined for your people and for your holy city." },
+      { question: "Which prophet described the coming Messenger who would prepare the way?", answers: ["Malachi", "Amos", "Hosea", "Obadiah"], correct: 0, verse: "Malachi 3:1", verseText: "Behold, I send My messenger, and he will prepare the way before Me." },
+      { question: 'Which prophet said, "They shall look upon me whom they have pierced"?', answers: ["Zechariah", "Joel", "Isaiah", "Micah"], correct: 0, verse: "Zechariah 12:10", verseText: "They will look on Me whom they pierced." }
     ]
   }
 };
@@ -268,10 +277,17 @@ function loadQuestion(){
     btn.disabled = false;
   });
 
-  const feedback = document.getElementById('feedback');
-  feedback.textContent = '';
-  feedback.className = 'feedback';
+  document.getElementById('feedback').textContent = '';
+  document.getElementById('feedback').className = 'feedback';
+  document.getElementById('verseRef').textContent = '';
+  document.getElementById('verseText').textContent = '';
   document.getElementById('nextBtn').style.display = 'none';
+}
+
+function showVerse(q, showCorrect){
+  document.getElementById('verseRef').textContent =
+    showCorrect ? ('Correct answer: ' + q.answers[q.correct] + ' — ' + q.verse) : q.verse;
+  document.getElementById('verseText').textContent = q.verseText || '';
 }
 
 function submitAnswer(index){
@@ -290,6 +306,7 @@ function submitAnswer(index){
     buttons[q.correct].classList.add('correct');
     feedback.textContent = correctFeedbackMessage();
     feedback.className = 'feedback correct';
+    showVerse(q, false);
     const nextBtn = document.getElementById('nextBtn');
     nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
     nextBtn.style.display = 'flex';
@@ -312,6 +329,7 @@ function submitAnswer(index){
   buttons.forEach(btn => btn.disabled = true);
   feedback.textContent = incorrectFeedbackMessage();
   feedback.className = 'feedback wrong';
+  showVerse(q, true);
   const nextBtn = document.getElementById('nextBtn');
   nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
   nextBtn.style.display = 'flex';
@@ -330,12 +348,14 @@ function showResults(){
   document.getElementById('scoreSub').textContent = scoreText(score, currentQuestions.length);
   showScreen('resultScreen');
 }
+
 function scoreText(score, total){
   if(score === total) return 'Perfect score!';
   if(score >= total - 1) return 'Excellent work!';
   if(score >= Math.ceil(total / 2)) return 'Nice job!';
   return 'Good start — try again!';
 }
+
 function restartLevel(){
   currentQuestionIndex = 0;
   score = 0;
