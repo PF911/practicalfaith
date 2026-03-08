@@ -7,10 +7,9 @@ function safePlay(audio){
   try{
     audio.currentTime = 0;
     const p = audio.play();
-    if(p && typeof p.catch === "function"){ p.catch(() => {}); }
+    if(p && typeof p.catch === "function") p.catch(() => {});
   }catch(e){}
 }
-
 function playCorrect(){ safePlay(soundCorrect); }
 function playWrong(){ safePlay(soundWrong); }
 function playStreak(){ safePlay(soundStreak); }
@@ -39,6 +38,20 @@ let disabledAnswers = [];
 function showScreen(screenId){
   document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
+}
+
+function updateStreakBadge(){
+  const wrap = document.getElementById('streakWrap');
+  const count = document.getElementById('streakCount');
+  if(!wrap || !count) return;
+
+  if(correctStreak >= 3){
+    count.textContent = correctStreak;
+    wrap.style.display = 'inline-flex';
+  } else {
+    wrap.style.display = 'none';
+    count.textContent = '0';
+  }
 }
 
 function randomFrom(list){
@@ -177,13 +190,7 @@ function updateStatsAfterQuiz(finalScore, totalQuestions, category, level, strea
   const key = category + "||" + level;
   const previous = stats.highScores[key];
   if(!previous || percent > previous.percent || (percent === previous.percent && finalScore > previous.score)){
-    stats.highScores[key] = {
-      category,
-      level,
-      score: finalScore,
-      total: totalQuestions,
-      percent
-    };
+    stats.highScores[key] = { category, level, score: finalScore, total: totalQuestions, percent };
   }
 
   saveStats(stats);
@@ -298,7 +305,6 @@ function renderQuestion(){
   document.getElementById('quizCategory').textContent = currentCategory;
   document.getElementById('quizLevel').textContent = currentLevel;
   document.getElementById('quizMeta').textContent = 'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
-  document.getElementById('questionText').textContent = q.question;
 
   const labels = ['A) ','B) ','C) ','D) '];
   q.choices.forEach((choice, i) => {
@@ -308,6 +314,7 @@ function renderQuestion(){
     btn.disabled = false;
   });
 
+  document.getElementById('questionText').textContent = q.question;
   document.getElementById('feedback').textContent = '';
   document.getElementById('feedback').className = 'feedback';
   document.getElementById('verseRef').textContent = '';
@@ -316,6 +323,7 @@ function renderQuestion(){
 
   const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
   document.getElementById('progressFill').style.width = progress + '%';
+  updateStreakBadge();
 }
 
 function loadQuestion(){
@@ -351,6 +359,7 @@ function selectLevel(level){
   score = 0;
   correctStreak = 0;
   bestStreakThisQuiz = 0;
+  updateStreakBadge();
   loadQuestion();
   showScreen('quizScreen');
 }
@@ -375,6 +384,7 @@ function resumeLastQuiz(){
 
   renderQuestion();
   applySavedUiState(saved);
+  updateStreakBadge();
   showScreen('quizScreen');
 }
 
@@ -398,6 +408,7 @@ function submitAnswer(index){
     buttons[index].classList.add('correct');
     feedback.textContent = attemptsThisQuestion === 2 ? randomFrom(recoveryMessages) : randomFrom(correctMessages);
     feedback.className = 'feedback correct';
+    updateStreakBadge();
     showVerse(q, false);
 
     const nextBtn = document.getElementById('nextBtn');
@@ -416,6 +427,7 @@ function submitAnswer(index){
     correctStreak = 0;
     feedback.textContent = randomFrom(tryAgainMessages);
     feedback.className = 'feedback wrong';
+    updateStreakBadge();
     saveProgress();
     return;
   }
@@ -426,6 +438,7 @@ function submitAnswer(index){
   buttons.forEach(btn => btn.disabled = true);
   feedback.textContent = randomFrom(incorrectMessages);
   feedback.className = 'feedback wrong';
+  updateStreakBadge();
   showVerse(q, true);
 
   const nextBtn = document.getElementById('nextBtn');
@@ -467,6 +480,7 @@ function restartLevel(){
   score = 0;
   correctStreak = 0;
   bestStreakThisQuiz = 0;
+  updateStreakBadge();
   currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
   loadQuestion();
   showScreen('quizScreen');
@@ -476,13 +490,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('startBtn');
   const resumeBtn = document.getElementById('resumeBtn');
 
-  if(startBtn){
-    startBtn.onclick = () => showScreen('menu');
-  }
-
-  if(resumeBtn){
-    resumeBtn.onclick = resumeLastQuiz;
-  }
+  if(startBtn) startBtn.onclick = () => showScreen('menu');
+  if(resumeBtn) resumeBtn.onclick = resumeLastQuiz;
 
   updateResumeUI();
 });
