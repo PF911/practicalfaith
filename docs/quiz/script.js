@@ -5,6 +5,7 @@ const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the seco
 
 const QUESTIONS_PER_ROUND = 10;
 const SAVE_KEY = "bibleQuizSavedGame";
+const STATS_KEY = "bibleQuizStats";
 
 let currentCategory = '';
 let currentLevel = '';
@@ -143,6 +144,144 @@ function clearSavedProgress(){
   updateResumeUI();
 }
 
+function defaultStats(){
+  return {
+    totalQuizzesPlayed: 0,
+    totalQuestionsAnswered: 0,
+    totalCorrectAnswers: 0,
+    perfectScores: 0,
+    bestScore: 0,
+    bestScoreTotal: 0,
+    bestPercent: 0,
+    longestStreak: 0,
+    lastQuiz: "",
+    highScores: {}
+  };
+}
+
+function loadStats(){
+  try {
+    const raw = localStorage.getItem(STATS_KEY);
+    if(!raw) return defaultStats();
+    return { ...defaultStats(), ...JSON.parse(raw) };
+  } catch (err){
+    return defaultStats();
+  }
+}
+
+function saveStats(stats){
+  localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+}
+
+function updateStatsAfterQuiz(finalScore, totalQuestions, category, level, streakRecord){
+  const stats = loadStats();
+  stats.totalQuizzesPlayed += 1;
+  stats.totalQuestionsAnswered += totalQuestions;
+  stats.totalCorrectAnswers += finalScore;
+  if(finalScore === totalQuestions) stats.perfectScores += 1;
+
+  const percent = totalQuestions ? (finalScore / totalQuestions) * 100 : 0;
+  if(percent > stats.bestPercent || (percent === stats.bestPercent && finalScore > stats.bestScore)){
+    stats.bestPercent = percent;
+    stats.bestScore = finalScore;
+    stats.bestScoreTotal = totalQuestions;
+  }
+
+  if(streakRecord > stats.longestStreak){
+    stats.longestStreak = streakRecord;
+  }
+
+  stats.lastQuiz = category + " — " + level + " — " + finalScore + " / " + totalQuestions;
+
+  const key = category + "||" + level;
+  const previous = stats.highScores[key];
+  if(!previous || percent > previous.percent || (percent === previous.percent && finalScore > previous.score)){
+    stats.highScores[key] = {
+      category,
+      level,
+      score: finalScore,
+      total: totalQuestions,
+      percent
+    };
+  }
+
+  saveStats(stats);
+}
+
+function percentText(value){
+  return Math.round(value) + "%";
+}
+
+function openHighScores(){
+  const stats = loadStats();
+  const scoresList = document.getElementById('scoresList');
+  const entries = Object.values(stats.highScores || {}).sort((a,b) => {
+    if(b.percent !== a.percent) return b.percent - a.percent;
+    return b.score - a.score;
+  });
+
+  if(!entries.length){
+    scoresList.innerHTML = '<div class="empty-note">No high scores yet. Play a quiz and your best results will appear here.</div>';
+  } else {
+    scoresList.innerHTML = entries.map(entry => `
+      <div class="score-row">
+        <div class="score-label">${entry.category}</div>
+        <div class="score-value">${entry.score} / ${entry.total}</div>
+        <div class="score-subline">${entry.level} — ${percentText(entry.percent)}</div>
+      </div>
+    `).join('');
+  }
+
+  showScreen('highScoresScreen');
+}
+
+function openStats(){
+  const stats = loadStats();
+  const statsList = document.getElementById('statsList');
+  const accuracy = stats.totalQuestionsAnswered ? (stats.totalCorrectAnswers / stats.totalQuestionsAnswered) * 100 : 0;
+
+  statsList.innerHTML = `
+    <div class="stat-row">
+      <div class="stat-label">Total Quizzes Played</div>
+      <div class="stat-value">${stats.totalQuizzesPlayed}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Total Questions Answered</div>
+      <div class="stat-value">${stats.totalQuestionsAnswered}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Total Correct Answers</div>
+      <div class="stat-value">${stats.totalCorrectAnswers}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Accuracy</div>
+      <div class="stat-value">${percentText(accuracy)}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Perfect Scores</div>
+      <div class="stat-value">${stats.perfectScores}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Best Overall Score</div>
+      <div class="stat-value">${stats.bestScoreTotal ? `${stats.bestScore} / ${stats.bestScoreTotal}` : '—'}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Longest Streak</div>
+      <div class="stat-value">${stats.longestStreak}</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Last Quiz</div>
+      <div class="score-subline">${stats.lastQuiz || 'No quiz completed yet.'}</div>
+    </div>
+  `;
+
+  showScreen('statsScreen');
+}
+
+function openAbout(){
+  showScreen('aboutScreen');
+}
+
 function applySavedUiState(saved){
   const buttons = document.querySelectorAll('.answer-btn');
   const feedback = document.getElementById('feedback');
@@ -153,7 +292,6 @@ function applySavedUiState(saved){
   buttons.forEach((btn, index) => {
     btn.className = 'answer-btn';
     btn.disabled = false;
-
     if((saved.disabledAnswers || []).includes(index)){
       btn.classList.add('wrong');
       btn.disabled = true;
@@ -163,11 +301,7 @@ function applySavedUiState(saved){
   const q = currentQuestions[currentQuestionIndex];
   if(saved.answered){
     buttons.forEach(btn => btn.disabled = true);
-    if(saved.feedbackClass && saved.feedbackClass.includes('correct')){
-      buttons[q.correct].classList.add('correct');
-    } else {
-      buttons[q.correct].classList.add('correct');
-    }
+    buttons[q.correct].classList.add('correct');
   }
 
   feedback.textContent = saved.feedbackText || '';
@@ -326,6 +460,7 @@ function nextQuestion(){
 }
 
 function showResults(){
+  updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, correctStreak);
   clearSavedProgress();
   document.getElementById('resultCategory').textContent = currentCategory;
   document.getElementById('resultLevel').textContent = currentLevel;
