@@ -56,6 +56,10 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content
 .empty-note{width:90%;max-width:350px;margin:14px auto 0;padding:18px 16px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-size:18px;font-weight:800;box-sizing:border-box;}
 .about-copy{font-size:17px;font-weight:800;line-height:1.35;}
 
+.confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:9998;display:none;}
+.confetti-canvas.active{display:block;}
+
+
 .verse-link{min-height:24px;font-size:15px;font-weight:900;margin-top:6px;color:var(--purple);text-decoration:underline;cursor:pointer;}
 .verse-link.hidden{display:none;}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;z-index:9999;}
@@ -228,6 +232,8 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;display:flex;justify-content
     <button class="small-btn" onclick="closeVerseModal()">Close</button>
   </div>
 </div>
+
+<canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
 </div>
 

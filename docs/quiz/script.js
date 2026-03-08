@@ -513,6 +513,66 @@ function nextQuestion(){
   }
 }
 
+
+function launchPerfectConfetti(){
+  const canvas = document.getElementById('confettiCanvas');
+  if(!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const colors = ['#6b2fbd','#3f6fb4','#ffcf6e','#f39a3e','#3e9b4f','#c84545','#ffffff'];
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.classList.add('active');
+
+  const pieces = Array.from({length: 140}, () => ({
+    x: canvas.width / 2 + (Math.random() - 0.5) * 140,
+    y: canvas.height * 0.28 + (Math.random() - 0.5) * 40,
+    w: 6 + Math.random() * 8,
+    h: 8 + Math.random() * 10,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    vx: (Math.random() - 0.5) * 9,
+    vy: -7 - Math.random() * 7,
+    gravity: 0.18 + Math.random() * 0.08,
+    rotation: Math.random() * 3.14159,
+    vr: (Math.random() - 0.5) * 0.3,
+    alpha: 1
+  }));
+
+  let frame = 0;
+
+  function draw(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    pieces.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += p.gravity;
+      p.rotation += p.vr;
+      p.alpha -= 0.0065;
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(p.alpha, 0);
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rotation);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    });
+
+    frame++;
+    const alive = pieces.some(p => p.alpha > 0 && p.y < canvas.height + 40);
+    if(alive && frame < 240){
+      requestAnimationFrame(draw);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.classList.remove('active');
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+
 function showResults(){
   const wasDailyChallenge = localStorage.getItem("dailyChallengeActive") === "true";
 
@@ -543,6 +603,7 @@ function showResults(){
     badge.style.display = 'block';
     note.style.display = 'block';
     playPerfect();
+    launchPerfectConfetti();
   } else {
     badge.style.display = 'none';
     note.style.display = 'none';
