@@ -1,3 +1,21 @@
+const soundCorrect = new Audio("sounds/correct.wav");
+const soundWrong = new Audio("sounds/wrong.wav");
+const soundStreak = new Audio("sounds/streak.wav");
+const soundFinish = new Audio("sounds/finish.wav");
+
+function safePlay(audio){
+  try{
+    audio.currentTime = 0;
+    const p = audio.play();
+    if(p && typeof p.catch === "function"){ p.catch(() => {}); }
+  }catch(e){}
+}
+
+function playCorrect(){ safePlay(soundCorrect); }
+function playWrong(){ safePlay(soundWrong); }
+function playStreak(){ safePlay(soundStreak); }
+function playFinish(){ safePlay(soundFinish); }
+
 const correctMessages = ["Whoa, nice!","Great job!","Excellent!","You got it!","Well done!","Nice one!"];
 const incorrectMessages = ["Ooh, I'm sorry, that's incorrect.","Close, but that's not right.","Not quite.","Good try, but that's incorrect.","Almost!","That's not the right answer."];
 const tryAgainMessages = ["Close, but that's not right. Try again!","Not quite. Take one more shot!","Ooh, not that one. Try again!","Good try — give it one more go!","Almost! Try once more!"];
@@ -14,6 +32,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let answered = false;
 let correctStreak = 0;
+let bestStreakThisQuiz = 0;
 let attemptsThisQuestion = 0;
 let disabledAnswers = [];
 
@@ -35,50 +54,10 @@ function shuffleArray(array){
   return copy;
 }
 
-function prepareQuestion(questionObj){
-  const answers = questionObj.choices.map((choice, index) => ({
-    text: choice,
-    isCorrect: index === questionObj.answer
-  }));
-
-  const shuffledAnswers = shuffleArray(answers);
-  const newCorrectIndex = shuffledAnswers.findIndex(answer => answer.isCorrect);
-
-  return {
-    question: questionObj.question,
-    answers: shuffledAnswers.map(answer => answer.text),
-    correct: newCorrectIndex,
-    verse: questionObj.reference,
-    verseText: questionObj.verseText || "",
-    category: questionObj.category,
-    difficulty: questionObj.difficulty,
-    testament: questionObj.testament,
-    game: questionObj.game
-  };
-}
-
-function correctFeedbackMessage(){
-  if(attemptsThisQuestion === 2) return randomFrom(recoveryMessages);
-  if(correctStreak >= 5) return "You're on fire!";
-  if(correctStreak === 4) return "Impressive streak!";
-  if(correctStreak === 3) return "Wow! You're on a roll!";
-  if(correctStreak === 2) return "Nice! You're getting warmed up!";
-  return randomFrom(correctMessages);
-}
-
-function incorrectFeedbackMessage(){
-  return randomFrom(incorrectMessages);
-}
-
-function tryAgainFeedbackMessage(){
-  return randomFrom(tryAgainMessages);
-}
-
 function getFilteredQuestions(category, level){
   const filtered = quizQuestions.filter(q => q.game === category && q.difficulty === level);
   const shuffled = shuffleArray(filtered);
-  const selected = shuffled.slice(0, Math.min(QUESTIONS_PER_ROUND, shuffled.length));
-  return selected.map(prepareQuestion);
+  return shuffled.slice(0, Math.min(QUESTIONS_PER_ROUND, shuffled.length));
 }
 
 function getResumeSummary(saved){
@@ -92,6 +71,7 @@ function updateResumeUI(){
   const resumeBtn = document.getElementById('resumeBtn');
   const resumeNote = document.getElementById('resumeNote');
   const saved = loadSavedProgress();
+  if(!resumeBtn || !resumeNote) return;
 
   if(saved && saved.currentQuestions && saved.currentQuestions.length){
     resumeBtn.style.display = 'inline-block';
@@ -115,6 +95,7 @@ function saveProgress(){
     score,
     answered,
     correctStreak,
+    bestStreakThisQuiz,
     attemptsThisQuestion,
     disabledAnswers,
     feedbackText: document.getElementById('feedback').textContent,
@@ -130,11 +111,11 @@ function saveProgress(){
 }
 
 function loadSavedProgress(){
-  try {
+  try{
     const raw = localStorage.getItem(SAVE_KEY);
     if(!raw) return null;
     return JSON.parse(raw);
-  } catch (err){
+  }catch(e){
     return null;
   }
 }
@@ -160,11 +141,11 @@ function defaultStats(){
 }
 
 function loadStats(){
-  try {
+  try{
     const raw = localStorage.getItem(STATS_KEY);
     if(!raw) return defaultStats();
     return { ...defaultStats(), ...JSON.parse(raw) };
-  } catch (err){
+  }catch(e){
     return defaultStats();
   }
 }
@@ -301,7 +282,7 @@ function applySavedUiState(saved){
   const q = currentQuestions[currentQuestionIndex];
   if(saved.answered){
     buttons.forEach(btn => btn.disabled = true);
-    buttons[q.correct].classList.add('correct');
+    buttons[q.answer].classList.add('correct');
   }
 
   feedback.textContent = saved.feedbackText || '';
@@ -317,19 +298,12 @@ function renderQuestion(){
   document.getElementById('quizCategory').textContent = currentCategory;
   document.getElementById('quizLevel').textContent = currentLevel;
   document.getElementById('quizMeta').textContent = 'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
-
-  const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
-  const progressFill = document.getElementById('progressFill');
-  if(progressFill){
-    progressFill.style.width = progress + '%';
-  }
-
   document.getElementById('questionText').textContent = q.question;
 
-  const labels = ['A)','B)','C)','D)'];
-  q.answers.forEach((answer, index) => {
-    const btn = document.getElementById('answer' + index);
-    btn.textContent = labels[index] + ' ' + answer;
+  const labels = ['A) ','B) ','C) ','D) '];
+  q.choices.forEach((choice, i) => {
+    const btn = document.getElementById('answer' + i);
+    btn.textContent = labels[i] + choice;
     btn.className = 'answer-btn';
     btn.disabled = false;
   });
@@ -339,6 +313,9 @@ function renderQuestion(){
   document.getElementById('verseRef').textContent = '';
   document.getElementById('verseText').textContent = '';
   document.getElementById('nextBtn').style.display = 'none';
+
+  const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+  document.getElementById('progressFill').style.width = progress + '%';
 }
 
 function loadQuestion(){
@@ -351,7 +328,7 @@ function loadQuestion(){
 
 function showVerse(q, showCorrect){
   document.getElementById('verseRef').textContent =
-    showCorrect ? ('Correct answer: ' + q.answers[q.correct] + ' — ' + q.verse) : q.verse;
+    showCorrect ? ('Correct answer: ' + q.choices[q.answer] + ' — ' + q.reference) : q.reference;
   document.getElementById('verseText').textContent = q.verseText || '';
 }
 
@@ -373,6 +350,7 @@ function selectLevel(level){
   currentQuestionIndex = 0;
   score = 0;
   correctStreak = 0;
+  bestStreakThisQuiz = 0;
   loadQuestion();
   showScreen('quizScreen');
 }
@@ -391,6 +369,7 @@ function resumeLastQuiz(){
   score = saved.score || 0;
   answered = !!saved.answered;
   correctStreak = saved.correctStreak || 0;
+  bestStreakThisQuiz = saved.bestStreakThisQuiz || 0;
   attemptsThisQuestion = saved.attemptsThisQuestion || 0;
   disabledAnswers = saved.disabledAnswers || [];
 
@@ -407,30 +386,35 @@ function submitAnswer(index){
   const buttons = document.querySelectorAll('.answer-btn');
   const feedback = document.getElementById('feedback');
 
-  if(index === q.correct){
+  if(index === q.answer){
+    playCorrect();
     answered = true;
     score++;
     correctStreak++;
+    if(correctStreak > bestStreakThisQuiz) bestStreakThisQuiz = correctStreak;
+    if(correctStreak >= 3) playStreak();
+
     buttons.forEach(btn => btn.disabled = true);
-    buttons[q.correct].classList.add('correct');
-    feedback.textContent = correctFeedbackMessage();
+    buttons[index].classList.add('correct');
+    feedback.textContent = attemptsThisQuestion === 2 ? randomFrom(recoveryMessages) : randomFrom(correctMessages);
     feedback.className = 'feedback correct';
     showVerse(q, false);
 
     const nextBtn = document.getElementById('nextBtn');
-    nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
+    nextBtn.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
     nextBtn.style.display = 'flex';
     saveProgress();
     return;
   }
 
+  playWrong();
   buttons[index].classList.add('wrong');
   buttons[index].disabled = true;
   if(!disabledAnswers.includes(index)) disabledAnswers.push(index);
 
   if(attemptsThisQuestion === 1){
     correctStreak = 0;
-    feedback.textContent = tryAgainFeedbackMessage();
+    feedback.textContent = randomFrom(tryAgainMessages);
     feedback.className = 'feedback wrong';
     saveProgress();
     return;
@@ -438,14 +422,14 @@ function submitAnswer(index){
 
   answered = true;
   correctStreak = 0;
-  buttons[q.correct].classList.add('correct');
+  buttons[q.answer].classList.add('correct');
   buttons.forEach(btn => btn.disabled = true);
-  feedback.textContent = incorrectFeedbackMessage();
+  feedback.textContent = randomFrom(incorrectMessages);
   feedback.className = 'feedback wrong';
   showVerse(q, true);
 
   const nextBtn = document.getElementById('nextBtn');
-  nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
+  nextBtn.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
   nextBtn.style.display = 'flex';
   saveProgress();
 }
@@ -460,7 +444,8 @@ function nextQuestion(){
 }
 
 function showResults(){
-  updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, correctStreak);
+  playFinish();
+  updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, bestStreakThisQuiz);
   clearSavedProgress();
   document.getElementById('resultCategory').textContent = currentCategory;
   document.getElementById('resultLevel').textContent = currentLevel;
@@ -481,6 +466,7 @@ function restartLevel(){
   currentQuestionIndex = 0;
   score = 0;
   correctStreak = 0;
+  bestStreakThisQuiz = 0;
   currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
   loadQuestion();
   showScreen('quizScreen');
