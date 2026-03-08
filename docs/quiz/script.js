@@ -4,6 +4,29 @@ const soundStreak = new Audio("sounds/streak.wav");
 const soundFinish = new Audio("sounds/finish.wav");
 const soundPerfect = new Audio("sounds/applause.wav");
 
+const correctMessages = ["Whoa, nice!","Great job!","Excellent!","You got it!","Well done!","Nice one!"];
+const incorrectMessages = ["Ooh, I'm sorry, that's incorrect.","Close, but that's not right.","Not quite.","Good try, but that's incorrect.","Almost!","That's not the right answer."];
+const tryAgainMessages = ["Close, but that's not right. Try again!","Not quite. Take one more shot!","Ooh, not that one. Try again!","Good try — give it one more go!","Almost! Try once more!"];
+const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the second try!","Well done — you found it!","There you go!"];
+
+const QUESTIONS_PER_ROUND = 10;
+const SAVE_KEY = "bibleQuizSavedGame";
+const STATS_KEY = "bibleQuizStats";
+const DAILY_STREAK_KEY = "bibleQuizDailyStreak";
+const SOUND_KEY = "bibleQuizSoundEnabled";
+const CATEGORY_PROGRESS_KEY = "bibleQuizCategoryProgress";
+
+let currentCategory = '';
+let currentLevel = '';
+let currentQuestions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let answered = false;
+let correctStreak = 0;
+let bestStreakThisQuiz = 0;
+let attemptsThisQuestion = 0;
+let disabledAnswers = [];
+
 function soundEnabled(){
   const saved = localStorage.getItem(SOUND_KEY);
   return saved !== "false";
@@ -35,31 +58,17 @@ function playStreak(){ safePlay(soundStreak); }
 function playFinish(){ safePlay(soundFinish); }
 function playPerfect(){ safePlay(soundPerfect); }
 
-const correctMessages = ["Whoa, nice!","Great job!","Excellent!","You got it!","Well done!","Nice one!"];
-const incorrectMessages = ["Ooh, I'm sorry, that's incorrect.","Close, but that's not right.","Not quite.","Good try, but that's incorrect.","Almost!","That's not the right answer."];
-const tryAgainMessages = ["Close, but that's not right. Try again!","Not quite. Take one more shot!","Ooh, not that one. Try again!","Good try — give it one more go!","Almost! Try once more!"];
-const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the second try!","Well done — you found it!","There you go!"];
-
-const QUESTIONS_PER_ROUND = 10;
-const SAVE_KEY = "bibleQuizSavedGame";
-const STATS_KEY = "bibleQuizStats";
-const DAILY_STREAK_KEY = "bibleQuizDailyStreak";
-const SOUND_KEY = "bibleQuizSoundEnabled";
-
-let currentCategory = '';
-let currentLevel = '';
-let currentQuestions = [];
-let currentQuestionIndex = 0;
-let score = 0;
-let answered = false;
-let correctStreak = 0;
-let bestStreakThisQuiz = 0;
-let attemptsThisQuestion = 0;
-let disabledAnswers = [];
-
 function showScreen(screenId){
   document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
-  document.getElementById(screenId).classList.add('active');
+  const el = document.getElementById(screenId);
+  if(el) el.classList.add('active');
+
+  if(screenId === 'menu'){
+    updateResumeUI();
+    updateDailyStreakUI();
+    updateSoundToggleUI();
+    updateCategoryProgressUI();
+  }
 }
 
 function updateStreakBadge(){
@@ -102,23 +111,6 @@ function getResumeSummary(saved){
   return saved.currentCategory + " — " + saved.currentLevel + " — Question " + qNum + " of " + total;
 }
 
-function updateResumeUI(){
-  const resumeBtn = document.getElementById('resumeBtn');
-  const resumeNote = document.getElementById('resumeNote');
-  const saved = loadSavedProgress();
-  if(!resumeBtn || !resumeNote) return;
-
-  if(saved && saved.currentQuestions && saved.currentQuestions.length){
-    resumeBtn.style.display = 'inline-block';
-    resumeNote.style.display = 'block';
-    resumeNote.textContent = getResumeSummary(saved);
-  } else {
-    resumeBtn.style.display = 'none';
-    resumeNote.style.display = 'none';
-    resumeNote.textContent = '';
-  }
-}
-
 function saveProgress(){
   if(!currentQuestions.length) return;
 
@@ -133,12 +125,12 @@ function saveProgress(){
     bestStreakThisQuiz,
     attemptsThisQuestion,
     disabledAnswers,
-    feedbackText: document.getElementById('feedback').textContent,
-    feedbackClass: document.getElementById('feedback').className,
-    verseRef: document.getElementById('verseRef').textContent,
-    verseText: document.getElementById('verseText').textContent,
-    nextBtnText: document.getElementById('nextBtn').textContent,
-    nextBtnDisplay: document.getElementById('nextBtn').style.display
+    feedbackText: document.getElementById('feedback')?.textContent || '',
+    feedbackClass: document.getElementById('feedback')?.className || 'feedback',
+    verseRef: document.getElementById('verseRef')?.textContent || '',
+    verseText: document.getElementById('verseText')?.dataset?.verseText || '',
+    nextBtnText: document.getElementById('nextBtn')?.textContent || 'Next Question',
+    nextBtnDisplay: document.getElementById('nextBtn')?.style.display || 'none'
   };
 
   localStorage.setItem(SAVE_KEY, JSON.stringify(payload));
@@ -158,6 +150,23 @@ function loadSavedProgress(){
 function clearSavedProgress(){
   localStorage.removeItem(SAVE_KEY);
   updateResumeUI();
+}
+
+function updateResumeUI(){
+  const resumeBtn = document.getElementById('resumeBtn');
+  const resumeNote = document.getElementById('resumeNote');
+  const saved = loadSavedProgress();
+  if(!resumeBtn || !resumeNote) return;
+
+  if(saved && saved.currentQuestions && saved.currentQuestions.length){
+    resumeBtn.style.display = 'inline-block';
+    resumeNote.style.display = 'block';
+    resumeNote.textContent = getResumeSummary(saved);
+  } else {
+    resumeBtn.style.display = 'none';
+    resumeNote.style.display = 'none';
+    resumeNote.textContent = '';
+  }
 }
 
 function defaultStats(){
@@ -225,6 +234,8 @@ function percentText(value){
 function openHighScores(){
   const stats = loadStats();
   const scoresList = document.getElementById('scoresList');
+  if(!scoresList) return;
+
   const entries = Object.values(stats.highScores || {}).sort((a,b) => {
     if(b.percent !== a.percent) return b.percent - a.percent;
     return b.score - a.score;
@@ -248,6 +259,8 @@ function openHighScores(){
 function openStats(){
   const stats = loadStats();
   const statsList = document.getElementById('statsList');
+  if(!statsList) return;
+
   const accuracy = stats.totalQuestionsAnswered ? (stats.totalCorrectAnswers / stats.totalQuestionsAnswered) * 100 : 0;
 
   statsList.innerHTML = `
@@ -309,22 +322,32 @@ function applySavedUiState(saved){
   });
 
   const q = currentQuestions[currentQuestionIndex];
-  if(saved.answered){
+  if(saved.answered && q){
     buttons.forEach(btn => btn.disabled = true);
-    buttons[q.answer].classList.add('correct');
+    if(buttons[q.answer]) buttons[q.answer].classList.add('correct');
   }
 
-  feedback.textContent = saved.feedbackText || '';
-  feedback.className = saved.feedbackClass || 'feedback';
-  verseRef.textContent = saved.verseRef || '';
-  verseText.textContent = saved.verseText ? 'Click to see the verse' : '';
-  verseText.className = saved.verseText ? 'verse-link' : 'verse-link hidden';
-  nextBtn.textContent = saved.nextBtnText || 'Next Question';
-  nextBtn.style.display = saved.nextBtnDisplay || 'none';
+  if(feedback){
+    feedback.textContent = saved.feedbackText || '';
+    feedback.className = saved.feedbackClass || 'feedback';
+  }
+  if(verseRef) verseRef.textContent = saved.verseRef || '';
+  if(verseText){
+    verseText.textContent = saved.verseText ? 'Click to see the verse' : '';
+    verseText.className = saved.verseText ? 'verse-link' : 'verse-link hidden';
+    verseText.dataset.verseRef = (saved.verseRef || '').replace(/^Correct answer:\s.*? — /, '');
+    verseText.dataset.verseText = saved.verseText || '';
+  }
+  if(nextBtn){
+    nextBtn.textContent = saved.nextBtnText || 'Next Question';
+    nextBtn.style.display = saved.nextBtnDisplay || 'none';
+  }
 }
 
 function renderQuestion(){
   const q = currentQuestions[currentQuestionIndex];
+  if(!q) return;
+
   document.getElementById('quizCategory').textContent = currentCategory;
   document.getElementById('quizLevel').textContent = currentLevel;
   document.getElementById('quizMeta').textContent = 'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
@@ -332,6 +355,7 @@ function renderQuestion(){
   const labels = ['A) ','B) ','C) ','D) '];
   q.choices.forEach((choice, i) => {
     const btn = document.getElementById('answer' + i);
+    if(!btn) return;
     btn.textContent = labels[i] + choice;
     btn.className = 'answer-btn';
     btn.disabled = false;
@@ -341,8 +365,11 @@ function renderQuestion(){
   document.getElementById('feedback').textContent = '';
   document.getElementById('feedback').className = 'feedback';
   document.getElementById('verseRef').textContent = '';
-  document.getElementById('verseText').textContent = '';
-  document.getElementById('verseText').className = 'verse-link hidden';
+  const verseLink = document.getElementById('verseText');
+  verseLink.textContent = '';
+  verseLink.className = 'verse-link hidden';
+  verseLink.dataset.verseRef = '';
+  verseLink.dataset.verseText = '';
   document.getElementById('nextBtn').style.display = 'none';
 
   const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
@@ -358,15 +385,13 @@ function loadQuestion(){
   saveProgress();
 }
 
-
 function openVerseModal(){
   const verseLink = document.getElementById('verseText');
   const overlay = document.getElementById('verseModal');
   const ref = document.getElementById('modalVerseRef');
   const text = document.getElementById('modalVerseText');
 
-  if(!verseLink || !overlay) return;
-  if(!verseLink.dataset.verseText) return;
+  if(!verseLink || !overlay || !verseLink.dataset.verseText) return;
 
   ref.textContent = verseLink.dataset.verseRef || '';
   text.textContent = verseLink.dataset.verseText || '';
@@ -513,6 +538,24 @@ function nextQuestion(){
   }
 }
 
+function scoreText(score, total){
+  if(score === total) return "🏆 Bible Master!";
+  if(score >= total - 1) return "⭐ Bible Scholar!";
+  if(score >= Math.ceil(total * 0.7)) return "📘 Solid Student!";
+  if(score >= Math.ceil(total * 0.5)) return "🌱 Getting Warmer!";
+  return "🔍 Keep Studying!";
+}
+
+function restartLevel(){
+  currentQuestionIndex = 0;
+  score = 0;
+  correctStreak = 0;
+  bestStreakThisQuiz = 0;
+  updateStreakBadge();
+  currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
+  loadQuestion();
+  showScreen('quizScreen');
+}
 
 function launchPerfectConfetti(){
   const canvas = document.getElementById('confettiCanvas');
@@ -573,65 +616,80 @@ function launchPerfectConfetti(){
   requestAnimationFrame(draw);
 }
 
-function showResults(){
-  const wasDailyChallenge = localStorage.getItem("dailyChallengeActive") === "true";
-
-  if(wasDailyChallenge){
-    finishDailyChallenge();
-  }
-
-  updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, bestStreakThisQuiz);
-  clearSavedProgress();
-
-  if(wasDailyChallenge){
-    playFinish();
-    openDailyRewardScreen();
-    return;
-  }
-
-  const perfect = score === currentQuestions.length;
-
-  document.getElementById('resultCategory').textContent = currentCategory;
-  document.getElementById('resultLevel').textContent = currentLevel;
-  document.getElementById('scoreBig').textContent = score + ' / ' + currentQuestions.length;
-  document.getElementById('scoreSub').textContent = scoreText(score, currentQuestions.length);
-
-  const badge = document.getElementById('perfectBadge');
-  const note = document.getElementById('perfectNote');
-
-  if(perfect){
-    badge.style.display = 'block';
-    note.style.display = 'block';
-    playPerfect();
-    launchPerfectConfetti();
-  } else {
-    badge.style.display = 'none';
-    note.style.display = 'none';
-    playFinish();
-  }
-
-  showScreen('resultScreen');
+function defaultCategoryProgress(){
+  return {};
 }
 
-function scoreText(score, total){
-  if(score === total) return "🏆 Bible Master!";
-  if(score >= total - 1) return "⭐ Bible Scholar!";
-  if(score >= Math.ceil(total * 0.7)) return "📘 Solid Student!";
-  if(score >= Math.ceil(total * 0.5)) return "🌱 Getting Warmer!";
-  return "🔍 Keep Studying!";
+function loadCategoryProgress(){
+  try{
+    const raw = localStorage.getItem(CATEGORY_PROGRESS_KEY);
+    if(!raw) return defaultCategoryProgress();
+    return { ...defaultCategoryProgress(), ...JSON.parse(raw) };
+  }catch(e){
+    return defaultCategoryProgress();
+  }
 }
 
-function restartLevel(){
-  currentQuestionIndex = 0;
-  score = 0;
-  correctStreak = 0;
-  bestStreakThisQuiz = 0;
-  updateStreakBadge();
-  currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
-  loadQuestion();
-  showScreen('quizScreen');
+function saveCategoryProgress(progress){
+  localStorage.setItem(CATEGORY_PROGRESS_KEY, JSON.stringify(progress));
 }
 
+function getQuestionKey(q){
+  return [q.question || '', q.reference || '', (q.choices || []).join('|')].join('||');
+}
+
+function categoryId(category){
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+}
+
+function recordCategoryProgress(category, questions){
+  if(!category || category === "Daily Challenge") return;
+  if(!Array.isArray(questions) || !questions.length) return;
+
+  const progress = loadCategoryProgress();
+  if(!progress[category]){
+    progress[category] = {};
+  }
+
+  questions.forEach(q => {
+    progress[category][getQuestionKey(q)] = true;
+  });
+
+  saveCategoryProgress(progress);
+}
+
+function updateCategoryProgressUI(){
+  if(typeof quizQuestions === 'undefined' || !Array.isArray(quizQuestions)) return;
+
+  const categories = [
+    'General Bible Trivia',
+    'Who said it?',
+    'Bible Timeline',
+    'Finish the Verse',
+    'Prophecy Quiz'
+  ];
+
+  const progress = loadCategoryProgress();
+
+  categories.forEach(category => {
+    const total = quizQuestions.filter(q => q.game === category).length;
+    const done = progress[category] ? Object.keys(progress[category]).length : 0;
+    const safeDone = Math.min(done, total);
+    const percent = total ? Math.round((safeDone / total) * 100) : 0;
+    const id = categoryId(category);
+
+    const textEl = document.getElementById('progressText_' + id);
+    const fillEl = document.getElementById('progressFill_' + id);
+
+    if(textEl){
+      textEl.textContent = safeDone + ' / ' + total + ' completed';
+    }
+
+    if(fillEl){
+      fillEl.style.width = percent + '%';
+    }
+  });
+}
 
 function defaultDailyStreak(){
   return {
@@ -653,6 +711,11 @@ function loadDailyStreak(){
 
 function saveDailyStreak(data){
   localStorage.setItem(DAILY_STREAK_KEY, JSON.stringify(data));
+}
+
+function getTodayKey(){
+  const d = new Date();
+  return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
 }
 
 function getYesterdayKey(){
@@ -696,9 +759,6 @@ function recordDailyChallengeCompletion(){
   saveDailyStreak(streakData);
   updateDailyStreakUI();
 }
-
-
-
 
 function getDailyBadge(streak){
   if(streak >= 30){
@@ -757,27 +817,45 @@ function openDailyRewardScreen(){
   showScreen('dailyRewardScreen');
 }
 
+function showResults(){
+  const wasDailyChallenge = localStorage.getItem("dailyChallengeActive") === "true";
 
+  if(wasDailyChallenge){
+    finishDailyChallenge();
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const startBtn = document.getElementById('startBtn');
-  const resumeBtn = document.getElementById('resumeBtn');
+  updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, bestStreakThisQuiz);
+  recordCategoryProgress(currentCategory, currentQuestions);
+  clearSavedProgress();
 
-  if(startBtn) startBtn.onclick = () => showScreen('menu');
-  if(resumeBtn) resumeBtn.onclick = resumeLastQuiz;
+  if(wasDailyChallenge){
+    playFinish();
+    openDailyRewardScreen();
+    return;
+  }
 
-  updateResumeUI();
-  updateDailyStreakUI();
-  updateSoundToggleUI();
-});
+  const perfect = score === currentQuestions.length;
 
-// ===============================
-// DAILY CHALLENGE SYSTEM
-// ===============================
+  document.getElementById('resultCategory').textContent = currentCategory;
+  document.getElementById('resultLevel').textContent = currentLevel;
+  document.getElementById('scoreBig').textContent = score + ' / ' + currentQuestions.length;
+  document.getElementById('scoreSub').textContent = scoreText(score, currentQuestions.length);
 
-function getTodayKey(){
-  const d = new Date();
-  return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+  const badge = document.getElementById('perfectBadge');
+  const note = document.getElementById('perfectNote');
+
+  if(perfect){
+    badge.style.display = 'block';
+    note.style.display = 'block';
+    playPerfect();
+    launchPerfectConfetti();
+  } else {
+    badge.style.display = 'none';
+    note.style.display = 'none';
+    playFinish();
+  }
+
+  showScreen('resultScreen');
 }
 
 function startDailyChallenge(){
@@ -825,3 +903,16 @@ function loadDailyQuestion(){
   showScreen('quizScreen');
   loadQuestion();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('startBtn');
+  const resumeBtn = document.getElementById('resumeBtn');
+
+  if(startBtn) startBtn.onclick = () => showScreen('menu');
+  if(resumeBtn) resumeBtn.onclick = resumeLastQuiz;
+
+  updateResumeUI();
+  updateDailyStreakUI();
+  updateSoundToggleUI();
+  updateCategoryProgressUI();
+});
