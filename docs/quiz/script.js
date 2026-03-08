@@ -2,6 +2,7 @@ const soundCorrect = new Audio("sounds/correct.wav");
 const soundWrong = new Audio("sounds/wrong.wav");
 const soundStreak = new Audio("sounds/streak.wav");
 const soundFinish = new Audio("sounds/finish.wav");
+const soundPerfect = new Audio("sounds/applause.wav");
 
 function soundEnabled(){
   const saved = localStorage.getItem(SOUND_KEY);
@@ -32,6 +33,7 @@ function playCorrect(){ safePlay(soundCorrect); }
 function playWrong(){ safePlay(soundWrong); }
 function playStreak(){ safePlay(soundStreak); }
 function playFinish(){ safePlay(soundFinish); }
+function playPerfect(){ safePlay(soundPerfect); }
 
 const correctMessages = ["Whoa, nice!","Great job!","Excellent!","You got it!","Well done!","Nice one!"];
 const incorrectMessages = ["Ooh, I'm sorry, that's incorrect.","Close, but that's not right.","Not quite.","Good try, but that's incorrect.","Almost!","That's not the right answer."];
@@ -518,19 +520,35 @@ function showResults(){
     finishDailyChallenge();
   }
 
-  playFinish();
   updateStatsAfterQuiz(score, currentQuestions.length, currentCategory, currentLevel, bestStreakThisQuiz);
   clearSavedProgress();
 
   if(wasDailyChallenge){
+    playFinish();
     openDailyRewardScreen();
     return;
   }
+
+  const perfect = score === currentQuestions.length;
 
   document.getElementById('resultCategory').textContent = currentCategory;
   document.getElementById('resultLevel').textContent = currentLevel;
   document.getElementById('scoreBig').textContent = score + ' / ' + currentQuestions.length;
   document.getElementById('scoreSub').textContent = scoreText(score, currentQuestions.length);
+
+  const badge = document.getElementById('perfectBadge');
+  const note = document.getElementById('perfectNote');
+
+  if(perfect){
+    badge.style.display = 'block';
+    note.style.display = 'block';
+    playPerfect();
+  } else {
+    badge.style.display = 'none';
+    note.style.display = 'none';
+    playFinish();
+  }
+
   showScreen('resultScreen');
 }
 
