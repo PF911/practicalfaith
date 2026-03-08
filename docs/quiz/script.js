@@ -4,6 +4,7 @@ const tryAgainMessages = ["Close, but that's not right. Try again!","Not quite. 
 const recoveryMessages = ["Nice recovery!","Good catch!","You got it on the second try!","Well done — you found it!","There you go!"];
 
 const QUESTIONS_PER_ROUND = 10;
+const SAVE_KEY = "bibleQuizSavedGame";
 
 let currentCategory = '';
 let currentLevel = '';
@@ -13,6 +14,7 @@ let score = 0;
 let answered = false;
 let correctStreak = 0;
 let attemptsThisQuestion = 0;
+let disabledAnswers = [];
 
 function showScreen(screenId){
   document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
@@ -71,19 +73,6 @@ function tryAgainFeedbackMessage(){
   return randomFrom(tryAgainMessages);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const startBtn = document.getElementById('startBtn');
-  if (startBtn) {
-    startBtn.onclick = () => showScreen('menu');
-  }
-});
-
-function openLevelMenu(category){
-  currentCategory = category;
-  document.getElementById('levelCategory').textContent = category;
-  showScreen('levelMenu');
-}
-
 function getFilteredQuestions(category, level){
   const filtered = quizQuestions.filter(q => q.game === category && q.difficulty === level);
   const shuffled = shuffleArray(filtered);
@@ -91,27 +80,105 @@ function getFilteredQuestions(category, level){
   return selected.map(prepareQuestion);
 }
 
-function selectLevel(level){
-  currentLevel = level;
-  currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
-
-  if(currentQuestions.length === 0){
-    alert('No questions loaded yet for ' + currentCategory + ' / ' + currentLevel + '.');
-    return;
-  }
-
-  currentQuestionIndex = 0;
-  score = 0;
-  correctStreak = 0;
-
-  loadQuestion();
-  showScreen('quizScreen');
+function getResumeSummary(saved){
+  if(!saved) return "";
+  const qNum = Math.min((saved.currentQuestionIndex || 0) + 1, (saved.currentQuestions || []).length || 1);
+  const total = (saved.currentQuestions || []).length || QUESTIONS_PER_ROUND;
+  return saved.currentCategory + " — " + saved.currentLevel + " — Question " + qNum + " of " + total;
 }
 
-function loadQuestion(){
-  answered = false;
-  attemptsThisQuestion = 0;
+function updateResumeUI(){
+  const resumeBtn = document.getElementById('resumeBtn');
+  const resumeNote = document.getElementById('resumeNote');
+  const saved = loadSavedProgress();
 
+  if(saved && saved.currentQuestions && saved.currentQuestions.length){
+    resumeBtn.style.display = 'inline-block';
+    resumeNote.style.display = 'block';
+    resumeNote.textContent = getResumeSummary(saved);
+  } else {
+    resumeBtn.style.display = 'none';
+    resumeNote.style.display = 'none';
+    resumeNote.textContent = '';
+  }
+}
+
+function saveProgress(){
+  if(!currentQuestions.length) return;
+
+  const payload = {
+    currentCategory,
+    currentLevel,
+    currentQuestions,
+    currentQuestionIndex,
+    score,
+    answered,
+    correctStreak,
+    attemptsThisQuestion,
+    disabledAnswers,
+    feedbackText: document.getElementById('feedback').textContent,
+    feedbackClass: document.getElementById('feedback').className,
+    verseRef: document.getElementById('verseRef').textContent,
+    verseText: document.getElementById('verseText').textContent,
+    nextBtnText: document.getElementById('nextBtn').textContent,
+    nextBtnDisplay: document.getElementById('nextBtn').style.display
+  };
+
+  localStorage.setItem(SAVE_KEY, JSON.stringify(payload));
+  updateResumeUI();
+}
+
+function loadSavedProgress(){
+  try {
+    const raw = localStorage.getItem(SAVE_KEY);
+    if(!raw) return null;
+    return JSON.parse(raw);
+  } catch (err){
+    return null;
+  }
+}
+
+function clearSavedProgress(){
+  localStorage.removeItem(SAVE_KEY);
+  updateResumeUI();
+}
+
+function applySavedUiState(saved){
+  const buttons = document.querySelectorAll('.answer-btn');
+  const feedback = document.getElementById('feedback');
+  const verseRef = document.getElementById('verseRef');
+  const verseText = document.getElementById('verseText');
+  const nextBtn = document.getElementById('nextBtn');
+
+  buttons.forEach((btn, index) => {
+    btn.className = 'answer-btn';
+    btn.disabled = false;
+
+    if((saved.disabledAnswers || []).includes(index)){
+      btn.classList.add('wrong');
+      btn.disabled = true;
+    }
+  });
+
+  const q = currentQuestions[currentQuestionIndex];
+  if(saved.answered){
+    buttons.forEach(btn => btn.disabled = true);
+    if(saved.feedbackClass && saved.feedbackClass.includes('correct')){
+      buttons[q.correct].classList.add('correct');
+    } else {
+      buttons[q.correct].classList.add('correct');
+    }
+  }
+
+  feedback.textContent = saved.feedbackText || '';
+  feedback.className = saved.feedbackClass || 'feedback';
+  verseRef.textContent = saved.verseRef || '';
+  verseText.textContent = saved.verseText || '';
+  nextBtn.textContent = saved.nextBtnText || 'Next Question';
+  nextBtn.style.display = saved.nextBtnDisplay || 'none';
+}
+
+function renderQuestion(){
   const q = currentQuestions[currentQuestionIndex];
   document.getElementById('quizCategory').textContent = currentCategory;
   document.getElementById('quizLevel').textContent = currentLevel;
@@ -140,10 +207,62 @@ function loadQuestion(){
   document.getElementById('nextBtn').style.display = 'none';
 }
 
+function loadQuestion(){
+  answered = false;
+  attemptsThisQuestion = 0;
+  disabledAnswers = [];
+  renderQuestion();
+  saveProgress();
+}
+
 function showVerse(q, showCorrect){
   document.getElementById('verseRef').textContent =
     showCorrect ? ('Correct answer: ' + q.answers[q.correct] + ' — ' + q.verse) : q.verse;
   document.getElementById('verseText').textContent = q.verseText || '';
+}
+
+function openLevelMenu(category){
+  currentCategory = category;
+  document.getElementById('levelCategory').textContent = category;
+  showScreen('levelMenu');
+}
+
+function selectLevel(level){
+  currentLevel = level;
+  currentQuestions = getFilteredQuestions(currentCategory, currentLevel);
+
+  if(currentQuestions.length === 0){
+    alert('No questions loaded yet for ' + currentCategory + ' / ' + currentLevel + '.');
+    return;
+  }
+
+  currentQuestionIndex = 0;
+  score = 0;
+  correctStreak = 0;
+  loadQuestion();
+  showScreen('quizScreen');
+}
+
+function resumeLastQuiz(){
+  const saved = loadSavedProgress();
+  if(!saved || !saved.currentQuestions || !saved.currentQuestions.length){
+    updateResumeUI();
+    return;
+  }
+
+  currentCategory = saved.currentCategory || '';
+  currentLevel = saved.currentLevel || '';
+  currentQuestions = saved.currentQuestions || [];
+  currentQuestionIndex = saved.currentQuestionIndex || 0;
+  score = saved.score || 0;
+  answered = !!saved.answered;
+  correctStreak = saved.correctStreak || 0;
+  attemptsThisQuestion = saved.attemptsThisQuestion || 0;
+  disabledAnswers = saved.disabledAnswers || [];
+
+  renderQuestion();
+  applySavedUiState(saved);
+  showScreen('quizScreen');
 }
 
 function submitAnswer(index){
@@ -167,16 +286,19 @@ function submitAnswer(index){
     const nextBtn = document.getElementById('nextBtn');
     nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
     nextBtn.style.display = 'flex';
+    saveProgress();
     return;
   }
 
   buttons[index].classList.add('wrong');
   buttons[index].disabled = true;
+  if(!disabledAnswers.includes(index)) disabledAnswers.push(index);
 
   if(attemptsThisQuestion === 1){
     correctStreak = 0;
     feedback.textContent = tryAgainFeedbackMessage();
     feedback.className = 'feedback wrong';
+    saveProgress();
     return;
   }
 
@@ -191,6 +313,7 @@ function submitAnswer(index){
   const nextBtn = document.getElementById('nextBtn');
   nextBtn.textContent = currentQuestionIndex < currentQuestions.length - 1 ? 'Next Question' : 'See Score';
   nextBtn.style.display = 'flex';
+  saveProgress();
 }
 
 function nextQuestion(){
@@ -203,6 +326,7 @@ function nextQuestion(){
 }
 
 function showResults(){
+  clearSavedProgress();
   document.getElementById('resultCategory').textContent = currentCategory;
   document.getElementById('resultLevel').textContent = currentLevel;
   document.getElementById('scoreBig').textContent = score + ' / ' + currentQuestions.length;
@@ -211,23 +335,10 @@ function showResults(){
 }
 
 function scoreText(score, total){
-
-  if(score === total){
-    return "🏆 Bible Master!";
-  }
-
-  if(score >= total - 1){
-    return "⭐ Bible Scholar!";
-  }
-
-  if(score >= Math.ceil(total * 0.7)){
-    return "📘 Solid Student!";
-  }
-
-  if(score >= Math.ceil(total * 0.5)){
-    return "🌱 Getting Warmer!";
-  }
-
+  if(score === total) return "🏆 Bible Master!";
+  if(score >= total - 1) return "⭐ Bible Scholar!";
+  if(score >= Math.ceil(total * 0.7)) return "📘 Solid Student!";
+  if(score >= Math.ceil(total * 0.5)) return "🌱 Getting Warmer!";
   return "🔍 Keep Studying!";
 }
 
@@ -239,3 +350,18 @@ function restartLevel(){
   loadQuestion();
   showScreen('quizScreen');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('startBtn');
+  const resumeBtn = document.getElementById('resumeBtn');
+
+  if(startBtn){
+    startBtn.onclick = () => showScreen('menu');
+  }
+
+  if(resumeBtn){
+    resumeBtn.onclick = resumeLastQuiz;
+  }
+
+  updateResumeUI();
+});
