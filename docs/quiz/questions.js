@@ -1,1865 +1,1102 @@
-function buildQuizQuestionPool(groupedQuestions){
-  const pool = [];
-  Object.keys(groupedQuestions).forEach(category => {
-    const levels = groupedQuestions[category];
-    Object.keys(levels).forEach(level => {
-      levels[level].forEach(q => {
-        pool.push({
-          game: category,
-          difficulty: level,
-          question: q.question,
-          choices: q.choices,
-          answer: q.answer,
-          reference: q.reference,
-          verseText: q.verseText
-        });
-      });
-    });
-  });
-  return pool;
-}
+const quizQuestions = [
+  // General Bible Trivia
+  {
+    id: 1,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who built the ark?",
+    choices: ["Moses", "Noah", "Abraham", "David"],
+    answer: 1,
+    reference: "Genesis 6:14",
+    verseText: "Make yourself an ark of gopher wood."
+  },
+  {
+    id: 2,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Beginner",
+    question: "Who was swallowed by a great fish?",
+    choices: ["Jonah", "Peter", "Samuel", "Joseph"],
+    answer: 0,
+    reference: "Jonah 1:17",
+    verseText: "The Lord had prepared a great fish to swallow Jonah."
+  },
+  {
+    id: 3,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who killed Goliath?",
+    choices: ["Solomon", "David", "Saul", "Elijah"],
+    answer: 1,
+    reference: "1 Samuel 17:50",
+    verseText: "David prevailed over the Philistine with a sling and a stone."
+  },
+  {
+    id: 4,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "How many days and nights did it rain during the Flood?",
+    choices: ["30", "40", "50", "70"],
+    answer: 1,
+    reference: "Genesis 7:12",
+    verseText: "The rain was on the earth forty days and forty nights."
+  },
+  {
+    id: 5,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "How many brothers did Joseph have?",
+    choices: ["10", "11", "12", "13"],
+    answer: 1,
+    reference: "Genesis 37:2",
+    verseText: "Joseph... was feeding the flock with his brothers."
+  },
+  {
+    id: 6,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who led Israel after Moses died?",
+    choices: ["Caleb", "Aaron", "Joshua", "Samuel"],
+    answer: 2,
+    reference: "Joshua 1:1-2",
+    verseText: "Moses my servant is dead... arise, go over this Jordan."
+  },
+  {
+    id: 7,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "How old was Noah when the floodwaters came upon the earth?",
+    choices: ["500", "550", "600", "650"],
+    answer: 2,
+    reference: "Genesis 7:6",
+    verseText: "Noah was six hundred years old when the floodwaters were on the earth."
+  },
+  {
+    id: 8,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Places",
+    difficulty: "Scholar",
+    question: "On what mountain did the ark come to rest?",
+    choices: ["Sinai", "Ararat", "Carmel", "Hermon"],
+    answer: 1,
+    reference: "Genesis 8:4",
+    verseText: "The ark rested... upon the mountains of Ararat."
+  },
+  {
+    id: 9,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Scholar",
+    question: "Who interpreted the handwriting on the wall for Belshazzar?",
+    choices: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"],
+    answer: 3,
+    reference: "Daniel 5:25-28",
+    verseText: "This is the inscription that was written: MENE, MENE, TEKEL, UPHARSIN."
+  },
 
-const groupedQuestions = {
-  "General Bible Trivia": {
-    "Beginner": [
-      {
-        "question": "Sample general question 1 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "Moses",
-          "Abraham",
-          "Isaiah"
-        ],
-        "answer": 1,
-        "reference": "2 Samuel 13:12",
-        "verseText": "Sample verse text from 2 Samuel 13:12."
-      },
-      {
-        "question": "Sample general question 2 (easy)?",
-        "choices": [
-          "Paul",
-          "Moses",
-          "David",
-          "Jeremiah"
-        ],
-        "answer": 0,
-        "reference": "Joshua 15:27",
-        "verseText": "Sample verse text from Joshua 15:27."
-      },
-      {
-        "question": "Sample general question 3 (easy)?",
-        "choices": [
-          "Elijah",
-          "Isaiah",
-          "Paul",
-          "Jeremiah"
-        ],
-        "answer": 2,
-        "reference": "Joshua 1:18",
-        "verseText": "Sample verse text from Joshua 1:18."
-      },
-      {
-        "question": "Sample general question 4 (easy)?",
-        "choices": [
-          "Abraham",
-          "David",
-          "Samuel",
-          "Elijah"
-        ],
-        "answer": 0,
-        "reference": "2 Samuel 19:1",
-        "verseText": "Sample verse text from 2 Samuel 19:1."
-      },
-      {
-        "question": "Sample general question 5 (easy)?",
-        "choices": [
-          "Elijah",
-          "Abraham",
-          "Paul",
-          "Solomon"
-        ],
-        "answer": 3,
-        "reference": "Matthew 2:16",
-        "verseText": "Sample verse text from Matthew 2:16."
-      },
-      {
-        "question": "Sample general question 6 (easy)?",
-        "choices": [
-          "Samuel",
-          "Solomon",
-          "Moses",
-          "Elijah"
-        ],
-        "answer": 3,
-        "reference": "Joshua 17:20",
-        "verseText": "Sample verse text from Joshua 17:20."
-      },
-      {
-        "question": "Sample general question 7 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "Moses",
-          "Abraham",
-          "Solomon"
-        ],
-        "answer": 0,
-        "reference": "Matthew 16:12",
-        "verseText": "Sample verse text from Matthew 16:12."
-      },
-      {
-        "question": "Sample general question 8 (easy)?",
-        "choices": [
-          "Peter",
-          "Moses",
-          "Samuel",
-          "Jeremiah"
-        ],
-        "answer": 1,
-        "reference": "2 Samuel 4:19",
-        "verseText": "Sample verse text from 2 Samuel 4:19."
-      },
-      {
-        "question": "Sample general question 9 (easy)?",
-        "choices": [
-          "Moses",
-          "Isaiah",
-          "Abraham",
-          "Peter"
-        ],
-        "answer": 0,
-        "reference": "2 Samuel 10:23",
-        "verseText": "Sample verse text from 2 Samuel 10:23."
-      },
-      {
-        "question": "Sample general question 10 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "Paul",
-          "Elijah",
-          "David"
-        ],
-        "answer": 3,
-        "reference": "Acts 10:27",
-        "verseText": "Sample verse text from Acts 10:27."
-      }
-    ],
-    "Student": [
-      {
-        "question": "Sample general question 1 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Solomon",
-          "Peter",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Judges 3:22",
-        "verseText": "Sample verse text from Judges 3:22."
-      },
-      {
-        "question": "Sample general question 2 (medium)?",
-        "choices": [
-          "Abraham",
-          "Samuel",
-          "Jeremiah",
-          "Paul"
-        ],
-        "answer": 1,
-        "reference": "Joshua 9:24",
-        "verseText": "Sample verse text from Joshua 9:24."
-      },
-      {
-        "question": "Sample general question 3 (medium)?",
-        "choices": [
-          "Elijah",
-          "Paul",
-          "Abraham",
-          "Samuel"
-        ],
-        "answer": 1,
-        "reference": "Exodus 4:16",
-        "verseText": "Sample verse text from Exodus 4:16."
-      },
-      {
-        "question": "Sample general question 4 (medium)?",
-        "choices": [
-          "Elijah",
-          "Solomon",
-          "Isaiah",
-          "Samuel"
-        ],
-        "answer": 0,
-        "reference": "1 Kings 3:13",
-        "verseText": "Sample verse text from 1 Kings 3:13."
-      },
-      {
-        "question": "Sample general question 5 (medium)?",
-        "choices": [
-          "Moses",
-          "Paul",
-          "Elijah",
-          "Solomon"
-        ],
-        "answer": 0,
-        "reference": "2 Samuel 2:2",
-        "verseText": "Sample verse text from 2 Samuel 2:2."
-      },
-      {
-        "question": "Sample general question 6 (medium)?",
-        "choices": [
-          "Isaiah",
-          "Samuel",
-          "David",
-          "Elijah"
-        ],
-        "answer": 0,
-        "reference": "Acts 15:16",
-        "verseText": "Sample verse text from Acts 15:16."
-      },
-      {
-        "question": "Sample general question 7 (medium)?",
-        "choices": [
-          "Moses",
-          "Peter",
-          "David",
-          "Isaiah"
-        ],
-        "answer": 1,
-        "reference": "1 Kings 17:8",
-        "verseText": "Sample verse text from 1 Kings 17:8."
-      },
-      {
-        "question": "Sample general question 8 (medium)?",
-        "choices": [
-          "David",
-          "Samuel",
-          "Solomon",
-          "Peter"
-        ],
-        "answer": 1,
-        "reference": "Acts 4:24",
-        "verseText": "Sample verse text from Acts 4:24."
-      },
-      {
-        "question": "Sample general question 9 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Samuel",
-          "Elijah",
-          "Moses"
-        ],
-        "answer": 1,
-        "reference": "Judges 8:15",
-        "verseText": "Sample verse text from Judges 8:15."
-      },
-      {
-        "question": "Sample general question 10 (medium)?",
-        "choices": [
-          "Moses",
-          "Paul",
-          "Jeremiah",
-          "Isaiah"
-        ],
-        "answer": 2,
-        "reference": "1 Samuel 4:30",
-        "verseText": "Sample verse text from 1 Samuel 4:30."
-      }
-    ],
-    "Scholar": [
-      {
-        "question": "Sample general question 1 (hard)?",
-        "choices": [
-          "Isaiah",
-          "Jeremiah",
-          "David",
-          "Peter"
-        ],
-        "answer": 3,
-        "reference": "2 Samuel 19:12",
-        "verseText": "Sample verse text from 2 Samuel 19:12."
-      },
-      {
-        "question": "Sample general question 2 (hard)?",
-        "choices": [
-          "Elijah",
-          "Samuel",
-          "David",
-          "Jeremiah"
-        ],
-        "answer": 3,
-        "reference": "Joshua 13:6",
-        "verseText": "Sample verse text from Joshua 13:6."
-      },
-      {
-        "question": "Sample general question 3 (hard)?",
-        "choices": [
-          "David",
-          "Peter",
-          "Samuel",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "2 Kings 15:21",
-        "verseText": "Sample verse text from 2 Kings 15:21."
-      },
-      {
-        "question": "Sample general question 4 (hard)?",
-        "choices": [
-          "Isaiah",
-          "David",
-          "Peter",
-          "Elijah"
-        ],
-        "answer": 2,
-        "reference": "1 Samuel 4:6",
-        "verseText": "Sample verse text from 1 Samuel 4:6."
-      },
-      {
-        "question": "Sample general question 5 (hard)?",
-        "choices": [
-          "Paul",
-          "Isaiah",
-          "Peter",
-          "Solomon"
-        ],
-        "answer": 2,
-        "reference": "1 Samuel 4:4",
-        "verseText": "Sample verse text from 1 Samuel 4:4."
-      },
-      {
-        "question": "Sample general question 6 (hard)?",
-        "choices": [
-          "David",
-          "Moses",
-          "Solomon",
-          "Jeremiah"
-        ],
-        "answer": 3,
-        "reference": "1 Samuel 5:21",
-        "verseText": "Sample verse text from 1 Samuel 5:21."
-      },
-      {
-        "question": "Sample general question 7 (hard)?",
-        "choices": [
-          "Moses",
-          "Abraham",
-          "Elijah",
-          "Solomon"
-        ],
-        "answer": 3,
-        "reference": "2 Kings 4:10",
-        "verseText": "Sample verse text from 2 Kings 4:10."
-      },
-      {
-        "question": "Sample general question 8 (hard)?",
-        "choices": [
-          "Paul",
-          "Moses",
-          "Elijah",
-          "Samuel"
-        ],
-        "answer": 3,
-        "reference": "Joshua 19:25",
-        "verseText": "Sample verse text from Joshua 19:25."
-      },
-      {
-        "question": "Sample general question 9 (hard)?",
-        "choices": [
-          "Samuel",
-          "Elijah",
-          "Paul",
-          "Abraham"
-        ],
-        "answer": 2,
-        "reference": "Joshua 20:1",
-        "verseText": "Sample verse text from Joshua 20:1."
-      },
-      {
-        "question": "Sample general question 10 (hard)?",
-        "choices": [
-          "Isaiah",
-          "Jeremiah",
-          "Moses",
-          "Samuel"
-        ],
-        "answer": 0,
-        "reference": "1 Kings 11:21",
-        "verseText": "Sample verse text from 1 Kings 11:21."
-      }
-    ]
+  // Who said it?
+  {
+    id: 10,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Let my people go"?',
+    choices: ["Moses", "Aaron", "Pharaoh", "Joshua"],
+    answer: 0,
+    reference: "Exodus 5:1",
+    verseText: "Thus says the Lord God of Israel: Let My people go."
   },
-  "Who said it?": {
-    "Beginner": [
-      {
-        "question": "Sample who said it question 1 (easy)?",
-        "choices": [
-          "Isaiah",
-          "Jeremiah",
-          "Peter",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "1 Samuel 7:14",
-        "verseText": "Sample verse text from 1 Samuel 7:14."
-      },
-      {
-        "question": "Sample who said it question 2 (easy)?",
-        "choices": [
-          "Solomon",
-          "Abraham",
-          "Jeremiah",
-          "David"
-        ],
-        "answer": 1,
-        "reference": "Judges 2:9",
-        "verseText": "Sample verse text from Judges 2:9."
-      },
-      {
-        "question": "Sample who said it question 3 (easy)?",
-        "choices": [
-          "Elijah",
-          "David",
-          "Paul",
-          "Moses"
-        ],
-        "answer": 0,
-        "reference": "Judges 17:21",
-        "verseText": "Sample verse text from Judges 17:21."
-      },
-      {
-        "question": "Sample who said it question 4 (easy)?",
-        "choices": [
-          "Moses",
-          "Solomon",
-          "Isaiah",
-          "Elijah"
-        ],
-        "answer": 3,
-        "reference": "Genesis 7:15",
-        "verseText": "Sample verse text from Genesis 7:15."
-      },
-      {
-        "question": "Sample who said it question 5 (easy)?",
-        "choices": [
-          "Abraham",
-          "David",
-          "Moses",
-          "Isaiah"
-        ],
-        "answer": 2,
-        "reference": "Matthew 10:28",
-        "verseText": "Sample verse text from Matthew 10:28."
-      },
-      {
-        "question": "Sample who said it question 6 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "Peter",
-          "Elijah",
-          "David"
-        ],
-        "answer": 1,
-        "reference": "Judges 20:27",
-        "verseText": "Sample verse text from Judges 20:27."
-      },
-      {
-        "question": "Sample who said it question 7 (easy)?",
-        "choices": [
-          "Paul",
-          "Jeremiah",
-          "Abraham",
-          "Solomon"
-        ],
-        "answer": 2,
-        "reference": "Genesis 12:28",
-        "verseText": "Sample verse text from Genesis 12:28."
-      },
-      {
-        "question": "Sample who said it question 8 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "Samuel",
-          "Abraham",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Genesis 16:18",
-        "verseText": "Sample verse text from Genesis 16:18."
-      },
-      {
-        "question": "Sample who said it question 9 (easy)?",
-        "choices": [
-          "Paul",
-          "Moses",
-          "Samuel",
-          "Abraham"
-        ],
-        "answer": 0,
-        "reference": "1 Kings 19:30",
-        "verseText": "Sample verse text from 1 Kings 19:30."
-      },
-      {
-        "question": "Sample who said it question 10 (easy)?",
-        "choices": [
-          "Isaiah",
-          "Samuel",
-          "Elijah",
-          "Paul"
-        ],
-        "answer": 3,
-        "reference": "2 Kings 2:25",
-        "verseText": "Sample verse text from 2 Kings 2:25."
-      }
-    ],
-    "Student": [
-      {
-        "question": "Sample who said it question 1 (medium)?",
-        "choices": [
-          "Solomon",
-          "David",
-          "Moses",
-          "Paul"
-        ],
-        "answer": 3,
-        "reference": "2 Kings 1:14",
-        "verseText": "Sample verse text from 2 Kings 1:14."
-      },
-      {
-        "question": "Sample who said it question 2 (medium)?",
-        "choices": [
-          "Isaiah",
-          "Samuel",
-          "Elijah",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "Joshua 20:11",
-        "verseText": "Sample verse text from Joshua 20:11."
-      },
-      {
-        "question": "Sample who said it question 3 (medium)?",
-        "choices": [
-          "Peter",
-          "Samuel",
-          "Abraham",
-          "Solomon"
-        ],
-        "answer": 0,
-        "reference": "1 Samuel 12:5",
-        "verseText": "Sample verse text from 1 Samuel 12:5."
-      },
-      {
-        "question": "Sample who said it question 4 (medium)?",
-        "choices": [
-          "Solomon",
-          "Peter",
-          "David",
-          "Jeremiah"
-        ],
-        "answer": 2,
-        "reference": "Exodus 4:9",
-        "verseText": "Sample verse text from Exodus 4:9."
-      },
-      {
-        "question": "Sample who said it question 5 (medium)?",
-        "choices": [
-          "Elijah",
-          "Samuel",
-          "Isaiah",
-          "Peter"
-        ],
-        "answer": 0,
-        "reference": "2 Samuel 4:3",
-        "verseText": "Sample verse text from 2 Samuel 4:3."
-      },
-      {
-        "question": "Sample who said it question 6 (medium)?",
-        "choices": [
-          "Paul",
-          "Peter",
-          "David",
-          "Isaiah"
-        ],
-        "answer": 3,
-        "reference": "2 Kings 4:7",
-        "verseText": "Sample verse text from 2 Kings 4:7."
-      },
-      {
-        "question": "Sample who said it question 7 (medium)?",
-        "choices": [
-          "Moses",
-          "Isaiah",
-          "Samuel",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "2 Kings 18:7",
-        "verseText": "Sample verse text from 2 Kings 18:7."
-      },
-      {
-        "question": "Sample who said it question 8 (medium)?",
-        "choices": [
-          "David",
-          "Jeremiah",
-          "Moses",
-          "Peter"
-        ],
-        "answer": 1,
-        "reference": "Joshua 11:10",
-        "verseText": "Sample verse text from Joshua 11:10."
-      },
-      {
-        "question": "Sample who said it question 9 (medium)?",
-        "choices": [
-          "Solomon",
-          "David",
-          "Paul",
-          "Elijah"
-        ],
-        "answer": 0,
-        "reference": "Exodus 8:4",
-        "verseText": "Sample verse text from Exodus 8:4."
-      },
-      {
-        "question": "Sample who said it question 10 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Samuel",
-          "David",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Acts 13:22",
-        "verseText": "Sample verse text from Acts 13:22."
-      }
-    ],
-    "Scholar": [
-      {
-        "question": "Sample who said it question 1 (hard)?",
-        "choices": [
-          "Isaiah",
-          "Samuel",
-          "Jeremiah",
-          "Solomon"
-        ],
-        "answer": 3,
-        "reference": "Acts 17:10",
-        "verseText": "Sample verse text from Acts 17:10."
-      },
-      {
-        "question": "Sample who said it question 2 (hard)?",
-        "choices": [
-          "Isaiah",
-          "Solomon",
-          "Moses",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "Joshua 4:12",
-        "verseText": "Sample verse text from Joshua 4:12."
-      },
-      {
-        "question": "Sample who said it question 3 (hard)?",
-        "choices": [
-          "Abraham",
-          "Paul",
-          "Jeremiah",
-          "Samuel"
-        ],
-        "answer": 0,
-        "reference": "2 Samuel 14:26",
-        "verseText": "Sample verse text from 2 Samuel 14:26."
-      },
-      {
-        "question": "Sample who said it question 4 (hard)?",
-        "choices": [
-          "Samuel",
-          "Moses",
-          "Jeremiah",
-          "Elijah"
-        ],
-        "answer": 1,
-        "reference": "Acts 5:9",
-        "verseText": "Sample verse text from Acts 5:9."
-      },
-      {
-        "question": "Sample who said it question 5 (hard)?",
-        "choices": [
-          "Peter",
-          "Moses",
-          "Samuel",
-          "Abraham"
-        ],
-        "answer": 0,
-        "reference": "Matthew 16:20",
-        "verseText": "Sample verse text from Matthew 16:20."
-      },
-      {
-        "question": "Sample who said it question 6 (hard)?",
-        "choices": [
-          "Solomon",
-          "Elijah",
-          "Isaiah",
-          "Jeremiah"
-        ],
-        "answer": 2,
-        "reference": "Matthew 3:15",
-        "verseText": "Sample verse text from Matthew 3:15."
-      },
-      {
-        "question": "Sample who said it question 7 (hard)?",
-        "choices": [
-          "Solomon",
-          "Moses",
-          "Peter",
-          "Jeremiah"
-        ],
-        "answer": 1,
-        "reference": "Joshua 8:19",
-        "verseText": "Sample verse text from Joshua 8:19."
-      },
-      {
-        "question": "Sample who said it question 8 (hard)?",
-        "choices": [
-          "Moses",
-          "Isaiah",
-          "Abraham",
-          "Jeremiah"
-        ],
-        "answer": 3,
-        "reference": "Acts 3:23",
-        "verseText": "Sample verse text from Acts 3:23."
-      },
-      {
-        "question": "Sample who said it question 9 (hard)?",
-        "choices": [
-          "David",
-          "Abraham",
-          "Moses",
-          "Solomon"
-        ],
-        "answer": 0,
-        "reference": "Exodus 8:29",
-        "verseText": "Sample verse text from Exodus 8:29."
-      },
-      {
-        "question": "Sample who said it question 10 (hard)?",
-        "choices": [
-          "Isaiah",
-          "Paul",
-          "Solomon",
-          "Moses"
-        ],
-        "answer": 3,
-        "reference": "Genesis 15:30",
-        "verseText": "Sample verse text from Genesis 15:30."
-      }
-    ]
+  {
+    id: 11,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Speak, Lord, for your servant is listening"?',
+    choices: ["Samuel", "David", "Solomon", "Isaiah"],
+    answer: 0,
+    reference: "1 Samuel 3:10",
+    verseText: "Speak, for Your servant hears."
   },
-  "Bible Timeline": {
-    "Beginner": [
-      {
-        "question": "Sample timeline question 1 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "David",
-          "Moses",
-          "Peter"
-        ],
-        "answer": 0,
-        "reference": "2 Samuel 1:7",
-        "verseText": "Sample verse text from 2 Samuel 1:7."
-      },
-      {
-        "question": "Sample timeline question 2 (easy)?",
-        "choices": [
-          "Paul",
-          "Abraham",
-          "Elijah",
-          "Solomon"
-        ],
-        "answer": 1,
-        "reference": "2 Samuel 8:30",
-        "verseText": "Sample verse text from 2 Samuel 8:30."
-      },
-      {
-        "question": "Sample timeline question 3 (easy)?",
-        "choices": [
-          "Moses",
-          "Peter",
-          "Solomon",
-          "Abraham"
-        ],
-        "answer": 2,
-        "reference": "1 Samuel 13:28",
-        "verseText": "Sample verse text from 1 Samuel 13:28."
-      },
-      {
-        "question": "Sample timeline question 4 (easy)?",
-        "choices": [
-          "Samuel",
-          "Abraham",
-          "David",
-          "Paul"
-        ],
-        "answer": 2,
-        "reference": "Joshua 15:18",
-        "verseText": "Sample verse text from Joshua 15:18."
-      },
-      {
-        "question": "Sample timeline question 5 (easy)?",
-        "choices": [
-          "Samuel",
-          "David",
-          "Abraham",
-          "Isaiah"
-        ],
-        "answer": 2,
-        "reference": "Acts 4:30",
-        "verseText": "Sample verse text from Acts 4:30."
-      },
-      {
-        "question": "Sample timeline question 6 (easy)?",
-        "choices": [
-          "Peter",
-          "Abraham",
-          "Jeremiah",
-          "Paul"
-        ],
-        "answer": 1,
-        "reference": "Matthew 17:19",
-        "verseText": "Sample verse text from Matthew 17:19."
-      },
-      {
-        "question": "Sample timeline question 7 (easy)?",
-        "choices": [
-          "Moses",
-          "Paul",
-          "Samuel",
-          "Peter"
-        ],
-        "answer": 2,
-        "reference": "Judges 8:14",
-        "verseText": "Sample verse text from Judges 8:14."
-      },
-      {
-        "question": "Sample timeline question 8 (easy)?",
-        "choices": [
-          "Elijah",
-          "David",
-          "Abraham",
-          "Moses"
-        ],
-        "answer": 1,
-        "reference": "Genesis 4:18",
-        "verseText": "Sample verse text from Genesis 4:18."
-      },
-      {
-        "question": "Sample timeline question 9 (easy)?",
-        "choices": [
-          "Abraham",
-          "Paul",
-          "Isaiah",
-          "Solomon"
-        ],
-        "answer": 2,
-        "reference": "Matthew 4:17",
-        "verseText": "Sample verse text from Matthew 4:17."
-      },
-      {
-        "question": "Sample timeline question 10 (easy)?",
-        "choices": [
-          "Isaiah",
-          "Paul",
-          "Abraham",
-          "Elijah"
-        ],
-        "answer": 3,
-        "reference": "Judges 5:27",
-        "verseText": "Sample verse text from Judges 5:27."
-      }
-    ],
-    "Student": [
-      {
-        "question": "Sample timeline question 1 (medium)?",
-        "choices": [
-          "Solomon",
-          "Isaiah",
-          "Abraham",
-          "Peter"
-        ],
-        "answer": 3,
-        "reference": "2 Kings 6:13",
-        "verseText": "Sample verse text from 2 Kings 6:13."
-      },
-      {
-        "question": "Sample timeline question 2 (medium)?",
-        "choices": [
-          "David",
-          "Solomon",
-          "Isaiah",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "1 Samuel 17:27",
-        "verseText": "Sample verse text from 1 Samuel 17:27."
-      },
-      {
-        "question": "Sample timeline question 3 (medium)?",
-        "choices": [
-          "Paul",
-          "Jeremiah",
-          "Moses",
-          "Samuel"
-        ],
-        "answer": 3,
-        "reference": "Judges 19:26",
-        "verseText": "Sample verse text from Judges 19:26."
-      },
-      {
-        "question": "Sample timeline question 4 (medium)?",
-        "choices": [
-          "Moses",
-          "Jeremiah",
-          "Peter",
-          "Paul"
-        ],
-        "answer": 3,
-        "reference": "Matthew 16:18",
-        "verseText": "Sample verse text from Matthew 16:18."
-      },
-      {
-        "question": "Sample timeline question 5 (medium)?",
-        "choices": [
-          "David",
-          "Peter",
-          "Paul",
-          "Jeremiah"
-        ],
-        "answer": 1,
-        "reference": "Acts 5:8",
-        "verseText": "Sample verse text from Acts 5:8."
-      },
-      {
-        "question": "Sample timeline question 6 (medium)?",
-        "choices": [
-          "Elijah",
-          "Jeremiah",
-          "Peter",
-          "Moses"
-        ],
-        "answer": 3,
-        "reference": "Acts 20:5",
-        "verseText": "Sample verse text from Acts 20:5."
-      },
-      {
-        "question": "Sample timeline question 7 (medium)?",
-        "choices": [
-          "Solomon",
-          "Abraham",
-          "David",
-          "Jeremiah"
-        ],
-        "answer": 0,
-        "reference": "Exodus 19:11",
-        "verseText": "Sample verse text from Exodus 19:11."
-      },
-      {
-        "question": "Sample timeline question 8 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Isaiah",
-          "Samuel",
-          "David"
-        ],
-        "answer": 2,
-        "reference": "Genesis 11:16",
-        "verseText": "Sample verse text from Genesis 11:16."
-      },
-      {
-        "question": "Sample timeline question 9 (medium)?",
-        "choices": [
-          "Elijah",
-          "Peter",
-          "Solomon",
-          "Moses"
-        ],
-        "answer": 0,
-        "reference": "2 Kings 2:15",
-        "verseText": "Sample verse text from 2 Kings 2:15."
-      },
-      {
-        "question": "Sample timeline question 10 (medium)?",
-        "choices": [
-          "Elijah",
-          "Samuel",
-          "Moses",
-          "Peter"
-        ],
-        "answer": 0,
-        "reference": "Matthew 4:30",
-        "verseText": "Sample verse text from Matthew 4:30."
-      }
-    ],
-    "Scholar": [
-      {
-        "question": "Sample timeline question 1 (hard)?",
-        "choices": [
-          "Isaiah",
-          "Elijah",
-          "Abraham",
-          "Solomon"
-        ],
-        "answer": 2,
-        "reference": "1 Kings 2:30",
-        "verseText": "Sample verse text from 1 Kings 2:30."
-      },
-      {
-        "question": "Sample timeline question 2 (hard)?",
-        "choices": [
-          "Solomon",
-          "David",
-          "Isaiah",
-          "Samuel"
-        ],
-        "answer": 2,
-        "reference": "2 Kings 8:28",
-        "verseText": "Sample verse text from 2 Kings 8:28."
-      },
-      {
-        "question": "Sample timeline question 3 (hard)?",
-        "choices": [
-          "Samuel",
-          "Abraham",
-          "David",
-          "Moses"
-        ],
-        "answer": 3,
-        "reference": "Exodus 9:4",
-        "verseText": "Sample verse text from Exodus 9:4."
-      },
-      {
-        "question": "Sample timeline question 4 (hard)?",
-        "choices": [
-          "Abraham",
-          "Isaiah",
-          "Elijah",
-          "Jeremiah"
-        ],
-        "answer": 1,
-        "reference": "2 Samuel 17:22",
-        "verseText": "Sample verse text from 2 Samuel 17:22."
-      },
-      {
-        "question": "Sample timeline question 5 (hard)?",
-        "choices": [
-          "Peter",
-          "Moses",
-          "Solomon",
-          "Elijah"
-        ],
-        "answer": 0,
-        "reference": "1 Samuel 16:27",
-        "verseText": "Sample verse text from 1 Samuel 16:27."
-      },
-      {
-        "question": "Sample timeline question 6 (hard)?",
-        "choices": [
-          "Isaiah",
-          "David",
-          "Samuel",
-          "Elijah"
-        ],
-        "answer": 3,
-        "reference": "1 Kings 12:8",
-        "verseText": "Sample verse text from 1 Kings 12:8."
-      },
-      {
-        "question": "Sample timeline question 7 (hard)?",
-        "choices": [
-          "David",
-          "Samuel",
-          "Elijah",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "2 Kings 11:19",
-        "verseText": "Sample verse text from 2 Kings 11:19."
-      },
-      {
-        "question": "Sample timeline question 8 (hard)?",
-        "choices": [
-          "Paul",
-          "Abraham",
-          "Peter",
-          "Elijah"
-        ],
-        "answer": 1,
-        "reference": "Judges 18:22",
-        "verseText": "Sample verse text from Judges 18:22."
-      },
-      {
-        "question": "Sample timeline question 9 (hard)?",
-        "choices": [
-          "Peter",
-          "Jeremiah",
-          "Isaiah",
-          "Solomon"
-        ],
-        "answer": 1,
-        "reference": "Judges 20:25",
-        "verseText": "Sample verse text from Judges 20:25."
-      },
-      {
-        "question": "Sample timeline question 10 (hard)?",
-        "choices": [
-          "Peter",
-          "Jeremiah",
-          "Abraham",
-          "Moses"
-        ],
-        "answer": 3,
-        "reference": "Exodus 1:27",
-        "verseText": "Sample verse text from Exodus 1:27."
-      }
-    ]
+  {
+    id: 12,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Am I my brother\'s keeper?"',
+    choices: ["Esau", "Cain", "Jacob", "Saul"],
+    answer: 1,
+    reference: "Genesis 4:9",
+    verseText: "I do not know. Am I my brother's keeper?"
   },
-  "Finish the Verse": {
-    "Beginner": [
-      {
-        "question": "Sample finish the verse question 1 (easy)?",
-        "choices": [
-          "Peter",
-          "Moses",
-          "Isaiah",
-          "Solomon"
-        ],
-        "answer": 0,
-        "reference": "2 Kings 5:13",
-        "verseText": "Sample verse text from 2 Kings 5:13."
-      },
-      {
-        "question": "Sample finish the verse question 2 (easy)?",
-        "choices": [
-          "Samuel",
-          "Jeremiah",
-          "Moses",
-          "Solomon"
-        ],
-        "answer": 2,
-        "reference": "Genesis 8:21",
-        "verseText": "Sample verse text from Genesis 8:21."
-      },
-      {
-        "question": "Sample finish the verse question 3 (easy)?",
-        "choices": [
-          "Peter",
-          "David",
-          "Abraham",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Exodus 19:18",
-        "verseText": "Sample verse text from Exodus 19:18."
-      },
-      {
-        "question": "Sample finish the verse question 4 (easy)?",
-        "choices": [
-          "Jeremiah",
-          "David",
-          "Abraham",
-          "Samuel"
-        ],
-        "answer": 0,
-        "reference": "Genesis 2:29",
-        "verseText": "Sample verse text from Genesis 2:29."
-      },
-      {
-        "question": "Sample finish the verse question 5 (easy)?",
-        "choices": [
-          "Isaiah",
-          "Peter",
-          "Abraham",
-          "Elijah"
-        ],
-        "answer": 1,
-        "reference": "Exodus 15:12",
-        "verseText": "Sample verse text from Exodus 15:12."
-      },
-      {
-        "question": "Sample finish the verse question 6 (easy)?",
-        "choices": [
-          "Isaiah",
-          "Peter",
-          "Paul",
-          "Samuel"
-        ],
-        "answer": 3,
-        "reference": "1 Samuel 16:13",
-        "verseText": "Sample verse text from 1 Samuel 16:13."
-      },
-      {
-        "question": "Sample finish the verse question 7 (easy)?",
-        "choices": [
-          "Abraham",
-          "Moses",
-          "Solomon",
-          "Jeremiah"
-        ],
-        "answer": 2,
-        "reference": "Acts 10:25",
-        "verseText": "Sample verse text from Acts 10:25."
-      },
-      {
-        "question": "Sample finish the verse question 8 (easy)?",
-        "choices": [
-          "Samuel",
-          "David",
-          "Isaiah",
-          "Abraham"
-        ],
-        "answer": 1,
-        "reference": "Matthew 6:21",
-        "verseText": "Sample verse text from Matthew 6:21."
-      },
-      {
-        "question": "Sample finish the verse question 9 (easy)?",
-        "choices": [
-          "Isaiah",
-          "Abraham",
-          "Solomon",
-          "Peter"
-        ],
-        "answer": 2,
-        "reference": "Acts 12:27",
-        "verseText": "Sample verse text from Acts 12:27."
-      },
-      {
-        "question": "Sample finish the verse question 10 (easy)?",
-        "choices": [
-          "Elijah",
-          "Solomon",
-          "Moses",
-          "Jeremiah"
-        ],
-        "answer": 1,
-        "reference": "2 Kings 14:16",
-        "verseText": "Sample verse text from 2 Kings 14:16."
-      }
-    ],
-    "Student": [
-      {
-        "question": "Sample finish the verse question 1 (medium)?",
-        "choices": [
-          "Moses",
-          "Peter",
-          "Solomon",
-          "Jeremiah"
-        ],
-        "answer": 1,
-        "reference": "Matthew 16:20",
-        "verseText": "Sample verse text from Matthew 16:20."
-      },
-      {
-        "question": "Sample finish the verse question 2 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Samuel",
-          "Moses",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Genesis 18:6",
-        "verseText": "Sample verse text from Genesis 18:6."
-      },
-      {
-        "question": "Sample finish the verse question 3 (medium)?",
-        "choices": [
-          "Peter",
-          "Isaiah",
-          "Samuel",
-          "Elijah"
-        ],
-        "answer": 0,
-        "reference": "Exodus 15:26",
-        "verseText": "Sample verse text from Exodus 15:26."
-      },
-      {
-        "question": "Sample finish the verse question 4 (medium)?",
-        "choices": [
-          "Samuel",
-          "David",
-          "Solomon",
-          "Paul"
-        ],
-        "answer": 2,
-        "reference": "Exodus 8:13",
-        "verseText": "Sample verse text from Exodus 8:13."
-      },
-      {
-        "question": "Sample finish the verse question 5 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Solomon",
-          "Samuel",
-          "Elijah"
-        ],
-        "answer": 2,
-        "reference": "1 Kings 14:15",
-        "verseText": "Sample verse text from 1 Kings 14:15."
-      },
-      {
-        "question": "Sample finish the verse question 6 (medium)?",
-        "choices": [
-          "Abraham",
-          "Elijah",
-          "Isaiah",
-          "David"
-        ],
-        "answer": 3,
-        "reference": "2 Samuel 17:19",
-        "verseText": "Sample verse text from 2 Samuel 17:19."
-      },
-      {
-        "question": "Sample finish the verse question 7 (medium)?",
-        "choices": [
-          "Isaiah",
-          "Paul",
-          "Peter",
-          "David"
-        ],
-        "answer": 0,
-        "reference": "Acts 19:1",
-        "verseText": "Sample verse text from Acts 19:1."
-      },
-      {
-        "question": "Sample finish the verse question 8 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Abraham",
-          "Samuel",
-          "Isaiah"
-        ],
-        "answer": 1,
-        "reference": "2 Kings 6:14",
-        "verseText": "Sample verse text from 2 Kings 6:14."
-      },
-      {
-        "question": "Sample finish the verse question 9 (medium)?",
-        "choices": [
-          "Samuel",
-          "Solomon",
-          "Moses",
-          "Paul"
-        ],
-        "answer": 2,
-        "reference": "Matthew 4:20",
-        "verseText": "Sample verse text from Matthew 4:20."
-      },
-      {
-        "question": "Sample finish the verse question 10 (medium)?",
-        "choices": [
-          "Peter",
-          "Moses",
-          "Isaiah",
-          "Solomon"
-        ],
-        "answer": 3,
-        "reference": "Acts 9:29",
-        "verseText": "Sample verse text from Acts 9:29."
-      }
-    ],
-    "Scholar": [
-      {
-        "question": "Sample finish the verse question 1 (hard)?",
-        "choices": [
-          "Solomon",
-          "David",
-          "Elijah",
-          "Abraham"
-        ],
-        "answer": 0,
-        "reference": "Joshua 6:27",
-        "verseText": "Sample verse text from Joshua 6:27."
-      },
-      {
-        "question": "Sample finish the verse question 2 (hard)?",
-        "choices": [
-          "Abraham",
-          "Paul",
-          "Peter",
-          "Jeremiah"
-        ],
-        "answer": 0,
-        "reference": "1 Samuel 18:13",
-        "verseText": "Sample verse text from 1 Samuel 18:13."
-      },
-      {
-        "question": "Sample finish the verse question 3 (hard)?",
-        "choices": [
-          "Moses",
-          "Samuel",
-          "Isaiah",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "1 Samuel 7:17",
-        "verseText": "Sample verse text from 1 Samuel 7:17."
-      },
-      {
-        "question": "Sample finish the verse question 4 (hard)?",
-        "choices": [
-          "Moses",
-          "Peter",
-          "David",
-          "Abraham"
-        ],
-        "answer": 2,
-        "reference": "Genesis 9:11",
-        "verseText": "Sample verse text from Genesis 9:11."
-      },
-      {
-        "question": "Sample finish the verse question 5 (hard)?",
-        "choices": [
-          "Abraham",
-          "Peter",
-          "David",
-          "Samuel"
-        ],
-        "answer": 1,
-        "reference": "Exodus 15:13",
-        "verseText": "Sample verse text from Exodus 15:13."
-      },
-      {
-        "question": "Sample finish the verse question 6 (hard)?",
-        "choices": [
-          "Elijah",
-          "Samuel",
-          "Solomon",
-          "David"
-        ],
-        "answer": 3,
-        "reference": "Exodus 10:10",
-        "verseText": "Sample verse text from Exodus 10:10."
-      },
-      {
-        "question": "Sample finish the verse question 7 (hard)?",
-        "choices": [
-          "Jeremiah",
-          "Abraham",
-          "Samuel",
-          "Solomon"
-        ],
-        "answer": 1,
-        "reference": "Exodus 14:7",
-        "verseText": "Sample verse text from Exodus 14:7."
-      },
-      {
-        "question": "Sample finish the verse question 8 (hard)?",
-        "choices": [
-          "Jeremiah",
-          "Elijah",
-          "Solomon",
-          "Peter"
-        ],
-        "answer": 0,
-        "reference": "Genesis 14:17",
-        "verseText": "Sample verse text from Genesis 14:17."
-      },
-      {
-        "question": "Sample finish the verse question 9 (hard)?",
-        "choices": [
-          "David",
-          "Elijah",
-          "Jeremiah",
-          "Moses"
-        ],
-        "answer": 2,
-        "reference": "Exodus 1:6",
-        "verseText": "Sample verse text from Exodus 1:6."
-      },
-      {
-        "question": "Sample finish the verse question 10 (hard)?",
-        "choices": [
-          "Solomon",
-          "Paul",
-          "Moses",
-          "Isaiah"
-        ],
-        "answer": 0,
-        "reference": "1 Samuel 9:12",
-        "verseText": "Sample verse text from 1 Samuel 9:12."
-      }
-    ]
+  {
+    id: 13,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Choose this day whom you will serve"?',
+    choices: ["Joshua", "Moses", "Elijah", "Peter"],
+    answer: 0,
+    reference: "Joshua 24:15",
+    verseText: "Choose for yourselves this day whom you will serve."
   },
-  "Prophecy Quiz": {
-    "Beginner": [
-      {
-        "question": "Sample prophecy question 1 (easy)?",
-        "choices": [
-          "Paul",
-          "Elijah",
-          "Samuel",
-          "Abraham"
-        ],
-        "answer": 3,
-        "reference": "Judges 10:23",
-        "verseText": "Sample verse text from Judges 10:23."
-      },
-      {
-        "question": "Sample prophecy question 2 (easy)?",
-        "choices": [
-          "Peter",
-          "David",
-          "Paul",
-          "Moses"
-        ],
-        "answer": 3,
-        "reference": "1 Kings 8:17",
-        "verseText": "Sample verse text from 1 Kings 8:17."
-      },
-      {
-        "question": "Sample prophecy question 3 (easy)?",
-        "choices": [
-          "Elijah",
-          "Paul",
-          "Solomon",
-          "Isaiah"
-        ],
-        "answer": 0,
-        "reference": "2 Kings 20:4",
-        "verseText": "Sample verse text from 2 Kings 20:4."
-      },
-      {
-        "question": "Sample prophecy question 4 (easy)?",
-        "choices": [
-          "Paul",
-          "Abraham",
-          "Samuel",
-          "Isaiah"
-        ],
-        "answer": 2,
-        "reference": "2 Kings 15:2",
-        "verseText": "Sample verse text from 2 Kings 15:2."
-      },
-      {
-        "question": "Sample prophecy question 5 (easy)?",
-        "choices": [
-          "Samuel",
-          "Paul",
-          "Moses",
-          "Isaiah"
-        ],
-        "answer": 3,
-        "reference": "1 Samuel 19:25",
-        "verseText": "Sample verse text from 1 Samuel 19:25."
-      },
-      {
-        "question": "Sample prophecy question 6 (easy)?",
-        "choices": [
-          "Paul",
-          "David",
-          "Samuel",
-          "Abraham"
-        ],
-        "answer": 1,
-        "reference": "Exodus 15:3",
-        "verseText": "Sample verse text from Exodus 15:3."
-      },
-      {
-        "question": "Sample prophecy question 7 (easy)?",
-        "choices": [
-          "Peter",
-          "Abraham",
-          "Elijah",
-          "Samuel"
-        ],
-        "answer": 1,
-        "reference": "Exodus 10:20",
-        "verseText": "Sample verse text from Exodus 10:20."
-      },
-      {
-        "question": "Sample prophecy question 8 (easy)?",
-        "choices": [
-          "Abraham",
-          "Jeremiah",
-          "Moses",
-          "Samuel"
-        ],
-        "answer": 1,
-        "reference": "Matthew 19:23",
-        "verseText": "Sample verse text from Matthew 19:23."
-      },
-      {
-        "question": "Sample prophecy question 9 (easy)?",
-        "choices": [
-          "Paul",
-          "Solomon",
-          "Elijah",
-          "Jeremiah"
-        ],
-        "answer": 3,
-        "reference": "Genesis 20:22",
-        "verseText": "Sample verse text from Genesis 20:22."
-      },
-      {
-        "question": "Sample prophecy question 10 (easy)?",
-        "choices": [
-          "Abraham",
-          "Solomon",
-          "David",
-          "Paul"
-        ],
-        "answer": 1,
-        "reference": "Genesis 16:23",
-        "verseText": "Sample verse text from Genesis 16:23."
-      }
-    ],
-    "Student": [
-      {
-        "question": "Sample prophecy question 1 (medium)?",
-        "choices": [
-          "Solomon",
-          "Peter",
-          "David",
-          "Elijah"
-        ],
-        "answer": 3,
-        "reference": "Acts 7:11",
-        "verseText": "Sample verse text from Acts 7:11."
-      },
-      {
-        "question": "Sample prophecy question 2 (medium)?",
-        "choices": [
-          "Paul",
-          "Moses",
-          "Isaiah",
-          "Peter"
-        ],
-        "answer": 2,
-        "reference": "1 Samuel 8:1",
-        "verseText": "Sample verse text from 1 Samuel 8:1."
-      },
-      {
-        "question": "Sample prophecy question 3 (medium)?",
-        "choices": [
-          "David",
-          "Peter",
-          "Moses",
-          "Abraham"
-        ],
-        "answer": 2,
-        "reference": "2 Kings 4:3",
-        "verseText": "Sample verse text from 2 Kings 4:3."
-      },
-      {
-        "question": "Sample prophecy question 4 (medium)?",
-        "choices": [
-          "Solomon",
-          "Jeremiah",
-          "Elijah",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Matthew 16:26",
-        "verseText": "Sample verse text from Matthew 16:26."
-      },
-      {
-        "question": "Sample prophecy question 5 (medium)?",
-        "choices": [
-          "Samuel",
-          "Moses",
-          "Solomon",
-          "Paul"
-        ],
-        "answer": 2,
-        "reference": "Acts 10:3",
-        "verseText": "Sample verse text from Acts 10:3."
-      },
-      {
-        "question": "Sample prophecy question 6 (medium)?",
-        "choices": [
-          "Elijah",
-          "Peter",
-          "Isaiah",
-          "Solomon"
-        ],
-        "answer": 3,
-        "reference": "Acts 13:6",
-        "verseText": "Sample verse text from Acts 13:6."
-      },
-      {
-        "question": "Sample prophecy question 7 (medium)?",
-        "choices": [
-          "Jeremiah",
-          "Paul",
-          "David",
-          "Abraham"
-        ],
-        "answer": 1,
-        "reference": "1 Samuel 14:17",
-        "verseText": "Sample verse text from 1 Samuel 14:17."
-      },
-      {
-        "question": "Sample prophecy question 8 (medium)?",
-        "choices": [
-          "Peter",
-          "Paul",
-          "Isaiah",
-          "David"
-        ],
-        "answer": 3,
-        "reference": "Matthew 18:26",
-        "verseText": "Sample verse text from Matthew 18:26."
-      },
-      {
-        "question": "Sample prophecy question 9 (medium)?",
-        "choices": [
-          "Elijah",
-          "Solomon",
-          "Jeremiah",
-          "Moses"
-        ],
-        "answer": 1,
-        "reference": "Genesis 1:5",
-        "verseText": "Sample verse text from Genesis 1:5."
-      },
-      {
-        "question": "Sample prophecy question 10 (medium)?",
-        "choices": [
-          "Solomon",
-          "Peter",
-          "Moses",
-          "David"
-        ],
-        "answer": 2,
-        "reference": "Exodus 19:20",
-        "verseText": "Sample verse text from Exodus 19:20."
-      }
-    ],
-    "Scholar": [
-      {
-        "question": "Sample prophecy question 1 (hard)?",
-        "choices": [
-          "Jeremiah",
-          "David",
-          "Samuel",
-          "Abraham"
-        ],
-        "answer": 0,
-        "reference": "1 Kings 2:13",
-        "verseText": "Sample verse text from 1 Kings 2:13."
-      },
-      {
-        "question": "Sample prophecy question 2 (hard)?",
-        "choices": [
-          "Elijah",
-          "Solomon",
-          "Isaiah",
-          "Peter"
-        ],
-        "answer": 3,
-        "reference": "Genesis 9:13",
-        "verseText": "Sample verse text from Genesis 9:13."
-      },
-      {
-        "question": "Sample prophecy question 3 (hard)?",
-        "choices": [
-          "Abraham",
-          "Peter",
-          "Samuel",
-          "Isaiah"
-        ],
-        "answer": 1,
-        "reference": "2 Samuel 13:26",
-        "verseText": "Sample verse text from 2 Samuel 13:26."
-      },
-      {
-        "question": "Sample prophecy question 4 (hard)?",
-        "choices": [
-          "Peter",
-          "Elijah",
-          "Jeremiah",
-          "Samuel"
-        ],
-        "answer": 3,
-        "reference": "1 Kings 3:6",
-        "verseText": "Sample verse text from 1 Kings 3:6."
-      },
-      {
-        "question": "Sample prophecy question 5 (hard)?",
-        "choices": [
-          "David",
-          "Jeremiah",
-          "Solomon",
-          "Abraham"
-        ],
-        "answer": 2,
-        "reference": "Acts 7:5",
-        "verseText": "Sample verse text from Acts 7:5."
-      },
-      {
-        "question": "Sample prophecy question 6 (hard)?",
-        "choices": [
-          "Samuel",
-          "Jeremiah",
-          "Peter",
-          "Paul"
-        ],
-        "answer": 0,
-        "reference": "Matthew 16:8",
-        "verseText": "Sample verse text from Matthew 16:8."
-      },
-      {
-        "question": "Sample prophecy question 7 (hard)?",
-        "choices": [
-          "Jeremiah",
-          "David",
-          "Samuel",
-          "Paul"
-        ],
-        "answer": 3,
-        "reference": "Matthew 11:6",
-        "verseText": "Sample verse text from Matthew 11:6."
-      },
-      {
-        "question": "Sample prophecy question 8 (hard)?",
-        "choices": [
-          "Samuel",
-          "Moses",
-          "Jeremiah",
-          "David"
-        ],
-        "answer": 1,
-        "reference": "Matthew 12:4",
-        "verseText": "Sample verse text from Matthew 12:4."
-      },
-      {
-        "question": "Sample prophecy question 9 (hard)?",
-        "choices": [
-          "Abraham",
-          "Isaiah",
-          "Jeremiah",
-          "Peter"
-        ],
-        "answer": 0,
-        "reference": "Genesis 12:22",
-        "verseText": "Sample verse text from Genesis 12:22."
-      },
-      {
-        "question": "Sample prophecy question 10 (hard)?",
-        "choices": [
-          "Abraham",
-          "David",
-          "Elijah",
-          "Paul"
-        ],
-        "answer": 3,
-        "reference": "Judges 2:10",
-        "verseText": "Sample verse text from Judges 2:10."
-      }
-    ]
+  {
+    id: 14,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Student",
+    question: 'Who said, "Here am I; send me"?',
+    choices: ["Jeremiah", "Ezekiel", "Isaiah", "Samuel"],
+    answer: 2,
+    reference: "Isaiah 6:8",
+    verseText: "Here am I! Send me."
+  },
+  {
+    id: 15,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "As for me and my house, we will serve the Lord"?',
+    choices: ["David", "Joshua", "Nehemiah", "Abraham"],
+    answer: 1,
+    reference: "Joshua 24:15",
+    verseText: "As for me and my house, we will serve the Lord."
+  },
+  {
+    id: 16,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Though he slay me, yet will I trust in him"?',
+    choices: ["David", "Job", "Jeremiah", "Paul"],
+    answer: 1,
+    reference: "Job 13:15",
+    verseText: "Though He slay me, yet will I trust Him."
+  },
+  {
+    id: 17,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "I know that my redeemer lives"?',
+    choices: ["Isaiah", "Daniel", "Job", "Thomas"],
+    answer: 2,
+    reference: "Job 19:25",
+    verseText: "For I know that my Redeemer lives."
+  },
+  {
+    id: 18,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: 'Who said, "Whom shall I send, and who will go for us?"',
+    choices: ["The Lord", "Moses", "Isaiah", "Gabriel"],
+    answer: 0,
+    reference: "Isaiah 6:8",
+    verseText: "Whom shall I send, and who will go for Us?"
+  },
+
+  // Bible Timeline
+  {
+    id: 19,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first?",
+    choices: ["The Flood", "Creation", "Exodus", "David becomes king"],
+    answer: 1,
+    reference: "Genesis 1:1",
+    verseText: "In the beginning God created the heavens and the earth."
+  },
+  {
+    id: 20,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened after Moses led Israel out of Egypt?",
+    choices: ["Jesus was born", "The Temple was built", "Israel crossed the Red Sea", "David fought Goliath"],
+    answer: 2,
+    reference: "Exodus 14:21-22",
+    verseText: "The children of Israel went into the midst of the sea on the dry ground."
+  },
+  {
+    id: 21,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened before the birth of Jesus?",
+    choices: ["Paul's conversion", "The exile to Babylon", "Pentecost", "The resurrection"],
+    answer: 1,
+    reference: "2 Kings 25:8-11",
+    verseText: "He carried into captivity all Jerusalem."
+  },
+  {
+    id: 22,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first?",
+    choices: ["David becomes king", "Abraham leaves Haran", "Solomon builds the Temple", "Israel enters Canaan"],
+    answer: 1,
+    reference: "Genesis 12:4",
+    verseText: "Abram departed as the Lord had spoken to him."
+  },
+  {
+    id: 23,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened after David became king?",
+    choices: ["Solomon builds the Temple", "The Flood", "Joseph goes to Egypt", "The Exodus"],
+    answer: 0,
+    reference: "1 Kings 6:1",
+    verseText: "He began to build the house of the Lord."
+  },
+  {
+    id: 24,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first?",
+    choices: ["The Babylonian exile", "The ministry of Elijah", "The resurrection of Christ", "Pentecost"],
+    answer: 1,
+    reference: "1 Kings 17:1",
+    verseText: "Elijah the Tishbite... said to Ahab."
+  },
+  {
+    id: 25,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which event belongs latest in the Old Testament timeline?",
+    choices: ["The Flood", "Return from exile", "Exodus", "Judges"],
+    answer: 1,
+    reference: "Ezra 1:1-3",
+    verseText: "Who is among you of all His people?... let him go up to Jerusalem."
+  },
+  {
+    id: 26,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which happened first?",
+    choices: ["Division of the kingdom", "Solomon's reign", "David's reign", "Samuel's ministry"],
+    answer: 3,
+    reference: "1 Samuel 3:19-20",
+    verseText: "Samuel grew, and the Lord was with him."
+  },
+  {
+    id: 27,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which came before the rebuilding of Jerusalem's walls?",
+    choices: ["Nehemiah", "Ezra's return", "Pentecost", "John the Baptist"],
+    answer: 1,
+    reference: "Ezra 7:6-9",
+    verseText: "Ezra came up from Babylon."
+  },
+
+  // Finish the Verse
+  {
+    id: 28,
+    game: "Finish the Verse",
+    testament: "Old Testament",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: 'Finish the verse: "The Lord is my shepherd; ____."',
+    choices: ["I shall not want", "He is my rock", "I will fear no evil", "His mercy endures"],
+    answer: 0,
+    reference: "Psalm 23:1",
+    verseText: "The Lord is my shepherd; I shall not want."
+  },
+  {
+    id: 29,
+    game: "Finish the Verse",
+    testament: "Old Testament",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: 'Finish the verse: "In the beginning God created the ____ and the earth."',
+    choices: ["light", "heavens", "angels", "sea"],
+    answer: 1,
+    reference: "Genesis 1:1",
+    verseText: "In the beginning God created the heavens and the earth."
+  },
+  {
+    id: 30,
+    game: "Finish the Verse",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: 'Finish the verse: "Jesus wept." This verse is found in:',
+    choices: ["John 11:35", "Matthew 5:9", "Luke 2:10", "Psalm 23:1"],
+    answer: 0,
+    reference: "John 11:35",
+    verseText: "Jesus wept."
+  },
+  {
+    id: 31,
+    game: "Finish the Verse",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Student",
+    question: 'Finish the verse: "For all have sinned and fall short of the ____ of God."',
+    choices: ["truth", "grace", "law", "glory"],
+    answer: 3,
+    reference: "Romans 3:23",
+    verseText: "For all have sinned and fall short of the glory of God."
+  },
+  {
+    id: 32,
+    game: "Finish the Verse",
+    testament: "Old Testament",
+    category: "Teachings",
+    difficulty: "Student",
+    question: 'Finish the verse: "Trust in the Lord with all thine heart; and lean not unto thine own ____."',
+    choices: ["strength", "understanding", "wisdom", "way"],
+    answer: 1,
+    reference: "Proverbs 3:5",
+    verseText: "Lean not on your own understanding."
+  },
+  {
+    id: 33,
+    game: "Finish the Verse",
+    testament: "Old Testament",
+    category: "Teachings",
+    difficulty: "Student",
+    question: 'Finish the verse: "Thy word is a lamp unto my feet, and a ____ unto my path."',
+    choices: ["light", "sword", "shield", "guide"],
+    answer: 0,
+    reference: "Psalm 119:105",
+    verseText: "Your word is a lamp to my feet and a light to my path."
+  },
+  {
+    id: 34,
+    game: "Finish the Verse",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: 'Finish the verse: "Man shall not live by bread alone, but by every word that proceeds out of the mouth of ____."',
+    choices: ["the prophets", "God", "Moses", "the Lord of hosts"],
+    answer: 1,
+    reference: "Matthew 4:4",
+    verseText: "Man shall not live by bread alone, but by every word that proceeds from the mouth of God."
+  },
+  {
+    id: 35,
+    game: "Finish the Verse",
+    testament: "Old Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: 'Finish the verse: "The just shall live by ____."',
+    choices: ["works", "grace", "faith", "hope"],
+    answer: 2,
+    reference: "Habakkuk 2:4",
+    verseText: "The just shall live by his faith."
+  },
+  {
+    id: 36,
+    game: "Finish the Verse",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: 'Finish the verse: "Be ye doers of the word, and not hearers only, deceiving your own ____."',
+    choices: ["hearts", "selves", "minds", "souls"],
+    answer: 1,
+    reference: "James 1:22",
+    verseText: "Be doers of the word, and not hearers only, deceiving yourselves."
+  },
+
+  // Prophecy Quiz
+  {
+    id: 37,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Beginner",
+    question: "Which prophet was swallowed by a great fish?",
+    choices: ["Jonah", "Isaiah", "Elijah", "Amos"],
+    answer: 0,
+    reference: "Jonah 1:17",
+    verseText: "Now the Lord had prepared a great fish to swallow Jonah."
+  },
+  {
+    id: 38,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Beginner",
+    question: "Who interpreted dreams in Babylon?",
+    choices: ["Daniel", "Jeremiah", "Micah", "Hosea"],
+    answer: 0,
+    reference: "Daniel 2:19",
+    verseText: "The secret was revealed to Daniel in a night vision."
+  },
+  {
+    id: 39,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Beginner",
+    question: "Who confronted the prophets of Baal on Mount Carmel?",
+    choices: ["Elijah", "Elisha", "Nathan", "Joel"],
+    answer: 0,
+    reference: "1 Kings 18:22",
+    verseText: "I alone am left a prophet of the Lord; but Baal's prophets are four hundred and fifty men."
+  },
+  {
+    id: 40,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Student",
+    question: "Which prophet foretold the Messiah would be born in Bethlehem?",
+    choices: ["Micah", "Nahum", "Obadiah", "Haggai"],
+    answer: 0,
+    reference: "Micah 5:2",
+    verseText: "Out of you shall come forth to Me the One to be Ruler in Israel."
+  },
+  {
+    id: 41,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Student",
+    question: "Which prophet saw a valley of dry bones?",
+    choices: ["Isaiah", "Daniel", "Ezekiel", "Zechariah"],
+    answer: 2,
+    reference: "Ezekiel 37:1-2",
+    verseText: "He set me down in the midst of the valley; and it was full of bones."
+  },
+  {
+    id: 42,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Student",
+    question: 'Which prophet declared, "The just shall live by faith"?',
+    choices: ["Habakkuk", "Malachi", "Joel", "Zephaniah"],
+    answer: 0,
+    reference: "Habakkuk 2:4",
+    verseText: "The just shall live by his faith."
+  },
+  {
+    id: 43,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Scholar",
+    question: "Which prophet spoke of seventy weeks determined upon thy people?",
+    choices: ["Isaiah", "Daniel", "Jeremiah", "Zechariah"],
+    answer: 1,
+    reference: "Daniel 9:24",
+    verseText: "Seventy weeks are determined for your people and for your holy city."
+  },
+  {
+    id: 44,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Scholar",
+    question: "Which prophet described the coming Messenger who would prepare the way?",
+    choices: ["Malachi", "Amos", "Hosea", "Obadiah"],
+    answer: 0,
+    reference: "Malachi 3:1",
+    verseText: "Behold, I send My messenger, and he will prepare the way before Me."
+  },
+  {
+    id: 45,
+    game: "Prophecy Quiz",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Scholar",
+    question: 'Which prophet said, "They shall look upon me whom they have pierced"?',
+    choices: ["Zechariah", "Joel", "Isaiah", "Micah"],
+    answer: 0,
+    reference: "Zechariah 12:10",
+    verseText: "They will look on Me whom they pierced."
   }
-};
+  ,
+  // Miracles of Jesus
+  {
+    id: 46,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Beginner",
+    question: "At the wedding in Cana, what did Jesus turn into wine?",
+    choices: ["Milk", "Water", "Oil", "Honey"],
+    answer: 1,
+    reference: "John 2:1-11",
+    verseText: "This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory; and his disciples believed on him."
+  },
+  {
+    id: 47,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Beginner",
+    question: "How many loaves were used when Jesus fed the five thousand?",
+    choices: ["Three", "Five", "Seven", "Twelve"],
+    answer: 1,
+    reference: "Matthew 14:17-21",
+    verseText: "And they say unto him, We have here but five loaves, and two fishes."
+  },
+  {
+    id: 48,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Beginner",
+    question: "What did Jesus calm on the Sea of Galilee?",
+    choices: ["A fire", "A crowd", "A storm", "A drought"],
+    answer: 2,
+    reference: "Mark 4:39",
+    verseText: "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm."
+  },
+  {
+    id: 49,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Student",
+    question: "Whom did Jesus raise after saying, 'Lazarus, come forth'?",
+    choices: ["Jairus's daughter", "The widow's son", "Lazarus", "Stephen"],
+    answer: 2,
+    reference: "John 11:43-44",
+    verseText: "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth."
+  },
+  {
+    id: 50,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Student",
+    question: "How many baskets were taken up after Jesus fed the five thousand?",
+    choices: ["Seven", "Ten", "Twelve", "Fourteen"],
+    answer: 2,
+    reference: "Matthew 14:20",
+    verseText: "And they did all eat, and were filled: and they took up of the fragments that remained twelve baskets full."
+  },
+  {
+    id: 51,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Student",
+    question: "What happened when the woman with the issue of blood touched Jesus' garment?",
+    choices: ["Nothing happened", "She was healed", "She fell asleep", "She became blind"],
+    answer: 1,
+    reference: "Mark 5:29",
+    verseText: "And straightway the fountain of her blood was dried up; and she felt in her body that she was healed of that plague."
+  },
+  {
+    id: 52,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Scholar",
+    question: "In which miracle did Jesus use clay and tell a man to wash in the pool of Siloam?",
+    choices: ["Healing the centurion's servant", "Healing the man born blind", "Healing the leper", "Healing the paralytic"],
+    answer: 1,
+    reference: "John 9:6-7",
+    verseText: "He spat on the ground, and made clay of the spittle... and said unto him, Go, wash in the pool of Siloam."
+  },
+  {
+    id: 53,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Scholar",
+    question: "After Jesus cursed the fig tree, what happened to it?",
+    choices: ["It blossomed", "It bore fruit", "It withered away", "It was struck by lightning"],
+    answer: 2,
+    reference: "Mark 11:20-21",
+    verseText: "And in the morning, as they passed by, they saw the fig tree dried up from the roots."
+  },
+  {
+    id: 54,
+    game: "Miracles of Jesus",
+    testament: "New Testament",
+    category: "Miracles",
+    difficulty: "Scholar",
+    question: "Which servant's severed ear did Jesus heal at his arrest?",
+    choices: ["Malchus", "Bartimaeus", "Crispus", "Ananias"],
+    answer: 0,
+    reference: "Luke 22:50-51; John 18:10",
+    verseText: "And he touched his ear, and healed him."
+  },
 
-const quizQuestions = buildQuizQuestionPool(groupedQuestions);
+  // Old Testament Events
+  {
+    id: 55,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Who built the ark before the flood?",
+    choices: ["Abraham", "Moses", "Noah", "David"],
+    answer: 2,
+    reference: "Genesis 6:13-22",
+    verseText: "Thus did Noah; according to all that God commanded him, so did he."
+  },
+  {
+    id: 56,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Who led Israel out of Egypt?",
+    choices: ["Joshua", "Samuel", "Moses", "Aaron"],
+    answer: 2,
+    reference: "Exodus 3:10",
+    verseText: "Come now therefore, and I will send thee unto Pharaoh, that thou mayest bring forth my people the children of Israel out of Egypt."
+  },
+  {
+    id: 57,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What did David use to defeat Goliath?",
+    choices: ["A spear", "A sword", "A sling and a stone", "A bow and arrow"],
+    answer: 2,
+    reference: "1 Samuel 17:49-50",
+    verseText: "So David prevailed over the Philistine with a sling and with a stone."
+  },
+  {
+    id: 58,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What happened to the walls of Jericho after Israel marched around the city?",
+    choices: ["They grew taller", "They fell down", "They caught fire", "They turned to gold"],
+    answer: 1,
+    reference: "Joshua 6:20",
+    verseText: "So the people shouted... and the wall fell down flat."
+  },
+  {
+    id: 59,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Who was thrown into a den of lions?",
+    choices: ["Joseph", "Daniel", "Jeremiah", "Elijah"],
+    answer: 1,
+    reference: "Daniel 6:16",
+    verseText: "Then the king commanded, and they brought Daniel, and cast him into the den of lions."
+  },
+  {
+    id: 60,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which sea parted so Israel could cross on dry ground?",
+    choices: ["Dead Sea", "Sea of Galilee", "Red Sea", "Mediterranean Sea"],
+    answer: 2,
+    reference: "Exodus 14:21-22",
+    verseText: "And the children of Israel went into the midst of the sea upon the dry ground."
+  },
+  {
+    id: 61,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "On which mountain did Abraham prepare to offer Isaac?",
+    choices: ["Mount Sinai", "Mount Carmel", "Mount Moriah", "Mount Nebo"],
+    answer: 2,
+    reference: "Genesis 22:2",
+    verseText: "Get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."
+  },
+  {
+    id: 62,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which king saw the handwriting on the wall during a feast?",
+    choices: ["Nebuchadnezzar", "Belshazzar", "Darius", "Ahasuerus"],
+    answer: 1,
+    reference: "Daniel 5:5-6",
+    verseText: "In the same hour came forth fingers of a man's hand, and wrote... upon the plaister of the wall of the king's palace."
+  },
+  {
+    id: 63,
+    game: "Old Testament Events",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What sign did God give after the flood as a token of his covenant with Noah?",
+    choices: ["A pillar of fire", "A dove", "A rainbow", "A star"],
+    answer: 2,
+    reference: "Genesis 9:13",
+    verseText: "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth."
+  },
+
+  // Parables
+  {
+    id: 64,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: "In the parable of the Good Samaritan, who helped the wounded man?",
+    choices: ["A priest", "A Levite", "A Samaritan", "An innkeeper"],
+    answer: 2,
+    reference: "Luke 10:33-34",
+    verseText: "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he had compassion on him."
+  },
+  {
+    id: 65,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: "In the parable of the sower, where did some seed fall and spring up quickly but wither?",
+    choices: ["On stony ground", "In deep water", "In a house", "On a mountain"],
+    answer: 0,
+    reference: "Matthew 13:5-6",
+    verseText: "Some fell upon stony places... and when the sun was up, they were scorched."
+  },
+  {
+    id: 66,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: "Who returned home in the parable of the Prodigal Son?",
+    choices: ["The older brother", "The younger son", "The servant", "The neighbor"],
+    answer: 1,
+    reference: "Luke 15:20",
+    verseText: "And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion."
+  },
+  {
+    id: 67,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Student",
+    question: "In the parable of the lost sheep, how many sheep did the shepherd leave to find the one that was lost?",
+    choices: ["Nine", "Ninety and nine", "Seventy", "Fifty"],
+    answer: 1,
+    reference: "Luke 15:4",
+    verseText: "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost?"
+  },
+  {
+    id: 68,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Student",
+    question: "In the parable of the ten virgins, what did the wise virgins take with their lamps?",
+    choices: ["Bread", "Money", "Oil", "Water"],
+    answer: 2,
+    reference: "Matthew 25:3-4",
+    verseText: "But the wise took oil in their vessels with their lamps."
+  },
+  {
+    id: 69,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Student",
+    question: "In the parable of the mustard seed, the kingdom of heaven is likened to a seed that becomes what?",
+    choices: ["A river", "A great tree", "A crown", "A net"],
+    answer: 1,
+    reference: "Matthew 13:31-32",
+    verseText: "Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs, and becometh a tree."
+  },
+  {
+    id: 70,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: "In the parable of the talents, what did the servant with one talent do with it?",
+    choices: ["He invested it", "He gave it away", "He buried it", "He lost it at sea"],
+    answer: 2,
+    reference: "Matthew 25:18",
+    verseText: "But he that had received one went and digged in the earth, and hid his lord's money."
+  },
+  {
+    id: 71,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: "In the parable of the Pharisee and the publican, who went down to his house justified?",
+    choices: ["The Pharisee", "The publican", "Both men", "Neither man"],
+    answer: 1,
+    reference: "Luke 18:13-14",
+    verseText: "I tell you, this man went down to his house justified rather than the other."
+  },
+  {
+    id: 72,
+    game: "Parables",
+    testament: "New Testament",
+    category: "Teachings",
+    difficulty: "Scholar",
+    question: "In the parable of the wicked husbandmen, what did the owner finally send to the vineyard workers?",
+    choices: ["His steward", "His army", "His son", "His brother"],
+    answer: 2,
+    reference: "Mark 12:6",
+    verseText: "Having yet therefore one son, his wellbeloved, he sent him also last unto them."
+  },
+
+  // Bible Geography
+  {
+    id: 73,
+    game: "Bible Geography",
+    testament: "Both",
+    category: "Places",
+    difficulty: "Beginner",
+    question: "In what city was Jesus born?",
+    choices: ["Nazareth", "Jerusalem", "Bethlehem", "Capernaum"],
+    answer: 2,
+    reference: "Matthew 2:1",
+    verseText: "Now when Jesus was born in Bethlehem of Judaea..."
+  },
+  {
+    id: 74,
+    game: "Bible Geography",
+    testament: "New Testament",
+    category: "Places",
+    difficulty: "Beginner",
+    question: "What river was Jesus baptized in?",
+    choices: ["Jordan River", "Nile River", "Euphrates River", "Jabbok River"],
+    answer: 0,
+    reference: "Matthew 3:13",
+    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
+  },
+  {
+    id: 75,
+    game: "Bible Geography",
+    testament: "Old Testament",
+    category: "Places",
+    difficulty: "Beginner",
+    question: "On what mountain did Noah's ark rest?",
+    choices: ["Mount Sinai", "Mount Zion", "Mount Ararat", "Mount Carmel"],
+    answer: 2,
+    reference: "Genesis 8:4",
+    verseText: "And the ark rested... upon the mountains of Ararat."
+  },
+  {
+    id: 76,
+    game: "Bible Geography",
+    testament: "New Testament",
+    category: "Places",
+    difficulty: "Student",
+    question: "From what town was Lazarus?",
+    choices: ["Bethany", "Bethlehem", "Nazareth", "Emmaus"],
+    answer: 0,
+    reference: "John 11:1",
+    verseText: "Now a certain man was sick, named Lazarus, of Bethany..."
+  },
+  {
+    id: 77,
+    game: "Bible Geography",
+    testament: "New Testament",
+    category: "Places",
+    difficulty: "Student",
+    question: "What sea did Jesus often cross with his disciples during his ministry?",
+    choices: ["Red Sea", "Dead Sea", "Sea of Galilee", "Black Sea"],
+    answer: 2,
+    reference: "Mark 4:35-41",
+    verseText: "Let us pass over unto the other side."
+  },
+  {
+    id: 78,
+    game: "Bible Geography",
+    testament: "Old Testament",
+    category: "Places",
+    difficulty: "Student",
+    question: "Which city's walls fell after Israel marched around them?",
+    choices: ["Ai", "Jericho", "Hebron", "Samaria"],
+    answer: 1,
+    reference: "Joshua 6:20",
+    verseText: "And the wall fell down flat."
+  },
+  {
+    id: 79,
+    game: "Bible Geography",
+    testament: "New Testament",
+    category: "Places",
+    difficulty: "Scholar",
+    question: "Which island did Paul visit on his voyage to Rome after the shipwreck?",
+    choices: ["Crete", "Cyprus", "Malta", "Patmos"],
+    answer: 2,
+    reference: "Acts 28:1",
+    verseText: "And when they were escaped, then they knew that the island was called Melita."
+  },
+  {
+    id: 80,
+    game: "Bible Geography",
+    testament: "New Testament",
+    category: "Places",
+    difficulty: "Scholar",
+    question: "Which road was Saul traveling on when he encountered the risen Christ?",
+    choices: ["Jericho road", "Damascus road", "Roman road", "King's highway"],
+    answer: 1,
+    reference: "Acts 9:3",
+    verseText: "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven."
+  },
+  {
+    id: 81,
+    game: "Bible Geography",
+    testament: "Old Testament",
+    category: "Places",
+    difficulty: "Scholar",
+    question: "On what mountain did Moses receive the Ten Commandments?",
+    choices: ["Mount Sinai", "Mount Tabor", "Mount Moriah", "Mount Hermon"],
+    answer: 0,
+    reference: "Exodus 19:20; 31:18",
+    verseText: "And the LORD came down upon mount Sinai... And he gave unto Moses... two tables of testimony."
+  },
+
+  // Apostles & Early Church
+  {
+    id: 82,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Which apostle denied Jesus three times?",
+    choices: ["John", "Peter", "Andrew", "Thomas"],
+    answer: 1,
+    reference: "Luke 22:61-62",
+    verseText: "And Peter remembered the word of the Lord... And Peter went out, and wept bitterly."
+  },
+  {
+    id: 83,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who replaced Judas Iscariot among the twelve?",
+    choices: ["Barnabas", "Silas", "Matthias", "Timothy"],
+    answer: 2,
+    reference: "Acts 1:26",
+    verseText: "And they gave forth their lots; and the lot fell upon Matthias."
+  },
+  {
+    id: 84,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "Early Church",
+    difficulty: "Beginner",
+    question: "On what day did the Holy Spirit come upon the disciples in Acts 2?",
+    choices: ["Passover", "Pentecost", "Tabernacles", "Atonement"],
+    answer: 1,
+    reference: "Acts 2:1-4",
+    verseText: "And when the day of Pentecost was fully come... they were all filled with the Holy Ghost."
+  },
+  {
+    id: 85,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "Early Church",
+    difficulty: "Student",
+    question: "Who was the first Christian martyr recorded in Acts?",
+    choices: ["James", "Peter", "Stephen", "Philip"],
+    answer: 2,
+    reference: "Acts 7:59-60",
+    verseText: "And they stoned Stephen, calling upon God... And when he had said this, he fell asleep."
+  },
+  {
+    id: 86,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Which apostle was known as 'the beloved disciple' in John's Gospel?",
+    choices: ["Peter", "John", "James", "Thomas"],
+    answer: 1,
+    reference: "John 21:20",
+    verseText: "Then Peter, turning about, seeth the disciple whom Jesus loved following."
+  },
+  {
+    id: 87,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "Early Church",
+    difficulty: "Student",
+    question: "Who was converted after hearing Philip preach on the road to Gaza?",
+    choices: ["The Ethiopian eunuch", "Cornelius", "Lydia", "Apollos"],
+    answer: 0,
+    reference: "Acts 8:26-39",
+    verseText: "Then Philip opened his mouth, and began at the same scripture, and preached unto him Jesus."
+  },
+  {
+    id: 88,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "Early Church",
+    difficulty: "Scholar",
+    question: "At the council in Jerusalem in Acts 15, which apostle testified about God giving the Holy Spirit to the Gentiles?",
+    choices: ["Peter", "Thomas", "Matthew", "Bartholomew"],
+    answer: 0,
+    reference: "Acts 15:7-9",
+    verseText: "Men and brethren, ye know how that a good while ago God made choice among us, that the Gentiles by my mouth should hear the word of the gospel, and believe."
+  },
+  {
+    id: 89,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "Early Church",
+    difficulty: "Scholar",
+    question: "Who taught Apollos more perfectly the way of God?",
+    choices: ["Peter and John", "Paul and Barnabas", "Priscilla and Aquila", "Silas and Timothy"],
+    answer: 2,
+    reference: "Acts 18:24-26",
+    verseText: "And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly."
+  },
+  {
+    id: 90,
+    game: "Apostles & Early Church",
+    testament: "New Testament",
+    category: "Early Church",
+    difficulty: "Scholar",
+    question: "Which church was first called 'Christian'?",
+    choices: ["Jerusalem", "Corinth", "Antioch", "Ephesus"],
+    answer: 2,
+    reference: "Acts 11:26",
+    verseText: "And the disciples were called Christians first in Antioch."
+  }
+
+];
