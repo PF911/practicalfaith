@@ -84,6 +84,7 @@ const QUESTIONS_PER_ROUND = 10;
 const STATS_KEY    = "bibleQuizStats";
 const DAILY_KEY    = "bibleQuizDailyState";
 const PROGRESS_KEY = "bibleQuizProgress";
+const SAVE_KEY     = "bibleQuizSavedGame";
 
 let currentCategory        = '';
 let currentLevel           = '';
@@ -323,6 +324,76 @@ function scoreText(score, total){
   return "🔍 Keep Studying!";
 }
 
+// ─── Save / Resume ────────────────────────────────────────────────────────────
+
+function saveGameState(){
+  try{
+    const state = {
+      category:          currentCategory,
+      level:             currentLevel,
+      questionIds:       currentQuestions.map(q => q.id),
+      questionIndex:     currentQuestionIndex,
+      score:             score,
+      correctStreak:     correctStreak,
+      bestStreakThisQuiz: bestStreakThisQuiz
+    };
+    localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+  }catch(e){}
+}
+
+function clearGameState(){
+  try{ localStorage.removeItem(SAVE_KEY); }catch(e){}
+}
+
+function loadGameState(){
+  try{
+    const raw = localStorage.getItem(SAVE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  }catch(e){ return null; }
+}
+
+function checkForSavedGame(){
+  const state = loadGameState();
+  if(!state) return;
+
+  const resumeBtn  = document.getElementById('resumeBtn');
+  const resumeNote = document.getElementById('resumeNote');
+  if(!resumeBtn) return;
+
+  resumeBtn.style.display  = 'block';
+  if(resumeNote){
+    resumeNote.style.display = 'block';
+    resumeNote.textContent   =
+      `${state.category} · ${state.level} — Question ${state.questionIndex + 1} of ${state.questionIds.length}`;
+  }
+
+  resumeBtn.onclick = () => resumeLastQuiz();
+}
+
+function resumeLastQuiz(){
+  const state = loadGameState();
+  if(!state || typeof quizQuestions === 'undefined') return;
+
+  // Rebuild the exact question order from saved IDs
+  const idMap = {};
+  quizQuestions.forEach(q => { if(q.id) idMap[String(q.id)] = q; });
+  const restored = state.questionIds.map(id => idMap[String(id)]).filter(Boolean);
+
+  if(!restored.length){ clearGameState(); return; }
+
+  currentCategory        = state.category;
+  currentLevel           = state.level;
+  currentQuestions       = restored;
+  currentQuestionIndex   = state.questionIndex || 0;
+  score                  = state.score         || 0;
+  correctStreak          = state.correctStreak || 0;
+  bestStreakThisQuiz     = state.bestStreakThisQuiz || 0;
+  categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
+
+  loadQuestion();
+  showScreen('quizScreen');
+}
+
 // ─── Quiz Flow ────────────────────────────────────────────────────────────────
 
 function selectLevel(level){
@@ -348,6 +419,7 @@ function selectLevel(level){
   bestStreakThisQuiz   = 0;
 
   loadQuestion();
+  saveGameState();
   showScreen('quizScreen');
 }
 
@@ -474,6 +546,7 @@ function submitAnswer(index){
 function nextQuestion(){
   currentQuestionIndex++;
   if(currentQuestionIndex < currentQuestions.length){
+    saveGameState();
     loadQuestion();
   } else {
     showResults();
@@ -481,6 +554,7 @@ function nextQuestion(){
 }
 
 function showResults(){
+  clearGameState();
   playFinish();
   if(score === currentQuestions.length) playPerfect();
 
@@ -521,6 +595,7 @@ function restartLevel(){
     quizQuestions.filter(q => q.game === currentCategory && q.difficulty === currentLevel)
   ).slice(0, QUESTIONS_PER_ROUND);
   loadQuestion();
+  saveGameState();
   showScreen('quizScreen');
 }
 
@@ -733,5 +808,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   try{ initializeSoundToggle(); }catch(e){}
   try{ renderMenuProgress(); }catch(e){}
+  try{ checkForSavedGame(); }catch(e){}
 
 });
