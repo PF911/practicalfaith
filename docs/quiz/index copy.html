@@ -79,20 +79,11 @@ body{
 .score-subline,.progress-subline{font-size:14px;font-weight:800;line-height:1.25;margin-top:4px;}
 .empty-note{width:90%;max-width:350px;margin:14px auto 0;padding:18px 16px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-size:18px;font-weight:800;}
 .about-copy{font-size:17px;font-weight:800;line-height:1.35;}
-.menu-progress{width:90%;max-width:350px;margin:16px auto 0;text-align:left;background:rgba(244,238,228,.85);border:3px solid var(--purple);border-radius:18px;padding:12px 14px;color:var(--purple);}
-.menu-progress h3{margin:0 0 6px;font-size:18px;}
-.menu-progress-summary{font-size:13px;font-weight:900;margin-bottom:10px;color:var(--purple);opacity:.9;}
-
-.menu-progress-item{margin-top:10px;}
-.menu-progress-head{display:flex;justify-content:space-between;gap:8px;font-size:14px;font-weight:900;}
-.menu-progress-name{display:flex;align-items:center;gap:6px;min-width:0;flex-wrap:wrap;}
-.menu-progress-medal{display:inline-flex;align-items:center;justify-content:center;font-size:16px;line-height:1;}
-
-.menu-progress-meta{white-space:nowrap;flex-shrink:0;}
-.menu-complete-badge{display:inline-flex;align-items:center;justify-content:center;padding:2px 8px;border-radius:999px;background:#f7e8c4;border:2px solid var(--purple);font-size:11px;line-height:1;font-weight:900;color:var(--purple);}
-
-.menu-progress .progress-bar{margin:6px 0 0;height:9px;}
-.menu-progress-fill-animate{width:0 !important;}
+.menu-progress-summary{font-size:13px;font-weight:900;color:var(--purple);opacity:.9;}
+.cat-strip{width:90%;max-width:350px;margin:4px auto 6px;padding:6px 12px 8px;background:rgba(244,238,228,.82);border:2px solid var(--purple);border-radius:14px;}
+.cat-strip-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:900;color:var(--purple);margin-bottom:4px;}
+.cat-strip-badge{display:inline-flex;align-items:center;padding:1px 7px;border-radius:999px;background:#f7e8c4;border:1.5px solid var(--purple);font-size:11px;font-weight:900;color:var(--purple);}
+.cat-strip .progress-bar{margin:0;height:8px;}
 
 .icon-row{width:90%;max-width:350px;margin:14px auto 0;display:flex;justify-content:center;gap:10px;}
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000;}
@@ -129,22 +120,38 @@ body{
   <h1 class="title">Bible Quiz<br>Challenge</h1>
   <div class="subtitle">Choose Your Challenge</div>
   <button class="menu-btn" onclick="startDailyChallenge()">📅 <span>Daily Challenge</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('General Bible Trivia')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Who said it?')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Bible Timeline')"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Finish the Verse')"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Prophecy Quiz')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Miracles of Jesus')">✨ <span>Miracles of Jesus</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Old Testament Events')">📜 <span>Old Testament Events</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Parables')">🌾 <span>Parables</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Bible Geography')">🗺️ <span>Bible Geography</span></button>
-  <button class="menu-btn" onclick="openLevelMenu('Apostles & Early Church')">⛪ <span>Apostles & Early Church</span></button>
 
-  <div class="menu-progress">
-    <h3>Your Category Progress</h3>
-    <div id="menuProgressSummary" class="menu-progress-summary"></div>
-    <div id="menuProgressList"></div>
-  </div>
+  <button class="menu-btn" onclick="openLevelMenu('General Bible Trivia')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
+  <div class="cat-strip" data-category="General Bible Trivia"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Who said it?')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
+  <div class="cat-strip" data-category="Who said it?"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Bible Timeline')"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
+  <div class="cat-strip" data-category="Bible Timeline"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Finish the Verse')"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
+  <div class="cat-strip" data-category="Finish the Verse"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Prophecy Quiz')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
+  <div class="cat-strip" data-category="Prophecy Quiz"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Miracles of Jesus')">✨ <span>Miracles of Jesus</span></button>
+  <div class="cat-strip" data-category="Miracles of Jesus"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Old Testament Events')">📜 <span>Old Testament Events</span></button>
+  <div class="cat-strip" data-category="Old Testament Events"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Parables')">🌾 <span>Parables</span></button>
+  <div class="cat-strip" data-category="Parables"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Bible Geography')">🗺️ <span>Bible Geography</span></button>
+  <div class="cat-strip" data-category="Bible Geography"></div>
+
+  <button class="menu-btn" onclick="openLevelMenu('Apostles &amp; Early Church')">⛪ <span>Apostles &amp; Early Church</span></button>
+  <div class="cat-strip" data-category="Apostles & Early Church"></div>
+
+  <div id="menuProgressSummary" class="menu-progress-summary" style="width:90%;max-width:350px;margin:10px auto 4px;text-align:left;"></div>
 
 <div class="bottom">
   <button class="small-btn" onclick="openHighScores()">🏆 High Scores</button>
