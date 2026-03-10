@@ -172,7 +172,7 @@ function renderQuestion(){
 
   if(q.question.startsWith("Choose One:")){
     qText.innerHTML =
-      `<span class="choose-tag">Choose One</span> ${q.question.replace("Choose One:", "").trim()}`;
+      `<span class="choose-tag">[Choose One]</span> ${q.question.replace("Choose One:", "").trim()}`;
   }else{
     qText.textContent = q.question;
   }
