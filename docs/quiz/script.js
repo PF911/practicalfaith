@@ -352,15 +352,46 @@ function loadGameState(){
   }catch(e){ return null; }
 }
 
+function confirmReset(){
+  if(!confirm('Reset ALL progress?\n\nThis will clear your stats, high scores, category progress, saved game, and daily streak.\n\nThis cannot be undone.')) return;
+  try{
+    localStorage.removeItem(STATS_KEY);
+    localStorage.removeItem(DAILY_KEY);
+    localStorage.removeItem(PROGRESS_KEY);
+    localStorage.removeItem(SAVE_KEY);
+  }catch(e){}
+  // Hide resume button and note
+  const resumeBtn  = document.getElementById('resumeBtn');
+  const resumeNote = document.getElementById('resumeNote');
+  const resetBtn   = document.getElementById('resetBtn');
+  if(resumeBtn)  { resumeBtn.style.display  = 'none'; }
+  if(resumeNote) { resumeNote.style.display = 'none'; }
+  if(resetBtn)   { resetBtn.style.display   = 'none'; }
+  // Refresh menu progress strips (now all empty)
+  try{ renderMenuProgress(); }catch(e){}
+  alert('✅ All progress has been reset. Good luck starting fresh!');
+}
+window.confirmReset = confirmReset;
+
 function checkForSavedGame(){
-  const state = loadGameState();
+  const state    = loadGameState();
+  const resetBtn = document.getElementById('resetBtn');
+
+  // Show reset button if ANY progress data exists
+  const hasAnyData = !!(
+    state ||
+    localStorage.getItem(STATS_KEY) ||
+    localStorage.getItem(DAILY_KEY) ||
+    localStorage.getItem(PROGRESS_KEY)
+  );
+  if(resetBtn) resetBtn.style.display = hasAnyData ? 'block' : 'none';
+
   if(!state) return;
 
   const resumeBtn  = document.getElementById('resumeBtn');
   const resumeNote = document.getElementById('resumeNote');
   if(!resumeBtn) return;
 
-  // Support both save formats for question count
   const total = (state.questions && state.questions.length)
     || (state.questionIds && state.questionIds.length)
     || 0;
