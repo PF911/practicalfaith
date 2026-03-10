@@ -1,4 +1,5 @@
 
+
 const soundCorrect = new Audio("sounds/correct.wav");
 const soundWrong = new Audio("sounds/wrong.wav");
 const soundStreak = new Audio("sounds/streak.wav");
@@ -458,72 +459,51 @@ function getCategoryMedal(pct){
   return "";
 }
 
-function animateMenuProgressBars(){
-  const fills = document.querySelectorAll('#menuProgressList .progress-fill');
-  fills.forEach(fill => {
-    const target = fill.getAttribute('data-width') || '0%';
-    fill.classList.add('menu-progress-fill-animate');
-    fill.style.width = '0%';
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        fill.style.width = target;
-        fill.classList.remove('menu-progress-fill-animate');
-      });
-    });
-  });
-}
-
 function renderMenuProgress(){
-
-  const wrap = document.getElementById('menuProgressList');
   const summary = document.getElementById('menuProgressSummary');
-  if(!wrap) return;
-
   const progress = loadProgress();
   const totals = getCategoryTotals();
   const categories = Object.keys(totals);
-
   let completedCategories = 0;
 
-  wrap.innerHTML = categories.map(category => {
-
+  document.querySelectorAll('.cat-strip').forEach(strip => {
+    const category = strip.getAttribute('data-category');
     const done = getAnsweredCount(progress, category);
     const total = Number(totals[category] || 0);
 
-    let pct = 0;
-    if(total > 0){
-      pct = Math.min(100, Math.round((done / total) * 100));
+    if(total === 0){
+      strip.style.display = 'none';
+      strip.innerHTML = '';
+      return;
     }
 
+    strip.style.display = '';
+    const pct = Math.min(100, Math.round((done / total) * 100));
     if(pct === 100) completedCategories++;
 
     const medal = getCategoryMedal(pct);
-    const star = pct === 100 ? "⭐ " : "";
-    const badge = pct === 100 ? '<span class="menu-complete-badge">🏆 Completed</span>' : '';
+    const badge = pct === 100 ? ' &nbsp;<span class="cat-strip-badge">🏆 Completed</span>' : '';
 
-    return `
-      <div class="menu-progress-item">
-        <div class="menu-progress-head">
-          <span class="menu-progress-name">
-            ${medal ? `<span class="menu-progress-medal">${medal}</span>` : ''}
-            <span>${star}${category}</span>
-            ${badge}
-          </span>
-          <span class="menu-progress-meta">${done} / ${total} &nbsp; ${pct}%</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" data-width="${pct}%" style="width:${pct}%;"></div>
-        </div>
+    strip.innerHTML = `
+      <div class="cat-strip-head">
+        <span>${medal ? medal + ' ' : ''}${done} / ${total} &nbsp; ${pct}%${badge}</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width:0%;" data-width="${pct}%"></div>
       </div>
     `;
-
-  }).join('');
+  });
 
   if(summary){
     summary.textContent = `Categories Completed: ${completedCategories} / ${categories.length}`;
   }
 
-  animateMenuProgressBars();
+  document.querySelectorAll('.cat-strip .progress-fill').forEach(fill => {
+    const target = fill.getAttribute('data-width') || '0%';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      fill.style.width = target;
+    }));
+  });
 }
 
 function isCategoryFullyComplete(category){

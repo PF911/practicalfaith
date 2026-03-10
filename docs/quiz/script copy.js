@@ -1,4 +1,5 @@
 
+
 const soundCorrect = new Audio("sounds/correct.wav");
 const soundWrong = new Audio("sounds/wrong.wav");
 const soundStreak = new Audio("sounds/streak.wav");
@@ -34,72 +35,21 @@ function stopAllSounds(){
   });
 }
 
-function createSoundToggleButton(){
-  const existing = document.getElementById('soundToggle');
-  if(existing) existing.remove();
-
-  const toggle = document.createElement('button');
-  toggle.id = 'soundToggle';
-  toggle.type = 'button';
-
-  // Layout & position
-  toggle.style.position = 'fixed';
-  toggle.style.top = '12px';
-  toggle.style.right = '12px';
-  toggle.style.zIndex = '2147483647';
-  toggle.style.width = '140px';
-  toggle.style.height = '44px';
-  toggle.style.padding = '0 12px';
-  toggle.style.borderRadius = '999px';
-  toggle.style.cursor = 'pointer';
-  toggle.style.fontSize = '14px';
-  toggle.style.fontWeight = '700';
-  toggle.style.display = 'flex';
-  toggle.style.alignItems = 'center';
-  toggle.style.justifyContent = 'center';
-  toggle.style.gap = '7px';
-  toggle.style.pointerEvents = 'auto';
-  toggle.style.userSelect = 'none';
-  toggle.style.webkitUserSelect = 'none';
-  toggle.style.touchAction = 'manipulation';
-  toggle.style.boxShadow = '0 4px 14px rgba(0,0,0,0.22)';
-  toggle.style.transition = 'background 0.2s, border-color 0.2s, color 0.2s';
-
-  // All child elements must not intercept pointer events
-  toggle.style.pointerEvents = 'auto';
-
-  toggle.addEventListener('click', function(){
-    toggleSound();
-  });
-
-  document.body.appendChild(toggle);
-  return toggle;
-}
-
-function ensureSoundToggleButton(){
-  return document.getElementById('soundToggle') || createSoundToggleButton();
-}
-
 function updateSoundUI(){
-  const toggle = ensureSoundToggleButton();
-  if(!toggle) return;
+  const btn = document.getElementById('soundToggleBtn');
+  if(!btn) return;
 
   if(soundEnabled){
-    toggle.style.background = '#16a34a';
-    toggle.style.border = '2px solid #15803d';
-    toggle.style.color = '#ffffff';
-    toggle.textContent = '';           // clear first
-    toggle.textContent = '🔊 Sound is On';
+    btn.textContent = '🔊 Sound is On';
+    btn.style.background = '#16a34a';
+    btn.style.borderColor = '#15803d';
+    btn.style.color = '#ffffff';
   } else {
-    toggle.style.background = '#dc2626';
-    toggle.style.border = '2px solid #b91c1c';
-    toggle.style.color = '#ffffff';
-    toggle.textContent = '';
-    toggle.textContent = '🔇 Sound is Off';
+    btn.textContent = '🔇 Sound is Off';
+    btn.style.background = '#dc2626';
+    btn.style.borderColor = '#b91c1c';
+    btn.style.color = '#ffffff';
   }
-
-  toggle.setAttribute('aria-pressed', String(!soundEnabled));
-  toggle.setAttribute('aria-label', soundEnabled ? 'Turn sound off' : 'Turn sound on');
 }
 
 function toggleSound(){
@@ -113,7 +63,6 @@ window.toggleSound = toggleSound;
 
 function initializeSoundToggle(){
   soundEnabled = loadSoundSetting();
-  createSoundToggleButton();
   updateSoundUI();
 }
 
