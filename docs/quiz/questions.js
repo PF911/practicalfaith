@@ -1228,7 +1228,7 @@ const quizQuestions = [
     difficulty: "Scholar",
     question: "Who was the grandfather of King David?",
     choices: ["Jesse", "Boaz", "Obed", "Nahshon"],
-    answer: 1,
+    answer: 2,
     reference: "Ruth 4:21-22",
     verseText: "Salmon begat Boaz, and Boaz begat Obed, and Obed begat Jesse, and Jesse begat David."
   },
