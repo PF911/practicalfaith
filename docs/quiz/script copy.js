@@ -5,13 +5,128 @@ const soundStreak = new Audio("sounds/streak.wav");
 const soundFinish = new Audio("sounds/finish.wav");
 const soundPerfect = new Audio("sounds/applause.wav");
 
-function safePlay(audio){
+const allSounds = [soundCorrect, soundWrong, soundStreak, soundFinish, soundPerfect];
+const SOUND_KEY = "bibleQuizSoundEnabled";
+let soundEnabled = true;
+
+function loadSoundSetting(){
   try{
+    const saved = localStorage.getItem(SOUND_KEY);
+    if(saved === null) return true;
+    return saved === "true";
+  }catch(e){
+    return true;
+  }
+}
+
+function saveSoundSetting(){
+  try{
+    localStorage.setItem(SOUND_KEY, String(soundEnabled));
+  }catch(e){}
+}
+
+function stopAllSounds(){
+  allSounds.forEach(audio => {
+    try{
+      audio.pause();
+      audio.currentTime = 0;
+    }catch(e){}
+  });
+}
+
+function createSoundToggleButton(){
+  const existing = document.getElementById('soundToggle');
+  if(existing) existing.remove();
+
+  const toggle = document.createElement('button');
+  toggle.id = 'soundToggle';
+  toggle.type = 'button';
+
+  // Layout & position
+  toggle.style.position = 'fixed';
+  toggle.style.top = '12px';
+  toggle.style.right = '12px';
+  toggle.style.zIndex = '2147483647';
+  toggle.style.width = '140px';
+  toggle.style.height = '44px';
+  toggle.style.padding = '0 12px';
+  toggle.style.borderRadius = '999px';
+  toggle.style.cursor = 'pointer';
+  toggle.style.fontSize = '14px';
+  toggle.style.fontWeight = '700';
+  toggle.style.display = 'flex';
+  toggle.style.alignItems = 'center';
+  toggle.style.justifyContent = 'center';
+  toggle.style.gap = '7px';
+  toggle.style.pointerEvents = 'auto';
+  toggle.style.userSelect = 'none';
+  toggle.style.webkitUserSelect = 'none';
+  toggle.style.touchAction = 'manipulation';
+  toggle.style.boxShadow = '0 4px 14px rgba(0,0,0,0.22)';
+  toggle.style.transition = 'background 0.2s, border-color 0.2s, color 0.2s';
+
+  // All child elements must not intercept pointer events
+  toggle.style.pointerEvents = 'auto';
+
+  toggle.addEventListener('click', function(){
+    toggleSound();
+  });
+
+  document.body.appendChild(toggle);
+  return toggle;
+}
+
+function ensureSoundToggleButton(){
+  return document.getElementById('soundToggle') || createSoundToggleButton();
+}
+
+function updateSoundUI(){
+  const toggle = ensureSoundToggleButton();
+  if(!toggle) return;
+
+  if(soundEnabled){
+    toggle.style.background = '#16a34a';
+    toggle.style.border = '2px solid #15803d';
+    toggle.style.color = '#ffffff';
+    toggle.textContent = '';           // clear first
+    toggle.textContent = '🔊 Sound is On';
+  } else {
+    toggle.style.background = '#dc2626';
+    toggle.style.border = '2px solid #b91c1c';
+    toggle.style.color = '#ffffff';
+    toggle.textContent = '';
+    toggle.textContent = '🔇 Sound is Off';
+  }
+
+  toggle.setAttribute('aria-pressed', String(!soundEnabled));
+  toggle.setAttribute('aria-label', soundEnabled ? 'Turn sound off' : 'Turn sound on');
+}
+
+function toggleSound(){
+  soundEnabled = !soundEnabled;
+  if(!soundEnabled) stopAllSounds();
+  saveSoundSetting();
+  updateSoundUI();
+}
+
+window.toggleSound = toggleSound;
+
+function initializeSoundToggle(){
+  soundEnabled = loadSoundSetting();
+  createSoundToggleButton();
+  updateSoundUI();
+}
+
+function safePlay(audio){
+  if(!soundEnabled) return;
+  try{
+    audio.pause();
     audio.currentTime = 0;
     const p = audio.play();
     if(p && typeof p.catch === "function") p.catch(() => {});
   }catch(e){}
 }
+
 function playCorrect(){ safePlay(soundCorrect); }
 function playWrong(){ safePlay(soundWrong); }
 function playStreak(){ safePlay(soundStreak); }
@@ -75,6 +190,7 @@ function showScreen(id){
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   resetScreenPosition(id);
+  updateSoundUI();
 }
 
 function updateStreakBadge(){
@@ -1026,6 +1142,8 @@ function closeDailyVerseModal(event){
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('startBtn');
   const resumeBtn = document.getElementById('resumeBtn');
+
+  initializeSoundToggle();
 
   if(startBtn) startBtn.onclick = () => {
     renderMenuProgress();

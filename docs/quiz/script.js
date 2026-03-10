@@ -5,13 +5,76 @@ const soundStreak = new Audio("sounds/streak.wav");
 const soundFinish = new Audio("sounds/finish.wav");
 const soundPerfect = new Audio("sounds/applause.wav");
 
-function safePlay(audio){
+const allSounds = [soundCorrect, soundWrong, soundStreak, soundFinish, soundPerfect];
+const SOUND_KEY = "bibleQuizSoundEnabled";
+let soundEnabled = true;
+
+function loadSoundSetting(){
   try{
+    const saved = localStorage.getItem(SOUND_KEY);
+    if(saved === null) return true;
+    return saved === "true";
+  }catch(e){
+    return true;
+  }
+}
+
+function saveSoundSetting(){
+  try{
+    localStorage.setItem(SOUND_KEY, String(soundEnabled));
+  }catch(e){}
+}
+
+function stopAllSounds(){
+  allSounds.forEach(audio => {
+    try{
+      audio.pause();
+      audio.currentTime = 0;
+    }catch(e){}
+  });
+}
+
+function updateSoundUI(){
+  const btn = document.getElementById('soundToggleBtn');
+  if(!btn) return;
+
+  if(soundEnabled){
+    btn.textContent = '🔊 Sound is On';
+    btn.style.background = '#16a34a';
+    btn.style.borderColor = '#15803d';
+    btn.style.color = '#ffffff';
+  } else {
+    btn.textContent = '🔇 Sound is Off';
+    btn.style.background = '#dc2626';
+    btn.style.borderColor = '#b91c1c';
+    btn.style.color = '#ffffff';
+  }
+}
+
+function toggleSound(){
+  soundEnabled = !soundEnabled;
+  if(!soundEnabled) stopAllSounds();
+  saveSoundSetting();
+  updateSoundUI();
+}
+
+window.toggleSound = toggleSound;
+
+function initializeSoundToggle(){
+  soundEnabled = loadSoundSetting();
+  updateSoundUI();
+}
+
+function safePlay(audio){
+  if(!soundEnabled) return;
+  try{
+    audio.pause();
     audio.currentTime = 0;
     const p = audio.play();
     if(p && typeof p.catch === "function") p.catch(() => {});
   }catch(e){}
 }
+
 function playCorrect(){ safePlay(soundCorrect); }
 function playWrong(){ safePlay(soundWrong); }
 function playStreak(){ safePlay(soundStreak); }
@@ -75,6 +138,7 @@ function showScreen(id){
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   resetScreenPosition(id);
+  updateSoundUI();
 }
 
 function updateStreakBadge(){
@@ -1026,6 +1090,8 @@ function closeDailyVerseModal(event){
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('startBtn');
   const resumeBtn = document.getElementById('resumeBtn');
+
+  initializeSoundToggle();
 
   if(startBtn) startBtn.onclick = () => {
     renderMenuProgress();
