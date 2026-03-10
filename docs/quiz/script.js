@@ -329,12 +329,12 @@ function scoreText(score, total){
 function saveGameState(){
   try{
     const state = {
-      category:          currentCategory,
-      level:             currentLevel,
-      questionIds:       currentQuestions.map(q => q.id),
-      questionIndex:     currentQuestionIndex,
-      score:             score,
-      correctStreak:     correctStreak,
+      category:           currentCategory,
+      level:              currentLevel,
+      questions:          currentQuestions,
+      questionIndex:      currentQuestionIndex,
+      score:              score,
+      correctStreak:      correctStreak,
       bestStreakThisQuiz: bestStreakThisQuiz
     };
     localStorage.setItem(SAVE_KEY, JSON.stringify(state));
@@ -360,34 +360,45 @@ function checkForSavedGame(){
   const resumeNote = document.getElementById('resumeNote');
   if(!resumeBtn) return;
 
-  resumeBtn.style.display  = 'block';
+  // Support both save formats for question count
+  const total = (state.questions && state.questions.length)
+    || (state.questionIds && state.questionIds.length)
+    || 0;
+
+  if(!total){ clearGameState(); return; }
+
+  resumeBtn.style.display = 'block';
+  resumeBtn.onclick = () => resumeLastQuiz();
+
   if(resumeNote){
     resumeNote.style.display = 'block';
     resumeNote.textContent   =
-      `${state.category} · ${state.level} — Question ${state.questionIndex + 1} of ${state.questionIds.length}`;
+      `${state.category} · ${state.level} — Question ${(state.questionIndex || 0) + 1} of ${total}`;
   }
-
-  resumeBtn.onclick = () => resumeLastQuiz();
 }
 
 function resumeLastQuiz(){
   const state = loadGameState();
-  if(!state || typeof quizQuestions === 'undefined') return;
+  if(!state){ clearGameState(); return; }
 
-  // Rebuild the exact question order from saved IDs
-  const idMap = {};
-  quizQuestions.forEach(q => { if(q.id) idMap[String(q.id)] = q; });
-  const restored = state.questionIds.map(id => idMap[String(id)]).filter(Boolean);
+  // Support both new format (questions array) and old format (questionIds)
+  let questions = state.questions || [];
 
-  if(!restored.length){ clearGameState(); return; }
+  if(!questions.length && state.questionIds && typeof quizQuestions !== 'undefined'){
+    const idMap = {};
+    quizQuestions.forEach(q => { if(q.id) idMap[String(q.id)] = q; });
+    questions = state.questionIds.map(id => idMap[String(id)]).filter(Boolean);
+  }
 
-  currentCategory        = state.category;
-  currentLevel           = state.level;
-  currentQuestions       = restored;
-  currentQuestionIndex   = state.questionIndex || 0;
-  score                  = state.score         || 0;
-  correctStreak          = state.correctStreak || 0;
-  bestStreakThisQuiz     = state.bestStreakThisQuiz || 0;
+  if(!questions.length){ clearGameState(); checkForSavedGame(); return; }
+
+  currentCategory         = state.category        || '';
+  currentLevel            = state.level            || '';
+  currentQuestions        = questions;
+  currentQuestionIndex    = state.questionIndex    || 0;
+  score                   = state.score            || 0;
+  correctStreak           = state.correctStreak    || 0;
+  bestStreakThisQuiz      = state.bestStreakThisQuiz || 0;
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
 
   loadQuestion();

@@ -1,5 +1,7 @@
 const triviaQuestions = [
 
+  // ── BEGINNER (34) ────────────────────────────────────────────────────────────
+
   {
     id: 1,
     game: "General Bible Trivia",
@@ -12,7 +14,6 @@ const triviaQuestions = [
     reference: "Genesis 6:14",
     verseText: "Make yourself an ark of gopher wood."
   },
-
   {
     id: 2,
     game: "General Bible Trivia",
@@ -25,7 +26,6 @@ const triviaQuestions = [
     reference: "Jonah 1:17",
     verseText: "The Lord had prepared a great fish to swallow Jonah."
   },
-
   {
     id: 3,
     game: "General Bible Trivia",
@@ -38,6 +38,380 @@ const triviaQuestions = [
     reference: "1 Samuel 17:50",
     verseText: "David prevailed over the Philistine with a sling and a stone."
   },
+  {
+    id: 91,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who was the father of Isaac?",
+    choices: ["Jacob", "Abraham", "Moses", "Samuel"],
+    answer: 1,
+    reference: "Genesis 21:1-3",
+    verseText: "Abraham called the name of his son... Isaac."
+  },
+  {
+    id: 92,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who received the Ten Commandments from God?",
+    choices: ["Aaron", "Joshua", "Moses", "David"],
+    answer: 2,
+    reference: "Exodus 31:18",
+    verseText: "He gave unto Moses... two tables of testimony, tables of stone."
+  },
+  {
+    id: 93,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who baptized Jesus?",
+    choices: ["Peter", "John the Baptist", "Andrew", "Philip"],
+    answer: 1,
+    reference: "Matthew 3:13-17",
+    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
+  },
+  {
+    id: 94,
+    game: "General Bible Trivia",
+    testament: "Both",
+    category: "Teachings",
+    difficulty: "Beginner",
+    question: "Choose One: The Bible says, \"Cleanliness is next to godliness.\"",
+    choices: ["True", "False", "Not in the Bible", "Misquoted"],
+    answer: 2,
+    reference: "N/A",
+    verseText: "That exact statement does not appear in Scripture."
+  },
+  {
+    id: 102,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Creation",
+    difficulty: "Beginner",
+    question: "What were the names of the first two humans God created?",
+    choices: ["Cain and Abel", "Adam and Eve", "Noah and Sarah", "Abraham and Rebekah"],
+    answer: 1,
+    reference: "Genesis 2:7-22",
+    verseText: "The Lord God formed man of the dust of the ground... and the rib, which the Lord God had taken from man, made he a woman."
+  },
+  {
+    id: 103,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Places",
+    difficulty: "Beginner",
+    question: "What garden did Adam and Eve live in?",
+    choices: ["Garden of Gethsemane", "Garden of Eden", "Garden of Olives", "Garden of Canaan"],
+    answer: 1,
+    reference: "Genesis 2:8",
+    verseText: "The Lord God planted a garden eastward in Eden; and there he put the man whom he had formed."
+  },
+  {
+    id: 104,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "In what city was Jesus born?",
+    choices: ["Jerusalem", "Nazareth", "Bethlehem", "Capernaum"],
+    answer: 2,
+    reference: "Luke 2:4-7",
+    verseText: "Joseph also went up... unto the city of David, which is called Bethlehem... and she brought forth her firstborn son."
+  },
+  {
+    id: 105,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who was the mother of Jesus?",
+    choices: ["Martha", "Mary Magdalene", "Elizabeth", "Mary"],
+    answer: 3,
+    reference: "Luke 1:30-31",
+    verseText: "The angel said unto her, Fear not, Mary: for thou hast found favour with God. And, behold, thou shalt conceive in thy womb, and bring forth a son."
+  },
+  {
+    id: 106,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "How many disciples did Jesus choose?",
+    choices: ["7", "10", "12", "14"],
+    answer: 2,
+    reference: "Luke 6:13",
+    verseText: "He called unto him his disciples: and of them he chose twelve, whom also he named apostles."
+  },
+  {
+    id: 107,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "What did Jesus turn water into at the wedding in Cana?",
+    choices: ["Milk", "Honey", "Wine", "Oil"],
+    answer: 2,
+    reference: "John 2:9",
+    verseText: "The ruler of the feast... tasted the water that was made wine."
+  },
+  {
+    id: 108,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who was thrown into a den of lions?",
+    choices: ["David", "Daniel", "Joseph", "Elijah"],
+    answer: 1,
+    reference: "Daniel 6:16",
+    verseText: "Then the king commanded, and they brought Daniel, and cast him into the den of lions."
+  },
+  {
+    id: 109,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "What was the name of Abraham's wife?",
+    choices: ["Leah", "Rebekah", "Rachel", "Sarah"],
+    answer: 3,
+    reference: "Genesis 17:15",
+    verseText: "God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be."
+  },
+  {
+    id: 110,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who was the first king of Israel?",
+    choices: ["David", "Solomon", "Saul", "Samuel"],
+    answer: 2,
+    reference: "1 Samuel 10:24",
+    verseText: "Samuel said to all the people, See ye him whom the Lord hath chosen... And all the people shouted, and said, God save the king."
+  },
+  {
+    id: 111,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "What did the wise men follow to find baby Jesus?",
+    choices: ["A dove", "An angel", "A star", "A cloud"],
+    answer: 2,
+    reference: "Matthew 2:9-10",
+    verseText: "The star, which they saw in the east, went before them, till it came and stood over where the young child was."
+  },
+  {
+    id: 112,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who was Cain's brother whom he killed?",
+    choices: ["Seth", "Abel", "Enoch", "Lamech"],
+    answer: 1,
+    reference: "Genesis 4:8",
+    verseText: "Cain rose up against Abel his brother, and slew him."
+  },
+  {
+    id: 113,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "How many days was Jesus in the tomb before rising again?",
+    choices: ["1", "2", "3", "7"],
+    answer: 2,
+    reference: "Luke 24:46",
+    verseText: "Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day."
+  },
+  {
+    id: 114,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Which king was known for his great wisdom?",
+    choices: ["David", "Solomon", "Hezekiah", "Josiah"],
+    answer: 1,
+    reference: "1 Kings 4:31",
+    verseText: "Solomon's wisdom excelled the wisdom of all the children of the east country."
+  },
+  {
+    id: 115,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "What did Moses part to lead Israel out of Egypt?",
+    choices: ["The Jordan River", "The Nile River", "The Red Sea", "The Dead Sea"],
+    answer: 2,
+    reference: "Exodus 14:21",
+    verseText: "Moses stretched out his hand over the sea; and the Lord caused the sea to go back by a strong east wind."
+  },
+  {
+    id: 116,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Which disciple denied Jesus three times?",
+    choices: ["James", "John", "Peter", "Andrew"],
+    answer: 2,
+    reference: "Luke 22:61",
+    verseText: "The Lord turned, and looked upon Peter. And Peter remembered the word of the Lord... Before the cock crow, thou shalt deny me thrice."
+  },
+  {
+    id: 117,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "What instrument did David play?",
+    choices: ["Trumpet", "Flute", "Harp", "Tambourine"],
+    answer: 2,
+    reference: "1 Samuel 16:23",
+    verseText: "David took a harp, and played with his hand: so Saul was refreshed."
+  },
+  {
+    id: 118,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "What was the occupation of Peter and Andrew before following Jesus?",
+    choices: ["Carpenters", "Tax collectors", "Fishermen", "Farmers"],
+    answer: 2,
+    reference: "Matthew 4:18",
+    verseText: "Simon called Peter, and Andrew his brother, casting a net into the sea: for they were fishers."
+  },
+  {
+    id: 119,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "In what garden was Jesus arrested?",
+    choices: ["Garden of Eden", "Garden of Gethsemane", "Garden of Olives", "Garden of Joseph"],
+    answer: 1,
+    reference: "Matthew 26:36",
+    verseText: "Then cometh Jesus with them unto a place called Gethsemane."
+  },
+  {
+    id: 120,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "What was Matthew's job before he followed Jesus?",
+    choices: ["Fisherman", "Carpenter", "Tax collector", "Shepherd"],
+    answer: 2,
+    reference: "Matthew 9:9",
+    verseText: "As Jesus passed forth from thence, he saw a man, named Matthew, sitting at the receipt of custom: and he saith unto him, Follow me."
+  },
+  {
+    id: 121,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What sign did God put in the sky as a promise to Noah?",
+    choices: ["A star", "A cloud", "A rainbow", "A dove"],
+    answer: 2,
+    reference: "Genesis 9:13",
+    verseText: "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth."
+  },
+  {
+    id: 122,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "How many people did Jesus feed with five loaves and two fish?",
+    choices: ["500", "1,000", "3,000", "5,000"],
+    answer: 3,
+    reference: "Matthew 14:21",
+    verseText: "They that had eaten were about five thousand men, beside women and children."
+  },
+  {
+    id: 123,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "What angel appeared to Mary to announce the birth of Jesus?",
+    choices: ["Michael", "Raphael", "Gabriel", "Uriel"],
+    answer: 2,
+    reference: "Luke 1:26",
+    verseText: "The angel Gabriel was sent from God unto a city of Galilee, named Nazareth."
+  },
+  {
+    id: 124,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who wrote most of the book of Psalms?",
+    choices: ["Moses", "Solomon", "David", "Asaph"],
+    answer: 2,
+    reference: "Various Psalms",
+    verseText: "A Psalm of David — the most common heading in the book of Psalms."
+  },
+  {
+    id: 125,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who did God ask to sacrifice his own son?",
+    choices: ["Noah", "Isaac", "Abraham", "Jacob"],
+    answer: 2,
+    reference: "Genesis 22:1-2",
+    verseText: "God did tempt Abraham, and said unto him... Take now thy son, thine only son Isaac, and offer him."
+  },
+  {
+    id: 126,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Beginner",
+    question: "What is the shortest verse in the Bible?",
+    choices: ["God is love.", "Pray without ceasing.", "Jesus wept.", "Rejoice always."],
+    answer: 2,
+    reference: "John 11:35",
+    verseText: "Jesus wept."
+  },
+  {
+    id: 127,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who had a coat of many colors given to him by his father?",
+    choices: ["David", "Benjamin", "Joseph", "Reuben"],
+    answer: 2,
+    reference: "Genesis 37:3",
+    verseText: "Israel loved Joseph more than all his children... and he made him a coat of many colours."
+  },
+  {
+    id: 128,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: "Who was the cousin of Jesus and prepared the way for his ministry?",
+    choices: ["James", "John the Apostle", "John the Baptist", "Barnabas"],
+    answer: 2,
+    reference: "Luke 1:36",
+    verseText: "Behold, thy cousin Elisabeth, she hath also conceived a son in her old age."
+  },
+
+  // ── STUDENT (33) ─────────────────────────────────────────────────────────────
 
   {
     id: 4,
@@ -51,7 +425,6 @@ const triviaQuestions = [
     reference: "Genesis 7:12",
     verseText: "The rain was on the earth forty days and forty nights."
   },
-
   {
     id: 5,
     game: "General Bible Trivia",
@@ -64,7 +437,6 @@ const triviaQuestions = [
     reference: "Genesis 37:2",
     verseText: "Joseph... was feeding the flock with his brothers."
   },
-
   {
     id: 6,
     game: "General Bible Trivia",
@@ -77,6 +449,392 @@ const triviaQuestions = [
     reference: "Joshua 1:1-2",
     verseText: "Moses my servant is dead... arise, go over this Jordan."
   },
+  {
+    id: 95,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "How many plagues did God send on Egypt?",
+    choices: ["7", "10", "12", "14"],
+    answer: 1,
+    reference: "Exodus 7-12",
+    verseText: "The Lord sent ten plagues upon Egypt before Pharaoh let Israel go."
+  },
+  {
+    id: 96,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the mother of Samuel?",
+    choices: ["Ruth", "Hannah", "Elizabeth", "Rebekah"],
+    answer: 1,
+    reference: "1 Samuel 1:20",
+    verseText: "Hannah... bare a son, and called his name Samuel."
+  },
+  {
+    id: 97,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who climbed into a sycamore tree to see Jesus?",
+    choices: ["Bartimaeus", "Nicodemus", "Zacchaeus", "Jairus"],
+    answer: 2,
+    reference: "Luke 19:2-4",
+    verseText: "He ran before, and climbed up into a sycomore tree to see him."
+  },
+  {
+    id: 98,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who am I? I was taken up to heaven in a whirlwind and left my mantle behind.",
+    choices: ["Elijah", "Elisha", "Enoch", "Isaiah"],
+    answer: 0,
+    reference: "2 Kings 2:11-13",
+    verseText: "Elijah went up by a whirlwind into heaven... and his mantle fell from him."
+  },
+  {
+    id: 129,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the mother-in-law of Ruth?",
+    choices: ["Orpah", "Naomi", "Hannah", "Leah"],
+    answer: 1,
+    reference: "Ruth 1:4",
+    verseText: "They took them wives of the women of Moab... and the name of the other Ruth."
+  },
+  {
+    id: 130,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who betrayed Jesus for thirty pieces of silver?",
+    choices: ["Thomas", "Peter", "Judas", "Pilate"],
+    answer: 2,
+    reference: "Matthew 26:15",
+    verseText: "What will ye give me, and I will deliver him unto you? And they covenanted with him for thirty pieces of silver."
+  },
+  {
+    id: 131,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who cut Samson's hair and robbed him of his strength?",
+    choices: ["Miriam", "Jezebel", "Delilah", "Bathsheba"],
+    answer: 2,
+    reference: "Judges 16:19",
+    verseText: "She made him sleep upon her knees; and she called for a man, and she caused him to shave off the seven locks of his head."
+  },
+  {
+    id: 132,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the Roman governor that sentenced Jesus to death?",
+    choices: ["Herod", "Caesar", "Pontius Pilate", "Felix"],
+    answer: 2,
+    reference: "Matthew 27:26",
+    verseText: "He released Barabbas unto them: and when he had scourged Jesus, he delivered him to be crucified."
+  },
+  {
+    id: 133,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was Moses's sister who watched over him in the river?",
+    choices: ["Deborah", "Miriam", "Zipporah", "Rahab"],
+    answer: 1,
+    reference: "Exodus 2:4",
+    verseText: "His sister stood afar off, to wit what would be done to him."
+  },
+  {
+    id: 134,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What river was Jesus baptized in?",
+    choices: ["Nile", "Euphrates", "Jordan", "Galilee"],
+    answer: 2,
+    reference: "Matthew 3:13",
+    verseText: "Jesus cometh from Galilee to Jordan unto John, to be baptized of him."
+  },
+  {
+    id: 135,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Whose walls fell down when the trumpets blew and the people shouted?",
+    choices: ["Babel", "Jericho", "Jerusalem", "Samaria"],
+    answer: 1,
+    reference: "Joshua 6:20",
+    verseText: "The wall fell down flat, so that the people went up into the city."
+  },
+  {
+    id: 136,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was David's closest friend?",
+    choices: ["Solomon", "Absalom", "Jonathan", "Samuel"],
+    answer: 2,
+    reference: "1 Samuel 18:1",
+    verseText: "The soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul."
+  },
+  {
+    id: 137,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What was Paul's name before his conversion to Christianity?",
+    choices: ["Silas", "Saul", "Simon", "Sergius"],
+    answer: 1,
+    reference: "Acts 9:1",
+    verseText: "Saul, yet breathing out threatenings and slaughter against the disciples of the Lord."
+  },
+  {
+    id: 138,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Where was Paul going when he was struck blind by a great light?",
+    choices: ["Jerusalem", "Antioch", "Damascus", "Corinth"],
+    answer: 2,
+    reference: "Acts 9:3",
+    verseText: "As he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven."
+  },
+  {
+    id: 139,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "How many years did Israel wander in the wilderness?",
+    choices: ["20", "30", "40", "50"],
+    answer: 2,
+    reference: "Numbers 14:34",
+    verseText: "After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years."
+  },
+  {
+    id: 140,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "What happened to Lot's wife when she looked back at Sodom?",
+    choices: ["She went blind", "She was struck by lightning", "She became a pillar of salt", "She fell down dead"],
+    answer: 2,
+    reference: "Genesis 19:26",
+    verseText: "His wife looked back from behind him, and she became a pillar of salt."
+  },
+  {
+    id: 141,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the first Christian martyr, stoned to death for his faith?",
+    choices: ["James", "Philip", "Stephen", "Bartholomew"],
+    answer: 2,
+    reference: "Acts 7:59",
+    verseText: "They stoned Stephen, calling upon God, and saying, Lord Jesus, receive my spirit."
+  },
+  {
+    id: 142,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the woman who hid the Israelite spies in Jericho?",
+    choices: ["Deborah", "Rahab", "Ruth", "Abigail"],
+    answer: 1,
+    reference: "Joshua 2:1",
+    verseText: "Joshua... sent out two men to spy secretly, saying, Go view the land... And they went, and came into a harlot's house, named Rahab."
+  },
+  {
+    id: 143,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Student",
+    question: "What book of the Bible is known as the longest book?",
+    choices: ["Genesis", "Isaiah", "Psalms", "Jeremiah"],
+    answer: 2,
+    reference: "Psalms",
+    verseText: "The book of Psalms has 150 chapters, making it the longest book in the Bible."
+  },
+  {
+    id: 144,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Jesus",
+    difficulty: "Student",
+    question: "What miracle did Jesus perform for Lazarus?",
+    choices: ["Healed his blindness", "Raised him from the dead", "Healed his leprosy", "Cast out a demon"],
+    answer: 1,
+    reference: "John 11:43-44",
+    verseText: "He cried with a loud voice, Lazarus, come forth. And he that was dead came forth."
+  },
+  {
+    id: 145,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the judge and prophetess who led Israel to victory over Sisera?",
+    choices: ["Miriam", "Deborah", "Huldah", "Anna"],
+    answer: 1,
+    reference: "Judges 4:4",
+    verseText: "Deborah, a prophetess, the wife of Lapidoth, she judged Israel at that time."
+  },
+  {
+    id: 146,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who visited Jesus at night to ask him about being born again?",
+    choices: ["Joseph of Arimathea", "Nicodemus", "Simon the Pharisee", "Gamaliel"],
+    answer: 1,
+    reference: "John 3:1-2",
+    verseText: "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews: The same came to Jesus by night."
+  },
+  {
+    id: 147,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What was the name of the sea that split apart for Moses and Israel?",
+    choices: ["The Dead Sea", "The Sea of Galilee", "The Red Sea", "The Mediterranean Sea"],
+    answer: 2,
+    reference: "Exodus 14:21",
+    verseText: "Moses stretched out his hand over the sea... and the children of Israel went into the midst of the sea upon the dry ground."
+  },
+  {
+    id: 148,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the first person chosen to replace Judas as an apostle?",
+    choices: ["Barnabas", "Matthias", "Silas", "Timothy"],
+    answer: 1,
+    reference: "Acts 1:26",
+    verseText: "They gave forth their lots; and the lot fell upon Matthias; and he was numbered with the eleven apostles."
+  },
+  {
+    id: 149,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the prophet that called down fire from heaven on Mount Carmel?",
+    choices: ["Elisha", "Isaiah", "Elijah", "Jeremiah"],
+    answer: 2,
+    reference: "1 Kings 18:38",
+    verseText: "Then the fire of the Lord fell, and consumed the burnt sacrifice, and the wood, and the stones."
+  },
+  {
+    id: 150,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "On what day of the week did Jesus rise from the dead?",
+    choices: ["Friday", "Saturday", "Sunday", "Monday"],
+    answer: 2,
+    reference: "Matthew 28:1",
+    verseText: "In the end of the sabbath, as it began to dawn toward the first day of the week, came Mary Magdalene and the other Mary to see the sepulchre."
+  },
+  {
+    id: 151,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What was the last plague God sent on Egypt before the Exodus?",
+    choices: ["Locusts", "Darkness", "Hail", "Death of the firstborn"],
+    answer: 3,
+    reference: "Exodus 12:29",
+    verseText: "At midnight the Lord smote all the firstborn in the land of Egypt."
+  },
+  {
+    id: 152,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was anointed by Samuel to become Israel's greatest king?",
+    choices: ["Saul", "Solomon", "David", "Ish-bosheth"],
+    answer: 2,
+    reference: "1 Samuel 16:13",
+    verseText: "Samuel took the horn of oil, and anointed him in the midst of his brethren: and the Spirit of the Lord came upon David from that day forward."
+  },
+  {
+    id: 153,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "Who was the first woman to see the risen Jesus?",
+    choices: ["Mary the mother of Jesus", "Joanna", "Salome", "Mary Magdalene"],
+    answer: 3,
+    reference: "John 20:14-16",
+    verseText: "She turned herself back, and saw Jesus standing, and knew not that it was Jesus... Jesus saith unto her, Mary."
+  },
+  {
+    id: 154,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: "What was the name of Moses's father-in-law?",
+    choices: ["Zimri", "Jethro", "Hobab", "Reuel"],
+    answer: 1,
+    reference: "Exodus 3:1",
+    verseText: "Moses kept the flock of Jethro his father in law, the priest of Midian."
+  },
+  {
+    id: 155,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was Paul's first missionary companion?",
+    choices: ["Silas", "Timothy", "Barnabas", "Luke"],
+    answer: 2,
+    reference: "Acts 13:2",
+    verseText: "The Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them."
+  },
+  {
+    id: 156,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "At what age did Jesus begin his public ministry?",
+    choices: ["25", "28", "30", "33"],
+    answer: 2,
+    reference: "Luke 3:23",
+    verseText: "Jesus himself began to be about thirty years of age."
+  },
+
+  // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
 
   {
     id: 7,
@@ -90,150 +848,42 @@ const triviaQuestions = [
     reference: "Genesis 7:6",
     verseText: "Noah was six hundred years old when the floodwaters were on the earth."
   },
-
   {
     id: 8,
     game: "General Bible Trivia",
     testament: "Old Testament",
     category: "Places",
     difficulty: "Scholar",
-    question: "On what mountain did the ark come to rest?",
+    question: "On what mountain did Noah's ark come to rest?",
     choices: ["Sinai", "Ararat", "Carmel", "Hermon"],
     answer: 1,
     reference: "Genesis 8:4",
     verseText: "The ark rested... upon the mountains of Ararat."
   },
-
   {
     id: 9,
     game: "General Bible Trivia",
     testament: "Old Testament",
     category: "Prophets",
     difficulty: "Scholar",
-    question: "Who interpreted the handwriting on the wall for Belshazzar?",
+    question: "Who interpreted the handwriting on the wall for King Belshazzar?",
     choices: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"],
     answer: 3,
     reference: "Daniel 5:25-28",
     verseText: "This is the inscription that was written: MENE, MENE, TEKEL, UPHARSIN."
   },
-
-  {
-    id: 91,
-    game: "General Bible Trivia",
-    testament: "Old Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who was the father of Isaac?",
-    choices: ["Jacob", "Abraham", "Moses", "Samuel"],
-    answer: 1,
-    reference: "Genesis 21:1-3",
-    verseText: "Abraham called the name of his son... Isaac."
-  },
-
-  {
-    id: 92,
-    game: "General Bible Trivia",
-    testament: "Old Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who received the Ten Commandments from God?",
-    choices: ["Aaron", "Joshua", "Moses", "David"],
-    answer: 2,
-    reference: "Exodus 31:18",
-    verseText: "He gave unto Moses... two tables of testimony, tables of stone."
-  },
-
-  {
-    id: 93,
-    game: "General Bible Trivia",
-    testament: "New Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who baptized Jesus?",
-    choices: ["Peter", "John the Baptist", "Andrew", "Philip"],
-    answer: 1,
-    reference: "Matthew 3:13-17",
-    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
-  },
-
-  {
-    id: 94,
-    game: "General Bible Trivia",
-    testament: "Both",
-    category: "Teachings",
-    difficulty: "Beginner",
-    question: "True or False: The Bible says, \"Cleanliness is next to godliness.\"",
-    choices: ["True", "False", "Not Stated", "Misquoted"],
-    answer: 2,
-    reference: "N/A",
-    verseText: "That exact statement does not appear in Scripture."
-  },
-
-  {
-    id: 95,
-    game: "General Bible Trivia",
-    testament: "Old Testament",
-    category: "Events",
-    difficulty: "Student",
-    question: "How many plagues did God send on Egypt?",
-    choices: ["7", "10", "12", "14"],
-    answer: 1,
-    reference: "Exodus 7-12",
-    verseText: "The Lord sent ten plagues upon Egypt before Pharaoh let Israel go."
-  },
-
-  {
-    id: 96,
-    game: "General Bible Trivia",
-    testament: "Old Testament",
-    category: "People",
-    difficulty: "Student",
-    question: "Who was the mother of Samuel?",
-    choices: ["Ruth", "Hannah", "Elizabeth", "Rebekah"],
-    answer: 1,
-    reference: "1 Samuel 1:20",
-    verseText: "Hannah... bare a son, and called his name Samuel."
-  },
-
-  {
-    id: 97,
-    game: "General Bible Trivia",
-    testament: "New Testament",
-    category: "People",
-    difficulty: "Student",
-    question: "Who climbed into a sycamore tree to see Jesus?",
-    choices: ["Bartimaeus", "Nicodemus", "Zacchaeus", "Jairus"],
-    answer: 2,
-    reference: "Luke 19:2-4",
-    verseText: "He ran before, and climbed up into a sycomore tree to see him."
-  },
-
-  {
-    id: 98,
-    game: "General Bible Trivia",
-    testament: "Both",
-    category: "Teachings",
-    difficulty: "Student",
-    question: "Who am I? I was taken up into heaven in a whirlwind and left my mantle behind.",
-    choices: ["Elijah", "Elisha", "Enoch", "Isaiah"],
-    answer: 0,
-    reference: "2 Kings 2:11-13",
-    verseText: "Elijah went up by a whirlwind into heaven... and his mantle fell from him."
-  },
-
   {
     id: 99,
     game: "General Bible Trivia",
     testament: "New Testament",
     category: "Teachings",
     difficulty: "Scholar",
-    question: "True or False: The Bible says, \"God helps those who help themselves.\"",
-    choices: ["True", "False", "Not Stated", "Misquoted"],
+    question: "Choose One: The Bible says, \"God helps those who help themselves.\"",
+    choices: ["True", "False", "Not in the Bible", "Misquoted"],
     answer: 2,
     reference: "N/A",
-    verseText: "That exact statement does not appear in Scripture."
+    verseText: "That exact statement does not appear in Scripture. It is often attributed to Benjamin Franklin."
   },
-
   {
     id: 100,
     game: "General Bible Trivia",
@@ -246,7 +896,6 @@ const triviaQuestions = [
     reference: "Numbers 13:1-3",
     verseText: "Moses... sent them from the wilderness of Paran: all those men were heads of the children of Israel."
   },
-
   {
     id: 101,
     game: "General Bible Trivia",
@@ -258,6 +907,306 @@ const triviaQuestions = [
     answer: 2,
     reference: "Ruth 4:21-22",
     verseText: "Salmon begat Boaz, and Boaz begat Obed, and Obed begat Jesse, and Jesse begat David."
+  },
+  {
+    id: 157,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the high priest when Jesus was arrested and tried?",
+    choices: ["Annas", "Caiaphas", "Eli", "Zadok"],
+    answer: 1,
+    reference: "Matthew 26:57",
+    verseText: "They that had laid hold on Jesus led him away to Caiaphas the high priest."
+  },
+  {
+    id: 158,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "How many wives did King Solomon have?",
+    choices: ["300", "500", "700", "1000"],
+    answer: 2,
+    reference: "1 Kings 11:3",
+    verseText: "He had seven hundred wives, princesses, and three hundred concubines."
+  },
+  {
+    id: 159,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What was the name of Abraham's first son, born to Hagar?",
+    choices: ["Isaac", "Ishmael", "Esau", "Midian"],
+    answer: 1,
+    reference: "Genesis 16:15",
+    verseText: "Hagar bare Abram a son: and Abram called his son's name, which Hagar bare, Ishmael."
+  },
+  {
+    id: 160,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What does the name 'Emmanuel' mean?",
+    choices: ["King of kings", "God with us", "Lamb of God", "Son of David"],
+    answer: 1,
+    reference: "Matthew 1:23",
+    verseText: "They shall call his name Emmanuel, which being interpreted is, God with us."
+  },
+  {
+    id: 161,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What mountain did Moses ascend to view the Promised Land before his death?",
+    choices: ["Mount Sinai", "Mount Hermon", "Mount Nebo", "Mount Carmel"],
+    answer: 2,
+    reference: "Deuteronomy 34:1",
+    verseText: "Moses went up from the plains of Moab unto the mountain of Nebo... and the Lord shewed him all the land."
+  },
+  {
+    id: 162,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What does the name 'Pentecost' refer to?",
+    choices: ["The 30th day", "The 40th day", "The 50th day", "The 70th day"],
+    answer: 2,
+    reference: "Acts 2:1",
+    verseText: "When the day of Pentecost was fully come, they were all with one accord in one place."
+  },
+  {
+    id: 163,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was Barnabas's cousin that traveled with Paul on his first journey?",
+    choices: ["Luke", "Silas", "John Mark", "Timothy"],
+    answer: 2,
+    reference: "Colossians 4:10",
+    verseText: "Marcus, sister's son to Barnabas... if he come unto you, receive him."
+  },
+  {
+    id: 164,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the first judge mentioned in the book of Judges?",
+    choices: ["Gideon", "Samson", "Othniel", "Ehud"],
+    answer: 2,
+    reference: "Judges 3:9",
+    verseText: "The Lord raised up a deliverer to the children of Israel, who delivered them, even Othniel the son of Kenaz."
+  },
+  {
+    id: 165,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "How many elders are seated around the throne of God in the book of Revelation?",
+    choices: ["7", "12", "24", "144"],
+    answer: 2,
+    reference: "Revelation 4:4",
+    verseText: "Round about the throne were four and twenty seats: and upon the seats I saw four and twenty elders sitting."
+  },
+  {
+    id: 166,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the only female judge of Israel mentioned in the Bible?",
+    choices: ["Miriam", "Huldah", "Abigail", "Deborah"],
+    answer: 3,
+    reference: "Judges 4:4",
+    verseText: "Deborah, a prophetess, the wife of Lapidoth, she judged Israel at that time."
+  },
+  {
+    id: 167,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who wrote the book of Revelation?",
+    choices: ["Paul", "Peter", "James", "John"],
+    answer: 3,
+    reference: "Revelation 1:1",
+    verseText: "The Revelation of Jesus Christ, which God gave unto him... and he sent and signified it by his angel unto his servant John."
+  },
+  {
+    id: 168,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What Hebrew term refers to the first five books of the Bible?",
+    choices: ["Midrash", "Mishnah", "Torah", "Talmud"],
+    answer: 2,
+    reference: "Various",
+    verseText: "The Torah (meaning 'law' or 'instruction') refers to Genesis, Exodus, Leviticus, Numbers, and Deuteronomy."
+  },
+  {
+    id: 169,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What is the name of the pool where Jesus healed a man sick for 38 years?",
+    choices: ["Pool of Siloam", "Pool of Bethesda", "Pool of Gibeon", "Pool of Hebron"],
+    answer: 1,
+    reference: "John 5:2-5",
+    verseText: "There is at Jerusalem by the sheep market a pool, which is called in the Hebrew tongue Bethesda... a certain man... had an infirmity thirty and eight years."
+  },
+  {
+    id: 170,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was king of Babylon when Jerusalem fell and the temple was destroyed?",
+    choices: ["Cyrus", "Darius", "Nebuchadnezzar", "Belshazzar"],
+    answer: 2,
+    reference: "2 Kings 25:1",
+    verseText: "Nebuchadnezzar king of Babylon came, he, and all his host, against Jerusalem."
+  },
+  {
+    id: 171,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What Pharisee and teacher of the law was Paul's teacher?",
+    choices: ["Nicodemus", "Gamaliel", "Annas", "Caiaphas"],
+    answer: 1,
+    reference: "Acts 22:3",
+    verseText: "I am verily a man which am a Jew... brought up in this city at the feet of Gamaliel."
+  },
+  {
+    id: 172,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "How many years did Solomon reign over Israel?",
+    choices: ["20", "30", "40", "50"],
+    answer: 2,
+    reference: "1 Kings 11:42",
+    verseText: "The time that Solomon reigned in Jerusalem over all Israel was forty years."
+  },
+  {
+    id: 173,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the king of Israel who was described as taller than anyone in all Israel?",
+    choices: ["David", "Solomon", "Saul", "Ish-bosheth"],
+    answer: 2,
+    reference: "1 Samuel 9:2",
+    verseText: "Among the children of Israel there was not a goodlier person than he: from his shoulders and upward he was higher than any of the people."
+  },
+  {
+    id: 174,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "How many days did Jesus appear to his disciples between his resurrection and ascension?",
+    choices: ["7", "14", "40", "50"],
+    answer: 2,
+    reference: "Acts 1:3",
+    verseText: "He shewed himself alive after his passion by many infallible proofs, being seen of them forty days."
+  },
+  {
+    id: 175,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the son of David who led a rebellion to take his father's throne?",
+    choices: ["Amnon", "Adonijah", "Solomon", "Absalom"],
+    answer: 3,
+    reference: "2 Samuel 15:10",
+    verseText: "Absalom sent spies throughout all the tribes of Israel, saying, As soon as ye hear the sound of the trumpet, then ye shall say, Absalom reigneth in Hebron."
+  },
+  {
+    id: 176,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What is the name of the sorcerer who tried to buy the power of the Holy Spirit from Peter?",
+    choices: ["Elymas", "Simon", "Sceva", "Apollos"],
+    answer: 1,
+    reference: "Acts 8:18-19",
+    verseText: "When Simon saw that through laying on of the apostles' hands the Holy Ghost was given, he offered them money."
+  },
+  {
+    id: 177,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What was the name of the cave where Elijah hid from Jezebel?",
+    choices: ["A cave in Mount Sinai", "A cave in Mount Carmel", "A cave in Mount Horeb", "A cave in Mount Nebo"],
+    answer: 2,
+    reference: "1 Kings 19:8-9",
+    verseText: "He arose... and went in the strength of that meat forty days and forty nights unto Horeb the mount of God. And he came thither unto a cave, and lodged there."
+  },
+  {
+    id: 178,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What two men appeared with Jesus on the Mount of Transfiguration?",
+    choices: ["Abraham and Isaac", "Elijah and Elisha", "Moses and Elijah", "Isaiah and Jeremiah"],
+    answer: 2,
+    reference: "Matthew 17:3",
+    verseText: "There appeared unto them Moses and Elias talking with him."
+  },
+  {
+    id: 179,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the Persian king that allowed the Jews to return from exile?",
+    choices: ["Darius", "Cyrus", "Xerxes", "Artaxerxes"],
+    answer: 1,
+    reference: "Ezra 1:1-2",
+    verseText: "In the first year of Cyrus king of Persia... the Lord stirred up the spirit of Cyrus king of Persia, that he made a proclamation... the Lord God of heaven hath given me all the kingdoms of the earth."
+  },
+  {
+    id: 180,
+    game: "General Bible Trivia",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "Who was the tent-maker couple that worked with Paul in Corinth?",
+    choices: ["Silas and Lydia", "Priscilla and Aquila", "Andronicus and Junia", "Philemon and Apphia"],
+    answer: 1,
+    reference: "Acts 18:2-3",
+    verseText: "He found a certain Jew named Aquila... with his wife Priscilla... and because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers."
+  },
+  {
+    id: 181,
+    game: "General Bible Trivia",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: "What was the name of the Israelite man whose sin caused Israel to be defeated at Ai?",
+    choices: ["Zimri", "Achan", "Korah", "Dathan"],
+    answer: 1,
+    reference: "Joshua 7:1",
+    verseText: "The children of Israel committed a trespass in the accursed thing: for Achan... took of the accursed thing."
   }
 
 ];
