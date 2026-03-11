@@ -306,7 +306,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     <div id="verseActionRow" class="verse-action-row" style="display:none;">
       <button id="showVerseBtn" class="verse-link" type="button" onclick="openVerseModal()">📖 <span>Click to See the Verse</span></button>
     </div>
-    <button id="nextBtn" class="small-btn quiz-next" style="display:none;background:var(--purple);border-color:var(--purple);color:#fff;" onclick="nextQuestion()">Next Question</button>
+    <button id="nextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextQuestion()">Next Question</button>
   </div>
   <div class="icon-row">
     <button id="soundToggleBtn" class="small-btn" type="button" onclick="toggleSound()" style="background:#16a34a;border:3px solid #15803d;color:#ffffff;">🔊 Sound is On</button>
@@ -450,7 +450,8 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     <div style="margin-bottom:10px;">• Sound effects with Sound On / Off control</div>
     <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(0,0,0,.1);text-align:center;">
       <div style="font-weight:900;margin-bottom:6px;">More Bible Teaching</div>
-      <div style="font-size:15px;">Visit <a href="https://PracticalFaith.net" target="_blank" style="color:#6b2fbd;font-weight:900;text-decoration:none;">PracticalFaith.net</a> for sermons, teaching videos, and theology books.</div>
+      <a href="https://PracticalFaith.net" target="_blank" style="display:inline-block;margin-top:8px;padding:12px 24px;background:var(--purple);color:#fff;font-family:'Fredoka One',Arial,sans-serif;font-size:18px;border-radius:30px;text-decoration:none;box-shadow:0 4px 12px rgba(107,47,189,.35);">🌐 Visit PracticalFaith.net</a>
+      <div style="font-size:14px;color:#888;margin-top:8px;">Sermons, teaching videos &amp; theology books</div>
     </div>
   </div>
   <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
@@ -480,7 +481,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
       <div id="dailyVerseActionRow" class="verse-action-row" style="display:none;">
         <button id="dailyShowVerseBtn" class="verse-link" type="button" onclick="openDailyVerseModal()">📖 <span>Click to See the Verse</span></button>
       </div>
-      <button id="dailyNextBtn" class="small-btn quiz-next" style="display:none;background:var(--purple);border-color:var(--purple);color:#fff;" onclick="nextDailyQuestion()">Next Question</button>
+      <button id="dailyNextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextDailyQuestion()">Next Question</button>
     </div>
     <div id="dailyCompleteBox" class="perfect-box" style="display:none;"></div>
   </div>
