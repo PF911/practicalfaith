@@ -1,5 +1,7 @@
 const timelineQuestions = [
 
+  // ── BEGINNER (34) ────────────────────────────────────────────────────────────
+
   {
     id: 19,
     game: "Bible Timeline",
@@ -12,20 +14,18 @@ const timelineQuestions = [
     reference: "Genesis 1:1",
     verseText: "In the beginning God created the heavens and the earth."
   },
-
   {
     id: 20,
     game: "Bible Timeline",
     testament: "Old Testament",
     category: "Events",
     difficulty: "Beginner",
-    question: "Which happened after Moses led Israel out of Egypt?",
+    question: "Which happened right after Moses led Israel out of Egypt?",
     choices: ["Jesus was born", "The Temple was built", "Israel crossed the Red Sea", "David fought Goliath"],
     answer: 2,
     reference: "Exodus 14:21-22",
     verseText: "The children of Israel went into the midst of the sea on the dry ground."
   },
-
   {
     id: 21,
     game: "Bible Timeline",
@@ -38,6 +38,380 @@ const timelineQuestions = [
     reference: "2 Kings 25:8-11",
     verseText: "He carried into captivity all Jerusalem."
   },
+  {
+    id: 113,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first?",
+    choices: ["Noah's flood", "Tower of Babel", "Call of Abraham", "Exodus"],
+    answer: 0,
+    reference: "Genesis 6-9",
+    verseText: "The Flood took place before the Tower of Babel and before Abraham."
+  },
+  {
+    id: 114,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened first?",
+    choices: ["Jesus feeds the five thousand", "Jesus is born", "Pentecost", "Paul's conversion"],
+    answer: 1,
+    reference: "Matthew 1-2; Luke 2",
+    verseText: "The birth of Jesus came before his ministry miracles and the events in Acts."
+  },
+  {
+    id: 115,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened after the fall of Jericho?",
+    choices: ["Israel crossed Jordan", "David became king", "Noah built the ark", "Jesus was baptized"],
+    answer: 1,
+    reference: "Joshua 6; 2 Samuel 5:4-5",
+    verseText: "David's reign came long after the conquest under Joshua."
+  },
+  {
+    id: 116,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first?",
+    choices: ["Paul's missionary journeys", "Jesus rises from the dead", "Stephen is martyred", "The church at Antioch"],
+    answer: 1,
+    reference: "Matthew 28; Acts",
+    verseText: "The resurrection came before the events in Acts."
+  },
+  {
+    id: 763,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened first?",
+    choices: ["Abraham was born", "Adam and Eve were created", "Noah built the ark", "Moses led the Exodus"],
+    answer: 1,
+    reference: "Genesis 1-2",
+    verseText: "In the beginning God created the heavens and the earth."
+  },
+  {
+    id: 764,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came after the Exodus from Egypt?",
+    choices: ["Joseph was sold into slavery", "Abraham left Haran", "The Ten Commandments were given at Sinai", "The Flood"],
+    answer: 2,
+    reference: "Exodus 20:1-2",
+    verseText: "And God spake all these words, saying, I am the Lord thy God, which have brought thee out of the land of Egypt."
+  },
+  {
+    id: 765,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which of these people came first in Bible history?",
+    choices: ["King David", "Moses", "Abraham", "Adam"],
+    answer: 3,
+    reference: "Genesis 2:7",
+    verseText: "And the Lord God formed man of the dust of the ground."
+  },
+  {
+    id: 766,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What happened just before Jesus began his public ministry?",
+    choices: ["Jesus turned water into wine", "Jesus was baptized by John", "Jesus raised Lazarus", "Jesus entered Jerusalem on a donkey"],
+    answer: 1,
+    reference: "Matthew 3:16",
+    verseText: "And Jesus, when he was baptized, went up straightway out of the water."
+  },
+  {
+    id: 767,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What happened after the crucifixion of Jesus?",
+    choices: ["The Last Supper", "The Triumphal Entry", "The Resurrection", "The Temptation in the wilderness"],
+    answer: 2,
+    reference: "Matthew 28:6",
+    verseText: "He is not here: for he is risen, as he said."
+  },
+  {
+    id: 768,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first in the Bible?",
+    choices: ["Israel enters the promised land", "Israel wanders in the wilderness", "Moses is born in Egypt", "Joshua defeats Jericho"],
+    answer: 2,
+    reference: "Exodus 2:2",
+    verseText: "The woman conceived, and bare a son... she hid him three months."
+  },
+  {
+    id: 769,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What happened right after Jesus ascended to heaven?",
+    choices: ["Paul was converted on the road to Damascus", "The disciples received the Holy Spirit at Pentecost", "Stephen was stoned", "Peter healed the lame man"],
+    answer: 1,
+    reference: "Acts 2:1-4",
+    verseText: "And when the day of Pentecost was fully come, they were all with one accord in one place."
+  },
+  {
+    id: 770,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened first?",
+    choices: ["Saul becomes first king of Israel", "Samuel is born", "David kills Goliath", "Solomon builds the temple"],
+    answer: 1,
+    reference: "1 Samuel 1:20",
+    verseText: "Hannah conceived, and bare a son; and she called his name Samuel."
+  },
+  {
+    id: 771,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened before Jesus's death and resurrection?",
+    choices: ["Pentecost", "Paul's letters to the churches", "The Last Supper", "Stephen's martyrdom"],
+    answer: 2,
+    reference: "Luke 22:19-20",
+    verseText: "And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you."
+  },
+  {
+    id: 772,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which of these is the correct order of events?",
+    choices: ["Flood → Abraham → Exodus → David", "Abraham → Flood → David → Exodus", "Exodus → Abraham → Flood → David", "David → Exodus → Abraham → Flood"],
+    answer: 0,
+    reference: "Genesis–2 Samuel",
+    verseText: "The Bible presents these events in order: Flood, Abraham, Exodus, then David's reign."
+  },
+  {
+    id: 773,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Joseph was sold into slavery in Egypt — what happened next in the Bible story?",
+    choices: ["Joseph became Pharaoh", "Moses led the Exodus", "Joseph interpreted Pharaoh's dreams and rose to power", "Jacob moved to Egypt"],
+    answer: 2,
+    reference: "Genesis 41:39-40",
+    verseText: "Pharaoh said unto Joseph... there is none so discreet and wise as thou art."
+  },
+  {
+    id: 774,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first in Jesus's life?",
+    choices: ["The Sermon on the Mount", "The Triumphal Entry into Jerusalem", "The Baptism of Jesus", "The feeding of five thousand"],
+    answer: 2,
+    reference: "Matthew 3:13",
+    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
+  },
+  {
+    id: 775,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which event came after Abraham but before Moses?",
+    choices: ["Creation", "The Flood", "Joseph in Egypt", "The Exodus"],
+    answer: 2,
+    reference: "Genesis 37:28",
+    verseText: "They sold Joseph to the Ishmeelites for twenty pieces of silver."
+  },
+  {
+    id: 776,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What happened before Jesus raised Lazarus from the dead?",
+    choices: ["The resurrection of Jesus", "The birth of Jesus", "Peter's denial", "The Last Supper"],
+    answer: 1,
+    reference: "John 11:43-44",
+    verseText: "Jesus was born decades before he raised Lazarus during his ministry."
+  },
+  {
+    id: 777,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first?",
+    choices: ["The Passover in Egypt", "Moses receives the Ten Commandments", "Israel spends 40 years in the wilderness", "Israel crosses the Jordan River"],
+    answer: 0,
+    reference: "Exodus 12:27",
+    verseText: "It is the sacrifice of the Lord's passover, who passed over the houses of the children of Israel in Egypt."
+  },
+  {
+    id: 778,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which of these happened last in the New Testament?",
+    choices: ["Jesus is born", "Jesus is baptized", "Jesus ascends to heaven", "Jesus is crucified"],
+    answer: 2,
+    reference: "Acts 1:9",
+    verseText: "While they beheld, he was taken up; and a cloud received him out of their sight."
+  },
+  {
+    id: 779,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened first in Israel's history as a nation?",
+    choices: ["They had kings", "They were slaves in Egypt", "They lived in Canaan peacefully", "They returned from Babylon"],
+    answer: 1,
+    reference: "Exodus 1:11",
+    verseText: "They set over them taskmasters to afflict them with their burdens."
+  },
+  {
+    id: 810,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first — David or Abraham?",
+    choices: ["David came first", "Abraham came first", "They were contemporaries", "Neither is in the Old Testament"],
+    answer: 1,
+    reference: "Genesis 12:1; 2 Samuel 5:4",
+    verseText: "Abraham lived centuries before David became king of Israel."
+  },
+  {
+    id: 811,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What happened after Jesus was baptized?",
+    choices: ["He was born in Bethlehem", "He was tempted in the wilderness", "He appeared to the disciples after the resurrection", "He ascended to heaven"],
+    answer: 1,
+    reference: "Matthew 4:1",
+    verseText: "Then was Jesus led up of the Spirit into the wilderness to be tempted of the devil."
+  },
+  {
+    id: 812,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened first — David killing Goliath or becoming king?",
+    choices: ["He became king first", "He killed Goliath first", "They happened on the same day", "Neither happened — Goliath is a legend"],
+    answer: 1,
+    reference: "1 Samuel 17:50; 2 Samuel 5:4",
+    verseText: "David defeated Goliath as a young man long before he was crowned king."
+  },
+  {
+    id: 813,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came first in the book of Acts?",
+    choices: ["Paul's conversion", "Pentecost", "Paul's first missionary journey", "The Jerusalem Council"],
+    answer: 1,
+    reference: "Acts 2:1-4",
+    verseText: "Pentecost occurred at the very start of Acts, before Paul's conversion or missionary journeys."
+  },
+  {
+    id: 814,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which came after the Tower of Babel?",
+    choices: ["The Flood", "Creation of the world", "God calling Abraham to leave his homeland", "Adam and Eve in the garden"],
+    answer: 2,
+    reference: "Genesis 12:1-4",
+    verseText: "After Babel, God called Abram to leave Haran and go to a land God would show him."
+  },
+  {
+    id: 815,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened last in the four Gospels' story of Jesus?",
+    choices: ["The baptism of Jesus", "The feeding of the five thousand", "The Triumphal Entry into Jerusalem", "The Great Commission"],
+    answer: 3,
+    reference: "Matthew 28:18-20",
+    verseText: "Go ye therefore, and teach all nations... and, lo, I am with you always, even unto the end of the world."
+  },
+  {
+    id: 816,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "What happened between the Exodus and the entrance into Canaan?",
+    choices: ["Israel was captured by Babylon", "Israel wandered in the wilderness for 40 years", "Solomon built the temple", "Israel was ruled by judges"],
+    answer: 1,
+    reference: "Numbers 14:33",
+    verseText: "Your children shall wander in the wilderness forty years."
+  },
+  {
+    id: 817,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which of these people came first in New Testament history?",
+    choices: ["Paul the apostle", "John the Baptist", "Peter", "Barnabas"],
+    answer: 1,
+    reference: "Luke 1:13-17",
+    verseText: "John the Baptist was born before Jesus and began his ministry before any of the apostles."
+  },
+  {
+    id: 818,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which happened first — the rainbow covenant with Noah or the covenant with Abraham?",
+    choices: ["The covenant with Abraham came first", "The rainbow covenant with Noah came first", "They were made at the same time", "Neither is called a covenant in the Bible"],
+    answer: 1,
+    reference: "Genesis 9:13; 12:1-3",
+    verseText: "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth."
+  },
+  {
+    id: 819,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Beginner",
+    question: "Which event happened 40 days after the resurrection?",
+    choices: ["Pentecost", "The Ascension of Jesus", "Paul's conversion", "The writing of Matthew's Gospel"],
+    answer: 1,
+    reference: "Acts 1:3, 9",
+    verseText: "Being seen of them forty days... he was taken up; and a cloud received him out of their sight."
+  },
+
+  // ── STUDENT (33) ─────────────────────────────────────────────────────────────
 
   {
     id: 22,
@@ -51,7 +425,6 @@ const timelineQuestions = [
     reference: "Genesis 12:4",
     verseText: "Abram departed as the Lord had spoken to him."
   },
-
   {
     id: 23,
     game: "Bible Timeline",
@@ -64,7 +437,6 @@ const timelineQuestions = [
     reference: "1 Kings 6:1",
     verseText: "He began to build the house of the Lord."
   },
-
   {
     id: 24,
     game: "Bible Timeline",
@@ -77,6 +449,368 @@ const timelineQuestions = [
     reference: "1 Kings 17:1",
     verseText: "Elijah the Tishbite... said to Ahab."
   },
+  {
+    id: 117,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened first?",
+    choices: ["The judges ruled Israel", "Saul became king", "Solomon built the temple", "The exile to Babylon"],
+    answer: 0,
+    reference: "Judges 2:16; 1 Samuel 10:24",
+    verseText: "The period of the judges came before Saul's reign."
+  },
+  {
+    id: 118,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which event came after the reign of Solomon?",
+    choices: ["The division of the kingdom", "The Exodus", "Samuel's birth", "The Flood"],
+    answer: 0,
+    reference: "1 Kings 11:11-13; 12:16-20",
+    verseText: "After Solomon, the kingdom was divided."
+  },
+  {
+    id: 119,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened before Paul was shipwrecked on the way to Rome?",
+    choices: ["Paul met Lydia in Philippi", "John wrote Revelation", "Jesus ascended", "The Jerusalem council"],
+    answer: 3,
+    reference: "Acts 15; Acts 27",
+    verseText: "The council in Jerusalem took place before Paul's voyage to Rome."
+  },
+  {
+    id: 120,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first?",
+    choices: ["Return from exile", "Babylon destroys Jerusalem", "Nehemiah rebuilds the wall", "Esther becomes queen"],
+    answer: 1,
+    reference: "2 Kings 25; Ezra 1; Nehemiah 2",
+    verseText: "Jerusalem was destroyed before the return and rebuilding."
+  },
+  {
+    id: 780,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Put these in correct order: which is third?",
+    choices: ["Abraham", "Moses", "David", "Elijah"],
+    answer: 2,
+    reference: "Genesis 12; Exodus 2; 2 Samuel 5; 1 Kings 17",
+    verseText: "The sequence is: Abraham → Moses → David → Elijah."
+  },
+  {
+    id: 781,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What is the correct order of these events in Jesus's final week?",
+    choices: ["Triumphal Entry → Cleansing the Temple → Last Supper → Crucifixion", "Last Supper → Cleansing Temple → Triumphal Entry → Crucifixion", "Crucifixion → Last Supper → Triumphal Entry → Temple Cleansing", "Cleansing Temple → Triumphal Entry → Crucifixion → Last Supper"],
+    answer: 0,
+    reference: "Matthew 21-27",
+    verseText: "Events of the final week follow in the order given in the Gospels."
+  },
+  {
+    id: 782,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which of the following prophets came first?",
+    choices: ["Isaiah", "Jeremiah", "Amos", "Ezekiel"],
+    answer: 2,
+    reference: "Amos 1:1; Isaiah 1:1",
+    verseText: "Amos prophesied during the reign of Jeroboam II, slightly before Isaiah's ministry began."
+  },
+  {
+    id: 783,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What is the correct order in Acts?",
+    choices: ["Pentecost → Stephen's martyrdom → Paul's conversion → Paul's first journey", "Paul's conversion → Pentecost → Stephen's martyrdom → Paul's first journey", "Paul's first journey → Pentecost → Paul's conversion → Stephen's martyrdom", "Stephen's martyrdom → Paul's first journey → Paul's conversion → Pentecost"],
+    answer: 0,
+    reference: "Acts 2; 7; 9; 13",
+    verseText: "Acts follows this sequence: Pentecost, then Stephen, then Paul's conversion, then his first missionary journey."
+  },
+  {
+    id: 784,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which prophet came after the fall of Jerusalem to Babylon?",
+    choices: ["Amos", "Hosea", "Ezekiel", "Joel"],
+    answer: 2,
+    reference: "Ezekiel 1:1-3",
+    verseText: "Ezekiel prophesied to the exiles in Babylon after Jerusalem fell."
+  },
+  {
+    id: 785,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened first — Israel splitting into two kingdoms or the Babylonian exile?",
+    choices: ["They happened at the same time", "The Babylonian exile came first", "The kingdom split first", "Israel was never split — only exiled"],
+    answer: 2,
+    reference: "1 Kings 12:16-20; 2 Kings 25:8-11",
+    verseText: "The kingdom divided after Solomon, and Babylon destroyed Jerusalem about three centuries later."
+  },
+  {
+    id: 786,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which of Paul's experiences came last?",
+    choices: ["His conversion on the road to Damascus", "His first missionary journey", "His imprisonment in Rome", "His letter to the Galatians"],
+    answer: 2,
+    reference: "Acts 28:16; Philippians 1:12-14",
+    verseText: "Paul's imprisonment in Rome was among the final events recorded in Acts."
+  },
+  {
+    id: 787,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which king came first?",
+    choices: ["Hezekiah", "Ahab", "Josiah", "Saul"],
+    answer: 3,
+    reference: "1 Samuel 10:24; 1 Kings 16:29; 2 Kings 18:1; 2 Kings 22:1",
+    verseText: "Saul was Israel's first king, followed by David, then Solomon, and later Ahab, Hezekiah, and Josiah."
+  },
+  {
+    id: 788,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What happened between the resurrection and Pentecost?",
+    choices: ["Nothing — they occurred on the same day", "Jesus appeared to his disciples and then ascended to heaven", "Paul was converted", "Stephen was martyred"],
+    answer: 1,
+    reference: "Acts 1:3-9",
+    verseText: "To whom also he shewed himself alive after his passion by many infallible proofs, being seen of them forty days... and while they beheld, he was taken up."
+  },
+  {
+    id: 789,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first — the Passover or the giving of the Ten Commandments?",
+    choices: ["The Ten Commandments came first", "The Passover came first", "They occurred at the same time", "The order varies by Gospel account"],
+    answer: 1,
+    reference: "Exodus 12; 20",
+    verseText: "The Passover in Egypt occurred before Israel reached Sinai where they received the commandments."
+  },
+  {
+    id: 790,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened first — Elijah's ministry or the Babylonian exile?",
+    choices: ["The Babylonian exile came first", "Elijah's ministry came first", "They were contemporary events", "Elijah was taken to Babylon"],
+    answer: 1,
+    reference: "1 Kings 17:1; 2 Kings 25:8",
+    verseText: "Elijah prophesied during Ahab's reign, roughly 250 years before Babylon destroyed Jerusalem."
+  },
+  {
+    id: 791,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which of Paul's letters was likely written first?",
+    choices: ["Romans", "Ephesians", "Galatians", "Revelation"],
+    answer: 2,
+    reference: "Galatians 1:6",
+    verseText: "Galatians is generally considered one of Paul's earliest letters, written to address immediate concerns in the churches of Galatia."
+  },
+  {
+    id: 792,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which is in the correct order?",
+    choices: ["Ruth → Judges → Samuel → Kings", "Judges → Ruth → Samuel → Kings", "Samuel → Ruth → Judges → Kings", "Kings → Samuel → Ruth → Judges"],
+    answer: 1,
+    reference: "Judges; Ruth; 1 Samuel; 1 Kings",
+    verseText: "The period of the Judges came first, then Ruth, then Samuel's ministry, then the period of the Kings."
+  },
+  {
+    id: 793,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What happened first: Paul's second missionary journey or the Jerusalem Council?",
+    choices: ["The Jerusalem Council came first", "Paul's second journey came first", "They occurred simultaneously", "The Jerusalem Council followed Paul's third journey"],
+    answer: 0,
+    reference: "Acts 15:1-2; 15:36-40",
+    verseText: "The Jerusalem Council in Acts 15 came before Paul and Silas set out on the second missionary journey."
+  },
+  {
+    id: 794,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which of these happened after Israel returned from Babylonian exile?",
+    choices: ["Josiah's reforms", "Isaiah's prophesying", "Nehemiah rebuilding Jerusalem's walls", "Elijah confronting Ahab"],
+    answer: 2,
+    reference: "Nehemiah 2:17",
+    verseText: "Then said I unto them, Ye see the distress that we are in... come, and let us build up the wall of Jerusalem."
+  },
+  {
+    id: 820,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened first — Isaiah's prophecy or Jeremiah's prophecy?",
+    choices: ["Jeremiah came first", "Isaiah came first", "They ministered at the same time", "Isaiah came after the exile"],
+    answer: 1,
+    reference: "Isaiah 1:1; Jeremiah 1:1-2",
+    verseText: "Isaiah ministered in the 700s BC; Jeremiah began his ministry about a century later, around 626 BC."
+  },
+  {
+    id: 821,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What happened between Jesus's arrest and his crucifixion?",
+    choices: ["He appeared to Mary Magdalene", "He was tried before Pilate and Herod", "He sent the Holy Spirit", "He taught in the temple"],
+    answer: 1,
+    reference: "Luke 23:1-25",
+    verseText: "The whole multitude of them arose, and led him unto Pilate."
+  },
+  {
+    id: 822,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first — Daniel's ministry or Ezekiel's ministry?",
+    choices: ["They were contemporaries taken to Babylon at roughly the same time", "Ezekiel came first, before Daniel", "Daniel came 100 years before Ezekiel", "Daniel lived after Ezekiel by a generation"],
+    answer: 0,
+    reference: "Daniel 1:1; Ezekiel 1:1-2",
+    verseText: "Both Daniel and Ezekiel were taken to Babylon in the same era and ministered as contemporaries."
+  },
+  {
+    id: 823,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What is the correct order of Jesus's resurrection appearances?",
+    choices: ["Mary Magdalene → disciples in locked room → Thomas present → road to Emmaus → Galilee", "Mary Magdalene → road to Emmaus → disciples in locked room → Thomas → Galilee", "Road to Emmaus → Mary Magdalene → Thomas → Galilee → disciples in room", "Disciples in room → Mary Magdalene → Thomas → Galilee → Emmaus"],
+    answer: 1,
+    reference: "John 20; Luke 24; John 20:26-28; Matthew 28:16-17",
+    verseText: "Jesus appeared first to Mary, then to disciples on the road to Emmaus, then in the locked room, then to Thomas, then in Galilee."
+  },
+  {
+    id: 824,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which happened first — Josiah's reforms or the fall of Jerusalem to Babylon?",
+    choices: ["The fall of Jerusalem came first", "Josiah's reforms came first", "They occurred in the same year", "Josiah caused the fall of Jerusalem"],
+    answer: 1,
+    reference: "2 Kings 22:1; 2 Kings 25:8",
+    verseText: "Josiah began his reforms around 621 BC, decades before Jerusalem fell in 586 BC."
+  },
+  {
+    id: 825,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first in the book of Acts — the conversion of Cornelius or Paul's first missionary journey?",
+    choices: ["Paul's first journey came first", "The conversion of Cornelius came first", "They happened at the same time", "Neither is in Acts"],
+    answer: 1,
+    reference: "Acts 10:1-48; Acts 13:1-3",
+    verseText: "Peter's visit to Cornelius (Acts 10) came before Paul and Barnabas set out on their first journey (Acts 13)."
+  },
+  {
+    id: 826,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "How long after entering Canaan did Israel first ask for a king?",
+    choices: ["Immediately — they asked Joshua for a king", "During the period of the judges — several hundred years later", "Within one generation", "After David was already king"],
+    answer: 1,
+    reference: "Judges 2:16; 1 Samuel 8:5",
+    verseText: "After Israel entered Canaan, they went through the period of the judges before asking for a king."
+  },
+  {
+    id: 827,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which of Paul's imprisonments came first?",
+    choices: ["His imprisonment in Rome", "His imprisonment in Caesarea", "His imprisonment in Philippi", "His imprisonment in Jerusalem"],
+    answer: 2,
+    reference: "Acts 16:23-24; 23:35; 28:16",
+    verseText: "Paul was imprisoned in Philippi first, then in Caesarea, then in Rome."
+  },
+  {
+    id: 828,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which prophet came after the northern kingdom of Israel fell to Assyria?",
+    choices: ["Amos", "Hosea", "Nahum", "Both Amos and Hosea"],
+    answer: 2,
+    reference: "Nahum 1:1; 2 Kings 17:6",
+    verseText: "Nahum prophesied the downfall of Nineveh, the Assyrian capital, after Assyria had already conquered Israel."
+  },
+  {
+    id: 829,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "What event triggered Paul's second missionary journey?",
+    choices: ["A vision of a man from Macedonia calling for help", "A letter from the church in Rome", "An order from the Jerusalem elders", "Barnabas being called to Cyprus"],
+    answer: 0,
+    reference: "Acts 16:9-10",
+    verseText: "And a vision appeared to Paul in the night; There stood a man of Macedonia... saying, Come over into Macedonia, and help us."
+  },
+  {
+    id: 830,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Student",
+    question: "Which came first — the writing of Proverbs or the writing of Psalms?",
+    choices: ["They were written at the same time", "Psalms came first — David preceded Solomon", "Proverbs came first — wisdom came before worship", "Neither can be dated in the Bible"],
+    answer: 1,
+    reference: "Psalm 3:1; Proverbs 1:1",
+    verseText: "David's Psalms preceded Solomon's Proverbs, as David reigned before Solomon."
+  },
+
+  // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
 
   {
     id: 25,
@@ -90,7 +824,6 @@ const timelineQuestions = [
     reference: "Ezra 1:1-3",
     verseText: "Who is among you of all His people?... let him go up to Jerusalem."
   },
-
   {
     id: 26,
     game: "Bible Timeline",
@@ -103,124 +836,18 @@ const timelineQuestions = [
     reference: "1 Samuel 3:19-20",
     verseText: "Samuel grew, and the Lord was with him."
   },
-
   {
     id: 27,
     game: "Bible Timeline",
     testament: "Old Testament",
     category: "Events",
     difficulty: "Scholar",
-    question: "Which came before the rebuilding of Jerusalem's walls?",
-    choices: ["Nehemiah", "Ezra's return", "Pentecost", "John the Baptist"],
+    question: "Which came before the rebuilding of Jerusalem's walls under Nehemiah?",
+    choices: ["Nehemiah himself", "Ezra's return to Jerusalem", "Pentecost", "John the Baptist"],
     answer: 1,
     reference: "Ezra 7:6-9",
     verseText: "Ezra came up from Babylon."
   },
-
-  {
-    id: 113,
-    game: "Bible Timeline",
-    testament: "Old Testament",
-    category: "Events",
-    difficulty: "Beginner",
-    question: "Which came first?",
-    choices: ["Noah's flood", "Tower of Babel", "Call of Abraham", "Exodus"],
-    answer: 0,
-    reference: "Genesis 6-9",
-    verseText: "The Flood took place before the Tower of Babel and before Abraham."
-  },
-
-  {
-    id: 114,
-    game: "Bible Timeline",
-    testament: "New Testament",
-    category: "Events",
-    difficulty: "Beginner",
-    question: "Which happened first?",
-    choices: ["Jesus feeds the five thousand", "Jesus is born", "Pentecost", "Paul's conversion"],
-    answer: 1,
-    reference: "Matthew 1-2; Luke 2",
-    verseText: "The birth of Jesus came before his ministry miracles and the events in Acts."
-  },
-
-  {
-    id: 115,
-    game: "Bible Timeline",
-    testament: "Old Testament",
-    category: "Events",
-    difficulty: "Beginner",
-    question: "Which happened after the fall of Jericho?",
-    choices: ["Israel crossed Jordan", "David became king", "Noah built the ark", "Jesus was baptized"],
-    answer: 1,
-    reference: "Joshua 6; 2 Samuel 5:4-5",
-    verseText: "David's reign came long after the conquest under Joshua."
-  },
-
-  {
-    id: 116,
-    game: "Bible Timeline",
-    testament: "New Testament",
-    category: "Events",
-    difficulty: "Beginner",
-    question: "Which came first?",
-    choices: ["Paul's missionary journeys", "Jesus rises from the dead", "Stephen is martyred", "The church at Antioch"],
-    answer: 1,
-    reference: "Matthew 28; Acts",
-    verseText: "The resurrection came before the events in Acts."
-  },
-
-  {
-    id: 117,
-    game: "Bible Timeline",
-    testament: "Old Testament",
-    category: "Events",
-    difficulty: "Student",
-    question: "Which happened first?",
-    choices: ["The judges ruled Israel", "Saul became king", "Solomon built the temple", "The exile to Babylon"],
-    answer: 0,
-    reference: "Judges 2:16; 1 Samuel 10:24",
-    verseText: "The period of the judges came before Saul's reign."
-  },
-
-  {
-    id: 118,
-    game: "Bible Timeline",
-    testament: "Old Testament",
-    category: "Events",
-    difficulty: "Student",
-    question: "Which event came after the reign of Solomon?",
-    choices: ["The division of the kingdom", "The Exodus", "Samuel's birth", "The Flood"],
-    answer: 0,
-    reference: "1 Kings 11:11-13; 12:16-20",
-    verseText: "After Solomon, the kingdom was divided."
-  },
-
-  {
-    id: 119,
-    game: "Bible Timeline",
-    testament: "New Testament",
-    category: "Events",
-    difficulty: "Student",
-    question: "Which happened before Paul was shipwrecked on the way to Rome?",
-    choices: ["Paul met Lydia in Philippi", "John wrote Revelation", "Jesus ascended", "The Jerusalem council"],
-    answer: 3,
-    reference: "Acts 15; Acts 27",
-    verseText: "The council in Jerusalem took place before Paul's voyage to Rome."
-  },
-
-  {
-    id: 120,
-    game: "Bible Timeline",
-    testament: "Old Testament",
-    category: "Events",
-    difficulty: "Student",
-    question: "Which came first?",
-    choices: ["Return from exile", "Babylon destroys Jerusalem", "Nehemiah rebuilds the wall", "Esther becomes queen"],
-    answer: 1,
-    reference: "2 Kings 25; Ezra 1; Nehemiah 2",
-    verseText: "Jerusalem was destroyed before the return and rebuilding."
-  },
-
   {
     id: 121,
     game: "Bible Timeline",
@@ -233,7 +860,6 @@ const timelineQuestions = [
     reference: "1 Samuel 15:26-28; 16:13; 17:50",
     verseText: "Saul's rejection came before David was anointed and before Goliath was defeated."
   },
-
   {
     id: 122,
     game: "Bible Timeline",
@@ -246,7 +872,6 @@ const timelineQuestions = [
     reference: "Malachi 4:5-6",
     verseText: "Malachi prophesied centuries before the New Testament events."
   },
-
   {
     id: 123,
     game: "Bible Timeline",
@@ -258,6 +883,330 @@ const timelineQuestions = [
     answer: 2,
     reference: "Acts 28; Philippians 1:12-14",
     verseText: "Paul's imprisonment in Rome came later than the earlier Gospel and Acts events."
+  },
+  {
+    id: 795,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which is the correct chronological order?",
+    choices: ["Abraham → Isaac → Jacob → Joseph → Moses", "Moses → Abraham → Jacob → Isaac → Joseph", "Joseph → Jacob → Abraham → Isaac → Moses", "Isaac → Abraham → Moses → Jacob → Joseph"],
+    answer: 0,
+    reference: "Genesis 12; 21; 25; 37; Exodus 2",
+    verseText: "The patriarchal line follows Abraham, then his son Isaac, then grandson Jacob, then Joseph, then Moses."
+  },
+  {
+    id: 796,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which king's reign was followed immediately by the division of the kingdom?",
+    choices: ["David", "Saul", "Solomon", "Rehoboam"],
+    answer: 2,
+    reference: "1 Kings 11:43; 12:16-20",
+    verseText: "So Solomon slept with his fathers... And Rehoboam went to Shechem... Then Jeroboam... And Israel rebelled against the house of David."
+  },
+  {
+    id: 797,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct order of Paul's three missionary journeys relative to his imprisonment?",
+    choices: ["All three journeys → arrest in Jerusalem → imprisonment in Rome", "First journey → imprisonment in Rome → second and third journeys", "Imprisonment in Rome → all three journeys → death", "First two journeys → imprisonment → third journey → Rome"],
+    answer: 0,
+    reference: "Acts 13; 15; 18; 21; 28",
+    verseText: "Paul completed three journeys before his arrest in Jerusalem and subsequent imprisonment in Rome."
+  },
+  {
+    id: 798,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "The northern kingdom of Israel was destroyed by Assyria. How many years later did Babylon destroy Judah?",
+    choices: ["About 10 years later", "About 50 years later", "About 135 years later", "At the same time"],
+    answer: 2,
+    reference: "2 Kings 17:6; 2 Kings 25:8",
+    verseText: "Assyria took Israel captive around 722 BC; Babylon destroyed Jerusalem around 586 BC — about 136 years later."
+  },
+  {
+    id: 799,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which letter did Paul write while in prison — and therefore last among these choices?",
+    choices: ["1 Thessalonians", "Galatians", "Ephesians", "1 Corinthians"],
+    answer: 2,
+    reference: "Ephesians 3:1; 4:1",
+    verseText: "I Paul, the prisoner of Jesus Christ for you Gentiles."
+  },
+  {
+    id: 800,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which prophet came between Elijah and the Babylonian exile?",
+    choices: ["Jonah only", "Isaiah and Hosea and Micah and others", "Only Elisha", "None — there was a gap with no prophets"],
+    answer: 1,
+    reference: "Isaiah 1:1; Hosea 1:1; Micah 1:1",
+    verseText: "Isaiah, Hosea, Micah, Nahum, and others prophesied in the two centuries between Elijah and the Babylonian exile."
+  },
+  {
+    id: 801,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which book of the New Testament was most likely written last?",
+    choices: ["Acts", "Romans", "Revelation", "Luke"],
+    answer: 2,
+    reference: "Revelation 1:9",
+    verseText: "I John, who also am your brother... was in the isle that is called Patmos. Revelation is widely dated to the end of the first century."
+  },
+  {
+    id: 802,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct order of these post-exile events?",
+    choices: ["Cyrus's decree → Ezra returns → Temple rebuilt → Nehemiah rebuilds walls", "Temple rebuilt → Cyrus's decree → Nehemiah → Ezra", "Nehemiah → Ezra → Temple rebuilt → Cyrus's decree", "Cyrus's decree → Nehemiah → Temple rebuilt → Ezra"],
+    answer: 0,
+    reference: "Ezra 1; 6; 7; Nehemiah 2",
+    verseText: "Cyrus issued his decree, then the first exiles returned and rebuilt the temple, then Ezra came, then Nehemiah rebuilt the walls."
+  },
+  {
+    id: 803,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct order of these events in Acts?",
+    choices: ["Peter heals lame man → Ananias and Sapphira → Stephen's martyrdom → Philip in Samaria → Paul's conversion", "Paul's conversion → Peter heals lame man → Stephen's martyrdom → Philip → Ananias", "Stephen's martyrdom → Peter heals lame man → Paul's conversion → Ananias and Sapphira", "Ananias and Sapphira → Paul's conversion → Peter heals lame man → Stephen"],
+    answer: 0,
+    reference: "Acts 3; 5; 6-7; 8; 9",
+    verseText: "Acts follows the sequence: Peter's healing, Ananias, Stephen, Philip, then Paul's conversion."
+  },
+  {
+    id: 804,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "In what order did these empires control the Holy Land?",
+    choices: ["Egypt → Assyria → Babylon → Persia → Greece", "Babylon → Egypt → Assyria → Persia → Greece", "Persia → Egypt → Babylon → Greece → Assyria", "Assyria → Egypt → Greece → Babylon → Persia"],
+    answer: 0,
+    reference: "Exodus; 2 Kings 17; 2 Kings 25; Ezra 1; Daniel 8",
+    verseText: "Israel experienced Egyptian bondage, Assyrian conquest, Babylonian exile, Persian restoration, then Greek rule."
+  },
+  {
+    id: 805,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "How many years did Israel wander in the wilderness before entering Canaan?",
+    choices: ["20 years", "40 years", "70 years", "12 years"],
+    answer: 1,
+    reference: "Numbers 14:33-34",
+    verseText: "Your children shall wander in the wilderness forty years."
+  },
+  {
+    id: 806,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Approximately how many years after the death of Jesus did Paul write his first letter?",
+    choices: ["1-2 years", "5-10 years", "15-20 years", "50 years"],
+    answer: 2,
+    reference: "1 Thessalonians 1:1",
+    verseText: "Jesus died around AD 30-33 and 1 Thessalonians is dated around AD 50 — roughly 17-20 years later."
+  },
+  {
+    id: 807,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which of these prophets ministered specifically to the northern kingdom of Israel — and therefore before its fall to Assyria in 722 BC?",
+    choices: ["Ezekiel", "Jeremiah", "Hosea", "Daniel"],
+    answer: 2,
+    reference: "Hosea 1:1",
+    verseText: "The word of the Lord that came unto Hosea... in the days of Jeroboam the son of Joash, king of Israel."
+  },
+  {
+    id: 808,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct order of the four Gospels' composition — according to the most widely held scholarly view?",
+    choices: ["Matthew → Mark → Luke → John", "Mark → Matthew → Luke → John", "John → Matthew → Mark → Luke", "Luke → Matthew → John → Mark"],
+    answer: 1,
+    reference: "Mark 1:1; Matthew 1:1; Luke 1:1; John 1:1",
+    verseText: "Most scholars hold that Mark was written first, followed by Matthew and Luke, then John."
+  },
+  {
+    id: 809,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "In the history of Israel's kings, which came in the correct sequence?",
+    choices: ["Saul → David → Solomon → Rehoboam → Ahab → Hezekiah → Josiah", "David → Saul → Solomon → Ahab → Hezekiah → Rehoboam → Josiah", "Solomon → Saul → David → Rehoboam → Josiah → Ahab → Hezekiah", "Saul → David → Rehoboam → Solomon → Hezekiah → Ahab → Josiah"],
+    answer: 0,
+    reference: "1 Samuel–2 Kings",
+    verseText: "The kings of Israel and Judah follow the sequence: Saul, David, Solomon, then the divided kingdom line."
+  },
+  {
+    id: 831,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which came first in Israel's wilderness journey?",
+    choices: ["The golden calf incident", "The spies sent into Canaan", "The giving of manna", "The waters of Meribah"],
+    answer: 2,
+    reference: "Exodus 16:14-15; 32:4; Numbers 13:2; 20:11",
+    verseText: "Manna began immediately after the Exodus, before the golden calf, the spies, or the waters of Meribah."
+  },
+  {
+    id: 832,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which Pauline letter was written last among these?",
+    choices: ["1 Thessalonians", "Philippians", "2 Timothy", "Romans"],
+    answer: 2,
+    reference: "2 Timothy 4:6-8",
+    verseText: "2 Timothy is Paul's final letter, written from Rome as he faced execution — I am now ready to be offered, and the time of my departure is at hand."
+  },
+  {
+    id: 833,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "In what order did these nations conquer or control Jerusalem?",
+    choices: ["Babylon → Persia → Greece → Rome", "Persia → Babylon → Rome → Greece", "Greece → Persia → Babylon → Rome", "Rome → Babylon → Persia → Greece"],
+    answer: 0,
+    reference: "2 Kings 25; Ezra 1; Daniel 8; Luke 2",
+    verseText: "Babylon destroyed Jerusalem in 586 BC, Persia under Cyrus freed the exiles in 538 BC, Greece under Alexander came 200 years later, and Rome ruled in Jesus's time."
+  },
+  {
+    id: 834,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct order of John's writings?",
+    choices: ["Gospel of John → 1, 2, 3 John → Revelation", "Revelation → Gospel of John → 1, 2, 3 John", "1, 2, 3 John → Revelation → Gospel of John", "The order cannot be determined from the Bible"],
+    answer: 0,
+    reference: "John 21:24; Revelation 1:9",
+    verseText: "Scholars generally place the Gospel and epistles of John before Revelation, which was written during the late persecution era."
+  },
+  {
+    id: 835,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "How long after the Exodus did Solomon begin building the temple?",
+    choices: ["About 40 years", "About 100 years", "About 480 years", "About 1000 years"],
+    answer: 2,
+    reference: "1 Kings 6:1",
+    verseText: "And it came to pass in the four hundred and eightieth year after the children of Israel were come out of the land of Egypt... he began to build the house of the Lord."
+  },
+  {
+    id: 836,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which of these events occurred before the Council of Jerusalem in Acts 15?",
+    choices: ["Paul's second missionary journey", "Paul and Barnabas's mission to Antioch and Cyprus", "Paul's imprisonment in Caesarea", "Paul meeting Priscilla and Aquila"],
+    answer: 1,
+    reference: "Acts 13:1-4; 15:1-2",
+    verseText: "Paul and Barnabas's first missionary journey, including Cyprus, preceded the Jerusalem Council that debated circumcision."
+  },
+  {
+    id: 837,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which is the correct order for the five books of Moses?",
+    choices: ["Genesis → Exodus → Leviticus → Numbers → Deuteronomy", "Exodus → Genesis → Numbers → Leviticus → Deuteronomy", "Genesis → Leviticus → Exodus → Deuteronomy → Numbers", "Deuteronomy → Numbers → Leviticus → Exodus → Genesis"],
+    answer: 0,
+    reference: "Genesis 1:1; Exodus 1:1; Leviticus 1:1; Numbers 1:1; Deuteronomy 1:1",
+    verseText: "The five books of Moses follow in canonical and broadly chronological order."
+  },
+  {
+    id: 838,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "How many years after Jesus's death did Paul write his earliest surviving letter?",
+    choices: ["About 2 years", "About 5 years", "About 17-20 years", "About 50 years"],
+    answer: 2,
+    reference: "1 Thessalonians 1:1",
+    verseText: "Jesus died around AD 30-33; 1 Thessalonians is dated to approximately AD 50, making it about 17-20 years after the crucifixion."
+  },
+  {
+    id: 839,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "Which came first — Elijah's contest on Mount Carmel or Elisha parting the Jordan river?",
+    choices: ["Elisha parting the Jordan came first", "Elijah's contest on Carmel came first", "They happened at the same time", "Elisha never parted the Jordan"],
+    answer: 1,
+    reference: "1 Kings 18:38; 2 Kings 2:14",
+    verseText: "Elijah's Carmel contest preceded Elisha parting the Jordan — Elisha performed this miracle immediately after Elijah was taken up."
+  },
+  {
+    id: 840,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "In what order did these churches receive Paul's letters?",
+    choices: ["Thessalonica → Corinth → Galatia → Rome → Ephesus → Philippi", "Rome → Corinth → Ephesus → Galatia → Philippi → Thessalonica", "Galatia → Thessalonica → Corinth → Rome → Ephesus → Philippi", "Philippi → Thessalonica → Galatia → Corinth → Rome → Ephesus"],
+    answer: 2,
+    reference: "Galatians 1:2; 1 Thessalonians 1:1; 1 Corinthians 1:2; Romans 1:7",
+    verseText: "Scholars generally date Paul's letters in roughly this order: Galatians, Thessalonians, Corinthians, Romans, then the prison letters including Ephesians and Philippians."
+  },
+  {
+    id: 841,
+    game: "Bible Timeline",
+    testament: "Old Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct chronological order of the four major prophets?",
+    choices: ["Isaiah → Jeremiah → Ezekiel → Daniel", "Jeremiah → Isaiah → Daniel → Ezekiel", "Daniel → Ezekiel → Isaiah → Jeremiah", "Ezekiel → Isaiah → Daniel → Jeremiah"],
+    answer: 0,
+    reference: "Isaiah 1:1; Jeremiah 1:2; Ezekiel 1:1; Daniel 1:1",
+    verseText: "Isaiah ministered first (late 700s BC), then Jeremiah (late 600s BC), then Ezekiel and Daniel, who were contemporaries in Babylon (early 500s BC)."
+  },
+  {
+    id: 842,
+    game: "Bible Timeline",
+    testament: "New Testament",
+    category: "Events",
+    difficulty: "Scholar",
+    question: "What is the correct order of events in Paul's life after his conversion?",
+    choices: ["Arabia retreat → Damascus → Jerusalem visit → Antioch → first journey → Jerusalem Council → second journey", "Jerusalem → first journey → Arabia → Damascus → Antioch → second journey → Council", "First journey → Arabia → Antioch → Jerusalem → Damascus → second journey → Council", "Damascus → first journey → Antioch → Jerusalem → Arabia → second journey → Council"],
+    answer: 0,
+    reference: "Galatians 1:17-18; Acts 9:26; 11:26; 13:2; 15:2; 15:40",
+    verseText: "Paul spent time in Arabia, then Damascus, then visited Jerusalem, then Antioch, then his first journey, then the council."
   }
 
 ];

@@ -1,5 +1,7 @@
 const quotesQuestions = [
 
+  // ── BEGINNER (34) ────────────────────────────────────────────────────────────
+
   {
     id: 10,
     game: "Who said it?",
@@ -12,7 +14,6 @@ const quotesQuestions = [
     reference: "Exodus 5:1",
     verseText: "Thus says the Lord God of Israel: Let My people go."
   },
-
   {
     id: 11,
     game: "Who said it?",
@@ -25,7 +26,6 @@ const quotesQuestions = [
     reference: "1 Samuel 3:10",
     verseText: "Speak, for Your servant hears."
   },
-
   {
     id: 12,
     game: "Who said it?",
@@ -38,6 +38,380 @@ const quotesQuestions = [
     reference: "Genesis 4:9",
     verseText: "I do not know. Am I my brother's keeper?"
   },
+  {
+    id: 102,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Here am I," when the Lord called him as a child?',
+    choices: ["Samuel", "Isaac", "David", "Jeremiah"],
+    answer: 0,
+    reference: "1 Samuel 3:4",
+    verseText: "The Lord called Samuel. And he answered, Here am I."
+  },
+  {
+    id: 103,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "There shall not be dew nor rain these years, except at my word"?',
+    choices: ["Elijah", "Elisha", "Moses", "Isaiah"],
+    answer: 0,
+    reference: "1 Kings 17:1",
+    verseText: "As the Lord God of Israel liveth... there shall not be dew nor rain these years, but according to my word."
+  },
+  {
+    id: 104,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Lord, remember me when You come into Your kingdom"?',
+    choices: ["Peter", "The centurion", "One thief on the cross", "Thomas"],
+    answer: 2,
+    reference: "Luke 23:42",
+    verseText: "Lord, remember me when thou comest into thy kingdom."
+  },
+  {
+    id: 105,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Come and see," to Nathanael?',
+    choices: ["Peter", "Philip", "Andrew", "John"],
+    answer: 1,
+    reference: "John 1:46",
+    verseText: "Philip saith unto him, Come and see."
+  },
+  {
+    id: 683,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "My Lord and my God!"?',
+    choices: ["Peter", "John", "Thomas", "Paul"],
+    answer: 2,
+    reference: "John 20:28",
+    verseText: "Thomas answered and said unto him, My Lord and my God."
+  },
+  {
+    id: 684,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "The Lord is my shepherd; I shall not want"?',
+    choices: ["Solomon", "Moses", "David", "Asaph"],
+    answer: 2,
+    reference: "Psalm 23:1",
+    verseText: "The Lord is my shepherd; I shall not want."
+  },
+  {
+    id: 685,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "You are the Christ, the Son of the living God"?',
+    choices: ["John", "James", "Peter", "Andrew"],
+    answer: 2,
+    reference: "Matthew 16:16",
+    verseText: "Thou art the Christ, the Son of the living God."
+  },
+  {
+    id: 686,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Where you go I will go, and where you stay I will stay"?',
+    choices: ["Orpah", "Ruth", "Leah", "Rachel"],
+    answer: 1,
+    reference: "Ruth 1:16",
+    verseText: "Whither thou goest, I will go; and where thou lodgest, I will lodge."
+  },
+  {
+    id: 687,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "We have found the Messiah"?',
+    choices: ["Philip", "John", "Andrew", "Peter"],
+    answer: 2,
+    reference: "John 1:41",
+    verseText: "He first findeth his own brother Simon, and saith unto him, We have found the Messias."
+  },
+  {
+    id: 688,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord"?',
+    choices: ["David", "Job", "Jeremiah", "Moses"],
+    answer: 1,
+    reference: "Job 1:21",
+    verseText: "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord."
+  },
+  {
+    id: 689,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "I am not worthy to unloose the latchet of his shoes"?',
+    choices: ["Peter", "Andrew", "John the Baptist", "Simeon"],
+    answer: 2,
+    reference: "John 1:27",
+    verseText: "He it is... the latchet of whose shoes I am not worthy to unloose."
+  },
+  {
+    id: 690,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "I find no fault in this man"?',
+    choices: ["Herod", "The chief priests", "Pilate", "The centurion"],
+    answer: 2,
+    reference: "Luke 23:4",
+    verseText: "Then said Pilate to the chief priests and to the people, I find no fault in this man."
+  },
+  {
+    id: 691,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Be strong and of good courage; be not afraid"?',
+    choices: ["Moses", "Caleb", "The Lord to Joshua", "Samuel"],
+    answer: 2,
+    reference: "Joshua 1:9",
+    verseText: "Have not I commanded thee? Be strong and of a good courage; be not afraid."
+  },
+  {
+    id: 692,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Lord, if thou wilt, thou canst make me clean"?',
+    choices: ["A blind man", "A leper", "A paralyzed man", "Lazarus"],
+    answer: 1,
+    reference: "Matthew 8:2",
+    verseText: "Lord, if thou wilt, thou canst make me clean."
+  },
+  {
+    id: 693,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "For God so loved the world"? — and in which testament?',
+    choices: ["Moses in the Old Testament", "Jesus in the New Testament", "John in a letter", "Paul in Romans"],
+    answer: 1,
+    reference: "John 3:16",
+    verseText: "For God so loved the world, that he gave his only begotten Son."
+  },
+  {
+    id: 694,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Truly this man was the Son of God"?',
+    choices: ["Pilate", "A Jewish elder", "A Roman centurion", "John the disciple"],
+    answer: 2,
+    reference: "Mark 15:39",
+    verseText: "Truly this man was the Son of God."
+  },
+  {
+    id: 695,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Create in me a clean heart, O God"?',
+    choices: ["Solomon", "Isaiah", "David", "Jeremiah"],
+    answer: 2,
+    reference: "Psalm 51:10",
+    verseText: "Create in me a clean heart, O God; and renew a right spirit within me."
+  },
+  {
+    id: 696,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Be it unto me according to thy word"?',
+    choices: ["Elizabeth", "Anna the prophetess", "Mary the mother of Jesus", "Martha"],
+    answer: 2,
+    reference: "Luke 1:38",
+    verseText: "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word."
+  },
+  {
+    id: 697,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "I am the Lord your God, who brought you out of Egypt, out of the land of slavery"?',
+    choices: ["Moses", "Aaron", "The Lord", "Joshua"],
+    answer: 2,
+    reference: "Exodus 20:2",
+    verseText: "I am the Lord thy God, which have brought thee out of the land of Egypt, out of the house of bondage."
+  },
+  {
+    id: 698,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Come, follow me, and I will make you fishers of men"?',
+    choices: ["John the Baptist", "Peter", "Jesus", "Andrew"],
+    answer: 2,
+    reference: "Matthew 4:19",
+    verseText: "Follow me, and I will make you fishers of men."
+  },
+  {
+    id: 699,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "I am slow of speech and tongue," when God called him?',
+    choices: ["Jeremiah", "Isaiah", "Moses", "Samuel"],
+    answer: 2,
+    reference: "Exodus 4:10",
+    verseText: "O my Lord, I am not eloquent... I am slow of speech, and of a slow tongue."
+  },
+  {
+    id: 700,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "What is truth"?',
+    choices: ["A Pharisee", "Herod", "Pilate", "The high priest"],
+    answer: 2,
+    reference: "John 18:38",
+    verseText: "Pilate saith unto him, What is truth?"
+  },
+  {
+    id: 701,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "You intended to harm me, but God intended it for good"?',
+    choices: ["Jacob", "David", "Joseph", "Moses"],
+    answer: 2,
+    reference: "Genesis 50:20",
+    verseText: "But as for you, ye thought evil against me; but God meant it unto good."
+  },
+  {
+    id: 702,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Today salvation has come to this house"?',
+    choices: ["Peter", "Paul", "Jesus", "The disciples"],
+    answer: 2,
+    reference: "Luke 19:9",
+    verseText: "Jesus said unto him, This day is salvation come to this house."
+  },
+  {
+    id: 737,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Peace be unto you"? after rising from the dead',
+    choices: ["An angel at the tomb", "Jesus to his disciples", "Peter to the frightened disciples", "The Holy Spirit"],
+    answer: 1,
+    reference: "John 20:19",
+    verseText: "Then the same day at evening... came Jesus and stood in the midst, and saith unto them, Peace be unto you."
+  },
+  {
+    id: 738,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "I am with thee, and will keep thee in all places whithersoever thou goest"?',
+    choices: ["Moses to Joshua", "God to Jacob at Bethel", "Samuel to David", "An angel to Elijah"],
+    answer: 1,
+    reference: "Genesis 28:15",
+    verseText: "I am with thee, and will keep thee in all places whither thou goest."
+  },
+  {
+    id: 739,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "They have taken away the Lord out of the sepulchre, and we know not where they have laid him"?',
+    choices: ["Martha", "Mary Magdalene", "Salome", "Joanna"],
+    answer: 1,
+    reference: "John 20:2",
+    verseText: "They have taken away the Lord out of the sepulchre, and we know not where they have laid him."
+  },
+  {
+    id: 740,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "In the beginning God created the heaven and the earth"? — meaning, whose book opens with these words?',
+    choices: ["Moses in Genesis", "John in his Gospel", "David in the Psalms", "Isaiah in prophecy"],
+    answer: 0,
+    reference: "Genesis 1:1",
+    verseText: "In the beginning God created the heaven and the earth."
+  },
+  {
+    id: 741,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people"?',
+    choices: ["John the Baptist", "Simeon in the temple", "An angel to the shepherds", "The wise men"],
+    answer: 2,
+    reference: "Luke 2:10",
+    verseText: "Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people."
+  },
+  {
+    id: 742,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "The Lord is my strength and song, and he is become my salvation"?',
+    choices: ["David", "Moses after crossing the Red Sea", "Deborah", "Hannah"],
+    answer: 1,
+    reference: "Exodus 15:2",
+    verseText: "The Lord is my strength and song, and he is become my salvation."
+  },
+  {
+    id: 743,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Beginner",
+    question: 'Who said, "I thirst"? from the cross',
+    choices: ["One of the thieves", "Jesus", "Barabbas", "The soldiers mocked someone by saying this"],
+    answer: 1,
+    reference: "John 19:28",
+    verseText: "After this, Jesus knowing that all things were now accomplished... saith, I thirst."
+  },
+
+  // ── STUDENT (33) ─────────────────────────────────────────────────────────────
 
   {
     id: 13,
@@ -51,7 +425,6 @@ const quotesQuestions = [
     reference: "Joshua 24:15",
     verseText: "Choose for yourselves this day whom you will serve."
   },
-
   {
     id: 14,
     game: "Who said it?",
@@ -64,7 +437,6 @@ const quotesQuestions = [
     reference: "Isaiah 6:8",
     verseText: "Here am I! Send me."
   },
-
   {
     id: 15,
     game: "Who said it?",
@@ -77,6 +449,368 @@ const quotesQuestions = [
     reference: "Joshua 24:15",
     verseText: "As for me and my house, we will serve the Lord."
   },
+  {
+    id: 106,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Is anything too hard for the Lord"?',
+    choices: ["Abraham", "The Lord", "Sarah", "Moses"],
+    answer: 1,
+    reference: "Genesis 18:14",
+    verseText: "Is any thing too hard for the Lord?"
+  },
+  {
+    id: 107,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Behold the Lamb of God"?',
+    choices: ["Peter", "John the Baptist", "Andrew", "Philip"],
+    answer: 1,
+    reference: "John 1:29",
+    verseText: "Behold the Lamb of God, which taketh away the sin of the world."
+  },
+  {
+    id: 108,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Silver and gold have I none"?',
+    choices: ["Paul", "Peter", "Barnabas", "Stephen"],
+    answer: 1,
+    reference: "Acts 3:6",
+    verseText: "Then Peter said, Silver and gold have I none; but such as I have give I thee."
+  },
+  {
+    id: 109,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "Prophets",
+    difficulty: "Student",
+    question: 'Who said, "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord"?',
+    choices: ["Job", "David", "Isaiah", "Jeremiah"],
+    answer: 0,
+    reference: "Job 1:21",
+    verseText: "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord."
+  },
+  {
+    id: 703,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Lord, if thou hadst been here, my brother had not died"?',
+    choices: ["Mary Magdalene", "Mary of Bethany", "Martha", "Both Mary and Martha"],
+    answer: 3,
+    reference: "John 11:21, 32",
+    verseText: "Then said Martha unto Jesus, Lord, if thou hadst been here, my brother had not died."
+  },
+  {
+    id: 704,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Naked I came from my mother\'s womb, and naked shall I return"?',
+    choices: ["David", "Solomon", "Job", "Ecclesiastes"],
+    answer: 2,
+    reference: "Job 1:21",
+    verseText: "Naked came I out of my mother's womb, and naked shall I return thither."
+  },
+  {
+    id: 705,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "I am the way, the truth, and the life"?',
+    choices: ["Peter", "Paul", "John", "Jesus"],
+    answer: 3,
+    reference: "John 14:6",
+    verseText: "Jesus saith unto him, I am the way, the truth, and the life."
+  },
+  {
+    id: 706,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "How can I curse those whom God has not cursed"?',
+    choices: ["Balak", "Balaam", "Moses", "Joshua"],
+    answer: 1,
+    reference: "Numbers 23:8",
+    verseText: "How shall I curse, whom God hath not cursed?"
+  },
+  {
+    id: 707,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "I am not ashamed of the gospel of Christ: for it is the power of God unto salvation"?',
+    choices: ["Peter", "Paul", "John", "James"],
+    answer: 1,
+    reference: "Romans 1:16",
+    verseText: "I am not ashamed of the gospel of Christ: for it is the power of God unto salvation."
+  },
+  {
+    id: 708,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "If God be for us, who can be against us"? — and in which testament?',
+    choices: ["David in the Psalms", "Moses in Deuteronomy", "Paul in Romans", "Joshua before battle"],
+    answer: 2,
+    reference: "Romans 8:31",
+    verseText: "What shall we then say to these things? If God be for us, who can be against us?"
+  },
+  {
+    id: 709,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "I have fought a good fight, I have finished my course, I have kept the faith"?',
+    choices: ["Peter", "Barnabas", "Paul", "John"],
+    answer: 2,
+    reference: "2 Timothy 4:7",
+    verseText: "I have fought a good fight, I have finished my course, I have kept the faith."
+  },
+  {
+    id: 710,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Yet will I trust in him," even while expecting to be slain?',
+    choices: ["David", "Job", "Jeremiah", "Paul"],
+    answer: 1,
+    reference: "Job 13:15",
+    verseText: "Though he slay me, yet will I trust in him."
+  },
+  {
+    id: 711,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "He must increase, but I must decrease"?',
+    choices: ["Peter", "Paul", "John the Baptist", "Stephen"],
+    answer: 2,
+    reference: "John 3:30",
+    verseText: "He must increase, but I must decrease."
+  },
+  {
+    id: 712,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Thy word is a lamp unto my feet, and a light unto my path"?',
+    choices: ["Solomon", "The Psalmist", "Jeremiah", "Moses"],
+    answer: 1,
+    reference: "Psalm 119:105",
+    verseText: "Thy word is a lamp unto my feet, and a light unto my path."
+  },
+  {
+    id: 713,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Come out of the man, thou unclean spirit"?',
+    choices: ["Peter", "Paul", "Jesus", "The disciples"],
+    answer: 2,
+    reference: "Mark 5:8",
+    verseText: "He said unto him, Come out of the man, thou unclean spirit."
+  },
+  {
+    id: 714,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "The Lord is my light and my salvation; whom shall I fear"?',
+    choices: ["Moses", "Solomon", "David", "Isaiah"],
+    answer: 2,
+    reference: "Psalm 27:1",
+    verseText: "The Lord is my light and my salvation; whom shall I fear?"
+  },
+  {
+    id: 715,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Saul, Saul, why do you persecute me"?',
+    choices: ["Stephen", "Ananias", "Jesus", "An angel"],
+    answer: 2,
+    reference: "Acts 9:4",
+    verseText: "Saul, Saul, why persecutest thou me?"
+  },
+  {
+    id: 716,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "I know that my redeemer liveth"?',
+    choices: ["Isaiah", "Daniel", "Job", "Thomas"],
+    answer: 2,
+    reference: "Job 19:25",
+    verseText: "For I know that my Redeemer liveth."
+  },
+  {
+    id: 717,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Woman, behold thy son" — and "Behold thy mother"?',
+    choices: ["God the Father", "Peter", "Jesus from the cross", "John the Baptist"],
+    answer: 2,
+    reference: "John 19:26-27",
+    verseText: "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith... Woman, behold thy son!"
+  },
+  {
+    id: 718,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Will a man rob God? Yet ye have robbed me"?',
+    choices: ["Jeremiah", "Isaiah", "The Lord through Malachi", "Ezekiel"],
+    answer: 2,
+    reference: "Malachi 3:8",
+    verseText: "Will a man rob God? Yet ye have robbed me."
+  },
+  {
+    id: 744,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "What I have written, I have written"? in response to pressure to change the sign on the cross',
+    choices: ["The high priest", "Herod", "Pilate", "A Roman soldier"],
+    answer: 2,
+    reference: "John 19:22",
+    verseText: "Pilate answered, What I have written I have written."
+  },
+  {
+    id: 745,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "I have sinned against the Lord," after Nathan confronted him?',
+    choices: ["Saul", "Samson", "David", "Solomon"],
+    answer: 2,
+    reference: "2 Samuel 12:13",
+    verseText: "And David said unto Nathan, I have sinned against the Lord."
+  },
+  {
+    id: 746,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Make haste, and come down; for today I must abide at thy house"?',
+    choices: ["Peter to Cornelius", "Paul to the Philippian jailer", "Jesus to Zacchaeus", "The angel to Gideon"],
+    answer: 2,
+    reference: "Luke 19:5",
+    verseText: "Jesus... looked up, and saw him, and said unto him, Zacchaeus, make haste, and come down; for to day I must abide at thy house."
+  },
+  {
+    id: 747,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Entreat me not to leave thee, or to return from following after thee"?',
+    choices: ["Orpah to Naomi", "Ruth to Naomi", "Hannah to Eli", "Leah to Jacob"],
+    answer: 1,
+    reference: "Ruth 1:16",
+    verseText: "Intreat me not to leave thee, or to return from following after thee."
+  },
+  {
+    id: 748,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Lord, to whom shall we go? thou hast the words of eternal life"?',
+    choices: ["John", "Thomas", "Andrew", "Peter"],
+    answer: 3,
+    reference: "John 6:68",
+    verseText: "Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life."
+  },
+  {
+    id: 749,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "How are the mighty fallen, and the weapons of war perished"?',
+    choices: ["Solomon", "Jeremiah", "David in his lament", "An unnamed narrator"],
+    answer: 2,
+    reference: "2 Samuel 1:27",
+    verseText: "How are the mighty fallen, and the weapons of war perished!"
+  },
+  {
+    id: 750,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Neither do I condemn thee: go, and sin no more"?',
+    choices: ["A Pharisee", "Moses in the law", "Paul in Romans", "Jesus to the woman caught in adultery"],
+    answer: 3,
+    reference: "John 8:11",
+    verseText: "Jesus said unto her, Neither do I condemn thee: go, and sin no more."
+  },
+  {
+    id: 751,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "How shall I curse, whom God hath not cursed?" when asked to prophesy against Israel?',
+    choices: ["Balak", "Balaam", "Moses", "Joshua"],
+    answer: 1,
+    reference: "Numbers 23:8",
+    verseText: "How shall I curse, whom God hath not cursed? or how shall I defy, whom the Lord hath not defied?"
+  },
+  {
+    id: 752,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "Whereas I was blind, now I see"?',
+    choices: ["Bartimaeus after being healed", "The man born blind whom Jesus healed", "A leper who returned to thank Jesus", "Paul after his conversion"],
+    answer: 1,
+    reference: "John 9:25",
+    verseText: "One thing I know, that, whereas I was blind, now I see."
+  },
+  {
+    id: 753,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Student",
+    question: 'Who said, "What hath God wrought"? — though this is also the famous first telegraph message',
+    choices: ["Balaam", "Moses", "Joshua", "Samuel"],
+    answer: 0,
+    reference: "Numbers 23:23",
+    verseText: "According to this time it shall be said of Jacob and of Israel, What hath God wrought!"
+  },
+
+  // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
 
   {
     id: 16,
@@ -90,7 +824,6 @@ const quotesQuestions = [
     reference: "Job 13:15",
     verseText: "Though He slay me, yet will I trust Him."
   },
-
   {
     id: 17,
     game: "Who said it?",
@@ -103,7 +836,6 @@ const quotesQuestions = [
     reference: "Job 19:25",
     verseText: "For I know that my Redeemer lives."
   },
-
   {
     id: 18,
     game: "Who said it?",
@@ -116,148 +848,365 @@ const quotesQuestions = [
     reference: "Isaiah 6:8",
     verseText: "Whom shall I send, and who will go for Us?"
   },
-
-  {
-    id: 102,
-    game: "Who said it?",
-    testament: "Old Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who said, \"Here I am\"? when the Lord called him as a child?",
-    choices: ["Samuel", "Isaac", "David", "Jeremiah"],
-    answer: 0,
-    reference: "1 Samuel 3:4",
-    verseText: "The Lord called Samuel. And he answered, Here am I."
-  },
-
-  {
-    id: 103,
-    game: "Who said it?",
-    testament: "Old Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who said, \"There shall not be dew nor rain these years, except at my word\"?",
-    choices: ["Elijah", "Elisha", "Moses", "Isaiah"],
-    answer: 0,
-    reference: "1 Kings 17:1",
-    verseText: "As the Lord God of Israel liveth... there shall not be dew nor rain these years, but according to my word."
-  },
-
-  {
-    id: 104,
-    game: "Who said it?",
-    testament: "New Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who said, \"Lord, remember me when You come into Your kingdom\"?",
-    choices: ["Peter", "The centurion", "One thief on the cross", "Thomas"],
-    answer: 2,
-    reference: "Luke 23:42",
-    verseText: "Lord, remember me when thou comest into thy kingdom."
-  },
-
-  {
-    id: 105,
-    game: "Who said it?",
-    testament: "New Testament",
-    category: "People",
-    difficulty: "Beginner",
-    question: "Who said, \"Come and see\"? to Nathanael",
-    choices: ["Peter", "Philip", "Andrew", "John"],
-    answer: 1,
-    reference: "John 1:46",
-    verseText: "Philip saith unto him, Come and see."
-  },
-
-  {
-    id: 106,
-    game: "Who said it?",
-    testament: "Old Testament",
-    category: "People",
-    difficulty: "Student",
-    question: "Who said, \"Is anything too hard for the Lord?\"",
-    choices: ["Abraham", "The Lord", "Sarah", "Moses"],
-    answer: 1,
-    reference: "Genesis 18:14",
-    verseText: "Is any thing too hard for the Lord?"
-  },
-
-  {
-    id: 107,
-    game: "Who said it?",
-    testament: "New Testament",
-    category: "People",
-    difficulty: "Student",
-    question: "Who said, \"Behold the Lamb of God\"?",
-    choices: ["Peter", "John the Baptist", "Andrew", "Philip"],
-    answer: 1,
-    reference: "John 1:29",
-    verseText: "Behold the Lamb of God, which taketh away the sin of the world."
-  },
-
-  {
-    id: 108,
-    game: "Who said it?",
-    testament: "New Testament",
-    category: "People",
-    difficulty: "Student",
-    question: "Who said, \"Silver and gold have I none\"?",
-    choices: ["Paul", "Peter", "Barnabas", "Stephen"],
-    answer: 1,
-    reference: "Acts 3:6",
-    verseText: "Then Peter said, Silver and gold have I none; but such as I have give I thee."
-  },
-
-  {
-    id: 109,
-    game: "Who said it?",
-    testament: "Old Testament",
-    category: "Prophets",
-    difficulty: "Student",
-    question: "Who said, \"The Lord gave, and the Lord hath taken away; blessed be the name of the Lord\"?",
-    choices: ["Job", "David", "Isaiah", "Jeremiah"],
-    answer: 0,
-    reference: "Job 1:21",
-    verseText: "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord."
-  },
-
   {
     id: 110,
     game: "Who said it?",
     testament: "New Testament",
     category: "Teachings",
     difficulty: "Scholar",
-    question: "Who said, \"I am the resurrection, and the life\"?",
+    question: 'Who said, "I am the resurrection, and the life"?',
     choices: ["Peter", "Paul", "Jesus", "Martha"],
     answer: 2,
     reference: "John 11:25",
     verseText: "Jesus said unto her, I am the resurrection, and the life."
   },
-
   {
     id: 111,
     game: "Who said it?",
     testament: "Old Testament",
     category: "Teachings",
     difficulty: "Scholar",
-    question: "Who said, \"Can these bones live?\"",
+    question: 'Who said, "Can these bones live"?',
     choices: ["Ezekiel", "The Lord", "Daniel", "Jeremiah"],
     answer: 1,
     reference: "Ezekiel 37:3",
     verseText: "And he said unto me, Son of man, can these bones live?"
   },
-
   {
     id: 112,
     game: "Who said it?",
     testament: "New Testament",
     category: "Teachings",
     difficulty: "Scholar",
-    question: "Who said, \"It is finished\"?",
+    question: 'Who said, "It is finished"?',
     choices: ["Paul", "Jesus", "John", "Peter"],
     answer: 1,
     reference: "John 19:30",
     verseText: "When Jesus therefore had received the vinegar, he said, It is finished."
+  },
+  {
+    id: 719,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Father, into thy hands I commend my spirit"?',
+    choices: ["Stephen", "Paul", "Jesus", "John"],
+    answer: 2,
+    reference: "Luke 23:46",
+    verseText: "And when Jesus had cried with a loud voice, he said, Father, into thy hands I commend my spirit."
+  },
+  {
+    id: 720,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Behold, I was shapen in iniquity; and in sin did my mother conceive me"?',
+    choices: ["Solomon", "Jeremiah", "David", "Job"],
+    answer: 2,
+    reference: "Psalm 51:5",
+    verseText: "Behold, I was shapen in iniquity; and in sin did my mother conceive me."
+  },
+  {
+    id: 721,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Lord, I believe; help thou mine unbelief"?',
+    choices: ["A Pharisee", "A man whose son had an unclean spirit", "Thomas", "A blind beggar"],
+    answer: 1,
+    reference: "Mark 9:24",
+    verseText: "And straightway the father of the child cried out, and said... Lord, I believe; help thou mine unbelief."
+  },
+  {
+    id: 722,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "The fear of the Lord is the beginning of wisdom"?',
+    choices: ["Moses", "David", "Solomon", "Isaiah"],
+    answer: 2,
+    reference: "Proverbs 9:10",
+    verseText: "The fear of the Lord is the beginning of wisdom."
+  },
+  {
+    id: 723,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "We ought to obey God rather than men"?',
+    choices: ["Paul and Barnabas", "Stephen", "Peter and the apostles", "James"],
+    answer: 2,
+    reference: "Acts 5:29",
+    verseText: "Then Peter and the other apostles answered and said, We ought to obey God rather than men."
+  },
+  {
+    id: 724,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Vanity of vanities; all is vanity"?',
+    choices: ["Job", "David", "The Preacher in Ecclesiastes", "Isaiah"],
+    answer: 2,
+    reference: "Ecclesiastes 1:2",
+    verseText: "Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity."
+  },
+  {
+    id: 725,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "I can do all things through Christ which strengtheneth me"?',
+    choices: ["Peter", "James", "Paul", "John"],
+    answer: 2,
+    reference: "Philippians 4:13",
+    verseText: "I can do all things through Christ which strengtheneth me."
+  },
+  {
+    id: 726,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Does Job fear God for nothing?" — implying his motives were selfish?',
+    choices: ["God", "Job's wife", "Satan", "Eliphaz"],
+    answer: 2,
+    reference: "Job 1:9",
+    verseText: "Then Satan answered the Lord, and said, Doth Job fear God for nought?"
+  },
+  {
+    id: 727,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "For I determined not to know any thing among you, save Jesus Christ, and him crucified"?',
+    choices: ["Peter", "Apollos", "Paul", "Barnabas"],
+    answer: 2,
+    reference: "1 Corinthians 2:2",
+    verseText: "For I determined not to know any thing among you, save Jesus Christ, and him crucified."
+  },
+  {
+    id: 728,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "I am a voice crying in the wilderness" when asked about his identity?',
+    choices: ["Elijah", "Isaiah speaking of himself", "John the Baptist", "Jeremiah"],
+    answer: 2,
+    reference: "John 1:23",
+    verseText: "He said, I am the voice of one crying in the wilderness, Make straight the way of the Lord."
+  },
+  {
+    id: 729,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "My grace is sufficient for thee: for my strength is made perfect in weakness"?',
+    choices: ["Jesus to his disciples", "The Lord to Paul", "An angel to Peter", "Paul to Timothy"],
+    answer: 1,
+    reference: "2 Corinthians 12:9",
+    verseText: "My grace is sufficient for thee: for my strength is made perfect in weakness."
+  },
+  {
+    id: 730,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "You meant evil against me, but God meant it for good, to bring it about that many people should be kept alive"?',
+    choices: ["Jacob", "David after Absalom's rebellion", "Joseph to his brothers", "Moses to Pharaoh"],
+    answer: 2,
+    reference: "Genesis 50:20",
+    verseText: "Ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive."
+  },
+  {
+    id: 731,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "God forbid: yea, let God be true, but every man a liar"?',
+    choices: ["Peter", "James", "Paul", "John"],
+    answer: 2,
+    reference: "Romans 3:4",
+    verseText: "God forbid: yea, let God be true, but every man a liar."
+  },
+  {
+    id: 732,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Where can I go from your Spirit? Where can I flee from your presence"?',
+    choices: ["Jonah after being released", "Job in his suffering", "The Psalmist David", "Jeremiah in the pit"],
+    answer: 2,
+    reference: "Psalm 139:7",
+    verseText: "Whither shall I go from thy spirit? or whither shall I flee from thy presence?"
+  },
+  {
+    id: 733,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "I am Alpha and Omega, the beginning and the ending"?',
+    choices: ["Paul in a vision", "An angel to John", "The Lord God", "Jesus in the Gospels"],
+    answer: 2,
+    reference: "Revelation 1:8",
+    verseText: "I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty."
+  },
+  {
+    id: 734,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "I will put enmity between thee and the woman, and between thy seed and her seed"?',
+    choices: ["Adam cursing Eve", "Eve cursing the serpent", "God to the serpent", "An angel after the Fall"],
+    answer: 2,
+    reference: "Genesis 3:15",
+    verseText: "I will put enmity between thee and the woman, and between thy seed and her seed."
+  },
+  {
+    id: 735,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Father, forgive them; for they know not what they do"?',
+    choices: ["Stephen before his death", "Paul in prison", "Jesus from the cross", "Peter on the day of Pentecost"],
+    answer: 2,
+    reference: "Luke 23:34",
+    verseText: "Then said Jesus, Father, forgive them; for they know not what they do."
+  },
+  {
+    id: 736,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Behold, I stand at the door, and knock"?',
+    choices: ["Paul in his letter to Ephesus", "An angel to the church at Laodicea", "Jesus in Revelation", "Jesus in the parable of the ten virgins"],
+    answer: 2,
+    reference: "Revelation 3:20",
+    verseText: "Behold, I stand at the door, and knock: if any man hear my voice, and open the door, I will come in to him."
+  },
+  {
+    id: 754,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "For to me to live is Christ, and to die is gain"?',
+    choices: ["Peter", "John", "Paul", "James"],
+    answer: 2,
+    reference: "Philippians 1:21",
+    verseText: "For to me to live is Christ, and to die is gain."
+  },
+  {
+    id: 755,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Curse God and die," to a suffering man?',
+    choices: ["Eliphaz the Temanite", "His three friends", "Job's wife", "Bildad the Shuhite"],
+    answer: 2,
+    reference: "Job 2:9",
+    verseText: "Then said his wife unto him, Dost thou still retain thine integrity? curse God, and die."
+  },
+  {
+    id: 756,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "I have not come to bring peace, but a sword"?',
+    choices: ["Paul warning the Corinthians", "Jesus in Matthew 10", "An angel to Cornelius", "John in Revelation"],
+    answer: 1,
+    reference: "Matthew 10:34",
+    verseText: "Think not that I am come to send peace on earth: I came not to send peace, but a sword."
+  },
+  {
+    id: 757,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "For thou art with me; thy rod and thy staff they comfort me"?',
+    choices: ["Solomon", "Asaph", "David", "Moses"],
+    answer: 2,
+    reference: "Psalm 23:4",
+    verseText: "Yea, though I walk through the valley of the shadow of death... thou art with me; thy rod and thy staff they comfort me."
+  },
+  {
+    id: 758,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord"?',
+    choices: ["Peter in his first epistle", "Paul in Romans", "John in his Gospel", "James in his epistle"],
+    answer: 1,
+    reference: "Romans 6:23",
+    verseText: "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."
+  },
+  {
+    id: 759,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "My God, my God, why hast thou forsaken me?" — and where is this also found in the New Testament?',
+    choices: ["David in Psalm 22 — and Jesus on the cross", "Job in his suffering — and Paul in prison", "Jeremiah in his lament — and Stephen before death", "Asaph in Psalm 77 — and Peter at his denial"],
+    answer: 0,
+    reference: "Psalm 22:1; Matthew 27:46",
+    verseText: "My God, my God, why hast thou forsaken me?"
+  },
+  {
+    id: 760,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Lord, now lettest thou thy servant depart in peace, according to thy word: for mine eyes have seen thy salvation"?',
+    choices: ["Joseph of Arimathaea", "Simeon in the temple", "An aged priest named Zacharias", "Anna the prophetess"],
+    answer: 1,
+    reference: "Luke 2:29-30",
+    verseText: "Lord, now lettest thou thy servant depart in peace... for mine eyes have seen thy salvation."
+  },
+  {
+    id: 761,
+    game: "Who said it?",
+    testament: "Old Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground"?',
+    choices: ["An elder of Israel", "The angel of the Lord in the burning bush", "Joshua before Jericho", "God speaking from Sinai"],
+    answer: 1,
+    reference: "Exodus 3:5",
+    verseText: "And he said, Draw not nigh hither: put off thy shoes from off thy feet, for the place whereon thou standest is holy ground."
+  },
+  {
+    id: 762,
+    game: "Who said it?",
+    testament: "New Testament",
+    category: "People",
+    difficulty: "Scholar",
+    question: 'Who said, "And they continued stedfastly in the apostles\' doctrine and fellowship, and in breaking of bread, and in prayers"? — meaning, which book records this of the early church?',
+    choices: ["Paul in Ephesians", "Luke in Acts", "John in Revelation", "Peter in his first epistle"],
+    answer: 1,
+    reference: "Acts 2:42",
+    verseText: "And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers."
   }
 
 ];
