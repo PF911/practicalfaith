@@ -148,6 +148,26 @@ function openStats(){ renderStats(); renderAchievements(); showScreen('statsScre
 function openAbout(){ showScreen('aboutScreen'); }
 function openMyVerses(){ renderMyVerses(); showScreen('myVersesScreen'); }
 function openSettings(){ renderSettingsUI(); showScreen('settingsScreen'); }
+// Expose ALL onclick-called functions on window to guarantee global scope
+window.openHighScores      = openHighScores;
+window.openStats           = openStats;
+window.openAbout           = openAbout;
+window.openMyVerses        = openMyVerses;
+window.openSettings        = openSettings;
+window.openLevelMenu       = openLevelMenu;
+window.showScreen          = showScreen;
+window.selectLevel         = selectLevel;
+window.submitAnswer        = submitAnswer;
+window.nextQuestion        = nextQuestion;
+window.restartLevel        = restartLevel;
+window.startDailyChallenge = startDailyChallenge;
+window.submitDailyAnswer   = submitDailyAnswer;
+window.openDailyVerseModal = openDailyVerseModal;
+window.closeDailyVerseModal= closeDailyVerseModal;
+window.openVerseModal      = openVerseModal;
+window.closeVerseModal     = closeVerseModal;
+window.closeAchievementPopup = closeAchievementPopup;
+window.openReview          = openReview;
 
 // ─── Progress Storage ────────────────────────────────────────────────────────
 
@@ -1263,8 +1283,8 @@ function finishDailyChallenge(){
     dotsEl.innerHTML = dailyAnswers.map(a =>
       `<span class="daily-dot ${a.wasCorrect ? 'dot-correct' : 'dot-wrong'}">${a.wasCorrect ? '✓' : '✗'}</span>`
     ).join('');
+    dotsEl.style.display = 'flex';
   }
-  dotsEl.style.display = 'flex';
 }
 
 function openDailyVerseModal(){
