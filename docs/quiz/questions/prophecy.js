@@ -12,7 +12,7 @@ const prophecyQuestions = [
     choices: ["Jonah", "Isaiah", "Elijah", "Amos"],
     answer: 0,
     reference: "Jonah 1:17",
-    verseText: "Now the Lord had prepared a great fish to swallow Jonah."
+    verseText: "Now the LORD had prepared a great fish to swallow Jonah."
   },
   {
     id: 38,
@@ -36,7 +36,7 @@ const prophecyQuestions = [
     choices: ["Elijah", "Elisha", "Nathan", "Joel"],
     answer: 0,
     reference: "1 Kings 18:22",
-    verseText: "I alone am left a prophet of the Lord; but Baal's prophets are four hundred and fifty men."
+    verseText: "I alone am left a prophet of the LORD; but Baal's prophets are four hundred and fifty men."
   },
   {
     id: 135,
@@ -48,7 +48,7 @@ const prophecyQuestions = [
     choices: ["Nathan", "Gad", "Elijah", "Amos"],
     answer: 0,
     reference: "2 Samuel 12:1-7",
-    verseText: "The Lord sent Nathan unto David."
+    verseText: "The LORD sent Nathan to David."
   },
   {
     id: 136,
@@ -72,7 +72,7 @@ const prophecyQuestions = [
     choices: ["True", "False", "Not in the Bible", "Misquoted"],
     answer: 0,
     reference: "Isaiah 7:14",
-    verseText: "Behold, a virgin shall conceive, and bear a son."
+    verseText: "Behold, the virgin shall conceive and bear a Son."
   },
   {
     id: 138,
@@ -84,7 +84,7 @@ const prophecyQuestions = [
     choices: ["Micah", "Joel", "Nahum", "Habakkuk"],
     answer: 0,
     reference: "Micah 7:18",
-    verseText: "Who is a God like unto thee, that pardoneth iniquity...?"
+    verseText: "Who is a God like You, pardoning iniquity...?"
   },
   {
     id: 603,
@@ -96,7 +96,7 @@ const prophecyQuestions = [
     choices: ["Isaiah", "Ezekiel", "Jeremiah", "Amos"],
     answer: 2,
     reference: "Jeremiah 1:6",
-    verseText: "Ah, Lord God! behold, I cannot speak: for I am a child."
+    verseText: "Ah, Lord GOD! Behold, I cannot speak, for I am a youth."
   },
   {
     id: 604,
@@ -108,7 +108,7 @@ const prophecyQuestions = [
     choices: ["Babylon", "Nineveh", "Tyre", "Damascus"],
     answer: 1,
     reference: "Jonah 1:2",
-    verseText: "Arise, go to Nineveh, that great city, and cry against it."
+    verseText: "Arise, go to Nineveh, that great city, and cry out against it."
   },
   {
     id: 605,
@@ -120,7 +120,7 @@ const prophecyQuestions = [
     choices: ["Angels with six wings called seraphim", "A burning chariot", "A pillar of fire", "The angel Gabriel"],
     answer: 0,
     reference: "Isaiah 6:2-3",
-    verseText: "Above it stood the seraphims... And one cried unto another, and said, Holy, holy, holy, is the Lord of hosts."
+    verseText: "Above it stood seraphim... And one cried to another and said: 'Holy, holy, holy is the LORD of hosts.'"
   },
   {
     id: 606,
@@ -144,7 +144,7 @@ const prophecyQuestions = [
     choices: ["Jeremiah", "Isaiah", "Amos", "Joel"],
     answer: 1,
     reference: "Isaiah 61:1",
-    verseText: "The spirit of the Lord God is upon me; because the Lord hath anointed me to preach good tidings unto the meek."
+    verseText: "The spirit of the LORD God is upon me; because the Lord has anointed me to preach good tidings to the meek."
   },
   {
     id: 608,
@@ -156,7 +156,7 @@ const prophecyQuestions = [
     choices: ["Amos", "Joel", "Elisha", "Micah"],
     answer: 2,
     reference: "1 Kings 19:16",
-    verseText: "Elisha the son of Shaphat... shalt thou anoint to be prophet in thy room."
+    verseText: "Elisha the son of Shaphat... shall you anoint to be prophet in your room."
   },
   {
     id: 609,
@@ -168,7 +168,7 @@ const prophecyQuestions = [
     choices: ["A bowl of water", "A glowing coal from the altar", "His hands", "A scroll"],
     answer: 1,
     reference: "Isaiah 6:6-7",
-    verseText: "Then flew one of the seraphims unto me, having a live coal in his hand... and he laid it upon my mouth, and said, Lo, this hath touched thy lips; and thine iniquity is taken away."
+    verseText: "Then flew one of the seraphim to me, having a live coal in his hand... and he laid it upon my mouth, and said, Lo, this has touched your lips; and your iniquity is taken away."
   },
   {
     id: 610,
@@ -180,7 +180,7 @@ const prophecyQuestions = [
     choices: ["Jeremiah", "Micah", "Isaiah", "Malachi"],
     answer: 2,
     reference: "Isaiah 55:6",
-    verseText: "Seek ye the Lord while he may be found, call ye upon him while he is near."
+    verseText: "Seek you the Lord while he may be found, call you upon him while he is near."
   },
   {
     id: 611,
@@ -192,7 +192,7 @@ const prophecyQuestions = [
     choices: ["Their firstborn", "Their prayers", "Tithes and offerings", "Their time of worship"],
     answer: 2,
     reference: "Malachi 3:8",
-    verseText: "Wherein have we robbed thee? In tithes and offerings."
+    verseText: "Wherein have we robbed you? In tithes and offerings."
   },
   {
     id: 612,
@@ -252,7 +252,7 @@ const prophecyQuestions = [
     choices: ["Brook Kidron", "Brook Cherith", "Brook Besor", "Brook Jabbok"],
     answer: 1,
     reference: "1 Kings 17:3-4",
-    verseText: "Get thee hence, and turn thee eastward, and hide thyself by the brook Cherith... I have commanded the ravens to feed thee there."
+    verseText: "Get you hence, and turn you eastward, and hide thyself by the brook Cherith... I have commanded the ravens to feed you there."
   },
   {
     id: 617,
@@ -264,7 +264,7 @@ const prophecyQuestions = [
     choices: ["Amos", "Isaiah", "Micah", "Hosea"],
     answer: 2,
     reference: "Micah 6:8",
-    verseText: "What doth the Lord require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+    verseText: "What does the Lord require of you, but to do justly, and to love mercy, and to walk humbly with your God?"
   },
   {
     id: 618,
@@ -288,7 +288,7 @@ const prophecyQuestions = [
     choices: ["Isaiah", "Jeremiah", "Joel", "Hosea"],
     answer: 1,
     reference: "Lamentations 3:22-23",
-    verseText: "It is of the Lord's mercies that we are not consumed... they are new every morning: great is thy faithfulness."
+    verseText: "It is of the LORD's mercies that we are not consumed... they are new every morning: great is your faithfulness."
   },
   {
     id: 647,
@@ -312,7 +312,7 @@ const prophecyQuestions = [
     choices: ["Jeremiah", "Ezekiel", "Isaiah", "Amos"],
     answer: 2,
     reference: "Isaiah 6:8",
-    verseText: "Also I heard the voice of the Lord, saying, Whom shall I send...? Then said I, Here am I; send me."
+    verseText: "Also I heard the voice of the LORD, saying, Whom shall I send...? Then said I, Here am I; send me."
   },
   {
     id: 649,
@@ -336,7 +336,7 @@ const prophecyQuestions = [
     choices: ["Jeremiah", "Malachi", "Isaiah", "Micah"],
     answer: 2,
     reference: "Isaiah 40:31",
-    verseText: "They that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles."
+    verseText: "Those who wait on the LORD shall renew their strength; they shall mount up with wings like eagles."
   },
   {
     id: 651,
@@ -372,7 +372,7 @@ const prophecyQuestions = [
     choices: ["Joel", "Amos", "Nahum", "Obadiah"],
     answer: 1,
     reference: "Amos 4:12",
-    verseText: "Prepare to meet thy God, O Israel."
+    verseText: "Prepare to meet your God, O Israel."
   },
   {
     id: 654,
@@ -384,7 +384,7 @@ const prophecyQuestions = [
     choices: ["He was wounded but survived", "The lions did not harm him", "He escaped through a window", "An angel blinded the lions"],
     answer: 1,
     reference: "Daniel 6:22",
-    verseText: "My God hath sent his angel, and hath shut the lions' mouths, that they have not hurt me."
+    verseText: "My God has sent his angel, and has shut the lions' mouths, that they have not hurt me."
   },
   {
     id: 655,
@@ -396,7 +396,7 @@ const prophecyQuestions = [
     choices: ["Observed the Sabbath strictly", "Brought all the tithes into the storehouse", "Rebuilt the temple walls", "Kept the feasts of the Lord"],
     answer: 1,
     reference: "Malachi 3:10",
-    verseText: "Bring ye all the tithes into the storehouse... and I will... open you the windows of heaven."
+    verseText: "Bring you all the tithes into the storehouse... and I will... open you the windows of heaven."
   },
   {
     id: 656,
@@ -459,7 +459,7 @@ const prophecyQuestions = [
     choices: ["Hosea", "Joel", "Amos", "Zechariah"],
     answer: 0,
     reference: "Hosea 1:2-3",
-    verseText: "Go, take unto thee a wife of whoredoms... So he went and took Gomer."
+    verseText: "Go, take to you a wife of whoredoms... So he went and took Gomer."
   },
   {
     id: 140,
@@ -483,7 +483,7 @@ const prophecyQuestions = [
     choices: ["Malachi", "Zechariah", "Haggai", "Obadiah"],
     answer: 1,
     reference: "Zechariah 9:9",
-    verseText: "Behold, thy King cometh unto thee... lowly, and riding upon an ass."
+    verseText: "Behold, your King comes to you... lowly, and riding upon an ass."
   },
   {
     id: 142,
@@ -495,7 +495,7 @@ const prophecyQuestions = [
     choices: ["Isaiah", "Moses", "Jeremiah", "Ezekiel"],
     answer: 1,
     reference: "Exodus 3:5-10",
-    verseText: "Put off thy shoes from off thy feet... I will send thee unto Pharaoh."
+    verseText: "Put off your shoes from off your feet... I will send you to Pharaoh."
   },
   {
     id: 619,
@@ -507,7 +507,7 @@ const prophecyQuestions = [
     choices: ["He was glorious and beautiful to see", "He had no form or comeliness and no beauty that we should desire him", "He was tall and strong like a cedar", "He was clothed in white linen"],
     answer: 1,
     reference: "Isaiah 53:2",
-    verseText: "He hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him."
+    verseText: "He has no form nor comeliness; and when we shall see him, there is no beauty that we should desire him."
   },
   {
     id: 620,
@@ -519,7 +519,7 @@ const prophecyQuestions = [
     choices: ["He would build a great temple", "Before I formed thee in the belly I knew thee — I ordained thee a prophet unto the nations", "He would be king over Israel", "His name would be changed to Israel"],
     answer: 1,
     reference: "Jeremiah 1:5",
-    verseText: "Before I formed thee in the belly I knew thee; and before thou camest forth out of the womb I sanctified thee, and I ordained thee a prophet unto the nations."
+    verseText: "Before I formed you in the belly I knew you; and before you cam forth out of the womb I sanctified you, and I ordained you a prophet to the nations."
   },
   {
     id: 621,
@@ -555,7 +555,7 @@ const prophecyQuestions = [
     choices: ["Twenty", "Thirty", "Fifty", "One hundred"],
     answer: 1,
     reference: "Zechariah 11:12-13",
-    verseText: "So they weighed for my price thirty pieces of silver... And the Lord said unto me, Cast it unto the potter."
+    verseText: "So they weighed for my price thirty pieces of silver... And the LORD said to me, Cast it to the potter."
   },
   {
     id: 624,
@@ -567,7 +567,7 @@ const prophecyQuestions = [
     choices: ["Amos", "Hosea", "Joel", "Nahum"],
     answer: 2,
     reference: "Joel 1:4; 2:1-2",
-    verseText: "Blow ye the trumpet in Zion... for the day of the Lord cometh."
+    verseText: "Blow you the trumpet in Zion... for the day of the LORD comes."
   },
   {
     id: 625,
@@ -603,7 +603,7 @@ const prophecyQuestions = [
     choices: ["Isaiah", "Jeremiah", "Moses", "Elijah"],
     answer: 3,
     reference: "Malachi 4:5",
-    verseText: "Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the Lord."
+    verseText: "Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD."
   },
   {
     id: 628,
@@ -639,7 +639,7 @@ const prophecyQuestions = [
     choices: ["A great eagle", "A stone cut without hands", "A river of fire", "A whirlwind"],
     answer: 1,
     reference: "Daniel 2:34",
-    verseText: "Thou sawest till that a stone was cut out without hands, which smote the image upon his feet."
+    verseText: "You saw till that a stone was cut out without hands, which struck the image upon his feet."
   },
   {
     id: 631,
@@ -651,7 +651,7 @@ const prophecyQuestions = [
     choices: ["Amos", "Micah", "Jonah", "Nahum"],
     answer: 2,
     reference: "Jonah 1:3",
-    verseText: "But Jonah rose up to flee unto Tarshish from the presence of the Lord."
+    verseText: "But Jonah rose up to flee to Tarshish from the presence of the LORD."
   },
   {
     id: 657,
@@ -663,7 +663,7 @@ const prophecyQuestions = [
     choices: ["A bowl of water", "A glowing coal from the altar", "His hands", "A golden cup"],
     answer: 1,
     reference: "Isaiah 6:6-7",
-    verseText: "Then flew one of the seraphims... having a live coal in his hand... and he laid it upon my mouth, and said, Lo, this hath touched thy lips; and thine iniquity is taken away."
+    verseText: "Then flew one of the seraphim... having a live coal in his hand... and he laid it upon my mouth, and said, Lo, this has touched your lips; and your iniquity is taken away."
   },
   {
     id: 658,
@@ -675,7 +675,7 @@ const prophecyQuestions = [
     choices: ["They are cast into the depths of the sea", "Her iniquity is pardoned and she has received double for all her sins", "They are forgiven and remembered no more", "They are washed away like snow"],
     answer: 1,
     reference: "Isaiah 40:2",
-    verseText: "Speak ye comfortably to Jerusalem... that her iniquity is pardoned: for she hath received of the Lord's hand double for all her sins."
+    verseText: "Speak you comfortably to Jerusalem... that her iniquity is pardoned: for she has received of the LORD's hand double for all her sins."
   },
   {
     id: 659,
@@ -711,7 +711,7 @@ const prophecyQuestions = [
     choices: ["A new mantle", "A double portion of Elijah's spirit", "The gift of prophecy alone", "Power to call down fire"],
     answer: 1,
     reference: "2 Kings 2:9",
-    verseText: "Elisha said, I pray thee, let a double portion of thy spirit be upon me."
+    verseText: "Elisha said, I pray you, let a double portion of your spirit be upon me."
   },
   {
     id: 662,
@@ -747,7 +747,7 @@ const prophecyQuestions = [
     choices: ["The end had come for Israel", "A coming harvest of nations", "Blessings to be poured out", "A time of peace approaching"],
     answer: 0,
     reference: "Amos 8:1-2",
-    verseText: "Thus hath the Lord God shewed unto me: and behold a basket of summer fruit... The end is come upon my people of Israel."
+    verseText: "Thus has the LORD God shewed to me: and behold a basket of summer fruit... The end is come upon my people of Israel."
   },
   {
     id: 665,
@@ -759,7 +759,7 @@ const prophecyQuestions = [
     choices: ["Jeremiah", "Ezekiel", "Hosea", "Micah"],
     answer: 2,
     reference: "Hosea 3:1",
-    verseText: "The Lord said to me, Go yet, love a woman beloved of her friend, yet an adulteress, according to the love of the Lord toward the children of Israel."
+    verseText: "The Lord said to me, Go yet, love a woman beloved of her friend, yet an adulteress, according to the love of the LORD toward the children of Israel."
   },
   {
     id: 666,
@@ -771,7 +771,7 @@ const prophecyQuestions = [
     choices: ["Malachi and Obadiah", "Haggai and Zechariah", "Joel and Nahum", "Ezra and Nehemiah"],
     answer: 1,
     reference: "Ezra 5:1",
-    verseText: "Then the prophets, Haggai the prophet, and Zechariah the son of Iddo, prophesied unto the Jews... in the name of the God of Israel."
+    verseText: "Then the prophets, Haggai the prophet, and Zechariah the son of Iddo, prophesied to the Jews... in the name of the God of Israel."
   },
   {
     id: 667,
@@ -783,7 +783,7 @@ const prophecyQuestions = [
     choices: ["They thought him a false prophet", "They thought him stricken and smitten of God and afflicted", "They thought him guilty of blasphemy", "They thought him a rebel against Rome"],
     answer: 1,
     reference: "Isaiah 53:4",
-    verseText: "Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
+    verseText: "Surely he has borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
   },
   {
     id: 668,
@@ -795,7 +795,7 @@ const prophecyQuestions = [
     choices: ["Stephen", "John the Baptist", "Jesus", "The nation of Israel"],
     answer: 2,
     reference: "John 19:37",
-    verseText: "And again another scripture saith, They shall look on him whom they pierced."
+    verseText: "And again another scripture says, They shall look on him whom they pierced."
   },
   {
     id: 682,
@@ -870,7 +870,7 @@ const prophecyQuestions = [
     choices: ["Ezekiel", "Jeremiah", "Hosea", "Amos"],
     answer: 0,
     reference: "Ezekiel 2:8-10; 3:1-3",
-    verseText: "Son of man, eat that thou findest; eat this roll."
+    verseText: "Son of man, eat that you find; eat this roll."
   },
   {
     id: 145,
@@ -882,7 +882,7 @@ const prophecyQuestions = [
     choices: ["True", "False", "Not in the Bible", "Misquoted"],
     answer: 1,
     reference: "Micah 5:2",
-    verseText: "But thou, Bethlehem Ephratah... out of thee shall he come forth unto me."
+    verseText: "But you, Bethlehem Ephratah... out of you shall he come forth to me."
   },
   {
     id: 632,
@@ -930,7 +930,7 @@ const prophecyQuestions = [
     choices: ["Into thy hands I commend my spirit", "My God, my God, why hast thou forsaken me?", "Father forgive them for they know not what they do", "It is finished"],
     answer: 1,
     reference: "Psalm 22:1",
-    verseText: "My God, my God, why hast thou forsaken me? why art thou so far from helping me?"
+    verseText: "My God, my God, why have you forsaken me? why art you so far from helping me?"
   },
   {
     id: 636,
@@ -942,7 +942,7 @@ const prophecyQuestions = [
     choices: ["John 10", "Matthew 26", "Luke 22", "Mark 14 and Matthew 26"],
     answer: 3,
     reference: "Matthew 26:31; Mark 14:27",
-    verseText: "Jesus said unto them, All ye shall be offended because of me this night: for it is written, I will smite the shepherd, and the sheep shall be scattered."
+    verseText: "Jesus said to them, All you shall be offended because of me this night: for it is written, I will smite the shepherd, and the sheep shall be scattered."
   },
   {
     id: 637,
@@ -954,7 +954,7 @@ const prophecyQuestions = [
     choices: ["A great earthquake", "Strangers would draw their swords against his beauty and wisdom", "A plague would consume the city", "The Babylonian army would besiege it"],
     answer: 1,
     reference: "Ezekiel 28:7",
-    verseText: "Behold, therefore I will bring strangers upon thee... and they shall draw their swords against the beauty of thy wisdom."
+    verseText: "Behold, therefore I will bring strangers upon you... and they shall draw their swords against the beauty of your wisdom."
   },
   {
     id: 638,
@@ -966,7 +966,7 @@ const prophecyQuestions = [
     choices: ["Seven weeks", "Sixty-two weeks", "Sixty-nine weeks (seven plus sixty-two)", "Seventy weeks"],
     answer: 2,
     reference: "Daniel 9:25",
-    verseText: "From the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks."
+    verseText: "From the going forth of the commandment to restore and to build Jerusalem to the Messiah the Prince shall be seven weeks, and threescore and two weeks."
   },
   {
     id: 639,
@@ -1002,7 +1002,7 @@ const prophecyQuestions = [
     choices: ["TEKEL", "MENE", "UPHARSIN", "PERES"],
     answer: 1,
     reference: "Daniel 5:26",
-    verseText: "MENE; God hath numbered thy kingdom, and finished it."
+    verseText: "MENE; God has numbered your kingdom, and finished it."
   },
   {
     id: 642,
@@ -1014,7 +1014,7 @@ const prophecyQuestions = [
     choices: ["He says he is the one to build a highway for God in the desert", "He says he is the voice crying in the wilderness, make straight the way of the Lord", "He quotes it as a prophecy not yet fulfilled", "He applies it to Elijah's return"],
     answer: 1,
     reference: "John 1:23",
-    verseText: "He said, I am the voice of one crying in the wilderness, Make straight the way of the Lord, as said the prophet Esaias."
+    verseText: "He said, I am the voice of one crying in the wilderness, Make straight the way of the LORD, as said the prophet Esaias."
   },
   {
     id: 643,
@@ -1050,7 +1050,7 @@ const prophecyQuestions = [
     choices: ["Brass", "Silver", "Iron mixed with clay", "Baked clay alone"],
     answer: 2,
     reference: "Daniel 2:41-43",
-    verseText: "Whereas thou sawest iron mixed with miry clay, they shall mingle themselves with the seed of men: but they shall not cleave one to another."
+    verseText: "Whereas you saw iron mixed with miry clay, they shall mingle themselves with the seed of men: but they shall not cleave one to another."
   },
   {
     id: 669,
@@ -1098,7 +1098,7 @@ const prophecyQuestions = [
     choices: ["Pray for the peace of Jerusalem", "Know the Lord — for they shall all know me", "Make no idols or graven images", "Observe the Sabbath and keep it holy"],
     answer: 1,
     reference: "Jeremiah 31:34",
-    verseText: "And they shall teach no more every man his neighbour... saying, Know the Lord: for they shall all know me."
+    verseText: "And they shall teach no more every man his neighbor... saying, Know the Lord: for they shall all know me."
   },
   {
     id: 673,
@@ -1110,7 +1110,7 @@ const prophecyQuestions = [
     choices: ["A new name written on their foreheads", "God's Spirit put within them to cause them to walk in his statutes", "An angel assigned to guide each person", "Prophecy given to all his people"],
     answer: 1,
     reference: "Ezekiel 36:27",
-    verseText: "I will put my spirit within you, and cause you to walk in my statutes, and ye shall keep my judgments, and do them."
+    verseText: "I will put my spirit within you, and cause you to walk in my statutes, and you shall keep my judgments, and do them."
   },
   {
     id: 674,
@@ -1122,7 +1122,7 @@ const prophecyQuestions = [
     choices: ["Your kingdom is divided", "God has numbered your kingdom", "Thou art weighed in the balances and found wanting", "Your kingdom is given to the Medes and Persians"],
     answer: 2,
     reference: "Daniel 5:27",
-    verseText: "TEKEL; Thou art weighed in the balances, and art found wanting."
+    verseText: "TEKEL; You are weighed in the balances, and art found wanting."
   },
   {
     id: 675,
@@ -1134,7 +1134,7 @@ const prophecyQuestions = [
     choices: ["It would be covered with gold from all nations", "The latter glory of this house shall be greater than the former", "Its stones would never be thrown down", "The Ark of the Covenant would return to it"],
     answer: 1,
     reference: "Haggai 2:9",
-    verseText: "The glory of this latter house shall be greater than of the former, saith the Lord of hosts."
+    verseText: "The glory of this latter house shall be greater than of the former, says the LORD of hosts."
   },
   {
     id: 676,
@@ -1146,7 +1146,7 @@ const prophecyQuestions = [
     choices: ["In the Sermon on the Mount", "In the Olivet Discourse in Matthew 24", "In the parable of the ten virgins", "In his prayer in Gethsemane"],
     answer: 1,
     reference: "Matthew 24:15",
-    verseText: "When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place... let them which be in Judaea flee."
+    verseText: "When you therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place... let them which be in Judaea flee."
   },
   {
     id: 677,
@@ -1158,7 +1158,7 @@ const prophecyQuestions = [
     choices: ["He says it was fulfilled in King David's long life", "He says David spoke of Christ's resurrection — that his soul was not left in hell nor did his flesh see corruption", "He says it applies to all righteous saints", "He says it is a promise for all believers at the last day"],
     answer: 1,
     reference: "Acts 2:31",
-    verseText: "He seeing this before spake of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption."
+    verseText: "He seeing this before spoke of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption."
   },
   {
     id: 678,
@@ -1170,7 +1170,7 @@ const prophecyQuestions = [
     choices: ["Nahum", "Habakkuk", "Obadiah", "Zephaniah"],
     answer: 2,
     reference: "Obadiah 1:10-12",
-    verseText: "For thy violence against thy brother Jacob shame shall cover thee... thou shouldest not have looked on the day of thy brother."
+    verseText: "For your violence against your brother Jacob shame shall cover you... you should not have looked on the day of your brother."
   },
   {
     id: 679,

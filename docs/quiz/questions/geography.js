@@ -24,7 +24,7 @@ const geographyQuestions = [
     choices: ["Jordan River", "Nile River", "Euphrates River", "Jabbok River"],
     answer: 0,
     reference: "Matthew 3:13",
-    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
+    verseText: "Then Jesus came from Galilee to John at the Jordan to be baptized by him."
   },
   {
     id: 75,
@@ -108,7 +108,7 @@ const geographyQuestions = [
     choices: ["Bethlehem", "Jerusalem", "Nazareth", "Capernaum"],
     answer: 2,
     reference: "Luke 2:51-52",
-    verseText: "He went down with them, and came to Nazareth, and was subject unto them."
+    verseText: "He went down with them, and came to Nazareth, and was subject to them."
   },
   {
     id: 284,
@@ -132,7 +132,7 @@ const geographyQuestions = [
     choices: ["Garden of Eden", "Garden of Gethsemane", "Garden of the tomb", "Garden of Olives"],
     answer: 1,
     reference: "Matthew 26:36",
-    verseText: "Then cometh Jesus with them unto a place called Gethsemane."
+    verseText: "Then comes Jesus with them to a place called Gethsemane."
   },
   {
     id: 286,
@@ -156,7 +156,7 @@ const geographyQuestions = [
     choices: ["The Jordan River", "The Red Sea", "The Sea of Galilee", "The Dead Sea"],
     answer: 2,
     reference: "Matthew 14:25-26",
-    verseText: "In the fourth watch of the night Jesus went unto them, walking on the sea."
+    verseText: "In the fourth watch of the night Jesus went to them, walking on the sea."
   },
   {
     id: 288,
@@ -168,7 +168,7 @@ const geographyQuestions = [
     choices: ["Egypt", "Babylon", "Canaan", "Assyria"],
     answer: 2,
     reference: "Genesis 17:8",
-    verseText: "I will give unto thee, and to thy seed after thee, all the land of Canaan, for an everlasting possession."
+    verseText: "I will give to you, and to your seed after you, all the land of Canaan, for an everlasting possession."
   },
   {
     id: 289,
@@ -180,7 +180,7 @@ const geographyQuestions = [
     choices: ["Babylon", "Tyre", "Nineveh", "Jerusalem"],
     answer: 2,
     reference: "Jonah 1:2",
-    verseText: "Arise, go to Nineveh, that great city, and cry against it."
+    verseText: "Arise, go to Nineveh, that great city, and cry out against it."
   },
   {
     id: 290,
@@ -312,7 +312,7 @@ const geographyQuestions = [
     choices: ["Canaan", "Egypt", "Ur of the Chaldeans", "Haran"],
     answer: 2,
     reference: "Genesis 11:31; Acts 7:2-3",
-    verseText: "The God of glory appeared unto our father Abraham, when he was in Mesopotamia."
+    verseText: "The God of glory appeared to our father Abraham, when he was in Mesopotamia."
   },
   {
     id: 301,
@@ -360,7 +360,7 @@ const geographyQuestions = [
     choices: ["Bethlehem", "Hebron", "Jerusalem", "Samaria"],
     answer: 2,
     reference: "1 Kings 6:1",
-    verseText: "Solomon began to build the house of the Lord at Jerusalem."
+    verseText: "Solomon began to build the house of the LORD at Jerusalem."
   },
   {
     id: 305,
@@ -396,7 +396,7 @@ const geographyQuestions = [
     choices: ["Bethlehem", "Hebron", "Jerusalem", "Samaria"],
     answer: 2,
     reference: "1 Kings 6:1",
-    verseText: "Solomon began to build the house of the Lord at Jerusalem."
+    verseText: "Solomon began to build the house of the LORD at Jerusalem."
   },
 
   {
@@ -409,7 +409,7 @@ const geographyQuestions = [
     choices: ["Mount Moriah", "Mount Zion", "Mount of Olives", "Mount Carmel"],
     answer: 2,
     reference: "Matthew 21:1",
-    verseText: "When they drew nigh unto Jerusalem, and were come to Bethphage, unto the mount of Olives."
+    verseText: "When they drew nigh to Jerusalem, and were come to Bethphage, to the mount of Olives."
   },
 
   // ── STUDENT (33) ─────────────────────────────────────────────────────────────
@@ -436,7 +436,7 @@ const geographyQuestions = [
     choices: ["Red Sea", "Dead Sea", "Sea of Galilee", "Black Sea"],
     answer: 2,
     reference: "Mark 4:35-41",
-    verseText: "Let us pass over unto the other side."
+    verseText: "Let us pass over to the other side."
   },
   {
     id: 78,
@@ -460,7 +460,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai", "Mount Ararat", "Mount Carmel", "Mount Tabor"],
     answer: 2,
     reference: "1 Kings 18:19-20",
-    verseText: "Gather to me... unto mount Carmel."
+    verseText: "Gather to me... to mount Carmel."
   },
   {
     id: 184,
@@ -484,7 +484,7 @@ const geographyQuestions = [
     choices: ["Tyre", "Joppa", "Tarshish", "Jerusalem"],
     answer: 2,
     reference: "Jonah 1:3",
-    verseText: "Jonah rose up to flee unto Tarshish from the presence of the Lord."
+    verseText: "Jonah rose up to flee to Tarshish from the presence of the LORD."
   },
   {
     id: 306,
@@ -532,7 +532,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai", "Mount Carmel", "Mount Moriah", "Mount Hermon"],
     answer: 2,
     reference: "Genesis 22:2",
-    verseText: "Get thee into the land of Moriah; and offer him there for a burnt offering."
+    verseText: "Get you into the land of Moriah; and offer him there for a burnt offering."
   },
   {
     id: 310,
@@ -592,7 +592,7 @@ const geographyQuestions = [
     choices: ["Jerusalem", "Antioch in Syria", "Corinth", "Rome"],
     answer: 1,
     reference: "Acts 13:1-4",
-    verseText: "The Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them."
+    verseText: "The Holy Spirit said, Separate me Barnabas and Saul for the work whereunto I have called them."
   },
   {
     id: 315,
@@ -640,7 +640,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai (Horeb)", "Jerusalem", "The Jordan River", "Bethel"],
     answer: 0,
     reference: "1 Kings 19:8",
-    verseText: "He went in the strength of that meat forty days and forty nights unto Horeb the mount of God."
+    verseText: "He went in the strength of that meat forty days and forty nights to Horeb the mount of God."
   },
   {
     id: 319,
@@ -676,7 +676,7 @@ const geographyQuestions = [
     choices: ["Thessalonica", "Athens", "Philippi", "Corinth"],
     answer: 2,
     reference: "Acts 16:23-26",
-    verseText: "At midnight Paul and Silas prayed, and sang praises unto God... And suddenly there was a great earthquake."
+    verseText: "At midnight Paul and Silas prayed, and sang praises to God... And suddenly there was a great earthquake."
   },
   {
     id: 322,
@@ -688,7 +688,7 @@ const geographyQuestions = [
     choices: ["Corinth", "Philippi", "Ephesus", "Antioch"],
     answer: 2,
     reference: "Acts 19:10",
-    verseText: "This continued by the space of two years; so that all they which dwelt in Asia heard the word of the Lord Jesus."
+    verseText: "This continued by the space of two years; so that all they which dwelt in Asia heard the word of the LORD Jesus."
   },
   {
     id: 323,
@@ -712,7 +712,7 @@ const geographyQuestions = [
     choices: ["Bethlehem", "Samaria", "Jerusalem", "Jericho"],
     answer: 2,
     reference: "Nehemiah 2:5",
-    verseText: "Send me unto Judah, unto the city of my fathers' sepulchres, that I may build it."
+    verseText: "Send me to Judah, to the city of my fathers' sepulchres, that I may build it."
   },
   {
     id: 325,
@@ -748,7 +748,7 @@ const geographyQuestions = [
     choices: ["Corinth", "Rome", "Athens", "Ephesus"],
     answer: 2,
     reference: "Acts 17:22",
-    verseText: "Then Paul stood in the midst of Mars' hill, and said, Ye men of Athens."
+    verseText: "Then Paul stood in the midst of Mars' hill, and said, You men of Athens."
   },
   {
     id: 348,
@@ -760,7 +760,7 @@ const geographyQuestions = [
     choices: ["Egypt", "Babylon", "Haran", "Nineveh"],
     answer: 2,
     reference: "Genesis 12:4",
-    verseText: "So Abram departed, as the Lord had spoken unto him... and Abram was seventy and five years old when he departed out of Haran."
+    verseText: "So Abram departed, as the Lord had spoken to him... and Abram was seventy and five years old when he departed out of Haran."
   },
   {
     id: 349,
@@ -772,7 +772,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai", "Mount Zion", "A mountain in Galilee", "Mount of Olives"],
     answer: 2,
     reference: "Matthew 5:1",
-    verseText: "And seeing the multitudes, he went up into a mountain: and when he was set, his disciples came unto him."
+    verseText: "And seeing the multitudes, he went up into a mountain: and when he was set, his disciples came to him."
   },
   {
     id: 350,
@@ -784,7 +784,7 @@ const geographyQuestions = [
     choices: ["Nineveh", "Jerusalem", "Babylon", "Susa"],
     answer: 2,
     reference: "Daniel 1:1",
-    verseText: "Nebuchadnezzar king of Babylon came unto Jerusalem, and besieged it."
+    verseText: "Nebuchadnezzar king of Babylon came to Jerusalem, and besieged it."
   },
   {
     id: 351,
@@ -847,7 +847,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai", "Mount Tabor", "Mount Moriah", "Mount Hermon"],
     answer: 0,
     reference: "Exodus 19:20; 31:18",
-    verseText: "And the Lord came down upon mount Sinai... And he gave unto Moses two tables of testimony."
+    verseText: "And the Lord came down upon mount Sinai... And he gave to Moses two tablets of the Testimony."
   },
   {
     id: 187,
@@ -883,7 +883,7 @@ const geographyQuestions = [
     choices: ["Kidron", "Cherith", "Jabbok", "Arnon"],
     answer: 1,
     reference: "1 Kings 17:3-6",
-    verseText: "Hide thyself by the brook Cherith... and I have commanded the ravens to feed thee there."
+    verseText: "Hide thyself by the brook Cherith... and I have commanded the ravens to feed you there."
   },
   {
     id: 328,
@@ -895,7 +895,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai", "Mount Hermon", "Mount Nebo", "Mount Carmel"],
     answer: 2,
     reference: "Deuteronomy 34:1",
-    verseText: "Moses went up from the plains of Moab unto the mountain of Nebo... and the Lord shewed him all the land."
+    verseText: "Moses went up from the plains of Moab to the mountain of Nebo... and the Lord shewed him all the land."
   },
   {
     id: 329,
@@ -931,7 +931,7 @@ const geographyQuestions = [
     choices: ["Syria", "Arabia", "Cilicia", "Cyprus"],
     answer: 1,
     reference: "Galatians 1:17-18",
-    verseText: "I went into Arabia, and returned again unto Damascus. Then after three years I went up to Jerusalem."
+    verseText: "I went into Arabia, and returned again to Damascus. Then after three years I went up to Jerusalem."
   },
   {
     id: 332,
@@ -943,7 +943,7 @@ const geographyQuestions = [
     choices: ["The Nile", "The Euphrates", "The Jordan", "The Jabbok"],
     answer: 2,
     reference: "Joshua 3:17",
-    verseText: "The priests that bare the ark of the covenant of the Lord stood firm on dry ground in the midst of Jordan."
+    verseText: "The priests that bare the ark of the covenant of the LORD stood firm on dry ground in the midst of Jordan."
   },
   {
     id: 333,
@@ -1015,7 +1015,7 @@ const geographyQuestions = [
     choices: ["Jericho", "Zoar", "Bethel", "Hebron"],
     answer: 1,
     reference: "Genesis 19:22-23",
-    verseText: "Haste thee, escape thither... Therefore the name of the city was called Zoar."
+    verseText: "Haste you, escape thither... Therefore the name of the city was called Zoar."
   },
   {
     id: 339,
@@ -1039,7 +1039,7 @@ const geographyQuestions = [
     choices: ["The threshing floor of Araunah", "The threshing floor of Boaz", "The fields of Bethlehem", "The hill of Zion"],
     answer: 0,
     reference: "2 Samuel 24:24; 2 Chronicles 3:1",
-    verseText: "David built there an altar... So Solomon began to build the house of the Lord at Jerusalem in mount Moriah."
+    verseText: "David built there an altar... So Solomon began to build the house of the LORD at Jerusalem in mount Moriah."
   },
   {
     id: 341,
@@ -1075,7 +1075,7 @@ const geographyQuestions = [
     choices: ["Ephesus", "Sardis", "Philadelphia", "Laodicea"],
     answer: 3,
     reference: "Revelation 3:15-16",
-    verseText: "I know thy works, that thou art neither cold nor hot... because thou art lukewarm... I will spue thee out of my mouth."
+    verseText: "I know your works, that you are neither cold nor hot... because you are lukewarm... I will spue you out of my mouth."
   },
   {
     id: 344,
@@ -1099,7 +1099,7 @@ const geographyQuestions = [
     choices: ["Augustus", "Tiberius", "Nero", "Claudius"],
     answer: 2,
     reference: "Acts 25:11-12",
-    verseText: "I appeal unto Caesar... Hast thou appealed unto Caesar? unto Caesar shalt thou go."
+    verseText: "I appeal to Caesar... Hast you appealed to Caesar? to Caesar shall you go."
   },
   {
     id: 352,
@@ -1111,7 +1111,7 @@ const geographyQuestions = [
     choices: ["Hebron", "Jebus", "Salem", "Bethel"],
     answer: 1,
     reference: "2 Samuel 5:6",
-    verseText: "The king and his men went to Jerusalem unto the Jebusites, the inhabitants of the land."
+    verseText: "The king and his men went to Jerusalem to the Jebusites, the inhabitants of the land."
   },
   {
     id: 353,
@@ -1123,7 +1123,7 @@ const geographyQuestions = [
     choices: ["Palestine", "Greece", "Asia Minor (modern Turkey)", "Rome"],
     answer: 2,
     reference: "Revelation 1:11",
-    verseText: "What thou seest, write in a book, and send it unto the seven churches which are in Asia."
+    verseText: "What you seest, write in a book, and send it to the seven churches which are in Asia."
   },
   {
     id: 354,
@@ -1159,7 +1159,7 @@ const geographyQuestions = [
     choices: ["Bethel", "Hebron", "Shiloh", "Jerusalem"],
     answer: 2,
     reference: "1 Samuel 1:3",
-    verseText: "This man went up out of his city yearly to worship and to sacrifice unto the Lord of hosts in Shiloh."
+    verseText: "This man went up out of his city yearly to worship and to sacrifice to the LORD of hosts in Shiloh."
   },
   {
     id: 357,
@@ -1171,7 +1171,7 @@ const geographyQuestions = [
     choices: ["Caesarea", "Antioch", "Joppa", "Ptolemais"],
     answer: 0,
     reference: "Acts 23:23-24",
-    verseText: "Make ready two hundred soldiers to go to Caesarea... And provide them beasts, that they may set Paul on, and bring him safe unto Felix the governor."
+    verseText: "Make ready two hundred soldiers to go to Caesarea... And provide them beasts, that they may set Paul on, and bring him safe to Felix the governor."
   },
   {
     id: 358,

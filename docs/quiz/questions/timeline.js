@@ -108,7 +108,7 @@ const timelineQuestions = [
     choices: ["Joseph was sold into slavery", "Abraham left Haran", "The Ten Commandments were given at Sinai", "The Flood"],
     answer: 2,
     reference: "Exodus 20:1-2",
-    verseText: "And God spake all these words, saying, I am the Lord thy God, which have brought thee out of the land of Egypt."
+    verseText: "And God spoke all these words, saying, I am the LORD your God, which have brought you out of the land of Egypt."
   },
   {
     id: 765,
@@ -120,7 +120,7 @@ const timelineQuestions = [
     choices: ["King David", "Moses", "Abraham", "Adam"],
     answer: 3,
     reference: "Genesis 2:7",
-    verseText: "And the Lord God formed man of the dust of the ground."
+    verseText: "And the LORD God formed man of the dust of the ground."
   },
   {
     id: 766,
@@ -132,7 +132,7 @@ const timelineQuestions = [
     choices: ["Jesus turned water into wine", "Jesus was baptized by John", "Jesus raised Lazarus", "Jesus entered Jerusalem on a donkey"],
     answer: 1,
     reference: "Matthew 3:16",
-    verseText: "And Jesus, when he was baptized, went up straightway out of the water."
+    verseText: "And Jesus, when he was baptized, went up immediately out of the water."
   },
   {
     id: 767,
@@ -192,7 +192,7 @@ const timelineQuestions = [
     choices: ["Pentecost", "Paul's letters to the churches", "The Last Supper", "Stephen's martyrdom"],
     answer: 2,
     reference: "Luke 22:19-20",
-    verseText: "And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you."
+    verseText: "And he took bread, and gave thanks, and brake it, and gave to them, saying, This is my body which is given for you."
   },
   {
     id: 772,
@@ -216,7 +216,7 @@ const timelineQuestions = [
     choices: ["Joseph became Pharaoh", "Moses led the Exodus", "Joseph interpreted Pharaoh's dreams and rose to power", "Jacob moved to Egypt"],
     answer: 2,
     reference: "Genesis 41:39-40",
-    verseText: "Pharaoh said unto Joseph... there is none so discreet and wise as thou art."
+    verseText: "Pharaoh said to Joseph... there is none so discreet and wise as you are."
   },
   {
     id: 774,
@@ -228,7 +228,7 @@ const timelineQuestions = [
     choices: ["The Sermon on the Mount", "The Triumphal Entry into Jerusalem", "The Baptism of Jesus", "The feeding of five thousand"],
     answer: 2,
     reference: "Matthew 3:13",
-    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
+    verseText: "Then Jesus came from Galilee to John at the Jordan to be baptized by him."
   },
   {
     id: 775,
@@ -264,7 +264,7 @@ const timelineQuestions = [
     choices: ["The Passover in Egypt", "Moses receives the Ten Commandments", "Israel spends 40 years in the wilderness", "Israel crosses the Jordan River"],
     answer: 0,
     reference: "Exodus 12:27",
-    verseText: "It is the sacrifice of the Lord's passover, who passed over the houses of the children of Israel in Egypt."
+    verseText: "It is the sacrifice of the LORD's passover, who passed over the houses of the children of Israel in Egypt."
   },
   {
     id: 778,
@@ -360,7 +360,7 @@ const timelineQuestions = [
     choices: ["The baptism of Jesus", "The feeding of the five thousand", "The Triumphal Entry into Jerusalem", "The Great Commission"],
     answer: 3,
     reference: "Matthew 28:18-20",
-    verseText: "Go ye therefore, and teach all nations... and, lo, I am with you always, even unto the end of the world."
+    verseText: "Go you therefore, and teach all nations... and, lo, I am with you always, even to the end of the world."
   },
   {
     id: 816,
@@ -435,7 +435,7 @@ const timelineQuestions = [
     choices: ["Solomon builds the Temple", "The Flood", "Joseph goes to Egypt", "The Exodus"],
     answer: 0,
     reference: "1 Kings 6:1",
-    verseText: "He began to build the house of the Lord."
+    verseText: "He began to build the house of the LORD."
   },
   {
     id: 24,
@@ -675,7 +675,7 @@ const timelineQuestions = [
     choices: ["Josiah's reforms", "Isaiah's prophesying", "Nehemiah rebuilding Jerusalem's walls", "Elijah confronting Ahab"],
     answer: 2,
     reference: "Nehemiah 2:17",
-    verseText: "Then said I unto them, Ye see the distress that we are in... come, and let us build up the wall of Jerusalem."
+    verseText: "Then said I to them, You see the distress that we are in... come, and let us build up the wall of Jerusalem."
   },
   {
     id: 820,
@@ -699,7 +699,7 @@ const timelineQuestions = [
     choices: ["He appeared to Mary Magdalene", "He was tried before Pilate and Herod", "He sent the Holy Spirit", "He taught in the temple"],
     answer: 1,
     reference: "Luke 23:1-25",
-    verseText: "The whole multitude of them arose, and led him unto Pilate."
+    verseText: "The whole multitude of them arose, and led him to Pilate."
   },
   {
     id: 822,
@@ -918,7 +918,7 @@ const timelineQuestions = [
     choices: ["All three journeys → arrest in Jerusalem → imprisonment in Rome", "First journey → imprisonment in Rome → second and third journeys", "Imprisonment in Rome → all three journeys → death", "First two journeys → imprisonment → third journey → Rome"],
     answer: 0,
     reference: "Acts 13; 15; 18; 21; 28",
-    verseText: "Paul completed three journeys before his arrest in Jerusalem and subsequent imprisonment in Rome."
+    verseText: "Paul completed three journeys before his arr in Jerusalem and subsequent imprisonment in Rome."
   },
   {
     id: 798,
@@ -1038,7 +1038,7 @@ const timelineQuestions = [
     choices: ["Ezekiel", "Jeremiah", "Hosea", "Daniel"],
     answer: 2,
     reference: "Hosea 1:1",
-    verseText: "The word of the Lord that came unto Hosea... in the days of Jeroboam the son of Joash, king of Israel."
+    verseText: "The word of the LORD that came to Hosea... in the days of Jeroboam the son of Joash, king of Israel."
   },
   {
     id: 808,
@@ -1122,7 +1122,7 @@ const timelineQuestions = [
     choices: ["About 40 years", "About 100 years", "About 480 years", "About 1000 years"],
     answer: 2,
     reference: "1 Kings 6:1",
-    verseText: "And it came to pass in the four hundred and eightieth year after the children of Israel were come out of the land of Egypt... he began to build the house of the Lord."
+    verseText: "And it came to pass in the four hundred and eightieth year after the children of Israel were come out of the land of Egypt... he began to build the house of the LORD."
   },
   {
     id: 836,
@@ -1170,7 +1170,7 @@ const timelineQuestions = [
     choices: ["Elisha parting the Jordan came first", "Elijah's contest on Carmel came first", "They happened at the same time", "Elisha never parted the Jordan"],
     answer: 1,
     reference: "1 Kings 18:38; 2 Kings 2:14",
-    verseText: "Elijah's Carmel contest preceded Elisha parting the Jordan — Elisha performed this miracle immediately after Elijah was taken up."
+    verseText: "Elijah's Carmel cont preceded Elisha parting the Jordan — Elisha performed this miracle immediately after Elijah was taken up."
   },
   {
     id: 840,

@@ -12,7 +12,7 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "Andrew", "Thomas"],
     answer: 1,
     reference: "Luke 22:61-62",
-    verseText: "And Peter remembered the word of the Lord... And Peter went out, and wept bitterly."
+    verseText: "And Peter remembered the word of the LORD... And Peter went out, and wept bitterly."
   },
   {
     id: 83,
@@ -36,7 +36,7 @@ const apostlesQuestions = [
     choices: ["Passover", "Pentecost", "Tabernacles", "Atonement"],
     answer: 1,
     reference: "Acts 2:1-4",
-    verseText: "And when the day of Pentecost was fully come... they were all filled with the Holy Ghost."
+    verseText: "And when the day of Pentecost was fully come... they were all filled with the Holy Spirit."
   },
   {
     id: 190,
@@ -48,7 +48,7 @@ const apostlesQuestions = [
     choices: ["Peter", "Thomas", "John", "Matthew"],
     answer: 1,
     reference: "John 20:24-29",
-    verseText: "Thomas... said unto them, Except I shall see... I will not believe."
+    verseText: "Thomas... said to them, Except I shall see... I will not believe."
   },
   {
     id: 191,
@@ -108,7 +108,7 @@ const apostlesQuestions = [
     choices: ["Simon", "Matthew", "Philip", "Thaddaeus"],
     answer: 1,
     reference: "Matthew 9:9",
-    verseText: "He saw a man, named Matthew, sitting at the receipt of custom: and he saith unto him, Follow me."
+    verseText: "He saw a man, named Matthew, sitting at the receipt of custom: and he says to him, Follow me."
   },
   {
     id: 203,
@@ -144,7 +144,7 @@ const apostlesQuestions = [
     choices: ["Paul", "James", "Peter", "John"],
     answer: 2,
     reference: "John 1:42",
-    verseText: "He brought him to Jesus. And when Jesus beheld him, he said... thou shalt be called Cephas, which is by interpretation, A stone."
+    verseText: "He brought him to Jesus. And when Jesus beheld him, he said... you shall be called Cephas, which is by interpretation, A stone."
   },
   {
     id: 206,
@@ -156,7 +156,7 @@ const apostlesQuestions = [
     choices: ["John", "Thomas", "Philip", "Andrew"],
     answer: 2,
     reference: "John 14:8",
-    verseText: "Philip saith unto him, Lord, shew us the Father, and it sufficeth us."
+    verseText: "Philip says to him, Lord, shew us the Father, and it sufficeth us."
   },
   {
     id: 207,
@@ -168,7 +168,7 @@ const apostlesQuestions = [
     choices: ["300", "500", "1,000", "3,000"],
     answer: 3,
     reference: "Acts 2:41",
-    verseText: "Then they that gladly received his word were baptized: and the same day there were added unto them about three thousand souls."
+    verseText: "Then they that gladly received his word were baptized: and the same day there were added to them about three thousand souls."
   },
   {
     id: 208,
@@ -180,7 +180,7 @@ const apostlesQuestions = [
     choices: ["Silas", "Saul", "Sergius", "Simon"],
     answer: 1,
     reference: "Acts 9:1",
-    verseText: "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord."
+    verseText: "And Saul, yet breathing out threatenings and slaughter against the disciples of the LORD."
   },
   {
     id: 209,
@@ -192,7 +192,7 @@ const apostlesQuestions = [
     choices: ["Doves", "Flames of fire", "A bright cloud", "Stars"],
     answer: 1,
     reference: "Acts 2:3",
-    verseText: "There appeared unto them cloven tongues like as of fire, and it sat upon each of them."
+    verseText: "There appeared to them cloven tongues like as of fire, and it sat upon each of them."
   },
   {
     id: 210,
@@ -252,7 +252,7 @@ const apostlesQuestions = [
     choices: ["James", "John", "Andrew", "Philip"],
     answer: 2,
     reference: "John 1:40-42",
-    verseText: "Andrew, Simon Peter's brother... He first findeth his own brother Simon... and he brought him to Jesus."
+    verseText: "Andrew, Simon Peter's brother... He first finds his own brother Simon... and he brought him to Jesus."
   },
   {
     id: 215,
@@ -348,7 +348,7 @@ const apostlesQuestions = [
     choices: ["Barnabas", "Luke", "Silas", "John Mark"],
     answer: 2,
     reference: "Acts 15:40",
-    verseText: "Paul chose Silas, and departed, being recommended by the brethren unto the grace of God."
+    verseText: "Paul chose Silas, and departed, being recommended by the brethren to the grace of God."
   },
   {
     id: 260,
@@ -360,7 +360,7 @@ const apostlesQuestions = [
     choices: ["They fell asleep", "They received the Holy Spirit", "They were healed", "They began fasting"],
     answer: 1,
     reference: "Acts 8:17",
-    verseText: "Then laid they their hands on them, and they received the Holy Ghost."
+    verseText: "Then laid they their hands on them, and they received the Holy Spirit."
   },
   {
     id: 261,
@@ -396,7 +396,7 @@ const apostlesQuestions = [
     choices: ["Cornelius", "Julius", "The unnamed jailer", "Lysias"],
     answer: 2,
     reference: "Acts 16:30-34",
-    verseText: "And he took them the same hour of the night, and washed their stripes; and was baptized, he and all his, straightway."
+    verseText: "And he took them the same hour of the night, and washed their stripes; and was baptized, he and all his, immediately."
   },
   {
     id: 280,
@@ -435,7 +435,7 @@ const apostlesQuestions = [
     choices: ["Peter", "John", "James", "Thomas"],
     answer: 1,
     reference: "John 21:20",
-    verseText: "Then Peter, turning about, seeth the disciple whom Jesus loved following."
+    verseText: "Then Peter, turning about, sees the disciple whom Jesus loved following."
   },
   {
     id: 87,
@@ -447,7 +447,7 @@ const apostlesQuestions = [
     choices: ["The Ethiopian eunuch", "Cornelius", "Lydia", "Apollos"],
     answer: 0,
     reference: "Acts 8:26-39",
-    verseText: "Then Philip opened his mouth, and began at the same scripture, and preached unto him Jesus."
+    verseText: "Then Philip opened his mouth, and began at the same scripture, and preached to him Jesus."
   },
   {
     id: 194,
@@ -555,7 +555,7 @@ const apostlesQuestions = [
     choices: ["The guards fell asleep", "A great earthquake shook the prison", "The warden released them", "An angel appeared"],
     answer: 1,
     reference: "Acts 16:25-26",
-    verseText: "At midnight Paul and Silas prayed, and sang praises unto God... And suddenly there was a great earthquake."
+    verseText: "At midnight Paul and Silas prayed, and sang praises to God... And suddenly there was a great earthquake."
   },
   {
     id: 224,
@@ -567,7 +567,7 @@ const apostlesQuestions = [
     choices: ["Lois", "Eunice", "Priscilla", "Phoebe"],
     answer: 1,
     reference: "2 Timothy 1:5",
-    verseText: "The unfeigned faith that is in thee, which dwelt first in thy grandmother Lois, and thy mother Eunice."
+    verseText: "The unfeigned faith that is in you, which dwelt first in your grandmother Lois, and your mother Eunice."
   },
   {
     id: 225,
@@ -579,7 +579,7 @@ const apostlesQuestions = [
     choices: ["His chains fell off during prayer", "An angel appeared and led him out", "Other disciples bribed the guards", "He squeezed through a window"],
     answer: 1,
     reference: "Acts 12:7-8",
-    verseText: "The angel of the Lord came upon him, and a light shined in the prison: and he smote Peter on the side, and raised him up... And his chains fell off from his hands."
+    verseText: "The angel of the LORD came upon him, and a light shined in the prison: and he struck Peter on the side, and raised him up... And his chains fell off from his hands."
   },
   {
     id: 226,
@@ -603,7 +603,7 @@ const apostlesQuestions = [
     choices: ["Barnabas", "Ananias", "Philip", "Silas"],
     answer: 1,
     reference: "Acts 9:17",
-    verseText: "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul... that thou mightest receive thy sight."
+    verseText: "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul... that you might receive your sight."
   },
   {
     id: 228,
@@ -711,7 +711,7 @@ const apostlesQuestions = [
     choices: ["Paul", "Peter", "James", "John"],
     answer: 3,
     reference: "Revelation 1:4",
-    verseText: "John to the seven churches which are in Asia: Grace be unto you, and peace."
+    verseText: "John to the seven churches which are in Asia: Grace be to you, and peace."
   },
   {
     id: 237,
@@ -723,7 +723,7 @@ const apostlesQuestions = [
     choices: ["Corinth", "Rome", "Athens", "Ephesus"],
     answer: 2,
     reference: "Acts 17:22",
-    verseText: "Then Paul stood in the midst of Mars' hill, and said, Ye men of Athens, I perceive that in all things ye are too superstitious."
+    verseText: "Then Paul stood in the midst of Mars' hill, and said, You men of Athens, I perceive that in all things you are too superstitious."
   },
 
   {
@@ -736,7 +736,7 @@ const apostlesQuestions = [
     choices: ["On a ship", "In prison", "In Corinth", "In Antioch"],
     answer: 1,
     reference: "Philippians 1:13",
-    verseText: "My bonds in Christ are manifest in all the palace, and in all other places."
+    verseText: "My bonds in Christ are manif in all the palace, and in all other places."
   },
   {
     id: 265,
@@ -784,7 +784,7 @@ const apostlesQuestions = [
     choices: ["A white lamb", "A great sheet with all kinds of animals", "A dove descending", "Flames of fire"],
     answer: 1,
     reference: "Acts 10:11-12",
-    verseText: "He saw heaven opened, and a certain vessel descending unto him, as it had been a great sheet knit at the four corners... wherein were all manner of fourfooted beasts."
+    verseText: "He saw heaven opened, and a certain vessel descending to him, as it had been a great sheet knit at the four corners... wherein were all manner of fourfooted beasts."
   },
   {
     id: 269,
@@ -824,7 +824,7 @@ const apostlesQuestions = [
     choices: ["Peter", "Thomas", "Matthew", "Bartholomew"],
     answer: 0,
     reference: "Acts 15:7-9",
-    verseText: "Men and brethren, ye know how that a good while ago God made choice among us, that the Gentiles by my mouth should hear the word of the gospel, and believe."
+    verseText: "Men and brethren, you know how that a good while ago God made choice among us, that the Gentiles by my mouth should hear the word of the gospel, and believe."
   },
   {
     id: 89,
@@ -836,7 +836,7 @@ const apostlesQuestions = [
     choices: ["Peter and John", "Paul and Barnabas", "Priscilla and Aquila", "Silas and Timothy"],
     answer: 2,
     reference: "Acts 18:24-26",
-    verseText: "Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly."
+    verseText: "Aquila and Priscilla had heard, they took him to them, and expounded to him the way of God more perfectly."
   },
   {
     id: 90,
@@ -860,7 +860,7 @@ const apostlesQuestions = [
     choices: ["Peter", "Paul", "Stephen", "Barnabas"],
     answer: 1,
     reference: "Acts 14:19-20",
-    verseText: "Having stoned Paul, drew him out of the city... howbeit... he rose up."
+    verseText: "Having stoned Paul, drew him out of the city... however... he rose up."
   },
   {
     id: 199,
@@ -908,7 +908,7 @@ const apostlesQuestions = [
     choices: ["3", "5", "7", "12"],
     answer: 2,
     reference: "Acts 6:3-5",
-    verseText: "Look ye out among you seven men of honest report, full of the Holy Ghost and wisdom, whom we may appoint over this business."
+    verseText: "Look you out among you seven men of hon report, full of the Holy Spirit and wisdom, whom we may appoint over this business."
   },
   {
     id: 240,
@@ -920,7 +920,7 @@ const apostlesQuestions = [
     choices: ["Paul / Saul", "Silas / Silvanus", "Mark / John", "Luke / Loukas"],
     answer: 0,
     reference: "Acts 13:9",
-    verseText: "Then Saul, (who also is called Paul,) filled with the Holy Ghost, set his eyes on him."
+    verseText: "Then Saul, (who also is called Paul,) filled with the Holy Spirit, set his eyes on him."
   },
   {
     id: 241,
@@ -932,7 +932,7 @@ const apostlesQuestions = [
     choices: ["Elymas", "Simon", "Alexander", "Sceva"],
     answer: 1,
     reference: "Acts 8:18-19",
-    verseText: "When Simon saw that through laying on of the apostles' hands the Holy Ghost was given, he offered them money."
+    verseText: "When Simon saw that through laying on of the apostles' hands the Holy Spirit was given, he offered them money."
   },
   {
     id: 242,
@@ -980,7 +980,7 @@ const apostlesQuestions = [
     choices: ["Miriam", "Huldah", "Deborah", "Anna"],
     answer: 3,
     reference: "Luke 2:36-38",
-    verseText: "There was one Anna, a prophetess... she came in that instant and gave thanks likewise unto the Lord."
+    verseText: "There was one Anna, a prophetess... she came in that instant and gave thanks likewise to the LORD."
   },
   {
     id: 246,
@@ -1040,7 +1040,7 @@ const apostlesQuestions = [
     choices: ["Colossians", "Galatians", "Philemon", "Philippians"],
     answer: 2,
     reference: "Philemon 1:10",
-    verseText: "I beseech thee for my son Onesimus, whom I have begotten in my bonds."
+    verseText: "I beseech you for my son Onesimus, whom I have begotten in my bonds."
   },
   {
     id: 251,
@@ -1052,7 +1052,7 @@ const apostlesQuestions = [
     choices: ["Priscilla", "Lydia", "Phoebe", "Junia"],
     answer: 2,
     reference: "Romans 16:1-2",
-    verseText: "I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea: That ye receive her in the Lord."
+    verseText: "I commend to you Phebe our sister, which is a servant of the church which is at Cenchrea: That you receive her in the Lord."
   },
   {
     id: 252,
@@ -1064,7 +1064,7 @@ const apostlesQuestions = [
     choices: ["Peter", "Mary Magdalene", "John", "James"],
     answer: 1,
     reference: "John 20:14-16",
-    verseText: "She turned herself back, and saw Jesus standing... Jesus saith unto her, Mary."
+    verseText: "She turned herself back, and saw Jesus standing... Jesus says to her, Mary."
   },
   {
     id: 253,
@@ -1112,7 +1112,7 @@ const apostlesQuestions = [
     choices: ["Paul and Barnabas", "Peter and John", "James and Andrew", "Philip and Stephen"],
     answer: 1,
     reference: "Acts 8:14",
-    verseText: "When the apostles which were at Jerusalem heard that Samaria had received the word of God, they sent unto them Peter and John."
+    verseText: "When the apostles which were at Jerusalem heard that Samaria had received the word of God, they sent to them Peter and John."
   },
   {
     id: 271,
@@ -1136,7 +1136,7 @@ const apostlesQuestions = [
     choices: ["Felix", "Festus", "Sergius Paulus", "Gallio"],
     answer: 2,
     reference: "Acts 13:7-12",
-    verseText: "Then the deputy, when he saw what was done, believed, being astonished at the doctrine of the Lord."
+    verseText: "Then the deputy, when he saw what was done, believed, being astonished at the doctrine of the LORD."
   },
   {
     id: 273,
@@ -1160,7 +1160,7 @@ const apostlesQuestions = [
     choices: ["Herod Agrippa I", "Herod Agrippa II", "Caesar Nero", "Festus"],
     answer: 1,
     reference: "Acts 26:28",
-    verseText: "Then Agrippa said unto Paul, Almost thou persuadest me to be a Christian."
+    verseText: "Then Agrippa said to Paul, Almost you persuad me to be a Christian."
   },
   {
     id: 275,
@@ -1184,7 +1184,7 @@ const apostlesQuestions = [
     choices: ["Augustus", "Tiberius", "Nero", "Claudius"],
     answer: 2,
     reference: "Acts 25:11-12",
-    verseText: "I appeal unto Caesar... Hast thou appealed unto Caesar? unto Caesar shalt thou go."
+    verseText: "I appeal to Caesar... Hast you appealed to Caesar? to Caesar shall you go."
   },
   {
     id: 277,
@@ -1196,7 +1196,7 @@ const apostlesQuestions = [
     choices: ["Colossians", "Galatians", "Philemon", "Philippians"],
     answer: 2,
     reference: "Philemon 1:10",
-    verseText: "I beseech thee for my son Onesimus, whom I have begotten in my bonds."
+    verseText: "I beseech you for my son Onesimus, whom I have begotten in my bonds."
   },
   {
     id: 278,
@@ -1208,7 +1208,7 @@ const apostlesQuestions = [
     choices: ["Priscilla", "Lydia", "Phoebe", "Junia"],
     answer: 2,
     reference: "Romans 16:1-2",
-    verseText: "I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea."
+    verseText: "I commend to you Phebe our sister, which is a servant of the church which is at Cenchrea."
   }
 
 ];

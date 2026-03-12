@@ -24,7 +24,7 @@ const oldtestamentQuestions = [
     choices: ["Joshua", "Samuel", "Moses", "Aaron"],
     answer: 2,
     reference: "Exodus 3:10",
-    verseText: "Come now therefore, and I will send thee unto Pharaoh, that thou mayest bring forth my people the children of Israel out of Egypt."
+    verseText: "Come now therefore, and I will send you to Pharaoh, that you may bring forth my people the children of Israel out of Egypt."
   },
   {
     id: 57,
@@ -72,7 +72,7 @@ const oldtestamentQuestions = [
     choices: ["Quail only", "Manna", "Fish", "Bread and wine"],
     answer: 1,
     reference: "Exodus 16:14-15",
-    verseText: "Moses said unto them, This is the bread which the Lord hath given you to eat."
+    verseText: "Moses said to them, This is the bread which the Lord has given you to eat."
   },
   {
     id: 160,
@@ -84,7 +84,7 @@ const oldtestamentQuestions = [
     choices: ["True", "False", "Not in the Bible", "Misquoted"],
     answer: 1,
     reference: "1 Kings 6:1; 1 Chronicles 28:6",
-    verseText: "Solomon built the house of the Lord. David prepared, but God chose Solomon to build it."
+    verseText: "Solomon built the house of the LORD. David prepared, but God chose Solomon to build it."
   },
   {
     id: 443,
@@ -96,7 +96,7 @@ const oldtestamentQuestions = [
     choices: ["Seth", "Abel", "Adam", "Enoch"],
     answer: 2,
     reference: "Genesis 2:19",
-    verseText: "And out of the ground the Lord God formed every beast of the field... and whatsoever Adam called every living creature, that was the name thereof."
+    verseText: "And out of the ground the LORD God formed every beast of the field... and whatever Adam called every living creature, that was the name thereof."
   },
   {
     id: 444,
@@ -108,7 +108,7 @@ const oldtestamentQuestions = [
     choices: ["His robe", "His sandals", "His staff", "His head covering"],
     answer: 1,
     reference: "Exodus 3:5",
-    verseText: "Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground."
+    verseText: "Put off your shoes from off your feet, for the place whereon you stand is holy ground."
   },
   {
     id: 445,
@@ -156,7 +156,7 @@ const oldtestamentQuestions = [
     choices: ["Lamech", "Cain", "Ham", "Esau"],
     answer: 1,
     reference: "Genesis 4:8",
-    verseText: "Cain rose up against Abel his brother, and slew him."
+    verseText: "Cain rose up against Abel his brother and killed him."
   },
   {
     id: 449,
@@ -180,7 +180,7 @@ const oldtestamentQuestions = [
     choices: ["A snake", "A raven", "A donkey", "A lion"],
     answer: 2,
     reference: "Numbers 22:28",
-    verseText: "And the Lord opened the mouth of the ass, and she said unto Balaam, What have I done unto thee?"
+    verseText: "And the Lord opened the mouth of the ass, and she said to Balaam, What have I done to you?"
   },
   {
     id: 451,
@@ -204,7 +204,7 @@ const oldtestamentQuestions = [
     choices: ["Long life", "Riches", "Wisdom", "Power over enemies"],
     answer: 2,
     reference: "1 Kings 3:9",
-    verseText: "Give therefore thy servant an understanding heart to judge thy people, that I may discern between good and bad."
+    verseText: "Give therefore your servant an understanding heart to judge your people, that I may discern between good and bad."
   },
   {
     id: 453,
@@ -216,7 +216,7 @@ const oldtestamentQuestions = [
     choices: ["Moses", "Noah", "Abraham", "Jacob"],
     answer: 2,
     reference: "Genesis 12:1",
-    verseText: "Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee."
+    verseText: "Get you out of your country, and from your kindred, and from your father's house, to a land that I will shew you."
   },
   {
     id: 454,
@@ -252,7 +252,7 @@ const oldtestamentQuestions = [
     choices: ["Baal", "The God of Israel, the living God", "Dagon", "The god of Nebuchadnezzar"],
     answer: 1,
     reference: "Daniel 6:20",
-    verseText: "O Daniel, servant of the living God, is thy God, whom thou servest continually, able to deliver thee from the lions?"
+    verseText: "O Daniel, servant of the living God, is your God, whom you serv continually, able to deliver you from the lions?"
   },
   {
     id: 457,
@@ -264,7 +264,7 @@ const oldtestamentQuestions = [
     choices: ["Lying to God", "Eating from the forbidden tree", "Worshipping another god", "Murdering an animal"],
     answer: 1,
     reference: "Genesis 3:6",
-    verseText: "She took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat."
+    verseText: "She took of the fruit thereof, and did eat, and gave also to her husband with her; and he did eat."
   },
   {
     id: 458,
@@ -288,7 +288,7 @@ const oldtestamentQuestions = [
     choices: ["David", "Solomon", "Saul", "Samuel"],
     answer: 2,
     reference: "1 Samuel 10:1",
-    verseText: "Then Samuel took a vial of oil, and poured it upon his head... Is it not because the Lord hath anointed thee to be captain over his inheritance?"
+    verseText: "Then Samuel took a vial of oil, and poured it upon his head... Is it not because the Lord has anointed you to be captain over his inheritance?"
   },
 
   {
@@ -313,7 +313,7 @@ const oldtestamentQuestions = [
     choices: ["Locusts", "Darkness", "Hail", "Death of the firstborn"],
     answer: 3,
     reference: "Exodus 12:29",
-    verseText: "And it came to pass, that at midnight the Lord smote all the firstborn in the land of Egypt."
+    verseText: "And it came to pass, that at midnight the Lord struck all the firstborn in the land of Egypt."
   },
   {
     id: 495,
@@ -325,7 +325,7 @@ const oldtestamentQuestions = [
     choices: ["Hagar", "Rebekah", "Sarah", "Leah"],
     answer: 2,
     reference: "Genesis 21:3",
-    verseText: "And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac."
+    verseText: "And Abraham called the name of his son that was born to him, whom Sarah bare to him, Isaac."
   },
   {
     id: 496,
@@ -349,7 +349,7 @@ const oldtestamentQuestions = [
     choices: ["He was a temple singer", "He served Eli the priest in the tabernacle at Shiloh", "He was David's older brother", "He was a student of Moses"],
     answer: 1,
     reference: "1 Samuel 3:1",
-    verseText: "And the child Samuel ministered unto the Lord before Eli."
+    verseText: "And the child Samuel ministered to the LORD before Eli."
   },
   {
     id: 498,
@@ -361,7 +361,7 @@ const oldtestamentQuestions = [
     choices: ["A burning bush", "A cave where he lodged", "An altar to God", "An army of angels"],
     answer: 1,
     reference: "1 Kings 19:9",
-    verseText: "And he came thither unto a cave, and lodged there."
+    verseText: "And he came thither to a cave, and lodged there."
   },
   {
     id: 499,
@@ -385,7 +385,7 @@ const oldtestamentQuestions = [
     choices: ["Elijah", "Isaiah", "Nathan", "Samuel"],
     answer: 2,
     reference: "2 Samuel 12:1",
-    verseText: "And the Lord sent Nathan unto David."
+    verseText: "And the Lord sent Nathan to David."
   },
   {
     id: 501,
@@ -449,7 +449,7 @@ const oldtestamentQuestions = [
     choices: ["Joseph", "Daniel", "Jeremiah", "Elijah"],
     answer: 1,
     reference: "Daniel 6:16",
-    verseText: "Then the king commanded, and they brought Daniel, and cast him into the den of lions."
+    verseText: "Then the king gave the command, and they brought Daniel and cast him into the den of lions."
   },
   {
     id: 60,
@@ -473,7 +473,7 @@ const oldtestamentQuestions = [
     choices: ["Joseph", "Moses", "Aaron", "Daniel"],
     answer: 0,
     reference: "Genesis 41:25-32",
-    verseText: "Joseph said unto Pharaoh, The dream of Pharaoh is one."
+    verseText: "Joseph said to Pharaoh, The dream of Pharaoh is one."
   },
   {
     id: 162,
@@ -509,7 +509,7 @@ const oldtestamentQuestions = [
     choices: ["Samson", "Gideon", "Jephthah", "Saul"],
     answer: 1,
     reference: "Judges 6:36-40",
-    verseText: "Gideon said unto God... behold, I will put a fleece of wool in the floor."
+    verseText: "Gideon said to God... behold, I will put a fleece of wool in the floor."
   },
   {
     id: 460,
@@ -521,7 +521,7 @@ const oldtestamentQuestions = [
     choices: ["A magic ring given to him", "His uncut hair", "Daily prayer at the temple", "A blessing from an angel at birth"],
     answer: 1,
     reference: "Judges 16:17",
-    verseText: "There hath not come a razor upon mine head; for I have been a Nazarite unto God from my mother's womb: if I be shaven, then my strength will go from me."
+    verseText: "There has not come a razor upon mine head; for I have been a Nazarite to God from my mother's womb: if I be shaven, then my strength will go from me."
   },
   {
     id: 461,
@@ -545,7 +545,7 @@ const oldtestamentQuestions = [
     choices: ["Lightning", "Hailstones", "Fire", "Flood"],
     answer: 2,
     reference: "1 Kings 18:38",
-    verseText: "Then the fire of the Lord fell, and consumed the burnt sacrifice, and the wood, and the stones."
+    verseText: "Then the fire of the LORD fell, and consumed the burnt sacrifice, and the wood, and the stones."
   },
   {
     id: 463,
@@ -557,7 +557,7 @@ const oldtestamentQuestions = [
     choices: ["They fasted and prayed", "They marched around the city and blew trumpets", "They dug a trench around the walls", "They gathered stones to throw at the walls"],
     answer: 1,
     reference: "Joshua 6:3-4",
-    verseText: "Ye shall compass the city, all ye men of war, and go round about the city once. Thus shalt thou do six days."
+    verseText: "You shall compass the city, all you men of war, and go round about the city once. Thus shall you do six days."
   },
   {
     id: 464,
@@ -569,7 +569,7 @@ const oldtestamentQuestions = [
     choices: ["He wore Esau's clothes and put goat skin on his hands", "He bribed a servant to lie for him", "He forged a letter from Esau", "He waited until Isaac was asleep"],
     answer: 0,
     reference: "Genesis 27:15-16",
-    verseText: "And Rebekah took goodly raiment of her eldest son Esau... and put the skins of the kids of the goats upon his hands."
+    verseText: "And Rebekah took goodly raiment of her eld son Esau... and put the skins of the kids of the goats upon his hands."
   },
   {
     id: 465,
@@ -581,7 +581,7 @@ const oldtestamentQuestions = [
     choices: ["She led an army against Haman", "She appealed to the king uninvited, risking her life", "She had Haman poisoned", "She bribed the king's advisors"],
     answer: 1,
     reference: "Esther 4:16",
-    verseText: "I will go in unto the king, which is not according to the law: and if I perish, I perish."
+    verseText: "I will go in to the king, which is not according to the law: and if I perish, I perish."
   },
   {
     id: 466,
@@ -593,7 +593,7 @@ const oldtestamentQuestions = [
     choices: ["Whoever could lift the altar of Baal wins", "The god who answers by fire is the true God", "Whoever can produce rain wins", "The god who gives victory in battle wins"],
     answer: 1,
     reference: "1 Kings 18:24",
-    verseText: "Call ye on the name of your gods, and I will call on the name of the Lord: and the God that answereth by fire, let him be God."
+    verseText: "Call you on the name of your gods, and I will call on the name of the LORD: and the God that answereth by fire, let him be God."
   },
   {
     id: 467,
@@ -617,7 +617,7 @@ const oldtestamentQuestions = [
     choices: ["The Red Sea", "The Sea of Galilee", "The Jordan River", "The Brook Cherith"],
     answer: 2,
     reference: "2 Kings 2:8",
-    verseText: "And Elijah took his mantle, and wrapped it together, and smote the waters, and they were divided hither and thither, so that they two went over on dry ground."
+    verseText: "And Elijah took his mantle, and wrapped it together, and struck the waters, and they were divided hither and thither, so that they two went over on dry ground."
   },
   {
     id: 469,
@@ -629,7 +629,7 @@ const oldtestamentQuestions = [
     choices: ["He deserted the army", "He secretly took forbidden items from Jericho", "He sacrificed to idols", "He killed a fellow Israelite"],
     answer: 1,
     reference: "Joshua 7:20-21",
-    verseText: "I have sinned against the Lord God of Israel, and thus and thus have I done: When I saw among the spoils a goodly Babylonish garment... I took them."
+    verseText: "I have sinned against the LORD God of Israel, and thus and thus have I done: When I saw among the spoils a goodly Babylonish garment... I took them."
   },
   {
     id: 470,
@@ -641,7 +641,7 @@ const oldtestamentQuestions = [
     choices: ["Caleb", "Aaron", "Joshua", "Samuel"],
     answer: 2,
     reference: "Joshua 1:1-2",
-    verseText: "The Lord spake unto Joshua the son of Nun, Moses' minister, saying, Moses my servant is dead; now therefore arise."
+    verseText: "The Lord spoke to Joshua the son of Nun, Moses' minister, saying, Moses my servant is dead; now therefore arise."
   },
   {
     id: 471,
@@ -677,7 +677,7 @@ const oldtestamentQuestions = [
     choices: ["Pray for seven days", "Wash in the Jordan River seven times", "Sacrifice a bull at the temple", "Fast for forty days"],
     answer: 1,
     reference: "2 Kings 5:10",
-    verseText: "Go and wash in Jordan seven times, and thy flesh shall come again to thee, and thou shalt be clean."
+    verseText: "Go and wash in Jordan seven times, and your flesh shall come again to you, and you shall be clean."
   },
   {
     id: 474,
@@ -701,7 +701,7 @@ const oldtestamentQuestions = [
     choices: ["I will return for your sake", "Whither thou goest, I will go; and where thou lodgest, I will lodge", "I will follow you to the border of Israel", "Let me stay one more season"],
     answer: 1,
     reference: "Ruth 1:16",
-    verseText: "Whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God."
+    verseText: "Whither you go, I will go; and where you lodg, I will lodge: your people shall be my people, and your God my God."
   },
   {
     id: 503,
@@ -713,7 +713,7 @@ const oldtestamentQuestions = [
     choices: ["She would give silver to the temple", "She would give the child to the Lord all his life", "She would fast every year", "She would sacrifice a hundred sheep"],
     answer: 1,
     reference: "1 Samuel 1:11",
-    verseText: "I will give him unto the Lord all the days of his life, and there shall no razor come upon his head."
+    verseText: "I will give him to the LORD all the days of his life, and there shall no razor come upon his head."
   },
   {
     id: 504,
@@ -725,7 +725,7 @@ const oldtestamentQuestions = [
     choices: ["Joshua", "Caleb", "Both Joshua and Caleb", "Phinehas"],
     answer: 2,
     reference: "Numbers 14:6-8",
-    verseText: "Joshua the son of Nun, and Caleb the son of Jephunneh... And they spake unto all the company of the children of Israel, saying, The land... is an exceeding good land."
+    verseText: "Joshua the son of Nun, and Caleb the son of Jephunneh... And they spoke to all the company of the children of Israel, saying, The land... is an exceeding good land."
   },
   {
     id: 505,
@@ -749,7 +749,7 @@ const oldtestamentQuestions = [
     choices: ["Bread from the tabernacle", "Honey from the forest", "Meat sacrificed to Baal", "Food from an enemy camp"],
     answer: 1,
     reference: "1 Samuel 14:27",
-    verseText: "But Jonathan heard not when his father charged the people with the oath: wherefore he put forth the end of the rod that was in his hand, and dipped it in a honeycomb."
+    verseText: "But Jonathan heard not when his father charged the people with the oath: therefore he put forth the end of the rod that was in his hand, and dipped it in a honeycomb."
   },
   {
     id: 507,
@@ -761,7 +761,7 @@ const oldtestamentQuestions = [
     choices: ["Shave their heads", "Wear special garments", "Be circumcised", "Offer a sacrifice"],
     answer: 2,
     reference: "Genesis 17:10",
-    verseText: "Every man child among you shall be circumcised. And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you."
+    verseText: "Every man child among you shall be circumcised. And you shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you."
   },
   {
     id: 508,
@@ -797,7 +797,7 @@ const oldtestamentQuestions = [
     choices: ["The Feast of Tabernacles", "The Feast of Weeks", "The Passover", "The Day of Atonement"],
     answer: 2,
     reference: "Exodus 12:14",
-    verseText: "And this day shall be unto you for a memorial; and ye shall keep it a feast to the Lord throughout your generations."
+    verseText: "And this day shall be to you for a memorial; and you shall keep it a feast to the Lord throughout your generations."
   },
   {
     id: 511,
@@ -824,7 +824,7 @@ const oldtestamentQuestions = [
     choices: ["Mount Sinai", "Mount Carmel", "Mount Moriah", "Mount Nebo"],
     answer: 2,
     reference: "Genesis 22:2",
-    verseText: "Get thee into the land of Moriah; and offer him there for a burnt offering."
+    verseText: "Get you into the land of Moriah; and offer him there for a burnt offering."
   },
   {
     id: 62,
@@ -872,7 +872,7 @@ const oldtestamentQuestions = [
     choices: ["Josiah", "Hezekiah", "Jehoshaphat", "Uzziah"],
     answer: 1,
     reference: "2 Kings 19:14",
-    verseText: "And Hezekiah... spread it before the Lord."
+    verseText: "And Hezekiah... spread it before the LORD."
   },
   {
     id: 167,
@@ -884,7 +884,7 @@ const oldtestamentQuestions = [
     choices: ["He was blessed", "He was struck dead", "He became a priest", "He was made king"],
     answer: 1,
     reference: "2 Samuel 6:6-7",
-    verseText: "God smote him there for his error; and there he died by the ark of God."
+    verseText: "God struck him there for his error; and there he died by the ark of God."
   },
   {
     id: 475,
@@ -908,7 +908,7 @@ const oldtestamentQuestions = [
     choices: ["He prayed for three days", "He picked up Elijah's mantle and struck the Jordan", "He fasted forty days on Mount Horeb", "He returned to his farming"],
     answer: 1,
     reference: "2 Kings 2:13-14",
-    verseText: "He took up also the mantle of Elijah that fell from him... And he smote the waters."
+    verseText: "He took up also the mantle of Elijah that fell from him... And he struck the waters."
   },
   {
     id: 477,
@@ -920,7 +920,7 @@ const oldtestamentQuestions = [
     choices: ["The salt covenant", "The Sinai covenant", "The covenant between the pieces", "The covenant of circumcision"],
     answer: 2,
     reference: "Genesis 15:9-18",
-    verseText: "And he said unto him, Take me a heifer of three years old... And it came to pass, that, when the sun went down... a smoking furnace, and a burning lamp that passed between those pieces."
+    verseText: "And he said to him, Take me a heifer of three years old... And it came to pass, that, when the sun went down... a smoking furnace, and a burning lamp that passed between those pieces."
   },
   {
     id: 478,
@@ -944,7 +944,7 @@ const oldtestamentQuestions = [
     choices: ["He worshipped the golden calf", "He refused to fight the Canaanites", "He struck the rock instead of speaking to it", "He married a Canaanite woman"],
     answer: 2,
     reference: "Numbers 20:8-12",
-    verseText: "Moses lifted up his hand, and with his rod he smote the rock twice... Because ye believed me not... ye shall not bring this congregation into the land."
+    verseText: "Moses lifted up his hand, and with his rod he struck the rock twice... Because you believed me not... you shall not bring this congregation into the land."
   },
   {
     id: 480,
@@ -1004,7 +1004,7 @@ const oldtestamentQuestions = [
     choices: ["To save resources", "So Israel would not boast that their own hand saved them", "Because 300 was the sacred number", "The others were too afraid to fight"],
     answer: 1,
     reference: "Judges 7:2",
-    verseText: "The Lord said unto Gideon, The people that are with thee are too many for me to give the Midianites into their hands, lest Israel vaunt themselves against me, saying, Mine own hand hath saved me."
+    verseText: "The Lord said to Gideon, The people that are with you are too many for me to give the Midianites into their hands, l Israel vaunt themselves against me, saying, Mine own hand has saved me."
   },
   {
     id: 485,
@@ -1016,7 +1016,7 @@ const oldtestamentQuestions = [
     choices: ["He built temples to foreign gods for his wives", "He taxed the people too heavily", "He murdered his brother Adonijah", "He disobeyed the prophet Nathan"],
     answer: 0,
     reference: "1 Kings 11:4-11",
-    verseText: "Solomon did evil in the sight of the Lord... For Solomon went after Ashtoreth... I will surely rend the kingdom from thee."
+    verseText: "Solomon did evil in the sight of the LORD... For Solomon went after Ashtoreth... I will surely rend the kingdom from you."
   },
   {
     id: 486,
@@ -1028,7 +1028,7 @@ const oldtestamentQuestions = [
     choices: ["Valley of Hinnom", "Valley of Elah", "Valley of Dry Bones", "Valley of Jehoshaphat"],
     answer: 2,
     reference: "Ezekiel 37:1-3",
-    verseText: "The hand of the Lord... set me down in the midst of the valley which was full of bones."
+    verseText: "The hand of the LORD... set me down in the midst of the valley which was full of bones."
   },
   {
     id: 487,
@@ -1040,7 +1040,7 @@ const oldtestamentQuestions = [
     choices: ["Jeremiah", "Amos", "Hosea", "Micah"],
     answer: 2,
     reference: "Hosea 1:2",
-    verseText: "The Lord said to Hosea, Go, take unto thee a wife of whoredoms and children of whoredoms: for the land hath committed great whoredom, departing from the Lord."
+    verseText: "The Lord said to Hosea, Go, take to you a wife of whoredoms and children of whoredoms: for the land has committed great whoredom, departing from the Lord."
   },
   {
     id: 488,
@@ -1064,7 +1064,7 @@ const oldtestamentQuestions = [
     choices: ["They bribed Persian officials", "They hired a false prophet and sent threatening letters", "They attacked with an army", "They poisoned the workers' food"],
     answer: 1,
     reference: "Nehemiah 6:5-13",
-    verseText: "Then sent Sanballat his servant unto me in like manner the fifth time with an open letter... Also I perceived that God had not sent him... for Tobiah and Sanballat had hired him."
+    verseText: "Then sent Sanballat his servant to me in like manner the fifth time with an open letter... Also I perceived that God had not sent him... for Tobiah and Sanballat had hired him."
   },
   {
     id: 490,
@@ -1088,7 +1088,7 @@ const oldtestamentQuestions = [
     choices: ["Isaiah 7", "Isaiah 9", "Isaiah 40", "Isaiah 53"],
     answer: 1,
     reference: "Isaiah 9:6",
-    verseText: "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder."
+    verseText: "For to us a child is born, to us a son is given: and the government shall be upon his shoulder."
   },
   {
     id: 492,
@@ -1100,7 +1100,7 @@ const oldtestamentQuestions = [
     choices: ["Ezra", "Jeremiah", "Daniel", "Shadrach"],
     answer: 2,
     reference: "Daniel 5:17-28",
-    verseText: "Then Daniel answered and said before the king... MENE; God hath numbered thy kingdom... TEKEL; Thou art weighed in the balances, and art found wanting."
+    verseText: "Then Daniel answered and said before the king... MENE; God has numbered your kingdom... TEKEL; You are weighed in the balances, and art found wanting."
   },
   {
     id: 512,
@@ -1112,7 +1112,7 @@ const oldtestamentQuestions = [
     choices: ["Thou shalt not kill", "Thou shalt not make any graven image", "Thou shalt have no other gods before me", "Remember the sabbath day"],
     answer: 2,
     reference: "Exodus 20:3",
-    verseText: "Thou shalt have no other gods before me."
+    verseText: "You shall have no other gods before me."
   },
   {
     id: 513,
@@ -1136,7 +1136,7 @@ const oldtestamentQuestions = [
     choices: ["Moses and Aaron", "Caleb and Joshua", "Gad and Reuben", "Phinehas and Eleazar"],
     answer: 1,
     reference: "Numbers 13:23",
-    verseText: "They came unto the brook of Eshcol, and cut down from thence a branch with one cluster of grapes, and they bare it between two upon a staff."
+    verseText: "They came to the brook of Eshcol, and cut down from thence a branch with one cluster of grapes, and they bare it between two upon a staff."
   },
   {
     id: 515,
@@ -1148,7 +1148,7 @@ const oldtestamentQuestions = [
     choices: ["He asked for water; she was healed", "He asked for bread; her oil and meal did not run out", "He asked for shelter; her son was raised from death", "He asked for silver; her debts were paid"],
     answer: 1,
     reference: "1 Kings 17:10-16",
-    verseText: "The barrel of meal wasted not, neither did the cruse of oil fail, according to the word of the Lord."
+    verseText: "The barrel of meal wasted not, neither did the cruse of oil fail, according to the word of the LORD."
   },
   {
     id: 516,
@@ -1160,7 +1160,7 @@ const oldtestamentQuestions = [
     choices: ["Disease and imprisonment", "Loss of possessions and family, then his own health", "Drought and war", "Exile and poverty"],
     answer: 1,
     reference: "Job 1:12; 2:6-7",
-    verseText: "All that he hath is in thy power; only upon himself put not forth thine hand... smite his bone and his flesh."
+    verseText: "All that he has is in your power; only upon himself put not forth your hand... smite his bone and his flesh."
   },
   {
     id: 517,
@@ -1172,7 +1172,7 @@ const oldtestamentQuestions = [
     choices: ["The shadow advanced ten degrees", "The shadow went backward ten degrees", "The shadow disappeared entirely", "The shadow split in two"],
     answer: 1,
     reference: "2 Kings 20:10-11",
-    verseText: "It is a light thing for the shadow to go down ten degrees: nay, but let the shadow return backward ten degrees. And Isaiah the prophet cried unto the Lord: and he brought the shadow ten degrees backward."
+    verseText: "It is a light thing for the shadow to go down ten degrees: nay, but let the shadow return backward ten degrees. And Isaiah the prophet cried to the LORD: and he brought the shadow ten degrees backward."
   },
   {
     id: 518,
@@ -1184,7 +1184,7 @@ const oldtestamentQuestions = [
     choices: ["Prepare to surrender", "The king of Assyria shall not come into the city nor shoot an arrow there", "Gather your armies", "Fast and pray for forty days"],
     answer: 1,
     reference: "2 Kings 19:32-33",
-    verseText: "Therefore thus saith the Lord concerning the king of Assyria, He shall not come into this city, nor shoot an arrow there... By the way that he came, by the same shall he return."
+    verseText: "Therefore thus says the LORD concerning the king of Assyria, He shall not come into this city, nor shoot an arrow there... By the way that he came, by the same shall he return."
   },
   {
     id: 519,

@@ -36,7 +36,7 @@ const miraclesQuestions = [
     choices: ["A fire", "A crowd", "A storm", "A drought"],
     answer: 2,
     reference: "Mark 4:39",
-    verseText: "He arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm."
+    verseText: "He arose, and rebuked the wind, and said to the sea, Peace, be still. And the wind ceased, and there was a great calm."
   },
   {
     id: 146,
@@ -60,7 +60,7 @@ const miraclesQuestions = [
     choices: ["Lazarus", "Jairus's daughter", "The widow's son", "Dorcas"],
     answer: 1,
     reference: "Mark 5:41-42",
-    verseText: "He saith unto her, Talitha cumi... and straightway the damsel arose."
+    verseText: "He says to her, Talitha cumi... and immediately the damsel arose."
   },
   {
     id: 148,
@@ -84,7 +84,7 @@ const miraclesQuestions = [
     choices: ["True", "False", "Not in the Bible", "Misquoted"],
     answer: 0,
     reference: "John 11:39-44",
-    verseText: "Lord, by this time he stinketh: for he hath been dead four days."
+    verseText: "Lord, by this time he stinketh: for he has been dead four days."
   },
   {
     id: 363,
@@ -156,7 +156,7 @@ const miraclesQuestions = [
     choices: ["Repent and be baptized", "Go wash in the river", "Arise, take up thy bed, and walk", "Offer a sacrifice at the temple"],
     answer: 2,
     reference: "Mark 2:11",
-    verseText: "Arise, and take up thy bed, and go thy way into thine house."
+    verseText: "Arise, and take up your bed, and go your way into your house."
   },
   {
     id: 369,
@@ -204,7 +204,7 @@ const miraclesQuestions = [
     choices: ["A pearl", "A coin", "A scroll", "A key"],
     answer: 1,
     reference: "Matthew 17:27",
-    verseText: "Take up the fish that first cometh up; and when thou hast opened his mouth, thou shalt find a piece of money."
+    verseText: "Take up the fish that first comes up; and when you have opened his mouth, you shall find a piece of money."
   },
   {
     id: 373,
@@ -252,7 +252,7 @@ const miraclesQuestions = [
     choices: ["Gold", "A piece of money", "A ring", "A scroll"],
     answer: 1,
     reference: "Matthew 17:27",
-    verseText: "Take up the fish that first cometh up; and when thou hast opened his mouth, thou shalt find a piece of money."
+    verseText: "Take up the fish that first comes up; and when you have opened his mouth, you shall find a piece of money."
   },
   {
     id: 377,
@@ -300,7 +300,7 @@ const miraclesQuestions = [
     choices: ["A Roman centurion", "A Pharisee", "Jairus, a synagogue ruler", "A Samaritan man"],
     answer: 2,
     reference: "Mark 5:22",
-    verseText: "There cometh one of the rulers of the synagogue, Jairus by name... And he fell at his feet."
+    verseText: "There comes one of the rulers of the synagogue, Jairus by name... And he fell at his feet."
   },
   {
     id: 411,
@@ -312,7 +312,7 @@ const miraclesQuestions = [
     choices: ["He called the fish to shore", "He told them to cast the net on the right side, and it was full", "He prayed and the sea was filled with fish", "He multiplied the fish they already had"],
     answer: 1,
     reference: "John 21:6",
-    verseText: "Cast the net on the right side of the ship, and ye shall find. They cast therefore, and now they were not able to draw it for the multitude of fishes."
+    verseText: "Cast the net on the right side of the ship, and you shall find. They cast therefore, and now they were not able to draw it for the multitude of fishes."
   },
   {
     id: 412,
@@ -336,7 +336,7 @@ const miraclesQuestions = [
     choices: ["Go and tell everyone", "Go show himself to the priest and offer the gift Moses commanded", "Come and follow Jesus", "Return to his village"],
     answer: 1,
     reference: "Matthew 8:4",
-    verseText: "Go thy way, shew thyself to the priest, and offer the gift that Moses commanded, for a testimony unto them."
+    verseText: "Go your way, shew thyself to the priest, and offer the gift that Moses commanded, for a testimony to them."
   },
   {
     id: 414,
@@ -360,7 +360,7 @@ const miraclesQuestions = [
     choices: ["He walked up to Jesus", "He cried out loudly, 'Jesus, thou son of David, have mercy on me'", "His friends brought him forward", "He sent a message through the crowd"],
     answer: 1,
     reference: "Mark 10:47",
-    verseText: "He began to cry out, and say, Jesus, thou son of David, have mercy on me."
+    verseText: "He began to cry out, and say, Jesus, you son of David, have mercy on me."
   },
   {
     id: 416,
@@ -384,7 +384,7 @@ const miraclesQuestions = [
     choices: ["Go and sin no more", "Daughter, thy faith hath made thee whole; go in peace", "Your prayer has been heard", "Receive thy sight"],
     answer: 1,
     reference: "Mark 5:34",
-    verseText: "Daughter, thy faith hath made thee whole; go in peace, and be whole of thy plague."
+    verseText: "Daughter, your faith has made you whole; go in peace, and be whole of your plague."
   },
   {
     id: 418,
@@ -396,7 +396,7 @@ const miraclesQuestions = [
     choices: ["Lazarus himself", "A neighbor in Bethany", "Mary and Martha, his sisters", "John the disciple"],
     answer: 2,
     reference: "John 11:3",
-    verseText: "His sisters sent unto him, saying, Lord, behold, he whom thou lovest is sick."
+    verseText: "His sisters sent to him, saying, Lord, behold, he whom you lov is sick."
   },
 
   {
@@ -409,7 +409,7 @@ const miraclesQuestions = [
     choices: ["Thomas", "James", "Peter", "John"],
     answer: 2,
     reference: "John 18:10",
-    verseText: "Then Simon Peter having a sword drew it, and smote the high priest's servant, and cut off his right ear."
+    verseText: "Then Simon Peter having a sword drew it, and struck the high priest's servant, and cut off his right ear."
   },
 
   // ── STUDENT (33) ─────────────────────────────────────────────────────────────
@@ -448,7 +448,7 @@ const miraclesQuestions = [
     choices: ["Nothing happened", "She was healed", "She fell asleep", "She became blind"],
     answer: 1,
     reference: "Mark 5:29",
-    verseText: "And straightway the fountain of her blood was dried up; and she felt in her body that she was healed of that plague."
+    verseText: "And immediately the fountain of her blood was dried up; and she felt in her body that she was healed of that plague."
   },
   {
     id: 150,
@@ -496,7 +496,7 @@ const miraclesQuestions = [
     choices: ["Five", "Seven", "Nine", "Twelve"],
     answer: 1,
     reference: "Matthew 15:34-38",
-    verseText: "Jesus saith unto them, How many loaves have ye? And they said, Seven."
+    verseText: "Jesus says to them, How many loaves have you? And they said, Seven."
   },
   {
     id: 378,
@@ -508,7 +508,7 @@ const miraclesQuestions = [
     choices: ["To the synagogue", "To the disciples", "To his home and family", "To Jerusalem"],
     answer: 2,
     reference: "Mark 5:19",
-    verseText: "Go home to thy friends, and tell them how great things the Lord hath done for thee."
+    verseText: "Go home to your friends, and tell them how great things the Lord has done for you."
   },
   {
     id: 379,
@@ -544,7 +544,7 @@ const miraclesQuestions = [
     choices: ["He prayed silently", "He touched the coffin and said arise", "He anointed the body with oil", "He commanded the crowd to leave"],
     answer: 1,
     reference: "Luke 7:14",
-    verseText: "He came and touched the bier: and they that bare him stood still. And he said, Young man, I say unto thee, Arise."
+    verseText: "He came and touched the bier: and they that bare him stood still. And he said, Young man, I say to you, Arise."
   },
   {
     id: 382,
@@ -556,7 +556,7 @@ const miraclesQuestions = [
     choices: ["The miracle at the Sea of Tiberias in John 21", "The catch at Simon's first calling in Luke 5", "Both miracles occurred at different times", "Only one such miracle is recorded"],
     answer: 2,
     reference: "Luke 5:6; John 21:6",
-    verseText: "At thy word I will let down the net. And when they had this done, they inclosed a great multitude of fishes."
+    verseText: "At your word I will let down the net. And when they had this done, they inclosed a great multitude of fishes."
   },
   {
     id: 383,
@@ -568,7 +568,7 @@ const miraclesQuestions = [
     choices: ["In Capernaum with him", "In Jerusalem", "In Cana of Galilee", "In Bethany"],
     answer: 2,
     reference: "John 4:46-50",
-    verseText: "Jesus saith unto him, Go thy way; thy son liveth... and his son was healed."
+    verseText: "Jesus says to him, Go your way; your son lives... and his son was healed."
   },
   {
     id: 384,
@@ -616,7 +616,7 @@ const miraclesQuestions = [
     choices: ["Take up your bed and walk", "Your faith has made you whole", "Son, thy sins be forgiven thee", "Rise and go to the priest"],
     answer: 2,
     reference: "Mark 2:5",
-    verseText: "When Jesus saw their faith, he said unto the sick of the palsy, Son, thy sins be forgiven thee."
+    verseText: "When Jesus saw their faith, he said to the sick of the palsy, Son, your sins be forgiven you."
   },
   {
     id: 388,
@@ -640,7 +640,7 @@ const miraclesQuestions = [
     choices: ["A Pharisee", "A ruler of the synagogue", "A Roman centurion", "A scribe"],
     answer: 1,
     reference: "Mark 5:22",
-    verseText: "There cometh one of the rulers of the synagogue, Jairus by name; and when he saw him, he fell at his feet."
+    verseText: "There comes one of the rulers of the synagogue, Jairus by name; and when he saw him, he fell at his feet."
   },
   {
     id: 390,
@@ -676,7 +676,7 @@ const miraclesQuestions = [
     choices: ["Go and offer your sacrifice", "Sin no more, lest a worse thing come unto thee", "Tell no one what happened", "Give thanks to God in the temple"],
     answer: 1,
     reference: "John 5:14",
-    verseText: "Behold, thou art made whole: sin no more, lest a worse thing come unto thee."
+    verseText: "Behold, you are made whole: sin no more, l a worse thing come to you."
   },
   {
     id: 420,
@@ -688,7 +688,7 @@ const miraclesQuestions = [
     choices: ["Come to him for prayer", "Go shew yourselves unto the priests", "Return to their homes and rest", "Wash in the Jordan River"],
     answer: 1,
     reference: "Luke 17:14",
-    verseText: "Go shew yourselves unto the priests. And it came to pass, that, as they went, they were cleansed."
+    verseText: "Go shew yourselves to the priests. And it came to pass, that, as they went, they were cleansed."
   },
   {
     id: 421,
@@ -700,7 +700,7 @@ const miraclesQuestions = [
     choices: ["He wept", "He said this sickness is not unto death, but for the glory of God", "He immediately went to Bethany", "He prayed for Lazarus from where he was"],
     answer: 1,
     reference: "John 11:4",
-    verseText: "This sickness is not unto death, but for the glory of God, that the Son of God might be glorified thereby."
+    verseText: "This sickness is not to death, but for the glory of God, that the Son of God might be glorified thereby."
   },
   {
     id: 422,
@@ -724,7 +724,7 @@ const miraclesQuestions = [
     choices: ["Raising Lazarus", "Healing the man born blind", "Healing the paralytic who was lowered through the roof", "Casting out a demon"],
     answer: 2,
     reference: "Mark 2:10-12",
-    verseText: "But that ye may know that the Son of man hath power on earth to forgive sins, (he saith to the sick of the palsy,) I say unto thee, Arise."
+    verseText: "But that you may know that the Son of man has power on earth to forgive sins, (he says to the sick of the palsy,) I say to you, Arise."
   },
   {
     id: 424,
@@ -736,7 +736,7 @@ const miraclesQuestions = [
     choices: ["Be gone, storm", "Father, still this wind", "Peace, be still", "By the power of God, be calm"],
     answer: 2,
     reference: "Mark 4:39",
-    verseText: "He arose, and rebuked the wind, and said unto the sea, Peace, be still."
+    verseText: "He arose, and rebuked the wind, and said to the sea, Peace, be still."
   },
   {
     id: 425,
@@ -760,7 +760,7 @@ const miraclesQuestions = [
     choices: ["To the synagogue", "To the temple treasury", "To the pool of Siloam", "To the council"],
     answer: 0,
     reference: "John 9:22",
-    verseText: "These words spake his parents, because they feared the Jews: for the Jews had agreed already, that if any man did confess that he was Christ, he should be put out of the synagogue."
+    verseText: "These words spoke his parents, because they feared the Jews: for the Jews had agreed already, that if any man did confess that he was Christ, he should be put out of the synagogue."
   },
   {
     id: 427,
@@ -772,7 +772,7 @@ const miraclesQuestions = [
     choices: ["Do you believe I can heal you?", "What wilt thou that I should do unto thee?", "How long have you been blind?", "Who told you to come to me?"],
     answer: 1,
     reference: "Mark 10:51",
-    verseText: "Jesus answered and said unto him, What wilt thou that I should do unto thee?"
+    verseText: "Jesus answered and said to him, What will you that I should do to you?"
   },
   {
     id: 428,
@@ -784,7 +784,7 @@ const miraclesQuestions = [
     choices: ["He traveled far to find Jesus", "He said he was not worthy for Jesus to come under his roof, but only to speak the word", "He fell on his face before Jesus", "He offered a sacrifice at the temple"],
     answer: 1,
     reference: "Matthew 8:8",
-    verseText: "Lord, I am not worthy that thou shouldest come under my roof: but speak the word only, and my servant shall be healed."
+    verseText: "Lord, I am not worthy that you should come under my roof: but speak the word only, and my servant shall be healed."
   },
   {
     id: 429,
@@ -808,7 +808,7 @@ const miraclesQuestions = [
     choices: ["Come quickly to my house", "Trouble not the Master", "Send the crowds away first", "Pray for her from here"],
     answer: 1,
     reference: "Mark 5:35",
-    verseText: "Why troublest thou the Master any further?"
+    verseText: "Why troubl you the Master any further?"
   },
 
   // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
@@ -907,7 +907,7 @@ const miraclesQuestions = [
     choices: ["Be whole", "Be opened", "Rise and walk", "Come forth"],
     answer: 1,
     reference: "Mark 7:34",
-    verseText: "And looking up to heaven, he sighed, and saith unto him, Ephphatha, that is, Be opened."
+    verseText: "And looking up to heaven, he sighed, and says to him, Ephphatha, that is, Be opened."
   },
   {
     id: 394,
@@ -919,7 +919,7 @@ const miraclesQuestions = [
     choices: ["The man was never really blind", "Jesus was a Samaritan", "Jesus could not be from God because he healed on the Sabbath", "The healing was done by Beelzebub"],
     answer: 2,
     reference: "John 9:16",
-    verseText: "This man is not of God, because he keepeth not the sabbath day."
+    verseText: "This man is not of God, because he keeps not the sabbath day."
   },
   {
     id: 395,
@@ -943,7 +943,7 @@ const miraclesQuestions = [
     choices: ["Because of his parents' sin", "Because of his own sin", "That the works of God should be made manifest in him", "As a lesson to the disciples"],
     answer: 2,
     reference: "John 9:3",
-    verseText: "Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him."
+    verseText: "Neither has this man sinned, nor his parents: but that the works of God should be made manif in him."
   },
   {
     id: 397,
@@ -1003,7 +1003,7 @@ const miraclesQuestions = [
     choices: ["Fear not, I am with you always", "Be of good cheer; it is I; be not afraid", "Peace, be still", "Do not be afraid of those who kill the body"],
     answer: 1,
     reference: "Matthew 14:27",
-    verseText: "But straightway Jesus spake unto them, saying, Be of good cheer; it is I; be not afraid."
+    verseText: "But immediately Jesus spoke to them, saying, Be of good cheer; it is I; be not afraid."
   },
   {
     id: 402,
@@ -1015,7 +1015,7 @@ const miraclesQuestions = [
     choices: ["Her humility", "Her faith", "Her persistence", "Her prayer"],
     answer: 1,
     reference: "Matthew 15:28",
-    verseText: "O woman, great is thy faith: be it unto thee even as thou wilt. And her daughter was made whole from that very hour."
+    verseText: "O woman, great is your faith: be it to you even as you will. And her daughter was made whole from that very hour."
   },
   {
     id: 403,
@@ -1087,7 +1087,7 @@ const miraclesQuestions = [
     choices: ["That healing is more important than forgiveness", "That he has authority on earth to forgive sins", "That the Pharisees were hypocrites", "That miracles are signs for unbelievers"],
     answer: 1,
     reference: "Mark 2:9-10",
-    verseText: "That ye may know that the Son of man hath power on earth to forgive sins... I say unto thee, Arise."
+    verseText: "That you may know that the Son of man has power on earth to forgive sins... I say to you, Arise."
   },
   {
     id: 431,
@@ -1099,7 +1099,7 @@ const miraclesQuestions = [
     choices: ["Stop neglecting worship", "Return to your family", "Sin no more, lest a worse thing come unto thee", "Do not speak of this to anyone"],
     answer: 2,
     reference: "John 5:14",
-    verseText: "Behold, thou art made whole: sin no more, lest a worse thing come unto thee."
+    verseText: "Behold, you are made whole: sin no more, l a worse thing come to you."
   },
   {
     id: 432,
@@ -1111,7 +1111,7 @@ const miraclesQuestions = [
     choices: ["He used sorcery from Egypt", "He cast out demons through Beelzebub, the prince of devils", "He was a false prophet", "He had no authority to do this"],
     answer: 1,
     reference: "Matthew 12:24",
-    verseText: "This fellow doth not cast out devils, but by Beelzebub the prince of the devils."
+    verseText: "This fellow does not cast out devils, but by Beelzebub the prince of the devils."
   },
   {
     id: 433,
@@ -1147,7 +1147,7 @@ const miraclesQuestions = [
     choices: ["I believe, Lord", "Yea, Lord: I believe that thou art the Christ, the Son of God", "My brother will rise again at the last day", "Whatsoever thou wilt ask of God, God will give"],
     answer: 1,
     reference: "John 11:27",
-    verseText: "She saith unto him, Yea, Lord: I believe that thou art the Christ, the Son of God, which should come into the world."
+    verseText: "She says to him, Yea, Lord: I believe that you are the Christ, the Son of God, which should come into the world."
   },
   {
     id: 436,
@@ -1159,7 +1159,7 @@ const miraclesQuestions = [
     choices: ["Mercy is more important than the Sabbath", "Doth not each one of you loose his ox and lead it to water on the Sabbath?", "The Sabbath was made for man, not man for the Sabbath", "God's works do not stop on the Sabbath"],
     answer: 1,
     reference: "Luke 13:15",
-    verseText: "Thou hypocrite, doth not each one of you on the sabbath loose his ox or his ass from the stall, and lead him away to watering?"
+    verseText: "You hypocrite, does not each one of you on the sabbath loose his ox or his ass from the stall, and lead him away to watering?"
   },
   {
     id: 437,
@@ -1171,7 +1171,7 @@ const miraclesQuestions = [
     choices: ["Peter did not pray before stepping out", "Peter doubted", "Peter looked at the disciples instead of Jesus", "Peter's faith was not sincere"],
     answer: 1,
     reference: "Matthew 14:31",
-    verseText: "O thou of little faith, wherefore didst thou doubt?"
+    verseText: "O you of little faith, therefore didst you doubt?"
   },
   {
     id: 438,
