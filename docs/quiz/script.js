@@ -78,6 +78,40 @@ const STATS_KEY       = "bibleQuizStats";
 const DAILY_KEY       = "bibleQuizDailyState";
 const PROGRESS_KEY    = "bibleQuizProgress";
 const SAVE_KEY        = "bibleQuizSavedGame";
+const PRO_KEY         = "bibleQuizPro";
+
+// ─── Free tier limits ─────────────────────────────────────────────────────────
+const FREE_LIMITS = { Beginner: 25, Student: 5, Scholar: 3 };
+
+function isProUnlocked(){
+  try{ return localStorage.getItem(PRO_KEY) === 'true'; }catch(e){ return false; }
+}
+function unlockPro(){
+  try{ localStorage.setItem(PRO_KEY, 'true'); }catch(e){}
+  // Update lock icons
+  document.querySelectorAll('.pro-lock').forEach(el => el.style.display = 'none');
+  showScreen('menu');
+  setTimeout(() => alert('🎉 Welcome to Bible Quiz Challenge Pro!\n\nAll questions and features are now unlocked. Enjoy!'), 300);
+}
+window.unlockPro = unlockPro;
+
+function showPaywall(level){
+  const msg = document.getElementById('paywallMessage');
+  if(msg){
+    if(level === 'Daily'){
+      msg.innerHTML = `You've used your <strong>free Daily Challenge</strong>.<br><br>
+        Unlock <strong>Pro</strong> to get 5 new questions every day, build streaks, and track your daily progress —<br>
+        <em>are you up for the challenge?</em>`;
+    } else {
+      const previewed = FREE_LIMITS[level] || 5;
+      msg.innerHTML = `You've completed your <strong>${previewed} free ${level} questions</strong>.<br><br>
+        You're just getting started. <strong>1,001+ questions</strong> across 3 levels are waiting —<br>
+        <em>are you up for the challenge?</em>`;
+    }
+  }
+  showScreen('paywallScreen');
+}
+window.showPaywall = showPaywall;
 const ACHIEVEMENT_KEY = "bibleQuizAchievements";
 const BOOKMARKS_KEY   = "bibleQuizBookmarks";
 const WRONG_KEY       = "bibleQuizWrongAnswers";
@@ -123,8 +157,17 @@ let dailyVerseText    = '';
 function showScreen(id){
   stopTimer();
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
+  const el = document.getElementById(id);
+  el.classList.add("active");
   window.scrollTo(0, 0);
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  el.scrollTop = 0;
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    el.scrollTop = 0;
+  }, 50);
   updateSoundUI();
 }
 
@@ -603,14 +646,18 @@ function selectLevel(level){
   isPracticeMode = false;
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
 
-  currentQuestions = shuffleArray(
+  const allForLevel = shuffleArray(
     quizQuestions.filter(q => q.game === currentCategory && q.difficulty === level)
-  ).slice(0, QUESTIONS_PER_ROUND);
+  );
 
-  if(!currentQuestions.length){
+  if(!allForLevel.length){
     alert(`No "${level}" questions found for "${currentCategory}".\n\nTotal questions loaded: ${quizQuestions.length}\n\nCheck that your question files use the correct game name.`);
     return;
   }
+
+  // Apply free tier limit if not pro
+  const limit = (!isProUnlocked() && FREE_LIMITS[level]) ? FREE_LIMITS[level] : QUESTIONS_PER_ROUND;
+  currentQuestions = allForLevel.slice(0, limit);
 
   currentQuestionIndex = 0;
   score                = 0;
@@ -810,6 +857,13 @@ function showResults(){
   }
 
   checkOverallAchievements();
+
+  // Show paywall after free session ends (non-pro users)
+  if(!isProUnlocked() && !isPracticeMode && FREE_LIMITS[currentLevel]){
+    showScreen('paywallScreen');
+    return;
+  }
+
   showScreen('resultScreen');
 }
 
@@ -1106,6 +1160,16 @@ function renderDailyProgress(){
 }
 
 function startDailyChallenge(){
+  // Free users get day 1 only — check if they've already used their free daily
+  if(!isProUnlocked()){
+    const freeUsed = localStorage.getItem('bibleQuizFreeDailyUsed');
+    if(freeUsed){
+      showPaywall('Daily');
+      return;
+    }
+    localStorage.setItem('bibleQuizFreeDailyUsed', 'true');
+  }
+
   const today  = getTodayKey();
   const state  = loadDailyState();
 
@@ -1363,6 +1427,26 @@ function closeTutorial(){
 window.tutorialNext  = tutorialNext;
 window.closeTutorial = closeTutorial;
 
+// ─── IAP Stubs (replace with Capacitor IAP plugin for store submission) ───────
+
+function purchasePro(){
+  // TODO: Replace with Capacitor IAP plugin call
+  if(confirm('This will simulate a Pro purchase for testing.\n\nIn the live app this triggers the App Store / Play Store payment.')){
+    unlockPro();
+  }
+}
+window.purchasePro = purchasePro;
+
+function restorePurchase(){
+  // TODO: Replace with Capacitor IAP restore call
+  if(isProUnlocked()){
+    alert('✅ Pro is already unlocked on this device!');
+  } else {
+    alert('No previous purchase found.\n\nIf you purchased on another device, contact support@practicalfaith.net');
+  }
+}
+window.restorePurchase = restorePurchase;
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1377,5 +1461,10 @@ document.addEventListener('DOMContentLoaded', () => {
   try{ renderMenuProgress(); }catch(e){}
   try{ checkForSavedGame(); }catch(e){}
   try{ setTimeout(checkAndShowTutorial, 600); }catch(e){}
+
+  // Hide lock icons if already pro
+  if(isProUnlocked()){
+    document.querySelectorAll('.pro-lock').forEach(el => el.style.display = 'none');
+  }
 
 });

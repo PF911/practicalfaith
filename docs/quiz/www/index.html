@@ -26,6 +26,7 @@ body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gr
 .reset-btn:hover{background:#fff3f3;}
 .small-btn{flex:1;padding:10px 18px;min-height:50px;border-radius:16px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-weight:bold;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
 .menu-btn{width:90%;max-width:350px;margin:12px auto;padding:18px;border-radius:18px;border:3px solid var(--purple);background:#eee;font-size:20px;font-weight:bold;color:var(--purple);display:flex;align-items:center;justify-content:flex-start;gap:14px;cursor:pointer;}
+.pro-lock{font-size:14px;opacity:0.7;margin-left:4px;}
 .practice-btn{background:#f7e8c4;border-color:var(--orange3);color:var(--orange3);}
 
 /* ── Screens ──────────────────────────────────────────────────────────────── */
@@ -278,8 +279,8 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   <div class="subline">Choose Your Level</div>
   <div class="level-note">Start where you feel comfortable</div>
   <button class="menu-btn" onclick="selectLevel('Beginner')"><img src="images/chick.png" class="menu-icon"> <span>Beginner</span></button>
-  <button class="menu-btn" onclick="selectLevel('Student')"><img src="images/book.png" class="menu-icon"> <span>Student</span></button>
-  <button class="menu-btn" onclick="selectLevel('Scholar')"><img src="images/cap2.png" class="menu-icon"> <span>Scholar</span></button>
+  <button class="menu-btn" onclick="selectLevel('Student')"><img src="images/book.png" class="menu-icon"> <span>Student <span class="pro-lock" id="lockStudent">🔒</span></span></button>
+  <button class="menu-btn" onclick="selectLevel('Scholar')"><img src="images/cap2.png" class="menu-icon"> <span>Scholar <span class="pro-lock" id="lockScholar">🔒</span></span></button>
   <!-- Practice Tough Ones — shown only when wrong answers exist for this category -->
   <button id="practiceBtn" class="menu-btn practice-btn" style="display:none;" onclick="startPracticeMode()">🎯 <span>Practice Tough Questions</span></button>
   <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
@@ -626,6 +627,37 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     </div>
   </div>
 </div>
+
+<!-- ─── Paywall Screen ─────────────────────────────────────────────────────── -->
+<section id="paywallScreen" class="screen">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0 0 40px;text-align:center;">
+    <div style="font-size:52px;margin-bottom:12px;">📖</div>
+    <h2 style="font-size:26px;font-weight:900;color:var(--purple);margin-bottom:8px;">Unlock the Full Bible<br>Quiz Challenge!</h2>
+    <p id="paywallMessage" style="font-size:16px;color:#444;line-height:1.6;margin:16px 0 24px;"></p>
+
+    <div style="background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid #ffc107;border-radius:16px;padding:18px 20px;width:100%;margin-bottom:24px;">
+      <div style="font-size:22px;font-weight:900;color:var(--purple);margin-bottom:6px;">🏆 Pro Upgrade — $1.99</div>
+      <div style="font-size:14px;color:#555;line-height:1.7;">
+        ✅ 1,001+ questions unlocked<br>
+        ✅ All 3 difficulty levels<br>
+        ✅ Daily Challenge every day<br>
+        ✅ Bookmarks &amp; verse saving<br>
+        ✅ Full stats &amp; achievements<br>
+        ✅ All future content updates
+      </div>
+    </div>
+
+    <button class="primary-btn" style="width:100%;font-size:18px;padding:16px;margin-bottom:12px;" onclick="purchasePro()">
+      🔓 Unlock Pro — $1.99
+    </button>
+    <button class="small-btn" style="width:100%;" onclick="restorePurchase()">
+      Restore Purchase
+    </button>
+    <button class="small-btn" style="width:100%;margin-top:8px;" onclick="showScreen('menu')">
+      ← Back to Menu
+    </button>
+  </div>
+</section>
 
 <!-- ─── Scripts ───────────────────────────────────────────────────────────── -->
 <script src="questions/trivia.js"></script>
