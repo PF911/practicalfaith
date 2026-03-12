@@ -12,7 +12,7 @@ const quotesQuestions = [
     choices: ["Moses", "Aaron", "Pharaoh", "Joshua"],
     answer: 0,
     reference: "Exodus 5:1",
-    verseText: "Thus says the Lord God of Israel: Let My people go."
+    verseText: "Thus says the LORD God of Israel: Let My people go."
   },
   {
     id: 11,
@@ -60,7 +60,7 @@ const quotesQuestions = [
     choices: ["Elijah", "Elisha", "Moses", "Isaiah"],
     answer: 0,
     reference: "1 Kings 17:1",
-    verseText: "As the Lord God of Israel liveth... there shall not be dew nor rain these years, but according to my word."
+    verseText: "As the LORD God of Israel lives... there shall not be dew nor rain these years, but according to my word."
   },
   {
     id: 104,
@@ -72,7 +72,7 @@ const quotesQuestions = [
     choices: ["Peter", "The centurion", "One thief on the cross", "Thomas"],
     answer: 2,
     reference: "Luke 23:42",
-    verseText: "Lord, remember me when thou comest into thy kingdom."
+    verseText: "Lord, remember me when you come into your kingdom."
   },
   {
     id: 105,
@@ -84,7 +84,7 @@ const quotesQuestions = [
     choices: ["Peter", "Philip", "Andrew", "John"],
     answer: 1,
     reference: "John 1:46",
-    verseText: "Philip saith unto him, Come and see."
+    verseText: "Philip says to him, Come and see."
   },
   {
     id: 683,
@@ -96,7 +96,7 @@ const quotesQuestions = [
     choices: ["Peter", "John", "Thomas", "Paul"],
     answer: 2,
     reference: "John 20:28",
-    verseText: "Thomas answered and said unto him, My Lord and my God."
+    verseText: "Thomas answered and said to him, My Lord and my God."
   },
   {
     id: 684,
@@ -108,7 +108,7 @@ const quotesQuestions = [
     choices: ["Solomon", "Moses", "David", "Asaph"],
     answer: 2,
     reference: "Psalm 23:1",
-    verseText: "The Lord is my shepherd; I shall not want."
+    verseText: "The LORD is my shepherd; I shall not want."
   },
   {
     id: 685,
@@ -120,7 +120,7 @@ const quotesQuestions = [
     choices: ["John", "James", "Peter", "Andrew"],
     answer: 2,
     reference: "Matthew 16:16",
-    verseText: "Thou art the Christ, the Son of the living God."
+    verseText: "You are the Christ, the Son of the living God."
   },
   {
     id: 686,
@@ -132,7 +132,7 @@ const quotesQuestions = [
     choices: ["Orpah", "Ruth", "Leah", "Rachel"],
     answer: 1,
     reference: "Ruth 1:16",
-    verseText: "Whither thou goest, I will go; and where thou lodgest, I will lodge."
+    verseText: "Whither you go, I will go; and where you lodg, I will lodge."
   },
   {
     id: 687,
@@ -144,7 +144,7 @@ const quotesQuestions = [
     choices: ["Philip", "John", "Andrew", "Peter"],
     answer: 2,
     reference: "John 1:41",
-    verseText: "He first findeth his own brother Simon, and saith unto him, We have found the Messias."
+    verseText: "He first finds his own brother Simon, and says to him, We have found the Messias."
   },
   {
     id: 688,
@@ -156,7 +156,7 @@ const quotesQuestions = [
     choices: ["David", "Job", "Jeremiah", "Moses"],
     answer: 1,
     reference: "Job 1:21",
-    verseText: "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord."
+    verseText: "The Lord gave, and the Lord has taken away; blessed be the name of the LORD."
   },
   {
     id: 689,
@@ -192,7 +192,7 @@ const quotesQuestions = [
     choices: ["Moses", "Caleb", "The Lord to Joshua", "Samuel"],
     answer: 2,
     reference: "Joshua 1:9",
-    verseText: "Have not I commanded thee? Be strong and of a good courage; be not afraid."
+    verseText: "Have not I commanded you? Be strong and of a good courage; be not afraid."
   },
   {
     id: 692,
@@ -204,7 +204,7 @@ const quotesQuestions = [
     choices: ["A blind man", "A leper", "A paralyzed man", "Lazarus"],
     answer: 1,
     reference: "Matthew 8:2",
-    verseText: "Lord, if thou wilt, thou canst make me clean."
+    verseText: "Lord, if you will, you can make me clean."
   },
   {
     id: 693,
@@ -216,7 +216,7 @@ const quotesQuestions = [
     choices: ["Moses in the Old Testament", "Jesus in the New Testament", "John in a letter", "Paul in Romans"],
     answer: 1,
     reference: "John 3:16",
-    verseText: "For God so loved the world, that he gave his only begotten Son."
+    verseText: "For God so loved the world that He gave His only begotten Son."
   },
   {
     id: 694,
@@ -252,7 +252,7 @@ const quotesQuestions = [
     choices: ["Elizabeth", "Anna the prophetess", "Mary the mother of Jesus", "Martha"],
     answer: 2,
     reference: "Luke 1:38",
-    verseText: "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word."
+    verseText: "And Mary said, Behold the handmaid of the LORD; be it to me according to your word."
   },
   {
     id: 697,
@@ -264,7 +264,7 @@ const quotesQuestions = [
     choices: ["Moses", "Aaron", "The Lord", "Joshua"],
     answer: 2,
     reference: "Exodus 20:2",
-    verseText: "I am the Lord thy God, which have brought thee out of the land of Egypt, out of the house of bondage."
+    verseText: "I am the LORD your God, which have brought you out of the land of Egypt, out of the house of bondage."
   },
   {
     id: 698,
@@ -300,7 +300,7 @@ const quotesQuestions = [
     choices: ["A Pharisee", "Herod", "Pilate", "The high priest"],
     answer: 2,
     reference: "John 18:38",
-    verseText: "Pilate saith unto him, What is truth?"
+    verseText: "Pilate says to him, What is truth?"
   },
   {
     id: 701,
@@ -312,7 +312,7 @@ const quotesQuestions = [
     choices: ["Jacob", "David", "Joseph", "Moses"],
     answer: 2,
     reference: "Genesis 50:20",
-    verseText: "But as for you, ye thought evil against me; but God meant it unto good."
+    verseText: "But as for you, you thought evil against me; but God meant it to good."
   },
   {
     id: 702,
@@ -324,7 +324,7 @@ const quotesQuestions = [
     choices: ["Peter", "Paul", "Jesus", "The disciples"],
     answer: 2,
     reference: "Luke 19:9",
-    verseText: "Jesus said unto him, This day is salvation come to this house."
+    verseText: "Jesus said to him, This day is salvation come to this house."
   },
   {
     id: 737,
@@ -336,7 +336,7 @@ const quotesQuestions = [
     choices: ["An angel at the tomb", "Jesus to his disciples", "Peter to the frightened disciples", "The Holy Spirit"],
     answer: 1,
     reference: "John 20:19",
-    verseText: "Then the same day at evening... came Jesus and stood in the midst, and saith unto them, Peace be unto you."
+    verseText: "Then the same day at evening... came Jesus and stood in the midst, and says to them, Peace be to you."
   },
   {
     id: 738,
@@ -348,7 +348,7 @@ const quotesQuestions = [
     choices: ["Moses to Joshua", "God to Jacob at Bethel", "Samuel to David", "An angel to Elijah"],
     answer: 1,
     reference: "Genesis 28:15",
-    verseText: "I am with thee, and will keep thee in all places whither thou goest."
+    verseText: "I am with you, and will keep you in all places whither you go."
   },
   {
     id: 739,
@@ -408,7 +408,7 @@ const quotesQuestions = [
     choices: ["One of the thieves", "Jesus", "Barabbas", "The soldiers mocked someone by saying this"],
     answer: 1,
     reference: "John 19:28",
-    verseText: "After this, Jesus knowing that all things were now accomplished... saith, I thirst."
+    verseText: "After this, Jesus knowing that all things were now accomplished... says, I thirst."
   },
 
   // ── STUDENT (33) ─────────────────────────────────────────────────────────────
@@ -471,7 +471,7 @@ const quotesQuestions = [
     choices: ["Peter", "John the Baptist", "Andrew", "Philip"],
     answer: 1,
     reference: "John 1:29",
-    verseText: "Behold the Lamb of God, which taketh away the sin of the world."
+    verseText: "Behold the Lamb of God, which takes away the sin of the world."
   },
   {
     id: 108,
@@ -483,7 +483,7 @@ const quotesQuestions = [
     choices: ["Paul", "Peter", "Barnabas", "Stephen"],
     answer: 1,
     reference: "Acts 3:6",
-    verseText: "Then Peter said, Silver and gold have I none; but such as I have give I thee."
+    verseText: "Then Peter said, Silver and gold have I none; but such as I have give I you."
   },
   {
     id: 109,
@@ -495,7 +495,7 @@ const quotesQuestions = [
     choices: ["Job", "David", "Isaiah", "Jeremiah"],
     answer: 0,
     reference: "Job 1:21",
-    verseText: "The Lord gave, and the Lord hath taken away; blessed be the name of the Lord."
+    verseText: "The Lord gave, and the Lord has taken away; blessed be the name of the LORD."
   },
   {
     id: 703,
@@ -507,7 +507,7 @@ const quotesQuestions = [
     choices: ["Mary Magdalene", "Mary of Bethany", "Martha", "Both Mary and Martha"],
     answer: 3,
     reference: "John 11:21, 32",
-    verseText: "Then said Martha unto Jesus, Lord, if thou hadst been here, my brother had not died."
+    verseText: "Then said Martha to Jesus, Lord, if you hadst been here, my brother had not died."
   },
   {
     id: 704,
@@ -531,7 +531,7 @@ const quotesQuestions = [
     choices: ["Peter", "Paul", "John", "Jesus"],
     answer: 3,
     reference: "John 14:6",
-    verseText: "Jesus saith unto him, I am the way, the truth, and the life."
+    verseText: "Jesus says to him, I am the way, the truth, and the life."
   },
   {
     id: 706,
@@ -543,7 +543,7 @@ const quotesQuestions = [
     choices: ["Balak", "Balaam", "Moses", "Joshua"],
     answer: 1,
     reference: "Numbers 23:8",
-    verseText: "How shall I curse, whom God hath not cursed?"
+    verseText: "How shall I curse, whom God has not cursed?"
   },
   {
     id: 707,
@@ -555,7 +555,7 @@ const quotesQuestions = [
     choices: ["Peter", "Paul", "John", "James"],
     answer: 1,
     reference: "Romans 1:16",
-    verseText: "I am not ashamed of the gospel of Christ: for it is the power of God unto salvation."
+    verseText: "I am not ashamed of the gospel of Christ: for it is the power of God to salvation."
   },
   {
     id: 708,
@@ -615,7 +615,7 @@ const quotesQuestions = [
     choices: ["Solomon", "The Psalmist", "Jeremiah", "Moses"],
     answer: 1,
     reference: "Psalm 119:105",
-    verseText: "Thy word is a lamp unto my feet, and a light unto my path."
+    verseText: "Your word is a lamp to my feet, and a light to my path."
   },
   {
     id: 713,
@@ -627,7 +627,7 @@ const quotesQuestions = [
     choices: ["Peter", "Paul", "Jesus", "The disciples"],
     answer: 2,
     reference: "Mark 5:8",
-    verseText: "He said unto him, Come out of the man, thou unclean spirit."
+    verseText: "He said to him, Come out of the man, you unclean spirit."
   },
   {
     id: 714,
@@ -651,7 +651,7 @@ const quotesQuestions = [
     choices: ["Stephen", "Ananias", "Jesus", "An angel"],
     answer: 2,
     reference: "Acts 9:4",
-    verseText: "Saul, Saul, why persecutest thou me?"
+    verseText: "Saul, Saul, why persecut you me?"
   },
   {
     id: 716,
@@ -663,7 +663,7 @@ const quotesQuestions = [
     choices: ["Isaiah", "Daniel", "Job", "Thomas"],
     answer: 2,
     reference: "Job 19:25",
-    verseText: "For I know that my Redeemer liveth."
+    verseText: "For I know that my Redeemer lives."
   },
   {
     id: 717,
@@ -675,7 +675,7 @@ const quotesQuestions = [
     choices: ["God the Father", "Peter", "Jesus from the cross", "John the Baptist"],
     answer: 2,
     reference: "John 19:26-27",
-    verseText: "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith... Woman, behold thy son!"
+    verseText: "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he says... Woman, behold your son!"
   },
   {
     id: 718,
@@ -687,7 +687,7 @@ const quotesQuestions = [
     choices: ["Jeremiah", "Isaiah", "The Lord through Malachi", "Ezekiel"],
     answer: 2,
     reference: "Malachi 3:8",
-    verseText: "Will a man rob God? Yet ye have robbed me."
+    verseText: "Will a man rob God? Yet you have robbed me."
   },
   {
     id: 744,
@@ -711,7 +711,7 @@ const quotesQuestions = [
     choices: ["Saul", "Samson", "David", "Solomon"],
     answer: 2,
     reference: "2 Samuel 12:13",
-    verseText: "And David said unto Nathan, I have sinned against the Lord."
+    verseText: "And David said to Nathan, I have sinned against the Lord."
   },
   {
     id: 746,
@@ -723,7 +723,7 @@ const quotesQuestions = [
     choices: ["Peter to Cornelius", "Paul to the Philippian jailer", "Jesus to Zacchaeus", "The angel to Gideon"],
     answer: 2,
     reference: "Luke 19:5",
-    verseText: "Jesus... looked up, and saw him, and said unto him, Zacchaeus, make haste, and come down; for to day I must abide at thy house."
+    verseText: "Jesus... looked up, and saw him, and said to him, Zacchaeus, make haste, and come down; for to day I must abide at your house."
   },
   {
     id: 747,
@@ -735,7 +735,7 @@ const quotesQuestions = [
     choices: ["Orpah to Naomi", "Ruth to Naomi", "Hannah to Eli", "Leah to Jacob"],
     answer: 1,
     reference: "Ruth 1:16",
-    verseText: "Intreat me not to leave thee, or to return from following after thee."
+    verseText: "Intreat me not to leave you, or to return from following after you."
   },
   {
     id: 748,
@@ -747,7 +747,7 @@ const quotesQuestions = [
     choices: ["John", "Thomas", "Andrew", "Peter"],
     answer: 3,
     reference: "John 6:68",
-    verseText: "Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life."
+    verseText: "Simon Peter answered him, Lord, to whom shall we go? you have the words of eternal life."
   },
   {
     id: 749,
@@ -771,7 +771,7 @@ const quotesQuestions = [
     choices: ["A Pharisee", "Moses in the law", "Paul in Romans", "Jesus to the woman caught in adultery"],
     answer: 3,
     reference: "John 8:11",
-    verseText: "Jesus said unto her, Neither do I condemn thee: go, and sin no more."
+    verseText: "Jesus said to her, Neither do I condemn you: go, and sin no more."
   },
   {
     id: 751,
@@ -783,7 +783,7 @@ const quotesQuestions = [
     choices: ["Balak", "Balaam", "Moses", "Joshua"],
     answer: 1,
     reference: "Numbers 23:8",
-    verseText: "How shall I curse, whom God hath not cursed? or how shall I defy, whom the Lord hath not defied?"
+    verseText: "How shall I curse, whom God has not cursed? or how shall I defy, whom the Lord has not defied?"
   },
   {
     id: 752,
@@ -807,7 +807,7 @@ const quotesQuestions = [
     choices: ["Balaam", "Moses", "Joshua", "Samuel"],
     answer: 0,
     reference: "Numbers 23:23",
-    verseText: "According to this time it shall be said of Jacob and of Israel, What hath God wrought!"
+    verseText: "According to this time it shall be said of Jacob and of Israel, What has God wrought!"
   },
 
   // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
@@ -858,7 +858,7 @@ const quotesQuestions = [
     choices: ["Peter", "Paul", "Jesus", "Martha"],
     answer: 2,
     reference: "John 11:25",
-    verseText: "Jesus said unto her, I am the resurrection, and the life."
+    verseText: "Jesus said to her, I am the resurrection, and the life."
   },
   {
     id: 111,
@@ -870,7 +870,7 @@ const quotesQuestions = [
     choices: ["Ezekiel", "The Lord", "Daniel", "Jeremiah"],
     answer: 1,
     reference: "Ezekiel 37:3",
-    verseText: "And he said unto me, Son of man, can these bones live?"
+    verseText: "And he said to me, Son of man, can these bones live?"
   },
   {
     id: 112,
@@ -894,7 +894,7 @@ const quotesQuestions = [
     choices: ["Stephen", "Paul", "Jesus", "John"],
     answer: 2,
     reference: "Luke 23:46",
-    verseText: "And when Jesus had cried with a loud voice, he said, Father, into thy hands I commend my spirit."
+    verseText: "And when Jesus had cried with a loud voice, he said, Father, into your hands I commend my spirit."
   },
   {
     id: 720,
@@ -918,7 +918,7 @@ const quotesQuestions = [
     choices: ["A Pharisee", "A man whose son had an unclean spirit", "Thomas", "A blind beggar"],
     answer: 1,
     reference: "Mark 9:24",
-    verseText: "And straightway the father of the child cried out, and said... Lord, I believe; help thou mine unbelief."
+    verseText: "And immediately the father of the child cried out, and said... Lord, I believe; help you mine unbelief."
   },
   {
     id: 722,
@@ -930,7 +930,7 @@ const quotesQuestions = [
     choices: ["Moses", "David", "Solomon", "Isaiah"],
     answer: 2,
     reference: "Proverbs 9:10",
-    verseText: "The fear of the Lord is the beginning of wisdom."
+    verseText: "The fear of the LORD is the beginning of wisdom."
   },
   {
     id: 723,
@@ -954,7 +954,7 @@ const quotesQuestions = [
     choices: ["Job", "David", "The Preacher in Ecclesiastes", "Isaiah"],
     answer: 2,
     reference: "Ecclesiastes 1:2",
-    verseText: "Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity."
+    verseText: "Vanity of vanities, says the Preacher, vanity of vanities; all is vanity."
   },
   {
     id: 725,
@@ -966,7 +966,7 @@ const quotesQuestions = [
     choices: ["Peter", "James", "Paul", "John"],
     answer: 2,
     reference: "Philippians 4:13",
-    verseText: "I can do all things through Christ which strengtheneth me."
+    verseText: "I can do all things through Christ who strengthens me."
   },
   {
     id: 726,
@@ -978,7 +978,7 @@ const quotesQuestions = [
     choices: ["God", "Job's wife", "Satan", "Eliphaz"],
     answer: 2,
     reference: "Job 1:9",
-    verseText: "Then Satan answered the Lord, and said, Doth Job fear God for nought?"
+    verseText: "Then Satan answered the Lord, and said, Doth Job fear God for nothing?"
   },
   {
     id: 727,
@@ -1002,7 +1002,7 @@ const quotesQuestions = [
     choices: ["Elijah", "Isaiah speaking of himself", "John the Baptist", "Jeremiah"],
     answer: 2,
     reference: "John 1:23",
-    verseText: "He said, I am the voice of one crying in the wilderness, Make straight the way of the Lord."
+    verseText: "He said, I am the voice of one crying in the wilderness, Make straight the way of the LORD."
   },
   {
     id: 729,
@@ -1014,7 +1014,7 @@ const quotesQuestions = [
     choices: ["Jesus to his disciples", "The Lord to Paul", "An angel to Peter", "Paul to Timothy"],
     answer: 1,
     reference: "2 Corinthians 12:9",
-    verseText: "My grace is sufficient for thee: for my strength is made perfect in weakness."
+    verseText: "My grace is sufficient for you: for my strength is made perfect in weakness."
   },
   {
     id: 730,
@@ -1026,7 +1026,7 @@ const quotesQuestions = [
     choices: ["Jacob", "David after Absalom's rebellion", "Joseph to his brothers", "Moses to Pharaoh"],
     answer: 2,
     reference: "Genesis 50:20",
-    verseText: "Ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive."
+    verseText: "You thought evil against me; but God meant it to good, to bring to pass, as it is this day, to save much people alive."
   },
   {
     id: 731,
@@ -1050,7 +1050,7 @@ const quotesQuestions = [
     choices: ["Jonah after being released", "Job in his suffering", "The Psalmist David", "Jeremiah in the pit"],
     answer: 2,
     reference: "Psalm 139:7",
-    verseText: "Whither shall I go from thy spirit? or whither shall I flee from thy presence?"
+    verseText: "Whither shall I go from your spirit? or whither shall I flee from your presence?"
   },
   {
     id: 733,
@@ -1062,7 +1062,7 @@ const quotesQuestions = [
     choices: ["Paul in a vision", "An angel to John", "The Lord God", "Jesus in the Gospels"],
     answer: 2,
     reference: "Revelation 1:8",
-    verseText: "I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty."
+    verseText: "I am Alpha and Omega, the beginning and the ending, says the LORD, which is, and which was, and which is to come, the Almighty."
   },
   {
     id: 734,
@@ -1074,7 +1074,7 @@ const quotesQuestions = [
     choices: ["Adam cursing Eve", "Eve cursing the serpent", "God to the serpent", "An angel after the Fall"],
     answer: 2,
     reference: "Genesis 3:15",
-    verseText: "I will put enmity between thee and the woman, and between thy seed and her seed."
+    verseText: "I will put enmity between you and the woman, and between your seed and her seed."
   },
   {
     id: 735,
@@ -1122,7 +1122,7 @@ const quotesQuestions = [
     choices: ["Eliphaz the Temanite", "His three friends", "Job's wife", "Bildad the Shuhite"],
     answer: 2,
     reference: "Job 2:9",
-    verseText: "Then said his wife unto him, Dost thou still retain thine integrity? curse God, and die."
+    verseText: "Then said his wife to him, Dost you still retain your integrity? curse God, and die."
   },
   {
     id: 756,
@@ -1146,7 +1146,7 @@ const quotesQuestions = [
     choices: ["Solomon", "Asaph", "David", "Moses"],
     answer: 2,
     reference: "Psalm 23:4",
-    verseText: "Yea, though I walk through the valley of the shadow of death... thou art with me; thy rod and thy staff they comfort me."
+    verseText: "Yes, though I walk through the valley of the shadow of death... you are with me; your rod and your staff they comfort me."
   },
   {
     id: 758,
@@ -1158,7 +1158,7 @@ const quotesQuestions = [
     choices: ["Peter in his first epistle", "Paul in Romans", "John in his Gospel", "James in his epistle"],
     answer: 1,
     reference: "Romans 6:23",
-    verseText: "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."
+    verseText: "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
   },
   {
     id: 759,
@@ -1170,7 +1170,7 @@ const quotesQuestions = [
     choices: ["David in Psalm 22 — and Jesus on the cross", "Job in his suffering — and Paul in prison", "Jeremiah in his lament — and Stephen before death", "Asaph in Psalm 77 — and Peter at his denial"],
     answer: 0,
     reference: "Psalm 22:1; Matthew 27:46",
-    verseText: "My God, my God, why hast thou forsaken me?"
+    verseText: "My God, my God, why have you forsaken me?"
   },
   {
     id: 760,
@@ -1182,7 +1182,7 @@ const quotesQuestions = [
     choices: ["Joseph of Arimathaea", "Simeon in the temple", "An aged priest named Zacharias", "Anna the prophetess"],
     answer: 1,
     reference: "Luke 2:29-30",
-    verseText: "Lord, now lettest thou thy servant depart in peace... for mine eyes have seen thy salvation."
+    verseText: "Lord, now lett you your servant depart in peace... for mine eyes have seen your salvation."
   },
   {
     id: 761,
@@ -1194,7 +1194,7 @@ const quotesQuestions = [
     choices: ["An elder of Israel", "The angel of the Lord in the burning bush", "Joshua before Jericho", "God speaking from Sinai"],
     answer: 1,
     reference: "Exodus 3:5",
-    verseText: "And he said, Draw not nigh hither: put off thy shoes from off thy feet, for the place whereon thou standest is holy ground."
+    verseText: "And he said, Draw not nigh hither: put off your shoes from off your feet, for the place whereon you stand is holy ground."
   },
   {
     id: 762,

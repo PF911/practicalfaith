@@ -1303,7 +1303,7 @@ const tutorialSlides = [
   {
     icon: '📖',
     title: 'Welcome to Bible Quiz Challenge!',
-    body: 'Test your Bible knowledge with 1,000 questions across 10 categories — from Trivia and Prophecy to Parables and Timeline events.'
+    body: 'Test your Bible knowledge with 1,001+ questions across 10 categories — from Trivia and Prophecy to Parables and Timeline events.'
   },
   {
     icon: '🎓',

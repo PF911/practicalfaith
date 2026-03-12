@@ -12,7 +12,7 @@ const triviaQuestions = [
     choices: ["Moses", "Noah", "Abraham", "David"],
     answer: 1,
     reference: "Genesis 6:14",
-    verseText: "Make yourself an ark of gopher wood."
+    verseText: "Make yourself an ark of gopherwood."
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const triviaQuestions = [
     choices: ["Jonah", "Peter", "Samuel", "Joseph"],
     answer: 0,
     reference: "Jonah 1:17",
-    verseText: "The Lord had prepared a great fish to swallow Jonah."
+    verseText: "The LORD had prepared a great fish to swallow Jonah."
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const triviaQuestions = [
     choices: ["Aaron", "Joshua", "Moses", "David"],
     answer: 2,
     reference: "Exodus 31:18",
-    verseText: "He gave unto Moses... two tables of testimony, tables of stone."
+    verseText: "He gave Moses... two tablets of the Testimony, tablets of stone."
   },
   {
     id: 93,
@@ -72,7 +72,7 @@ const triviaQuestions = [
     choices: ["Peter", "John the Baptist", "Andrew", "Philip"],
     answer: 1,
     reference: "Matthew 3:13-17",
-    verseText: "Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him."
+    verseText: "Then Jesus came from Galilee to John at the Jordan to be baptized by him."
   },
   {
     id: 94,
@@ -96,7 +96,7 @@ const triviaQuestions = [
     choices: ["Cain and Abel", "Adam and Eve", "Noah and Sarah", "Abraham and Rebekah"],
     answer: 1,
     reference: "Genesis 2:7-22",
-    verseText: "The Lord God formed man of the dust of the ground... and the rib, which the Lord God had taken from man, made he a woman."
+    verseText: "The LORD God formed man of the dust of the ground... and the rib which the LORD God had taken from man He made into a woman."
   },
   {
     id: 103,
@@ -108,7 +108,7 @@ const triviaQuestions = [
     choices: ["Garden of Gethsemane", "Garden of Eden", "Garden of Olives", "Garden of Canaan"],
     answer: 1,
     reference: "Genesis 2:8",
-    verseText: "The Lord God planted a garden eastward in Eden; and there he put the man whom he had formed."
+    verseText: "The LORD God planted a garden eastward in Eden, and there He put the man whom He had formed."
   },
   {
     id: 104,
@@ -120,7 +120,7 @@ const triviaQuestions = [
     choices: ["Jerusalem", "Nazareth", "Bethlehem", "Capernaum"],
     answer: 2,
     reference: "Luke 2:4-7",
-    verseText: "Joseph also went up... unto the city of David, which is called Bethlehem... and she brought forth her firstborn son."
+    verseText: "Joseph also went up... to the city of David, which is called Bethlehem... and she brought forth her firstborn Son."
   },
   {
     id: 105,
@@ -132,7 +132,7 @@ const triviaQuestions = [
     choices: ["Martha", "Mary Magdalene", "Elizabeth", "Mary"],
     answer: 3,
     reference: "Luke 1:30-31",
-    verseText: "The angel said unto her, Fear not, Mary: for thou hast found favour with God. And, behold, thou shalt conceive in thy womb, and bring forth a son."
+    verseText: "The angel said to her, 'Do not be afraid, Mary, for you have found favor with God. And behold, you will conceive in your womb and bring forth a Son.'"
   },
   {
     id: 106,
@@ -144,7 +144,7 @@ const triviaQuestions = [
     choices: ["7", "10", "12", "14"],
     answer: 2,
     reference: "Luke 6:13",
-    verseText: "He called unto him his disciples: and of them he chose twelve, whom also he named apostles."
+    verseText: "He called His disciples to Himself; and from them He chose twelve whom He also named apostles."
   },
   {
     id: 107,
@@ -156,7 +156,7 @@ const triviaQuestions = [
     choices: ["Milk", "Honey", "Wine", "Oil"],
     answer: 2,
     reference: "John 2:9",
-    verseText: "The ruler of the feast... tasted the water that was made wine."
+    verseText: "The master of the feast... tasted the water that was made wine."
   },
   {
     id: 108,
@@ -168,7 +168,7 @@ const triviaQuestions = [
     choices: ["David", "Daniel", "Joseph", "Elijah"],
     answer: 1,
     reference: "Daniel 6:16",
-    verseText: "Then the king commanded, and they brought Daniel, and cast him into the den of lions."
+    verseText: "Then the king gave the command, and they brought Daniel and cast him into the den of lions."
   },
   {
     id: 109,
@@ -180,7 +180,7 @@ const triviaQuestions = [
     choices: ["Leah", "Rebekah", "Rachel", "Sarah"],
     answer: 3,
     reference: "Genesis 17:15",
-    verseText: "God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be."
+    verseText: "God said to Abraham: 'As for Sarai your wife, you shall not call her name Sarai, but Sarah shall be her name.'"
   },
   {
     id: 110,
@@ -192,7 +192,7 @@ const triviaQuestions = [
     choices: ["David", "Solomon", "Saul", "Samuel"],
     answer: 2,
     reference: "1 Samuel 10:24",
-    verseText: "Samuel said to all the people, See ye him whom the Lord hath chosen... And all the people shouted, and said, God save the king."
+    verseText: "Samuel said to all the people, 'Do you see him whom the LORD has chosen... And all the people shouted and said, "Long live the king!"'"
   },
   {
     id: 111,
@@ -204,7 +204,7 @@ const triviaQuestions = [
     choices: ["A dove", "An angel", "A star", "A cloud"],
     answer: 2,
     reference: "Matthew 2:9-10",
-    verseText: "The star, which they saw in the east, went before them, till it came and stood over where the young child was."
+    verseText: "The star which they had seen in the East went before them, till it came and stood over where the young Child was."
   },
   {
     id: 112,
@@ -216,7 +216,7 @@ const triviaQuestions = [
     choices: ["Seth", "Abel", "Enoch", "Lamech"],
     answer: 1,
     reference: "Genesis 4:8",
-    verseText: "Cain rose up against Abel his brother, and slew him."
+    verseText: "Cain rose up against Abel his brother and killed him."
   },
   {
     id: 113,
@@ -228,7 +228,7 @@ const triviaQuestions = [
     choices: ["1", "2", "3", "7"],
     answer: 2,
     reference: "Luke 24:46",
-    verseText: "Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day."
+    verseText: "Thus it is written, and thus it was necessary for the Christ to suffer and to rise from the dead the third day."
   },
   {
     id: 114,
@@ -240,7 +240,7 @@ const triviaQuestions = [
     choices: ["David", "Solomon", "Hezekiah", "Josiah"],
     answer: 1,
     reference: "1 Kings 4:31",
-    verseText: "Solomon's wisdom excelled the wisdom of all the children of the east country."
+    verseText: "Solomon's wisdom excelled the wisdom of all the men of the East."
   },
   {
     id: 115,
@@ -264,7 +264,7 @@ const triviaQuestions = [
     choices: ["James", "John", "Peter", "Andrew"],
     answer: 2,
     reference: "Luke 22:61",
-    verseText: "The Lord turned, and looked upon Peter. And Peter remembered the word of the Lord... Before the cock crow, thou shalt deny me thrice."
+    verseText: "The Lord turned, and looked upon Peter. And Peter remembered the word of the LORD... Before the cock crow, you shall deny me thrice."
   },
   {
     id: 117,
@@ -300,7 +300,7 @@ const triviaQuestions = [
     choices: ["Garden of Eden", "Garden of Gethsemane", "Garden of Olives", "Garden of Joseph"],
     answer: 1,
     reference: "Matthew 26:36",
-    verseText: "Then cometh Jesus with them unto a place called Gethsemane."
+    verseText: "Then comes Jesus with them to a place called Gethsemane."
   },
   {
     id: 120,
@@ -312,7 +312,7 @@ const triviaQuestions = [
     choices: ["Fisherman", "Carpenter", "Tax collector", "Shepherd"],
     answer: 2,
     reference: "Matthew 9:9",
-    verseText: "As Jesus passed forth from thence, he saw a man, named Matthew, sitting at the receipt of custom: and he saith unto him, Follow me."
+    verseText: "As Jesus passed forth from thence, he saw a man, named Matthew, sitting at the receipt of custom: and he says to him, Follow me."
   },
   {
     id: 121,
@@ -348,7 +348,7 @@ const triviaQuestions = [
     choices: ["Michael", "Raphael", "Gabriel", "Uriel"],
     answer: 2,
     reference: "Luke 1:26",
-    verseText: "The angel Gabriel was sent from God unto a city of Galilee, named Nazareth."
+    verseText: "The angel Gabriel was sent from God to a city of Galilee, named Nazareth."
   },
   {
     id: 124,
@@ -372,7 +372,7 @@ const triviaQuestions = [
     choices: ["Noah", "Isaac", "Abraham", "Jacob"],
     answer: 2,
     reference: "Genesis 22:1-2",
-    verseText: "God did tempt Abraham, and said unto him... Take now thy son, thine only son Isaac, and offer him."
+    verseText: "God did tempt Abraham, and said to him... Take now your son, your only son Isaac, and offer him."
   },
   {
     id: 126,
@@ -408,7 +408,7 @@ const triviaQuestions = [
     choices: ["James", "John the Apostle", "John the Baptist", "Barnabas"],
     answer: 2,
     reference: "Luke 1:36",
-    verseText: "Behold, thy cousin Elisabeth, she hath also conceived a son in her old age."
+    verseText: "Behold, your cousin Elisabeth, she has also conceived a son in her old age."
   },
 
   // ── STUDENT (33) ─────────────────────────────────────────────────────────────
@@ -519,7 +519,7 @@ const triviaQuestions = [
     choices: ["Thomas", "Peter", "Judas", "Pilate"],
     answer: 2,
     reference: "Matthew 26:15",
-    verseText: "What will ye give me, and I will deliver him unto you? And they covenanted with him for thirty pieces of silver."
+    verseText: "What will you give me, and I will deliver him to you? And they covenanted with him for thirty pieces of silver."
   },
   {
     id: 131,
@@ -543,7 +543,7 @@ const triviaQuestions = [
     choices: ["Herod", "Caesar", "Pontius Pilate", "Felix"],
     answer: 2,
     reference: "Matthew 27:26",
-    verseText: "He released Barabbas unto them: and when he had scourged Jesus, he delivered him to be crucified."
+    verseText: "He released Barabbas to them: and when he had scourged Jesus, he delivered him to be crucified."
   },
   {
     id: 133,
@@ -567,7 +567,7 @@ const triviaQuestions = [
     choices: ["Nile", "Euphrates", "Jordan", "Galilee"],
     answer: 2,
     reference: "Matthew 3:13",
-    verseText: "Jesus cometh from Galilee to Jordan unto John, to be baptized of him."
+    verseText: "Jesus comes from Galilee to Jordan to John, to be baptized by him."
   },
   {
     id: 135,
@@ -603,7 +603,7 @@ const triviaQuestions = [
     choices: ["Silas", "Saul", "Simon", "Sergius"],
     answer: 1,
     reference: "Acts 9:1",
-    verseText: "Saul, yet breathing out threatenings and slaughter against the disciples of the Lord."
+    verseText: "Saul, yet breathing out threatenings and slaughter against the disciples of the LORD."
   },
   {
     id: 138,
@@ -627,7 +627,7 @@ const triviaQuestions = [
     choices: ["20", "30", "40", "50"],
     answer: 2,
     reference: "Numbers 14:34",
-    verseText: "After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years."
+    verseText: "After the number of the days in which you searched the land, even forty days, each day for a year, shall you bear your iniquities, even forty years."
   },
   {
     id: 140,
@@ -675,7 +675,7 @@ const triviaQuestions = [
     choices: ["Genesis", "Isaiah", "Psalms", "Jeremiah"],
     answer: 2,
     reference: "Psalms",
-    verseText: "The book of Psalms has 150 chapters, making it the longest book in the Bible."
+    verseText: "The book of Psalms has 150 chapters, making it the long book in the Bible."
   },
   {
     id: 144,
@@ -747,7 +747,7 @@ const triviaQuestions = [
     choices: ["Elisha", "Isaiah", "Elijah", "Jeremiah"],
     answer: 2,
     reference: "1 Kings 18:38",
-    verseText: "Then the fire of the Lord fell, and consumed the burnt sacrifice, and the wood, and the stones."
+    verseText: "Then the fire of the LORD fell, and consumed the burnt sacrifice, and the wood, and the stones."
   },
   {
     id: 150,
@@ -771,7 +771,7 @@ const triviaQuestions = [
     choices: ["Locusts", "Darkness", "Hail", "Death of the firstborn"],
     answer: 3,
     reference: "Exodus 12:29",
-    verseText: "At midnight the Lord smote all the firstborn in the land of Egypt."
+    verseText: "At midnight the Lord struck all the firstborn in the land of Egypt."
   },
   {
     id: 152,
@@ -783,7 +783,7 @@ const triviaQuestions = [
     choices: ["Saul", "Solomon", "David", "Ish-bosheth"],
     answer: 2,
     reference: "1 Samuel 16:13",
-    verseText: "Samuel took the horn of oil, and anointed him in the midst of his brethren: and the Spirit of the Lord came upon David from that day forward."
+    verseText: "Samuel took the horn of oil, and anointed him in the midst of his brethren: and the Spirit of the LORD came upon David from that day forward."
   },
   {
     id: 153,
@@ -795,7 +795,7 @@ const triviaQuestions = [
     choices: ["Mary the mother of Jesus", "Joanna", "Salome", "Mary Magdalene"],
     answer: 3,
     reference: "John 20:14-16",
-    verseText: "She turned herself back, and saw Jesus standing, and knew not that it was Jesus... Jesus saith unto her, Mary."
+    verseText: "She turned herself back, and saw Jesus standing, and knew not that it was Jesus... Jesus says to her, Mary."
   },
   {
     id: 154,
@@ -819,7 +819,7 @@ const triviaQuestions = [
     choices: ["Silas", "Timothy", "Barnabas", "Luke"],
     answer: 2,
     reference: "Acts 13:2",
-    verseText: "The Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them."
+    verseText: "The Holy Spirit said, Separate me Barnabas and Saul for the work whereunto I have called them."
   },
   {
     id: 156,
@@ -906,7 +906,7 @@ const triviaQuestions = [
     choices: ["Jesse", "Boaz", "Obed", "Nahshon"],
     answer: 2,
     reference: "Ruth 4:21-22",
-    verseText: "Salmon begat Boaz, and Boaz begat Obed, and Obed begat Jesse, and Jesse begat David."
+    verseText: "Salmon begot Boaz, and Boaz begot Obed, and Obed begot Jesse, and Jesse begot David."
   },
   {
     id: 157,
@@ -966,7 +966,7 @@ const triviaQuestions = [
     choices: ["Mount Sinai", "Mount Hermon", "Mount Nebo", "Mount Carmel"],
     answer: 2,
     reference: "Deuteronomy 34:1",
-    verseText: "Moses went up from the plains of Moab unto the mountain of Nebo... and the Lord shewed him all the land."
+    verseText: "Moses went up from the plains of Moab to the mountain of Nebo... and the Lord shewed him all the land."
   },
   {
     id: 162,
@@ -990,7 +990,7 @@ const triviaQuestions = [
     choices: ["Luke", "Silas", "John Mark", "Timothy"],
     answer: 2,
     reference: "Colossians 4:10",
-    verseText: "Marcus, sister's son to Barnabas... if he come unto you, receive him."
+    verseText: "Marcus, sister's son to Barnabas... if he come to you, receive him."
   },
   {
     id: 164,
@@ -1038,7 +1038,7 @@ const triviaQuestions = [
     choices: ["Paul", "Peter", "James", "John"],
     answer: 3,
     reference: "Revelation 1:1",
-    verseText: "The Revelation of Jesus Christ, which God gave unto him... and he sent and signified it by his angel unto his servant John."
+    verseText: "The Revelation of Jesus Christ, which God gave to him... and he sent and signified it by his angel to his servant John."
   },
   {
     id: 168,
@@ -1086,7 +1086,7 @@ const triviaQuestions = [
     choices: ["Nicodemus", "Gamaliel", "Annas", "Caiaphas"],
     answer: 1,
     reference: "Acts 22:3",
-    verseText: "I am verily a man which am a Jew... brought up in this city at the feet of Gamaliel."
+    verseText: "I am assuredly a man which am a Jew... brought up in this city at the feet of Gamaliel."
   },
   {
     id: 172,
@@ -1134,7 +1134,7 @@ const triviaQuestions = [
     choices: ["Amnon", "Adonijah", "Solomon", "Absalom"],
     answer: 3,
     reference: "2 Samuel 15:10",
-    verseText: "Absalom sent spies throughout all the tribes of Israel, saying, As soon as ye hear the sound of the trumpet, then ye shall say, Absalom reigneth in Hebron."
+    verseText: "Absalom sent spies throughout all the tribes of Israel, saying, As soon as you hear the sound of the trumpet, then you shall say, Absalom reigns in Hebron."
   },
   {
     id: 176,
@@ -1146,7 +1146,7 @@ const triviaQuestions = [
     choices: ["Elymas", "Simon", "Sceva", "Apollos"],
     answer: 1,
     reference: "Acts 8:18-19",
-    verseText: "When Simon saw that through laying on of the apostles' hands the Holy Ghost was given, he offered them money."
+    verseText: "When Simon saw that through laying on of the apostles' hands the Holy Spirit was given, he offered them money."
   },
   {
     id: 177,
@@ -1158,7 +1158,7 @@ const triviaQuestions = [
     choices: ["A cave in Mount Sinai", "A cave in Mount Carmel", "A cave in Mount Horeb", "A cave in Mount Nebo"],
     answer: 2,
     reference: "1 Kings 19:8-9",
-    verseText: "He arose... and went in the strength of that meat forty days and forty nights unto Horeb the mount of God. And he came thither unto a cave, and lodged there."
+    verseText: "He arose... and went in the strength of that meat forty days and forty nights to Horeb the mount of God. And he came thither to a cave, and lodged there."
   },
   {
     id: 178,
@@ -1170,7 +1170,7 @@ const triviaQuestions = [
     choices: ["Abraham and Isaac", "Elijah and Elisha", "Moses and Elijah", "Isaiah and Jeremiah"],
     answer: 2,
     reference: "Matthew 17:3",
-    verseText: "There appeared unto them Moses and Elias talking with him."
+    verseText: "There appeared to them Moses and Elias talking with him."
   },
   {
     id: 179,
@@ -1182,7 +1182,7 @@ const triviaQuestions = [
     choices: ["Darius", "Cyrus", "Xerxes", "Artaxerxes"],
     answer: 1,
     reference: "Ezra 1:1-2",
-    verseText: "In the first year of Cyrus king of Persia... the Lord stirred up the spirit of Cyrus king of Persia, that he made a proclamation... the Lord God of heaven hath given me all the kingdoms of the earth."
+    verseText: "In the first year of Cyrus king of Persia... the Lord stirred up the spirit of Cyrus king of Persia, that he made a proclamation... the LORD God of heaven has given me all the kingdoms of the earth."
   },
   {
     id: 180,

@@ -216,7 +216,7 @@ const parablesQuestions = [
     choices: ["He told the whole village", "He hid it again and bought the field", "He gave it to the priest", "He built a house over it"],
     answer: 1,
     reference: "Matthew 13:44",
-    verseText: "Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field."
+    verseText: "Again, the kingdom of heaven is like treasure hid in a field; the which when a man has found, he hideth, and for joy thereof goes and selleth all that he has, and buyeth that field."
   },
   {
     id: 534,
@@ -252,7 +252,7 @@ const parablesQuestions = [
     choices: ["A feast at the temple", "The bridegroom's arrival", "The king's coronation", "A harvest celebration"],
     answer: 1,
     reference: "Matthew 25:1",
-    verseText: "Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom."
+    verseText: "Then shall the kingdom of heaven be likened to ten virgins, which took their lamps, and went forth to meet the bridegroom."
   },
   {
     id: 537,
@@ -264,7 +264,7 @@ const parablesQuestions = [
     choices: ["She wept for joy", "She called her friends and neighbors to rejoice", "She gave it to the poor", "She put it in the temple treasury"],
     answer: 1,
     reference: "Luke 15:9",
-    verseText: "When she hath found it, she calleth her friends and her neighbours together, saying, Rejoice with me; for I have found the piece which I had lost."
+    verseText: "When she has found it, she calls her friends and her neighbors together, saying, Rejoice with me; for I have found the piece which I had lost."
   },
   {
     id: 538,
@@ -300,7 +300,7 @@ const parablesQuestions = [
     choices: ["A great king's palace", "Treasure hidden in a field", "A net cast into the sea", "A shepherd and his sheep"],
     answer: 1,
     reference: "Matthew 13:44",
-    verseText: "The kingdom of heaven is like unto treasure hid in a field."
+    verseText: "The kingdom of heaven is like treasure hid in a field."
   },
   {
     id: 566,
@@ -336,7 +336,7 @@ const parablesQuestions = [
     choices: ["Honor your father and mother", "Love the Lord your God with all your heart, soul, and mind", "Do not murder", "Keep the Sabbath holy"],
     answer: 1,
     reference: "Matthew 22:37-38",
-    verseText: "Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind. This is the first and great commandment."
+    verseText: "You shall love the LORD your God with all your heart, and with all your soul, and with all your mind. This is the first and great commandment."
   },
   {
     id: 569,
@@ -384,7 +384,7 @@ const parablesQuestions = [
     choices: ["He scolds it for wandering", "He lays it on his shoulders rejoicing", "He leads it back slowly", "He sends a servant to fetch it"],
     answer: 1,
     reference: "Luke 15:5",
-    verseText: "And when he hath found it, he layeth it on his shoulders, rejoicing."
+    verseText: "And when he has found it, he layeth it on his shoulders, rejoicing."
   },
   {
     id: 596,
@@ -396,7 +396,7 @@ const parablesQuestions = [
     choices: ["Going to the temple", "Hearing and doing the words of Jesus", "Praying twice a day", "Keeping the commandments of Moses"],
     answer: 1,
     reference: "Matthew 7:24",
-    verseText: "Whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock."
+    verseText: "Whoever hears these sayings of mine, and doeth them, I will liken him to a wise man, which built his house upon a rock."
   },
   {
     id: 597,
@@ -408,7 +408,7 @@ const parablesQuestions = [
     choices: ["Matthew 18", "Mark 12", "Luke 15", "John 10"],
     answer: 2,
     reference: "Luke 15:1-32",
-    verseText: "Then drew near unto him all the publicans and sinners for to hear him."
+    verseText: "Then drew near to him all the tax collectors and sinners for to hear him."
   },
 
   // ── STUDENT (33) ─────────────────────────────────────────────────────────────
@@ -423,7 +423,7 @@ const parablesQuestions = [
     choices: ["Nine", "Ninety and nine", "Seventy", "Fifty"],
     answer: 1,
     reference: "Luke 15:4",
-    verseText: "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost?"
+    verseText: "What man of you, having an hundred sheep, if he lose one of them, does not leave the ninety and nine in the wilderness, and go after that which is lost?"
   },
   {
     id: 68,
@@ -447,7 +447,7 @@ const parablesQuestions = [
     choices: ["A river", "A great tree", "A crown", "A net"],
     answer: 1,
     reference: "Matthew 13:31-32",
-    verseText: "Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs, and becometh a tree."
+    verseText: "Which indeed is the least of all seeds: but when it is grown, it is the great among herbs, and becometh a tree."
   },
   {
     id: 172,
@@ -471,7 +471,7 @@ const parablesQuestions = [
     choices: ["Ten talents", "A hundred pence", "Ten thousand talents", "Fifty shekels"],
     answer: 2,
     reference: "Matthew 18:24-27",
-    verseText: "One was brought unto him, which owed him ten thousand talents."
+    verseText: "One was brought to him, which owed him ten thousand talents."
   },
   {
     id: 174,
@@ -495,7 +495,7 @@ const parablesQuestions = [
     choices: ["The publican", "The prodigal son", "The rich man", "The vineyard worker"],
     answer: 0,
     reference: "Luke 18:13",
-    verseText: "The publican... smote upon his breast, saying, God be merciful to me a sinner."
+    verseText: "The tax collector... struck upon his breast, saying, God be merciful to me a sinner."
   },
   {
     id: 539,
@@ -519,7 +519,7 @@ const parablesQuestions = [
     choices: ["Sin spreading through the church", "The kingdom of heaven spreading through all", "False teaching corrupting the truth", "The growth of faith over time"],
     answer: 1,
     reference: "Matthew 13:33",
-    verseText: "The kingdom of heaven is like unto leaven, which a woman took, and hid in three measures of meal, till the whole was leavened."
+    verseText: "The kingdom of heaven is like leaven, which a woman took, and hid in three measures of meal, till the whole was leavened."
   },
   {
     id: 541,
@@ -567,7 +567,7 @@ const parablesQuestions = [
     choices: ["Winter is coming", "Summer is near", "Rain will fall", "God is pleased"],
     answer: 1,
     reference: "Matthew 24:32",
-    verseText: "When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh."
+    verseText: "When his branch is yet tender, and puts forth leaves, you know that summer is nigh."
   },
   {
     id: 545,
@@ -579,7 +579,7 @@ const parablesQuestions = [
     choices: ["He was working in the field", "He was angry that his brother was welcomed back with a feast despite wasting his inheritance", "He was afraid his brother would ask for more money", "He did not recognize his brother"],
     answer: 1,
     reference: "Luke 15:28-30",
-    verseText: "He was angry, and would not go in... Lo, these many years do I serve thee, neither transgressed I at any time thy commandment."
+    verseText: "He was angry, and would not go in... Lo, these many years do I serve you, neither transgressed I at any time your commandment."
   },
   {
     id: 546,
@@ -615,7 +615,7 @@ const parablesQuestions = [
     choices: ["An angel with a sword", "Abraham afar off with Lazarus in his bosom", "The gate of heaven closed", "A great chasm he could not cross"],
     answer: 1,
     reference: "Luke 16:23",
-    verseText: "He lift up his eyes, being in torments, and seeth Abraham afar off, and Lazarus in his bosom."
+    verseText: "He lift up his eyes, being in torments, and sees Abraham afar off, and Lazarus in his bosom."
   },
   {
     id: 549,
@@ -627,7 +627,7 @@ const parablesQuestions = [
     choices: ["Their extra wicks", "Their oil", "Their lamps", "Their seats at the feast"],
     answer: 1,
     reference: "Matthew 25:8",
-    verseText: "The foolish said unto the wise, Give us of your oil; for our lamps are gone out."
+    verseText: "The foolish said to the wise, Give us of your oil; for our lamps are gone out."
   },
   {
     id: 550,
@@ -639,7 +639,7 @@ const parablesQuestions = [
     choices: ["He feared God", "He respected the widow", "He was tired of her continual coming", "The townspeople pressured him"],
     answer: 2,
     reference: "Luke 18:5",
-    verseText: "Yet because this widow troubleth me, I will avenge her, lest by her continual coming she weary me."
+    verseText: "Yet because this widow troubleth me, I will avenge her, l by her continual coming she weary me."
   },
   {
     id: 551,
@@ -651,7 +651,7 @@ const parablesQuestions = [
     choices: ["You are forgiven — go in peace", "Thou wicked and slothful servant", "You should have worked harder", "Give it to the one with ten talents"],
     answer: 1,
     reference: "Matthew 25:26",
-    verseText: "His lord answered and said unto him, Thou wicked and slothful servant."
+    verseText: "His lord answered and said to him, You wicked and slothful servant."
   },
   {
     id: 573,
@@ -675,7 +675,7 @@ const parablesQuestions = [
     choices: ["People who never hear the word", "Those who hear but the devil takes away the word before it takes root", "Those who hear but are too busy", "Those who reject the word outright"],
     answer: 1,
     reference: "Luke 8:12",
-    verseText: "Those by the way side are they that hear; then cometh the devil, and taketh away the word out of their hearts."
+    verseText: "Those by the way side are they that hear; then comes the devil, and takes away the word out of their hearts."
   },
   {
     id: 575,
@@ -699,7 +699,7 @@ const parablesQuestions = [
     choices: ["He would send a reward on his return", "That he would repay any extra expenses on his return", "That the man would work off his debt", "That the priests would pay the bill"],
     answer: 1,
     reference: "Luke 10:35",
-    verseText: "Whatsoever thou spendest more, when I come again, I will repay thee."
+    verseText: "Whatever you spend more, when I come again, I will repay you."
   },
   {
     id: 577,
@@ -723,7 +723,7 @@ const parablesQuestions = [
     choices: ["Roman soldiers who believe", "Harlots and tax collectors who repented", "Gentiles who feared God", "The poor and the lame"],
     answer: 1,
     reference: "Matthew 21:31",
-    verseText: "Verily I say unto you, That the publicans and the harlots go into the kingdom of God before you."
+    verseText: "Assuredly I say to you, That the tax collectors and the harlots go into the kingdom of God before you."
   },
   {
     id: 579,
@@ -735,7 +735,7 @@ const parablesQuestions = [
     choices: ["He welcomed them but gave them no seat", "Verily I say unto you, I know you not", "You may enter but cannot eat", "Wait until the feast is over"],
     answer: 1,
     reference: "Matthew 25:12",
-    verseText: "But he answered and said, Verily I say unto you, I know you not."
+    verseText: "But he answered and said, Assuredly I say to you, I know you not."
   },
   {
     id: 580,
@@ -771,7 +771,7 @@ const parablesQuestions = [
     choices: ["He was given a throne of honor", "He was comforted, while the rich man who was comforted in life was now tormented", "He was given rest from his suffering", "He was seated at a great banquet"],
     answer: 1,
     reference: "Luke 16:25",
-    verseText: "Son, remember that thou in thy lifetime receivedst thy good things, and likewise Lazarus evil things: but now he is comforted, and thou art tormented."
+    verseText: "Son, remember that you in your lifetime receivedst your good things, and likewise Lazarus evil things: but now he is comforted, and you are tormented."
   },
   {
     id: 583,
@@ -783,7 +783,7 @@ const parablesQuestions = [
     choices: ["You agreed to the wage — is it not lawful for me to do what I will with mine own?", "Work harder and you will receive more tomorrow", "Be grateful for any pay at all", "The last shall be first and the first last"],
     answer: 0,
     reference: "Matthew 20:14-15",
-    verseText: "Is it not lawful for me to do what I will with mine own? Is thine eye evil, because I am good?"
+    verseText: "Is it not lawful for me to do what I will with mine own? Is your eye evil, because I am good?"
   },
   {
     id: 598,
@@ -795,7 +795,7 @@ const parablesQuestions = [
     choices: ["He waters it every day", "He sleeps and rises night and day while the earth brings forth fruit of herself", "He guards it from birds", "He prays over it continuously"],
     answer: 1,
     reference: "Mark 4:27",
-    verseText: "And should sleep, and rise night and day, and the seed should spring and grow up, he knoweth not how."
+    verseText: "And should sleep, and rise night and day, and the seed should spring and grow up, he knows not how."
   },
   {
     id: 599,
@@ -807,7 +807,7 @@ const parablesQuestions = [
     choices: ["It was divided among the other servants equally", "It was given to the one who had ten minas", "It was put in the treasury", "It was returned to the master"],
     answer: 1,
     reference: "Luke 19:24",
-    verseText: "Take from him the pound, and give it to him that hath ten pounds."
+    verseText: "Take from him the pound, and give it to him that has ten pounds."
   },
 
   // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
@@ -846,7 +846,7 @@ const parablesQuestions = [
     choices: ["His steward", "His army", "His son", "His brother"],
     answer: 2,
     reference: "Mark 12:6",
-    verseText: "Having yet therefore one son, his wellbeloved, he sent him also last unto them."
+    verseText: "Having yet therefore one son, his wellbeloved, he sent him also last to them."
   },
   {
     id: 176,
@@ -882,7 +882,7 @@ const parablesQuestions = [
     choices: ["Depart from me", "Well, thou good servant", "Take up thy bed and walk", "Fear not"],
     answer: 1,
     reference: "Luke 19:17",
-    verseText: "Well, thou good servant: because thou hast been faithful in a very little..."
+    verseText: "Well, you good servant: because you have been faithful in a very little..."
   },
   {
     id: 552,
@@ -894,7 +894,7 @@ const parablesQuestions = [
     choices: ["Lazarus was too weak to travel", "They have Moses and the prophets — let them hear them", "It was against the laws of heaven", "The brothers would not believe a dead man"],
     answer: 1,
     reference: "Luke 16:29",
-    verseText: "Abraham saith unto him, They have Moses and the prophets; let them hear them."
+    verseText: "Abraham says to him, They have Moses and the prophets; let them hear them."
   },
   {
     id: 553,
@@ -930,7 +930,7 @@ const parablesQuestions = [
     choices: ["To the synagogues", "To the highways and hedges", "To the neighboring villages", "To the marketplace only"],
     answer: 1,
     reference: "Matthew 22:9",
-    verseText: "Go ye therefore into the highways, and as many as ye shall find, bid to the marriage."
+    verseText: "Go you therefore into the highways, and as many as you shall find, bid to the marriage."
   },
   {
     id: 556,
@@ -942,7 +942,7 @@ const parablesQuestions = [
     choices: ["He was accused of stealing silver", "He was accused of wasting his master's goods", "He gave too much away to the poor", "He lost a lawsuit for his master"],
     answer: 1,
     reference: "Luke 16:1",
-    verseText: "There was a certain rich man, which had a steward; and the same was accused unto him that he had wasted his goods."
+    verseText: "There was a certain rich man, which had a steward; and the same was accused to him that he had wasted his goods."
   },
   {
     id: 557,
@@ -954,7 +954,7 @@ const parablesQuestions = [
     choices: ["Five pounds each", "Three pounds each", "One pound each", "Ten pounds each"],
     answer: 2,
     reference: "Luke 19:13",
-    verseText: "He called his ten servants, and delivered them ten pounds, and said unto them, Occupy till I come."
+    verseText: "He called his ten servants, and delivered them ten pounds, and said to them, Occupy till I come."
   },
   {
     id: 558,
@@ -978,7 +978,7 @@ const parablesQuestions = [
     choices: ["Exile from the kingdom", "He was delivered to the tormentors till he paid all that was due", "Loss of his position", "He was put in prison with no torment"],
     answer: 1,
     reference: "Matthew 18:34",
-    verseText: "His lord was wroth, and delivered him to the tormentors, till he should pay all that was due unto him."
+    verseText: "His lord was furious, and delivered him to the tormentors, till he should pay all that was due to him."
   },
   {
     id: 560,
@@ -990,7 +990,7 @@ const parablesQuestions = [
     choices: ["The wicked would not know they were being watched", "The wheat would not be rooted up along with the tares", "The angels would not be confused", "The enemy would not know the plan"],
     answer: 1,
     reference: "Matthew 13:29",
-    verseText: "Lest while ye gather up the tares, ye root up also the wheat with them."
+    verseText: "L while you gather up the tares, you root up also the wheat with them."
   },
   {
     id: 561,
@@ -1002,7 +1002,7 @@ const parablesQuestions = [
     choices: ["I will give half to the poor tomorrow", "Soul, thou hast much goods laid up for many years; take thine ease", "I will build a temple to honor God", "My sons will inherit all that I have"],
     answer: 1,
     reference: "Luke 12:19",
-    verseText: "I will say to my soul, Soul, thou hast much goods laid up for many years; take thine ease, eat, drink, and be merry."
+    verseText: "I will say to my soul, Soul, you have much goods laid up for many years; take your ease, eat, drink, and be merry."
   },
   {
     id: 562,
@@ -1014,7 +1014,7 @@ const parablesQuestions = [
     choices: ["The one who owed fifty", "The one who owed five hundred", "They would love equally", "Neither — the debt was too embarrassing"],
     answer: 1,
     reference: "Luke 7:42-43",
-    verseText: "He to whom he forgave most. And he said unto him, Thou hast rightly judged."
+    verseText: "He to whom he forgave most. And he said to him, You have rightly judged."
   },
   {
     id: 563,
@@ -1026,7 +1026,7 @@ const parablesQuestions = [
     choices: ["Who is the greatest in the kingdom?", "And who is my neighbour?", "How many times must I forgive?", "What must I do to inherit eternal life?"],
     answer: 1,
     reference: "Luke 10:29",
-    verseText: "But he, willing to justify himself, said unto Jesus, And who is my neighbour?"
+    verseText: "But he, willing to justify himself, said to Jesus, And who is my neighbor?"
   },
   {
     id: 584,
@@ -1038,7 +1038,7 @@ const parablesQuestions = [
     choices: ["He shall be given another chance", "Even what he has will be taken from him", "He shall receive mercy from the king", "He shall remain as he is"],
     answer: 1,
     reference: "Matthew 25:29",
-    verseText: "From him that hath not shall be taken away even that which he hath."
+    verseText: "From him that has not shall be taken away even that which he has."
   },
   {
     id: 585,
@@ -1074,7 +1074,7 @@ const parablesQuestions = [
     choices: ["A question from the Pharisees about fasting", "The Pharisee Simon's unspoken criticism of a sinful woman who anointed Jesus", "A dispute about money between two disciples", "A question about how God judges sin"],
     answer: 1,
     reference: "Luke 7:39-41",
-    verseText: "When the Pharisee which had bidden him saw it, he spake within himself... Jesus answering said unto him, Simon, I have somewhat to say unto thee."
+    verseText: "When the Pharisee which had bidden him saw it, he spoke within himself... Jesus answering said to him, Simon, I have somewhat to say to you."
   },
   {
     id: 588,
@@ -1146,7 +1146,7 @@ const parablesQuestions = [
     choices: ["The religious leaders", "The devil", "The Roman government", "Those who fall away from faith"],
     answer: 1,
     reference: "Matthew 13:39",
-    verseText: "The enemy that sowed them is the devil; the harvest is the end of the world."
+    verseText: "The enemy that sowed them is the devil; the harv is the end of the world."
   },
   {
     id: 594,
@@ -1158,7 +1158,7 @@ const parablesQuestions = [
     choices: ["The shepherd calls for help; the hireling fights alone", "The shepherd lays down his life for the sheep; the hireling flees", "The shepherd protects the lambs only; the hireling protects all", "The shepherd uses a staff; the hireling uses a sword"],
     answer: 1,
     reference: "John 10:11-13",
-    verseText: "I am the good shepherd: the good shepherd giveth his life for the sheep. But he that is an hireling... seeth the wolf coming, and leaveth the sheep, and fleeth."
+    verseText: "I am the good shepherd: the good shepherd gives his life for the sheep. But he that is an hireling... sees the wolf coming, and leaveth the sheep, and fleeth."
   },
   {
     id: 595,
@@ -1194,7 +1194,7 @@ const parablesQuestions = [
     choices: ["Their doctrinal correctness", "They served Christ by feeding, welcoming, and visiting the least of his brethren", "Their faithfulness in tithing and sacrifice", "Their daily prayer and fasting"],
     answer: 1,
     reference: "Matthew 25:35-40",
-    verseText: "Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me."
+    verseText: "Inasmuch as you have done it to one of the least of these my brethren, you have done it to me."
   },
   {
     id: 602,
@@ -1206,7 +1206,7 @@ const parablesQuestions = [
     choices: ["They are pruned lightly and given more time", "They are taken away and cast into the fire", "They are tied to the main vine for support", "They are left to recover on their own"],
     answer: 1,
     reference: "John 15:2, 6",
-    verseText: "Every branch in me that beareth not fruit he taketh away... he is cast forth as a branch, and is withered; and men gather them, and cast them into the fire."
+    verseText: "Every branch in me that beareth not fruit he takes away... he is cast forth as a branch, and is withered; and men gather them, and cast them into the fire."
   }
 
 ];

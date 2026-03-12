@@ -12,7 +12,7 @@ const versesQuestions = [
     choices: ["I shall not want", "He is my rock", "I will fear no evil", "His mercy endures"],
     answer: 0,
     reference: "Psalm 23:1",
-    verseText: "The Lord is my shepherd; I shall not want."
+    verseText: "The LORD is my shepherd; I shall not want."
   },
   {
     id: 29,
@@ -48,7 +48,7 @@ const versesQuestions = [
     choices: ["church", "Son", "kingdom", "angel"],
     answer: 1,
     reference: "John 3:16",
-    verseText: "For God so loved the world, that he gave his only begotten Son."
+    verseText: "For God so loved the world that He gave His only begotten Son."
   },
   {
     id: 125,
@@ -60,7 +60,7 @@ const versesQuestions = [
     choices: ["teacher", "mother", "neighbor", "brother"],
     answer: 1,
     reference: "Exodus 20:12",
-    verseText: "Honour thy father and thy mother."
+    verseText: "Honor your father and your mother."
   },
   {
     id: 126,
@@ -84,7 +84,7 @@ const versesQuestions = [
     choices: ["peace", "wisdom", "joy", "strength"],
     answer: 1,
     reference: "Proverbs 9:10",
-    verseText: "The fear of the Lord is the beginning of wisdom."
+    verseText: "The fear of the LORD is the beginning of wisdom."
   },
   {
     id: 843,
@@ -96,7 +96,7 @@ const versesQuestions = [
     choices: ["sorrow", "shame", "death", "darkness"],
     answer: 2,
     reference: "Romans 6:23",
-    verseText: "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."
+    verseText: "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
   },
   {
     id: 844,
@@ -108,7 +108,7 @@ const versesQuestions = [
     choices: ["darkness", "enemy", "evil", "trouble"],
     answer: 2,
     reference: "Psalm 23:4",
-    verseText: "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me."
+    verseText: "Yes, though I walk through the valley of the shadow of death, I will fear no evil; for You are with me."
   },
   {
     id: 845,
@@ -120,7 +120,7 @@ const versesQuestions = [
     choices: ["peace", "rest", "strength", "hope"],
     answer: 1,
     reference: "Matthew 11:28",
-    verseText: "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+    verseText: "Come to Me, all you who labor and are heavy laden, and I will give you r."
   },
   {
     id: 846,
@@ -132,7 +132,7 @@ const versesQuestions = [
     choices: ["doves", "eagles", "sparrows", "angels"],
     answer: 1,
     reference: "Isaiah 40:31",
-    verseText: "They that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles."
+    verseText: "Those who wait on the LORD shall renew their strength; they shall mount up with wings like eagles."
   },
   {
     id: 847,
@@ -144,7 +144,7 @@ const versesQuestions = [
     choices: ["prayer", "God", "Christ", "faith"],
     answer: 2,
     reference: "Philippians 4:13",
-    verseText: "I can do all things through Christ which strengtheneth me."
+    verseText: "I can do all things through Christ who strengthens me."
   },
   {
     id: 848,
@@ -156,7 +156,7 @@ const versesQuestions = [
     choices: ["strengthen", "keep", "protect", "guide"],
     answer: 1,
     reference: "Numbers 6:24",
-    verseText: "The Lord bless thee, and keep thee."
+    verseText: "The LORD bless you and keep you;"
   },
   {
     id: 849,
@@ -168,7 +168,7 @@ const versesQuestions = [
     choices: ["wrong you", "hate you", "persecute you", "ignore you"],
     answer: 2,
     reference: "Matthew 5:44",
-    verseText: "Love your enemies, bless them that curse you... and pray for them which despitefully use you, and persecute you."
+    verseText: "Love your enemies, bless those who curse you... and pray for those who spitefully use you and persecute you."
   },
   {
     id: 850,
@@ -204,7 +204,7 @@ const versesQuestions = [
     choices: ["mind", "soul", "heart", "life"],
     answer: 2,
     reference: "Psalm 37:4",
-    verseText: "Delight thyself also in the Lord; and he shall give thee the desires of thine heart."
+    verseText: "Delight thyself also in the Lord; and he shall give you the desires of your heart."
   },
   {
     id: 853,
@@ -228,7 +228,7 @@ const versesQuestions = [
     choices: ["strength", "mind", "might", "both A and C"],
     answer: 3,
     reference: "Deuteronomy 6:5",
-    verseText: "Thou shalt love the Lord thy God with all thine heart, and with all thy soul, and with all thy might."
+    verseText: "You shall love the LORD your God with all your heart, and with all your soul, and with all your might."
   },
   {
     id: 855,
@@ -240,7 +240,7 @@ const versesQuestions = [
     choices: ["pray", "believe", "knock", "wait"],
     answer: 2,
     reference: "Matthew 7:7",
-    verseText: "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you."
+    verseText: "Ask, and it shall be given you; seek, and you shall find; knock, and it shall be opened to you."
   },
   {
     id: 856,
@@ -252,7 +252,7 @@ const versesQuestions = [
     choices: ["before him", "in his name", "in it", "together"],
     answer: 2,
     reference: "Psalm 118:24",
-    verseText: "This is the day which the Lord hath made; we will rejoice and be glad in it."
+    verseText: "This is the day which the Lord has made; we will rejoice and be glad in it."
   },
   {
     id: 857,
@@ -300,7 +300,7 @@ const versesQuestions = [
     choices: ["nation", "future", "blessing", "name"],
     answer: 1,
     reference: "Jeremiah 29:11",
-    verseText: "For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil, to give you an expected end."
+    verseText: "For I know the thoughts that I think toward you, says the LORD, thoughts of peace, and not of evil, to give you an expected end."
   },
   {
     id: 893,
@@ -348,7 +348,7 @@ const versesQuestions = [
     choices: ["ages", "ever", "all time", "eternity"],
     answer: 1,
     reference: "Psalm 136:1",
-    verseText: "O give thanks unto the Lord; for he is good: for his mercy endureth for ever."
+    verseText: "O give thanks to the LORD; for he is good: for his mercy endures for ever."
   },
   {
     id: 897,
@@ -360,7 +360,7 @@ const versesQuestions = [
     choices: ["themselves", "God", "you", "your neighbor"],
     answer: 2,
     reference: "Luke 6:31",
-    verseText: "And as ye would that men should do to you, do ye also to them likewise."
+    verseText: "And as you would that men should do to you, do you also to them likewise."
   },
   {
     id: 898,
@@ -372,7 +372,7 @@ const versesQuestions = [
     choices: ["to your faith", "unto you", "in due time", "without ceasing"],
     answer: 1,
     reference: "Matthew 6:33",
-    verseText: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you."
+    verseText: "But seek you first the kingdom of God, and his righteousness; and all these things shall be added to you."
   },
   {
     id: 899,
@@ -384,7 +384,7 @@ const versesQuestions = [
     choices: ["salvation", "everlasting life", "eternal peace", "great hope"],
     answer: 1,
     reference: "John 3:16",
-    verseText: "That whosoever believeth in him should not perish, but have everlasting life."
+    verseText: "That whoever believes in him should not perish, but have everlasting life."
   },
   {
     id: 900,
@@ -396,7 +396,7 @@ const versesQuestions = [
     choices: ["his people", "all men", "thy God", "the righteous"],
     answer: 2,
     reference: "Micah 6:8",
-    verseText: "What doth the Lord require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+    verseText: "What does the Lord require of you, but to do justly, and to love mercy, and to walk humbly with your God?"
   },
   {
     id: 901,
@@ -408,7 +408,7 @@ const versesQuestions = [
     choices: ["family", "God", "friends", "nation"],
     answer: 2,
     reference: "John 15:13",
-    verseText: "Greater love hath no man than this, that a man lay down his life for his friends."
+    verseText: "Greater love has no man than this, that a man lay down his life for his friends."
   },
 
   // ── STUDENT (33) ─────────────────────────────────────────────────────────────
@@ -507,7 +507,7 @@ const versesQuestions = [
     choices: ["your elders", "the church", "God", "one another"],
     answer: 2,
     reference: "Philippians 4:6",
-    verseText: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."
+    verseText: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known to God."
   },
   {
     id: 862,
@@ -519,7 +519,7 @@ const versesQuestions = [
     choices: ["name", "thoughts", "ways", "heart"],
     answer: 2,
     reference: "Proverbs 16:3",
-    verseText: "Commit thy works unto the Lord, and thy thoughts shall be established."
+    verseText: "Commit your works to the LORD, and your thoughts shall be established."
   },
   {
     id: 863,
@@ -543,7 +543,7 @@ const versesQuestions = [
     choices: ["fear", "wrath", "strife", "enemies"],
     answer: 1,
     reference: "Proverbs 15:1",
-    verseText: "A soft answer turneth away wrath: but grievous words stir up anger."
+    verseText: "A soft answer turns away wrath: but grievous words stir up anger."
   },
   {
     id: 865,
@@ -555,7 +555,7 @@ const versesQuestions = [
     choices: ["cruel", "proud", "weak", "selfish"],
     answer: 1,
     reference: "1 Corinthians 13:4",
-    verseText: "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up."
+    verseText: "Charity suffers long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up."
   },
   {
     id: 866,
@@ -567,7 +567,7 @@ const versesQuestions = [
     choices: ["peace", "strength", "help", "rest"],
     answer: 2,
     reference: "Psalm 121:1",
-    verseText: "I will lift up mine eyes unto the hills, from whence cometh my help."
+    verseText: "I will lift up mine eyes to the hills, from whence comes my help."
   },
   {
     id: 867,
@@ -603,7 +603,7 @@ const versesQuestions = [
     choices: ["man", "the law", "mammon", "the world"],
     answer: 2,
     reference: "Matthew 6:24",
-    verseText: "Ye cannot serve God and mammon."
+    verseText: "You cannot serve God and mammon."
   },
   {
     id: 870,
@@ -639,7 +639,7 @@ const versesQuestions = [
     choices: ["silver", "cost", "money", "labor"],
     answer: 2,
     reference: "Isaiah 55:1",
-    verseText: "Ho, every one that thirsteth, come ye to the waters... buy wine and milk without money and without price."
+    verseText: "Ho, every one that thirsteth, come you to the waters... buy wine and milk without money and without price."
   },
   {
     id: 873,
@@ -651,7 +651,7 @@ const versesQuestions = [
     choices: ["time", "sin", "man", "death"],
     answer: 2,
     reference: "Mark 10:9",
-    verseText: "What therefore God hath joined together, let not man put asunder."
+    verseText: "What therefore God has joined together, let not man put asunder."
   },
   {
     id: 874,
@@ -675,7 +675,7 @@ const versesQuestions = [
     choices: ["heart", "will", "mind", "doctrine"],
     answer: 2,
     reference: "2 Timothy 1:7",
-    verseText: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind."
+    verseText: "For God has not given us the spirit of fear; but of power, and of love, and of a sound mind."
   },
   {
     id: 902,
@@ -699,7 +699,7 @@ const versesQuestions = [
     choices: ["burdens", "enemies", "fears", "transgressions"],
     answer: 3,
     reference: "Psalm 103:12",
-    verseText: "As far as the east is from the west, so far hath he removed our transgressions from us."
+    verseText: "As far as the east is from the w, so far has he removed our transgressions from us."
   },
   {
     id: 904,
@@ -711,7 +711,7 @@ const versesQuestions = [
     choices: ["work", "will", "gift", "grace"],
     answer: 2,
     reference: "Ephesians 2:8",
-    verseText: "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God."
+    verseText: "For by grace are you saved through faith; and that not of yourselves: it is the gift of God."
   },
   {
     id: 905,
@@ -723,7 +723,7 @@ const versesQuestions = [
     choices: ["glory", "power", "temple", "throne"],
     answer: 1,
     reference: "Psalm 150:1",
-    verseText: "Praise ye the Lord. Praise God in his sanctuary: praise him in the firmament of his power."
+    verseText: "Praise you the Lord. Praise God in his sanctuary: praise him in the firmament of his power."
   },
   {
     id: 906,
@@ -735,7 +735,7 @@ const versesQuestions = [
     choices: ["prayeth", "believeth", "repenteth", "asketh"],
     answer: 1,
     reference: "Romans 1:16",
-    verseText: "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth."
+    verseText: "For I am not ashamed of the gospel of Christ: for it is the power of God to salvation to every one that believes."
   },
   {
     id: 907,
@@ -747,7 +747,7 @@ const versesQuestions = [
     choices: ["spirit", "prayer", "will", "soul"],
     answer: 0,
     reference: "Psalm 34:18",
-    verseText: "The Lord is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit."
+    verseText: "The Lord is nigh to them that are of a broken heart; and saves such as be of a contrite spirit."
   },
   {
     id: 908,
@@ -759,7 +759,7 @@ const versesQuestions = [
     choices: ["petition", "prayer", "intercession", "peace"],
     answer: 2,
     reference: "Romans 8:26",
-    verseText: "The Spirit itself maketh intercession for us with groanings which cannot be uttered."
+    verseText: "The Spirit itself makes intercession for us with groanings which cannot be uttered."
   },
   {
     id: 909,
@@ -783,7 +783,7 @@ const versesQuestions = [
     choices: ["little", "nothing", "no good", "no works"],
     answer: 1,
     reference: "John 15:5",
-    verseText: "I am the vine, ye are the branches... for without me ye can do nothing."
+    verseText: "I am the vine, you are the branches... for without me you can do nothing."
   },
   {
     id: 911,
@@ -795,7 +795,7 @@ const versesQuestions = [
     choices: ["fear", "doubt", "waver", "consent"],
     answer: 3,
     reference: "Proverbs 1:10",
-    verseText: "My son, if sinners entice thee, consent thou not."
+    verseText: "My son, if sinners entice you, consent you not."
   },
   {
     id: 912,
@@ -807,7 +807,7 @@ const versesQuestions = [
     choices: ["God", "Christ", "the church", "eternal life"],
     answer: 0,
     reference: "1 John 4:15",
-    verseText: "Whosoever shall confess that Jesus is the Son of God, God dwelleth in him, and he in God."
+    verseText: "Whoever shall confess that Jesus is the Son of God, God dwells in him, and he in God."
   },
 
   // ── SCHOLAR (33) ─────────────────────────────────────────────────────────────
@@ -870,7 +870,7 @@ const versesQuestions = [
     choices: ["hosts", "Israel", "glory", "heaven"],
     answer: 0,
     reference: "Zechariah 4:6",
-    verseText: "Not by might, nor by power, but by my spirit, saith the Lord of hosts."
+    verseText: "Not by might, nor by power, but by my spirit, says the LORD of hosts."
   },
   {
     id: 134,
@@ -882,7 +882,7 @@ const versesQuestions = [
     choices: ["grace", "truth", "God", "Christ"],
     answer: 2,
     reference: "Romans 10:17",
-    verseText: "So then faith cometh by hearing, and hearing by the word of God."
+    verseText: "So then faith comes by hearing, and hearing by the word of God."
   },
   {
     id: 876,
@@ -906,7 +906,7 @@ const versesQuestions = [
     choices: ["forsaken", "broken", "afflicted", "crucified"],
     answer: 2,
     reference: "Isaiah 53:4",
-    verseText: "Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
+    verseText: "Surely he has borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
   },
   {
     id: 878,
@@ -990,7 +990,7 @@ const versesQuestions = [
     choices: ["pray", "stand", "flee", "fight"],
     answer: 1,
     reference: "Ephesians 6:13",
-    verseText: "Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day, and having done all, to stand."
+    verseText: "Therefore take to you the whole armour of God, that you may be able to withstand in the evil day, and having done all, to stand."
   },
   {
     id: 885,
@@ -1002,7 +1002,7 @@ const versesQuestions = [
     choices: ["blessing", "nation", "child", "end"],
     answer: 3,
     reference: "Jeremiah 29:11",
-    verseText: "For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil, to give you an expected end."
+    verseText: "For I know the thoughts that I think toward you, says the LORD, thoughts of peace, and not of evil, to give you an expected end."
   },
   {
     id: 886,
@@ -1014,7 +1014,7 @@ const versesQuestions = [
     choices: ["grace", "truth", "power", "wisdom"],
     answer: 2,
     reference: "1 Corinthians 1:18",
-    verseText: "For the preaching of the cross is to them that perish foolishness; but unto us which are saved it is the power of God."
+    verseText: "For the preaching of the cross is to them that perish foolishness; but to us which are saved it is the power of God."
   },
   {
     id: 887,
@@ -1026,7 +1026,7 @@ const versesQuestions = [
     choices: ["wicked", "proud", "scornful", "foolish"],
     answer: 2,
     reference: "Psalm 1:1",
-    verseText: "Blessed is the man that walketh not in the counsel of the ungodly... nor sitteth in the seat of the scornful."
+    verseText: "Blessed is the man that walks not in the counsel of the ungodly... nor sits in the seat of the scornful."
   },
   {
     id: 888,
@@ -1050,7 +1050,7 @@ const versesQuestions = [
     choices: ["Almighty", "cross", "covenant", "Lord"],
     answer: 0,
     reference: "Psalm 91:1",
-    verseText: "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty."
+    verseText: "He that dwells in the secret place of the most High shall abide under the shadow of the Almighty."
   },
   {
     id: 890,
@@ -1134,7 +1134,7 @@ const versesQuestions = [
     choices: ["river", "fountain", "brook", "waters"],
     answer: 3,
     reference: "Psalm 23:1-2",
-    verseText: "He maketh me to lie down in green pastures: he leadeth me beside the still waters."
+    verseText: "He makes me to lie down in green pastures: he leads me beside the still waters."
   },
   {
     id: 918,
@@ -1146,7 +1146,7 @@ const versesQuestions = [
     choices: ["forgiven", "redeemed", "saved", "justified"],
     answer: 2,
     reference: "Romans 10:9",
-    verseText: "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."
+    verseText: "That if you shall confess with your mouth the Lord Jesus, and shall believe in your heart that God has raised him from the dead, you shall be saved."
   },
   {
     id: 919,
@@ -1182,7 +1182,7 @@ const versesQuestions = [
     choices: ["restore", "renew", "increase", "regain"],
     answer: 1,
     reference: "Isaiah 40:30-31",
-    verseText: "Even the youths shall faint and be weary... but they that wait upon the Lord shall renew their strength."
+    verseText: "Even the youths shall faint and be weary... but those who wait on the LORD shall renew their strength."
   },
   {
     id: 922,
@@ -1206,7 +1206,7 @@ const versesQuestions = [
     choices: ["perish", "fail", "fall", "be judged"],
     answer: 0,
     reference: "Psalm 1:6",
-    verseText: "For the Lord knoweth the way of the righteous: but the way of the ungodly shall perish."
+    verseText: "For the Lord knows the way of the righteous: but the way of the ungodly shall perish."
   }
 
 ];
