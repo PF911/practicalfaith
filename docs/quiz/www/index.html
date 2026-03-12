@@ -8,7 +8,7 @@
 <style>
 :root{--purple:#6b2fbd;--blue:#3f6fb4;--orange1:#ffcf6e;--orange2:#f39a3e;--orange3:#e98026;--green:#3e9b4f;--red:#c84545;--cream:#f4eee4;}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;overflow-x:hidden;}
+html,body{margin:0;min-height:100%;overflow:hidden;}
 body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gradient(180deg,#f7c96b 0%,#f1ad4e 40%,#df8630 78%,#cf7021 100%);}
 .app{position:relative;width:100%;max-width:430px;min-height:100vh;margin:0 auto;text-align:center;}
 
@@ -30,7 +30,7 @@ body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gr
 .practice-btn{background:#f7e8c4;border-color:var(--orange3);color:var(--orange3);}
 
 /* ── Screens ──────────────────────────────────────────────────────────────── */
-.screen{display:none;width:100%;min-height:100vh;padding:28px 20px 20px;}
+.screen{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;max-width:430px;margin:0 auto;padding:28px 20px 20px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;}
 .screen.active{display:block;animation:screenFadeIn .3s ease;}
 @keyframes screenFadeIn{from{opacity:0;}to{opacity:1;}}
 #splash{background:url('Splash.jpg') center top / cover no-repeat;}
