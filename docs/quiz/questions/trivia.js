@@ -192,7 +192,7 @@ const triviaQuestions = [
     choices: ["David", "Solomon", "Saul", "Samuel"],
     answer: 2,
     reference: "1 Samuel 10:24",
-    verseText: "Samuel said to all the people, 'Do you see him whom the LORD has chosen... And all the people shouted and said, "Long live the king!"'"
+    verseText: "Samuel said to all the people, 'Do you see him whom the LORD has chosen... And all the people shouted and said, Long live the king!'"
   },
   {
     id: 111,
