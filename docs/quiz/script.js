@@ -79,6 +79,7 @@ const DAILY_KEY       = "bibleQuizDailyState";
 const PROGRESS_KEY    = "bibleQuizProgress";
 const SAVE_KEY        = "bibleQuizSavedGame";
 const PRO_KEY         = "bibleQuizPro";
+const FREE_USED_KEY   = "bibleQuizFreeUsed";
 
 // ─── Free tier limits ─────────────────────────────────────────────────────────
 const FREE_LIMITS = { Beginner: 25, Student: 5, Scholar: 3 };
@@ -86,9 +87,29 @@ const FREE_LIMITS = { Beginner: 25, Student: 5, Scholar: 3 };
 function isProUnlocked(){
   try{ return localStorage.getItem(PRO_KEY) === 'true'; }catch(e){ return false; }
 }
+
+function getFreeUsed(){
+  try{ return JSON.parse(localStorage.getItem(FREE_USED_KEY) || '{}'); }catch(e){ return {}; }
+}
+
+function addFreeUsed(level, count){
+  try{
+    const used = getFreeUsed();
+    used[level] = (used[level] || 0) + count;
+    localStorage.setItem(FREE_USED_KEY, JSON.stringify(used));
+  }catch(e){}
+}
+
+function freeLimitReached(level){
+  if(isProUnlocked()) return false;
+  if(!FREE_LIMITS[level]) return false;
+  const used = getFreeUsed();
+  return (used[level] || 0) >= FREE_LIMITS[level];
+}
 function unlockPro(){
   try{ localStorage.setItem(PRO_KEY, 'true'); }catch(e){}
-  // Update lock icons
+  try{ localStorage.removeItem(FREE_USED_KEY); }catch(e){}
+  try{ localStorage.removeItem('bibleQuizFreeDailyUsed'); }catch(e){}
   document.querySelectorAll('.pro-lock').forEach(el => el.style.display = 'none');
   showScreen('menu');
   setTimeout(() => alert('🎉 Welcome to Bible Quiz Challenge Pro!\n\nAll questions and features are now unlocked. Enjoy!'), 300);
@@ -642,6 +663,13 @@ function selectLevel(level){
     alert('Questions failed to load. Please check your questions/ folder and questions-index.js are uploaded to the server.');
     return;
   }
+
+  // Block at the door if free limit already used up
+  if(freeLimitReached(level)){
+    showPaywall(level);
+    return;
+  }
+
   currentLevel = level;
   isPracticeMode = false;
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
@@ -656,7 +684,9 @@ function selectLevel(level){
   }
 
   // Apply free tier limit if not pro
-  const limit = (!isProUnlocked() && FREE_LIMITS[level]) ? FREE_LIMITS[level] : QUESTIONS_PER_ROUND;
+  const used = isProUnlocked() ? 0 : (getFreeUsed()[level] || 0);
+  const remaining = isProUnlocked() ? QUESTIONS_PER_ROUND : Math.max(0, FREE_LIMITS[level] - used);
+  const limit = isProUnlocked() ? QUESTIONS_PER_ROUND : remaining;
   currentQuestions = allForLevel.slice(0, limit);
 
   currentQuestionIndex = 0;
@@ -860,6 +890,7 @@ function showResults(){
 
   // Show paywall after free session ends (non-pro users)
   if(!isProUnlocked() && !isPracticeMode && FREE_LIMITS[currentLevel]){
+    addFreeUsed(currentLevel, currentQuestions.length);
     showScreen('paywallScreen');
     return;
   }
