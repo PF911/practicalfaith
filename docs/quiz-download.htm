@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Practical Faith Bible Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #f2f4f8;
+    --bg2:     #ffffff;
+    --accent:  #1a5fa8;
+    --accent2: #14478a;
+    --text:    #1e2535;
+    --muted:   #6b7490;
+    --border:  #d0d5e3;
+    --mono:    'Share Tech Mono', monospace;
+    --sans:    'Barlow', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: linear-gradient(135deg, #1a3d70 0%, #2563a8 100%);
+    border-bottom: 2px solid var(--accent2);
+    padding: 32px 24px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 40px,
+      rgba(255,255,255,.04) 40px, rgba(255,255,255,.04) 41px
+    );
+    pointer-events: none;
+  }
+  header h1 {
+    font-family: var(--mono);
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    position: relative;
+  }
+  header p {
+    font-size: .85rem;
+    color: rgba(255,255,255,.6);
+    margin-top: 6px;
+    font-family: var(--mono);
+    letter-spacing: .08em;
+    position: relative;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.08);
+    text-align: center;
+  }
+
+  .lock-icon {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .card p {
+    font-size: .85rem;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .input-wrap {
+    position: relative;
+    margin-bottom: 14px;
+  }
+
+  input[type="password"] {
+    width: 100%;
+    padding: 11px 14px;
+    font-family: var(--mono);
+    font-size: .95rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+    transition: border-color .2s;
+    letter-spacing: .1em;
+  }
+  input[type="password"]:focus {
+    border-color: var(--accent);
+  }
+
+  .error {
+    font-size: .78rem;
+    color: #c0392b;
+    font-family: var(--mono);
+    margin-bottom: 12px;
+    min-height: 18px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--mono);
+    font-size: .88rem;
+    cursor: pointer;
+    transition: background .2s;
+    text-decoration: none;
+    letter-spacing: .04em;
+  }
+  .btn:hover { background: var(--accent2); }
+
+  .dl-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px;
+    background: #1e4d2b;
+    color: #5de08a;
+    border: 1px solid rgba(93,224,138,.2);
+    border-radius: 8px;
+    font-family: var(--mono);
+    font-size: .88rem;
+    cursor: pointer;
+    transition: background .2s;
+    text-decoration: none;
+    letter-spacing: .04em;
+    margin-top: 10px;
+  }
+  .dl-btn:hover { background: #256035; }
+  .dl-btn.visible { display: flex; }
+
+  .success-msg {
+    display: none;
+    font-size: .82rem;
+    color: #1e7e3e;
+    font-family: var(--mono);
+    margin-top: 12px;
+  }
+  .success-msg.visible { display: block; }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--mono);
+    font-size: .7rem;
+    color: #aab0c4;
+    letter-spacing: .08em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>PRACTICAL FAITH BIBLE QUIZ</h1>
+  <p>PROTECTED DOWNLOAD</p>
+</header>
+
+<div class="main">
+  <div class="card">
+    <span class="lock-icon">🔒</span>
+    <h2>Enter Access Code</h2>
+    <p>This download is password protected.<br>Contact Rev. Owens for access.</p>
+
+    <div class="input-wrap">
+      <input type="password" id="pw-input" placeholder="Enter password"
+             onkeydown="if(event.key==='Enter') checkPw()">
+    </div>
+    <div class="error" id="error-msg"></div>
+    <button class="btn" onclick="checkPw()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Unlock
+    </button>
+
+    <a class="dl-btn" id="dl-btn" href="practicalfaithquiz.apk" download>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Download Bible Quiz APK
+    </a>
+    <div class="success-msg" id="success-msg">✓ Access granted — tap above to download</div>
+  </div>
+</div>
+
+<footer>PRACTICAL FAITH MINISTRY &nbsp;·&nbsp; PRIVATE ACCESS ONLY</footer>
+
+<script>
+  function checkPw() {
+    var val = document.getElementById('pw-input').value;
+    var err = document.getElementById('error-msg');
+    var btn = document.getElementById('dl-btn');
+    var msg = document.getElementById('success-msg');
+    if (val === 'practicalfaith911') {
+      err.textContent = '';
+      btn.classList.add('visible');
+      msg.classList.add('visible');
+      document.getElementById('pw-input').disabled = true;
+    } else {
+      err.textContent = '✗ Incorrect password — try again';
+      btn.classList.remove('visible');
+      msg.classList.remove('visible');
+    }
+  }
+</script>
+
+</body>
+</html>
