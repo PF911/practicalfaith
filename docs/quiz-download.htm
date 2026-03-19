@@ -216,17 +216,19 @@
       Unlock
     </button>
 
-    <a class="dl-btn" id="dl-btn" href="https://practicalfaith.net/practicalfaithquiz.apk" download>
+    <a class="dl-btn" id="dl-btn" href="#" onclick="doDownload(); return false;">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       Download Bible Quiz APK
     </a>
-    <div class="success-msg" id="success-msg">✓ Access granted — tap above to download</div>
+    <div class="success-msg" id="success-msg">&#10003; Access granted &mdash; tap above to download</div>
   </div>
 </div>
 
-<footer>PRACTICAL FAITH MINISTRY &nbsp;·&nbsp; PRIVATE ACCESS ONLY</footer>
+<footer>PRACTICAL FAITH MINISTRY &nbsp;&middot;&nbsp; PRIVATE ACCESS ONLY</footer>
 
 <script>
+  var APK_URL = 'https://practicalfaith.net/practicalfaithquiz.apk';
+
   function checkPw() {
     var val = document.getElementById('pw-input').value;
     var err = document.getElementById('error-msg');
@@ -238,10 +240,14 @@
       msg.classList.add('visible');
       document.getElementById('pw-input').disabled = true;
     } else {
-      err.textContent = '✗ Incorrect password — try again';
+      err.textContent = '\u2717 Incorrect password \u2014 try again';
       btn.classList.remove('visible');
       msg.classList.remove('visible');
     }
+  }
+
+  function doDownload() {
+    window.location.href = APK_URL;
   }
 </script>
 
