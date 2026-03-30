@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practical Faith Bible Quiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --purple: #5b2d8e;
+  --purple-dark: #3d1d60;
+  --purple-light: #7c4ab8;
+  --orange: #f5a623;
+  --orange-light: #ffc45a;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--purple-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 28px;
+  max-width: 400px;
+  width: 92%;
+  margin: 32px auto;
+  padding: 0 0 32px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+  overflow: hidden;
+}
+
+/* HEADER */
+.header-band {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+  padding: 28px 24px 52px;
+  text-align: center;
+}
+
+.site-name {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--orange-light);
+  text-transform: uppercase;
+}
+
+.app-title {
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+/* LOGO */
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin: -52px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-wrap img {
+  width: 140px;
+  height: 140px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* BODY */
+.body-content {
+  padding: 18px 28px 0;
+  text-align: center;
+}
+
+.tagline {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.sub {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 26px;
+}
+
+.divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  margin: 0 auto 22px;
+}
+
+/* BUTTONS */
+.badge-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.store-link {
+  width: 220px;
+}
+
+.store-link img {
+  width: 100%;
+}
+
+.footnote {
+  font-size: 11.5px;
+  color: #aaa;
+  margin-top: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="header-band">
+    <div class="site-name">PracticalFaith.net</div>
+    <div class="app-title">Bible Quiz<br>Challenge</div>
+  </div>
+
+  <div class="logo-wrap">
+    <img src="images/quiz_logo.png" alt="App Icon">
+  </div>
+
+  <div class="body-content">
+    <p class="tagline">Test & grow your Scripture knowledge!</p>
+    <p class="sub">Hundreds of questions across Old & New Testament — free to download.</p>
+
+    <div class="divider"></div>
+
+    <div class="badge-row">
+
+      <a class="store-link"
+         href="https://apps.apple.com/us/app/practical-faith-bible-quiz/id6760572479"
+         target="_blank">
+        <img src="images/apple.png">
+      </a>
+
+      <a class="store-link"
+         href="https://play.google.com/store/apps/details?id=net.practicalfaith.biblequiz"
+         target="_blank">
+        <img src="images/google.png">
+      </a>
+
+    </div>
+
+    <p class="footnote">Free download · Optional Pro upgrade · No ads</p>
+  </div>
+
+</div>
+
+</body>
+</html>
