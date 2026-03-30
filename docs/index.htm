@@ -7,7 +7,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-WFLHGT7168'); // page_view is sent automatically
+    gtag('config', 'G-WFLHGT7168');
   </script>
 
   <meta charset="utf-8"/>
@@ -37,16 +37,90 @@
     .responsive-iframe iframe {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     }
-    .spotify-button, .book-store-button {
-      display: inline-block; background-color: #1DB954; color: white; text-decoration: none;
-      padding: 10px 20px; border-radius: 50px; font-size: 16px; font-family: Arial, sans-serif;
-      font-weight: bold; text-align: center; cursor: pointer; border: none; margin: 20px auto;
-      display: block; width: fit-content;
-    }
-    .spotify-button:hover, .book-store-button:hover { background-color: #1AA34A; }
     @media (max-width: 600px) { th, td { padding: 8px; } }
     .Red { color: #AA0012; }
     .red { color: #AA0012; }
+
+    /* Featured links row */
+    .feature-link {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #5b2d8e;
+      font-weight: bold;
+      font-size: 15px;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background-color 0.2s;
+    }
+    .feature-link:hover { background-color: rgba(91,45,142,0.08); }
+    .feature-link img { display: block; }
+    .feature-label {
+      display: block;
+      background: #5b2d8e;
+      color: #fff;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+    }
+  .feature-link1 {      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #5b2d8e;
+      font-weight: bold;
+      font-size: 15px;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background-color 0.2s;
+}
+  .feature-label1 {      display: block;
+      background: #5b2d8e;
+      color: #fff;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+}
+.feature-link2 {      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #5b2d8e;
+      font-weight: bold;
+      font-size: 15px;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background-color 0.2s;
+}
+  .feature-label2 {      display: block;
+      background: #5b2d8e;
+      color: #fff;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+}
+.feature-link3 {      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #5b2d8e;
+      font-weight: bold;
+      font-size: 15px;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background-color 0.2s;
+}
   </style>
 </head>
 <body>
@@ -101,8 +175,7 @@
     <tr>
       <td>
         <div align="center">
-          <!-- Cloudflare email protection may rewrite href; id remains so our listener still works -->
-          <a id="lnkEmail" href="mailto:Rev@PracticalFaith.net?subject=Inquiry for Practical Faith">
+          <a id="lnkEmail" href="/cdn-cgi/l/email-protection#510334271101233032253832303d17303825397f3f34256e2224333b3432256c183f202438232871373e237101233032253832303d711730382539">
             <img alt="Email Us" height="118" src="images/email2.png" width="156"/>
           </a>
         </div>
@@ -116,26 +189,46 @@
       </td>
     </tr>
 
+    <!-- Book Store + Bible Quiz row -->
     <tr>
-      <td colspan="2">
-        <a id="btnBookStore" class="book-store-button" href="books.htm">View Practical Faith Book Store</a>
+      <td align="center" valign="middle">
+        <div align="center">
+          <a id="btnBookStore" class="feature-link" href="books.htm">
+            <div style="height:148px;display:flex;align-items:center;justify-content:center;">
+              <img src="images/books.png" alt="Book Store" style="max-height:148px;width:auto;"/>
+            </div>
+            <span class="feature-label">Practical Faith Book Store</span>
+          </a>
+        </div>
+      </td>
+      <td align="center" valign="middle">
+        <div align="center">
+          <a id="lnkBibleQuiz" class="feature-link" href="https://practicalfaith.net//quiz_links.html">
+            <div style="height:148px;display:flex;align-items:center;justify-content:center;">
+              <img src="images/quiz_logo.png" alt="Bible Quiz Challenge" style="max-height:148px;width:auto;border-radius:16px;"/>
+            </div>
+            <span class="feature-label">Practical Faith Bible Quiz Challenge</span>
+          </a>
+        </div>
       </td>
     </tr>
+
   </table>
 
-  <!-- GA4 event bindings for key actions -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     function track(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
 
     document.addEventListener('DOMContentLoaded', function () {
       var bindings = [
-        ['btnBookStore',       'bookstore_click',       {event_category: 'engagement', event_label: 'Book Store Button'}],
-        ['lnkYouTubePlaylist', 'youtube_playlist_click',{event_category: 'engagement', event_label: 'YouTube Playlist'}],
-        ['lnkGooglePlay',      'app_click',             {event_category: 'engagement', store: 'Google Play'}],
-        ['lnkAppleApp',        'app_click',             {event_category: 'engagement', store: 'Apple App Store'}],
-        ['lnkSpotify',         'spotify_click',         {event_category: 'engagement', event_label: 'Spotify'}],
-        ['lnkEmail',           'email_click',           {event_category: 'engagement', event_label: 'Email Link'}],
-        ['lnkJotForm',         'topics_click',          {event_category: 'engagement', event_label: 'JotForm Topics'}],
+        ['btnBookStore',       'bookstore_click',        {event_category: 'engagement', event_label: 'Book Store Button'}],
+        ['lnkBibleQuiz',       'bible_quiz_click',       {event_category: 'engagement', event_label: 'Bible Quiz Challenge'}],
+        ['lnkYouTubePlaylist', 'youtube_playlist_click', {event_category: 'engagement', event_label: 'YouTube Playlist'}],
+        ['lnkGooglePlay',      'app_click',              {event_category: 'engagement', store: 'Google Play'}],
+        ['lnkAppleApp',        'app_click',              {event_category: 'engagement', store: 'Apple App Store'}],
+        ['lnkSpotify',         'spotify_click',          {event_category: 'engagement', event_label: 'Spotify'}],
+        ['lnkEmail',           'email_click',            {event_category: 'engagement', event_label: 'Email Link'}],
+        ['lnkJotForm',         'topics_click',           {event_category: 'engagement', event_label: 'JotForm Topics'}],
       ];
       bindings.forEach(function (row) {
         var el = document.getElementById(row[0]);
@@ -143,8 +236,5 @@
       });
     });
   </script>
-
-  <!-- Cloudflare email decode (keep as-is) -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
