@@ -11,209 +11,343 @@
   </script>
 
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Practical Faith</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-image: linear-gradient(to bottom, #ffec00, #fc9101);
-    }
-    .header { margin: 20px 0; }
-    .header img { max-width: 100%; height: auto; }
-    table {
-      width: 90%; max-width: 800px; margin: 20px auto; border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd; padding: 10px; cursor: pointer;
-      transition: background-color 0.3s; vertical-align: middle;
-    }
-    th { background-color: #4CAF50; color: white; }
-    td:hover { background-color: #f1f1f1; }
-    td img { max-width: 100%; height: auto; text-align: center; }
-    .responsive-iframe { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; }
-    .responsive-iframe iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    }
-    @media (max-width: 600px) { th, td { padding: 8px; } }
-    .Red { color: #AA0012; }
-    .red { color: #AA0012; }
 
-    /* Featured links row */
-    .feature-link {
-      display: inline-flex;
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: linear-gradient(160deg, #FFE800 0%, #FC8F00 100%);
+      min-height: 100vh;
+      padding-bottom: 48px;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      padding: 22px 16px 10px;
+      text-align: center;
+    }
+    .header img {
+      max-width: 100%;
+      max-height: 180px;
+      width: auto;
+      height: auto;
+    }
+
+    /* ── TAGLINE ── */
+    .tagline {
+      font-style: italic;
+      color: #7A3800;
+      font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+      text-align: center;
+      margin: 4px 16px 22px;
+      letter-spacing: 0.2px;
+    }
+
+    /* ── PAGE WRAPPER ── */
+    .pg {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 14px;
+    }
+
+    /* ── CARD BASE ── */
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(140, 60, 0, 0.18);
+      overflow: hidden;
+    }
+
+    /* ── CLICKABLE CARD ── */
+    .card-a {
+      display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-decoration: none;
-      color: #5b2d8e;
-      font-weight: bold;
-      font-size: 15px;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 12px;
-      transition: background-color 0.2s;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(140, 60, 0, 0.18);
+      padding: 26px 16px 20px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+      cursor: pointer;
     }
-    .feature-link:hover { background-color: rgba(91,45,142,0.08); }
-    .feature-link img { display: block; }
-    .feature-label {
+    .card-a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(140, 60, 0, 0.28);
+    }
+
+    /* ── CHIP LABELS ── */
+    .chip {
+      display: inline-block;
+      background: #7A3800;
+      color: #fff;
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    /* ── VIDEO CARD ── */
+    .video-cap {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #7A3800;
+      padding: 14px 20px 8px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 18px 18px 0 0;
+    }
+    .responsive-iframe {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    .responsive-iframe iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       display: block;
-      background: #5b2d8e;
-      color: #fff;
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.3px;
     }
-  .feature-link1 {      display: inline-flex;
+
+    /* ── 2-COLUMN GRID ── */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    /* ── BADGES CARD ── */
+    .badges-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(140, 60, 0, 0.18);
+      display: flex;
       flex-direction: column;
       align-items: center;
-      text-decoration: none;
-      color: #5b2d8e;
-      font-weight: bold;
-      font-size: 15px;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 12px;
-      transition: background-color 0.2s;
-}
-  .feature-label1 {      display: block;
-      background: #5b2d8e;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 16px;
+    }
+    .badges-card a {
+      display: block;
+      transition: transform 0.14s ease;
+    }
+    .badges-card a:hover { transform: scale(1.04); }
+    .badges-card img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+
+    /* ── ICON BOX ── */
+    .icon-box {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── CARD TITLE / SUB ── */
+    .card-title {
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      color: #7A3800;
+      font-weight: 700;
+      margin-top: 11px;
+      text-align: center;
+    }
+    .card-sub {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      color: #aaa;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    /* ── YOUTUBE LOGO BLOCK ── */
+    .yt-logo-block {
+      background: #FF0000;
+      border-radius: 14px;
+      width: 108px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .yt-play-btn {
+      width: 34px; height: 24px;
+      background: rgba(255,255,255,0.92);
+      border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .yt-play-btn::after {
+      content: '';
+      border-style: solid;
+      border-width: 7px 0 7px 14px;
+      border-color: transparent transparent transparent #FF0000;
+      margin-left: 3px;
+    }
+    .yt-wordmark {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
       color: #fff;
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.3px;
-}
-.feature-link2 {      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: #5b2d8e;
-      font-weight: bold;
-      font-size: 15px;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 12px;
-      transition: background-color 0.2s;
-}
-  .feature-label2 {      display: block;
-      background: #5b2d8e;
-      color: #fff;
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.3px;
-}
-.feature-link3 {      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: #5b2d8e;
-      font-weight: bold;
-      font-size: 15px;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 12px;
-      transition: background-color 0.2s;
-}
+      letter-spacing: 0.5px;
+    }
+
+    /* ── FEATURE IMAGES (books / quiz) ── */
+    .feature-img {
+      max-height: 120px;
+      width: auto;
+      display: block;
+    }
+    .quiz-img {
+      border-radius: 14px;
+    }
+
+    /* ── FOOTER ── */
+    .footer-note {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      color: rgba(80, 30, 0, 0.45);
+      margin-top: 26px;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      .grid2 { gap: 10px; }
+      .card-a { padding: 20px 10px 16px; }
+      .icon-box { width: 62px; height: 62px; }
+      .feature-img { max-height: 96px; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- BANNER -->
   <div class="header">
-    <img alt="Header Image" height="172" src="images/banner.png" width="707"/>
+    <img src="images/banner.png" alt="Practical Faith"/>
   </div>
 
-  <table>
-    <tr>
-      <td colspan="2">
-        <h2 align="center" class="red">Making the Bible Relevant for Today's Living</h2>
-        <div class="responsive-iframe">
-          <iframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            frameborder="0"
-            src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92"
-            title="YouTube Playlist">
-          </iframe>
-        </div>
-        <h2 align="center" class="Red">Current Video</h2>
-      </td>
-    </tr>
+  <p class="tagline">Making the Bible Relevant for Today's Living</p>
 
-    <tr>
-      <td width="44%">
-        <div align="center">
-          <h4>
-            <a id="lnkYouTubePlaylist" href="https://www.youtube.com/playlist?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92">
-              <img height="99" src="images/youtube 2.png" width="225" alt="YouTube Playlist"/>
-            </a>
-          </h4>
-        </div>
-      </td>
-      <td width="56%">
-        <div align="center">
-          <p>
-            <a id="lnkGooglePlay" href="https://play.google.com/store/apps/details?id=com.gappsy.dashboard.www.android5f1e272990b8c&pli=1">
-              <img height="48" src="images/google.png" width="225" alt="Get it on Google Play"/>
-            </a>
-            <a id="lnkAppleApp" href="https://apps.apple.com/us/app/practical-faith/id6737707537?platform=iphone">
-              <img height="48" src="images/apple.png" width="225" alt="Download on the App Store"/>
-            </a>
-            <a id="lnkSpotify" href="https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh">
-              <img height="48" src="images/spotify.png" width="225" alt="Listen on Spotify"/>
-            </a>
-          </p>
-        </div>
-      </td>
-    </tr>
+  <div class="pg">
 
-    <tr>
-      <td>
-        <div align="center">
-          <a id="lnkEmail" href="/cdn-cgi/l/email-protection#510334271101233032253832303d17303825397f3f34256e2224333b3432256c183f202438232871373e237101233032253832303d711730382539">
-            <img alt="Email Us" height="118" src="images/email2.png" width="156"/>
-          </a>
-        </div>
-      </td>
-      <td>
-        <div align="center">
-          <a id="lnkJotForm" href="https://form.jotform.com/242675311084151">
-            <img alt="JotForm Topics" height="99" src="images/topics.png" width="138"/>
-          </a>
-        </div>
-      </td>
-    </tr>
+    <!-- CURRENT VIDEO -->
+    <div class="card" style="margin-bottom:14px;">
+      <div class="video-cap">Current Teaching</div>
+      <div class="responsive-iframe">
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92"
+          title="Practical Faith – YouTube Playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
 
-    <!-- Book Store + Bible Quiz row -->
-    <tr>
-      <td align="center" valign="middle">
-        <div align="center">
-          <a id="btnBookStore" class="feature-link" href="books.htm">
-            <div style="height:148px;display:flex;align-items:center;justify-content:center;">
-              <img src="images/books.png" alt="Book Store" style="max-height:148px;width:auto;"/>
-            </div>
-            <span class="feature-label">Practical Faith Book Store</span>
-          </a>
-        </div>
-      </td>
-      <td align="center" valign="middle">
-        <div align="center">
-          <a id="lnkBibleQuiz" class="feature-link" href="https://practicalfaith.net//quiz_links.html">
-            <div style="height:148px;display:flex;align-items:center;justify-content:center;">
-              <img src="images/quiz_logo.png" alt="Bible Quiz Challenge" style="max-height:148px;width:auto;border-radius:16px;"/>
-            </div>
-            <span class="feature-label">Practical Faith Bible Quiz Challenge</span>
-          </a>
-        </div>
-      </td>
-    </tr>
+    <!-- ROW 1: YouTube Channel | App Badges -->
+    <div class="grid2">
 
-  </table>
+      <a id="lnkYouTubePlaylist" class="card-a"
+         href="https://www.youtube.com/playlist?list=PLtJBBM9LiLYlsqOPyOtcPiMSSL3IauC92">
+        <div class="yt-logo-block">
+          <div class="yt-play-btn"></div>
+          <div class="yt-wordmark">YouTube</div>
+        </div>
+        <div class="card-title">YouTube Channel</div>
+        <div class="card-sub">Full video playlist</div>
+      </a>
+
+      <div class="badges-card">
+        <a id="lnkGooglePlay"
+           href="https://play.google.com/store/apps/details?id=com.gappsy.dashboard.www.android5f1e272990b8c&pli=1">
+          <img src="images/google.png" alt="Get it on Google Play"/>
+        </a>
+        <a id="lnkAppleApp"
+           href="https://apps.apple.com/us/app/practical-faith/id6737707537?platform=iphone">
+          <img src="images/apple.png" alt="Download on the App Store"/>
+        </a>
+        <a id="lnkSpotify"
+           href="https://open.spotify.com/show/0cn7xr3CSJCFsvvYB9Hiuh">
+          <img src="images/spotify.png" alt="Listen on Spotify"/>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ROW 2: Email | Topics & Questions -->
+    <div class="grid2">
+
+      <a id="lnkEmail" class="card-a"
+         href="/cdn-cgi/l/email-protection#510334271101233032253832303d17303825397f3f34256e2224333b3432256c183f202438232871373e237101233032253832303d711730382539">
+        <div class="icon-box" style="background:#FC8F00;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="10" width="32" height="22" rx="5" fill="white"/>
+            <path d="M4 16l16 10 16-10" stroke="#FC8F00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card-title">Contact Us</div>
+        <div class="card-sub">Send us a message</div>
+      </a>
+
+      <a id="lnkJotForm" class="card-a"
+         href="https://form.jotform.com/242675311084151">
+        <div class="icon-box" style="background:#7A3800;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="7" y="3" width="22" height="28" rx="4" fill="white"/>
+            <line x1="12" y1="11" x2="24" y2="11" stroke="#7A3800" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="16" x2="24" y2="16" stroke="#7A3800" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="21" x2="19" y2="21" stroke="#7A3800" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="33" cy="33" r="7" fill="#FC8F00"/>
+            <text x="33" y="37.5" text-anchor="middle" font-size="11" fill="white" font-family="Georgia,serif" font-weight="bold">?</text>
+          </svg>
+        </div>
+        <div class="card-title">Topics &amp; Questions</div>
+        <div class="card-sub">Submit your topic</div>
+      </a>
+
+    </div>
+
+    <!-- ROW 3: Book Store | Bible Quiz -->
+    <div class="grid2">
+
+      <a id="btnBookStore" class="card-a" href="books.htm">
+        <img src="images/books.png" alt="Practical Faith Book Store" class="feature-img"/>
+        <span class="chip">Practical Faith Book Store</span>
+      </a>
+
+      <a id="lnkBibleQuiz" class="card-a"
+         href="https://practicalfaith.net/quiz_links.html">
+        <img src="images/quiz_logo.png" alt="Bible Quiz Challenge" class="feature-img quiz-img"/>
+        <span class="chip">Bible Quiz Challenge</span>
+      </a>
+
+    </div>
+
+    <p class="footer-note">Practical Faith Ministries &nbsp;&middot;&nbsp; practicalfaith.net</p>
+
+  </div>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
@@ -221,16 +355,16 @@
 
     document.addEventListener('DOMContentLoaded', function () {
       var bindings = [
-        ['btnBookStore',       'bookstore_click',        {event_category: 'engagement', event_label: 'Book Store Button'}],
-        ['lnkBibleQuiz',       'bible_quiz_click',       {event_category: 'engagement', event_label: 'Bible Quiz Challenge'}],
-        ['lnkYouTubePlaylist', 'youtube_playlist_click', {event_category: 'engagement', event_label: 'YouTube Playlist'}],
-        ['lnkGooglePlay',      'app_click',              {event_category: 'engagement', store: 'Google Play'}],
-        ['lnkAppleApp',        'app_click',              {event_category: 'engagement', store: 'Apple App Store'}],
-        ['lnkSpotify',         'spotify_click',          {event_category: 'engagement', event_label: 'Spotify'}],
-        ['lnkEmail',           'email_click',            {event_category: 'engagement', event_label: 'Email Link'}],
-        ['lnkJotForm',         'topics_click',           {event_category: 'engagement', event_label: 'JotForm Topics'}],
+        ['btnBookStore',       'bookstore_click',        {event_category:'engagement', event_label:'Book Store Button'}],
+        ['lnkBibleQuiz',       'bible_quiz_click',       {event_category:'engagement', event_label:'Bible Quiz Challenge'}],
+        ['lnkYouTubePlaylist', 'youtube_playlist_click', {event_category:'engagement', event_label:'YouTube Playlist'}],
+        ['lnkGooglePlay',      'app_click',              {event_category:'engagement', store:'Google Play'}],
+        ['lnkAppleApp',        'app_click',              {event_category:'engagement', store:'Apple App Store'}],
+        ['lnkSpotify',         'spotify_click',          {event_category:'engagement', event_label:'Spotify'}],
+        ['lnkEmail',           'email_click',            {event_category:'engagement', event_label:'Email Link'}],
+        ['lnkJotForm',         'topics_click',           {event_category:'engagement', event_label:'JotForm Topics'}],
       ];
-      bindings.forEach(function (row) {
+      bindings.forEach(function(row){
         var el = document.getElementById(row[0]);
         if (el) el.addEventListener('click', function(){ track(row[1], row[2]); });
       });
