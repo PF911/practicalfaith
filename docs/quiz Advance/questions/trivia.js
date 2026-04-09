@@ -2,482 +2,1231 @@ const triviaQuestions = [
 
   {
     id: 16001,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "What is the central difference between biblical covenant and a merely human contract?",
-    choices: [
-      "A covenant is always temporary",
-      "A covenant is initiated and bound up with divine promise and obligation",
-      "A covenant has no conditions",
-      "A contract is always spiritual"
-    ],
+    question: "Which tribe was set apart for priestly service rather than receiving a territorial inheritance?",
+    choices: ["Judah","Levi","Benjamin","Ephraim"],
     answer: 1,
-    reference: "Genesis 15; Exodus 24; Jeremiah 31",
-    verseText: "God binds Himself to His people."
+    reference: "Numbers 18:20-24; Joshua 13:33",
+    verseText: "The LORD is their inheritance."
   },
-
   {
     id: 16002,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Why is Abraham pivotal?",
-    choices: [
-      "First king",
-      "Covenant ancestor",
-      "Wrote law",
-      "Led Exodus"
-    ],
+    question: "What covenant sign was given to Abraham and his descendants?",
+    choices: ["Passover","Circumcision","Sabbath","Tithing"],
     answer: 1,
-    reference: "Genesis 12",
-    verseText: "All nations blessed."
+    reference: "Genesis 17:10-11",
+    verseText: "Every male shall be circumcised."
   },
-
   {
     id: 16003,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Exodus establishes?",
-    choices: [
-      "Politics",
-      "Redemption first",
-      "Independence",
-      "Rejection"
-    ],
-    answer: 1,
-    reference: "Exodus 20",
-    verseText: "Delivered first."
+    question: "Who led Israel into Canaan after Moses?",
+    choices: ["Aaron","Caleb","Joshua","Eleazar"],
+    answer: 2,
+    reference: "Joshua 1:1-2",
+    verseText: "Moses is dead… arise, Joshua."
   },
-
   {
     id: 16004,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Law not start of salvation?",
-    choices: [
-      "Earned",
-      "Redeemed first",
-      "No purpose",
-      "Rejected"
-    ],
+    question: "Which judge made a vow that led to tragedy involving his daughter?",
+    choices: ["Gideon","Jephthah","Samson","Ehud"],
     answer: 1,
-    reference: "Exodus 20",
-    verseText: "Deliverer first."
+    reference: "Judges 11:30-40",
+    verseText: "Jephthah vowed a vow."
   },
-
   {
     id: 16005,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Sacrificial system?",
-    choices: [
-      "Impress nations",
-      "Atonement",
-      "Replace prayer",
-      "Politics"
-    ],
+    question: "What was unusual about Ehud?",
+    choices: ["Blind","Left-handed","Priest","Nazirite"],
     answer: 1,
-    reference: "Leviticus 17",
-    verseText: "Blood atonement."
+    reference: "Judges 3:15",
+    verseText: "A man lefthanded."
   },
 
   {
     id: 16006,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "David covenant?",
-    choices: [
-      "Peace now",
-      "Messianic line",
-      "Replace Abraham",
-      "End prophecy"
-    ],
+    question: "Which prophet rebuked David over Bathsheba?",
+    choices: ["Gad","Nathan","Samuel","Ahijah"],
     answer: 1,
-    reference: "2 Samuel 7",
-    verseText: "Throne forever."
+    reference: "2 Samuel 12",
+    verseText: "The LORD sent Nathan."
   },
-
   {
     id: 16007,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Judges cycle?",
-    choices: [
-      "Brilliance",
-      "Instability",
-      "Prayer useless",
-      "Land failed"
-    ],
+    question: "Who was Samuel’s mother?",
+    choices: ["Abigail","Hannah","Michal","Naomi"],
     answer: 1,
-    reference: "Judges",
-    verseText: "Right in own eyes."
+    reference: "1 Samuel 1:20",
+    verseText: "She named him Samuel."
   },
-
   {
     id: 16008,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Exile meaning?",
-    choices: [
-      "Random",
-      "Judgment",
-      "End God",
-      "No prophecy"
-    ],
+    question: "Which king was struck with leprosy for burning incense?",
+    choices: ["Hezekiah","Uzziah","Josiah","Jehoshaphat"],
     answer: 1,
-    reference: "2 Kings",
-    verseText: "Judgment fulfilled."
+    reference: "2 Chronicles 26",
+    verseText: "Leprosy rose on his forehead."
   },
-
   {
     id: 16009,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Prophets role?",
-    choices: [
-      "New religion",
-      "Call back",
-      "Replace priests",
-      "Reject Moses"
-    ],
-    answer: 1,
-    reference: "Jeremiah",
-    verseText: "Return to God."
+    question: "What floated after Elisha threw in a stick?",
+    choices: ["Stone","Scroll","Axe head","Spear"],
+    answer: 2,
+    reference: "2 Kings 6",
+    verseText: "The iron did swim."
   },
-
   {
     id: 16010,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "New covenant?",
-    choices: [
-      "End Israel",
-      "Law in heart",
-      "No holiness",
-      "Break past"
-    ],
+    question: "Who was healed of leprosy after washing in the Jordan?",
+    choices: ["Ben-hadad","Naaman","Nebuchadnezzar","Haman"],
     answer: 1,
-    reference: "Jeremiah 31",
-    verseText: "Law within."
+    reference: "2 Kings 5",
+    verseText: "He dipped seven times."
   },
 
   {
     id: 16011,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Son of Man?",
-    choices: [
-      "Human only",
-      "Daniel fulfillment",
-      "Prophet only",
-      "Reject Messiah"
-    ],
-    answer: 1,
-    reference: "Daniel 7",
-    verseText: "Authority."
+    question: "Who challenged the prophets of Baal on Mount Carmel?",
+    choices: ["Elisha","Isaiah","Elijah","Micaiah"],
+    answer: 2,
+    reference: "1 Kings 18",
+    verseText: "The God who answers by fire."
   },
-
   {
     id: 16012,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Baptism?",
-    choices: [
-      "Needed repentance",
-      "Identify mission",
-      "Replace cross",
-      "Example only"
-    ],
-    answer: 1,
-    reference: "Matthew 3",
-    verseText: "Fulfill righteousness."
+    question: "What did Solomon request from God?",
+    choices: ["Long life","Victory","Wisdom","Wealth"],
+    answer: 2,
+    reference: "1 Kings 3",
+    verseText: "An understanding heart."
   },
-
   {
     id: 16013,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Forgive sins?",
-    choices: [
-      "Kindness",
-      "Divine authority",
-      "Rome approved",
-      "Abolish faith"
-    ],
+    question: "Who discovered the Book of the Law in Josiah’s reign?",
+    choices: ["Jeremiah","Hilkiah","Shaphan","Zephaniah"],
     answer: 1,
-    reference: "Mark 2",
-    verseText: "God alone forgives."
+    reference: "2 Kings 22:8",
+    verseText: "I have found the book."
   },
-
   {
     id: 16014,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Resurrection?",
-    choices: [
-      "Later",
-      "Central gospel",
-      "Less important",
-      "Replace cross"
-    ],
-    answer: 1,
-    reference: "1 Corinthians 15",
-    verseText: "Faith vain otherwise."
+    question: "Which prophet was taken to heaven in a whirlwind?",
+    choices: ["Elijah","Elisha","Isaiah","Ezekiel"],
+    answer: 0,
+    reference: "2 Kings 2:11",
+    verseText: "Elijah went up."
   },
-
   {
     id: 16015,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Pentecost?",
-    choices: [
-      "Old covenant",
-      "Spirit poured",
-      "Replace Christ",
-      "End mission"
-    ],
+    question: "Who interpreted Pharaoh’s dreams?",
+    choices: ["Moses","Joseph","Daniel","Aaron"],
     answer: 1,
-    reference: "Acts 2",
-    verseText: "Spirit given."
+    reference: "Genesis 41",
+    verseText: "God revealed what He will do."
   },
 
   {
     id: 16016,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Acts 15?",
-    choices: [
-      "Gentile law issue",
-      "Pick Gospel",
-      "End OT",
-      "Send Paul"
-    ],
-    answer: 0,
-    reference: "Acts 15",
-    verseText: "No burden."
+    question: "Who climbed a sycamore tree to see Jesus?",
+    choices: ["Levi","Zacchaeus","Bartimaeus","Nicodemus"],
+    answer: 1,
+    reference: "Luke 19",
+    verseText: "He climbed a tree."
   },
-
   {
     id: 16017,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Justification?",
-    choices: [
-      "Works gone",
-      "Declared righteous",
-      "No obedience",
-      "Idea only"
-    ],
-    answer: 1,
-    reference: "Romans 5",
-    verseText: "Justified by faith."
+    question: "Which disciple was a tax collector?",
+    choices: ["Matthew","Thomas","Simon","Philip"],
+    answer: 0,
+    reference: "Matthew 9:9",
+    verseText: "At the tax booth."
   },
-
   {
     id: 16018,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Adam vs Christ?",
-    choices: [
-      "Prophets",
-      "Two heads",
-      "No fall",
-      "Symbol only"
-    ],
+    question: "Who said, 'Can anything good come out of Nazareth?'",
+    choices: ["Thomas","Nathanael","Andrew","Philip"],
     answer: 1,
-    reference: "Romans 5",
-    verseText: "Life vs death."
+    reference: "John 1:46",
+    verseText: "Can anything good?"
   },
-
   {
     id: 16019,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Bible pattern?",
-    choices: [
-      "Random",
-      "Redemption story",
-      "No link",
-      "Law then grace"
-    ],
+    question: "Who came to Jesus by night?",
+    choices: ["Gamaliel","Nicodemus","Caiaphas","Herod"],
     answer: 1,
-    reference: "Genesis–Revelation",
-    verseText: "Unified."
+    reference: "John 3",
+    verseText: "By night."
   },
-
   {
     id: 16020,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Weakness of facts only?",
-    choices: [
-      "Easier",
-      "Miss unity",
-      "Better doctrine",
-      "No confusion"
-    ],
+    question: "Who died for lying about money in Acts?",
+    choices: ["Peter & John","Ananias & Sapphira","Barnabas","Jason"],
     answer: 1,
-    reference: "Luke 24",
-    verseText: "All Scripture."
+    reference: "Acts 5",
+    verseText: "You lied to God."
   },
 
   {
     id: 16021,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Justification vs sanctification?",
-    choices: [
-      "Gradual vs instant",
-      "Legal vs process",
-      "Same",
-      "Replace"
-    ],
+    question: "Who was the first martyr in Acts?",
+    choices: ["Philip","Stephen","Nicanor","Prochorus"],
     answer: 1,
-    reference: "Romans 5",
-    verseText: "Declared vs transformed."
+    reference: "Acts 7",
+    verseText: "They stoned Stephen."
   },
-
   {
     id: 16022,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Image of God?",
-    choices: [
-      "Looks",
-      "Dignity",
-      "Limits",
-      "Nation"
-    ],
-    answer: 1,
-    reference: "Genesis 1",
-    verseText: "Image."
+    question: "Who baptized the Ethiopian eunuch?",
+    choices: ["Peter","Stephen","Philip","Barnabas"],
+    answer: 2,
+    reference: "Acts 8",
+    verseText: "Philip preached Christ."
   },
-
   {
     id: 16023,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Passover?",
-    choices: [
-      "Farming",
-      "Substitution",
-      "Identity",
-      "Politics"
-    ],
+    question: "Who was Lydia?",
+    choices: ["Tentmaker","Seller of purple","Widow","Prophetess"],
     answer: 1,
-    reference: "Exodus 12",
-    verseText: "Blood."
+    reference: "Acts 16",
+    verseText: "Seller of purple."
   },
-
   {
     id: 16024,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Kingdom of God?",
-    choices: [
-      "Place",
-      "Reign",
-      "Replace Israel",
-      "End law"
-    ],
-    answer: 1,
-    reference: "Mark 1",
-    verseText: "At hand."
+    question: "Who fell from a window while Paul preached?",
+    choices: ["Silas","Trophimus","Eutychus","Timothy"],
+    answer: 2,
+    reference: "Acts 20",
+    verseText: "Eutychus fell."
   },
-
   {
     id: 16025,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "New birth?",
-    choices: [
-      "Physical",
-      "Spiritual",
-      "Moral",
-      "Culture"
-    ],
-    answer: 1,
-    reference: "John 3",
-    verseText: "Born again."
+    question: "Where was Paul shipwrecked?",
+    choices: ["Crete","Cyprus","Patmos","Melita"],
+    answer: 3,
+    reference: "Acts 28",
+    verseText: "Island of Melita."
   },
 
   {
     id: 16026,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Cross?",
-    choices: [
-      "Symbol",
-      "Atonement",
-      "Replace resurrection",
-      "Optional"
-    ],
+    question: "Who was the first high priest of Israel?",
+    choices: ["Moses","Aaron","Eleazar","Phinehas"],
     answer: 1,
-    reference: "Colossians 1",
-    verseText: "Peace by blood."
+    reference: "Exodus 28",
+    verseText: "Aaron shall minister."
   },
-
   {
     id: 16027,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Gospel?",
-    choices: [
-      "Law",
-      "Good news",
-      "Commands",
-      "Prophecy"
-    ],
-    answer: 1,
-    reference: "Romans 1",
-    verseText: "Power of God."
+    question: "What was manna described as?",
+    choices: ["Bread from heaven","Fish","Oil","Fruit"],
+    answer: 0,
+    reference: "Exodus 16",
+    verseText: "Bread from heaven."
   },
-
   {
     id: 16028,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Resurrection needed?",
-    choices: [
-      "Optional",
-      "Defeats death",
-      "Replace teaching",
-      "Comfort only"
-    ],
+    question: "Who saw a ladder reaching to heaven?",
+    choices: ["Isaac","Jacob","Joseph","Moses"],
     answer: 1,
-    reference: "1 Corinthians 15",
-    verseText: "Faith vain."
+    reference: "Genesis 28",
+    verseText: "A ladder set on earth."
   },
-
   {
     id: 16029,
-    game: "General Bible Trivia",
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Day of the Lord?",
-    choices: [
-      "Festival",
-      "Judgment/salvation",
-      "Sabbath",
-      "Holiday"
-    ],
+    question: "Who wrestled with God?",
+    choices: ["Abraham","Jacob","Moses","Joshua"],
     answer: 1,
-    reference: "Joel",
-    verseText: "Day comes."
+    reference: "Genesis 32",
+    verseText: "He wrestled until daybreak."
+  },
+  {
+    id: 16030,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What did God create on the first day?",
+    choices: ["Sun","Light","Animals","Man"],
+    answer: 1,
+    reference: "Genesis 1:3",
+    verseText: "Let there be light."
+  },
+
+ {
+  id: 16031,
+  game: "Trivia",
+  testament: "Old Testament",
+  category: "General Bible",
+  difficulty: "Advanced",
+  question: "In Genesis 6–9, what is the primary theological significance of the ark?",
+  choices: [
+    "A demonstration of ancient shipbuilding skill",
+    "A means of preserving animal species only",
+    "God’s provision of salvation through judgment",
+    "A symbol of human cooperation with nature"
+  ],
+  answer: 2,
+  reference: "Genesis 6–9",
+  verseText: "The ark functioned as the means of deliverance through divine judgment."
+},
+  {
+    id: 16032,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What bird returned with an olive leaf?",
+    choices: ["Raven","Dove","Eagle","Sparrow"],
+    answer: 1,
+    reference: "Genesis 8",
+    verseText: "Olive leaf."
+  },
+  {
+    id: 16033,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was sold by his brothers?",
+    choices: ["Isaac","Joseph","Jacob","Esau"],
+    answer: 1,
+    reference: "Genesis 37",
+    verseText: "Sold for silver."
+  },
+  {
+    id: 16034,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What did Moses strike to bring water?",
+    choices: ["Tree","Rock","Sand","Ground"],
+    answer: 1,
+    reference: "Exodus 17",
+    verseText: "Water from rock."
+  },
+  {
+    id: 16035,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What mountain did Moses receive the law on?",
+    choices: ["Zion","Sinai","Horeb","Carmel"],
+    answer: 1,
+    reference: "Exodus 19",
+    verseText: "Mount Sinai."
   },
 
   {
-    id: 16030,
-    game: "General Bible Trivia",
+    id: 16036,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
     difficulty: "Advanced",
-    question: "Goal of redemption?",
-    choices: [
-      "Success",
-      "Restoration",
-      "Politics",
-      "Morality"
-    ],
+    question: "Who led Israel across the Jordan River?",
+    choices: ["Moses","Aaron","Joshua","Caleb"],
+    answer: 2,
+    reference: "Joshua 3",
+    verseText: "Crossed on dry ground."
+  },
+  {
+    id: 16037,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What fell at Jericho?",
+    choices: ["Temple","Walls","Tower","Gate"],
     answer: 1,
-    reference: "Revelation 21",
-    verseText: "God with man."
+    reference: "Joshua 6",
+    verseText: "Walls fell down."
+  },
+  {
+    id: 16038,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was known for great strength?",
+    choices: ["David","Samson","Gideon","Saul"],
+    answer: 1,
+    reference: "Judges 16",
+    verseText: "Strength left him."
+  },
+  {
+    id: 16039,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who killed Goliath?",
+    choices: ["Saul","David","Jonathan","Samuel"],
+    answer: 1,
+    reference: "1 Samuel 17",
+    verseText: "David slew Goliath."
+  },
+  {
+    id: 16040,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was the first king of Israel?",
+    choices: ["David","Saul","Solomon","Samuel"],
+    answer: 1,
+    reference: "1 Samuel 10",
+    verseText: "Saul king."
+  },
+
+  {
+    id: 16041,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who built the temple?",
+    choices: ["David","Solomon","Saul","Hezekiah"],
+    answer: 1,
+    reference: "1 Kings 6",
+    verseText: "Solomon built."
+  },
+  {
+    id: 16042,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who wrote many Psalms?",
+    choices: ["Solomon","David","Moses","Asaph"],
+    answer: 1,
+    reference: "Psalms",
+    verseText: "Psalm of David."
+  },
+  {
+    id: 16043,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was thrown into a lions' den?",
+    choices: ["Daniel","Joseph","Jeremiah","Isaiah"],
+    answer: 0,
+    reference: "Daniel 6",
+    verseText: "Lions' den."
+  },
+  {
+    id: 16044,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was thrown into a fiery furnace?",
+    choices: ["Daniel","Shadrach","Ezekiel","Nehemiah"],
+    answer: 1,
+    reference: "Daniel 3",
+    verseText: "Fiery furnace."
+  },
+  {
+    id: 16045,
+    game: "Trivia",
+    testament: "Old Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who rebuilt Jerusalem’s walls?",
+    choices: ["Ezra","Nehemiah","Zerubbabel","Haggai"],
+    answer: 1,
+    reference: "Nehemiah",
+    verseText: "Walls rebuilt."
+  },
+
+  {
+    id: 16046,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who baptized Jesus?",
+    choices: ["Peter","John the Baptist","James","Andrew"],
+    answer: 1,
+    reference: "Matthew 3",
+    verseText: "Baptized Jesus."
+  },
+  {
+    id: 16047,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Where was Jesus born?",
+    choices: ["Nazareth","Jerusalem","Bethlehem","Galilee"],
+    answer: 2,
+    reference: "Luke 2",
+    verseText: "Bethlehem."
+  },
+  {
+    id: 16048,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who betrayed Jesus?",
+    choices: ["Peter","Judas","Thomas","John"],
+    answer: 1,
+    reference: "Matthew 26",
+    verseText: "Judas betrayed."
+  },
+  {
+    id: 16049,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who denied Jesus three times?",
+    choices: ["John","Peter","James","Andrew"],
+    answer: 1,
+    reference: "Luke 22",
+    verseText: "Peter denied."
+  },
+  {
+    id: 16050,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who wrote Revelation?",
+    choices: ["Paul","Peter","John","James"],
+    answer: 2,
+    reference: "Revelation 1",
+    verseText: "John wrote."
+  },
+
+  {
+    id: 16051,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Where was Jesus crucified?",
+    choices: ["Nazareth","Golgotha","Bethany","Jericho"],
+    answer: 1,
+    reference: "John 19",
+    verseText: "Place of a skull."
+  },
+  {
+    id: 16052,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who rolled away the stone?",
+    choices: ["Soldiers","Angel","Peter","Mary"],
+    answer: 1,
+    reference: "Matthew 28",
+    verseText: "Angel rolled stone."
+  },
+  {
+    id: 16053,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who saw Jesus first after resurrection?",
+    choices: ["Peter","Mary Magdalene","John","Thomas"],
+    answer: 1,
+    reference: "John 20",
+    verseText: "Mary saw Jesus."
+  },
+  {
+    id: 16054,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What day was Pentecost?",
+    choices: ["50th day","7th day","1st day","30th day"],
+    answer: 0,
+    reference: "Acts 2",
+    verseText: "Day of Pentecost."
+  },
+  {
+    id: 16055,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was converted on the road to Damascus?",
+    choices: ["Peter","Paul","James","Stephen"],
+    answer: 1,
+    reference: "Acts 9",
+    verseText: "Saul converted."
+  },
+
+  {
+    id: 16056,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What was Paul's original name?",
+    choices: ["Saul","Silas","Titus","Barnabas"],
+    answer: 0,
+    reference: "Acts 9",
+    verseText: "Saul."
+  },
+  {
+    id: 16057,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who wrote Romans?",
+    choices: ["Peter","Paul","John","James"],
+    answer: 1,
+    reference: "Romans 1:1",
+    verseText: "Paul wrote."
+  },
+  {
+    id: 16058,
+    game: "Trivia",
+    testament: "New Testament",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the last book of the Bible?",
+    choices: ["Jude","Hebrews","Revelation","Acts"],
+    answer: 2,
+    reference: "Revelation",
+    verseText: "Last book."
+  },
+  {
+    id: 16059,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the first book of the Bible?",
+    choices: ["Exodus","Genesis","Leviticus","Numbers"],
+    answer: 1,
+    reference: "Genesis",
+    verseText: "Beginning."
+  },
+  {
+    id: 16060,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "How many books are in the Bible (Protestant)?",
+    choices: ["66","70","72","39"],
+    answer: 0,
+    reference: "Bible Canon",
+    verseText: "66 books."
+  },
+
+  {
+    id: 16061,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the longest book in the Bible?",
+    choices: ["Isaiah","Psalms","Genesis","Jeremiah"],
+    answer: 1,
+    reference: "Psalms",
+    verseText: "Longest book."
+  },
+  {
+    id: 16062,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the shortest verse?",
+    choices: ["John 11:35","Psalm 23:1","Genesis 1:1","Luke 2:1"],
+    answer: 0,
+    reference: "John 11:35",
+    verseText: "Jesus wept."
+  },
+  {
+    id: 16063,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is called the father of faith?",
+    choices: ["Moses","Abraham","David","Jacob"],
+    answer: 1,
+    reference: "Romans 4",
+    verseText: "Abraham."
+  },
+  {
+    id: 16064,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the last word of the Bible?",
+    choices: ["Amen","Grace","Peace","Jesus"],
+    answer: 0,
+    reference: "Revelation 22:21",
+    verseText: "Amen."
+  },
+  {
+    id: 16065,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is the Alpha and Omega?",
+    choices: ["Moses","Jesus","David","Paul"],
+    answer: 1,
+    reference: "Revelation 22:13",
+    verseText: "Alpha and Omega."
+  },
+
+  {
+    id: 16066,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the greatest commandment?",
+    choices: ["Love God","Love neighbor","Pray","Give"],
+    answer: 0,
+    reference: "Matthew 22:37",
+    verseText: "Love the Lord."
+  },
+  {
+    id: 16067,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the second commandment?",
+    choices: ["Pray","Love neighbor","Give","Fast"],
+    answer: 1,
+    reference: "Matthew 22:39",
+    verseText: "Love neighbor."
+  },
+  {
+    id: 16068,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is the Good Shepherd?",
+    choices: ["David","Moses","Jesus","Peter"],
+    answer: 2,
+    reference: "John 10:11",
+    verseText: "Good Shepherd."
+  },
+  {
+    id: 16069,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is the Word?",
+    choices: ["Paul","Jesus","John","Peter"],
+    answer: 1,
+    reference: "John 1:1",
+    verseText: "Word was God."
+  },
+  {
+    id: 16070,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is salvation by?",
+    choices: ["Works","Faith","Law","Effort"],
+    answer: 1,
+    reference: "Ephesians 2:8",
+    verseText: "Saved by grace."
+  },
+
+  {
+    id: 16071,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the wages of sin?",
+    choices: ["Life","Death","Grace","Faith"],
+    answer: 1,
+    reference: "Romans 6:23",
+    verseText: "Death."
+  },
+  {
+    id: 16072,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the gift of God?",
+    choices: ["Law","Life","Grace","Truth"],
+    answer: 1,
+    reference: "Romans 6:23",
+    verseText: "Eternal life."
+  },
+  {
+    id: 16073,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is the Light of the world?",
+    choices: ["Moses","Jesus","John","Peter"],
+    answer: 1,
+    reference: "John 8:12",
+    verseText: "Light of world."
+  },
+  {
+    id: 16074,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is the way, truth, and life?",
+    choices: ["Paul","Jesus","Peter","David"],
+    answer: 1,
+    reference: "John 14:6",
+    verseText: "The way."
+  },
+  {
+    id: 16075,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is faith?",
+    choices: ["Sight","Hope","Belief","Trust"],
+    answer: 3,
+    reference: "Hebrews 11:1",
+    verseText: "Substance of things hoped."
+  },
+
+  {
+    id: 16076,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What did Jesus calm?",
+    choices: ["Storm","Fire","Earth","Crowd"],
+    answer: 0,
+    reference: "Mark 4",
+    verseText: "Peace be still."
+  },
+  {
+    id: 16077,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What did Jesus feed 5000 with?",
+    choices: ["Bread","Fish","Loaves & fish","Wine"],
+    answer: 2,
+    reference: "Matthew 14",
+    verseText: "Loaves and fish."
+  },
+  {
+    id: 16078,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who walked on water?",
+    choices: ["Peter","John","James","Paul"],
+    answer: 0,
+    reference: "Matthew 14",
+    verseText: "Peter walked."
+  },
+  {
+    id: 16079,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who was raised from the dead?",
+    choices: ["Lazarus","Moses","David","Elijah"],
+    answer: 0,
+    reference: "John 11",
+    verseText: "Lazarus."
+  },
+  {
+    id: 16080,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the Great Commission?",
+    choices: ["Teach","Go & make disciples","Pray","Worship"],
+    answer: 1,
+    reference: "Matthew 28:19",
+    verseText: "Make disciples."
+  },
+
+  {
+    id: 16081,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the fruit of the Spirit?",
+    choices: ["Law","Works","Fruit","Love"],
+    answer: 3,
+    reference: "Galatians 5",
+    verseText: "Fruit of Spirit."
+  },
+  {
+    id: 16082,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the greatest virtue?",
+    choices: ["Hope","Faith","Love","Peace"],
+    answer: 2,
+    reference: "1 Corinthians 13",
+    verseText: "Greatest is love."
+  },
+  {
+    id: 16083,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the beginning of wisdom?",
+    choices: ["Knowledge","Fear of Lord","Law","Truth"],
+    answer: 1,
+    reference: "Proverbs 9:10",
+    verseText: "Fear of Lord."
+  },
+  {
+    id: 16084,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who is our mediator?",
+    choices: ["Moses","Jesus","Aaron","David"],
+    answer: 1,
+    reference: "1 Timothy 2:5",
+    verseText: "One mediator."
+  },
+  {
+    id: 16085,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is eternal life?",
+    choices: ["Heaven","Knowing God","Faith","Works"],
+    answer: 1,
+    reference: "John 17:3",
+    verseText: "Know God."
+  },
+
+  {
+    id: 16086,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What destroys faith?",
+    choices: ["Sin","Doubt","Fear","Pride"],
+    answer: 1,
+    reference: "James 1",
+    verseText: "Doubting."
+  },
+  {
+    id: 16087,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What builds faith?",
+    choices: ["Works","Hearing Word","Prayer","Giving"],
+    answer: 1,
+    reference: "Romans 10:17",
+    verseText: "Faith comes by hearing."
+  },
+  {
+    id: 16088,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is truth?",
+    choices: ["Law","Word","God","Spirit"],
+    answer: 1,
+    reference: "John 17:17",
+    verseText: "Word is truth."
+  },
+  {
+    id: 16089,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who sanctifies?",
+    choices: ["Law","Spirit","Works","Faith"],
+    answer: 1,
+    reference: "2 Thessalonians 2:13",
+    verseText: "Sanctification of Spirit."
+  },
+  {
+    id: 16090,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who glorifies?",
+    choices: ["Man","God","Spirit","Law"],
+    answer: 1,
+    reference: "Romans 8:30",
+    verseText: "Glorified."
+  },
+
+  {
+    id: 16091,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is hope?",
+    choices: ["Wish","Promise","Expectation","Faith"],
+    answer: 2,
+    reference: "Romans 8:24",
+    verseText: "Hope."
+  },
+  {
+    id: 16092,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is grace?",
+    choices: ["Law","Gift","Work","Faith"],
+    answer: 1,
+    reference: "Ephesians 2:8",
+    verseText: "Gift of God."
+  },
+  {
+    id: 16093,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who justifies?",
+    choices: ["Law","God","Works","Faith"],
+    answer: 1,
+    reference: "Romans 3:26",
+    verseText: "God justifies."
+  },
+  {
+    id: 16094,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is righteousness?",
+    choices: ["Law","Faith","Works","God"],
+    answer: 1,
+    reference: "Romans 1:17",
+    verseText: "Righteous by faith."
+  },
+  {
+    id: 16095,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "Who saves?",
+    choices: ["Man","Law","Jesus","Works"],
+    answer: 2,
+    reference: "Acts 4:12",
+    verseText: "No other name."
+  },
+
+  {
+    id: 16096,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What unifies the entire Bible?",
+    choices: ["Law","Kings","Redemption","Temple"],
+    answer: 2,
+    reference: "Luke 24:27",
+    verseText: "All Scripture speaks of Christ."
+  },
+  {
+    id: 16097,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What connects both Testaments?",
+    choices: ["Geography","Language","Fulfillment","Culture"],
+    answer: 2,
+    reference: "Matthew 5:17",
+    verseText: "I came to fulfill."
+  },
+  {
+    id: 16098,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is Scripture revealing overall?",
+    choices: ["History","Law","God’s plan","War"],
+    answer: 2,
+    reference: "Ephesians 1:10",
+    verseText: "All in Christ."
+  },
+  {
+    id: 16099,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "What is the final goal of the Bible?",
+    choices: ["Temple","Kingdom","God with His people","Israel"],
+    answer: 2,
+    reference: "Revelation 21:3",
+    verseText: "God with them."
+  },
+  {
+    id: 16100,
+    game: "Trivia",
+    testament: "Both",
+    category: "General Bible",
+    difficulty: "Advanced",
+    question: "How should Scripture be understood?",
+    choices: ["Separate","Random","Unified","Law only"],
+    answer: 2,
+    reference: "Luke 24:44",
+    verseText: "All fulfilled."
   }
 
 ];
+
+if (typeof window !== "undefined") {
+  window.triviaQuestions = triviaQuestions;
+}

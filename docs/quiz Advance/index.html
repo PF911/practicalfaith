@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Practical Faith Bible Quiz: Advanced</title>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--purple:#6b2fbd;--blue:#3f6fb4;--orange1:#ffcf6e;--orange2:#f39a3e;--orange3:#e98026;--green:#3e9b4f;--red:#c84545;--cream:#f4eee4;}
 *{box-sizing:border-box}
@@ -20,9 +20,9 @@ body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gr
 .level-note{color:var(--purple);font-size:18px;font-weight:700;margin:8px 0 14px;}
 
 /* ── Buttons ─────────────────────────────────────────────────────────────── */
-.primary-btn{background:var(--blue);color:white;border:none;font-family:'Fredoka One',Arial,sans-serif;font-size:22px;padding:18px 28px;border-radius:40px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.2);margin-top:4px;}
-.secondary-btn{display:block;background:#eee;color:var(--purple);border:3px solid var(--purple);font-family:'Fredoka One',Arial,sans-serif;font-size:18px;padding:14px 22px;border-radius:30px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin:12px auto 0;}
-.reset-btn{display:block;background:#ffffff;color:#a33;border:3px solid #a33;font-family:'Fredoka One',Arial,sans-serif;font-size:18px;padding:14px 22px;border-radius:30px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin:12px auto 0;}
+.primary-btn{background:var(--purple);color:white;border:none;font-family:'Nunito',Arial,sans-serif;font-size:20px;font-weight:800;padding:18px 28px;border-radius:40px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.2);margin-top:4px;}
+.secondary-btn{display:block;background:#eee;color:var(--purple);border:3px solid var(--purple);font-family:'Nunito',Arial,sans-serif;font-size:17px;font-weight:800;padding:14px 22px;border-radius:30px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin:12px auto 0;}
+.reset-btn{display:block;background:#ffffff;color:#a33;border:3px solid #a33;font-family:'Nunito',Arial,sans-serif;font-size:18px;font-weight:800;padding:14px 22px;border-radius:30px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin:12px auto 0;}
 .reset-btn:hover{background:#fff3f3;}
 .small-btn{flex:1;padding:10px 18px;min-height:50px;border-radius:16px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-weight:bold;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
 .menu-btn{width:90%;max-width:350px;margin:12px auto;padding:18px;border-radius:18px;border:3px solid var(--purple);background:#eee;font-size:20px;font-weight:bold;color:var(--purple);display:flex;align-items:center;justify-content:flex-start;gap:14px;cursor:pointer;}
@@ -33,7 +33,44 @@ body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gr
 .screen{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;max-width:430px;margin:0 auto;padding:28px 20px 20px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;}
 .screen.active{display:block;animation:screenFadeIn .3s ease;}
 @keyframes screenFadeIn{from{opacity:0;}to{opacity:1;}}
-#splash{background:url('Splash.jpg') center top / cover no-repeat;}
+#splash{
+  background:url('images/splash.png') center center / cover no-repeat;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  max-width:430px;
+  margin:0 auto;
+  padding:0;
+  overflow:hidden;
+}
+#splash .title,
+#splash .subtitle,
+#splash .subline,
+#splash .hero,
+#splash #resumeBtn,
+#splash #resumeNote,
+#splash #resetBtn {
+  display:none !important;
+}
+#splash #startBtn{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:6.3%;
+  width:58%;
+  height:9%;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  font-size:0;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+}
+
 
 /* ── Layout helpers ───────────────────────────────────────────────────────── */
 .hero{margin-top:10px;display:flex;justify-content:center;}
@@ -217,19 +254,13 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 <div class="app">
 
 <section id="splash" class="screen active">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
-  <div class="subtitle">Advanced Edition</div>
-  <div class="subline">Difficult Questions for Serious Study</div>
-  <div class="hero"><img src="images/splash.png" alt="Splash"></div>
-  <button id="startBtn" class="primary-btn">Start Quiz</button>
-  <button id="resumeBtn" class="secondary-btn" style="display:none;">▶ Resume Last Quiz</button>
-  <div id="resumeNote" class="resume-note" style="display:none;"></div>
-  <button id="resetBtn" class="reset-btn" style="display:none;" onclick="confirmReset()">🗑 Reset and Start Fresh</button>
+  <button id="startBtn" class="primary-btn" aria-label="Begin">Begin</button>
 </section>
 
 <section id="menu" class="screen">
   <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
   <div class="subtitle">Choose Your Challenge</div>
+
   <button class="menu-btn" onclick="startDailyChallenge()">📅 <span>Daily Challenge</span></button>
 
   <button class="menu-btn" onclick="currentCategory='Is It Accurate?'; selectLevel('Advanced')">🧠 <span>Is It Accurate?</span></button>
@@ -241,8 +272,9 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   <button class="menu-btn" onclick="currentCategory='General Bible Trivia'; selectLevel('Advanced')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
   <div class="cat-strip" data-category="General Bible Trivia"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Is It Accurate?'; selectLevel('Advanced')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
-  <div class="cat-strip" data-category="Is It Accurate?"></div>
+  <!-- FIXED -->
+  <button class="menu-btn" onclick="currentCategory='Who said it?'; selectLevel('Advanced')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
+  <div class="cat-strip" data-category="Who said it?"></div>
 
   <button class="menu-btn" onclick="currentCategory='Bible Timeline'; selectLevel('Advanced')"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
   <div class="cat-strip" data-category="Bible Timeline"></div>
@@ -250,12 +282,14 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   <button class="menu-btn" onclick="currentCategory='Finish the Verse'; selectLevel('Advanced')"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
   <div class="cat-strip" data-category="Finish the Verse"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Prophecy'; selectLevel('Advanced')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
-  <div class="cat-strip" data-category="Prophecy"></div>
+  <!-- FIXED -->
+  <button class="menu-btn" onclick="currentCategory='Prophecy Quiz'; selectLevel('Advanced')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
+  <div class="cat-strip" data-category="Prophecy Quiz"></div>
 
   <button class="menu-btn" onclick="currentCategory='Miracles of Jesus'; selectLevel('Advanced')">✨ <span>Miracles of Jesus</span></button>
   <div class="cat-strip" data-category="Miracles of Jesus"></div>
 
+  <!-- FIXED (this one is actually OK already, keep it) -->
   <button class="menu-btn" onclick="currentCategory='Old Testament Events'; selectLevel('Advanced')">📜 <span>Old Testament Events</span></button>
   <div class="cat-strip" data-category="Old Testament Events"></div>
 
@@ -275,24 +309,12 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     <button class="small-btn" onclick="openStats()">📊 Stats</button>
     <button class="small-btn" onclick="openMyVerses()">📖 Verses</button>
   </div>
+
   <div class="bottom" style="margin-top:8px;">
     <button class="small-btn" onclick="openSettings()">⚙️ Settings</button>
     <button class="small-btn" onclick="openAbout()">✨ Features</button>
   </div>
 </section>
-
-<section id="levelMenu" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
-  <div id="levelCategory" class="subtitle level-subtitle"></div>
-  <div class="subline">Choose Your Level</div>
-  <div class="level-note">Advanced questions only</div>
-  <button class="menu-btn" onclick="selectLevel('Advanced')">
-    🎓 <span>Advanced</span>
-  </button>
-  <button id="practiceBtn" class="menu-btn practice-btn" style="display:none;" onclick="startPracticeMode()">🎯 <span>Practice Tough Questions</span></button>
-  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
-</section>
-
 <section id="quizScreen" class="screen">
   <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
   <div id="quizCategory" class="subtitle level-subtitle"></div>
@@ -613,30 +635,25 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
         <div class="feature-desc">With Sound On / Off control</div>
       </div>
     </div>
-    
-    
+
     <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(107,47,189,.18);text-align:center;">
-  <div style="font-weight:900;margin-bottom:6px;color:var(--purple);">
-    Looking for more?
-  </div>
+      <div style="font-weight:900;margin-bottom:6px;color:var(--purple);">
+        Looking for more?
+      </div>
 
+      <a href="https://practicalfaith.net/quiz_links.html" target="_blank"
+         style="display:inline-block;margin-top:8px;padding:12px 24px;
+         background:var(--purple);color:#fff;
+         font-family:'Nunito',Arial,sans-serif;font-weight:800;
+         font-size:18px;border-radius:30px;text-decoration:none;
+         box-shadow:0 4px 12px rgba(107,47,189,.35);">
+        📘 Try the Original Bible Quiz
+      </a>
 
-
-  <a href="https://practicalfaith.net/quiz_links.html" target="_blank"
-     style="display:inline-block;margin-top:8px;padding:12px 24px;
-     background:#3f6fb4;color:#fff;
-     font-family:'Fredoka One',Arial,sans-serif;
-     font-size:18px;border-radius:30px;text-decoration:none;
-     box-shadow:0 4px 12px rgba(63,111,180,.35);">
-    📘 Try the Original Bible Quiz
-  </a>
-
-  <div style="font-size:14px;color:#888;margin-top:8px;">
-    A broader quiz with foundational questions
-  </div>
-</div>
-    
-    
+      <div style="font-size:14px;color:#888;margin-top:8px;">
+        A broader quiz with foundational questions
+      </div>
+    </div>
 
     <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(107,47,189,.18);text-align:center;">
       <div style="font-weight:900;margin-bottom:6px;color:var(--purple);">More Bible Teaching</div>
@@ -646,6 +663,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   </div>
   <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
 </section>
+
 <section id="dailyScreen" class="screen">
   <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
   <div class="subtitle">Daily Challenge</div>

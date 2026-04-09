@@ -1,422 +1,646 @@
 const miraclesQuestions = [
-
   {
-    id: 10001,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3001,
+    game: "Miracles",
+    category: "Nature",
     difficulty: "Advanced",
-    question: "Which miracle in John's Gospel is explicitly called the 'beginning of signs,' and what theological purpose does John attach to it?",
-    choices: [
-      "Healing the nobleman's son; to demonstrate faith before sight",
-      "Turning water into wine; to manifest his glory to his disciples",
-      "Feeding the five thousand; to reveal him as the new Moses",
-      "Healing the blind man; to reveal spiritual blindness"
-    ],
-    answer: 1,
+    question: "At Cana, what did Jesus turn into wine?",
+    choices: ["Oil", "Milk", "Water", "Juice"],
+    answer: 2,
     reference: "John 2:1-11",
-    verseText: "This beginning of miracles did Jesus... and manifested forth his glory."
+    verseText: "Jesus saith unto them, Fill the waterpots with water..."
   },
-
   {
-    id: 10002,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3002,
+    game: "Miracles",
+    category: "Nature",
     difficulty: "Advanced",
-    question: "In the healing of the paralytic lowered through the roof, what underlying issue made the miracle controversial to the scribes?",
-    choices: [
-      "It violated Sabbath restrictions",
-      "It was performed publicly in a crowded house",
-      "Jesus pronounced forgiveness of sins prior to healing",
-      "The man had not demonstrated prior faith"
-    ],
+    question: "How many waterpots were used at the wedding in Cana?",
+    choices: ["Three", "Four", "Six", "Seven"],
     answer: 2,
-    reference: "Mark 2:5-12",
-    verseText: "Who can forgive sins but God only?"
+    reference: "John 2:6",
+    verseText: "There were set there six waterpots of stone..."
   },
-
   {
-    id: 10003,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3003,
+    game: "Miracles",
+    category: "Nature",
     difficulty: "Advanced",
-    question: "Which miracle uniquely unfolds in stages, raising interpretive questions about perception and spiritual understanding?",
+    question: "What did Jesus multiply to feed the five thousand?",
     choices: [
-      "Blind Bartimaeus",
-      "The man born blind",
-      "The blind man at Bethsaida",
-      "The deaf and mute man"
+      "Five loaves and two fishes",
+      "Seven loaves and a few fishes",
+      "Ten loaves and five fishes",
+      "Three loaves and two fishes"
     ],
-    answer: 2,
-    reference: "Mark 8:22-25",
-    verseText: "I see men as trees, walking."
+    answer: 0,
+    reference: "Matthew 14:17-21",
+    verseText: "We have here but five loaves, and two fishes."
   },
-
   {
-    id: 10004,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3004,
+    game: "Miracles",
+    category: "Nature",
     difficulty: "Advanced",
-    question: "In Jairus’s house, how does Jesus’ action demonstrate authority beyond ritual impurity laws?",
-    choices: [
-      "He heals without entering the house",
-      "He commands the mourners to leave",
-      "He takes the dead girl by the hand and raises her",
-      "He restores her through prayer alone"
-    ],
+    question: "After feeding the five thousand, how many baskets of fragments remained?",
+    choices: ["Seven", "Ten", "Twelve", "Fourteen"],
     answer: 2,
-    reference: "Mark 5:35-43",
-    verseText: "Talitha cumi."
+    reference: "Matthew 14:20",
+    verseText: "They took up of the fragments that remained twelve baskets full."
   },
-
   {
-    id: 10005,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3005,
+    game: "Miracles",
+    category: "Nature",
     difficulty: "Advanced",
-    question: "Which miracle, recorded in all four Gospels, becomes the interpretive backdrop for Jesus’ Bread of Life discourse?",
+    question: "In the feeding of the four thousand, how many loaves were initially available?",
+    choices: ["Five", "Six", "Seven", "Eight"],
+    answer: 2,
+    reference: "Matthew 15:34",
+    verseText: "Jesus saith unto them, How many loaves have ye? And they said, Seven..."
+  },
+  {
+    id: 3006,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "After feeding the four thousand, how many baskets remained?",
+    choices: ["Five", "Seven", "Ten", "Twelve"],
+    answer: 1,
+    reference: "Matthew 15:37",
+    verseText: "They took up of the broken meat that was left seven baskets full."
+  },
+  {
+    id: 3007,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "What natural force did Jesus rebuke, saying, 'Peace, be still'?",
+    choices: ["Earthquake", "Storm", "Fire", "Flood"],
+    answer: 1,
+    reference: "Mark 4:39",
+    verseText: "He arose, and rebuked the wind..."
+  },
+  {
+    id: 3008,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "On what did Jesus walk when He came to the disciples during the storm?",
+    choices: ["Sand", "Clouds", "Water", "Waves of fire"],
+    answer: 2,
+    reference: "Matthew 14:25",
+    verseText: "Jesus went unto them, walking on the sea."
+  },
+  {
+    id: 3009,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "Which disciple also walked on the water briefly?",
+    choices: ["John", "Peter", "James", "Andrew"],
+    answer: 1,
+    reference: "Matthew 14:28-29",
+    verseText: "And Peter answered him..."
+  },
+  {
+    id: 3010,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "What happened to the fig tree that Jesus cursed?",
     choices: [
-      "Walking on the sea",
-      "Feeding the five thousand",
-      "Raising Lazarus",
-      "Healing the paralytic"
+      "It bore fruit immediately",
+      "It withered away",
+      "It grew larger",
+      "It was struck by lightning"
     ],
     answer: 1,
-    reference: "John 6:1-14",
-    verseText: "This is of a truth that prophet..."
+    reference: "Matthew 21:19",
+    verseText: "Presently the fig tree withered away."
   },
-
   {
-    id: 10006,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3011,
+    game: "Miracles",
+    category: "Healing",
     difficulty: "Advanced",
-    question: "What theological significance distinguishes the healing of the man born blind in John 9?",
+    question: "What was the condition of the man lowered through the roof to Jesus?",
+    choices: ["Blind", "Lame", "Paralyzed", "Deaf"],
+    answer: 2,
+    reference: "Mark 2:3-12",
+    verseText: "They come unto him, bringing one sick of the palsy..."
+  },
+  {
+    id: 3012,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What did Jesus say to the paralyzed man before healing him?",
     choices: [
-      "It fulfills Isaiah’s prophecy of healing",
-      "It demonstrates authority over demons",
-      "The blindness is explicitly not tied to personal or parental sin",
-      "It occurs in Gentile territory"
+      "Rise and walk",
+      "Take up thy bed",
+      "Thy sins be forgiven thee",
+      "Be thou clean"
     ],
     answer: 2,
-    reference: "John 9:3",
-    verseText: "Neither hath this man sinned, nor his parents..."
+    reference: "Mark 2:5",
+    verseText: "Son, thy sins be forgiven thee."
   },
-
   {
-    id: 10007,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3013,
+    game: "Miracles",
+    category: "Healing",
     difficulty: "Advanced",
-    question: "Why does Jesus deliberately delay going to Lazarus, according to the narrative?",
-    choices: [
-      "To avoid arrest",
-      "To allow mourning customs to begin",
-      "That the Son of God might be glorified",
-      "To gather more witnesses"
-    ],
-    answer: 2,
-    reference: "John 11:4-6",
-    verseText: "That the Son of God might be glorified thereby."
-  },
-
-  {
-    id: 10008,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
-    difficulty: "Advanced",
-    question: "In the healing of the woman with the issue of blood, what does Jesus’ question 'Who touched me?' reveal within the narrative?",
-    choices: [
-      "A lack of awareness",
-      "A test of the disciples",
-      "A public drawing out of faith and testimony",
-      "A rebuke for improper contact"
-    ],
-    answer: 2,
-    reference: "Mark 5:30-33",
-    verseText: "Virtue had gone out of him."
-  },
-
-  {
-    id: 10009,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
-    difficulty: "Advanced",
-    question: "Which post-resurrection miracle mirrors an earlier calling narrative and reinforces apostolic mission?",
-    choices: [
-      "The feeding of the four thousand",
-      "The coin in the fish",
-      "The miraculous catch in John 21",
-      "The Transfiguration"
-    ],
-    answer: 2,
-    reference: "John 21:1-14",
-    verseText: "Cast the net on the right side..."
-  },
-
-  {
-    id: 10010,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
-    difficulty: "Advanced",
-    question: "Which miracle leads the crowd to identify Jesus with the expected prophetic figure from Deuteronomy?",
-    choices: [
-      "Water into wine",
-      "Feeding the five thousand",
-      "Raising Lazarus",
-      "Healing the nobleman's son"
-    ],
+    question: "What condition did the woman have who touched Jesus' garment and was healed?",
+    choices: ["Blindness", "Issue of blood", "Leprosy", "Deafness"],
     answer: 1,
-    reference: "John 6:14",
-    verseText: "That prophet that should come..."
+    reference: "Mark 5:25-29",
+    verseText: "A certain woman, which had an issue of blood twelve years..."
   },
-
   {
-    id: 10011,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3014,
+    game: "Miracles",
+    category: "Healing",
     difficulty: "Advanced",
-    question: "What does the naming of 'Legion' in the Gadarene account emphasize about the nature of the miracle?",
-    choices: [
-      "Roman political tension",
-      "The scale and severity of demonic oppression",
-      "The identity of the man",
-      "The location of the event"
-    ],
+    question: "How long had the woman with the issue of blood suffered?",
+    choices: ["Seven years", "Ten years", "Twelve years", "Fifteen years"],
+    answer: 2,
+    reference: "Mark 5:25",
+    verseText: "Twelve years..."
+  },
+  {
+    id: 3015,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What did Jesus perceive had gone out from Him when the woman touched Him?",
+    choices: ["Light", "Virtue", "Spirit", "Heat"],
     answer: 1,
+    reference: "Mark 5:30",
+    verseText: "Jesus... perceived that virtue had gone out of him..."
+  },
+  {
+    id: 3016,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What did Jesus put on the blind man's eyes in one instance of healing?",
+    choices: ["Oil", "Clay made with spittle", "Water only", "Dust"],
+    answer: 1,
+    reference: "John 9:6",
+    verseText: "He spat on the ground, and made clay..."
+  },
+  {
+    id: 3017,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "Where was the blind man told to wash after Jesus applied clay?",
+    choices: ["Bethesda", "Jordan", "Siloam", "Kidron"],
+    answer: 2,
+    reference: "John 9:7",
+    verseText: "Go, wash in the pool of Siloam..."
+  },
+  {
+    id: 3018,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "How many lepers were cleansed by Jesus, yet only one returned to give thanks?",
+    choices: ["Five", "Ten", "Twelve", "Seven"],
+    answer: 1,
+    reference: "Luke 17:12-17",
+    verseText: "Ten men that were lepers..."
+  },
+  {
+    id: 3019,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "From what region was the thankful leper who returned?",
+    choices: ["Galilee", "Judea", "Samaria", "Decapolis"],
+    answer: 2,
+    reference: "Luke 17:16",
+    verseText: "And he was a Samaritan."
+  },
+  {
+    id: 3020,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What was restored by Jesus after Peter cut it off in Gethsemane?",
+    choices: ["Finger", "Ear", "Hand", "Eye"],
+    answer: 1,
+    reference: "Luke 22:50-51",
+    verseText: "He touched his ear, and healed him."
+  },
+  {
+    id: 3021,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What type of spirit did Jesus cast out of the man in the synagogue at Capernaum?",
+    choices: ["Mute spirit", "Unclean spirit", "Blind spirit", "Deaf spirit"],
+    answer: 1,
+    reference: "Mark 1:23-26",
+    verseText: "There was in their synagogue a man with an unclean spirit..."
+  },
+  {
+    id: 3022,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "How many demons identified themselves as 'Legion' when Jesus confronted them?",
+    choices: ["About 100", "About 1,000", "Many", "Exactly 12"],
+    answer: 2,
     reference: "Mark 5:9",
-    verseText: "For we are many."
+    verseText: "My name is Legion: for we are many."
   },
-
   {
-    id: 10012,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3023,
+    game: "Miracles",
+    category: "Authority",
     difficulty: "Advanced",
-    question: "In the healing at Bethesda, what warning links physical healing with moral responsibility?",
+    question: "Into what did the demons enter after being cast out of the possessed man?",
+    choices: ["Goats", "Sheep", "Swine", "Cattle"],
+    answer: 2,
+    reference: "Mark 5:12-13",
+    verseText: "Send us into the swine..."
+  },
+  {
+    id: 3024,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What happened to the herd of swine after the demons entered them?",
     choices: [
-      "Return to the priest",
-      "Give alms",
-      "Sin no more, lest a worse thing come",
-      "Follow me"
+      "They scattered",
+      "They lay down",
+      "They ran into the sea",
+      "They returned to the owners"
     ],
     answer: 2,
-    reference: "John 5:14",
-    verseText: "Sin no more..."
+    reference: "Mark 5:13",
+    verseText: "The herd ran violently down a steep place into the sea..."
   },
-
   {
-    id: 10013,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3025,
+    game: "Miracles",
+    category: "Raising the Dead",
     difficulty: "Advanced",
-    question: "What makes the centurion’s request uniquely significant in the healing narrative?",
-    choices: [
-      "He was Jewish",
-      "He demonstrated understanding of authority and command",
-      "He demanded proof",
-      "He traveled with Jesus"
-    ],
+    question: "Whose daughter did Jesus raise from the dead saying, 'Talitha cumi'?",
+    choices: ["Widow of Nain", "Jairus", "Martha", "Mary"],
     answer: 1,
-    reference: "Matthew 8:8-10",
-    verseText: "I am a man under authority..."
+    reference: "Mark 5:41",
+    verseText: "Talitha cumi..."
   },
-
   {
-    id: 10014,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3026,
+    game: "Miracles",
+    category: "Raising the Dead",
     difficulty: "Advanced",
-    question: "Which miracle contributes directly to escalating opposition because it challenges Sabbath interpretation and divine identity?",
-    choices: [
-      "Man born blind",
-      "Healing at Bethesda",
-      "Withered hand",
-      "Bent woman"
-    ],
+    question: "How old was Jairus's daughter when she was raised?",
+    choices: ["10", "12", "14", "16"],
     answer: 1,
-    reference: "John 5:16-18",
-    verseText: "He called God his Father..."
+    reference: "Mark 5:42",
+    verseText: "The damsel was of the age of twelve years."
   },
-
   {
-    id: 10015,
-    game: "Miracles of Jesus",
-    testament: "New Testament",
-    category: "Miracles",
+    id: 3027,
+    game: "Miracles",
+    category: "Raising the Dead",
     difficulty: "Advanced",
-    question: "What is the significance of the fig tree miracle within Passion Week teaching?",
-    choices: [
-      "A lesson on agriculture",
-      "A symbol of judgment on fruitless profession",
-      "A demonstration of natural power",
-      "A test of discipleship"
-    ],
+    question: "Whose son did Jesus raise at Nain?",
+    choices: ["Centurion", "Widow", "Pharisee", "Samaritan"],
     answer: 1,
-    reference: "Mark 11:12-21",
-    verseText: "The fig tree withered away."
+    reference: "Luke 7:12-15",
+    verseText: "A dead man was carried out, the only son of his mother, and she was a widow..."
   },
   {
-    id: 10016,
-    game: "Miracles of Jesus",
+    id: 3028,
+    game: "Miracles",
+    category: "Raising the Dead",
     difficulty: "Advanced",
-    question: "Which miracle demonstrates Jesus' authority over nature by walking on water and identifying Himself with 'I AM' language?",
-    choices: [
-      "Calming the storm",
-      "Walking on the sea",
-      "Feeding the five thousand",
-      "Turning water into wine"
-    ],
-    answer: 1,
-    reference: "John 6:19-20",
-    verseText: "It is I; be not afraid."
-  },
-  {
-    id: 10017,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "In the calming of the storm, what question reveals the disciples’ struggle to grasp Jesus’ identity?",
-    choices: [
-      "Who touched me?",
-      "What manner of man is this?",
-      "Why are you afraid?",
-      "Where is your faith?"
-    ],
-    answer: 1,
-    reference: "Mark 4:41",
-    verseText: "What manner of man is this, that even the wind and the sea obey him?"
-  },
-  {
-    id: 10018,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "Which miracle involves Jesus sending demons into a herd of swine, demonstrating authority over the spiritual realm?",
-    choices: [
-      "Healing of the epileptic boy",
-      "Gadarene demoniac",
-      "Blind Bartimaeus",
-      "Healing at Bethesda"
-    ],
-    answer: 1,
-    reference: "Mark 5:1-13",
-    verseText: "And the unclean spirits went out, and entered into the swine."
-  },
-  {
-    id: 10019,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "What distinguishes the healing of the ten lepers in Luke 17?",
-    choices: [
-      "All were healed instantly",
-      "Only one returned to give thanks",
-      "It occurred in Jerusalem",
-      "It involved laying on of hands"
-    ],
-    answer: 1,
-    reference: "Luke 17:15-18",
-    verseText: "Were there not ten cleansed? but where are the nine?"
-  },
-  {
-    id: 10020,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "Which miracle emphasizes Jesus’ authority over death before His own resurrection?",
-    choices: [
-      "Healing Jairus' daughter",
-      "Raising Lazarus",
-      "Widow’s son at Nain",
-      "All of the above"
-    ],
-    answer: 3,
-    reference: "Luke 7:11-17; Mark 5:35-43; John 11",
-    verseText: "He delivered him to his mother."
-  },
-  {
-    id: 10021,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "What is significant about Jesus healing on the Sabbath in several accounts?",
-    choices: [
-      "It avoids attention",
-      "It reinforces ritual law",
-      "It confronts legalistic interpretations of the Law",
-      "It replaces synagogue worship"
-    ],
+    question: "How long had Lazarus been in the grave before Jesus raised him?",
+    choices: ["Two days", "Three days", "Four days", "Seven days"],
     answer: 2,
-    reference: "Luke 13:14-16; John 5:16-18",
-    verseText: "Is it lawful to do good on the sabbath days?"
+    reference: "John 11:17",
+    verseText: "He had lain in the grave four days already."
   },
   {
-    id: 10022,
-    game: "Miracles of Jesus",
+    id: 3029,
+    game: "Miracles",
+    category: "Raising the Dead",
     difficulty: "Advanced",
-    question: "Which miracle includes Jesus using clay and sending a man to wash in Siloam?",
+    question: "What did Jesus cry with a loud voice before Lazarus came forth?",
     choices: [
-      "Blind Bartimaeus",
-      "Man born blind",
-      "Healing of the deaf man",
-      "Paralytic at Bethesda"
+      "Rise up",
+      "Come forth",
+      "Awake",
+      "Be healed"
     ],
     answer: 1,
-    reference: "John 9:6-7",
-    verseText: "Go, wash in the pool of Siloam."
-  },
-  {
-    id: 10023,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "Which miracle demonstrates provision by multiplying a small amount of food beyond natural limits?",
-    choices: [
-      "Water into wine",
-      "Feeding the five thousand",
-      "Coin in the fish",
-      "Catch of fish"
-    ],
-    answer: 1,
-    reference: "Matthew 14:19-21",
-    verseText: "They did all eat, and were filled."
-  },
-  {
-    id: 10024,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "What is unique about the miracle of the coin in the fish’s mouth?",
-    choices: [
-      "It heals a disease",
-      "It demonstrates authority over creation for a specific need",
-      "It involves a crowd",
-      "It raises the dead"
-    ],
-    answer: 1,
-    reference: "Matthew 17:24-27",
-    verseText: "Thou shalt find a piece of money."
-  },
-  {
-    id: 10025,
-    game: "Miracles of Jesus",
-    difficulty: "Advanced",
-    question: "Which miracle marks Jesus’ final public sign in John’s Gospel before the Passion?",
-    choices: [
-      "Feeding the five thousand",
-      "Walking on water",
-      "Raising Lazarus",
-      "Healing the blind man"
-    ],
-    answer: 2,
-    reference: "John 11",
+    reference: "John 11:43",
     verseText: "Lazarus, come forth."
   },
+  {
+    id: 3030,
+    game: "Miracles",
+    category: "Provision",
+    difficulty: "Advanced",
+    question: "Where did Peter find the coin to pay the temple tax?",
+    choices: ["In a bag", "In a tree", "In a fish's mouth", "In the boat"],
+    answer: 2,
+    reference: "Matthew 17:27",
+    verseText: "Take up the fish... thou shalt find a piece of money..."
+  },
+  {
+    id: 3031,
+    game: "Miracles",
+    category: "Provision",
+    difficulty: "Advanced",
+    question: "What happened when Peter cast his net after Jesus instructed him following a fruitless night?",
+    choices: [
+      "Nothing",
+      "The net broke with many fish",
+      "Few fish were caught",
+      "The boat sank immediately"
+    ],
+    answer: 1,
+    reference: "Luke 5:6",
+    verseText: "They inclosed a great multitude of fishes: and their net brake."
+  },
+  {
+    id: 3032,
+    game: "Miracles",
+    category: "Provision",
+    difficulty: "Advanced",
+    question: "After the resurrection, how many fish were caught in the miraculous catch recorded in John 21?",
+    choices: ["120", "144", "153", "200"],
+    answer: 2,
+    reference: "John 21:11",
+    verseText: "An hundred and fifty and three..."
+  },
+  {
+    id: 3033,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What condition did Bartimaeus have before Jesus healed him?",
+    choices: ["Deaf", "Blind", "Lame", "Mute"],
+    answer: 1,
+    reference: "Mark 10:46-52",
+    verseText: "Blind Bartimaeus..."
+  },
+  {
+    id: 3034,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What did Bartimaeus cry out to Jesus?",
+    choices: [
+      "Lord, help me",
+      "Jesus, thou Son of David, have mercy on me",
+      "Heal me, Lord",
+      "Save me now"
+    ],
+    answer: 1,
+    reference: "Mark 10:47",
+    verseText: "Jesus, thou Son of David, have mercy on me."
+  },
+  {
+    id: 3035,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What was unusual about the healing of the blind man at Bethsaida?",
+    choices: [
+      "It required two stages",
+      "It involved oil",
+      "It required prayer",
+      "It was done at night"
+    ],
+    answer: 0,
+    reference: "Mark 8:22-25",
+    verseText: "He looked up, and said, I see men as trees..."
+  },
+  {
+    id: 3036,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What did Jesus say made the woman whole who touched His garment?",
+    choices: ["Her persistence", "Her faith", "Her sacrifice", "Her humility"],
+    answer: 1,
+    reference: "Mark 5:34",
+    verseText: "Daughter, thy faith hath made thee whole..."
+  },
+  {
+    id: 3037,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What did Jesus command the unclean spirit in the boy with seizures to do?",
+    choices: [
+      "Be silent and depart",
+      "Come out and enter no more",
+      "Leave immediately",
+      "Be gone forever"
+    ],
+    answer: 1,
+    reference: "Mark 9:25",
+    verseText: "Come out of him, and enter no more into him."
+  },
+  {
+    id: 3038,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What phrase did Jesus say often when casting out demons that emphasized His authority?",
+    choices: [
+      "Depart from him",
+      "Hold thy peace",
+      "Be thou clean",
+      "Go thy way"
+    ],
+    answer: 1,
+    reference: "Mark 1:25",
+    verseText: "Hold thy peace, and come out of him."
+  },
+  {
+    id: 3039,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "What happened immediately when Jesus entered the boat after walking on water?",
+    choices: [
+      "The boat sank",
+      "The wind ceased",
+      "The disciples fled",
+      "Rain began"
+    ],
+    answer: 1,
+    reference: "Matthew 14:32",
+    verseText: "The wind ceased."
+  },
+  {
+    id: 3040,
+    game: "Miracles",
+    category: "Nature",
+    difficulty: "Advanced",
+    question: "What did the disciples say after Jesus calmed the storm, showing their astonishment?",
+    choices: [
+      "This is a prophet",
+      "Truly this is the Son of God",
+      "What manner of man is this",
+      "Surely he is king"
+    ],
+    answer: 2,
+    reference: "Mark 4:41",
+    verseText: "What manner of man is this..."
+  },
+  {
+    id: 3041,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What ailment did the centurion's servant suffer from before being healed?",
+    choices: ["Blindness", "Paralysis", "Fever", "Leprosy"],
+    answer: 1,
+    reference: "Matthew 8:6",
+    verseText: "My servant lieth at home sick of the palsy..."
+  },
+  {
+    id: 3042,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What did Jesus marvel at in relation to the centurion?",
+    choices: ["His wealth", "His authority", "His faith", "His humility"],
+    answer: 2,
+    reference: "Matthew 8:10",
+    verseText: "I have not found so great faith..."
+  },
+  {
+    id: 3043,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "Who was raised from the dead by Peter in Acts?",
+    choices: ["Lydia", "Tabitha (Dorcas)", "Priscilla", "Phoebe"],
+    answer: 1,
+    reference: "Acts 9:36-41",
+    verseText: "Tabitha... was full of good works..."
+  },
+  {
+    id: 3044,
+    game: "Miracles",
+    category: "Healing",
+    difficulty: "Advanced",
+    question: "What happened to Eutychus after falling from the window during Paul's preaching?",
+    choices: [
+      "He was injured",
+      "He died and was raised",
+      "He recovered immediately",
+      "He fled"
+    ],
+    answer: 1,
+    reference: "Acts 20:9-12",
+    verseText: "Taken up dead... Paul went down... and said... his life is in him."
+  },
+  {
+    id: 3045,
+    game: "Miracles",
+    category: "Acts",
+    difficulty: "Advanced",
+    question: "What unusual items were used to heal the sick through Paul's ministry?",
+    choices: [
+      "Oil and water",
+      "Handkerchiefs and aprons",
+      "Staffs",
+      "Sandals"
+    ],
+    answer: 1,
+    reference: "Acts 19:11-12",
+    verseText: "From his body were brought unto the sick handkerchiefs or aprons..."
+  },
+  {
+    id: 3046,
+    game: "Miracles",
+    category: "Acts",
+    difficulty: "Advanced",
+    question: "What happened to the viper that fastened on Paul's hand on Malta?",
+    choices: [
+      "It killed him",
+      "He shook it off unharmed",
+      "He fainted",
+      "He was paralyzed"
+    ],
+    answer: 1,
+    reference: "Acts 28:3-5",
+    verseText: "He shook off the beast into the fire, and felt no harm."
+  },
+  {
+    id: 3047,
+    game: "Miracles",
+    category: "Acts",
+    difficulty: "Advanced",
+    question: "Whose father did Paul heal of fever and dysentery on Malta?",
+    choices: ["Publius", "Julius", "Felix", "Festus"],
+    answer: 0,
+    reference: "Acts 28:7-8",
+    verseText: "The father of Publius lay sick of a fever..."
+  },
+  {
+    id: 3048,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What did Jesus command the leper after healing him?",
+    choices: [
+      "Tell everyone",
+      "Show thyself to the priest",
+      "Return home immediately",
+      "Follow me"
+    ],
+    answer: 1,
+    reference: "Matthew 8:4",
+    verseText: "Go thy way, shew thyself to the priest..."
+  },
+  {
+    id: 3049,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What did Jesus say to the man with the withered hand before healing him?",
+    choices: [
+      "Stretch forth thine hand",
+      "Be thou whole",
+      "Rise up",
+      "Come forward"
+    ],
+    answer: 0,
+    reference: "Matthew 12:13",
+    verseText: "Stretch forth thine hand..."
+  },
+  {
+    id: 3050,
+    game: "Miracles",
+    category: "Authority",
+    difficulty: "Advanced",
+    question: "What phrase did Jesus use when raising Jairus's daughter?",
+    choices: [
+      "Talitha cumi",
+      "Ephphatha",
+      "Eloi, Eloi",
+      "Hosanna"
+    ],
+    answer: 0,
+    reference: "Mark 5:41",
+    verseText: "Talitha cumi..."
+  }
 ];
+
+if (typeof window !== "undefined") {
+  window.miraclesQuestions = miraclesQuestions;
+}

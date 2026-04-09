@@ -304,6 +304,7 @@ const isItAccurateQuestions = [
     reference: "Proverbs 9:10",
     verseText: "Beginning of wisdom."
   },
+
   {
     id: "as031",
     game: "Is It Accurate?",
@@ -353,6 +354,414 @@ const isItAccurateQuestions = [
     answer: 0,
     reference: "John 18:36",
     verseText: "Not of this world."
+  },
+
+  {
+    id: "as036",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'This too shall pass.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 2,
+    reference: "",
+    verseText: ""
+  },
+  {
+    id: "as037",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The Lord works in mysterious ways.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 2,
+    reference: "",
+    verseText: ""
+  },
+  {
+    id: "as038",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The joy of the Lord is your strength.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Nehemiah 8:10",
+    verseText: "The joy of the LORD is your strength."
+  },
+  {
+    id: "as039",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'As a man thinks in his heart, so is he.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Proverbs 23:7",
+    verseText: "For as he thinketh in his heart, so is he."
+  },
+  {
+    id: "as040",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Follow your heart.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 1,
+    reference: "Jeremiah 17:9",
+    verseText: "The heart is deceitful above all things..."
+  },
+
+  {
+    id: "as041",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The Lord helps those who are faithful to themselves.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 2,
+    reference: "",
+    verseText: ""
+  },
+  {
+    id: "as042",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'You reap what you sow.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Galatians 6:7",
+    verseText: "Whatsoever a man soweth..."
+  },
+  {
+    id: "as043",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Where there is no vision, the people perish.' refers to personal ambition.",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 1,
+    reference: "Proverbs 29:18",
+    verseText: "Where there is no vision..."
+  },
+  {
+    id: "as044",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Resist the devil, and he will flee from you.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "James 4:7",
+    verseText: "Resist the devil..."
+  },
+  {
+    id: "as045",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The love of God never fails.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 3,
+    reference: "1 Corinthians 13:8",
+    verseText: "Charity never faileth."
+  },
+
+  {
+    id: "as046",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The Lord is my shepherd; I shall not want.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Psalm 23:1",
+    verseText: "The LORD is my shepherd..."
+  },
+  {
+    id: "as047",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'All things are lawful for me.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "1 Corinthians 6:12",
+    verseText: "All things are lawful..."
+  },
+  {
+    id: "as048",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Clean hands and a pure heart will bring blessing.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 3,
+    reference: "Psalm 24:4",
+    verseText: "He that hath clean hands..."
+  },
+  {
+    id: "as049",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'He who finds a wife finds a good thing.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Proverbs 18:22",
+    verseText: "Whoso findeth a wife..."
+  },
+  {
+    id: "as050",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Train up a child in the way he should go, and he will never depart from it.' guarantees lifelong faithfulness.",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 1,
+    reference: "Proverbs 22:6",
+    verseText: "Train up a child..."
+  },
+
+  {
+    id: "as051",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The patience of Job.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 3,
+    reference: "James 5:11",
+    verseText: "The patience of Job — not a phrase used in Job itself."
+  },
+  {
+    id: "as052",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Confession is good for the soul.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 2,
+    reference: "",
+    verseText: ""
+  },
+  {
+    id: "as053",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The letter kills, but the Spirit gives life.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "2 Corinthians 3:6",
+    verseText: "The spirit giveth life."
+  },
+  {
+    id: "as054",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Money answers everything.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Ecclesiastes 10:19",
+    verseText: "Money answereth all things."
+  },
+  {
+    id: "as055",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The race is not to the swift.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Ecclesiastes 9:11",
+    verseText: "The race is not to the swift..."
+  },
+  {
+    id: "as056",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The love of money is the root of all kinds of evil.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 3,
+    reference: "1 Timothy 6:10",
+    verseText: "The root of all evil..."
+  },
+  {
+    id: "as057",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Perfect love casts out fear.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "1 John 4:18",
+    verseText: "Perfect love casteth out fear."
+  },
+  {
+    id: "as058",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Faith without works is dead.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "James 2:26",
+    verseText: "Faith without works is dead."
+  },
+  {
+    id: "as059",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Every good and perfect gift is from above.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "James 1:17",
+    verseText: "Every good gift..."
+  },
+  {
+    id: "as060",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'No man can serve two masters.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 6:24",
+    verseText: "No man can serve two masters."
+  },
+  {
+    id: "as061",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Lay not up treasures on earth.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 6:19",
+    verseText: "Lay not up..."
+  },
+  {
+    id: "as062",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Seek first the kingdom of God.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 6:33",
+    verseText: "Seek ye first..."
+  },
+  {
+    id: "as063",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The spirit indeed is willing, but the flesh is weak.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 26:41",
+    verseText: "The spirit indeed is willing..."
+  },
+  {
+    id: "as064",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'With God all things are possible.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 19:26",
+    verseText: "With God all things are possible."
+  },
+  {
+    id: "as065",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Take up your cross and follow me.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Luke 9:23",
+    verseText: "Take up his cross daily..."
+  },
+  {
+    id: "as066",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'He who exalts himself will be humbled.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Luke 14:11",
+    verseText: "Whosoever exalteth himself..."
+  },
+  {
+    id: "as067",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'You must be born again.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "John 3:7",
+    verseText: "Ye must be born again."
+  },
+  {
+    id: "as068",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The harvest is plentiful, but the laborers are few.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 9:37",
+    verseText: "The harvest truly is plenteous..."
+  },
+  {
+    id: "as069",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Freely you have received; freely give.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 10:8",
+    verseText: "Freely ye have received..."
+  },
+  {
+    id: "as070",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'The last shall be first, and the first last.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 20:16",
+    verseText: "The last shall be first..."
+  },
+  {
+    id: "as071",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Watch and pray.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 26:41",
+    verseText: "Watch and pray..."
+  },
+  {
+    id: "as072",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'He that is faithful in little is faithful in much.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Luke 16:10",
+    verseText: "He that is faithful..."
+  },
+  {
+    id: "as073",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Where your treasure is, there will your heart be also.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Matthew 6:21",
+    verseText: "Where your treasure is..."
+  },
+  {
+    id: "as074",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'It is more blessed to give than to receive.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 0,
+    reference: "Acts 20:35",
+    verseText: "More blessed to give..."
+  },
+  {
+    id: "as075",
+    game: "Is It Accurate?",
+    difficulty: "Advanced",
+    question: "True, False, Not Stated, or Misquoted: 'Charity begins at home.'",
+    choices: ["True", "False", "Not Stated", "Misquoted"],
+    answer: 2,
+    reference: "",
+    verseText: ""
   }
 
 ];
+
+if (typeof window !== "undefined") {
+  window.isItAccurateQuestions = isItAccurateQuestions;
+}
