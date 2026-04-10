@@ -1,1107 +1,1202 @@
 const versesQuestions = [
-
   {
-    id: 17001,
-    game: "Finish the Verse",
+    id: 19001,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
     difficulty: "Advanced",
-    question: 'Finish: "Man shall not live by bread alone, but by every word that proceedeth out of the mouth of ____."',
-    choices: ["heaven", "the Father", "God", "the LORD"],
-    answer: 2,
-    reference: "Matthew 4:4",
-    verseText: "God."
+    question: "Which reference is the source of the creation statement later echoed in John 1 to frame Christ's divine identity?",
+    choices: ["Genesis 1:1", "Exodus 20:11", "Psalm 33:6", "Proverbs 8:22"],
+    answer: 0,
+    reference: "Genesis 1:1; John 1:1-3",
+    verseText: "In the beginning God created the heaven and the earth."
   },
-
   {
-    id: 17002,
-    game: "Finish the Verse",
+    id: 19002,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
     difficulty: "Advanced",
-    question: 'Finish: "The heart is deceitful above all things, and desperately ____."',
-    choices: ["wicked", "corrupt", "sick", "foolish"],
+    question: "Which reference contains the protoevangelium promise about enmity, seed, and the serpent's defeat?",
+    choices: ["Genesis 3:15", "Genesis 12:3", "Exodus 12:13", "Deuteronomy 18:15"],
+    answer: 0,
+    reference: "Genesis 3:15",
+    verseText: "And I will put enmity between thee and the woman, and between thy seed and her seed."
+  },
+  {
+    id: 19003,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
+    difficulty: "Advanced",
+    question: "Which reference records the evasive line, 'Am I my brother's keeper?' after bloodguilt had already been exposed?",
+    choices: ["Genesis 4:9", "Genesis 9:5", "Exodus 2:14", "Job 16:21"],
+    answer: 0,
+    reference: "Genesis 4:9",
+    verseText: "Am I my brother's keeper?"
+  },
+  {
+    id: 19004,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
+    difficulty: "Advanced",
+    question: "Which reference contains the statement about God's Spirit not always striving with man in the pre-flood corruption narrative?",
+    choices: ["Genesis 6:3", "Genesis 8:21", "Isaiah 57:16", "Psalm 103:14"],
+    answer: 0,
+    reference: "Genesis 6:3",
+    verseText: "My spirit shall not always strive with man."
+  },
+  {
+    id: 19005,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Patriarchs",
+    difficulty: "Advanced",
+    question: "Which reference records Abraham's appeal to divine justice in intercession for Sodom?",
+    choices: ["Genesis 18:25", "Job 34:12", "Psalm 89:14", "Isaiah 30:18"],
+    answer: 0,
+    reference: "Genesis 18:25",
+    verseText: "Shall not the Judge of all the earth do right?"
+  },
+  {
+    id: 19006,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Patriarchs",
+    difficulty: "Advanced",
+    question: "Which reference contains Abraham's line about God providing the lamb, later read typologically against sacrifice and substitution?",
+    choices: ["Genesis 22:8", "Exodus 12:5", "Leviticus 16:21", "Isaiah 53:7"],
+    answer: 0,
+    reference: "Genesis 22:8",
+    verseText: "God will provide himself a lamb for a burnt offering."
+  },
+  {
+    id: 19007,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Patriarchs",
+    difficulty: "Advanced",
+    question: "Which reference contains Jacob's climactic words from the night struggle that ended in a changed name?",
+    choices: ["Genesis 32:26", "Genesis 27:34", "Hosea 12:4", "Exodus 33:15"],
+    answer: 0,
+    reference: "Genesis 32:26",
+    verseText: "I will not let thee go, except thou bless me."
+  },
+  {
+    id: 19008,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Joseph",
+    difficulty: "Advanced",
+    question: "Which reference states Joseph's providence-centered interpretation of evil and good at the end of Genesis?",
+    choices: ["Genesis 50:20", "Genesis 45:7", "Romans 8:28", "Psalm 105:17"],
+    answer: 0,
+    reference: "Genesis 50:20",
+    verseText: "Ye thought evil against me; but God meant it unto good."
+  },
+  {
+    id: 19009,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Exodus",
+    difficulty: "Advanced",
+    question: "Which reference gives the self-identifying divine name later echoed in John's 'I am' theology?",
+    choices: ["Exodus 3:14", "John 8:58", "Isaiah 41:4", "Psalm 90:2"],
+    answer: 0,
+    reference: "Exodus 3:14; John 8:58",
+    verseText: "I AM THAT I AM."
+  },
+  {
+    id: 19010,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Exodus",
+    difficulty: "Advanced",
+    question: "Which reference contains the Passover statement that makes blood the distinguishing sign of deliverance from judgment?",
+    choices: ["Exodus 12:13", "Leviticus 17:11", "Hebrews 9:22", "Joshua 2:19"],
+    answer: 0,
+    reference: "Exodus 12:13",
+    verseText: "When I see the blood, I will pass over you."
+  },
+  {
+    id: 19011,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Law",
+    difficulty: "Advanced",
+    question: "Which Sinai reference defines Israel corporately as a priestly kingdom and holy nation, later echoed in 1 Peter 2?",
+    choices: ["Exodus 19:6", "Leviticus 20:26", "Deuteronomy 7:6", "1 Peter 2:9"],
+    answer: 0,
+    reference: "Exodus 19:6; 1 Peter 2:9",
+    verseText: "Ye shall be unto me a kingdom of priests, and an holy nation."
+  },
+  {
+    id: 19012,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Law",
+    difficulty: "Advanced",
+    question: "Which reference begins the Decalogue's exclusive loyalty demand with, 'Thou shalt have no other gods before me'?",
+    choices: ["Exodus 20:3", "Deuteronomy 6:4", "Leviticus 19:4", "Psalm 81:9"],
+    answer: 0,
+    reference: "Exodus 20:3",
+    verseText: "Thou shalt have no other gods before me."
+  },
+  {
+    id: 19013,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Law",
+    difficulty: "Advanced",
+    question: "Which reference contains God's warning about being sanctified by those who approach Him, in the aftermath of unauthorized fire?",
+    choices: ["Leviticus 10:3", "Leviticus 19:2", "Numbers 20:12", "Ezekiel 36:23"],
+    answer: 0,
+    reference: "Leviticus 10:3",
+    verseText: "I will be sanctified in them that come nigh me."
+  },
+  {
+    id: 19014,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Law",
+    difficulty: "Advanced",
+    question: "Which sacrificial-law reference grounds the atoning function of blood in the principle that life is in the blood?",
+    choices: ["Leviticus 17:11", "Exodus 12:13", "Deuteronomy 12:23", "Hebrews 9:22"],
+    answer: 0,
+    reference: "Leviticus 17:11",
+    verseText: "The life of the flesh is in the blood."
+  },
+  {
+    id: 19015,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Wilderness",
+    difficulty: "Advanced",
+    question: "Which reference explains Moses' failure at Meribah in terms of not sanctifying God before Israel?",
+    choices: ["Numbers 20:12", "Exodus 17:7", "Deuteronomy 32:51", "Psalm 106:33"],
+    answer: 0,
+    reference: "Numbers 20:12",
+    verseText: "Ye believed me not, to sanctify me in the eyes of the children of Israel."
+  },
+  {
+    id: 19016,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
+    difficulty: "Advanced",
+    question: "Which reference contains the Shema, the foundational confession of Israel's covenant monotheism?",
+    choices: ["Deuteronomy 6:4", "Exodus 20:3", "Isaiah 45:5", "Mark 12:29"],
+    answer: 0,
+    reference: "Deuteronomy 6:4",
+    verseText: "Hear, O Israel: The LORD our God is one LORD."
+  },
+  {
+    id: 19017,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
+    difficulty: "Advanced",
+    question: "Which wilderness reference teaches that life depends on God's word rather than mere bread, later cited in Jesus' temptation?",
+    choices: ["Deuteronomy 8:3", "Exodus 16:4", "Matthew 4:4", "Psalm 78:24"],
+    answer: 0,
+    reference: "Deuteronomy 8:3; Matthew 4:4",
+    verseText: "Man doth not live by bread only, but by every word that proceedeth out of the mouth of the LORD."
+  },
+  {
+    id: 19018,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Torah",
+    difficulty: "Advanced",
+    question: "Which covenant appeal sets life and death before Israel in explicitly moral and covenantal terms?",
+    choices: ["Deuteronomy 30:19", "Leviticus 26:3", "Joshua 24:15", "Psalm 1:6"],
+    answer: 0,
+    reference: "Deuteronomy 30:19",
+    verseText: "I have set before you life and death, blessing and cursing."
+  },
+  {
+    id: 19019,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Joshua",
+    difficulty: "Advanced",
+    question: "Which reference records Joshua's declaration that his household would serve the LORD in covenant-renewal context?",
+    choices: ["Joshua 24:15", "Deuteronomy 6:5", "1 Samuel 7:3", "Psalm 101:2"],
+    answer: 0,
+    reference: "Joshua 24:15",
+    verseText: "As for me and my house, we will serve the LORD."
+  },
+  {
+    id: 19020,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Judges",
+    difficulty: "Advanced",
+    question: "Which reference contains the angelic greeting to Gideon that frames weakness inside divine commissioning?",
+    choices: ["Judges 6:12", "Joshua 1:9", "1 Samuel 16:18", "2 Samuel 5:10"],
+    answer: 0,
+    reference: "Judges 6:12",
+    verseText: "The LORD is with thee, thou mighty man of valour."
+  },
+  {
+    id: 19021,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Ruth",
+    difficulty: "Advanced",
+    question: "Which reference contains Ruth's covenantal pledge that joins people, place, and God together?",
+    choices: ["Ruth 1:16", "Genesis 12:1", "Joshua 1:16", "2 Samuel 15:21"],
+    answer: 0,
+    reference: "Ruth 1:16",
+    verseText: "Whither thou goest, I will go; and where thou lodgest, I will lodge."
+  },
+  {
+    id: 19022,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Samuel",
+    difficulty: "Advanced",
+    question: "Which reference contains young Samuel's responsive posture before revelation: 'Speak; for thy servant heareth'?",
+    choices: ["1 Samuel 3:10", "1 Kings 3:9", "Psalm 143:8", "Isaiah 6:8"],
+    answer: 0,
+    reference: "1 Samuel 3:10",
+    verseText: "Speak; for thy servant heareth."
+  },
+  {
+    id: 19023,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Samuel",
+    difficulty: "Advanced",
+    question: "Which reference states the prophetic principle later echoed by Hosea and Jesus: 'To obey is better than sacrifice'?",
+    choices: ["1 Samuel 15:22", "Hosea 6:6", "Micah 6:8", "Psalm 51:16"],
+    answer: 0,
+    reference: "1 Samuel 15:22",
+    verseText: "To obey is better than sacrifice."
+  },
+  {
+    id: 19024,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Samuel",
+    difficulty: "Advanced",
+    question: "Which reference contrasts outward appearance with divine vision of the heart in the anointing of David?",
+    choices: ["1 Samuel 16:7", "Proverbs 21:2", "Jeremiah 17:10", "Luke 16:15"],
+    answer: 0,
+    reference: "1 Samuel 16:7",
+    verseText: "Man looketh on the outward appearance, but the LORD looketh on the heart."
+  },
+  {
+    id: 19025,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Samuel",
+    difficulty: "Advanced",
+    question: "Which reference frames David's battle with Goliath as fundamentally theological rather than merely military?",
+    choices: ["1 Samuel 17:47", "2 Chronicles 20:15", "Exodus 14:14", "Psalm 46:9"],
+    answer: 0,
+    reference: "1 Samuel 17:47",
+    verseText: "The battle is the LORD's."
+  },
+  {
+    id: 19026,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Samuel",
+    difficulty: "Advanced",
+    question: "Which reference contains the prophetic accusation, 'Thou art the man,' after Nathan's parable about David's sin?",
+    choices: ["2 Samuel 12:7", "1 Kings 21:20", "2 Samuel 11:27", "Psalm 51:4"],
+    answer: 0,
+    reference: "2 Samuel 12:7",
+    verseText: "Thou art the man."
+  },
+  {
+    id: 19027,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Kings",
+    difficulty: "Advanced",
+    question: "Which reference contains Solomon's request for an understanding heart rather than riches or long life?",
+    choices: ["1 Kings 3:9", "James 1:5", "Proverbs 2:3", "Ecclesiastes 1:13"],
+    answer: 0,
+    reference: "1 Kings 3:9",
+    verseText: "Give therefore thy servant an understanding heart."
+  },
+  {
+    id: 19028,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Kings",
+    difficulty: "Advanced",
+    question: "Which temple-dedication reference states that heaven itself cannot contain God, guarding against crude localization of the divine presence?",
+    choices: ["1 Kings 8:27", "Psalm 19:1", "Isaiah 66:1", "Acts 7:49"],
+    answer: 0,
+    reference: "1 Kings 8:27",
+    verseText: "The heaven and heaven of heavens cannot contain thee."
+  },
+  {
+    id: 19029,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Kings",
+    difficulty: "Advanced",
+    question: "Which Carmel reference contains Elijah's covenant challenge, 'How long halt ye between two opinions'?",
+    choices: ["1 Kings 18:21", "Joshua 24:15", "Deuteronomy 30:19", "Hosea 10:2"],
+    answer: 0,
+    reference: "1 Kings 18:21",
+    verseText: "How long halt ye between two opinions?"
+  },
+  {
+    id: 19030,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Kings",
+    difficulty: "Advanced",
+    question: "Which reference records the people's confession after fire from heaven validated Elijah's message?",
+    choices: ["1 Kings 18:39", "Deuteronomy 6:4", "Psalm 100:3", "Isaiah 45:22"],
+    answer: 0,
+    reference: "1 Kings 18:39",
+    verseText: "The LORD, he is the God; the LORD, he is the God."
+  },
+  {
+    id: 19031,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Kings",
+    difficulty: "Advanced",
+    question: "Which reference records Naaman's confession after washing in Jordan and abandoning Syrian assumptions about God?",
+    choices: ["2 Kings 5:15", "Exodus 15:11", "Isaiah 44:6", "Daniel 3:29"],
+    answer: 0,
+    reference: "2 Kings 5:15",
+    verseText: "Behold, now I know that there is no God in all the earth, but in Israel."
+  },
+  {
+    id: 19032,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Chronicles",
+    difficulty: "Advanced",
+    question: "Which dedication text links national healing to humility, prayer, seeking God's face, and repentance?",
+    choices: ["2 Chronicles 7:14", "Leviticus 26:40", "Jeremiah 29:12", "James 4:10"],
+    answer: 0,
+    reference: "2 Chronicles 7:14",
+    verseText: "If my people, which are called by my name, shall humble themselves, and pray."
+  },
+  {
+    id: 19033,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Ezra-Nehemiah",
+    difficulty: "Advanced",
+    question: "Which post-exilic reference connects covenant joy with strength after the public reading of the law?",
+    choices: ["Nehemiah 8:10", "Psalm 28:7", "Habakkuk 3:18", "Philippians 4:4"],
+    answer: 0,
+    reference: "Nehemiah 8:10",
+    verseText: "The joy of the LORD is your strength."
+  },
+  {
+    id: 19034,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Esther",
+    difficulty: "Advanced",
+    question: "Which reference contains Mordecai's providential challenge to Esther about royal position and timing?",
+    choices: ["Esther 4:14", "Genesis 50:20", "Daniel 2:21", "Ecclesiastes 3:1"],
+    answer: 0,
+    reference: "Esther 4:14",
+    verseText: "Who knoweth whether thou art come to the kingdom for such a time as this?"
+  },
+  {
+    id: 19035,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Job",
+    difficulty: "Advanced",
+    question: "Which reference contains Job's first great doxological response to catastrophic loss?",
+    choices: ["Job 1:21", "Psalm 115:3", "Ecclesiastes 5:15", "Isaiah 45:7"],
+    answer: 0,
+    reference: "Job 1:21",
+    verseText: "The LORD gave, and the LORD hath taken away; blessed be the name of the LORD."
+  },
+  {
+    id: 19036,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Job",
+    difficulty: "Advanced",
+    question: "Which reference contains Job's fierce perseverance, 'Though he slay me, yet will I trust in him'?",
+    choices: ["Job 13:15", "Psalm 23:4", "Habakkuk 3:18", "Daniel 3:18"],
+    answer: 0,
+    reference: "Job 13:15",
+    verseText: "Though he slay me, yet will I trust in him."
+  },
+  {
+    id: 19037,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Job",
+    difficulty: "Advanced",
+    question: "Which reference contains Job's confession of a living redeemer and hope beyond present ruin?",
+    choices: ["Job 19:25", "Psalm 19:14", "Isaiah 41:14", "Hosea 13:14"],
+    answer: 0,
+    reference: "Job 19:25",
+    verseText: "I know that my redeemer liveth."
+  },
+  {
+    id: 19038,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which reference opens the Psalter by contrasting the blessed man with the counsel of the wicked?",
+    choices: ["Psalm 1:1", "Psalm 15:1", "Proverbs 1:10", "Jeremiah 17:7"],
+    answer: 0,
+    reference: "Psalm 1:1",
+    verseText: "Blessed is the man that walketh not in the counsel of the ungodly."
+  },
+  {
+    id: 19039,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which royal psalm contains the line later central to New Testament exaltation Christology: 'The LORD said unto my Lord'?",
+    choices: ["Psalm 110:1", "Psalm 2:7", "Isaiah 48:16", "Daniel 7:13"],
+    answer: 0,
+    reference: "Psalm 110:1",
+    verseText: "The LORD said unto my Lord, Sit thou at my right hand."
+  },
+  {
+    id: 19040,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which Davidic psalm begins with the shepherd metaphor that later informs Jesus' good-shepherd teaching?",
+    choices: ["Psalm 23:1", "Psalm 27:1", "Psalm 84:11", "Isaiah 40:11"],
+    answer: 0,
+    reference: "Psalm 23:1; John 10:11",
+    verseText: "The LORD is my shepherd; I shall not want."
+  },
+  {
+    id: 19041,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which penitential psalm contains David's request for inner re-creation rather than merely external relief?",
+    choices: ["Psalm 51:10", "Psalm 24:4", "Ezekiel 36:26", "Isaiah 1:16"],
+    answer: 0,
+    reference: "Psalm 51:10",
+    verseText: "Create in me a clean heart, O God."
+  },
+  {
+    id: 19042,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which Asaph psalm resolves the crisis of envying the wicked with the confession, 'Whom have I in heaven but thee'?",
+    choices: ["Psalm 73:25", "Psalm 42:1", "Psalm 16:2", "Isaiah 26:9"],
+    answer: 0,
+    reference: "Psalm 73:25",
+    verseText: "Whom have I in heaven but thee?"
+  },
+  {
+    id: 19043,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which psalm states that God's word is both lamp and light, not merely information but moral guidance?",
+    choices: ["Psalm 119:105", "Proverbs 6:23", "Psalm 19:8", "John 8:12"],
+    answer: 0,
+    reference: "Psalm 119:105",
+    verseText: "Thy word is a lamp unto my feet, and a light unto my path."
+  },
+  {
+    id: 19044,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Psalms",
+    difficulty: "Advanced",
+    question: "Which psalm ends by inviting divine scrutiny rather than merely asserting innocence?",
+    choices: ["Psalm 139:23", "Jeremiah 17:10", "Lamentations 3:40", "Psalm 26:2"],
+    answer: 0,
+    reference: "Psalm 139:23",
+    verseText: "Search me, O God, and know my heart."
+  },
+  {
+    id: 19045,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Wisdom",
+    difficulty: "Advanced",
+    question: "Which wisdom text commands trust in the LORD over autonomous understanding, making surrender epistemic as well as devotional?",
+    choices: ["Proverbs 3:5", "Psalm 37:5", "Isaiah 26:4", "Jeremiah 17:7"],
+    answer: 0,
+    reference: "Proverbs 3:5",
+    verseText: "Trust in the LORD with all thine heart; and lean not unto thine own understanding."
+  },
+  {
+    id: 19046,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Wisdom",
+    difficulty: "Advanced",
+    question: "Which choice best answers this: where does Scripture explicitly connect 'the fear of the LORD' with the beginning of wisdom?",
+    choices: ["Proverbs 9:10 only", "Psalm 111:10 only", "Job 28:28 only", "All three contribute to the theme"],
+    answer: 3,
+    reference: "Proverbs 9:10; Psalm 111:10; Job 28:28",
+    verseText: "The fear of the LORD is the beginning of wisdom."
+  },
+  {
+    id: 19047,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Wisdom",
+    difficulty: "Advanced",
+    question: "Which proverb contains the line about a soft answer turning away wrath, making speech a moral instrument of peace?",
+    choices: ["Proverbs 15:1", "Proverbs 16:7", "Ecclesiastes 10:4", "James 1:19"],
+    answer: 0,
+    reference: "Proverbs 15:1",
+    verseText: "A soft answer turneth away wrath."
+  },
+  {
+    id: 19048,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Wisdom",
+    difficulty: "Advanced",
+    question: "Which reference contains the sharpened reciprocity image, 'Iron sharpeneth iron'?",
+    choices: ["Proverbs 27:17", "Ecclesiastes 4:9", "Psalm 133:1", "1 Samuel 13:20"],
+    answer: 0,
+    reference: "Proverbs 27:17",
+    verseText: "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."
+  },
+  {
+    id: 19049,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Ecclesiastes",
+    difficulty: "Advanced",
+    question: "Which reference contains the refrain that governs the book's exploration of life under the sun: 'Vanity of vanities'?",
+    choices: ["Ecclesiastes 1:2", "Proverbs 31:30", "Psalm 39:5", "Isaiah 40:17"],
+    answer: 0,
+    reference: "Ecclesiastes 1:2",
+    verseText: "Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity."
+  },
+  {
+    id: 19050,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Ecclesiastes",
+    difficulty: "Advanced",
+    question: "Which reference provides Ecclesiastes' concluding synthesis after its long investigation of meaning?",
+    choices: ["Ecclesiastes 12:13", "Deuteronomy 10:12", "Micah 6:8", "Matthew 22:37"],
+    answer: 0,
+    reference: "Ecclesiastes 12:13",
+    verseText: "Fear God, and keep his commandments: for this is the whole duty of man."
+  },
+  {
+    id: 19051,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which reference contains the trisagion from Isaiah's throne-room vision, later echoed in Revelation's worship scenes?",
+    choices: ["Isaiah 6:3", "Revelation 4:8", "Exodus 15:11", "Psalm 99:3"],
+    answer: 0,
+    reference: "Isaiah 6:3; Revelation 4:8",
+    verseText: "Holy, holy, holy, is the LORD of hosts."
+  },
+  {
+    id: 19052,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which Immanuel-text reference is later cited explicitly in Matthew's infancy narrative?",
+    choices: ["Isaiah 7:14", "Genesis 3:15", "Micah 5:2", "Matthew 1:23"],
+    answer: 0,
+    reference: "Isaiah 7:14; Matthew 1:23",
+    verseText: "Behold, a virgin shall conceive, and bear a son."
+  },
+  {
+    id: 19053,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which royal-child prophecy contains the line later read messianically, 'For unto us a child is born'?",
+    choices: ["Isaiah 9:6", "Isaiah 11:1", "Micah 5:2", "Luke 2:11"],
+    answer: 0,
+    reference: "Isaiah 9:6",
+    verseText: "For unto us a child is born, unto us a son is given."
+  },
+  {
+    id: 19054,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which reference contains the governmental language joined to the messianic child in Isaiah's royal oracle?",
+    choices: ["Isaiah 9:6", "Daniel 7:14", "Psalm 2:9", "Zechariah 9:10"],
+    answer: 0,
+    reference: "Isaiah 9:6",
+    verseText: "The government shall be upon his shoulder."
+  },
+  {
+    id: 19055,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which reference gives the Jesse-shoot imagery that later informs branch and messianic expectation?",
+    choices: ["Isaiah 11:1", "Jeremiah 23:5", "Zechariah 3:8", "Matthew 2:23"],
+    answer: 0,
+    reference: "Isaiah 11:1",
+    verseText: "There shall come forth a rod out of the stem of Jesse."
+  },
+  {
+    id: 19056,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which reference contains the cleansing promise about scarlet sins becoming white as snow, in a chapter of covenant indictment?",
+    choices: ["Isaiah 1:18", "Psalm 51:7", "Jeremiah 2:22", "Revelation 7:14"],
+    answer: 0,
+    reference: "Isaiah 1:18",
+    verseText: "Though your sins be as scarlet, they shall be as white as snow."
+  },
+  {
+    id: 19057,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which exilic-comfort reference opens with the imperative, 'Comfort ye, comfort ye my people'?",
+    choices: ["Isaiah 40:1", "Isaiah 35:4", "Jeremiah 31:13", "2 Corinthians 1:4"],
+    answer: 0,
+    reference: "Isaiah 40:1",
+    verseText: "Comfort ye, comfort ye my people, saith your God."
+  },
+  {
+    id: 19058,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which reference contains the promise that waiting on the LORD renews strength, in a passage about the everlasting God?",
+    choices: ["Isaiah 40:31", "Psalm 27:14", "Lamentations 3:25", "Hebrews 12:12"],
+    answer: 0,
+    reference: "Isaiah 40:31",
+    verseText: "They that wait upon the LORD shall renew their strength."
+  },
+  {
+    id: 19059,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which anti-idolatry reference declares, 'I am the LORD, and there is none else'?",
+    choices: ["Isaiah 45:5", "Deuteronomy 6:4", "Exodus 20:3", "Mark 12:29"],
+    answer: 0,
+    reference: "Isaiah 45:5",
+    verseText: "I am the LORD, and there is none else."
+  },
+  {
+    id: 19060,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which Zion-comfort reference asks whether a nursing mother can forget her child, only to surpass even that analogy?",
+    choices: ["Isaiah 49:15", "Isaiah 66:13", "Psalm 27:10", "Hosea 11:8"],
+    answer: 0,
+    reference: "Isaiah 49:15",
+    verseText: "Can a woman forget her sucking child?"
+  },
+  {
+    id: 19061,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which servant-song reference universalizes human wandering with the line, 'All we like sheep have gone astray'?",
+    choices: ["Isaiah 53:6", "Psalm 23:1", "Ezekiel 34:6", "1 Peter 2:25"],
+    answer: 0,
+    reference: "Isaiah 53:6",
+    verseText: "All we like sheep have gone astray."
+  },
+  {
+    id: 19062,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Isaiah",
+    difficulty: "Advanced",
+    question: "Which servant-song reference contains the substitutionary line, 'He was wounded for our transgressions'?",
+    choices: ["Isaiah 53:5", "Psalm 22:16", "Zechariah 12:10", "John 19:34"],
+    answer: 0,
+    reference: "Isaiah 53:5",
+    verseText: "He was wounded for our transgressions, he was bruised for our iniquities."
+  },
+  {
+    id: 19063,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Jeremiah",
+    difficulty: "Advanced",
+    question: "Which reference diagnoses the deceitfulness of the heart, locating covenant crisis beneath external religion?",
+    choices: ["Jeremiah 17:9", "Genesis 6:5", "Psalm 51:10", "Mark 7:21"],
     answer: 0,
     reference: "Jeremiah 17:9",
-    verseText: "Wicked."
+    verseText: "The heart is deceitful above all things, and desperately wicked."
   },
-
   {
-    id: 17003,
-    game: "Finish the Verse",
+    id: 19064,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Jeremiah",
     difficulty: "Advanced",
-    question: 'Finish: "The secret things belong unto the LORD our God: but those things which are revealed belong unto us and to our children for ____."',
-    choices: ["ever", "a testimony", "many generations", "instruction"],
+    question: "Which exile-letter reference is often isolated devotionally, though its original setting addresses covenant hope after judgment?",
+    choices: ["Jeremiah 29:11", "Isaiah 55:8", "Romans 8:28", "Psalm 33:11"],
     answer: 0,
-    reference: "Deuteronomy 29:29",
-    verseText: "Ever."
-  },
-
-  {
-    id: 17004,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "To obey is better than sacrifice, and to hearken than the fat of ____."',
-    choices: ["bullocks", "goats", "lambs", "rams"],
-    answer: 3,
-    reference: "1 Samuel 15:22",
-    verseText: "Rams."
-  },
-
-  {
-    id: 17005,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The fear of the LORD is the beginning of ____."',
-    choices: ["knowledge", "understanding", "wisdom", "instruction"],
-    answer: 0,
-    reference: "Proverbs 1:7",
-    verseText: "Knowledge."
-  },
-
-  {
-    id: 17006,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "There is a way which seemeth right unto a man, but the end thereof are the ways of ____."',
-    choices: ["sorrow", "judgment", "death", "destruction"],
-    answer: 2,
-    reference: "Proverbs 14:12",
-    verseText: "Death."
-  },
-
-  {
-    id: 17007,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Without shedding of blood is no ____."',
-    choices: ["atonement", "cleansing", "forgiveness", "remission"],
-    answer: 3,
-    reference: "Hebrews 9:22",
-    verseText: "Remission."
-  },
-
-  {
-    id: 17008,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Cursed is every one that continueth not in all things which are written in the book of the law to ____."',
-    choices: ["know them", "teach them", "do them", "remember them"],
-    answer: 2,
-    reference: "Galatians 3:10",
-    verseText: "Do them."
-  },
-
-  {
-    id: 17009,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The letter killeth, but the spirit giveth ____."',
-    choices: ["hope", "grace", "power", "life"],
-    answer: 3,
-    reference: "2 Corinthians 3:6",
-    verseText: "Life."
-  },
-
-  {
-    id: 17010,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Whom the Lord loveth he chasteneth, and scourgeth every son whom he ____."',
-    choices: ["knows", "accepteth", "calls", "receiveth"],
-    answer: 3,
-    reference: "Hebrews 12:6",
-    verseText: "Receiveth."
-  },
-
-  {
-    id: 17011,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The law was our schoolmaster to bring us unto Christ, that we might be justified by ____."',
-    choices: ["grace", "faith", "mercy", "truth"],
-    answer: 1,
-    reference: "Galatians 3:24",
-    verseText: "Faith."
-  },
-
-  {
-    id: 17012,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Be ye holy; for I am ____."',
-    choices: ["the LORD", "holy", "with you", "jealous"],
-    answer: 1,
-    reference: "1 Peter 1:16",
-    verseText: "Holy."
-  },
-
-  {
-    id: 17013,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "If I regard iniquity in my heart, the Lord will not hear ____."',
-    choices: ["prayer", "supplication", "me", "my voice"],
-    answer: 2,
-    reference: "Psalm 66:18",
-    verseText: "Me."
-  },
-
-  {
-    id: 17014,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The entrance of thy words giveth light; it giveth understanding unto the ____."',
-    choices: ["simple", "upright", "young", "poor"],
-    answer: 0,
-    reference: "Psalm 119:130",
-    verseText: "Simple."
-  },
-
-  {
-    id: 17015,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Except the LORD build the house, they labour in vain that ____."',
-    choices: ["dwell in it", "watch it", "build it", "establish it"],
-    answer: 2,
-    reference: "Psalm 127:1",
-    verseText: "Build it."
-  },
-
-  {
-    id: 17016,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Keep thy heart with all diligence; for out of it are the issues of ____."',
-    choices: ["truth", "life", "wisdom", "blessing"],
-    answer: 1,
-    reference: "Proverbs 4:23",
-    verseText: "Life."
-  },
-
-  {
-    id: 17017,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "He that covereth his sins shall not prosper: but whoso confesseth and forsaketh them shall have ____."',
-    choices: ["grace", "mercy", "peace", "pardon"],
-    answer: 1,
-    reference: "Proverbs 28:13",
-    verseText: "Mercy."
-  },
-
-  {
-    id: 17018,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "A soft answer turneth away wrath: but grievous words stir up ____."',
-    choices: ["division", "anger", "strife", "folly"],
-    answer: 1,
-    reference: "Proverbs 15:1",
-    verseText: "Anger."
-  },
-
-  {
-    id: 17019,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Pride goeth before destruction, and an haughty spirit before a ____."',
-    choices: ["rebuke", "snare", "fall", "judgment"],
-    answer: 2,
-    reference: "Proverbs 16:18",
-    verseText: "Fall."
-  },
-
-  {
-    id: 17020,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Iron sharpeneth iron; so a man sharpeneth the countenance of his ____."',
-    choices: ["companion", "brother", "friend", "neighbor"],
-    answer: 2,
-    reference: "Proverbs 27:17",
-    verseText: "Friend."
-  },
-
-  {
-    id: 17021,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "To every thing there is a season, and a time to every purpose under the ____."',
-    choices: ["earth", "sun", "heavens", "sky"],
-    answer: 2,
-    reference: "Ecclesiastes 3:1",
-    verseText: "Heaven."
-  },
-
-  {
-    id: 17022,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Fear God, and keep his commandments: for this is the whole duty of ____."',
-    choices: ["the saints", "every believer", "man", "Israel"],
-    answer: 2,
-    reference: "Ecclesiastes 12:13",
-    verseText: "Man."
-  },
-
-  {
-    id: 17023,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "He is despised and rejected of men; a man of sorrows, and acquainted with ____."',
-    choices: ["grief", "affliction", "suffering", "shame"],
-    answer: 0,
-    reference: "Isaiah 53:3",
-    verseText: "Grief."
-  },
-
-  {
-    id: 17024,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "All we like sheep have gone astray; we have turned every one to his own ____."',
-    choices: ["desire", "will", "path", "way"],
-    answer: 3,
-    reference: "Isaiah 53:6",
-    verseText: "Way."
-  },
-
-  {
-    id: 17025,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in ____."',
-    choices: ["the LORD", "thee", "truth", "mercy"],
-    answer: 1,
-    reference: "Isaiah 26:3",
-    verseText: "Thee."
-  },
-
-  {
-    id: 17026,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The grass withereth, the flower fadeth: but the word of our God shall stand for ____."',
-    choices: ["ages", "all generations", "ever", "eternity"],
-    answer: 2,
-    reference: "Isaiah 40:8",
-    verseText: "Ever."
-  },
-
-  {
-    id: 17027,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "This people draw near me with their mouth, and with their lips do honour me, but have removed their heart far from ____."',
-    choices: ["truth", "my law", "me", "righteousness"],
-    answer: 2,
-    reference: "Isaiah 29:13",
-    verseText: "Me."
-  },
-
-  {
-    id: 17028,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Is not my word like as a fire? saith the LORD; and like a hammer that breaketh the rock in ____."',
-    choices: ["pieces", "fragments", "dust", "two"],
-    answer: 0,
-    reference: "Jeremiah 23:29",
-    verseText: "Pieces."
-  },
-
-  {
-    id: 17029,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The LORD is good unto them that wait for him, to the soul that ____ him."',
-    choices: ["obeys", "loves", "seeketh", "trusts"],
-    answer: 2,
-    reference: "Lamentations 3:25",
-    verseText: "Seeketh him."
-  },
-
-  {
-    id: 17030,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Though he slay me, yet will I trust in him: but I will maintain mine own ways before ____."',
-    choices: ["God", "the Judge", "him", "the LORD"],
-    answer: 2,
-    reference: "Job 13:15",
-    verseText: "Him."
-  },
-
-  {
-    id: 17031,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "They that wait upon the LORD shall renew their strength; they shall mount up with wings as ____."',
-    choices: ["angels", "eagles", "doves", "seraphim"],
-    answer: 1,
-    reference: "Isaiah 40:31",
-    verseText: "Eagles."
-  },
-
-  {
-    id: 17032,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Not by might, nor by power, but by my Spirit, saith the LORD of ____."',
-    choices: ["Israel", "hosts", "glory", "heaven"],
-    answer: 1,
-    reference: "Zechariah 4:6",
-    verseText: "Hosts."
-  },
-
-  {
-    id: 17033,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The just shall live by his ____."',
-    choices: ["obedience", "hope", "faith", "righteousness"],
-    answer: 2,
-    reference: "Habakkuk 2:4",
-    verseText: "Faith."
-  },
-
-  {
-    id: 17034,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Who is a God like unto thee, that pardoneth iniquity, and passeth by the transgression of the remnant of his ____?"',
-    choices: ["people", "heritage", "saints", "inheritance"],
-    answer: 1,
-    reference: "Micah 7:18",
-    verseText: "Heritage."
-  },
-
-  {
-    id: 17035,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The LORD is in his holy temple: let all the earth keep silence before ____."',
-    choices: ["him", "the LORD", "his throne", "heaven"],
-    answer: 0,
-    reference: "Habakkuk 2:20",
-    verseText: "Him."
-  },
-
-  {
-    id: 17036,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy ____?"',
-    choices: ["Maker", "God", "Redeemer", "King"],
-    answer: 1,
-    reference: "Micah 6:8",
-    verseText: "God."
-  },
-
-  {
-    id: 17037,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The LORD your God is God of gods, and Lord of lords, a great God, a mighty, and a ____."',
-    choices: ["holy", "terrible", "faithful", "jealous"],
-    answer: 1,
-    reference: "Deuteronomy 10:17",
-    verseText: "Terrible."
-  },
-
-  {
-    id: 17038,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Know therefore that the LORD thy God, he is God, the faithful God, which keepeth covenant and mercy with them that love him and keep his commandments to a ____ generations."',
-    choices: ["hundred", "thousand", "multitude of", "great many"],
-    answer: 1,
-    reference: "Deuteronomy 7:9",
-    verseText: "Thousand generations."
-  },
-
-  {
-    id: 17039,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The LORD is my portion, saith my soul; therefore will I hope in ____."',
-    choices: ["him", "thee", "his word", "salvation"],
-    answer: 0,
-    reference: "Lamentations 3:24",
-    verseText: "Him."
-  },
-
-  {
-    id: 17040,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The LORD is nigh unto all them that call upon him, to all that call upon him in ____."',
-    choices: ["spirit", "prayer", "faith", "truth"],
-    answer: 3,
-    reference: "Psalm 145:18",
-    verseText: "Truth."
-  },
-
-  {
-    id: 17041,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Blessed is the man that trusteth in the LORD, and whose hope the LORD ____."',
-    choices: ["gives", "is", "sustains", "shall be"],
-    answer: 1,
-    reference: "Jeremiah 17:7",
-    verseText: "Is."
-  },
-
-  {
-    id: 17042,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "As for God, his way is perfect: the word of the LORD is ____."',
-    choices: ["proven", "tried", "settled", "pure"],
-    answer: 1,
-    reference: "Psalm 18:30",
-    verseText: "Tried."
-  },
-
-  {
-    id: 17043,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "For with thee is the fountain of life: in thy light shall we see ____."',
-    choices: ["glory", "salvation", "truth", "light"],
-    answer: 3,
-    reference: "Psalm 36:9",
-    verseText: "Light."
-  },
-
-  {
-    id: 17044,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ____."',
-    choices: ["ever", "many days", "all my years", "always"],
-    answer: 0,
-    reference: "Psalm 23:6",
-    verseText: "Ever."
-  },
-
-  {
-    id: 17045,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Commit thy way unto the LORD; trust also in him; and he shall bring it to ____."',
-    choices: ["pass", "light", "completion", "fulfillment"],
-    answer: 0,
-    reference: "Psalm 37:5",
-    verseText: "Pass."
-  },
-
-  {
-    id: 17046,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not ____."',
-    choices: ["refuse", "despise", "forget", "cast away"],
-    answer: 1,
-    reference: "Psalm 51:17",
-    verseText: "Despise."
-  },
-
-  {
-    id: 17047,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Let the redeemed of the LORD say so, whom he hath redeemed from the hand of the ____."',
-    choices: ["wicked", "enemy", "stranger", "destroyer"],
-    answer: 1,
-    reference: "Psalm 107:2",
-    verseText: "Enemy."
-  },
-
-  {
-    id: 17048,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "If the foundations be destroyed, what can the righteous ____?"',
-    choices: ["say", "do", "build", "hope"],
-    answer: 1,
-    reference: "Psalm 11:3",
-    verseText: "Do?"
-  },
-
-  {
-    id: 17049,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The meek will he guide in judgment: and the meek will he teach his ____."',
-    choices: ["covenant", "path", "way", "truth"],
-    answer: 2,
-    reference: "Psalm 25:9",
-    verseText: "Way."
-  },
-
-  {
-    id: 17050,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Some trust in chariots, and some in horses: but we will remember the name of the LORD our ____."',
-    choices: ["King", "God", "defense", "salvation"],
-    answer: 1,
-    reference: "Psalm 20:7",
-    verseText: "God."
-  },
-
-  {
-    id: 17051,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "A merry heart doeth good like a medicine: but a broken spirit drieth the ____."',
-    choices: ["body", "strength", "heart", "bones"],
-    answer: 3,
-    reference: "Proverbs 17:22",
-    verseText: "Bones."
-  },
-
-  {
-    id: 17052,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The name of the LORD is a strong tower: the righteous runneth into it, and is ____."',
-    choices: ["hidden", "safe", "delivered", "guarded"],
-    answer: 1,
-    reference: "Proverbs 18:10",
-    verseText: "Safe."
-  },
-
-  {
-    id: 17053,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Death and life are in the power of the tongue: and they that love it shall eat the fruit ____."',
-    choices: ["thereof", "of it", "that remains", "of the lips"],
-    answer: 0,
-    reference: "Proverbs 18:21",
-    verseText: "Thereof."
-  },
-
-  {
-    id: 17054,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Hope deferred maketh the heart sick: but when the desire cometh, it is a tree of ____."',
-    choices: ["peace", "life", "joy", "blessing"],
-    answer: 1,
-    reference: "Proverbs 13:12",
-    verseText: "Life."
-  },
-
-  {
-    id: 17055,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The righteous is more excellent than his neighbour: but the way of the wicked seduceth ____."',
-    choices: ["many", "them", "all", "him"],
-    answer: 3,
-    reference: "Proverbs 12:26",
-    verseText: "Him."
-  },
-
-  {
-    id: 17056,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "As a dog returneth to his vomit, so a fool returneth to his ____."',
-    choices: ["way", "sin", "folly", "error"],
-    answer: 2,
-    reference: "Proverbs 26:11",
-    verseText: "Folly."
-  },
-
-  {
-    id: 17057,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Trust in the LORD with all thine heart; and lean not unto thine own ____."',
-    choices: ["strength", "wisdom", "understanding", "reasoning"],
-    answer: 2,
-    reference: "Proverbs 3:5",
-    verseText: "Understanding."
-  },
-
-  {
-    id: 17058,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "In all thy ways acknowledge him, and he shall direct thy ____."',
-    choices: ["steps", "desires", "paths", "goings"],
-    answer: 2,
-    reference: "Proverbs 3:6",
-    verseText: "Paths."
-  },
-
-  {
-    id: 17059,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Go to the ant, thou sluggard; consider her ways, and be ____."',
-    choices: ["diligent", "wise", "careful", "humbled"],
-    answer: 1,
-    reference: "Proverbs 6:6",
-    verseText: "Wise."
-  },
-
-  {
-    id: 17060,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The blessing of the LORD, it maketh rich, and he addeth no sorrow with ____."',
-    choices: ["it", "that", "riches", "blessing"],
-    answer: 0,
-    reference: "Proverbs 10:22",
-    verseText: "It."
-  },
-
-  {
-    id: 17061,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as ____."',
-    choices: ["wool", "milk", "snow", "light"],
-    answer: 2,
-    reference: "Isaiah 1:18",
-    verseText: "Snow."
-  },
-
-  {
-    id: 17062,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "For unto us a child is born, unto us a son is given: and the government shall be upon his ____."',
-    choices: ["crown", "hand", "shoulder", "throne"],
-    answer: 2,
-    reference: "Isaiah 9:6",
-    verseText: "Shoulder."
-  },
-
-  {
-    id: 17063,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "He was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are ____."',
-    choices: ["forgiven", "redeemed", "healed", "restored"],
-    answer: 2,
-    reference: "Isaiah 53:5",
-    verseText: "Healed."
-  },
-
-  {
-    id: 17064,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Seek ye the LORD while he may be found, call ye upon him while he is ____."',
-    choices: ["merciful", "near", "listening", "ready"],
-    answer: 1,
-    reference: "Isaiah 55:6",
-    verseText: "Near."
-  },
-
-  {
-    id: 17065,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "My word... shall not return unto me void, but it shall accomplish that which I ____."',
-    choices: ["command", "spoke", "please", "have purposed"],
-    answer: 2,
-    reference: "Isaiah 55:11",
-    verseText: "Please."
-  },
-
-  {
-    id: 17066,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Behold, I have graven thee upon the palms of my hands; thy walls are continually before ____."',
-    choices: ["me", "mine eyes", "my face", "thee"],
-    answer: 0,
-    reference: "Isaiah 49:16",
-    verseText: "Me."
-  },
-
-  {
-    id: 17067,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Stand ye in the ways, and see, and ask for the old paths, where is the good way, and walk therein, and ye shall find rest for your ____."',
-    choices: ["minds", "souls", "hearts", "lives"],
-    answer: 1,
-    reference: "Jeremiah 6:16",
-    verseText: "Souls."
-  },
-
-  {
-    id: 17068,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected ____."',
-    choices: ["hope", "end", "future", "inheritance"],
-    answer: 1,
     reference: "Jeremiah 29:11",
-    verseText: "End."
+    verseText: "I know the thoughts that I think toward you, saith the LORD, thoughts of peace."
   },
-
   {
-    id: 17069,
-    game: "Finish the Verse",
+    id: 19065,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Jeremiah",
     difficulty: "Advanced",
-    question: 'Finish: "Blessed is the man that trusteth in the LORD, and whose hope the LORD ____."',
-    choices: ["maintains", "is", "saves", "becomes"],
-    answer: 1,
-    reference: "Jeremiah 17:7",
-    verseText: "Is."
-  },
-
-  {
-    id: 17070,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: "Finish: \"It is of the LORD'S mercies that we are not consumed, because his compassions ____ not.\"",
-    choices: ["change", "are many", "fail", "cease not"],
-    answer: 2,
-    reference: "Lamentations 3:22",
-    verseText: "Fail not."
-  },
-
-  {
-    id: 17071,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "The soul that sinneth, it shall ____."',
-    choices: ["perish", "die", "be judged", "be cut off"],
-    answer: 1,
-    reference: "Ezekiel 18:4",
-    verseText: "Die."
-  },
-
-  {
-    id: 17072,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "I will take away the stony heart out of your flesh, and I will give you an heart of ____."',
-    choices: ["truth", "mercy", "flesh", "obedience"],
-    answer: 2,
-    reference: "Ezekiel 36:26",
-    verseText: "Flesh."
-  },
-
-  {
-    id: 17073,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "They that turn many to righteousness shall shine as the stars for ever and ____."',
-    choices: ["ever", "always", "evermore", "eternity"],
+    question: "Which new-covenant reference moves the law from stone and scroll to inward inscription?",
+    choices: ["Jeremiah 31:33", "Ezekiel 36:26", "Hebrews 8:10", "Deuteronomy 6:6"],
     answer: 0,
-    reference: "Daniel 12:3",
-    verseText: "Ever."
+    reference: "Jeremiah 31:33; Hebrews 8:10",
+    verseText: "I will put my law in their inward parts, and write it in their hearts."
   },
-
   {
-    id: 17074,
-    game: "Finish the Verse",
+    id: 19066,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Lamentations",
     difficulty: "Advanced",
-    question: 'Finish: "I desired mercy, and not sacrifice; and the knowledge of God more than burnt ____."',
-    choices: ["offerings", "sacrifices", "lambs", "gifts"],
+    question: "Which lament text anchors hope not in circumstances but in the LORD's mercies that do not fail?",
+    choices: ["Lamentations 3:22", "Psalm 103:8", "Micah 7:18", "Romans 9:15"],
+    answer: 0,
+    reference: "Lamentations 3:22",
+    verseText: "It is of the LORD'S mercies that we are not consumed."
+  },
+  {
+    id: 19067,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Ezekiel",
+    difficulty: "Advanced",
+    question: "Which restoration promise contains both new heart and new spirit language rather than mere external reform?",
+    choices: ["Ezekiel 36:26", "Jeremiah 31:33", "Psalm 51:10", "John 3:3"],
+    answer: 0,
+    reference: "Ezekiel 36:26",
+    verseText: "A new heart also will I give you, and a new spirit will I put within you."
+  },
+  {
+    id: 19068,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Ezekiel",
+    difficulty: "Advanced",
+    question: "Which valley-of-dry-bones interpretation explains the vision as corporate restoration of Israel?",
+    choices: ["Ezekiel 37:11", "Isaiah 26:19", "Daniel 12:2", "Hosea 6:2"],
+    answer: 0,
+    reference: "Ezekiel 37:11",
+    verseText: "These bones are the whole house of Israel."
+  },
+  {
+    id: 19069,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Daniel",
+    difficulty: "Advanced",
+    question: "Which kingdom-text reference announces a divine kingdom that will outlast all human empires?",
+    choices: ["Daniel 2:44", "Psalm 145:13", "Isaiah 9:7", "Luke 1:33"],
+    answer: 0,
+    reference: "Daniel 2:44",
+    verseText: "The God of heaven shall set up a kingdom, which shall never be destroyed."
+  },
+  {
+    id: 19070,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Daniel",
+    difficulty: "Advanced",
+    question: "Which Daniel reference repeatedly insists that the Most High rules over earthly kingship?",
+    choices: ["Daniel 4:17", "Daniel 2:21", "Psalm 47:2", "Romans 13:1"],
+    answer: 0,
+    reference: "Daniel 4:17",
+    verseText: "The most High ruleth in the kingdom of men."
+  },
+  {
+    id: 19071,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Daniel",
+    difficulty: "Advanced",
+    question: "Which apocalyptic reference explicitly speaks of many awakening from the dust of the earth?",
+    choices: ["Daniel 12:2", "Isaiah 26:19", "Job 19:25", "John 5:28"],
+    answer: 0,
+    reference: "Daniel 12:2",
+    verseText: "Many of them that sleep in the dust of the earth shall awake."
+  },
+  {
+    id: 19072,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Hosea",
+    difficulty: "Advanced",
+    question: "Which prophet contains the line Jesus later quotes against empty formalism: 'I desired mercy, and not sacrifice'?",
+    choices: ["Hosea 6:6", "1 Samuel 15:22", "Micah 6:8", "Matthew 9:13"],
     answer: 0,
     reference: "Hosea 6:6",
-    verseText: "Offerings."
+    verseText: "I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings."
   },
-
   {
-    id: 17075,
-    game: "Finish the Verse",
+    id: 19073,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Joel",
     difficulty: "Advanced",
-    question: 'Finish: "Rend your heart, and not your garments, and turn unto the LORD your God: for he is gracious and merciful, slow to anger, and of great ____."',
-    choices: ["love", "patience", "kindness", "goodness"],
-    answer: 2,
-    reference: "Joel 2:13",
-    verseText: "Kindness."
-  },
-
-  {
-    id: 17076,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Can two walk together, except they be ____?"',
-    choices: ["agreed", "united", "companions", "reconciled"],
+    question: "Which prophetic promise about the Spirit is cited by Peter at Pentecost as inaugurated fulfillment?",
+    choices: ["Joel 2:28", "Ezekiel 36:27", "Acts 2:17", "Numbers 11:29"],
     answer: 0,
-    reference: "Amos 3:3",
-    verseText: "Agreed."
+    reference: "Joel 2:28; Acts 2:17",
+    verseText: "I will pour out my spirit upon all flesh."
   },
-
   {
-    id: 17077,
-    game: "Finish the Verse",
+    id: 19074,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Amos",
     difficulty: "Advanced",
-    question: 'Finish: "What doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy ____?"',
-    choices: ["Lord", "God", "Maker", "Redeemer"],
-    answer: 1,
+    question: "Which justice-text reference rejects performative worship by demanding moral righteousness like a flood?",
+    choices: ["Amos 5:24", "Isaiah 1:17", "Micah 6:8", "James 3:17"],
+    answer: 0,
+    reference: "Amos 5:24",
+    verseText: "Let judgment run down as waters, and righteousness as a mighty stream."
+  },
+  {
+    id: 19075,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Jonah",
+    difficulty: "Advanced",
+    question: "Which prayer reference from inside the fish attributes salvation wholly to the LORD?",
+    choices: ["Jonah 2:9", "Psalm 3:8", "Isaiah 12:2", "Acts 4:12"],
+    answer: 0,
+    reference: "Jonah 2:9",
+    verseText: "Salvation is of the LORD."
+  },
+  {
+    id: 19076,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Micah",
+    difficulty: "Advanced",
+    question: "Which prophetic summary joins justice, mercy, and humility into a compact covenant-ethics formula?",
+    choices: ["Micah 6:8", "Deuteronomy 10:12", "Ecclesiastes 12:13", "Matthew 23:23"],
+    answer: 0,
     reference: "Micah 6:8",
-    verseText: "God."
+    verseText: "What doth the LORD require of thee, but to do justly, and to love mercy."
   },
-
   {
-    id: 17078,
-    game: "Finish the Verse",
+    id: 19077,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Micah",
     difficulty: "Advanced",
-    question: 'Finish: "The just shall live by his ____."',
-    choices: ["faith", "obedience", "wisdom", "integrity"],
+    question: "Which Bethlehem prophecy later surfaces in the Gospel nativity debates about Messiah's origin?",
+    choices: ["Micah 5:2", "Isaiah 9:6", "Jeremiah 23:5", "Matthew 2:6"],
+    answer: 0,
+    reference: "Micah 5:2; Matthew 2:6",
+    verseText: "But thou, Bethlehem Ephratah... out of thee shall he come forth unto me that is to be ruler in Israel."
+  },
+  {
+    id: 19078,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Habakkuk",
+    difficulty: "Advanced",
+    question: "Which reference supplies the original wording later reused in Romans, Galatians, and Hebrews for faith-theology?",
+    choices: ["Habakkuk 2:4", "Romans 1:17", "Galatians 3:11", "Hebrews 10:38"],
     answer: 0,
     reference: "Habakkuk 2:4",
-    verseText: "Faith."
+    verseText: "The just shall live by his faith."
   },
-
   {
-    id: 17079,
-    game: "Finish the Verse",
+    id: 19079,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Habakkuk",
     difficulty: "Advanced",
-    question: 'Finish: "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in ____."',
-    choices: ["him", "his name", "the LORD", "mercy"],
+    question: "Which temple text answers raging human speech with silence before the enthroned LORD?",
+    choices: ["Habakkuk 2:20", "Psalm 46:10", "Zephaniah 1:7", "Revelation 8:1"],
     answer: 0,
-    reference: "Nahum 1:7",
-    verseText: "Him."
+    reference: "Habakkuk 2:20",
+    verseText: "The LORD is in his holy temple: let all the earth keep silence before him."
   },
-
   {
-    id: 17080,
-    game: "Finish the Verse",
+    id: 19080,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Zechariah",
     difficulty: "Advanced",
-    question: 'Finish: "Yet I will rejoice in the LORD, I will joy in the God of my ____."',
-    choices: ["hope", "strength", "salvation", "deliverance"],
-    answer: 2,
-    reference: "Habakkuk 3:18",
-    verseText: "Salvation."
+    question: "Which post-exilic reference teaches that restoration advances by the Spirit rather than by might or power?",
+    choices: ["Zechariah 4:6", "Haggai 2:5", "Isaiah 31:1", "Ephesians 6:10"],
+    answer: 0,
+    reference: "Zechariah 4:6",
+    verseText: "Not by might, nor by power, but by my spirit, saith the LORD of hosts."
   },
-
   {
-    id: 17081,
-    game: "Finish the Verse",
+    id: 19081,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Zechariah",
     difficulty: "Advanced",
-    question: 'Finish: "Blessed are the poor in spirit: for theirs is the kingdom of ____."',
-    choices: ["God", "glory", "heaven", "the Lord"],
-    answer: 2,
-    reference: "Matthew 5:3",
-    verseText: "Heaven."
+    question: "Which triumphal-king oracle is cited in the Gospels to interpret Jesus' entry into Jerusalem?",
+    choices: ["Zechariah 9:9", "Psalm 24:7", "Isaiah 62:11", "Matthew 21:5"],
+    answer: 0,
+    reference: "Zechariah 9:9; Matthew 21:5",
+    verseText: "Behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass."
   },
-
   {
-    id: 17082,
-    game: "Finish the Verse",
+    id: 19082,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Zechariah",
     difficulty: "Advanced",
-    question: 'Finish: "Blessed are the pure in heart: for they shall see ____."',
-    choices: ["light", "God", "peace", "truth"],
-    answer: 1,
+    question: "Which piercing text is later explicitly connected to Jesus' crucifixion in John's Gospel?",
+    choices: ["Zechariah 12:10", "Psalm 22:16", "Isaiah 53:5", "John 19:37"],
+    answer: 0,
+    reference: "Zechariah 12:10; John 19:37",
+    verseText: "They shall look upon me whom they have pierced."
+  },
+  {
+    id: 19083,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Malachi",
+    difficulty: "Advanced",
+    question: "Which messenger-text is applied in the New Testament to John the Baptist's preparatory role?",
+    choices: ["Malachi 3:1", "Isaiah 40:3", "Matthew 11:10", "Mark 1:2"],
+    answer: 0,
+    reference: "Malachi 3:1",
+    verseText: "Behold, I will send my messenger, and he shall prepare the way before me."
+  },
+  {
+    id: 19084,
+    game: "Verses",
+    testament: "Old Testament",
+    category: "Malachi",
+    difficulty: "Advanced",
+    question: "Which closing-prophet reference speaks of the Sun of righteousness arising with healing in his wings?",
+    choices: ["Malachi 4:2", "Psalm 84:11", "Luke 1:78", "Revelation 22:16"],
+    answer: 0,
+    reference: "Malachi 4:2",
+    verseText: "Unto you that fear my name shall the Sun of righteousness arise with healing in his wings."
+  },
+  {
+    id: 19085,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which infancy reference explicitly ties the name Jesus to His mission of saving His people from their sins?",
+    choices: ["Matthew 1:21", "Luke 1:31", "Acts 4:12", "Hebrews 7:25"],
+    answer: 0,
+    reference: "Matthew 1:21",
+    verseText: "Thou shalt call his name JESUS: for he shall save his people from their sins."
+  },
+  {
+    id: 19086,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which reference identifies Jesus from heaven as the beloved Son at His baptism, not at the transfiguration?",
+    choices: ["Matthew 3:17", "Matthew 17:5", "John 1:34", "2 Peter 1:17"],
+    answer: 0,
+    reference: "Matthew 3:17",
+    verseText: "This is my beloved Son, in whom I am well pleased."
+  },
+  {
+    id: 19087,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which Beatitude promises vision of God specifically to the pure in heart?",
+    choices: ["Matthew 5:8", "Hebrews 12:14", "Psalm 24:4", "1 John 3:2"],
+    answer: 0,
     reference: "Matthew 5:8",
-    verseText: "God."
+    verseText: "Blessed are the pure in heart: for they shall see God."
   },
-
   {
-    id: 17083,
-    game: "Finish the Verse",
+    id: 19088,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
     difficulty: "Advanced",
-    question: 'Finish: "Where your treasure is, there will your heart be ____."',
-    choices: ["also", "found", "always", "likewise"],
+    question: "Which Sermon on the Mount reference identifies disciples as the salt of the earth?",
+    choices: ["Matthew 5:13", "Mark 9:50", "Luke 14:34", "Colossians 4:6"],
     answer: 0,
-    reference: "Matthew 6:21",
-    verseText: "Also."
+    reference: "Matthew 5:13",
+    verseText: "Ye are the salt of the earth."
   },
-
   {
-    id: 17084,
-    game: "Finish the Verse",
+    id: 19089,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
     difficulty: "Advanced",
-    question: 'Finish: "Enter ye in at the strait gate: for wide is the gate, and broad is the way, that leadeth to ____."',
-    choices: ["judgment", "destruction", "death", "perdition"],
-    answer: 1,
+    question: "Which reference forbids storing treasure on earth in a section about divided loyalties and true reward?",
+    choices: ["Matthew 6:19", "Luke 12:33", "1 Timothy 6:17", "James 5:3"],
+    answer: 0,
+    reference: "Matthew 6:19",
+    verseText: "Lay not up for yourselves treasures upon earth."
+  },
+  {
+    id: 19090,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which kingdom-priority text appears in the anti-anxiety section rather than in a parable discourse?",
+    choices: ["Matthew 6:33", "Luke 12:31", "Romans 14:17", "Colossians 3:1"],
+    answer: 0,
+    reference: "Matthew 6:33",
+    verseText: "Seek ye first the kingdom of God, and his righteousness."
+  },
+  {
+    id: 19091,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which reference contains the statement 'Judge not, that ye be not judged' in a context that also condemns hypocrisy?",
+    choices: ["Matthew 7:1", "Luke 6:37", "Romans 14:13", "John 7:24"],
+    answer: 0,
+    reference: "Matthew 7:1",
+    verseText: "Judge not, that ye be not judged."
+  },
+  {
+    id: 19092,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which reference contains Jesus' warning to enter by the strait gate rather than the broad way?",
+    choices: ["Matthew 7:13", "Luke 13:24", "John 10:9", "Acts 14:22"],
+    answer: 0,
     reference: "Matthew 7:13",
-    verseText: "Destruction."
+    verseText: "Enter ye in at the strait gate."
   },
-
   {
-    id: 17085,
-    game: "Finish the Verse",
+    id: 19093,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
     difficulty: "Advanced",
-    question: 'Finish: "Many are called, but few are ____."',
-    choices: ["ready", "chosen", "faithful", "worthy"],
-    answer: 1,
-    reference: "Matthew 22:14",
-    verseText: "Chosen."
-  },
-
-  {
-    id: 17086,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Whosoever will come after me, let him deny himself, and take up his cross, and follow ____."',
-    choices: ["the truth", "afterward", "me", "daily"],
-    answer: 2,
-    reference: "Mark 8:34",
-    verseText: "Me."
-  },
-
-  {
-    id: 17087,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "For the Son of man is come to seek and to save that which was ____."',
-    choices: ["dead", "wandering", "lost", "fallen"],
-    answer: 2,
-    reference: "Luke 19:10",
-    verseText: "Lost."
-  },
-
-  {
-    id: 17088,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "No man can come to me, except the Father which hath sent me ____ him."',
-    choices: ["teach", "draw", "call", "receive"],
-    answer: 1,
-    reference: "John 6:44",
-    verseText: "Draw him."
-  },
-
-  {
-    id: 17089,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Sanctify them through thy truth: thy word is ____."',
-    choices: ["pure", "light", "truth", "life"],
-    answer: 2,
-    reference: "John 17:17",
-    verseText: "Truth."
-  },
-
-  {
-    id: 17090,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Except a man be born of water and of the Spirit, he cannot enter into the kingdom of ____."',
-    choices: ["glory", "heaven", "God", "the Lord"],
-    answer: 2,
-    reference: "John 3:5",
-    verseText: "God."
-  },
-
-  {
-    id: 17091,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Ye shall know the truth, and the truth shall make you ____."',
-    choices: ["whole", "wise", "free", "clean"],
-    answer: 2,
-    reference: "John 8:32",
-    verseText: "Free."
-  },
-
-  {
-    id: 17092,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "In him was life; and the life was the light of ____."',
-    choices: ["the world", "all men", "men", "the nations"],
-    answer: 2,
-    reference: "John 1:4",
-    verseText: "Men."
-  },
-
-  {
-    id: 17093,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Repent ye therefore, and be converted, that your sins may be ____ out."',
-    choices: ["washed", "forgiven", "blotted", "taken"],
-    answer: 2,
-    reference: "Acts 3:19",
-    verseText: "Blotted."
-  },
-
-  {
-    id: 17094,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "We ought to obey God rather than ____."',
-    choices: ["rulers", "ourselves", "men", "tradition"],
-    answer: 2,
-    reference: "Acts 5:29",
-    verseText: "Men."
-  },
-
-  {
-    id: 17095,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "There is none righteous, no, not ____."',
-    choices: ["many", "one", "any", "one man"],
-    answer: 1,
-    reference: "Romans 3:10",
-    verseText: "One."
-  },
-
-  {
-    id: 17096,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Being justified freely by his grace through the redemption that is in Christ ____."',
-    choices: ["Jesus", "alone", "the Lord", "our Savior"],
+    question: "Which invitation-to-rest text occurs in Matthew's reflection on burden, yoke, and meekness?",
+    choices: ["Matthew 11:28", "John 6:37", "Hebrews 4:16", "Psalm 55:22"],
     answer: 0,
-    reference: "Romans 3:24",
-    verseText: "Jesus."
+    reference: "Matthew 11:28",
+    verseText: "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
   },
-
   {
-    id: 17097,
-    game: "Finish the Verse",
+    id: 19094,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
     difficulty: "Advanced",
-    question: 'Finish: "The wages of sin is death; but the gift of God is eternal life through Jesus Christ our ____."',
-    choices: ["Redeemer", "Lord", "Savior", "King"],
-    answer: 1,
-    reference: "Romans 6:23",
-    verseText: "Lord."
-  },
-
-  {
-    id: 17098,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Faith cometh by hearing, and hearing by the word of ____."',
-    choices: ["Christ", "truth", "God", "the gospel"],
-    answer: 2,
-    reference: "Romans 10:17",
-    verseText: "God."
-  },
-
-  {
-    id: 17099,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "If God be for us, who can be against ____?"',
-    choices: ["the saints", "them", "us", "his elect"],
-    answer: 2,
-    reference: "Romans 8:31",
-    verseText: "Us."
-  },
-
-  {
-    id: 17100,
-    game: "Finish the Verse",
-    difficulty: "Advanced",
-    question: 'Finish: "Be not conformed to this world: but be ye transformed by the renewing of your ____."',
-    choices: ["mind", "heart", "spirit", "understanding"],
+    question: "Which church-foundation reference follows Peter's confession and precedes discussion of the keys and binding-loosing?",
+    choices: ["Matthew 16:18", "Ephesians 2:20", "1 Peter 2:5", "Acts 2:42"],
     answer: 0,
-    reference: "Romans 12:2",
-    verseText: "Mind."
+    reference: "Matthew 16:18",
+    verseText: "Upon this rock I will build my church."
+  },
+  {
+    id: 19095,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which marriage text preserves Jesus' appeal to creation against easy divorce?",
+    choices: ["Matthew 19:6", "Mark 10:9", "Ephesians 5:31", "Malachi 2:16"],
+    answer: 0,
+    reference: "Matthew 19:6",
+    verseText: "What therefore God hath joined together, let not man put asunder."
+  },
+  {
+    id: 19096,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which reference makes greatness among disciples a matter of servanthood rather than rank?",
+    choices: ["Matthew 20:27", "Mark 10:44", "Luke 22:26", "Philippians 2:7"],
+    answer: 0,
+    reference: "Matthew 20:27",
+    verseText: "Whosoever will be chief among you, let him be your servant."
+  },
+  {
+    id: 19097,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which eschatological exhortation combines watchfulness with uncertainty about the hour of the Lord's coming?",
+    choices: ["Matthew 24:42", "Mark 13:33", "Luke 21:36", "1 Thessalonians 5:6"],
+    answer: 0,
+    reference: "Matthew 24:42",
+    verseText: "Watch therefore: for ye know not what hour your Lord doth come."
+  },
+  {
+    id: 19098,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which judgment-scene reference ties treatment of 'the least of these' to treatment of Christ Himself?",
+    choices: ["Matthew 25:40", "James 2:1", "Galatians 6:10", "Hebrews 13:2"],
+    answer: 0,
+    reference: "Matthew 25:40",
+    verseText: "Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me."
+  },
+  {
+    id: 19099,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which crucifixion reference gives Matthew's version of Jesus' cry from Psalm 22?",
+    choices: ["Matthew 27:46", "Psalm 22:1", "Mark 15:34", "Hebrews 5:7"],
+    answer: 0,
+    reference: "Matthew 27:46",
+    verseText: "My God, my God, why hast thou forsaken me?"
+  },
+  {
+    id: 19100,
+    game: "Verses",
+    testament: "New Testament",
+    category: "Matthew",
+    difficulty: "Advanced",
+    question: "Which Great Commission reference grounds disciple-making in Jesus' universal authority?",
+    choices: ["Matthew 28:18", "Daniel 7:14", "John 17:2", "Ephesians 1:20"],
+    answer: 0,
+    reference: "Matthew 28:18",
+    verseText: "All power is given unto me in heaven and in earth."
   }
-
 ];
-
-if (typeof window !== "undefined") {
-  window.versesQuestions = versesQuestions;
-}

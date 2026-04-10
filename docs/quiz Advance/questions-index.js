@@ -17,7 +17,8 @@
     ...safeArray(typeof geographyQuestions !== "undefined" ? geographyQuestions : []),
     ...safeArray(typeof apostlesQuestions !== "undefined" ? apostlesQuestions : []),
     ...safeArray(typeof isItAccurateQuestions !== "undefined" ? isItAccurateQuestions : []),
-    ...safeArray(typeof whoAmIQuestions !== "undefined" ? whoAmIQuestions : [])
+    ...safeArray(typeof whoAmIQuestions !== "undefined" ? whoAmIQuestions : []),
+    ...safeArray(typeof typologyQuestions !== "undefined" ? typologyQuestions : [])
   ];
 
   const gameLabelMap = {
@@ -32,7 +33,8 @@
     "Geography": "Bible Geography",
     "Apostles": "Apostles & Early Church",
     "Is It Accurate": "Is It Accurate?",
-    "Who Am I": "Who Am I?"
+    "Who Am I": "Who Am I?",
+    "Typology": "Biblical Typology"
   };
 
   const quizQuestions = rawQuestions.map((q) => {

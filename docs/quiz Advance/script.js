@@ -82,7 +82,11 @@ const PRO_KEY         = "bibleQuizPro";
 const FREE_USED_KEY   = "bibleQuizFreeUsed";
 
 // ─── Free tier limits ─────────────────────────────────────────────────────────
-const FREE_LIMITS = { Beginner: 25, Student: 5, Scholar: 3, Advanced: 1000 };
+// Daily Challenge unchanged
+// Trivia fully open
+// All other categories: 10 total free questions, then lock
+
+const FREE_LIMIT_PER_CATEGORY = 10;
 
 function isProUnlocked(){
   try{ return localStorage.getItem(PRO_KEY) === 'true'; }catch(e){ return false; }
@@ -92,20 +96,25 @@ function getFreeUsed(){
   try{ return JSON.parse(localStorage.getItem(FREE_USED_KEY) || '{}'); }catch(e){ return {}; }
 }
 
-function addFreeUsed(level, count){
+function addFreeUsed(category, count){
+  if(isProUnlocked()) return;
+  if(category === 'Trivia') return;
+  if(category === 'Daily') return;
   try{
     const used = getFreeUsed();
-    used[level] = (used[level] || 0) + count;
+    used[category] = (used[category] || 0) + count;
     localStorage.setItem(FREE_USED_KEY, JSON.stringify(used));
   }catch(e){}
 }
 
-function freeLimitReached(level){
+function freeLimitReached(category){
   if(isProUnlocked()) return false;
-  if(!FREE_LIMITS[level]) return false;
+  if(category === 'Trivia') return false;
+  if(category === 'Daily') return false;
   const used = getFreeUsed();
-  return (used[level] || 0) >= FREE_LIMITS[level];
+  return (used[category] || 0) >= FREE_LIMIT_PER_CATEGORY;
 }
+
 function unlockPro(){
   try{ localStorage.setItem(PRO_KEY, 'true'); }catch(e){}
   try{ localStorage.removeItem(FREE_USED_KEY); }catch(e){}
@@ -116,17 +125,18 @@ function unlockPro(){
 }
 window.unlockPro = unlockPro;
 
-function showPaywall(level){
+function showPaywall(category){
   const msg = document.getElementById('paywallMessage');
   if(msg){
-    if(level === 'Daily'){
+    if(category === 'Daily'){
       msg.innerHTML = `You've used your <strong>free Daily Challenge</strong>.<br><br>
         Unlock <strong>Pro</strong> to get 5 new questions every day, build streaks, and track your daily progress —<br>
         <em>are you up for the challenge?</em>`;
+    } else if(category === 'Trivia'){
+      msg.innerHTML = `Trivia is fully open in the free version.`;
     } else {
-      const previewed = FREE_LIMITS[level] || 5;
-      msg.innerHTML = `You've completed your <strong>${previewed} free ${level} questions</strong>.<br><br>
-        You're just getting started. <strong>1,001+ questions</strong> across 3 levels are waiting —<br>
+      msg.innerHTML = `You've completed your <strong>10 free questions</strong> in <strong>${category}</strong>.<br><br>
+        Unlock <strong>Pro</strong> for full access to <strong>1,001+ questions</strong> across all categories —<br>
         <em>are you up for the challenge?</em>`;
     }
   }
@@ -686,8 +696,8 @@ function selectLevel(level){
     return;
   }
 
-  if(freeLimitReached(level)){
-    showPaywall(level);
+  if(freeLimitReached(currentCategory)){
+    showPaywall(currentCategory);
     return;
   }
 
@@ -695,23 +705,27 @@ function selectLevel(level){
   isPracticeMode = false;
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
 
-  const allForLevel = shuffleArray(
+  const allForCategory = shuffleArray(
     quizQuestions.filter(q => q.game === currentCategory)
   );
 
-  if(!allForLevel.length){
+  if(!allForCategory.length){
     alert(`No questions found for "${currentCategory}".`);
     return;
   }
 
-  const used = isProUnlocked() ? 0 : (getFreeUsed()[level] || 0);
-  const remaining = isProUnlocked() ? QUESTIONS_PER_ROUND : Math.max(0, FREE_LIMITS[level] - used);
-  const limit = isProUnlocked() ? QUESTIONS_PER_ROUND : remaining;
+  let limit = QUESTIONS_PER_ROUND;
 
-  currentQuestions = allForLevel.slice(0, limit);
+  if(!isProUnlocked() && currentCategory !== 'Trivia'){
+    const used = getFreeUsed()[currentCategory] || 0;
+    const remaining = Math.max(0, FREE_LIMIT_PER_CATEGORY - used);
+    limit = Math.min(QUESTIONS_PER_ROUND, remaining);
+  }
+
+  currentQuestions = allForCategory.slice(0, limit);
 
   if(!currentQuestions.length){
-    alert('No available questions (free limit reached or empty set).');
+    showPaywall(currentCategory);
     return;
   }
 
@@ -746,9 +760,9 @@ function renderQuestion(){
   let displayQuestion = q.question || '';
 
   if(currentCategory === 'Is It Accurate?'){
-  displayQuestion = displayQuestion.replace(/^True,\s*False,\s*Not Stated,\s*or Misquoted:\s*/i, '');
-  displayQuestion = '[Choose One] ' + displayQuestion.trim();
-}
+    displayQuestion = displayQuestion.replace(/^True,\s*False,\s*Not Stated,\s*or Misquoted:\s*/i, '');
+    displayQuestion = '[Choose One] ' + displayQuestion.trim();
+  }
 
   if(currentCategory === 'Who Am I?'){
     displayQuestion = displayQuestion.replace(/^Who am I\?\s*/i, '');
@@ -903,8 +917,7 @@ function showResults(){
   if(levelUpBox){
     let upMsg = '';
     if(!isPracticeMode && score === currentQuestions.length){
-      if(currentLevel === 'Beginner') upMsg = '🚀 Aced it! Ready to try Student level?';
-      else if(currentLevel === 'Student') upMsg = '🎓 Mastered it! Try Scholar next!';
+      upMsg = '🚀 Great job! Ready for more?';
     }
     levelUpBox.textContent = upMsg;
     levelUpBox.style.display = upMsg ? 'block' : 'none';
@@ -917,10 +930,12 @@ function showResults(){
 
   checkOverallAchievements();
 
-  if(!isProUnlocked() && !isPracticeMode && FREE_LIMITS[currentLevel]){
-    addFreeUsed(currentLevel, currentQuestions.length);
-    showScreen('paywallScreen');
-    return;
+  if(!isProUnlocked() && !isPracticeMode && currentCategory !== 'Trivia'){
+    addFreeUsed(currentCategory, currentQuestions.length);
+    if(freeLimitReached(currentCategory)){
+      showPaywall(currentCategory);
+      return;
+    }
   }
 
   showScreen('resultScreen');
@@ -1078,9 +1093,23 @@ function restartLevel(){
   bestStreakThisQuiz = 0;
   quizResults = [];
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
+
+  let limit = QUESTIONS_PER_ROUND;
+  if(!isProUnlocked() && currentCategory !== 'Trivia'){
+    const used = getFreeUsed()[currentCategory] || 0;
+    const remaining = Math.max(0, FREE_LIMIT_PER_CATEGORY - used);
+    limit = Math.min(QUESTIONS_PER_ROUND, remaining);
+  }
+
   currentQuestions = shuffleArray(
     quizQuestions.filter(q => q.game === currentCategory)
-  ).slice(0, QUESTIONS_PER_ROUND);
+  ).slice(0, limit);
+
+  if(!currentQuestions.length){
+    showPaywall(currentCategory);
+    return;
+  }
+
   loadQuestion();
   saveGameState();
   showScreen('quizScreen');
@@ -1444,8 +1473,8 @@ const tutorialSlides = [
   },
   {
     icon: '🎓',
-    title: 'Three Difficulty Levels',
-    body: 'Start with Beginner to build your foundation, move to Student for deeper questions, or jump straight to Scholar for the toughest challenges!'
+    title: 'Advanced Bible Quiz',
+    body: 'Dive into challenging categories with deep questions designed for serious Bible study.'
   },
   {
     icon: '🏆',
