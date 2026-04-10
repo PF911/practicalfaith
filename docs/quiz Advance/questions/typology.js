@@ -5,7 +5,7 @@ const typologyQuestions = [
     testament: "Both",
     category: "Adam and Christ",
     difficulty: "Advanced",
-    question: "Why is Adam called 'the figure of him that was to come' in Romans 5?",
+    question: "Why is Adam called 'a type of Him who was to come' in Romans 5?",
     choices: [
       "Because Adam and Christ were both merely symbolic",
       "Because Adam functioned as a representative head whose act affected many, anticipating Christ's representative obedience",
@@ -14,7 +14,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Romans 5:12-19; 1 Corinthians 15:21-22, 45-49",
-    verseText: "Adam... is the figure of him that was to come."
+    verseText: "Adam, who is a type of Him who was to come."
   },
   {
     id: 17002,
@@ -31,7 +31,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Romans 5:17-19; 1 Corinthians 15:45-49",
-    verseText: "The first man Adam was made a living soul; the last Adam was made a quickening spirit."
+    verseText: "The first man Adam became a living being. The last Adam became a life-giving spirit."
   },
   {
     id: 17003,
@@ -48,7 +48,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Romans 5:18-19; 1 Corinthians 15:22",
-    verseText: "As in Adam all die, even so in Christ shall all be made alive."
+    verseText: "For as in Adam all die, even so in Christ all shall be made alive."
   },
   {
     id: 17004,
@@ -65,7 +65,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 4:8-10; Hebrews 11:4; Hebrews 12:24",
-    verseText: "The voice of thy brother's blood crieth unto me from the ground."
+    verseText: "The voice of your brother's blood cries out to Me from the ground."
   },
   {
     id: 17005,
@@ -82,7 +82,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 6:13-18; 1 Peter 3:20-21",
-    verseText: "The like figure whereunto even baptism doth also now save us."
+    verseText: "There is also an antitype which now saves us — baptism."
   },
   {
     id: 17006,
@@ -99,7 +99,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 14:18-20; Psalm 110:4; Hebrews 7:1-17",
-    verseText: "Thou art a priest for ever after the order of Melchizedek."
+    verseText: "You are a priest forever according to the order of Melchizedek."
   },
   {
     id: 17007,
@@ -116,7 +116,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 22:2, 6-14; Hebrews 11:17-19",
-    verseText: "Take now thy son, thine only son Isaac, whom thou lovest."
+    verseText: "Take now your son, your only son Isaac, whom you love."
   },
   {
     id: 17008,
@@ -133,7 +133,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 37:26-28; Genesis 41:39-45; Genesis 45:4-8; Genesis 50:20",
-    verseText: "God did send me before you to preserve life."
+    verseText: "God sent me before you to preserve life."
   },
   {
     id: 17009,
@@ -150,7 +150,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 12:3-13; John 1:29; 1 Corinthians 5:7",
-    verseText: "Christ our passover is sacrificed for us."
+    verseText: "For indeed Christ, our Passover, was sacrificed for us."
   },
   {
     id: 17010,
@@ -184,7 +184,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 16:4, 14-15; John 6:31-35, 48-51",
-    verseText: "My Father giveth you the true bread from heaven."
+    verseText: "My Father gives you the true bread from heaven."
   },
   {
     id: 17012,
@@ -218,7 +218,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Numbers 21:8-9; John 3:14-15",
-    verseText: "As Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up."
+    verseText: "As Moses lifted up the serpent in the wilderness, even so must the Son of Man be lifted up."
   },
   {
     id: 17014,
@@ -235,7 +235,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 25:8-9; John 1:14; Hebrews 8:1-5",
-    verseText: "Let them make me a sanctuary; that I may dwell among them."
+    verseText: "Let them make Me a sanctuary, that I may dwell among them."
   },
   {
     id: 17015,
@@ -252,7 +252,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 28:1; Hebrews 4:14-16; Hebrews 7:23-28",
-    verseText: "We have a great high priest, that is passed into the heavens, Jesus the Son of God."
+    verseText: "We have a great High Priest who has passed through the heavens, Jesus the Son of God."
   },
   {
     id: 17016,
@@ -269,7 +269,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 17:11; Hebrews 9:11-14; Hebrews 10:1-14",
-    verseText: "The law having a shadow of good things to come."
+    verseText: "For the law, having a shadow of the good things to come."
   },
   {
     id: 17017,
@@ -286,7 +286,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 16:15-22, 30; Hebrews 9:7-12",
-    verseText: "By his own blood he entered in once into the holy place."
+    verseText: "With His own blood He entered the Most Holy Place once for all."
   },
   {
     id: 17018,
@@ -303,7 +303,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 16:21-22; Isaiah 53:6; John 1:29",
-    verseText: "The goat shall bear upon him all their iniquities."
+    verseText: "The goat shall bear on itself all their iniquities."
   },
   {
     id: 17019,
@@ -320,7 +320,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 26:31-33; Matthew 27:51; Hebrews 10:19-20",
-    verseText: "The veil of the temple was rent in twain."
+    verseText: "The veil of the temple was torn in two from top to bottom."
   },
   {
     id: 17020,
@@ -337,7 +337,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 20:8-11; Matthew 11:28; Hebrews 4:3-11",
-    verseText: "There remaineth therefore a rest to the people of God."
+    verseText: "There remains therefore a rest for the people of God."
   },
   {
     id: 17021,
@@ -354,7 +354,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Joshua 1:1-9; Matthew 1:21; Hebrews 4:8-9",
-    verseText: "If Jesus had given them rest, then would he not afterward have spoken of another day."
+    verseText: "For if Joshua had given them rest, then He would not afterward have spoken of another day."
   },
   {
     id: 17022,
@@ -371,7 +371,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Judges 2:16-19; Acts 13:20-23",
-    verseText: "The LORD raised up judges, which delivered them."
+    verseText: "Nevertheless, the LORD raised up judges who delivered them."
   },
   {
     id: 17023,
@@ -388,7 +388,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Ruth 2:20; Ruth 3:9-13; Ruth 4:9-10",
-    verseText: "Thou art a near kinsman."
+    verseText: "For you are a close relative."
   },
   {
     id: 17024,
@@ -405,7 +405,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 16:11-13; 2 Samuel 7:12-16; Ezekiel 34:23-24; Luke 1:32-33",
-    verseText: "I have found David... a man after mine own heart."
+    verseText: "I have found David... a man after My own heart."
   },
   {
     id: 17025,
@@ -422,7 +422,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 17:45-50; Colossians 2:15",
-    verseText: "The battle is the LORD's."
+    verseText: "For the battle is the LORD's."
   },
   {
     id: 17026,
@@ -439,7 +439,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 4:29-34; 1 Kings 8:20-21; Matthew 12:42",
-    verseText: "A greater than Solomon is here."
+    verseText: "And indeed a greater than Solomon is here."
   },
   {
     id: 17027,
@@ -456,7 +456,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 8:27; John 2:19-21; Ephesians 2:19-22; 1 Peter 2:5",
-    verseText: "He spake of the temple of his body."
+    verseText: "But He was speaking of the temple of His body."
   },
   {
     id: 17028,
@@ -473,7 +473,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Malachi 4:5-6; Luke 1:17; Matthew 11:13-14",
-    verseText: "He shall go before him in the spirit and power of Elias."
+    verseText: "He will also go before Him in the spirit and power of Elijah."
   },
   {
     id: 17029,
@@ -490,7 +490,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 4-5; Luke 4:27; John 6:1-14",
-    verseText: "There were many lepers in Israel... and none of them was cleansed, saving Naaman the Syrian."
+    verseText: "Many lepers were in Israel in the time of Elisha... and none of them was cleansed except Naaman the Syrian."
   },
   {
     id: 17030,
@@ -507,7 +507,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Jonah 1:17; Matthew 12:39-41",
-    verseText: "As Jonas was three days and three nights in the whale's belly."
+    verseText: "For as Jonah was three days and three nights in the belly of the great fish."
   },
   {
     id: 17031,
@@ -524,7 +524,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 31:31-34; Ezekiel 36:24-28; Luke 9:31",
-    verseText: "Which should accomplish at Jerusalem."
+    verseText: "Which He was about to accomplish at Jerusalem."
   },
   {
     id: 17032,
@@ -541,7 +541,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 11:1; Jeremiah 23:5; Zechariah 3:8; Zechariah 6:12",
-    verseText: "Behold the man whose name is The BRANCH."
+    verseText: "Behold, the Man whose name is the BRANCH!"
   },
   {
     id: 17033,
@@ -558,7 +558,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 52:13-53:12; Acts 8:32-35; 1 Peter 2:21-25",
-    verseText: "He was wounded for our transgressions."
+    verseText: "But He was wounded for our transgressions."
   },
   {
     id: 17034,
@@ -575,7 +575,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6-13",
-    verseText: "This cup is the new testament in my blood."
+    verseText: "This cup is the new covenant in My blood."
   },
   {
     id: 17035,
@@ -592,7 +592,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 36:25-27; John 3:5-8; Titus 3:5",
-    verseText: "A new heart also will I give you, and a new spirit will I put within you."
+    verseText: "I will give you a new heart and put a new spirit within you."
   },
   {
     id: 17036,
@@ -609,7 +609,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 7:13-14; Matthew 26:64; Revelation 1:13",
-    verseText: "There was given him dominion, and glory, and a kingdom."
+    verseText: "Then to Him was given dominion and glory and a kingdom."
   },
   {
     id: 17037,
@@ -626,7 +626,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Psalm 2:6; Isaiah 2:2-3; Hebrews 12:22; Revelation 21:2",
-    verseText: "Ye are come unto mount Sion, and unto the city of the living God."
+    verseText: "But you have come to Mount Zion and to the city of the living God."
   },
   {
     id: 17038,
@@ -643,7 +643,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 65:17-19; Galatians 4:26; Hebrews 12:22; Revelation 21:2-3",
-    verseText: "I John saw the holy city, new Jerusalem."
+    verseText: "Then I, John, saw the holy city, New Jerusalem."
   },
   {
     id: 17039,
@@ -677,7 +677,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Hosea 2:19-20; John 3:29; Ephesians 5:25-27; Revelation 19:7-9",
-    verseText: "The marriage of the Lamb is come."
+    verseText: "For the marriage of the Lamb has come."
   },
   {
     id: 17041,
@@ -694,7 +694,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 23; Luke 22:15-20; 1 Corinthians 5:7-8; Colossians 2:16-17",
-    verseText: "Which are a shadow of things to come; but the body is of Christ."
+    verseText: "Which are a shadow of things to come, but the substance is of Christ."
   },
   {
     id: 17042,
@@ -711,7 +711,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 23:10-11; 1 Corinthians 15:20-23",
-    verseText: "Now is Christ risen from the dead, and become the firstfruits of them that slept."
+    verseText: "But now Christ is risen from the dead, and has become the firstfruits of those who have fallen asleep."
   },
   {
     id: 17043,
@@ -728,7 +728,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 7:12-16; Luke 1:32-33; Acts 13:22-23",
-    verseText: "Thine house and thy kingdom shall be established for ever."
+    verseText: "Your house and your kingdom shall be established forever."
   },
   {
     id: 17044,
@@ -745,7 +745,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 7:12-13; Zechariah 6:12-13; John 2:19-21",
-    verseText: "He shall build an house for my name."
+    verseText: "He shall build a house for My name."
   },
   {
     id: 17045,
@@ -779,7 +779,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 62:5; Hosea 2:19-20; Matthew 9:15; John 3:29",
-    verseText: "Can the children of the bridechamber mourn, as long as the bridegroom is with them?"
+    verseText: "Can the friends of the bridegroom mourn as long as the bridegroom is with them?"
   },
   {
     id: 17047,
@@ -830,7 +830,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Proverbs 8:22-31; 1 Corinthians 1:24, 30; Colossians 2:3",
-    verseText: "Christ the power of God, and the wisdom of God."
+    verseText: "Christ the power of God and the wisdom of God."
   },
   {
     id: 17050,
@@ -847,7 +847,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 6:6-7; Luke 9:31; 1 Corinthians 10:1-6",
-    verseText: "Who shall change our vile body... / his decease which he should accomplish at Jerusalem."
+    verseText: "Who will transform our lowly body... / His decease which He was about to accomplish at Jerusalem."
   },
   {
     id: 17051,
@@ -864,7 +864,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 12:5-13; Isaiah 53:7; John 1:29; Revelation 5:6-13",
-    verseText: "Behold the Lamb of God."
+    verseText: "Behold! The Lamb of God."
   },
   {
     id: 17052,
@@ -881,7 +881,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Psalm 110:1-4; Zechariah 6:12-13; Hebrews 7:1-3",
-    verseText: "He shall be a priest upon his throne."
+    verseText: "He shall be a priest on His throne."
   },
   {
     id: 17053,
@@ -898,7 +898,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Psalm 118:22; Isaiah 28:16; Matthew 21:42; 1 Peter 2:6-7",
-    verseText: "The stone which the builders refused is become the head stone of the corner."
+    verseText: "The stone which the builders rejected has become the chief cornerstone."
   },
   {
     id: 17054,
@@ -915,7 +915,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 3:15; Genesis 12:7; Galatians 3:16",
-    verseText: "He saith not, And to seeds, as of many; but as of one... which is Christ."
+    verseText: "He does not say, 'And to seeds,' as of many, but as of one... who is Christ."
   },
   {
     id: 17055,
@@ -949,7 +949,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 25-30; Hebrews 9:1-11; John 6:35; John 8:12",
-    verseText: "The Holy Ghost this signifying."
+    verseText: "The Holy Spirit indicating this."
   },
   {
     id: 17057,
@@ -966,7 +966,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 25:21-22; Leviticus 16:14-15; Hebrews 9:3-5",
-    verseText: "There I will meet with thee."
+    verseText: "And there I will meet with you."
   },
   {
     id: 17058,
@@ -983,7 +983,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 25:17-22; Leviticus 16:14-15; Romans 3:25; Hebrews 9:5",
-    verseText: "Whom God hath set forth to be a propitiation through faith in his blood."
+    verseText: "Whom God set forth as a propitiation by His blood, through faith."
   },
   {
     id: 17059,
@@ -1000,7 +1000,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Numbers 35:9-15; Hebrews 6:18",
-    verseText: "Who have fled for refuge to lay hold upon the hope set before us."
+    verseText: "Who have fled for refuge to lay hold of the hope set before us."
   },
   {
     id: 17060,
@@ -1017,7 +1017,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 7:12-16; Psalm 2; Daniel 7:13-14; Luke 1:32-33",
-    verseText: "He shall reign over the house of Jacob for ever."
+    verseText: "He will reign over the house of Jacob forever."
   },
   {
     id: 17061,
@@ -1034,7 +1034,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 18:15-19; Acts 3:22-23; John 6:14",
-    verseText: "The LORD thy God will raise up unto thee a Prophet."
+    verseText: "The LORD your God will raise up for you a Prophet."
   },
   {
     id: 17062,
@@ -1051,7 +1051,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 32:30-32; Deuteronomy 5:5; Hebrews 3:1-6",
-    verseText: "Moses verily was faithful... but Christ as a son over his own house."
+    verseText: "Moses indeed was faithful... but Christ as a Son over His own house."
   },
   {
     id: 17063,
@@ -1068,7 +1068,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 28:29-30; Hebrews 9:11-14",
-    verseText: "Aaron shall bear the names of the children of Israel in the breastplate of judgment upon his heart."
+    verseText: "Aaron shall bear the names of the sons of Israel on the breastplate of judgment over his heart."
   },
   {
     id: 17064,
@@ -1085,7 +1085,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Numbers 14:22-23; 1 Corinthians 10:1-11; Hebrews 3:16-19",
-    verseText: "These things were our examples."
+    verseText: "Now these things became our examples."
   },
   {
     id: 17065,
@@ -1102,7 +1102,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 2:21-24; Ephesians 5:30-32",
-    verseText: "This is a great mystery: but I speak concerning Christ and the church."
+    verseText: "This is a great mystery, but I speak concerning Christ and the church."
   },
   {
     id: 17066,
@@ -1119,7 +1119,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 4:22; Psalm 89:27; Colossians 1:15, 18; Hebrews 1:6",
-    verseText: "That in all things he might have the preeminence."
+    verseText: "That in all things He may have the preeminence."
   },
   {
     id: 17067,
@@ -1136,7 +1136,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 4:22; Hosea 11:1; Matthew 2:15; Matthew 4:1-11",
-    verseText: "Out of Egypt have I called my son."
+    verseText: "Out of Egypt I called My Son."
   },
   {
     id: 17068,
@@ -1153,7 +1153,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Psalm 23; Ezekiel 34:23; Mark 6:34-44; John 6:35",
-    verseText: "He was moved with compassion toward them, because they were as sheep not having a shepherd."
+    verseText: "He was moved with compassion for them, because they were like sheep not having a shepherd."
   },
   {
     id: 17069,
@@ -1170,7 +1170,7 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 24:8; Leviticus 17:11; Matthew 26:28; Hebrews 9:18-22",
-    verseText: "This is my blood of the new testament."
+    verseText: "For this is My blood of the new covenant."
   },
   {
     id: 17070,
@@ -1187,6 +1187,6 @@ const typologyQuestions = [
     ],
     answer: 1,
     reference: "Luke 24:27, 44-47; Romans 5:14; 1 Corinthians 10:6, 11; Hebrews 10:1",
-    verseText: "Beginning at Moses and all the prophets, he expounded unto them... the things concerning himself."
+    verseText: "And beginning at Moses and all the Prophets, He expounded to them... the things concerning Himself."
   }
 ];

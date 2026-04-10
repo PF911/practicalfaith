@@ -5,11 +5,11 @@ const triviaQuestions = [
     testament: "Old Testament",
     category: "Torah",
     difficulty: "Advanced",
-    question: "According to Genesis 15, Abram's faith was counted to him for what?",
+    question: "According to Genesis 15, Abram's faith was accounted to him for what?",
     choices: ["Blessing", "Righteousness", "Honor", "Covenant status by circumcision"],
     answer: 1,
     reference: "Genesis 15:6",
-    verseText: "And he believed in the LORD; and he counted it to him for righteousness."
+    verseText: "And he believed in the LORD, and He accounted it to him for righteousness."
   },
   {
     id: 16002,
@@ -21,7 +21,7 @@ const triviaQuestions = [
     choices: ["Passover", "Sabbath", "Circumcision", "Tithing"],
     answer: 2,
     reference: "Genesis 17:10-11",
-    verseText: "This is my covenant... Every man child among you shall be circumcised."
+    verseText: "This is My covenant... Every male child among you shall be circumcised."
   },
   {
     id: 16003,
@@ -30,10 +30,10 @@ const triviaQuestions = [
     category: "Torah",
     difficulty: "Advanced",
     question: "At the burning bush, God identified Himself to Moses with which expression?",
-    choices: ["The LORD of hosts", "I AM THAT I AM", "The Ancient of days", "The Holy One of Israel"],
+    choices: ["The LORD of hosts", "I AM WHO I AM", "The Ancient of Days", "The Holy One of Israel"],
     answer: 1,
     reference: "Exodus 3:14",
-    verseText: "I AM THAT I AM."
+    verseText: "I AM WHO I AM."
   },
   {
     id: 16004,
@@ -54,10 +54,10 @@ const triviaQuestions = [
     category: "Law",
     difficulty: "Advanced",
     question: "Israel was called in Exodus 19 to be what among the nations?",
-    choices: ["A mighty empire", "A kingdom of priests and an holy nation", "A people without laws", "A people without sacrifices"],
+    choices: ["A mighty empire", "A kingdom of priests and a holy nation", "A people without laws", "A people without sacrifices"],
     answer: 1,
     reference: "Exodus 19:6",
-    verseText: "Ye shall be unto me a kingdom of priests, and an holy nation."
+    verseText: "You shall be to Me a kingdom of priests and a holy nation."
   },
   {
     id: 16006,
@@ -66,10 +66,10 @@ const triviaQuestions = [
     category: "Law",
     difficulty: "Advanced",
     question: "Why were Nadab and Abihu judged in Leviticus 10?",
-    choices: ["They entered the Holy of Holies on the Day of Atonement", "They offered strange fire before the LORD", "They refused to eat the peace offering", "They broke the Sabbath"],
+    choices: ["They entered the Holy of Holies on the Day of Atonement", "They offered profane fire before the LORD", "They refused to eat the peace offering", "They broke the Sabbath"],
     answer: 1,
     reference: "Leviticus 10:1-2",
-    verseText: "Nadab and Abihu... offered strange fire before the LORD."
+    verseText: "Nadab and Abihu... offered profane fire before the LORD."
   },
   {
     id: 16007,
@@ -81,7 +81,7 @@ const triviaQuestions = [
     choices: ["Feast of Weeks", "Day of Atonement", "Feast of Trumpets", "Year of Jubilee"],
     answer: 1,
     reference: "Leviticus 16:29-34",
-    verseText: "This shall be an everlasting statute... to make an atonement for the children of Israel."
+    verseText: "This shall be an everlasting statute... to make atonement for the children of Israel."
   },
   {
     id: 16008,
@@ -93,7 +93,7 @@ const triviaQuestions = [
     choices: ["Striking the rock instead of speaking to it as commanded", "Refusing to gather manna", "Questioning Joshua's leadership", "Failing to pray for Israel"],
     answer: 0,
     reference: "Numbers 20:7-12",
-    verseText: "Because ye believed me not, to sanctify me in the eyes of the children of Israel."
+    verseText: "Because you did not believe Me, to hallow Me in the eyes of the children of Israel."
   },
   {
     id: 16009,
@@ -105,7 +105,7 @@ const triviaQuestions = [
     choices: ["A golden lamp", "A bronze serpent", "Aaron's rod", "The book of the law"],
     answer: 1,
     reference: "Numbers 21:8-9",
-    verseText: "Moses made a serpent of brass... if a serpent had bitten any man, when he beheld the serpent of brass, he lived."
+    verseText: "Moses made a bronze serpent... if a serpent had bitten anyone, when he looked at the bronze serpent, he lived."
   },
   {
     id: 16010,
@@ -114,10 +114,10 @@ const triviaQuestions = [
     category: "Torah",
     difficulty: "Advanced",
     question: "What is the opening declaration of the Shema in Deuteronomy 6?",
-    choices: ["The LORD is merciful", "Hear, O Israel: The LORD our God is one LORD", "Keep the sabbath day holy", "Love thy neighbor as thyself"],
+    choices: ["The LORD is merciful", "Hear, O Israel: The LORD our God, the LORD is one!", "Keep the Sabbath day holy", "Love your neighbor as yourself"],
     answer: 1,
     reference: "Deuteronomy 6:4",
-    verseText: "Hear, O Israel: The LORD our God is one LORD."
+    verseText: "Hear, O Israel: The LORD our God, the LORD is one!"
   },
   {
     id: 16011,
@@ -129,7 +129,7 @@ const triviaQuestions = [
     choices: ["Build siege ramps", "March around the city and shout at the appointed time", "Fast for seven days outside the gate", "Set fire to the outer fields"],
     answer: 1,
     reference: "Joshua 6:3-5, 20",
-    verseText: "The wall of the city shall fall down flat."
+    verseText: "The wall of the city will fall down flat."
   },
   {
     id: 16012,
@@ -137,11 +137,11 @@ const triviaQuestions = [
     testament: "Old Testament",
     category: "Conquest",
     difficulty: "Advanced",
-    question: "Whose sin brought defeat at Ai because he took of the accursed thing?",
+    question: "Whose sin brought defeat at Ai because he took of the accursed things?",
     choices: ["Achan", "Zimri", "Korah", "Abimelech"],
     answer: 0,
     reference: "Joshua 7:1, 20-21",
-    verseText: "Achan... took of the accursed thing."
+    verseText: "Achan... took of the accursed things."
   },
   {
     id: 16013,
@@ -153,7 +153,7 @@ const triviaQuestions = [
     choices: ["The people feared the LORD", "There was no king in Israel", "The judges delivered them", "The ark remained at Shiloh"],
     answer: 1,
     reference: "Judges 21:25",
-    verseText: "In those days there was no king in Israel: every man did that which was right in his own eyes."
+    verseText: "In those days there was no king in Israel; everyone did what was right in his own eyes."
   },
   {
     id: 16014,
@@ -165,7 +165,7 @@ const triviaQuestions = [
     choices: ["300", "700", "1,000", "3,000"],
     answer: 0,
     reference: "Judges 7:7",
-    verseText: "By the three hundred men that lapped will I save you."
+    verseText: "By the three hundred men who lapped I will save you."
   },
   {
     id: 16015,
@@ -177,7 +177,7 @@ const triviaQuestions = [
     choices: ["Priest", "Judge", "Kinsman-redeemer", "Prophet"],
     answer: 2,
     reference: "Ruth 3:9; Ruth 4:14",
-    verseText: "For thou art a near kinsman."
+    verseText: "For you are a close relative."
   },
   {
     id: 16016,
@@ -189,7 +189,7 @@ const triviaQuestions = [
     choices: ["The ephod", "The ark of the covenant", "Moses' staff", "Samuel's mantle"],
     answer: 1,
     reference: "1 Samuel 4:3-11",
-    verseText: "Let us fetch the ark... that, when it cometh among us, it may save us."
+    verseText: "Let us bring the ark... that when it comes among us it may save us."
   },
   {
     id: 16017,
@@ -201,7 +201,7 @@ const triviaQuestions = [
     choices: ["Kingship was never anticipated in the Torah", "They wanted to be like the nations and rejected the LORD's rule", "Samuel had hidden the law", "The tribes had no enemies"],
     answer: 1,
     reference: "1 Samuel 8:19-20; 1 Samuel 8:7",
-    verseText: "They have rejected me, that I should not reign over them."
+    verseText: "They have rejected Me, that I should not reign over them."
   },
   {
     id: 16018,
@@ -222,10 +222,10 @@ const triviaQuestions = [
     category: "Samuel",
     difficulty: "Advanced",
     question: "When David was chosen, what principle did Samuel declare about God's evaluation?",
-    choices: ["The LORD rewards the strong", "The LORD looks on the heart", "The LORD prefers the eldest", "The LORD exalts warriors only"],
+    choices: ["The LORD rewards the strong", "The LORD looks at the heart", "The LORD prefers the eldest", "The LORD exalts warriors only"],
     answer: 1,
     reference: "1 Samuel 16:7",
-    verseText: "Man looketh on the outward appearance, but the LORD looketh on the heart."
+    verseText: "Man looks at the outward appearance, but the LORD looks at the heart."
   },
   {
     id: 16020,
@@ -237,7 +237,7 @@ const triviaQuestions = [
     choices: ["A permanent priesthood from Aaron", "An everlasting house and kingdom for David", "A new exodus from Egypt", "The end of all warfare in David's lifetime"],
     answer: 1,
     reference: "2 Samuel 7:12-16",
-    verseText: "Thine house and thy kingdom shall be established for ever before thee."
+    verseText: "Your house and your kingdom shall be established forever before you."
   },
   {
     id: 16021,
@@ -249,7 +249,7 @@ const triviaQuestions = [
     choices: ["Long life", "Victory over Egypt", "An understanding heart to judge the people", "Great wealth"],
     answer: 2,
     reference: "1 Kings 3:9",
-    verseText: "Give therefore thy servant an understanding heart to judge thy people."
+    verseText: "Give to Your servant an understanding heart to judge Your people."
   },
   {
     id: 16022,
@@ -258,10 +258,10 @@ const triviaQuestions = [
     category: "Kings",
     difficulty: "Advanced",
     question: "What sin is especially emphasized in Solomon's decline?",
-    choices: ["He refused to build the temple", "His wives turned away his heart after other gods", "He would not judge the people", "He abandoned Jerusalem for Samaria"],
+    choices: ["He refused to build the temple", "His wives turned his heart after other gods", "He would not judge the people", "He abandoned Jerusalem for Samaria"],
     answer: 1,
     reference: "1 Kings 11:4",
-    verseText: "His wives turned away his heart after other gods."
+    verseText: "His wives turned his heart after other gods."
   },
   {
     id: 16023,
@@ -285,7 +285,7 @@ const triviaQuestions = [
     choices: ["Ahab", "Josiah", "Jehoram", "Manasseh"],
     answer: 1,
     reference: "2 Kings 22:8-13; 2 Kings 23:1-3",
-    verseText: "Great is the wrath of the LORD that is kindled against us."
+    verseText: "Great is the wrath of the LORD that is aroused against us."
   },
   {
     id: 16025,
@@ -297,7 +297,7 @@ const triviaQuestions = [
     choices: ["He was uncircumcised", "The ark was not being handled according to God's commanded order", "He was a Philistine", "He had entered the temple"],
     answer: 1,
     reference: "1 Chronicles 15:13-15",
-    verseText: "We sought him not after the due order."
+    verseText: "We did not consult Him about the proper order."
   },
   {
     id: 16026,
@@ -321,7 +321,7 @@ const triviaQuestions = [
     choices: ["It was done only for priests", "The Levites gave the sense so the people understood", "It happened in the temple at night", "It replaced all sacrifices permanently"],
     answer: 1,
     reference: "Nehemiah 8:8",
-    verseText: "They read in the book... distinctly, and gave the sense, and caused them to understand the reading."
+    verseText: "They read distinctly from the book... and gave the sense, and helped them to understand the reading."
   },
   {
     id: 16028,
@@ -333,7 +333,7 @@ const triviaQuestions = [
     choices: ["He became Mordecai's servant", "He was hanged on the gallows prepared for Mordecai", "He fled to Egypt", "He was exiled to Media"],
     answer: 1,
     reference: "Esther 7:9-10",
-    verseText: "They hanged Haman on the gallows that he had prepared for Mordecai."
+    verseText: "So they hanged Haman on the gallows that he had prepared for Mordecai."
   },
   {
     id: 16029,
@@ -357,7 +357,7 @@ const triviaQuestions = [
     choices: ["They denied God exists", "They applied a rigid retribution formula to Job's suffering", "They told Job to curse God", "They refused to speak at all"],
     answer: 1,
     reference: "Job 42:7",
-    verseText: "Ye have not spoken of me the thing that is right, as my servant Job hath."
+    verseText: "You have not spoken of Me what is right, as My servant Job has."
   },
   {
     id: 16031,
@@ -378,10 +378,10 @@ const triviaQuestions = [
     category: "Psalms",
     difficulty: "Advanced",
     question: "Psalm 2 portrays the LORD's Anointed as receiving what inheritance?",
-    choices: ["Only Judah", "The heathen and the uttermost parts of the earth", "The temple treasury", "The Levitical cities"],
+    choices: ["Only Judah", "The nations and the ends of the earth", "The temple treasury", "The Levitical cities"],
     answer: 1,
     reference: "Psalm 2:8",
-    verseText: "I shall give thee the heathen for thine inheritance."
+    verseText: "I will give You the nations for Your inheritance."
   },
   {
     id: 16033,
@@ -393,7 +393,7 @@ const triviaQuestions = [
     choices: ["Prophet", "Judge", "Priest", "Scribe"],
     answer: 2,
     reference: "Psalm 110:4",
-    verseText: "Thou art a priest for ever after the order of Melchizedek."
+    verseText: "You are a priest forever according to the order of Melchizedek."
   },
   {
     id: 16034,
@@ -405,7 +405,7 @@ const triviaQuestions = [
     choices: ["A scroll", "A live coal from the altar", "Water from the laver", "Oil from the lampstand"],
     answer: 1,
     reference: "Isaiah 6:6-7",
-    verseText: "Lo, this hath touched thy lips; and thine iniquity is taken away."
+    verseText: "Behold, this has touched your lips; your iniquity is taken away."
   },
   {
     id: 16035,
@@ -417,7 +417,7 @@ const triviaQuestions = [
     choices: ["Prince of Tyrus", "Prince of Peace", "Son of Aaron", "Lion of Ephraim"],
     answer: 1,
     reference: "Isaiah 9:6",
-    verseText: "His name shall be called... The Prince of Peace."
+    verseText: "And His name will be called... Prince of Peace."
   },
   {
     id: 16036,
@@ -429,7 +429,7 @@ const triviaQuestions = [
     choices: ["Only Israel's history", "Our griefs and our iniquities", "The temple vessels", "The throne of David"],
     answer: 1,
     reference: "Isaiah 53:4-6",
-    verseText: "He was wounded for our transgressions."
+    verseText: "But He was wounded for our transgressions."
   },
   {
     id: 16037,
@@ -441,7 +441,7 @@ const triviaQuestions = [
     choices: ["It will be abolished", "It will be written in the heart", "It will be limited to priests", "It will remain on stone only"],
     answer: 1,
     reference: "Jeremiah 31:33",
-    verseText: "I will put my law in their inward parts, and write it in their hearts."
+    verseText: "I will put My law in their minds, and write it on their hearts."
   },
   {
     id: 16038,
@@ -477,7 +477,7 @@ const triviaQuestions = [
     choices: ["A new sword", "A new heart and a new spirit", "A second wilderness", "A different lawgiver"],
     answer: 1,
     reference: "Ezekiel 36:26",
-    verseText: "A new heart also will I give you, and a new spirit will I put within you."
+    verseText: "I will give you a new heart and put a new spirit within you."
   },
   {
     id: 16041,
@@ -497,11 +497,11 @@ const triviaQuestions = [
     testament: "Old Testament",
     category: "Daniel",
     difficulty: "Advanced",
-    question: "In Daniel 7, the 'Son of man' receives what from the Ancient of days?",
+    question: "In Daniel 7, the 'Son of man' receives what from the Ancient of Days?",
     choices: ["The high priesthood", "Dominion, glory, and a kingdom", "The temple scroll", "A rebuilt Jerusalem"],
     answer: 1,
     reference: "Daniel 7:13-14",
-    verseText: "There was given him dominion, and glory, and a kingdom."
+    verseText: "Then to Him was given dominion and glory and a kingdom."
   },
   {
     id: 16043,
@@ -513,7 +513,7 @@ const triviaQuestions = [
     choices: ["Israel's military strength", "The LORD's covenant relationship with an unfaithful people", "The rebuilding of Samaria", "The end of prophecy"],
     answer: 1,
     reference: "Hosea 1:2; Hosea 3:1",
-    verseText: "Love a woman beloved of her friend, yet an adulteress, according to the love of the LORD."
+    verseText: "Go again, love a woman who is loved yet is committing adultery, just like the love of the LORD."
   },
   {
     id: 16044,
@@ -525,7 +525,7 @@ const triviaQuestions = [
     choices: ["Oil", "The Spirit", "Fire", "Bread"],
     answer: 1,
     reference: "Joel 2:28",
-    verseText: "I will pour out my spirit upon all flesh."
+    verseText: "I will pour out My Spirit on all flesh."
   },
   {
     id: 16045,
@@ -537,7 +537,7 @@ const triviaQuestions = [
     choices: ["Fire", "Waters", "Oil", "Honey"],
     answer: 1,
     reference: "Amos 5:24",
-    verseText: "Let judgment run down as waters."
+    verseText: "But let justice run down like water."
   },
   {
     id: 16046,
@@ -549,7 +549,7 @@ const triviaQuestions = [
     choices: ["Nineveh's military strength", "God's mercy toward Nineveh", "The fish's appearance", "The loss of Israel's throne"],
     answer: 1,
     reference: "Jonah 4:1-2",
-    verseText: "I knew that thou art a gracious God, and merciful."
+    verseText: "I know that You are a gracious and merciful God."
   },
   {
     id: 16047,
@@ -561,7 +561,7 @@ const triviaQuestions = [
     choices: ["To multiply sacrifices", "To do justly, love mercy, and walk humbly with God", "To conquer the nations", "To become kings and priests"],
     answer: 1,
     reference: "Micah 6:8",
-    verseText: "To do justly, and to love mercy, and to walk humbly with thy God."
+    verseText: "To do justly, to love mercy, and to walk humbly with your God."
   },
   {
     id: 16048,
@@ -582,10 +582,10 @@ const triviaQuestions = [
     category: "Zechariah",
     difficulty: "Advanced",
     question: "What phrase in Zechariah 4 emphasizes divine empowerment over human strength?",
-    choices: ["By wisdom and counsel", "Not by might, nor by power, but by my spirit", "By the sword of Gideon", "By the strength of Judah"],
+    choices: ["By wisdom and counsel", "Not by might nor by power, but by My Spirit", "By the sword of Gideon", "By the strength of Judah"],
     answer: 1,
     reference: "Zechariah 4:6",
-    verseText: "Not by might, nor by power, but by my spirit, saith the LORD of hosts."
+    verseText: "Not by might nor by power, but by My Spirit, says the LORD of hosts."
   },
   {
     id: 16050,
@@ -594,10 +594,10 @@ const triviaQuestions = [
     category: "Malachi",
     difficulty: "Advanced",
     question: "Malachi says the priests had offered what upon God's altar?",
-    choices: ["Only incense", "Polluted bread", "Too much wine", "No sacrifices at all"],
+    choices: ["Only incense", "Defiled food", "Too much wine", "No sacrifices at all"],
     answer: 1,
     reference: "Malachi 1:7",
-    verseText: "Ye offer polluted bread upon mine altar."
+    verseText: "You offer defiled food on My altar."
   },
   {
     id: 16051,
@@ -609,7 +609,7 @@ const triviaQuestions = [
     choices: ["Rome", "Their sins", "Famine", "Death in a general sense only"],
     answer: 1,
     reference: "Matthew 1:21",
-    verseText: "He shall save his people from their sins."
+    verseText: "He shall save His people from their sins."
   },
   {
     id: 16052,
@@ -618,10 +618,10 @@ const triviaQuestions = [
     category: "Gospels",
     difficulty: "Advanced",
     question: "At Jesus' baptism, what declaration was heard from heaven?",
-    choices: ["This is the prophet", "This is my beloved Son, in whom I am well pleased", "Behold the Lamb of God", "The kingdom is at hand"],
+    choices: ["This is the prophet", "This is My beloved Son, in whom I am well pleased", "Behold the Lamb of God", "The kingdom is at hand"],
     answer: 1,
     reference: "Matthew 3:17",
-    verseText: "This is my beloved Son, in whom I am well pleased."
+    verseText: "This is My beloved Son, in whom I am well pleased."
   },
   {
     id: 16053,
@@ -633,7 +633,7 @@ const triviaQuestions = [
     choices: ["The learned", "They shall be filled", "The poor in spirit only", "Those who fast twice weekly"],
     answer: 1,
     reference: "Matthew 5:6",
-    verseText: "Blessed are they which do hunger and thirst after righteousness: for they shall be filled."
+    verseText: "Blessed are those who hunger and thirst for righteousness, for they shall be filled."
   },
   {
     id: 16054,
@@ -654,10 +654,10 @@ const triviaQuestions = [
     category: "Parables",
     difficulty: "Advanced",
     question: "In the Parable of the Sower, what chokes the word?",
-    choices: ["Persecution only", "The care of this world and the deceitfulness of riches", "Roman authority", "Lack of miracles"],
+    choices: ["Persecution only", "The cares of this world and the deceitfulness of riches", "Roman authority", "Lack of miracles"],
     answer: 1,
     reference: "Matthew 13:22",
-    verseText: "The care of this world, and the deceitfulness of riches, choke the word."
+    verseText: "The cares of this world and the deceitfulness of riches choke the word."
   },
   {
     id: 16056,
@@ -666,10 +666,10 @@ const triviaQuestions = [
     category: "Parables",
     difficulty: "Advanced",
     question: "In the Parable of the Wheat and Tares, when does the final separation occur?",
-    choices: ["Immediately after sowing", "At the harvest, the end of the world", "At Pentecost", "At the fall of Jerusalem"],
+    choices: ["Immediately after sowing", "At the harvest, the end of the age", "At Pentecost", "At the fall of Jerusalem"],
     answer: 1,
     reference: "Matthew 13:39-40",
-    verseText: "The harvest is the end of the world."
+    verseText: "The harvest is the end of the age."
   },
   {
     id: 16057,
@@ -681,7 +681,7 @@ const triviaQuestions = [
     choices: ["Authority over Sabbath traditions only", "Authority on earth to forgive sins", "Authority to appoint priests", "Authority to depose rulers"],
     answer: 1,
     reference: "Mark 2:10-12",
-    verseText: "The Son of man hath power on earth to forgive sins."
+    verseText: "The Son of Man has power on earth to forgive sins."
   },
   {
     id: 16058,
@@ -693,7 +693,7 @@ const triviaQuestions = [
     choices: ["Healing the nobleman's son", "Raising Lazarus", "Walking on water", "Feeding the five thousand"],
     answer: 1,
     reference: "John 11:43-53",
-    verseText: "Then from that day forth they took counsel together for to put him to death."
+    verseText: "Then, from that day on, they plotted to put Him to death."
   },
   {
     id: 16059,
@@ -713,11 +713,11 @@ const triviaQuestions = [
     testament: "New Testament",
     category: "John",
     difficulty: "Advanced",
-    question: "Which Gospel contains the statement, 'Before Abraham was, I am'?",
+    question: "Which Gospel contains the statement, 'Before Abraham was, I AM'?",
     choices: ["Matthew", "John", "Luke", "Mark"],
     answer: 1,
     reference: "John 8:58",
-    verseText: "Before Abraham was, I am."
+    verseText: "Before Abraham was, I AM."
   },
   {
     id: 16061,
@@ -738,10 +738,10 @@ const triviaQuestions = [
     category: "John",
     difficulty: "Advanced",
     question: "What confession did Martha make before Lazarus was raised?",
-    choices: ["Thou art Elias", "I believe that thou art the Christ, the Son of God", "Lord, teach us to pray", "Depart from me; for I am sinful"],
+    choices: ["You are Elijah", "I believe that You are the Christ, the Son of God", "Lord, teach us to pray", "Depart from me; for I am sinful"],
     answer: 1,
     reference: "John 11:27",
-    verseText: "I believe that thou art the Christ, the Son of God."
+    verseText: "I believe that You are the Christ, the Son of God."
   },
   {
     id: 16063,
@@ -750,10 +750,10 @@ const triviaQuestions = [
     category: "Passion",
     difficulty: "Advanced",
     question: "At the Last Supper, Jesus said the cup represented what?",
-    choices: ["The kingdom of David", "The new testament in my blood", "The joy of the feast", "The law of Moses"],
+    choices: ["The kingdom of David", "The new covenant in My blood", "The joy of the feast", "The law of Moses"],
     answer: 1,
     reference: "Luke 22:20",
-    verseText: "This cup is the new testament in my blood."
+    verseText: "This cup is the new covenant in My blood."
   },
   {
     id: 16064,
@@ -762,10 +762,10 @@ const triviaQuestions = [
     category: "Passion",
     difficulty: "Advanced",
     question: "What did Pilate ask the crowd regarding Jesus in Matthew 27?",
-    choices: ["Whom seek ye?", "What shall I do then with Jesus which is called Christ?", "Art thou a king then?", "Have ye no king but Caesar?"],
+    choices: ["Whom do you seek?", "What then shall I do with Jesus who is called Christ?", "Are You a king then?", "Have you no king but Caesar?"],
     answer: 1,
     reference: "Matthew 27:22",
-    verseText: "What shall I do then with Jesus which is called Christ?"
+    verseText: "What then shall I do with Jesus who is called Christ?"
   },
   {
     id: 16065,
@@ -773,11 +773,11 @@ const triviaQuestions = [
     testament: "New Testament",
     category: "Resurrection",
     difficulty: "Advanced",
-    question: "Who confessed to the risen Jesus, 'My Lord and my God'?",
+    question: "Who confessed to the risen Jesus, 'My Lord and my God!'?",
     choices: ["Peter", "Thomas", "John", "Martha"],
     answer: 1,
     reference: "John 20:28",
-    verseText: "Thomas answered and said unto him, My Lord and my God."
+    verseText: "Thomas answered and said to Him, 'My Lord and my God!'"
   },
   {
     id: 16066,
@@ -798,10 +798,10 @@ const triviaQuestions = [
     category: "Acts",
     difficulty: "Advanced",
     question: "Peter answered the Pentecost crowd with what initial command?",
-    choices: ["Believe only", "Repent, and be baptized every one of you", "Sell all that you have", "Return to the temple tomorrow"],
+    choices: ["Believe only", "Repent, and let every one of you be baptized in the name of Jesus Christ", "Sell all that you have", "Return to the temple tomorrow"],
     answer: 1,
     reference: "Acts 2:38",
-    verseText: "Repent, and be baptized every one of you in the name of Jesus Christ."
+    verseText: "Repent, and let every one of you be baptized in the name of Jesus Christ."
   },
   {
     id: 16068,
@@ -813,7 +813,7 @@ const triviaQuestions = [
     choices: ["James", "Stephen's", "Paul's", "Barnabas's"],
     answer: 1,
     reference: "Acts 7:59-60",
-    verseText: "Lord Jesus, receive my spirit... Lord, lay not this sin to their charge."
+    verseText: "Lord Jesus, receive my spirit... Lord, do not charge them with this sin."
   },
   {
     id: 16069,
@@ -837,7 +837,7 @@ const triviaQuestions = [
     choices: ["Repent and fast", "Believe on the Lord Jesus Christ", "Go to Jerusalem", "Keep the feasts"],
     answer: 1,
     reference: "Acts 16:31",
-    verseText: "Believe on the Lord Jesus Christ, and thou shalt be saved."
+    verseText: "Believe on the Lord Jesus Christ, and you will be saved."
   },
   {
     id: 16071,
@@ -846,10 +846,10 @@ const triviaQuestions = [
     category: "Romans",
     difficulty: "Advanced",
     question: "How does Paul summarize humanity's condition in Romans 3:23?",
-    choices: ["Most have sinned", "All have sinned, and come short of the glory of God", "Only Gentiles have sinned", "Only Israel stands guilty"],
+    choices: ["Most have sinned", "All have sinned and fall short of the glory of God", "Only Gentiles have sinned", "Only Israel stands guilty"],
     answer: 1,
     reference: "Romans 3:23",
-    verseText: "For all have sinned, and come short of the glory of God."
+    verseText: "For all have sinned and fall short of the glory of God."
   },
   {
     id: 16072,
@@ -858,10 +858,10 @@ const triviaQuestions = [
     category: "Romans",
     difficulty: "Advanced",
     question: "According to Romans 6:23, what is the gift of God?",
-    choices: ["Prosperity", "Eternal life through Jesus Christ our Lord", "Long life in Canaan", "The power of angels"],
+    choices: ["Prosperity", "Eternal life in Christ Jesus our Lord", "Long life in Canaan", "The power of angels"],
     answer: 1,
     reference: "Romans 6:23",
-    verseText: "The gift of God is eternal life through Jesus Christ our Lord."
+    verseText: "The gift of God is eternal life in Christ Jesus our Lord."
   },
   {
     id: 16073,
@@ -870,10 +870,10 @@ const triviaQuestions = [
     category: "Romans",
     difficulty: "Advanced",
     question: "Romans 8:28 says all things work together for good to whom?",
-    choices: ["Everyone equally without distinction of relation to God", "Them that love God, who are the called according to his purpose", "All who suffer", "All Israel after the flesh"],
+    choices: ["Everyone equally without distinction of relation to God", "Those who love God, who are the called according to His purpose", "All who suffer", "All Israel after the flesh"],
     answer: 1,
     reference: "Romans 8:28",
-    verseText: "To them that love God, to them who are the called according to his purpose."
+    verseText: "To those who love God, to those who are the called according to His purpose."
   },
   {
     id: 16074,
@@ -882,10 +882,10 @@ const triviaQuestions = [
     category: "1 Corinthians",
     difficulty: "Advanced",
     question: "In 1 Corinthians 13, what is said to be greater than faith and hope?",
-    choices: ["Knowledge", "Charity", "Wisdom", "Tongues"],
+    choices: ["Knowledge", "Love", "Wisdom", "Tongues"],
     answer: 1,
     reference: "1 Corinthians 13:13",
-    verseText: "The greatest of these is charity."
+    verseText: "The greatest of these is love."
   },
   {
     id: 16075,
@@ -897,7 +897,7 @@ const triviaQuestions = [
     choices: ["Church order", "The resurrection of the dead and of Christ", "The collection for Jerusalem", "Speaking in tongues"],
     answer: 1,
     reference: "1 Corinthians 15:12-22",
-    verseText: "Now is Christ risen from the dead."
+    verseText: "But now Christ is risen from the dead."
   },
   {
     id: 16076,
@@ -921,7 +921,7 @@ const triviaQuestions = [
     choices: ["Prayer", "Works", "Baptism", "Knowledge"],
     answer: 1,
     reference: "Ephesians 2:8-9",
-    verseText: "Not of works, lest any man should boast."
+    verseText: "Not of works, lest anyone should boast."
   },
   {
     id: 16078,
@@ -930,10 +930,10 @@ const triviaQuestions = [
     category: "Ephesians",
     difficulty: "Advanced",
     question: "What are believers commanded to put on in Ephesians 6?",
-    choices: ["The garments of Aaron", "The whole armour of God", "The white robe of the high priest", "The yoke of the law"],
+    choices: ["The garments of Aaron", "The whole armor of God", "The white robe of the high priest", "The yoke of the law"],
     answer: 1,
     reference: "Ephesians 6:11",
-    verseText: "Put on the whole armour of God."
+    verseText: "Put on the whole armor of God."
   },
   {
     id: 16079,
@@ -945,7 +945,7 @@ const triviaQuestions = [
     choices: ["Honor among churches", "To be with Christ", "Relief from prison only", "Vindication before Caesar"],
     answer: 1,
     reference: "Philippians 1:21-23",
-    verseText: "To die is gain... to depart, and to be with Christ."
+    verseText: "To die is gain... to depart and be with Christ."
   },
   {
     id: 16080,
@@ -966,7 +966,7 @@ const triviaQuestions = [
     category: "Thessalonians",
     difficulty: "Advanced",
     question: "What short command appears in 1 Thessalonians 5:17?",
-    choices: ["Watch and fast", "Pray without ceasing", "Study daily", "Remember the sabbath"],
+    choices: ["Watch and fast", "Pray without ceasing", "Study daily", "Remember the Sabbath"],
     answer: 1,
     reference: "1 Thessalonians 5:17",
     verseText: "Pray without ceasing."
@@ -978,10 +978,10 @@ const triviaQuestions = [
     category: "Pastoral Epistles",
     difficulty: "Advanced",
     question: "In 2 Timothy 2:15, what is Timothy told to do?",
-    choices: ["Guard the temple", "Study to shew thyself approved unto God", "Seek signs and wonders", "Avoid all disputes in public"],
+    choices: ["Guard the temple", "Be diligent to present yourself approved to God", "Seek signs and wonders", "Avoid all disputes in public"],
     answer: 1,
     reference: "2 Timothy 2:15",
-    verseText: "Study to shew thyself approved unto God."
+    verseText: "Be diligent to present yourself approved to God."
   },
   {
     id: 16083,
@@ -990,10 +990,10 @@ const triviaQuestions = [
     category: "Pastoral Epistles",
     difficulty: "Advanced",
     question: "Near death, Paul said he had done what three things in 2 Timothy 4:7?",
-    choices: ["Preached, suffered, and prayed", "Fought a good fight, finished his course, kept the faith", "Founded churches, appointed elders, written epistles", "Loved Christ, hated evil, endured affliction"],
+    choices: ["Preached, suffered, and prayed", "Fought the good fight, finished the race, kept the faith", "Founded churches, appointed elders, written epistles", "Loved Christ, hated evil, endured affliction"],
     answer: 1,
     reference: "2 Timothy 4:7",
-    verseText: "I have fought a good fight, I have finished my course, I have kept the faith."
+    verseText: "I have fought the good fight, I have finished the race, I have kept the faith."
   },
   {
     id: 16084,
@@ -1002,10 +1002,10 @@ const triviaQuestions = [
     category: "Hebrews",
     difficulty: "Advanced",
     question: "According to Hebrews 4:14, Jesus is described as what kind of high priest?",
-    choices: ["A priest after Aaron only", "A great high priest that is passed into the heavens", "A priest in the earthly sanctuary", "A future priest only"],
+    choices: ["A priest after Aaron only", "A great High Priest who has passed through the heavens", "A priest in the earthly sanctuary", "A future priest only"],
     answer: 1,
     reference: "Hebrews 4:14",
-    verseText: "Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God."
+    verseText: "Seeing then that we have a great High Priest who has passed through the heavens, Jesus the Son of God."
   },
   {
     id: 16085,
@@ -1017,7 +1017,7 @@ const triviaQuestions = [
     choices: ["To understand prophecy", "To please God", "To be justified before men", "To receive wisdom"],
     answer: 1,
     reference: "Hebrews 11:6",
-    verseText: "Without faith it is impossible to please him."
+    verseText: "Without faith it is impossible to please Him."
   },
   {
     id: 16086,
@@ -1026,10 +1026,10 @@ const triviaQuestions = [
     category: "James",
     difficulty: "Advanced",
     question: "James says hearers only are guilty of what?",
-    choices: ["Spiritual weakness", "Deceiving their own selves", "Breaking the Sabbath", "Despising prophecy"],
+    choices: ["Spiritual weakness", "Deceiving themselves", "Breaking the Sabbath", "Despising prophecy"],
     answer: 1,
     reference: "James 1:22",
-    verseText: "Be ye doers of the word, and not hearers only, deceiving your own selves."
+    verseText: "But be doers of the word, and not hearers only, deceiving yourselves."
   },
   {
     id: 16087,
@@ -1050,10 +1050,10 @@ const triviaQuestions = [
     category: "1 Peter",
     difficulty: "Advanced",
     question: "Peter tells believers to cast all their care upon God because He does what?",
-    choices: ["Judges with strictness only", "Careth for you", "Shortens every trial", "Sends angels daily"],
+    choices: ["Judges with strictness only", "Cares for you", "Shortens every trial", "Sends angels daily"],
     answer: 1,
     reference: "1 Peter 5:7",
-    verseText: "Casting all your care upon him; for he careth for you."
+    verseText: "Casting all your care upon Him, for He cares for you."
   },
   {
     id: 16089,
@@ -1065,7 +1065,7 @@ const triviaQuestions = [
     choices: ["Ancient origin", "Private interpretation", "Covenant value", "Apostolic interest"],
     answer: 1,
     reference: "2 Peter 1:20",
-    verseText: "No prophecy of the scripture is of any private interpretation."
+    verseText: "No prophecy of Scripture is of any private interpretation."
   },
   {
     id: 16090,
@@ -1089,7 +1089,7 @@ const triviaQuestions = [
     choices: ["Ends suffering", "Casts out fear", "Removes temptation", "Guarantees earthly peace"],
     answer: 1,
     reference: "1 John 4:18",
-    verseText: "Perfect love casteth out fear."
+    verseText: "Perfect love casts out fear."
   },
   {
     id: 16092,
@@ -1098,10 +1098,10 @@ const triviaQuestions = [
     category: "Revelation",
     difficulty: "Advanced",
     question: "In Revelation 1, where is the Son of man seen walking?",
-    choices: ["Among the cherubim", "In the midst of the seven golden candlesticks", "By the sea of glass", "Before the altar of incense"],
+    choices: ["Among the cherubim", "In the midst of the seven golden lampstands", "By the sea of glass", "Before the altar of incense"],
     answer: 1,
     reference: "Revelation 1:12-13",
-    verseText: "In the midst of the seven candlesticks one like unto the Son of man."
+    verseText: "In the midst of the seven lampstands One like the Son of Man."
   },
   {
     id: 16093,
@@ -1113,7 +1113,7 @@ const triviaQuestions = [
     choices: ["Michael the archangel", "The Lamb", "John", "One of the elders"],
     answer: 1,
     reference: "Revelation 5:5-9",
-    verseText: "Behold, the Lion of the tribe of Juda... and I beheld... a Lamb."
+    verseText: "Behold, the Lion of the tribe of Judah... and I looked... a Lamb."
   },
   {
     id: 16094,
@@ -1122,10 +1122,10 @@ const triviaQuestions = [
     category: "Revelation",
     difficulty: "Advanced",
     question: "In Revelation 21, what descends out of heaven from God?",
-    choices: ["The millennial temple", "The holy city, new Jerusalem", "A scroll of judgment", "The armies of heaven"],
+    choices: ["The millennial temple", "The holy city, New Jerusalem", "A scroll of judgment", "The armies of heaven"],
     answer: 1,
     reference: "Revelation 21:2",
-    verseText: "I John saw the holy city, new Jerusalem, coming down from God out of heaven."
+    verseText: "Then I, John, saw the holy city, New Jerusalem, coming down out of heaven from God."
   },
   {
     id: 16095,
@@ -1149,7 +1149,7 @@ const triviaQuestions = [
     choices: ["Aaron", "Melchizedek", "Phinehas", "Zadok"],
     answer: 1,
     reference: "Hebrews 7:1-3",
-    verseText: "First being by interpretation King of righteousness... made like unto the Son of God."
+    verseText: "First being translated 'king of righteousness'... made like the Son of God."
   },
   {
     id: 16097,
@@ -1161,7 +1161,7 @@ const triviaQuestions = [
     choices: ["Romans", "Hebrews", "Acts", "James"],
     answer: 1,
     reference: "Hebrews 8:6",
-    verseText: "He is the mediator of a better covenant."
+    verseText: "He is also Mediator of a better covenant."
   },
   {
     id: 16098,
@@ -1173,7 +1173,7 @@ const triviaQuestions = [
     choices: ["Matthew", "John", "Mark", "Luke"],
     answer: 1,
     reference: "John 2:11; John 20:30-31",
-    verseText: "This beginning of miracles did Jesus... and manifested forth his glory."
+    verseText: "This beginning of signs Jesus did... and manifested His glory."
   },
   {
     id: 16099,
@@ -1185,7 +1185,7 @@ const triviaQuestions = [
     choices: ["Human strength followed by human reform", "God judges sin yet preserves and redeems a people for His name", "Priests always prevent judgment", "Kings establish righteousness by policy alone"],
     answer: 1,
     reference: "Exodus 34:6-7; Romans 11:22; Revelation 21:3-4",
-    verseText: "The LORD God, merciful and gracious... and that will by no means clear the guilty."
+    verseText: "The LORD God, merciful and gracious... by no means clearing the guilty."
   },
   {
     id: 16100,
@@ -1202,7 +1202,7 @@ const triviaQuestions = [
     ],
     answer: 1,
     reference: "Genesis 3:15; Luke 24:27; Ephesians 1:9-10",
-    verseText: "Beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself."
+    verseText: "And beginning at Moses and all the Prophets, He expounded to them in all the Scriptures the things concerning Himself."
   },
   {
     id: 16101,
@@ -1214,7 +1214,7 @@ const triviaQuestions = [
     choices: ["To symbolize his unbelief", "To show God alone passed through the covenant pieces", "To prepare him for circumcision", "To remove him from the land permanently"],
     answer: 1,
     reference: "Genesis 15:12, 17-18",
-    verseText: "A smoking furnace, and a burning lamp... passed between those pieces."
+    verseText: "There appeared a smoking oven and a burning torch that passed between those pieces."
   },
   {
     id: 16102,
@@ -1226,7 +1226,7 @@ const triviaQuestions = [
     choices: ["He became king of Egypt", "It marked his striving encounter with God and covenant transformation", "It replaced Abraham's covenant entirely", "It made him priest over Esau"],
     answer: 1,
     reference: "Genesis 32:28",
-    verseText: "As a prince hast thou power with God and with men, and hast prevailed."
+    verseText: "For you have struggled with God and with men, and have prevailed."
   },
   {
     id: 16103,
@@ -1234,11 +1234,11 @@ const triviaQuestions = [
     testament: "Old Testament",
     category: "Torah",
     difficulty: "Advanced",
-    question: "What theological point is emphasized by Joseph's words, 'God meant it unto good'?",
+    question: "What theological point is emphasized by Joseph's words, 'God meant it for good'?",
     choices: ["Humans are never morally responsible", "Divine providence can overrule human evil without excusing it", "Egypt was spiritually superior to Canaan", "Dreams always remove suffering"],
     answer: 1,
     reference: "Genesis 50:20",
-    verseText: "Ye thought evil against me; but God meant it unto good."
+    verseText: "You meant evil against me; but God meant it for good."
   },
   {
     id: 16104,
@@ -1250,7 +1250,7 @@ const triviaQuestions = [
     choices: ["It was only ceremonial color symbolism", "It was given upon the altar to make atonement because the life is in the blood", "It was reserved only for kings", "It replaced prayer entirely"],
     answer: 1,
     reference: "Leviticus 17:11",
-    verseText: "It is the blood that maketh an atonement for the soul."
+    verseText: "It is the blood that makes atonement for the soul."
   },
   {
     id: 16105,
@@ -1262,7 +1262,7 @@ const triviaQuestions = [
     choices: ["They lacked weapons", "They despised God's promise through unbelief", "They had not built an altar yet", "They had not crowned Moses"],
     answer: 1,
     reference: "Numbers 14:11",
-    verseText: "How long will it be ere they believe me?"
+    verseText: "How long will it be before they believe Me?"
   },
   {
     id: 16106,
@@ -1274,7 +1274,7 @@ const triviaQuestions = [
     choices: ["Agricultural dependence", "Dependence upon every word that proceeds from God", "Military discipline", "The superiority of manna to grain"],
     answer: 1,
     reference: "Deuteronomy 8:3",
-    verseText: "Man doth not live by bread only."
+    verseText: "Man shall not live by bread alone."
   },
   {
     id: 16107,
@@ -1286,7 +1286,7 @@ const triviaQuestions = [
     choices: ["He refused to fight at all", "He would not go without Deborah, so the honor of final victory would go to a woman", "He destroyed the ark", "He chose Midian as an ally"],
     answer: 1,
     reference: "Judges 4:8-9",
-    verseText: "The journey that thou takest shall not be for thine honour."
+    verseText: "The journey you are taking will not be for your glory."
   },
   {
     id: 16108,
@@ -1298,7 +1298,7 @@ const triviaQuestions = [
     choices: ["Too much reverence for priests", "Zeal mixed with tragic spiritual disorder", "A rejection of all warfare", "A return to Egyptian religion only"],
     answer: 1,
     reference: "Judges 11:30-40",
-    verseText: "Jephthah vowed a vow unto the LORD."
+    verseText: "Jephthah made a vow to the LORD."
   },
   {
     id: 16109,
@@ -1310,7 +1310,7 @@ const triviaQuestions = [
     choices: ["It only celebrates private motherhood", "It introduces themes of reversal, kingship, and divine exaltation that echo through later Scripture", "It replaces the Psalms", "It predicts the exile explicitly by name"],
     answer: 1,
     reference: "1 Samuel 2:1-10",
-    verseText: "He raiseth up the poor out of the dust."
+    verseText: "He raises the poor from the dust."
   },
   {
     id: 16110,
@@ -1322,7 +1322,7 @@ const triviaQuestions = [
     choices: ["They were merely smaller buildings", "They were false-worship innovations that rivaled God's chosen order", "They were too far north", "They lacked choir singers"],
     answer: 1,
     reference: "1 Kings 12:28-33",
-    verseText: "Behold thy gods, O Israel."
+    verseText: "Behold your gods, O Israel!"
   },
   {
     id: 16111,
@@ -1346,7 +1346,7 @@ const triviaQuestions = [
     choices: ["It shows Israel's army was restored", "It displays God's grace reaching a Gentile through humble obedience", "It ends prophecy in Israel", "It proves Jordan water was magical"],
     answer: 1,
     reference: "2 Kings 5:1-15",
-    verseText: "Now I know that there is no God in all the earth, but in Israel."
+    verseText: "Indeed, now I know that there is no God in all the earth, except in Israel."
   },
   {
     id: 16113,
@@ -1358,7 +1358,7 @@ const triviaQuestions = [
     choices: ["Kings outrank priests in worship", "Covenant roles and holiness cannot be violated without judgment", "Incense is forbidden in all cases", "Jerusalem had lost all priesthood"],
     answer: 1,
     reference: "2 Chronicles 26:16-21",
-    verseText: "His heart was lifted up to his destruction."
+    verseText: "His heart was lifted up, to his destruction."
   },
   {
     id: 16114,
@@ -1370,7 +1370,7 @@ const triviaQuestions = [
     choices: ["David's guilt over Bathsheba", "The prosperity of the wicked versus the suffering of the righteous", "Israel's defeat by Assyria", "The rebuilding of Jerusalem"],
     answer: 1,
     reference: "Psalm 73:2-17",
-    verseText: "Until I went into the sanctuary of God; then understood I their end."
+    verseText: "Until I went into the sanctuary of God; then I understood their end."
   },
   {
     id: 16115,
@@ -1382,7 +1382,7 @@ const triviaQuestions = [
     choices: ["Only political fear", "Recognition of personal uncleanness in the presence of divine holiness", "A lament for Babylon only", "A desire to leave prophecy"],
     answer: 1,
     reference: "Isaiah 6:5",
-    verseText: "I am undone; because I am a man of unclean lips."
+    verseText: "I am undone! Because I am a man of unclean lips."
   },
   {
     id: 16116,
@@ -1394,7 +1394,7 @@ const triviaQuestions = [
     choices: ["Israel lacked water technology", "Israel abandoned the LORD, the fountain of living waters, for worthless substitutes", "The temple needed repair", "Judah should move to Egypt"],
     answer: 1,
     reference: "Jeremiah 2:13",
-    verseText: "They have forsaken me the fountain of living waters."
+    verseText: "They have forsaken Me, the fountain of living waters."
   },
   {
     id: 16117,
@@ -1406,7 +1406,7 @@ const triviaQuestions = [
     choices: ["God ceased to exist in relation to Israel", "Judgment on Jerusalem and the temple's profanation", "The end of prophecy worldwide", "The superiority of Babylonian religion"],
     answer: 1,
     reference: "Ezekiel 10:18-19",
-    verseText: "The glory of the LORD departed from off the threshold of the house."
+    verseText: "Now the glory of the LORD departed from the threshold of the temple."
   },
   {
     id: 16118,
@@ -1418,7 +1418,7 @@ const triviaQuestions = [
     choices: ["Kings are always rejected by God", "The Most High rules in the kingdom of men", "Dreams should never be interpreted", "Babylon was stronger than heaven"],
     answer: 1,
     reference: "Daniel 4:17, 32",
-    verseText: "The most High ruleth in the kingdom of men."
+    verseText: "The Most High rules in the kingdom of men."
   },
   {
     id: 16119,
@@ -1430,7 +1430,7 @@ const triviaQuestions = [
     choices: ["It celebrates a military fortress", "It marks humble origins for the ruler whose goings forth are from of old", "It replaces Jerusalem forever in every sense", "It denies Davidic covenant themes"],
     answer: 1,
     reference: "Micah 5:2",
-    verseText: "Out of thee shall he come forth unto me that is to be ruler in Israel."
+    verseText: "Out of you shall come forth to Me the One to be Ruler in Israel."
   },
   {
     id: 16120,

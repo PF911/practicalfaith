@@ -9,7 +9,7 @@ const apostlesQuestions = [
     choices: ["Andrew", "Peter", "Simon the Zealot", "Thomas"],
     answer: 1,
     reference: "Matthew 16:16-17",
-    verseText: "Blessed art thou, Simon Barjona..."
+    verseText: "Blessed are you, Simon Bar-Jonah..."
   },
   {
     id: 11002,
@@ -42,7 +42,7 @@ const apostlesQuestions = [
     choices: ["Matthew", "Andrew", "Thomas", "Judas son of James"],
     answer: 1,
     reference: "John 1:35-40",
-    verseText: "One of the two which heard John speak... was Andrew."
+    verseText: "One of the two who heard John speak... was Andrew."
   },
   {
     id: 11005,
@@ -53,7 +53,7 @@ const apostlesQuestions = [
     choices: ["Matthew", "Bartholomew", "Simon the Zealot", "Thaddaeus"],
     answer: 0,
     reference: "Mark 2:14; Luke 5:27-29",
-    verseText: "He saw Levi... and he said unto him, Follow me."
+    verseText: "He saw Levi... and said to him, 'Follow Me.'"
   },
   {
     id: 11006,
@@ -64,7 +64,7 @@ const apostlesQuestions = [
     choices: ["Philip", "Thomas", "James son of Alphaeus", "Matthew"],
     answer: 0,
     reference: "John 1:44",
-    verseText: "Now Philip was of Bethsaida, the city of Andrew and Peter."
+    verseText: "Now Philip was from Bethsaida, the city of Andrew and Peter."
   },
   {
     id: 11007,
@@ -75,18 +75,18 @@ const apostlesQuestions = [
     choices: ["Nicodemus", "Nathanael", "Cleopas", "Joseph of Arimathaea"],
     answer: 1,
     reference: "John 1:45-49; John 21:2",
-    verseText: "Philip findeth Nathanael..."
+    verseText: "Philip found Nathanael..."
   },
   {
     id: 11008,
     game: "Apostles",
     category: "Identity",
     difficulty: "Advanced",
-    question: "Which apostle is specifically called Didymus?",
+    question: "Which apostle is specifically called Didymus (meaning 'the Twin')?",
     choices: ["Thomas", "Philip", "John", "Judas not Iscariot"],
     answer: 0,
     reference: "John 11:16; John 20:24",
-    verseText: "Thomas, which is called Didymus."
+    verseText: "Thomas, who is called the Twin."
   },
   {
     id: 11009,
@@ -97,7 +97,7 @@ const apostlesQuestions = [
     choices: ["Andrew", "Philip", "Peter", "Matthew"],
     answer: 1,
     reference: "John 14:8-9",
-    verseText: "Philip saith unto him, Lord, shew us the Father."
+    verseText: "Philip said to Him, 'Lord, show us the Father.'"
   },
   {
     id: 11010,
@@ -108,7 +108,7 @@ const apostlesQuestions = [
     choices: ["Thomas", "Judas not Iscariot", "Bartholomew", "Simon the Zealot"],
     answer: 1,
     reference: "John 14:22",
-    verseText: "Judas saith unto him, not Iscariot..."
+    verseText: "Judas (not Iscariot) said to Him..."
   },
 
   {
@@ -120,7 +120,7 @@ const apostlesQuestions = [
     choices: ["Matthew", "Thomas", "Philip", "Andrew"],
     answer: 0,
     reference: "Matthew 9:9",
-    verseText: "A man, named Matthew, sitting at the receipt of custom."
+    verseText: "A man named Matthew sitting at the tax office."
   },
   {
     id: 11012,
@@ -142,18 +142,18 @@ const apostlesQuestions = [
     choices: ["Peter and Andrew", "James and John", "Philip and Nathanael", "Thomas and Matthew"],
     answer: 1,
     reference: "Matthew 4:21-22",
-    verseText: "James... and John... mending their nets."
+    verseText: "James... and John his brother... mending their nets."
   },
   {
     id: 11014,
     game: "Apostles",
     category: "Calling",
     difficulty: "Advanced",
-    question: "Which apostle first brought his own brother to Jesus after declaring, 'We have found the Messias'?",
+    question: "Which apostle first brought his own brother to Jesus after declaring, 'We have found the Messiah'?",
     choices: ["John", "Andrew", "Philip", "Thomas"],
     answer: 1,
     reference: "John 1:40-42",
-    verseText: "He first findeth his own brother Simon."
+    verseText: "He first found his own brother Simon."
   },
   {
     id: 11015,
@@ -164,7 +164,7 @@ const apostlesQuestions = [
     choices: ["Andrew", "Philip", "Peter", "Matthew"],
     answer: 1,
     reference: "John 1:45-46",
-    verseText: "Philip findeth Nathanael."
+    verseText: "Philip found Nathanael."
   },
   {
     id: 11016,
@@ -180,7 +180,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 4:18-22; John 1:35-51; Matthew 9:9",
-    verseText: "Follow me... Come and see."
+    verseText: "Follow Me... Come and see."
   },
   {
     id: 11017,
@@ -196,7 +196,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 9:9-13",
-    verseText: "I am not come to call the righteous, but sinners to repentance."
+    verseText: "I did not come to call the righteous, but sinners, to repentance."
   },
   {
     id: 11018,
@@ -212,7 +212,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 1:40-42",
-    verseText: "He first findeth his own brother Simon."
+    verseText: "He first found his own brother Simon."
   },
 
   {
@@ -236,7 +236,7 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "Lists and Identity",
     difficulty: "Advanced",
-    question: "What does the variation between 'Thaddaeus' and 'Judas the brother/son of James' in apostolic lists most likely show?",
+    question: "What does the variation between 'Thaddaeus' and 'Judas the son of James' in apostolic lists most likely show?",
     choices: [
       "The Gospels disagree on the number of apostles",
       "Some apostles were known by more than one designation",
@@ -245,14 +245,14 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 10:3; Mark 3:18; Luke 6:16; Acts 1:13",
-    verseText: "Thaddaeus... Judas the brother of James."
+    verseText: "Thaddaeus... Judas the son of James."
   },
   {
     id: 11021,
     game: "Apostles",
     category: "Lists and Identity",
     difficulty: "Advanced",
-    question: "Why is it significant that Simon the Cananaean and Simon Zelotes refer to the same apostle?",
+    question: "Why is it significant that Simon the Cananite and Simon the Zealot refer to the same apostle?",
     choices: [
       "It shows two different apostles named Simon were merged accidentally",
       "It reflects differing linguistic forms for the same identifying description",
@@ -261,7 +261,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 10:4; Mark 3:18; Luke 6:15",
-    verseText: "Simon the Canaanite... Simon called Zelotes."
+    verseText: "Simon the Cananite... Simon called the Zealot."
   },
   {
     id: 11022,
@@ -277,7 +277,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 1:45-49; John 21:2; Matthew 10:3",
-    verseText: "Philip and Bartholomew... Philip findeth Nathanael."
+    verseText: "Philip and Bartholomew... Philip found Nathanael."
   },
 
   {
@@ -285,22 +285,22 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "Ministry",
     difficulty: "Advanced",
-    question: "At the feeding of the five thousand, which apostle pointed out the lad with five barley loaves and two small fishes?",
+    question: "At the feeding of the five thousand, which apostle pointed out the lad with five barley loaves and two small fish?",
     choices: ["Philip", "Andrew", "John", "Thomas"],
     answer: 1,
     reference: "John 6:8-9",
-    verseText: "One of his disciples, Andrew... saith unto him."
+    verseText: "One of His disciples, Andrew... said to Him."
   },
   {
     id: 11024,
     game: "Apostles",
     category: "Ministry",
     difficulty: "Advanced",
-    question: "Which apostle was tested by Jesus with the question, 'Whence shall we buy bread, that these may eat'?",
+    question: "Which apostle was tested by Jesus with the question, 'Where shall we buy bread, that these may eat'?",
     choices: ["Peter", "Philip", "Bartholomew", "Matthew"],
     answer: 1,
     reference: "John 6:5-7",
-    verseText: "He saith unto Philip... this he said to prove him."
+    verseText: "He said to Philip... But this He said to test him."
   },
   {
     id: 11025,
@@ -323,11 +323,11 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "Ministry",
     difficulty: "Advanced",
-    question: "Which apostle confessed, 'Thou art the Christ, the Son of the living God'?",
+    question: "Which apostle confessed, 'You are the Christ, the Son of the living God'?",
     choices: ["John", "Peter", "Thomas", "James"],
     answer: 1,
     reference: "Matthew 16:16",
-    verseText: "Simon Peter answered."
+    verseText: "Simon Peter answered and said..."
   },
   {
     id: 11027,
@@ -338,7 +338,7 @@ const apostlesQuestions = [
     choices: ["Andrew", "Peter", "James", "Philip"],
     answer: 1,
     reference: "Matthew 14:28-31",
-    verseText: "Lord, if it be thou, bid me come."
+    verseText: "Lord, if it is You, command me to come to You on the water."
   },
   {
     id: 11028,
@@ -349,18 +349,18 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "Simon the Zealot", "Thomas"],
     answer: 1,
     reference: "John 18:10",
-    verseText: "Then Simon Peter having a sword drew it."
+    verseText: "Then Simon Peter, having a sword, drew it."
   },
   {
     id: 11029,
     game: "Apostles",
     category: "Ministry",
     difficulty: "Advanced",
-    question: "Which apostle denied Jesus three times before the cock crew?",
+    question: "Which apostle denied Jesus three times before the rooster crowed?",
     choices: ["Andrew", "Peter", "Thomas", "Matthew"],
     answer: 1,
     reference: "Luke 22:54-62",
-    verseText: "And Peter said... and immediately... the cock crew."
+    verseText: "Immediately, while he was still speaking, the rooster crowed."
   },
   {
     id: 11030,
@@ -387,7 +387,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 6:5-7; John 14:8-9",
-    verseText: "Have I been so long time with you, and yet hast thou not known me, Philip?"
+    verseText: "Have I been with you so long, and yet you have not known Me, Philip?"
   },
   {
     id: 11032,
@@ -403,7 +403,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 16:16-23; Luke 22:31-34, 54-62; John 21:15-19",
-    verseText: "When thou art converted, strengthen thy brethren."
+    verseText: "When you have returned to Me, strengthen your brethren."
   },
 
   {
@@ -415,7 +415,7 @@ const apostlesQuestions = [
     choices: ["Peter", "John", "Andrew", "Thomas"],
     answer: 1,
     reference: "John 13:23-25",
-    verseText: "There was leaning on Jesus' bosom one of his disciples."
+    verseText: "Now there was leaning on Jesus' bosom one of His disciples, whom Jesus loved."
   },
   {
     id: 11034,
@@ -426,7 +426,7 @@ const apostlesQuestions = [
     choices: ["Thomas", "Peter", "Philip", "James"],
     answer: 1,
     reference: "John 13:24",
-    verseText: "Simon Peter therefore beckoned to him."
+    verseText: "Simon Peter therefore motioned to him to ask who it was."
   },
   {
     id: 11035,
@@ -437,7 +437,7 @@ const apostlesQuestions = [
     choices: ["Judas Iscariot", "Thomas", "Matthew", "Simon the Zealot"],
     answer: 0,
     reference: "John 12:4-6; John 13:26-30",
-    verseText: "He was a thief, and had the bag."
+    verseText: "He was a thief, and had the money box."
   },
   {
     id: 11036,
@@ -453,29 +453,29 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 10:1-4; Matthew 26:14-16, 47-50; John 17:12",
-    verseText: "Have not I chosen you twelve, and one of you is a devil?"
+    verseText: "Did I not choose you, the twelve, and one of you is a devil?"
   },
   {
     id: 11037,
     game: "Apostles",
     category: "Last Supper and Passion",
     difficulty: "Advanced",
-    question: "Which apostle said, 'Lord, why cannot I follow thee now? I will lay down my life for thy sake'?",
+    question: "Which apostle said, 'Lord, why can I not follow You now? I will lay down my life for Your sake'?",
     choices: ["John", "Peter", "Thomas", "Andrew"],
     answer: 1,
     reference: "John 13:36-38",
-    verseText: "I will lay down my life for thy sake."
+    verseText: "I will lay down my life for Your sake."
   },
   {
     id: 11038,
     game: "Apostles",
     category: "Last Supper and Passion",
     difficulty: "Advanced",
-    question: "Which apostle responded to Jesus' announcement of departure with the words, 'Lord, we know not whither thou goest'?",
+    question: "Which apostle responded to Jesus' announcement of departure with the words, 'Lord, we do not know where You are going'?",
     choices: ["Philip", "Thomas", "Matthew", "John"],
     answer: 1,
     reference: "John 14:5",
-    verseText: "Thomas saith unto him..."
+    verseText: "Thomas said to Him..."
   },
   {
     id: 11039,
@@ -486,7 +486,7 @@ const apostlesQuestions = [
     choices: ["John", "James", "Philip", "Thomas"],
     answer: 0,
     reference: "John 18:15-16",
-    verseText: "That disciple was known unto the high priest."
+    verseText: "Now that disciple was known to the high priest."
   },
   {
     id: 11040,
@@ -502,7 +502,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Luke 22:61-62; John 21:15-17",
-    verseText: "Lovest thou me?... Feed my sheep."
+    verseText: "Do you love Me?... Feed My sheep."
   },
 
   {
@@ -510,11 +510,11 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "Post-Resurrection",
     difficulty: "Advanced",
-    question: "Which apostle said, 'Except I shall see in his hands the print of the nails... I will not believe'?",
+    question: "Which apostle said, 'Unless I see in His hands the print of the nails... I will not believe'?",
     choices: ["Peter", "Thomas", "Matthew", "Bartholomew"],
     answer: 1,
     reference: "John 20:25",
-    verseText: "Except I shall see... I will not believe."
+    verseText: "Unless I see... I will not believe."
   },
   {
     id: 11042,
@@ -525,7 +525,7 @@ const apostlesQuestions = [
     choices: ["John", "Thomas", "Peter", "Philip"],
     answer: 1,
     reference: "John 20:28",
-    verseText: "Thomas answered and said unto him, My Lord and my God."
+    verseText: "Thomas answered and said to Him, 'My Lord and my God!'"
   },
   {
     id: 11043,
@@ -536,7 +536,7 @@ const apostlesQuestions = [
     choices: ["Peter and Andrew", "Peter and John", "James and John", "Thomas and Matthew"],
     answer: 1,
     reference: "John 20:2-8",
-    verseText: "Peter... and that other disciple."
+    verseText: "Peter therefore went out, and the other disciple."
   },
   {
     id: 11044,
@@ -547,7 +547,7 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "Andrew", "Thomas"],
     answer: 1,
     reference: "John 20:6",
-    verseText: "Then cometh Simon Peter following him, and went into the sepulchre."
+    verseText: "Then Simon Peter came, following him, and went into the tomb."
   },
   {
     id: 11045,
@@ -563,7 +563,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 20:27-29",
-    verseText: "Thomas answered and said unto him, My Lord and my God."
+    verseText: "Thomas answered and said to Him, 'My Lord and my God!'"
   },
   {
     id: 11046,
@@ -579,7 +579,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 20:3-8",
-    verseText: "He saw, and believed."
+    verseText: "He saw and believed."
   },
   {
     id: 11047,
@@ -595,7 +595,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 21:15-19",
-    verseText: "Feed my lambs... Feed my sheep."
+    verseText: "Feed My lambs... Feed My sheep."
   },
 
   {
@@ -618,7 +618,7 @@ const apostlesQuestions = [
     choices: ["Joseph called Barsabas", "Matthias", "Barnabas", "Silas"],
     answer: 1,
     reference: "Acts 1:26",
-    verseText: "The lot fell upon Matthias."
+    verseText: "And the lot fell on Matthias."
   },
   {
     id: 11050,
@@ -629,7 +629,7 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "James the son of Alphaeus", "Thomas"],
     answer: 1,
     reference: "Acts 2:14-40",
-    verseText: "Peter, standing up with the eleven, lifted up his voice."
+    verseText: "But Peter, standing up with the eleven, raised his voice."
   },
   {
     id: 11051,
@@ -640,18 +640,18 @@ const apostlesQuestions = [
     choices: ["Peter and John", "Peter and Andrew", "John and James", "Philip and Thomas"],
     answer: 0,
     reference: "Acts 3:1-8",
-    verseText: "Peter and John went up together into the temple."
+    verseText: "Now Peter and John went up together to the temple."
   },
   {
     id: 11052,
     game: "Apostles",
     category: "Acts",
     difficulty: "Advanced",
-    question: "Which apostle told the lame man at the Beautiful Gate, 'Silver and gold have I none'?",
+    question: "Which apostle told the lame man at the Beautiful Gate, 'Silver and gold I do not have'?",
     choices: ["John", "Peter", "James", "Thomas"],
     answer: 1,
     reference: "Acts 3:6",
-    verseText: "Silver and gold have I none."
+    verseText: "Silver and gold I do not have."
   },
   {
     id: 11053,
@@ -662,7 +662,7 @@ const apostlesQuestions = [
     choices: ["Peter and John", "Peter and the apostles", "James and John", "Paul and Barnabas"],
     answer: 1,
     reference: "Acts 5:27-29",
-    verseText: "Peter and the other apostles answered."
+    verseText: "But Peter and the other apostles answered and said."
   },
   {
     id: 11054,
@@ -673,7 +673,7 @@ const apostlesQuestions = [
     choices: ["Peter", "James the brother of John", "Andrew", "Thomas"],
     answer: 1,
     reference: "Acts 12:1-2",
-    verseText: "He killed James the brother of John with the sword."
+    verseText: "Then he killed James the brother of John with the sword."
   },
   {
     id: 11055,
@@ -684,7 +684,7 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "James son of Alphaeus", "Matthew"],
     answer: 1,
     reference: "Acts 12:3-11",
-    verseText: "The angel of the Lord came upon him."
+    verseText: "Now behold, an angel of the Lord stood by him."
   },
   {
     id: 11056,
@@ -695,7 +695,7 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "Thomas", "Matthias"],
     answer: 1,
     reference: "Acts 10:1-48; Acts 15:7",
-    verseText: "God made choice among us, that the Gentiles by my mouth should hear."
+    verseText: "God chose among us, that by my mouth the Gentiles should hear the word of the gospel."
   },
   {
     id: 11057,
@@ -711,7 +711,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 10:9-35",
-    verseText: "God hath shewed me that I should not call any man common or unclean."
+    verseText: "God has shown me that I should not call any man common or unclean."
   },
   {
     id: 11058,
@@ -722,7 +722,7 @@ const apostlesQuestions = [
     choices: ["John", "Peter", "James son of Zebedee", "Andrew"],
     answer: 1,
     reference: "Acts 15:7-11",
-    verseText: "Why tempt ye God, to put a yoke upon the neck of the disciples?"
+    verseText: "Now therefore, why do you test God by putting a yoke on the neck of the disciples?"
   },
   {
     id: 11059,
@@ -733,7 +733,7 @@ const apostlesQuestions = [
     choices: ["James son of Zebedee", "James the Lord's brother", "James son of Alphaeus", "James the father of Judas"],
     answer: 1,
     reference: "Acts 15:13-21",
-    verseText: "And after they had held their peace, James answered."
+    verseText: "And after they had become silent, James answered."
   },
   {
     id: 11060,
@@ -782,7 +782,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 9:3-16; 1 Corinthians 15:8-10",
-    verseText: "Last of all he was seen of me also, as of one born out of due time."
+    verseText: "Then last of all He was seen by me also, as by one born out of due time."
   },
   {
     id: 11063,
@@ -793,7 +793,7 @@ const apostlesQuestions = [
     choices: ["James", "Peter", "John", "Matthew"],
     answer: 1,
     reference: "Galatians 2:11-14",
-    verseText: "I withstood him to the face."
+    verseText: "I withstood him to his face."
   },
   {
     id: 11064,
@@ -809,7 +809,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Galatians 2:11-14",
-    verseText: "They walked not uprightly according to the truth of the gospel."
+    verseText: "They were not straightforward about the truth of the gospel."
   },
   {
     id: 11065,
@@ -841,7 +841,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Galatians 2:7-9",
-    verseText: "The gospel of the uncircumcision was committed unto me... of the circumcision unto Peter."
+    verseText: "The gospel for the uncircumcised had been committed to me... for the circumcised to Peter."
   },
   {
     id: 11067,
@@ -857,7 +857,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Galatians 1:1, 11-12; 2 Corinthians 10-12",
-    verseText: "Not of men, neither by man, but by Jesus Christ."
+    verseText: "Not from men nor through man, but through Jesus Christ."
   },
   {
     id: 11068,
@@ -873,7 +873,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "1 Corinthians 15:8-10",
-    verseText: "As of one born out of due time."
+    verseText: "As by one born out of due time."
   },
   {
     id: 11069,
@@ -889,7 +889,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "2 Corinthians 12:12",
-    verseText: "Truly the signs of an apostle were wrought among you."
+    verseText: "Truly the signs of an apostle were accomplished among you."
   },
   {
     id: 11070,
@@ -905,7 +905,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 9:15; Galatians 1:1; 2:7-9; 1 Corinthians 9:1-2",
-    verseText: "He is a chosen vessel unto me."
+    verseText: "He is a chosen vessel of Mine."
   },
 
   {
@@ -917,7 +917,7 @@ const apostlesQuestions = [
     choices: ["James son of Zebedee", "James the Lord's brother", "James son of Alphaeus", "James the father of Judas"],
     answer: 1,
     reference: "Acts 15:13; Galatians 1:19",
-    verseText: "Other of the apostles saw I none, save James the Lord's brother."
+    verseText: "But I saw none of the other apostles except James, the Lord's brother."
   },
   {
     id: 11072,
@@ -933,18 +933,18 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "1 Corinthians 15:7; Galatians 1:19; 2:9",
-    verseText: "Then of James."
+    verseText: "After that He was seen by James."
   },
   {
     id: 11073,
     game: "Apostles",
     category: "James and Jude",
     difficulty: "Advanced",
-    question: "Which New Testament writer introduces himself as 'a servant of God and of the Lord Jesus Christ' and is traditionally linked with James the Lord's brother?",
+    question: "Which New Testament writer introduces himself as 'a bondservant of God and of the Lord Jesus Christ' and is traditionally linked with James the Lord's brother?",
     choices: ["Peter", "James", "Jude", "John"],
     answer: 1,
     reference: "James 1:1",
-    verseText: "James, a servant of God and of the Lord Jesus Christ."
+    verseText: "James, a bondservant of God and of the Lord Jesus Christ."
   },
   {
     id: 11074,
@@ -962,7 +962,7 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "James and Jude",
     difficulty: "Advanced",
-    question: "What does the self-description of James and Jude as servants of Jesus rather than simply as His natural brothers especially suggest?",
+    question: "What does the self-description of James and Jude as bondservants of Jesus rather than simply as His natural brothers especially suggest?",
     choices: [
       "They denied family relation entirely",
       "They foreground submission to Christ's lordship over natural privilege",
@@ -971,7 +971,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "James 1:1; Jude 1:1",
-    verseText: "A servant... of the Lord Jesus Christ."
+    verseText: "A bondservant... of the Lord Jesus Christ."
   },
 
   {
@@ -979,11 +979,11 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "Writings",
     difficulty: "Advanced",
-    question: "Which apostle wrote of believers as 'lively stones' built up a spiritual house?",
+    question: "Which apostle wrote of believers as 'living stones' built up a spiritual house?",
     choices: ["John", "Peter", "James", "Jude"],
     answer: 1,
     reference: "1 Peter 2:5",
-    verseText: "Ye also, as lively stones..."
+    verseText: "You also, as living stones..."
   },
   {
     id: 11077,
@@ -1005,18 +1005,18 @@ const apostlesQuestions = [
     choices: ["Peter", "John", "Andrew", "James"],
     answer: 1,
     reference: "John 13:23; John 21:20-24",
-    verseText: "That disciple whom Jesus loved."
+    verseText: "The disciple whom Jesus loved."
   },
   {
     id: 11079,
     game: "Apostles",
     category: "Writings",
     difficulty: "Advanced",
-    question: "Which apostle wrote the book of Revelation while on the isle called Patmos?",
+    question: "Which apostle wrote the book of Revelation while on the island called Patmos?",
     choices: ["Peter", "John", "Paul", "Thomas"],
     answer: 1,
     reference: "Revelation 1:9",
-    verseText: "I John... was in the isle that is called Patmos."
+    verseText: "I, John... was on the island that is called Patmos."
   },
   {
     id: 11080,
@@ -1032,7 +1032,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 1:1-18; 1 John 1:1-7; 4:7-16; Revelation 1:1-8",
-    verseText: "In him was life... God is love."
+    verseText: "In Him was life... God is love."
   },
   {
     id: 11081,
@@ -1048,7 +1048,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "1 Peter 1:3-7, 13-16; 5:1-4; 2 Peter 1:12-21",
-    verseText: "Rejoice... though now for a season... ye are in heaviness."
+    verseText: "In this you greatly rejoice, though now for a little while, you have been grieved by various trials."
   },
   {
     id: 11082,
@@ -1064,7 +1064,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "2 Peter 1:16-21",
-    verseText: "We have not followed cunningly devised fables."
+    verseText: "For we did not follow cunningly devised fables."
   },
   {
     id: 11083,
@@ -1080,7 +1080,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "1 John 1:1-3",
-    verseText: "Which we have heard, which we have seen with our eyes."
+    verseText: "That which we have heard, which we have seen with our eyes."
   },
 
   {
@@ -1097,7 +1097,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Luke 6:12-13",
-    verseText: "He continued all night in prayer to God."
+    verseText: "He went out to the mountain to pray, and continued all night in prayer to God."
   },
   {
     id: 11085,
@@ -1113,7 +1113,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Luke 6:13; Mark 3:14",
-    verseText: "Whom also he named apostles."
+    verseText: "He chose twelve, whom He also named apostles."
   },
   {
     id: 11086,
@@ -1129,7 +1129,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 19:28; Luke 22:29-30; Revelation 21:12-14",
-    verseText: "Ye also shall sit upon twelve thrones, judging the twelve tribes of Israel."
+    verseText: "You who have followed Me will also sit on twelve thrones, judging the twelve tribes of Israel."
   },
   {
     id: 11087,
@@ -1145,7 +1145,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:15-26",
-    verseText: "His bishoprick let another take."
+    verseText: "Let another take his office."
   },
   {
     id: 11088,
@@ -1161,7 +1161,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:21-22",
-    verseText: "Must one be ordained to be a witness with us of his resurrection."
+    verseText: "One of these must become a witness with us of His resurrection."
   },
   {
     id: 11089,
@@ -1177,7 +1177,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:21-22",
-    verseText: "A witness with us of his resurrection."
+    verseText: "A witness with us of His resurrection."
   },
   {
     id: 11090,
@@ -1193,7 +1193,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Ephesians 2:19-20",
-    verseText: "Built upon the foundation of the apostles and prophets."
+    verseText: "Having been built on the foundation of the apostles and prophets."
   },
   {
     id: 11091,
@@ -1209,7 +1209,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Revelation 21:14",
-    verseText: "The wall of the city had twelve foundations."
+    verseText: "Now the wall of the city had twelve foundations."
   },
   {
     id: 11092,
@@ -1225,7 +1225,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 28:18-20",
-    verseText: "Go ye therefore, and teach all nations."
+    verseText: "Go therefore and make disciples of all the nations."
   },
   {
     id: 11093,
@@ -1241,7 +1241,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:8",
-    verseText: "Ye shall be witnesses unto me... unto the uttermost part of the earth."
+    verseText: "You shall be witnesses to Me... to the end of the earth."
   },
 
   {
@@ -1258,7 +1258,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 26:69-75; 27:3-5; Luke 22:31-32; John 21:15-19",
-    verseText: "I have prayed for thee... that thy faith fail not."
+    verseText: "I have prayed for you, that your faith should not fail."
   },
   {
     id: 11095,
@@ -1274,7 +1274,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 13:23; 19:26-27; 20:2-8; 21:20-24",
-    verseText: "This is the disciple which testifieth of these things."
+    verseText: "This is the disciple who testifies of these things."
   },
   {
     id: 11096,
@@ -1290,7 +1290,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 14:5-9; Matthew 16:22-23; John 20:24-29",
-    verseText: "Have I been so long time with you...?"
+    verseText: "Have I been with you so long, and yet you have not known Me, Philip?"
   },
   {
     id: 11097,
@@ -1306,7 +1306,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 4:18-22; 9:9; Luke 6:15",
-    verseText: "Whom he also named apostles."
+    verseText: "Whom He also named apostles."
   },
   {
     id: 11098,
@@ -1322,7 +1322,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:21-22; 2:32; Ephesians 2:20; Revelation 21:14",
-    verseText: "This Jesus hath God raised up, whereof we all are witnesses."
+    verseText: "This Jesus God has raised up, of which we are all witnesses."
   },
   {
     id: 11099,
@@ -1338,7 +1338,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Luke 24:46-49; Acts 1:8; John 14:26; Ephesians 2:20",
-    verseText: "Ye are witnesses of these things."
+    verseText: "You are witnesses of these things."
   },
   {
     id: 11100,
@@ -1354,7 +1354,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Mark 3:13-15; Luke 22:31-32; John 20:21-29; Acts 2:1-14",
-    verseText: "That they should be with him, and that he might send them forth."
+    verseText: "That they might be with Him and that He might send them out."
   },
 
   {
@@ -1362,22 +1362,22 @@ const apostlesQuestions = [
     game: "Apostles",
     category: "Identity",
     difficulty: "Advanced",
-    question: "Which apostle is most directly associated with the statement, 'We have found him, of whom Moses in the law, and the prophets, did write'?",
+    question: "Which apostle is most directly associated with the statement, 'We have found Him of whom Moses in the law, and also the prophets, wrote'?",
     choices: ["Andrew", "Philip", "Thomas", "John"],
     answer: 1,
     reference: "John 1:45",
-    verseText: "Philip findeth Nathanael."
+    verseText: "Philip found Nathanael."
   },
   {
     id: 11102,
     game: "Apostles",
     category: "Identity",
     difficulty: "Advanced",
-    question: "Which apostle is linked with the question, 'Can there any good thing come out of Nazareth?' before making a strong confession of Jesus?",
+    question: "Which apostle is linked with the question, 'Can anything good come out of Nazareth?' before making a strong confession of Jesus?",
     choices: ["Bartholomew/Nathanael", "Thomas", "Andrew", "Matthew"],
     answer: 0,
     reference: "John 1:46-49",
-    verseText: "Can there any good thing come out of Nazareth?"
+    verseText: "Can anything good come out of Nazareth?"
   },
   {
     id: 11103,
@@ -1409,7 +1409,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 10:2-4; Mark 3:16-19; Luke 6:14-16; Acts 1:13",
-    verseText: "Whom also he named apostles."
+    verseText: "Whom He also named apostles."
   },
   {
     id: 11105,
@@ -1436,7 +1436,7 @@ const apostlesQuestions = [
     choices: ["Thomas", "Philip", "Peter", "John"],
     answer: 0,
     reference: "John 14:5-6",
-    verseText: "Thomas saith unto him... Jesus saith... I am the way."
+    verseText: "Thomas said to Him... Jesus said to him, 'I am the way.'"
   },
   {
     id: 11107,
@@ -1463,7 +1463,7 @@ const apostlesQuestions = [
     choices: ["Peter", "Thomas", "Philip", "Andrew"],
     answer: 0,
     reference: "John 13:36-38",
-    verseText: "Wilt thou lay down thy life for my sake?"
+    verseText: "Will you lay down your life for My sake?"
   },
   {
     id: 11109,
@@ -1479,7 +1479,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:21-22",
-    verseText: "A witness with us of his resurrection."
+    verseText: "A witness with us of His resurrection."
   },
   {
     id: 11110,
@@ -1506,7 +1506,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 10:34-48; Acts 15:7-11",
-    verseText: "God put no difference between us and them."
+    verseText: "God made no distinction between us and them."
   },
   {
     id: 11112,
@@ -1516,13 +1516,13 @@ const apostlesQuestions = [
     question: "Which phrase best captures Paul's own view of the source of his apostleship?",
     choices: [
       "By church consensus alone",
-      "Not of men... but by Jesus Christ",
+      "Not from men nor through man, but through Jesus Christ",
       "Through inherited rabbinic authority",
       "By appointment from Peter"
     ],
     answer: 1,
     reference: "Galatians 1:1",
-    verseText: "Not of men, neither by man, but by Jesus Christ."
+    verseText: "Not from men nor through man, but through Jesus Christ."
   },
   {
     id: 11113,
@@ -1538,7 +1538,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Galatians 2:7-9",
-    verseText: "They gave to me and Barnabas the right hands of fellowship."
+    verseText: "They gave me and Barnabas the right hand of fellowship."
   },
   {
     id: 11114,
@@ -1554,7 +1554,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "1 Corinthians 15:7",
-    verseText: "After that, he was seen of James."
+    verseText: "After that He was seen by James."
   },
   {
     id: 11115,
@@ -1570,7 +1570,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "John 1:1-18; 1 Peter 1:3-7; 5:1-4",
-    verseText: "In the beginning was the Word... Feed the flock of God."
+    verseText: "In the beginning was the Word... Shepherd the flock of God."
   },
   {
     id: 11116,
@@ -1602,7 +1602,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 16:22-23; John 14:5-9; John 20:24-29; Acts 2:1-14",
-    verseText: "That they should be with him, and that he might send them forth."
+    verseText: "That they might be with Him and that He might send them out."
   },
   {
     id: 11118,
@@ -1618,7 +1618,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Mark 3:14",
-    verseText: "That they should be with him, and that he might send them forth."
+    verseText: "That they might be with Him and that He might send them out."
   },
   {
     id: 11119,
@@ -1634,7 +1634,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Luke 24:46-49",
-    verseText: "Repentance and remission of sins should be preached in his name."
+    verseText: "Repentance and remission of sins should be preached in His name."
   },
   {
     id: 11120,
@@ -1650,7 +1650,7 @@ const apostlesQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:8; Acts 2:32; Ephesians 2:20",
-    verseText: "Whereof we all are witnesses."
+    verseText: "Of which we are all witnesses."
   }
 
 ];

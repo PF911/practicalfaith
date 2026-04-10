@@ -9,7 +9,7 @@ const versesQuestions = [
     choices: ["Genesis 1:1", "Exodus 20:11", "Psalm 33:6", "Proverbs 8:22"],
     answer: 0,
     reference: "Genesis 1:1; John 1:1-3",
-    verseText: "In the beginning God created the heaven and the earth."
+    verseText: "In the beginning God created the heavens and the earth."
   },
   {
     id: 19002,
@@ -21,7 +21,7 @@ const versesQuestions = [
     choices: ["Genesis 3:15", "Genesis 12:3", "Exodus 12:13", "Deuteronomy 18:15"],
     answer: 0,
     reference: "Genesis 3:15",
-    verseText: "And I will put enmity between thee and the woman, and between thy seed and her seed."
+    verseText: "And I will put enmity between you and the woman, and between your seed and her seed."
   },
   {
     id: 19003,
@@ -45,7 +45,7 @@ const versesQuestions = [
     choices: ["Genesis 6:3", "Genesis 8:21", "Isaiah 57:16", "Psalm 103:14"],
     answer: 0,
     reference: "Genesis 6:3",
-    verseText: "My spirit shall not always strive with man."
+    verseText: "My Spirit shall not strive with man forever."
   },
   {
     id: 19005,
@@ -69,7 +69,7 @@ const versesQuestions = [
     choices: ["Genesis 22:8", "Exodus 12:5", "Leviticus 16:21", "Isaiah 53:7"],
     answer: 0,
     reference: "Genesis 22:8",
-    verseText: "God will provide himself a lamb for a burnt offering."
+    verseText: "God will provide for Himself the lamb for a burnt offering."
   },
   {
     id: 19007,
@@ -81,7 +81,7 @@ const versesQuestions = [
     choices: ["Genesis 32:26", "Genesis 27:34", "Hosea 12:4", "Exodus 33:15"],
     answer: 0,
     reference: "Genesis 32:26",
-    verseText: "I will not let thee go, except thou bless me."
+    verseText: "I will not let You go unless You bless me!"
   },
   {
     id: 19008,
@@ -93,7 +93,7 @@ const versesQuestions = [
     choices: ["Genesis 50:20", "Genesis 45:7", "Romans 8:28", "Psalm 105:17"],
     answer: 0,
     reference: "Genesis 50:20",
-    verseText: "Ye thought evil against me; but God meant it unto good."
+    verseText: "You meant evil against me; but God meant it for good."
   },
   {
     id: 19009,
@@ -101,11 +101,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Exodus",
     difficulty: "Advanced",
-    question: "Which reference gives the self-identifying divine name later echoed in John's 'I am' theology?",
+    question: "Which reference gives the self-identifying divine name later echoed in John's 'I AM' theology?",
     choices: ["Exodus 3:14", "John 8:58", "Isaiah 41:4", "Psalm 90:2"],
     answer: 0,
     reference: "Exodus 3:14; John 8:58",
-    verseText: "I AM THAT I AM."
+    verseText: "I AM WHO I AM."
   },
   {
     id: 19010,
@@ -129,7 +129,7 @@ const versesQuestions = [
     choices: ["Exodus 19:6", "Leviticus 20:26", "Deuteronomy 7:6", "1 Peter 2:9"],
     answer: 0,
     reference: "Exodus 19:6; 1 Peter 2:9",
-    verseText: "Ye shall be unto me a kingdom of priests, and an holy nation."
+    verseText: "You shall be to Me a kingdom of priests and a holy nation."
   },
   {
     id: 19012,
@@ -137,11 +137,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Law",
     difficulty: "Advanced",
-    question: "Which reference begins the Decalogue's exclusive loyalty demand with, 'Thou shalt have no other gods before me'?",
+    question: "Which reference begins the Decalogue's exclusive loyalty demand with, 'You shall have no other gods before Me'?",
     choices: ["Exodus 20:3", "Deuteronomy 6:4", "Leviticus 19:4", "Psalm 81:9"],
     answer: 0,
     reference: "Exodus 20:3",
-    verseText: "Thou shalt have no other gods before me."
+    verseText: "You shall have no other gods before Me."
   },
   {
     id: 19013,
@@ -149,11 +149,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Law",
     difficulty: "Advanced",
-    question: "Which reference contains God's warning about being sanctified by those who approach Him, in the aftermath of unauthorized fire?",
+    question: "Which reference contains God's warning about being regarded as holy by those who approach Him, in the aftermath of unauthorized fire?",
     choices: ["Leviticus 10:3", "Leviticus 19:2", "Numbers 20:12", "Ezekiel 36:23"],
     answer: 0,
     reference: "Leviticus 10:3",
-    verseText: "I will be sanctified in them that come nigh me."
+    verseText: "By those who come near Me I must be regarded as holy."
   },
   {
     id: 19014,
@@ -173,11 +173,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Wilderness",
     difficulty: "Advanced",
-    question: "Which reference explains Moses' failure at Meribah in terms of not sanctifying God before Israel?",
+    question: "Which reference explains Moses' failure at Meribah in terms of not hallowing God before Israel?",
     choices: ["Numbers 20:12", "Exodus 17:7", "Deuteronomy 32:51", "Psalm 106:33"],
     answer: 0,
     reference: "Numbers 20:12",
-    verseText: "Ye believed me not, to sanctify me in the eyes of the children of Israel."
+    verseText: "Because you did not believe Me, to hallow Me in the eyes of the children of Israel."
   },
   {
     id: 19016,
@@ -189,7 +189,7 @@ const versesQuestions = [
     choices: ["Deuteronomy 6:4", "Exodus 20:3", "Isaiah 45:5", "Mark 12:29"],
     answer: 0,
     reference: "Deuteronomy 6:4",
-    verseText: "Hear, O Israel: The LORD our God is one LORD."
+    verseText: "Hear, O Israel: The LORD our God, the LORD is one!"
   },
   {
     id: 19017,
@@ -201,7 +201,7 @@ const versesQuestions = [
     choices: ["Deuteronomy 8:3", "Exodus 16:4", "Matthew 4:4", "Psalm 78:24"],
     answer: 0,
     reference: "Deuteronomy 8:3; Matthew 4:4",
-    verseText: "Man doth not live by bread only, but by every word that proceedeth out of the mouth of the LORD."
+    verseText: "Man shall not live by bread alone, but by every word that proceeds from the mouth of the LORD."
   },
   {
     id: 19018,
@@ -237,7 +237,7 @@ const versesQuestions = [
     choices: ["Judges 6:12", "Joshua 1:9", "1 Samuel 16:18", "2 Samuel 5:10"],
     answer: 0,
     reference: "Judges 6:12",
-    verseText: "The LORD is with thee, thou mighty man of valour."
+    verseText: "The LORD is with you, you mighty man of valor!"
   },
   {
     id: 19021,
@@ -249,7 +249,7 @@ const versesQuestions = [
     choices: ["Ruth 1:16", "Genesis 12:1", "Joshua 1:16", "2 Samuel 15:21"],
     answer: 0,
     reference: "Ruth 1:16",
-    verseText: "Whither thou goest, I will go; and where thou lodgest, I will lodge."
+    verseText: "Wherever you go, I will go; and wherever you lodge, I will lodge."
   },
   {
     id: 19022,
@@ -257,11 +257,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Samuel",
     difficulty: "Advanced",
-    question: "Which reference contains young Samuel's responsive posture before revelation: 'Speak; for thy servant heareth'?",
+    question: "Which reference contains young Samuel's responsive posture before revelation: 'Speak, for Your servant hears'?",
     choices: ["1 Samuel 3:10", "1 Kings 3:9", "Psalm 143:8", "Isaiah 6:8"],
     answer: 0,
     reference: "1 Samuel 3:10",
-    verseText: "Speak; for thy servant heareth."
+    verseText: "Speak, for Your servant hears."
   },
   {
     id: 19023,
@@ -285,7 +285,7 @@ const versesQuestions = [
     choices: ["1 Samuel 16:7", "Proverbs 21:2", "Jeremiah 17:10", "Luke 16:15"],
     answer: 0,
     reference: "1 Samuel 16:7",
-    verseText: "Man looketh on the outward appearance, but the LORD looketh on the heart."
+    verseText: "Man looks at the outward appearance, but the LORD looks at the heart."
   },
   {
     id: 19025,
@@ -297,7 +297,7 @@ const versesQuestions = [
     choices: ["1 Samuel 17:47", "2 Chronicles 20:15", "Exodus 14:14", "Psalm 46:9"],
     answer: 0,
     reference: "1 Samuel 17:47",
-    verseText: "The battle is the LORD's."
+    verseText: "For the battle is the LORD's."
   },
   {
     id: 19026,
@@ -305,11 +305,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Samuel",
     difficulty: "Advanced",
-    question: "Which reference contains the prophetic accusation, 'Thou art the man,' after Nathan's parable about David's sin?",
+    question: "Which reference contains the prophetic accusation, 'You are the man!' after Nathan's parable about David's sin?",
     choices: ["2 Samuel 12:7", "1 Kings 21:20", "2 Samuel 11:27", "Psalm 51:4"],
     answer: 0,
     reference: "2 Samuel 12:7",
-    verseText: "Thou art the man."
+    verseText: "You are the man!"
   },
   {
     id: 19027,
@@ -321,7 +321,7 @@ const versesQuestions = [
     choices: ["1 Kings 3:9", "James 1:5", "Proverbs 2:3", "Ecclesiastes 1:13"],
     answer: 0,
     reference: "1 Kings 3:9",
-    verseText: "Give therefore thy servant an understanding heart."
+    verseText: "Give to Your servant an understanding heart."
   },
   {
     id: 19028,
@@ -333,7 +333,7 @@ const versesQuestions = [
     choices: ["1 Kings 8:27", "Psalm 19:1", "Isaiah 66:1", "Acts 7:49"],
     answer: 0,
     reference: "1 Kings 8:27",
-    verseText: "The heaven and heaven of heavens cannot contain thee."
+    verseText: "Behold, heaven and the heaven of heavens cannot contain You."
   },
   {
     id: 19029,
@@ -341,11 +341,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Kings",
     difficulty: "Advanced",
-    question: "Which Carmel reference contains Elijah's covenant challenge, 'How long halt ye between two opinions'?",
+    question: "Which Carmel reference contains Elijah's covenant challenge, 'How long will you falter between two opinions'?",
     choices: ["1 Kings 18:21", "Joshua 24:15", "Deuteronomy 30:19", "Hosea 10:2"],
     answer: 0,
     reference: "1 Kings 18:21",
-    verseText: "How long halt ye between two opinions?"
+    verseText: "How long will you falter between two opinions?"
   },
   {
     id: 19030,
@@ -357,7 +357,7 @@ const versesQuestions = [
     choices: ["1 Kings 18:39", "Deuteronomy 6:4", "Psalm 100:3", "Isaiah 45:22"],
     answer: 0,
     reference: "1 Kings 18:39",
-    verseText: "The LORD, he is the God; the LORD, he is the God."
+    verseText: "The LORD, He is God! The LORD, He is God!"
   },
   {
     id: 19031,
@@ -369,7 +369,7 @@ const versesQuestions = [
     choices: ["2 Kings 5:15", "Exodus 15:11", "Isaiah 44:6", "Daniel 3:29"],
     answer: 0,
     reference: "2 Kings 5:15",
-    verseText: "Behold, now I know that there is no God in all the earth, but in Israel."
+    verseText: "Indeed, now I know that there is no God in all the earth, except in Israel."
   },
   {
     id: 19032,
@@ -381,7 +381,7 @@ const versesQuestions = [
     choices: ["2 Chronicles 7:14", "Leviticus 26:40", "Jeremiah 29:12", "James 4:10"],
     answer: 0,
     reference: "2 Chronicles 7:14",
-    verseText: "If my people, which are called by my name, shall humble themselves, and pray."
+    verseText: "If My people who are called by My name will humble themselves, and pray."
   },
   {
     id: 19033,
@@ -405,7 +405,7 @@ const versesQuestions = [
     choices: ["Esther 4:14", "Genesis 50:20", "Daniel 2:21", "Ecclesiastes 3:1"],
     answer: 0,
     reference: "Esther 4:14",
-    verseText: "Who knoweth whether thou art come to the kingdom for such a time as this?"
+    verseText: "Yet who knows whether you have come to the kingdom for such a time as this?"
   },
   {
     id: 19035,
@@ -417,7 +417,7 @@ const versesQuestions = [
     choices: ["Job 1:21", "Psalm 115:3", "Ecclesiastes 5:15", "Isaiah 45:7"],
     answer: 0,
     reference: "Job 1:21",
-    verseText: "The LORD gave, and the LORD hath taken away; blessed be the name of the LORD."
+    verseText: "The LORD gave, and the LORD has taken away; Blessed be the name of the LORD."
   },
   {
     id: 19036,
@@ -425,11 +425,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Job",
     difficulty: "Advanced",
-    question: "Which reference contains Job's fierce perseverance, 'Though he slay me, yet will I trust in him'?",
+    question: "Which reference contains Job's fierce perseverance, 'Though He slay me, yet will I trust Him'?",
     choices: ["Job 13:15", "Psalm 23:4", "Habakkuk 3:18", "Daniel 3:18"],
     answer: 0,
     reference: "Job 13:15",
-    verseText: "Though he slay me, yet will I trust in him."
+    verseText: "Though He slay me, yet will I trust Him."
   },
   {
     id: 19037,
@@ -441,7 +441,7 @@ const versesQuestions = [
     choices: ["Job 19:25", "Psalm 19:14", "Isaiah 41:14", "Hosea 13:14"],
     answer: 0,
     reference: "Job 19:25",
-    verseText: "I know that my redeemer liveth."
+    verseText: "For I know that my Redeemer lives."
   },
   {
     id: 19038,
@@ -453,7 +453,7 @@ const versesQuestions = [
     choices: ["Psalm 1:1", "Psalm 15:1", "Proverbs 1:10", "Jeremiah 17:7"],
     answer: 0,
     reference: "Psalm 1:1",
-    verseText: "Blessed is the man that walketh not in the counsel of the ungodly."
+    verseText: "Blessed is the man who walks not in the counsel of the ungodly."
   },
   {
     id: 19039,
@@ -461,11 +461,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Psalms",
     difficulty: "Advanced",
-    question: "Which royal psalm contains the line later central to New Testament exaltation Christology: 'The LORD said unto my Lord'?",
+    question: "Which royal psalm contains the line later central to New Testament exaltation Christology: 'The LORD said to my Lord'?",
     choices: ["Psalm 110:1", "Psalm 2:7", "Isaiah 48:16", "Daniel 7:13"],
     answer: 0,
     reference: "Psalm 110:1",
-    verseText: "The LORD said unto my Lord, Sit thou at my right hand."
+    verseText: "The LORD said to my Lord, 'Sit at My right hand.'"
   },
   {
     id: 19040,
@@ -497,11 +497,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Psalms",
     difficulty: "Advanced",
-    question: "Which Asaph psalm resolves the crisis of envying the wicked with the confession, 'Whom have I in heaven but thee'?",
+    question: "Which Asaph psalm resolves the crisis of envying the wicked with the confession, 'Whom have I in heaven but You?'",
     choices: ["Psalm 73:25", "Psalm 42:1", "Psalm 16:2", "Isaiah 26:9"],
     answer: 0,
     reference: "Psalm 73:25",
-    verseText: "Whom have I in heaven but thee?"
+    verseText: "Whom have I in heaven but You?"
   },
   {
     id: 19043,
@@ -513,7 +513,7 @@ const versesQuestions = [
     choices: ["Psalm 119:105", "Proverbs 6:23", "Psalm 19:8", "John 8:12"],
     answer: 0,
     reference: "Psalm 119:105",
-    verseText: "Thy word is a lamp unto my feet, and a light unto my path."
+    verseText: "Your word is a lamp to my feet and a light to my path."
   },
   {
     id: 19044,
@@ -537,7 +537,7 @@ const versesQuestions = [
     choices: ["Proverbs 3:5", "Psalm 37:5", "Isaiah 26:4", "Jeremiah 17:7"],
     answer: 0,
     reference: "Proverbs 3:5",
-    verseText: "Trust in the LORD with all thine heart; and lean not unto thine own understanding."
+    verseText: "Trust in the LORD with all your heart, and lean not on your own understanding."
   },
   {
     id: 19046,
@@ -561,7 +561,7 @@ const versesQuestions = [
     choices: ["Proverbs 15:1", "Proverbs 16:7", "Ecclesiastes 10:4", "James 1:19"],
     answer: 0,
     reference: "Proverbs 15:1",
-    verseText: "A soft answer turneth away wrath."
+    verseText: "A soft answer turns away wrath."
   },
   {
     id: 19048,
@@ -569,11 +569,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Wisdom",
     difficulty: "Advanced",
-    question: "Which reference contains the sharpened reciprocity image, 'Iron sharpeneth iron'?",
+    question: "Which reference contains the sharpened reciprocity image, 'As iron sharpens iron'?",
     choices: ["Proverbs 27:17", "Ecclesiastes 4:9", "Psalm 133:1", "1 Samuel 13:20"],
     answer: 0,
     reference: "Proverbs 27:17",
-    verseText: "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."
+    verseText: "As iron sharpens iron, so a man sharpens the countenance of his friend."
   },
   {
     id: 19049,
@@ -585,7 +585,7 @@ const versesQuestions = [
     choices: ["Ecclesiastes 1:2", "Proverbs 31:30", "Psalm 39:5", "Isaiah 40:17"],
     answer: 0,
     reference: "Ecclesiastes 1:2",
-    verseText: "Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity."
+    verseText: "'Vanity of vanities,' says the Preacher; 'all is vanity.'"
   },
   {
     id: 19050,
@@ -597,7 +597,7 @@ const versesQuestions = [
     choices: ["Ecclesiastes 12:13", "Deuteronomy 10:12", "Micah 6:8", "Matthew 22:37"],
     answer: 0,
     reference: "Ecclesiastes 12:13",
-    verseText: "Fear God, and keep his commandments: for this is the whole duty of man."
+    verseText: "Fear God and keep His commandments, for this is man's all."
   },
   {
     id: 19051,
@@ -621,7 +621,7 @@ const versesQuestions = [
     choices: ["Isaiah 7:14", "Genesis 3:15", "Micah 5:2", "Matthew 1:23"],
     answer: 0,
     reference: "Isaiah 7:14; Matthew 1:23",
-    verseText: "Behold, a virgin shall conceive, and bear a son."
+    verseText: "Behold, the virgin shall conceive and bear a Son."
   },
   {
     id: 19053,
@@ -633,7 +633,7 @@ const versesQuestions = [
     choices: ["Isaiah 9:6", "Isaiah 11:1", "Micah 5:2", "Luke 2:11"],
     answer: 0,
     reference: "Isaiah 9:6",
-    verseText: "For unto us a child is born, unto us a son is given."
+    verseText: "For unto us a Child is born, unto us a Son is given."
   },
   {
     id: 19054,
@@ -645,7 +645,7 @@ const versesQuestions = [
     choices: ["Isaiah 9:6", "Daniel 7:14", "Psalm 2:9", "Zechariah 9:10"],
     answer: 0,
     reference: "Isaiah 9:6",
-    verseText: "The government shall be upon his shoulder."
+    verseText: "And the government will be upon His shoulder."
   },
   {
     id: 19055,
@@ -657,7 +657,7 @@ const versesQuestions = [
     choices: ["Isaiah 11:1", "Jeremiah 23:5", "Zechariah 3:8", "Matthew 2:23"],
     answer: 0,
     reference: "Isaiah 11:1",
-    verseText: "There shall come forth a rod out of the stem of Jesse."
+    verseText: "There shall come forth a Rod from the stem of Jesse."
   },
   {
     id: 19056,
@@ -669,7 +669,7 @@ const versesQuestions = [
     choices: ["Isaiah 1:18", "Psalm 51:7", "Jeremiah 2:22", "Revelation 7:14"],
     answer: 0,
     reference: "Isaiah 1:18",
-    verseText: "Though your sins be as scarlet, they shall be as white as snow."
+    verseText: "Though your sins are like scarlet, they shall be as white as snow."
   },
   {
     id: 19057,
@@ -677,11 +677,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Isaiah",
     difficulty: "Advanced",
-    question: "Which exilic-comfort reference opens with the imperative, 'Comfort ye, comfort ye my people'?",
+    question: "Which exilic-comfort reference opens with the imperative, 'Comfort, yes, comfort My people'?",
     choices: ["Isaiah 40:1", "Isaiah 35:4", "Jeremiah 31:13", "2 Corinthians 1:4"],
     answer: 0,
     reference: "Isaiah 40:1",
-    verseText: "Comfort ye, comfort ye my people, saith your God."
+    verseText: "Comfort, yes, comfort My people!" says your God."
   },
   {
     id: 19058,
@@ -693,7 +693,7 @@ const versesQuestions = [
     choices: ["Isaiah 40:31", "Psalm 27:14", "Lamentations 3:25", "Hebrews 12:12"],
     answer: 0,
     reference: "Isaiah 40:31",
-    verseText: "They that wait upon the LORD shall renew their strength."
+    verseText: "But those who wait on the LORD shall renew their strength."
   },
   {
     id: 19059,
@@ -717,7 +717,7 @@ const versesQuestions = [
     choices: ["Isaiah 49:15", "Isaiah 66:13", "Psalm 27:10", "Hosea 11:8"],
     answer: 0,
     reference: "Isaiah 49:15",
-    verseText: "Can a woman forget her sucking child?"
+    verseText: "Can a woman forget her nursing child?"
   },
   {
     id: 19061,
@@ -741,7 +741,7 @@ const versesQuestions = [
     choices: ["Isaiah 53:5", "Psalm 22:16", "Zechariah 12:10", "John 19:34"],
     answer: 0,
     reference: "Isaiah 53:5",
-    verseText: "He was wounded for our transgressions, he was bruised for our iniquities."
+    verseText: "But He was wounded for our transgressions, He was bruised for our iniquities."
   },
   {
     id: 19063,
@@ -765,7 +765,7 @@ const versesQuestions = [
     choices: ["Jeremiah 29:11", "Isaiah 55:8", "Romans 8:28", "Psalm 33:11"],
     answer: 0,
     reference: "Jeremiah 29:11",
-    verseText: "I know the thoughts that I think toward you, saith the LORD, thoughts of peace."
+    verseText: "For I know the thoughts that I think toward you, says the LORD, thoughts of peace."
   },
   {
     id: 19065,
@@ -777,7 +777,7 @@ const versesQuestions = [
     choices: ["Jeremiah 31:33", "Ezekiel 36:26", "Hebrews 8:10", "Deuteronomy 6:6"],
     answer: 0,
     reference: "Jeremiah 31:33; Hebrews 8:10",
-    verseText: "I will put my law in their inward parts, and write it in their hearts."
+    verseText: "I will put My law in their minds, and write it on their hearts."
   },
   {
     id: 19066,
@@ -789,7 +789,7 @@ const versesQuestions = [
     choices: ["Lamentations 3:22", "Psalm 103:8", "Micah 7:18", "Romans 9:15"],
     answer: 0,
     reference: "Lamentations 3:22",
-    verseText: "It is of the LORD'S mercies that we are not consumed."
+    verseText: "Through the LORD's mercies we are not consumed."
   },
   {
     id: 19067,
@@ -801,7 +801,7 @@ const versesQuestions = [
     choices: ["Ezekiel 36:26", "Jeremiah 31:33", "Psalm 51:10", "John 3:3"],
     answer: 0,
     reference: "Ezekiel 36:26",
-    verseText: "A new heart also will I give you, and a new spirit will I put within you."
+    verseText: "I will give you a new heart and put a new spirit within you."
   },
   {
     id: 19068,
@@ -825,7 +825,7 @@ const versesQuestions = [
     choices: ["Daniel 2:44", "Psalm 145:13", "Isaiah 9:7", "Luke 1:33"],
     answer: 0,
     reference: "Daniel 2:44",
-    verseText: "The God of heaven shall set up a kingdom, which shall never be destroyed."
+    verseText: "The God of heaven will set up a kingdom which shall never be destroyed."
   },
   {
     id: 19070,
@@ -837,7 +837,7 @@ const versesQuestions = [
     choices: ["Daniel 4:17", "Daniel 2:21", "Psalm 47:2", "Romans 13:1"],
     answer: 0,
     reference: "Daniel 4:17",
-    verseText: "The most High ruleth in the kingdom of men."
+    verseText: "The Most High rules in the kingdom of men."
   },
   {
     id: 19071,
@@ -849,7 +849,7 @@ const versesQuestions = [
     choices: ["Daniel 12:2", "Isaiah 26:19", "Job 19:25", "John 5:28"],
     answer: 0,
     reference: "Daniel 12:2",
-    verseText: "Many of them that sleep in the dust of the earth shall awake."
+    verseText: "And many of those who sleep in the dust of the earth shall awake."
   },
   {
     id: 19072,
@@ -857,11 +857,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Hosea",
     difficulty: "Advanced",
-    question: "Which prophet contains the line Jesus later quotes against empty formalism: 'I desired mercy, and not sacrifice'?",
+    question: "Which prophet contains the line Jesus later quotes against empty formalism: 'I desire mercy and not sacrifice'?",
     choices: ["Hosea 6:6", "1 Samuel 15:22", "Micah 6:8", "Matthew 9:13"],
     answer: 0,
     reference: "Hosea 6:6",
-    verseText: "I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings."
+    verseText: "For I desire mercy and not sacrifice, and the knowledge of God more than burnt offerings."
   },
   {
     id: 19073,
@@ -873,7 +873,7 @@ const versesQuestions = [
     choices: ["Joel 2:28", "Ezekiel 36:27", "Acts 2:17", "Numbers 11:29"],
     answer: 0,
     reference: "Joel 2:28; Acts 2:17",
-    verseText: "I will pour out my spirit upon all flesh."
+    verseText: "I will pour out My Spirit on all flesh."
   },
   {
     id: 19074,
@@ -885,7 +885,7 @@ const versesQuestions = [
     choices: ["Amos 5:24", "Isaiah 1:17", "Micah 6:8", "James 3:17"],
     answer: 0,
     reference: "Amos 5:24",
-    verseText: "Let judgment run down as waters, and righteousness as a mighty stream."
+    verseText: "But let justice run down like water, and righteousness like a mighty stream."
   },
   {
     id: 19075,
@@ -909,7 +909,7 @@ const versesQuestions = [
     choices: ["Micah 6:8", "Deuteronomy 10:12", "Ecclesiastes 12:13", "Matthew 23:23"],
     answer: 0,
     reference: "Micah 6:8",
-    verseText: "What doth the LORD require of thee, but to do justly, and to love mercy."
+    verseText: "What does the LORD require of you but to do justly, to love mercy."
   },
   {
     id: 19077,
@@ -921,7 +921,7 @@ const versesQuestions = [
     choices: ["Micah 5:2", "Isaiah 9:6", "Jeremiah 23:5", "Matthew 2:6"],
     answer: 0,
     reference: "Micah 5:2; Matthew 2:6",
-    verseText: "But thou, Bethlehem Ephratah... out of thee shall he come forth unto me that is to be ruler in Israel."
+    verseText: "But you, Bethlehem Ephrathah... out of you shall come forth to Me the One to be Ruler in Israel."
   },
   {
     id: 19078,
@@ -945,7 +945,7 @@ const versesQuestions = [
     choices: ["Habakkuk 2:20", "Psalm 46:10", "Zephaniah 1:7", "Revelation 8:1"],
     answer: 0,
     reference: "Habakkuk 2:20",
-    verseText: "The LORD is in his holy temple: let all the earth keep silence before him."
+    verseText: "But the LORD is in His holy temple. Let all the earth keep silence before Him."
   },
   {
     id: 19080,
@@ -957,7 +957,7 @@ const versesQuestions = [
     choices: ["Zechariah 4:6", "Haggai 2:5", "Isaiah 31:1", "Ephesians 6:10"],
     answer: 0,
     reference: "Zechariah 4:6",
-    verseText: "Not by might, nor by power, but by my spirit, saith the LORD of hosts."
+    verseText: "Not by might nor by power, but by My Spirit, says the LORD of hosts."
   },
   {
     id: 19081,
@@ -969,7 +969,7 @@ const versesQuestions = [
     choices: ["Zechariah 9:9", "Psalm 24:7", "Isaiah 62:11", "Matthew 21:5"],
     answer: 0,
     reference: "Zechariah 9:9; Matthew 21:5",
-    verseText: "Behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass."
+    verseText: "Behold, your King is coming to you; He is just and having salvation, lowly and riding on a donkey."
   },
   {
     id: 19082,
@@ -981,7 +981,7 @@ const versesQuestions = [
     choices: ["Zechariah 12:10", "Psalm 22:16", "Isaiah 53:5", "John 19:37"],
     answer: 0,
     reference: "Zechariah 12:10; John 19:37",
-    verseText: "They shall look upon me whom they have pierced."
+    verseText: "They will look on Me whom they pierced."
   },
   {
     id: 19083,
@@ -993,7 +993,7 @@ const versesQuestions = [
     choices: ["Malachi 3:1", "Isaiah 40:3", "Matthew 11:10", "Mark 1:2"],
     answer: 0,
     reference: "Malachi 3:1",
-    verseText: "Behold, I will send my messenger, and he shall prepare the way before me."
+    verseText: "Behold, I send My messenger, and he will prepare the way before Me."
   },
   {
     id: 19084,
@@ -1001,11 +1001,11 @@ const versesQuestions = [
     testament: "Old Testament",
     category: "Malachi",
     difficulty: "Advanced",
-    question: "Which closing-prophet reference speaks of the Sun of righteousness arising with healing in his wings?",
+    question: "Which closing-prophet reference speaks of the Sun of Righteousness arising with healing in His wings?",
     choices: ["Malachi 4:2", "Psalm 84:11", "Luke 1:78", "Revelation 22:16"],
     answer: 0,
     reference: "Malachi 4:2",
-    verseText: "Unto you that fear my name shall the Sun of righteousness arise with healing in his wings."
+    verseText: "But to you who fear My name the Sun of Righteousness shall arise with healing in His wings."
   },
   {
     id: 19085,
@@ -1017,7 +1017,7 @@ const versesQuestions = [
     choices: ["Matthew 1:21", "Luke 1:31", "Acts 4:12", "Hebrews 7:25"],
     answer: 0,
     reference: "Matthew 1:21",
-    verseText: "Thou shalt call his name JESUS: for he shall save his people from their sins."
+    verseText: "You shall call His name JESUS, for He will save His people from their sins."
   },
   {
     id: 19086,
@@ -1029,7 +1029,7 @@ const versesQuestions = [
     choices: ["Matthew 3:17", "Matthew 17:5", "John 1:34", "2 Peter 1:17"],
     answer: 0,
     reference: "Matthew 3:17",
-    verseText: "This is my beloved Son, in whom I am well pleased."
+    verseText: "This is My beloved Son, in whom I am well pleased."
   },
   {
     id: 19087,
@@ -1041,7 +1041,7 @@ const versesQuestions = [
     choices: ["Matthew 5:8", "Hebrews 12:14", "Psalm 24:4", "1 John 3:2"],
     answer: 0,
     reference: "Matthew 5:8",
-    verseText: "Blessed are the pure in heart: for they shall see God."
+    verseText: "Blessed are the pure in heart, for they shall see God."
   },
   {
     id: 19088,
@@ -1053,7 +1053,7 @@ const versesQuestions = [
     choices: ["Matthew 5:13", "Mark 9:50", "Luke 14:34", "Colossians 4:6"],
     answer: 0,
     reference: "Matthew 5:13",
-    verseText: "Ye are the salt of the earth."
+    verseText: "You are the salt of the earth."
   },
   {
     id: 19089,
@@ -1065,7 +1065,7 @@ const versesQuestions = [
     choices: ["Matthew 6:19", "Luke 12:33", "1 Timothy 6:17", "James 5:3"],
     answer: 0,
     reference: "Matthew 6:19",
-    verseText: "Lay not up for yourselves treasures upon earth."
+    verseText: "Do not lay up for yourselves treasures on earth."
   },
   {
     id: 19090,
@@ -1077,7 +1077,7 @@ const versesQuestions = [
     choices: ["Matthew 6:33", "Luke 12:31", "Romans 14:17", "Colossians 3:1"],
     answer: 0,
     reference: "Matthew 6:33",
-    verseText: "Seek ye first the kingdom of God, and his righteousness."
+    verseText: "But seek first the kingdom of God and His righteousness."
   },
   {
     id: 19091,
@@ -1085,11 +1085,11 @@ const versesQuestions = [
     testament: "New Testament",
     category: "Matthew",
     difficulty: "Advanced",
-    question: "Which reference contains the statement 'Judge not, that ye be not judged' in a context that also condemns hypocrisy?",
+    question: "Which reference contains the statement 'Judge not, that you be not judged' in a context that also condemns hypocrisy?",
     choices: ["Matthew 7:1", "Luke 6:37", "Romans 14:13", "John 7:24"],
     answer: 0,
     reference: "Matthew 7:1",
-    verseText: "Judge not, that ye be not judged."
+    verseText: "Judge not, that you be not judged."
   },
   {
     id: 19092,
@@ -1097,11 +1097,11 @@ const versesQuestions = [
     testament: "New Testament",
     category: "Matthew",
     difficulty: "Advanced",
-    question: "Which reference contains Jesus' warning to enter by the strait gate rather than the broad way?",
+    question: "Which reference contains Jesus' warning to enter by the narrow gate rather than the wide way?",
     choices: ["Matthew 7:13", "Luke 13:24", "John 10:9", "Acts 14:22"],
     answer: 0,
     reference: "Matthew 7:13",
-    verseText: "Enter ye in at the strait gate."
+    verseText: "Enter by the narrow gate."
   },
   {
     id: 19093,
@@ -1113,7 +1113,7 @@ const versesQuestions = [
     choices: ["Matthew 11:28", "John 6:37", "Hebrews 4:16", "Psalm 55:22"],
     answer: 0,
     reference: "Matthew 11:28",
-    verseText: "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+    verseText: "Come to Me, all you who labor and are heavy laden, and I will give you rest."
   },
   {
     id: 19094,
@@ -1125,7 +1125,7 @@ const versesQuestions = [
     choices: ["Matthew 16:18", "Ephesians 2:20", "1 Peter 2:5", "Acts 2:42"],
     answer: 0,
     reference: "Matthew 16:18",
-    verseText: "Upon this rock I will build my church."
+    verseText: "On this rock I will build My church."
   },
   {
     id: 19095,
@@ -1137,7 +1137,7 @@ const versesQuestions = [
     choices: ["Matthew 19:6", "Mark 10:9", "Ephesians 5:31", "Malachi 2:16"],
     answer: 0,
     reference: "Matthew 19:6",
-    verseText: "What therefore God hath joined together, let not man put asunder."
+    verseText: "Therefore what God has joined together, let not man separate."
   },
   {
     id: 19096,
@@ -1149,7 +1149,7 @@ const versesQuestions = [
     choices: ["Matthew 20:27", "Mark 10:44", "Luke 22:26", "Philippians 2:7"],
     answer: 0,
     reference: "Matthew 20:27",
-    verseText: "Whosoever will be chief among you, let him be your servant."
+    verseText: "Whoever desires to be first among you, let him be your slave."
   },
   {
     id: 19097,
@@ -1161,7 +1161,7 @@ const versesQuestions = [
     choices: ["Matthew 24:42", "Mark 13:33", "Luke 21:36", "1 Thessalonians 5:6"],
     answer: 0,
     reference: "Matthew 24:42",
-    verseText: "Watch therefore: for ye know not what hour your Lord doth come."
+    verseText: "Watch therefore, for you do not know what hour your Lord is coming."
   },
   {
     id: 19098,
@@ -1173,7 +1173,7 @@ const versesQuestions = [
     choices: ["Matthew 25:40", "James 2:1", "Galatians 6:10", "Hebrews 13:2"],
     answer: 0,
     reference: "Matthew 25:40",
-    verseText: "Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me."
+    verseText: "Inasmuch as you did it to one of the least of these My brethren, you did it to Me."
   },
   {
     id: 19099,
@@ -1185,7 +1185,7 @@ const versesQuestions = [
     choices: ["Matthew 27:46", "Psalm 22:1", "Mark 15:34", "Hebrews 5:7"],
     answer: 0,
     reference: "Matthew 27:46",
-    verseText: "My God, my God, why hast thou forsaken me?"
+    verseText: "My God, My God, why have You forsaken Me?"
   },
   {
     id: 19100,
@@ -1197,6 +1197,6 @@ const versesQuestions = [
     choices: ["Matthew 28:18", "Daniel 7:14", "John 17:2", "Ephesians 1:20"],
     answer: 0,
     reference: "Matthew 28:18",
-    verseText: "All power is given unto me in heaven and in earth."
+    verseText: "All authority has been given to Me in heaven and on earth."
   }
 ];

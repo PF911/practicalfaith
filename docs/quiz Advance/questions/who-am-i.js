@@ -9,7 +9,7 @@ const whoAmIQuestions = [
     choices: ["Abraham", "Isaac", "Jacob", "Moses"],
     answer: 0,
     reference: "Genesis 12:1-4; Genesis 15:6; Romans 4:1-5",
-    verseText: "He believed in the LORD; and he counted it to him for righteousness."
+    verseText: "And he believed in the LORD, and He accounted it to him for righteousness."
   },
   {
     id: 18002,
@@ -21,7 +21,7 @@ const whoAmIQuestions = [
     choices: ["Sarah", "Rebekah", "Rachel", "Hagar"],
     answer: 0,
     reference: "Genesis 18:9-15; Genesis 21:1-3",
-    verseText: "Is any thing too hard for the LORD?"
+    verseText: "Is anything too hard for the LORD?"
   },
   {
     id: 18003,
@@ -33,7 +33,7 @@ const whoAmIQuestions = [
     choices: ["Isaac", "Ishmael", "Jacob", "Joseph"],
     answer: 0,
     reference: "Genesis 22:6-13",
-    verseText: "God will provide himself a lamb for a burnt offering."
+    verseText: "God will provide for Himself the lamb for a burnt offering."
   },
   {
     id: 18004,
@@ -45,7 +45,7 @@ const whoAmIQuestions = [
     choices: ["Jacob", "Esau", "Benjamin", "Joseph"],
     answer: 0,
     reference: "Genesis 25:26; Genesis 27:35-36; Genesis 32:24-30",
-    verseText: "Thy name shall be called no more Jacob, but Israel."
+    verseText: "Your name shall no longer be called Jacob, but Israel."
   },
   {
     id: 18005,
@@ -57,7 +57,7 @@ const whoAmIQuestions = [
     choices: ["Joseph", "Judah", "Benjamin", "Moses"],
     answer: 0,
     reference: "Genesis 37:23-28; Genesis 45:4-8; Genesis 50:20",
-    verseText: "Ye thought evil against me; but God meant it unto good."
+    verseText: "You meant evil against me; but God meant it for good."
   },
   {
     id: 18006,
@@ -105,7 +105,7 @@ const whoAmIQuestions = [
     choices: ["Moses", "Aaron", "Joshua", "Samuel"],
     answer: 0,
     reference: "Exodus 2:1-10; Exodus 14:21-31",
-    verseText: "She called his name Moses: and she said, Because I drew him out of the water."
+    verseText: "She called his name Moses, saying, 'Because I drew him out of the water.'"
   },
   {
     id: 18010,
@@ -117,7 +117,7 @@ const whoAmIQuestions = [
     choices: ["Moses", "Aaron", "Gideon", "Jeremiah"],
     answer: 0,
     reference: "Exodus 3:10-14; Exodus 4:10-13; Exodus 19:3-8",
-    verseText: "O my Lord, send, I pray thee, by the hand of him whom thou wilt send."
+    verseText: "O my Lord, please send by the hand of whomever else You may send."
   },
   {
     id: 18011,
@@ -129,7 +129,7 @@ const whoAmIQuestions = [
     choices: ["Aaron", "Hur", "Eleazar", "Phinehas"],
     answer: 0,
     reference: "Exodus 4:14-16; Exodus 32:1-6",
-    verseText: "Up, make us gods, which shall go before us."
+    verseText: "Come, make us gods that shall go before us."
   },
   {
     id: 18012,
@@ -141,7 +141,7 @@ const whoAmIQuestions = [
     choices: ["Pharaoh", "Nebuchadnezzar", "Ahab", "Saul"],
     answer: 0,
     reference: "Exodus 7:3-5; Exodus 9:12; Romans 9:17",
-    verseText: "For this cause have I raised thee up."
+    verseText: "But indeed for this purpose I have raised you up."
   },
   {
     id: 18013,
@@ -153,7 +153,7 @@ const whoAmIQuestions = [
     choices: ["Caleb", "Eleazar", "Othniel", "Phinehas"],
     answer: 0,
     reference: "Numbers 13:30; Numbers 14:24; Joshua 14:6-14",
-    verseText: "My servant Caleb, because he had another spirit with him."
+    verseText: "But My servant Caleb, because he has a different spirit in him."
   },
   {
     id: 18014,
@@ -165,7 +165,7 @@ const whoAmIQuestions = [
     choices: ["Joshua", "Aaron", "Caleb", "Eleazar"],
     answer: 0,
     reference: "Numbers 27:18-23; Joshua 1:1-9; Joshua 3:14-17",
-    verseText: "Moses my servant is dead; now therefore arise, go over this Jordan."
+    verseText: "Moses My servant is dead. Now therefore, arise, go over this Jordan."
   },
   {
     id: 18015,
@@ -177,7 +177,7 @@ const whoAmIQuestions = [
     choices: ["Gideon", "Barak", "Jephthah", "Samson"],
     answer: 0,
     reference: "Judges 6:15; Judges 7:2-7",
-    verseText: "The people that are with thee are too many for me to give the Midianites into their hands."
+    verseText: "The people who are with you are too many for Me to give the Midianites into their hands."
   },
   {
     id: 18016,
@@ -189,7 +189,7 @@ const whoAmIQuestions = [
     choices: ["Barak", "Gideon", "Jephthah", "Abimelech"],
     answer: 0,
     reference: "Judges 4:6-9",
-    verseText: "If thou wilt go with me, then I will go."
+    verseText: "If you will go with me, then I will go."
   },
   {
     id: 18017,
@@ -201,7 +201,7 @@ const whoAmIQuestions = [
     choices: ["Deborah", "Jael", "Miriam", "Huldah"],
     answer: 0,
     reference: "Judges 4:4-9; Judges 5:1-31",
-    verseText: "The LORD shall sell Sisera into the hand of a woman."
+    verseText: "The LORD will sell Sisera into the hand of a woman."
   },
   {
     id: 18018,
@@ -213,7 +213,7 @@ const whoAmIQuestions = [
     choices: ["Samson", "Saul", "Absalom", "Jephthah"],
     answer: 0,
     reference: "Judges 13:3-5; Judges 16:17-30",
-    verseText: "He wist not that the LORD was departed from him."
+    verseText: "But he did not know that the LORD had departed from him."
   },
   {
     id: 18019,
@@ -225,7 +225,7 @@ const whoAmIQuestions = [
     choices: ["Jephthah", "Gideon", "Barak", "Samson"],
     answer: 0,
     reference: "Judges 11:1-11; Judges 11:30-40",
-    verseText: "If thou shalt without fail deliver the children of Ammon into mine hands."
+    verseText: "If You will indeed deliver the people of Ammon into my hands."
   },
   {
     id: 18020,
@@ -237,7 +237,7 @@ const whoAmIQuestions = [
     choices: ["Ruth", "Naomi", "Orpah", "Tamar"],
     answer: 0,
     reference: "Ruth 1:16-17; Ruth 2:12; Ruth 4:13-17",
-    verseText: "Thy people shall be my people, and thy God my God."
+    verseText: "Your people shall be my people, and your God, my God."
   },
   {
     id: 18021,
@@ -249,7 +249,7 @@ const whoAmIQuestions = [
     choices: ["Boaz", "Elimelech", "Mahlon", "Obed"],
     answer: 0,
     reference: "Ruth 2:1; Ruth 3:9-13; Ruth 4:9-10",
-    verseText: "I have purchased all that was Elimelech's."
+    verseText: "I have acquired all that was Elimelech's."
   },
   {
     id: 18022,
@@ -261,7 +261,7 @@ const whoAmIQuestions = [
     choices: ["Hannah", "Deborah", "Abigail", "Elisabeth"],
     answer: 0,
     reference: "1 Samuel 1:10-20; 1 Samuel 2:1-10",
-    verseText: "The bows of the mighty men are broken, and they that stumbled are girded with strength."
+    verseText: "The bows of the mighty men are broken, and those who stumbled are girded with strength."
   },
   {
     id: 18023,
@@ -273,7 +273,7 @@ const whoAmIQuestions = [
     choices: ["Samuel", "David", "Josiah", "Jeremiah"],
     answer: 0,
     reference: "1 Samuel 3:1-10; 1 Samuel 7:15-17",
-    verseText: "Speak; for thy servant heareth."
+    verseText: "Speak, for Your servant hears."
   },
   {
     id: 18024,
@@ -297,7 +297,7 @@ const whoAmIQuestions = [
     choices: ["David", "Saul", "Solomon", "Samuel"],
     answer: 0,
     reference: "1 Samuel 16:11-13; 2 Samuel 7:8-16; 2 Samuel 12:10-14",
-    verseText: "The LORD looketh on the heart."
+    verseText: "The LORD looks at the heart."
   },
   {
     id: 18026,
@@ -305,11 +305,11 @@ const whoAmIQuestions = [
     testament: "Old Testament",
     category: "Samuel",
     difficulty: "Advanced",
-    question: "I confronted a king through a parable and exposed him with the words, 'Thou art the man.' Who am I?",
+    question: "I confronted a king through a parable and exposed him with the words, 'You are the man!' Who am I?",
     choices: ["Nathan", "Gad", "Ahijah", "Samuel"],
     answer: 0,
     reference: "2 Samuel 12:1-7",
-    verseText: "Thou art the man."
+    verseText: "You are the man!"
   },
   {
     id: 18027,
@@ -321,7 +321,7 @@ const whoAmIQuestions = [
     choices: ["Solomon", "Hezekiah", "Josiah", "Rehoboam"],
     answer: 0,
     reference: "1 Kings 3:9-13; 1 Kings 11:1-11",
-    verseText: "Give therefore thy servant an understanding heart."
+    verseText: "Give to Your servant an understanding heart."
   },
   {
     id: 18028,
@@ -333,7 +333,7 @@ const whoAmIQuestions = [
     choices: ["Elijah", "Elisha", "Micaiah", "Amos"],
     answer: 0,
     reference: "1 Kings 18:21-39; 1 Kings 19:8-18",
-    verseText: "How long halt ye between two opinions?"
+    verseText: "How long will you falter between two opinions?"
   },
   {
     id: 18029,
@@ -345,7 +345,7 @@ const whoAmIQuestions = [
     choices: ["Elisha", "Jehu", "Jonah", "Gehazi"],
     answer: 0,
     reference: "2 Kings 2:9-15; 2 Kings 4:32-37; 2 Kings 5:1-14",
-    verseText: "Let a double portion of thy spirit be upon me."
+    verseText: "Please let a double portion of your spirit be upon me."
   },
   {
     id: 18030,
@@ -357,7 +357,7 @@ const whoAmIQuestions = [
     choices: ["Naaman", "Gehazi", "Hezekiah", "Ben-hadad"],
     answer: 0,
     reference: "2 Kings 5:1-15",
-    verseText: "Now I know that there is no God in all the earth, but in Israel."
+    verseText: "Indeed, now I know that there is no God in all the earth, except in Israel."
   },
   {
     id: 18031,
@@ -369,7 +369,7 @@ const whoAmIQuestions = [
     choices: ["Hezekiah", "Josiah", "Jehoshaphat", "Uzziah"],
     answer: 0,
     reference: "2 Kings 19:14-19; 2 Kings 19:35-37",
-    verseText: "Hezekiah went up into the house of the LORD, and spread it before the LORD."
+    verseText: "Hezekiah went up to the house of the LORD, and spread it before the LORD."
   },
   {
     id: 18032,
@@ -381,7 +381,7 @@ const whoAmIQuestions = [
     choices: ["Josiah", "Hezekiah", "Jehoiakim", "Ahab"],
     answer: 0,
     reference: "2 Kings 22:11-13; 2 Kings 23:1-25",
-    verseText: "He rent his clothes."
+    verseText: "He tore his clothes."
   },
   {
     id: 18033,
@@ -393,7 +393,7 @@ const whoAmIQuestions = [
     choices: ["Uzziah", "Ahaz", "Rehoboam", "Manasseh"],
     answer: 0,
     reference: "2 Chronicles 26:16-21",
-    verseText: "When he was strong, his heart was lifted up to his destruction."
+    verseText: "When he was strong his heart was lifted up, to his destruction."
   },
   {
     id: 18034,
@@ -405,7 +405,7 @@ const whoAmIQuestions = [
     choices: ["Ezra", "Nehemiah", "Zerubbabel", "Mordecai"],
     answer: 0,
     reference: "Ezra 7:6-10; Nehemiah 8:1-8",
-    verseText: "Ezra had prepared his heart to seek the law of the LORD, and to do it, and to teach."
+    verseText: "For Ezra had prepared his heart to seek the Law of the LORD, and to do it, and to teach."
   },
   {
     id: 18035,
@@ -429,7 +429,7 @@ const whoAmIQuestions = [
     choices: ["Esther", "Vashti", "Ruth", "Deborah"],
     answer: 0,
     reference: "Esther 2:10; Esther 4:14-16; Esther 7:3-6",
-    verseText: "Who knoweth whether thou art come to the kingdom for such a time as this?"
+    verseText: "Yet who knows whether you have come to the kingdom for such a time as this?"
   },
   {
     id: 18037,
@@ -441,7 +441,7 @@ const whoAmIQuestions = [
     choices: ["Mordecai", "Daniel", "Ezra", "Nehemiah"],
     answer: 0,
     reference: "Esther 3:2-6; Esther 8:1-2",
-    verseText: "Mordecai bowed not, nor did him reverence."
+    verseText: "But Mordecai would not bow or pay him homage."
   },
   {
     id: 18038,
@@ -453,7 +453,7 @@ const whoAmIQuestions = [
     choices: ["Job", "Jeremiah", "Asaph", "Solomon"],
     answer: 0,
     reference: "Job 1:1; Job 1:20-22; Job 42:1-6",
-    verseText: "In all this Job sinned not, nor charged God foolishly."
+    verseText: "In all this Job did not sin nor charge God with wrong."
   },
   {
     id: 18039,
@@ -465,7 +465,7 @@ const whoAmIQuestions = [
     choices: ["Solomon", "David", "Asaph", "Agur"],
     answer: 0,
     reference: "Ecclesiastes 1:1-2; Ecclesiastes 12:13",
-    verseText: "Fear God, and keep his commandments: for this is the whole duty of man."
+    verseText: "Fear God and keep His commandments, for this is man's all."
   },
   {
     id: 18040,
@@ -489,7 +489,7 @@ const whoAmIQuestions = [
     choices: ["Asaph", "David", "Ethan", "Jeduthun"],
     answer: 0,
     reference: "Psalm 73:2-3; Psalm 73:16-17",
-    verseText: "Until I went into the sanctuary of God; then understood I their end."
+    verseText: "Until I went into the sanctuary of God; then I understood their end."
   },
   {
     id: 18042,
@@ -501,7 +501,7 @@ const whoAmIQuestions = [
     choices: ["The sons of Korah", "The sons of Asaph", "The Levites of Zadok", "The family of Ethan"],
     answer: 0,
     reference: "Psalm 42 title; Psalm 44 title; Psalm 84 title",
-    verseText: "As the hart panteth after the water brooks, so panteth my soul after thee."
+    verseText: "As the deer pants for the water brooks, so pants my soul for You."
   },
   {
     id: 18043,
@@ -513,7 +513,7 @@ const whoAmIQuestions = [
     choices: ["Isaiah", "Jeremiah", "Ezekiel", "Samuel"],
     answer: 0,
     reference: "Isaiah 6:1-10",
-    verseText: "Here am I; send me."
+    verseText: "Here am I! Send me."
   },
   {
     id: 18044,
@@ -525,7 +525,7 @@ const whoAmIQuestions = [
     choices: ["Jeremiah", "Isaiah", "Ezekiel", "Daniel"],
     answer: 0,
     reference: "Jeremiah 7:1-15; Jeremiah 31:31-34",
-    verseText: "I will put my law in their inward parts, and write it in their hearts."
+    verseText: "I will put My law in their minds, and write it on their hearts."
   },
   {
     id: 18045,
@@ -537,7 +537,7 @@ const whoAmIQuestions = [
     choices: ["Jeremiah", "Baruch", "Isaiah", "Ezra"],
     answer: 0,
     reference: "Lamentations 3:22-23",
-    verseText: "It is of the LORD'S mercies that we are not consumed."
+    verseText: "Through the LORD's mercies we are not consumed."
   },
   {
     id: 18046,
@@ -561,7 +561,7 @@ const whoAmIQuestions = [
     choices: ["Ezekiel", "Habakkuk", "Daniel", "Zechariah"],
     answer: 0,
     reference: "Ezekiel 3:17; Ezekiel 37:1-14",
-    verseText: "I have made thee a watchman unto the house of Israel."
+    verseText: "I have made you a watchman for the house of Israel."
   },
   {
     id: 18048,
@@ -573,7 +573,7 @@ const whoAmIQuestions = [
     choices: ["Daniel", "Joseph", "Mordecai", "Ezra"],
     answer: 0,
     reference: "Daniel 2:19-28; Daniel 4:17; Daniel 6:10-23",
-    verseText: "The most High ruleth in the kingdom of men."
+    verseText: "The Most High rules in the kingdom of men."
   },
   {
     id: 18049,
@@ -597,7 +597,7 @@ const whoAmIQuestions = [
     choices: ["Hosea", "Jeremiah", "Ezekiel", "Malachi"],
     answer: 0,
     reference: "Hosea 1:2-3; Hosea 3:1-3",
-    verseText: "Go, take unto thee a wife of whoredoms."
+    verseText: "Go, take yourself a wife of harlotry."
   },
   {
     id: 18051,
@@ -621,7 +621,7 @@ const whoAmIQuestions = [
     choices: ["Jonah", "Nahum", "Obadiah", "Elijah"],
     answer: 0,
     reference: "Jonah 1:1-3; Jonah 4:1-3",
-    verseText: "I knew that thou art a gracious God, and merciful."
+    verseText: "I know that You are a gracious and merciful God."
   },
   {
     id: 18053,
@@ -633,7 +633,7 @@ const whoAmIQuestions = [
     choices: ["Micah", "Amos", "Hosea", "Zephaniah"],
     answer: 0,
     reference: "Micah 6:6-8",
-    verseText: "What doth the LORD require of thee?"
+    verseText: "What does the LORD require of you?"
   },
   {
     id: 18054,
@@ -645,7 +645,7 @@ const whoAmIQuestions = [
     choices: ["John the Baptist", "Jesus", "Peter", "Simeon"],
     answer: 0,
     reference: "Luke 1:13-17; Matthew 3:1-3; John 1:20-29",
-    verseText: "Prepare ye the way of the Lord."
+    verseText: "Prepare the way of the LORD."
   },
   {
     id: 18055,
@@ -657,7 +657,7 @@ const whoAmIQuestions = [
     choices: ["Mary", "Elisabeth", "Anna", "Martha"],
     answer: 0,
     reference: "Luke 1:46-55",
-    verseText: "My soul doth magnify the Lord."
+    verseText: "My soul magnifies the Lord."
   },
   {
     id: 18056,
@@ -669,7 +669,7 @@ const whoAmIQuestions = [
     choices: ["Simeon", "Zacharias", "Joseph", "Nicodemus"],
     answer: 0,
     reference: "Luke 2:25-32",
-    verseText: "Mine eyes have seen thy salvation."
+    verseText: "For my eyes have seen Your salvation."
   },
   {
     id: 18057,
@@ -693,7 +693,7 @@ const whoAmIQuestions = [
     choices: ["The Samaritan woman", "Martha", "Mary Magdalene", "Joanna"],
     answer: 0,
     reference: "John 4:7-30; John 4:39-42",
-    verseText: "Come, see a man, which told me all things that ever I did."
+    verseText: "Come, see a Man who told me all things that I ever did."
   },
   {
     id: 18059,
@@ -705,7 +705,7 @@ const whoAmIQuestions = [
     choices: ["Peter", "John", "Thomas", "Andrew"],
     answer: 0,
     reference: "Matthew 16:16-23; Luke 22:54-62; John 21:15-19",
-    verseText: "Thou art the Christ, the Son of the living God."
+    verseText: "You are the Christ, the Son of the living God."
   },
   {
     id: 18060,
@@ -729,7 +729,7 @@ const whoAmIQuestions = [
     choices: ["Nathanael", "Thomas", "Philip", "Matthew"],
     answer: 0,
     reference: "John 1:45-49",
-    verseText: "Can there any good thing come out of Nazareth?"
+    verseText: "Can anything good come out of Nazareth?"
   },
   {
     id: 18062,
@@ -741,7 +741,7 @@ const whoAmIQuestions = [
     choices: ["Martha", "Mary Magdalene", "Mary of Bethany", "Salome"],
     answer: 0,
     reference: "John 11:21-27; John 11:39",
-    verseText: "I believe that thou art the Christ, the Son of God."
+    verseText: "I believe that You are the Christ, the Son of God."
   },
   {
     id: 18063,
@@ -753,7 +753,7 @@ const whoAmIQuestions = [
     choices: ["Mary of Bethany", "Martha", "Mary Magdalene", "Joanna"],
     answer: 0,
     reference: "Luke 10:39-42; John 12:1-8",
-    verseText: "Mary hath chosen that good part."
+    verseText: "Mary has chosen that good part."
   },
   {
     id: 18064,
@@ -765,7 +765,7 @@ const whoAmIQuestions = [
     choices: ["Mary Magdalene", "Mary the mother of Jesus", "Salome", "Martha"],
     answer: 0,
     reference: "Luke 8:2; John 20:11-18",
-    verseText: "She saith unto him, Rabboni."
+    verseText: "She said to Him, 'Rabboni!'"
   },
   {
     id: 18065,
@@ -789,7 +789,7 @@ const whoAmIQuestions = [
     choices: ["Herod Antipas", "Pilate", "Herod the Great", "Agrippa"],
     answer: 0,
     reference: "Mark 6:17-28",
-    verseText: "He feared John, knowing that he was a just man and an holy."
+    verseText: "Because he feared John, knowing that he was a just and holy man."
   },
   {
     id: 18067,
@@ -801,7 +801,7 @@ const whoAmIQuestions = [
     choices: ["Saul of Tarsus", "Cornelius", "Apollos", "Stephen"],
     answer: 0,
     reference: "Acts 9:1-22; 1 Timothy 1:12-16",
-    verseText: "Saul, Saul, why persecutest thou me?"
+    verseText: "Saul, Saul, why are you persecuting Me?"
   },
   {
     id: 18068,
@@ -813,7 +813,7 @@ const whoAmIQuestions = [
     choices: ["Stephen", "Peter", "James", "Barnabas"],
     answer: 0,
     reference: "Acts 7:1-53; Acts 7:54-60",
-    verseText: "Ye do always resist the Holy Ghost."
+    verseText: "You always resist the Holy Spirit."
   },
   {
     id: 18069,
@@ -825,7 +825,7 @@ const whoAmIQuestions = [
     choices: ["Ananias of Damascus", "Barnabas", "Philip", "Silas"],
     answer: 0,
     reference: "Acts 9:10-17",
-    verseText: "Brother Saul, the Lord, even Jesus... hath sent me."
+    verseText: "Brother Saul, the Lord Jesus... has sent me."
   },
   {
     id: 18070,
@@ -837,7 +837,7 @@ const whoAmIQuestions = [
     choices: ["Cornelius", "The Ethiopian eunuch", "The Philippian jailer", "Apollos"],
     answer: 0,
     reference: "Acts 10:1-48; Acts 11:15-18",
-    verseText: "God also to the Gentiles granted repentance unto life."
+    verseText: "God has also granted to the Gentiles repentance to life."
   },
   {
     id: 18071,
@@ -845,11 +845,11 @@ const whoAmIQuestions = [
     testament: "New Testament",
     category: "Acts",
     difficulty: "Advanced",
-    question: "I was known as son of consolation, vouched for a former persecutor, and often stood in the ministry gap between suspicion and acceptance. Who am I?",
+    question: "I was known as son of encouragement, vouched for a former persecutor, and often stood in the ministry gap between suspicion and acceptance. Who am I?",
     choices: ["Barnabas", "Silas", "Philip", "Mark"],
     answer: 0,
     reference: "Acts 4:36-37; Acts 9:26-27; Acts 11:22-26",
-    verseText: "Barnabas... being interpreted, The son of consolation."
+    verseText: "Barnabas... which is translated Son of Encouragement."
   },
   {
     id: 18072,
@@ -861,7 +861,7 @@ const whoAmIQuestions = [
     choices: ["Simon Magus", "Elymas", "Ananias", "Demetrius"],
     answer: 0,
     reference: "Acts 8:18-24",
-    verseText: "Thy money perish with thee."
+    verseText: "Your money perish with you!"
   },
   {
     id: 18073,
@@ -873,7 +873,7 @@ const whoAmIQuestions = [
     choices: ["The Ethiopian eunuch", "Cornelius", "The Philippian jailer", "Apollos"],
     answer: 0,
     reference: "Acts 8:26-39; Isaiah 53:7-8",
-    verseText: "See, here is water; what doth hinder me to be baptized?"
+    verseText: "See, here is water. What hinders me from being baptized?"
   },
   {
     id: 18074,
@@ -909,7 +909,7 @@ const whoAmIQuestions = [
     choices: ["Apollos", "Silas", "Timothy", "Titus"],
     answer: 0,
     reference: "Acts 18:24-28",
-    verseText: "An eloquent man, and mighty in the scriptures."
+    verseText: "An eloquent man and mighty in the Scriptures."
   },
   {
     id: 18077,
@@ -921,7 +921,7 @@ const whoAmIQuestions = [
     choices: ["Priscilla", "Lydia", "Phoebe", "Junia"],
     answer: 0,
     reference: "Acts 18:26; Romans 16:3-5",
-    verseText: "They... expounded unto him the way of God more perfectly."
+    verseText: "They... explained to him the way of God more accurately."
   },
   {
     id: 18078,
@@ -933,7 +933,7 @@ const whoAmIQuestions = [
     choices: ["Paul", "James", "Peter", "Luke"],
     answer: 0,
     reference: "Romans 4:1-12",
-    verseText: "It was counted unto him for righteousness."
+    verseText: "It was accounted to him for righteousness."
   },
   {
     id: 18079,
@@ -945,7 +945,7 @@ const whoAmIQuestions = [
     choices: ["Paul", "John", "Peter", "James"],
     answer: 0,
     reference: "Romans 6:3-11; Galatians 2:20; Colossians 3:1-4",
-    verseText: "I am crucified with Christ."
+    verseText: "I have been crucified with Christ."
   },
   {
     id: 18080,
@@ -957,7 +957,7 @@ const whoAmIQuestions = [
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Philippians 1:12-23",
-    verseText: "For to me to live is Christ, and to die is gain."
+    verseText: "For to me, to live is Christ, and to die is gain."
   },
   {
     id: 18081,
@@ -969,7 +969,7 @@ const whoAmIQuestions = [
     choices: ["Paul", "Peter", "John", "Luke"],
     answer: 0,
     reference: "Philippians 2:5-11",
-    verseText: "Let this mind be in you, which was also in Christ Jesus."
+    verseText: "Let this mind be in you which was also in Christ Jesus."
   },
   {
     id: 18082,
@@ -993,7 +993,7 @@ const whoAmIQuestions = [
     choices: ["Paul", "Timothy", "Barnabas", "Silas"],
     answer: 0,
     reference: "2 Timothy 4:6-8",
-    verseText: "I have fought a good fight, I have finished my course, I have kept the faith."
+    verseText: "I have fought the good fight, I have finished the race, I have kept the faith."
   },
   {
     id: 18084,
@@ -1041,7 +1041,7 @@ const whoAmIQuestions = [
     choices: ["Peter", "John", "Paul", "Jude"],
     answer: 0,
     reference: "2 Peter 1:16-21",
-    verseText: "No prophecy of the scripture is of any private interpretation."
+    verseText: "No prophecy of Scripture is of any private interpretation."
   },
   {
     id: 18088,
@@ -1053,7 +1053,7 @@ const whoAmIQuestions = [
     choices: ["John", "Peter", "Paul", "Philip"],
     answer: 0,
     reference: "Revelation 1:9-11; Revelation 5:1-14",
-    verseText: "I John... was in the isle that is called Patmos."
+    verseText: "I, John... was on the island that is called Patmos."
   },
   {
     id: 18089,
@@ -1065,7 +1065,7 @@ const whoAmIQuestions = [
     choices: ["Melchizedek", "Aaron", "Zadok", "Abiathar"],
     answer: 0,
     reference: "Genesis 14:18-20; Psalm 110:4; Hebrews 7:1-17",
-    verseText: "Thou art a priest for ever after the order of Melchizedek."
+    verseText: "You are a priest forever according to the order of Melchizedek."
   },
   {
     id: 18090,
@@ -1077,7 +1077,7 @@ const whoAmIQuestions = [
     choices: ["Isaac", "Joseph", "Moses", "Samuel"],
     answer: 0,
     reference: "Genesis 22:1-14; Hebrews 11:17-19",
-    verseText: "Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure."
+    verseText: "Concluding that God was able to raise him up, even from the dead, from which he also received him in a figurative sense."
   },
   {
     id: 18091,
@@ -1089,7 +1089,7 @@ const whoAmIQuestions = [
     choices: ["Joseph", "David", "Joshua", "Boaz"],
     answer: 0,
     reference: "Genesis 37:28; Genesis 41:39-44; Genesis 45:5-8",
-    verseText: "God did send me before you to preserve life."
+    verseText: "God sent me before you to preserve life."
   },
   {
     id: 18092,
@@ -1101,7 +1101,7 @@ const whoAmIQuestions = [
     choices: ["Moses", "Aaron", "Joshua", "Elijah"],
     answer: 0,
     reference: "Deuteronomy 18:15-18; John 6:32-35; Hebrews 3:1-6",
-    verseText: "The LORD thy God will raise up unto thee a Prophet from the midst of thee."
+    verseText: "The LORD your God will raise up for you a Prophet from your midst."
   },
   {
     id: 18093,
@@ -1113,7 +1113,7 @@ const whoAmIQuestions = [
     choices: ["Boaz", "Mordecai", "Joshua", "Ezra"],
     answer: 0,
     reference: "Ruth 4:4-10; Ephesians 5:25-27",
-    verseText: "I thought to advertise thee, saying, Buy it before the inhabitants."
+    verseText: "I thought to inform you, saying, 'Buy it back in the presence of the inhabitants.'"
   },
   {
     id: 18094,
@@ -1125,7 +1125,7 @@ const whoAmIQuestions = [
     choices: ["David", "Saul", "Solomon", "Hezekiah"],
     answer: 0,
     reference: "1 Samuel 16:1-13; 2 Samuel 7:12-16; Psalm 22; Acts 2:29-36",
-    verseText: "I have found David the son of Jesse, a man after mine own heart."
+    verseText: "I have found David the son of Jesse, a man after My own heart."
   },
   {
     id: 18095,
@@ -1149,7 +1149,7 @@ const whoAmIQuestions = [
     choices: ["Silas", "Barnabas", "Titus", "Apollos"],
     answer: 0,
     reference: "Acts 15:40; Acts 16:25; 1 Thessalonians 1:1",
-    verseText: "At midnight Paul and Silas prayed, and sang praises unto God."
+    verseText: "But at midnight Paul and Silas were praying and singing hymns to God."
   },
   {
     id: 18097,
@@ -1161,7 +1161,7 @@ const whoAmIQuestions = [
     choices: ["The repentant offender in Corinth", "Demas", "Alexander the coppersmith", "Hymenaeus"],
     answer: 0,
     reference: "1 Corinthians 5:1-5; 2 Corinthians 2:6-8",
-    verseText: "Sufficient to such a man is this punishment."
+    verseText: "This punishment which was inflicted by the majority is sufficient for such a man."
   },
   {
     id: 18098,
@@ -1173,7 +1173,7 @@ const whoAmIQuestions = [
     choices: ["Jude", "Peter", "John", "Silas"],
     answer: 0,
     reference: "Jude 1:1-3",
-    verseText: "That ye should earnestly contend for the faith which was once delivered unto the saints."
+    verseText: "To contend earnestly for the faith which was once for all delivered to the saints."
   },
   {
     id: 18099,
@@ -1185,7 +1185,7 @@ const whoAmIQuestions = [
     choices: ["Jesus Christ", "Moses", "David", "Paul"],
     answer: 0,
     reference: "Luke 24:27; Luke 24:44-47; John 5:39",
-    verseText: "He expounded unto them in all the scriptures the things concerning himself."
+    verseText: "He expounded to them in all the Scriptures the things concerning Himself."
   },
   {
     id: 18100,
@@ -1197,6 +1197,6 @@ const whoAmIQuestions = [
     choices: ["Jesus Christ", "John the Baptist", "Moses", "Melchizedek"],
     answer: 0,
     reference: "Psalm 118:22; Isaiah 53; John 2:19-21; 1 Corinthians 5:7; Hebrews 4:14-16; Revelation 5:6",
-    verseText: "Beginning at Moses and all the prophets... the things concerning himself."
+    verseText: "Beginning at Moses and all the Prophets... the things concerning Himself."
   }
 ];

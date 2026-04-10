@@ -14,7 +14,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "John 2:1-11",
-    verseText: "This beginning of miracles did Jesus... and manifested forth his glory."
+    verseText: "This beginning of signs Jesus did... and manifested His glory."
   },
   {
     id: 9002,
@@ -31,7 +31,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 4:35-41",
-    verseText: "Why are ye so fearful? how is it that ye have no faith?"
+    verseText: "Why are you so fearful? How is it that you have no faith?"
   },
   {
     id: 9003,
@@ -48,7 +48,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 2:1-12",
-    verseText: "The Son of man hath power on earth to forgive sins."
+    verseText: "The Son of Man has power on earth to forgive sins."
   },
   {
     id: 9004,
@@ -82,7 +82,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 14:22-33; Job 9:8",
-    verseText: "Be of good cheer; it is I; be not afraid."
+    verseText: "Be of good cheer! It is I; do not be afraid."
   },
   {
     id: 9006,
@@ -99,7 +99,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "John 11:1-53",
-    verseText: "I am the resurrection, and the life."
+    verseText: "I am the resurrection and the life."
   },
   {
     id: 9007,
@@ -116,7 +116,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 3:1-6; Luke 13:10-17",
-    verseText: "The Son of man is Lord also of the sabbath."
+    verseText: "The Son of Man is also Lord of the Sabbath."
   },
   {
     id: 9008,
@@ -133,7 +133,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 5:34; Luke 7:50",
-    verseText: "Thy faith hath made thee whole."
+    verseText: "Your faith has made you well."
   },
   {
     id: 9009,
@@ -150,7 +150,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Luke 11:20; Mark 1:34",
-    verseText: "If I with the finger of God cast out devils, no doubt the kingdom of God is come upon you."
+    verseText: "But if I cast out demons with the finger of God, surely the kingdom of God has come upon you."
   },
   {
     id: 9010,
@@ -167,7 +167,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 1:43-45; Mark 8:29-30",
-    verseText: "See thou say nothing to any man."
+    verseText: "See that you say nothing to anyone."
   },
   {
     id: 9011,
@@ -184,7 +184,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "John 9:1-41",
-    verseText: "Whereas I was blind, now I see."
+    verseText: "Though I was blind, now I see."
   },
   {
     id: 9012,
@@ -201,7 +201,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 11:12-21",
-    verseText: "No man eat fruit of thee hereafter for ever."
+    verseText: "Let no one eat fruit from you ever again."
   },
   {
     id: 9013,
@@ -218,7 +218,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 17:1-5",
-    verseText: "This is my beloved Son... hear ye him."
+    verseText: "This is My beloved Son, in whom I am well pleased. Hear Him!"
   },
   {
     id: 9014,
@@ -235,7 +235,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 14:28-31",
-    verseText: "O thou of little faith, wherefore didst thou doubt?"
+    verseText: "O you of little faith, why did you doubt?"
   },
   {
     id: 9015,
@@ -252,7 +252,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 8:5-13",
-    verseText: "I have not found so great faith, no, not in Israel."
+    verseText: "I have not found such great faith, not even in Israel!"
   },
   {
     id: 9016,
@@ -260,7 +260,7 @@ const miraclesQuestions = [
     testament: "New Testament",
     category: "Jesus",
     difficulty: "Advanced",
-    question: "Why does Jesus ask, 'Who touched me?' after the woman with the issue of blood is healed?",
+    question: "Why does Jesus ask, 'Who touched Me?' after the woman with the issue of blood is healed?",
     choices: [
       "He did not know what happened",
       "He draws her into public acknowledgment of faith and restoration",
@@ -269,7 +269,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 5:25-34",
-    verseText: "Daughter, thy faith hath made thee whole."
+    verseText: "Daughter, your faith has made you well."
   },
   {
     id: 9017,
@@ -286,7 +286,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 5:35-43",
-    verseText: "Talitha cumi."
+    verseText: "Talitha, cumi."
   },
   {
     id: 9018,
@@ -303,7 +303,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "John 9:6-7",
-    verseText: "He anointed the eyes... and said... wash."
+    verseText: "He anointed the eyes... and said, 'Go, wash.'"
   },
   {
     id: 9019,
@@ -320,7 +320,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Luke 5:12-14; Leviticus 14",
-    verseText: "Show thyself to the priest."
+    verseText: "Go and show yourself to the priest."
   },
   {
     id: 9020,
@@ -337,7 +337,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 6:1-6",
-    verseText: "He marvelled because of their unbelief."
+    verseText: "He marveled because of their unbelief."
   },
   {
     id: 9021,
@@ -354,7 +354,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Acts 3:1-16",
-    verseText: "In the name of Jesus Christ of Nazareth rise up and walk."
+    verseText: "In the name of Jesus Christ of Nazareth, rise up and walk."
   },
   {
     id: 9022,
@@ -371,7 +371,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Acts 5:1-11",
-    verseText: "Thou hast not lied unto men, but unto God."
+    verseText: "You have not lied to men but to God."
   },
   {
     id: 9023,
@@ -405,7 +405,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Acts 14:3; Acts 19:11-12",
-    verseText: "God wrought special miracles by the hands of Paul."
+    verseText: "Now God worked unusual miracles by the hands of Paul."
   },
   {
     id: 9025,
@@ -473,7 +473,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Exodus 17:1-7; Numbers 20:8-11",
-    verseText: "He brought streams also out of the rock."
+    verseText: "He also brought streams out of the rock."
   },
   {
     id: 9029,
@@ -490,7 +490,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 18:36-39",
-    verseText: "The LORD, he is the God."
+    verseText: "The LORD, He is God!"
   },
   {
     id: 9030,
@@ -507,7 +507,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 17:8-16",
-    verseText: "The barrel of meal shall not waste."
+    verseText: "The bin of flour shall not be used up."
   },
   {
     id: 9031,
@@ -524,7 +524,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 5:10-14",
-    verseText: "Then went he down, and dipped himself seven times."
+    verseText: "So he went down and dipped seven times in the Jordan."
   },
   {
     id: 9032,
@@ -541,7 +541,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 4:1-7",
-    verseText: "The oil stayed."
+    verseText: "The oil stopped."
   },
   {
     id: 9033,
@@ -558,7 +558,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 6:1-7",
-    verseText: "And the iron did swim."
+    verseText: "And the iron floated."
   },
   {
     id: 9034,
@@ -575,7 +575,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Joshua 10:12-14",
-    verseText: "The LORD fought for Israel."
+    verseText: "For the LORD fought for Israel."
   },
   {
     id: 9035,
@@ -592,7 +592,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Daniel 6:16-23",
-    verseText: "No manner of hurt was found upon him."
+    verseText: "No injury whatever was found on him."
   },
   {
     id: 9036,
@@ -643,7 +643,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Luke 17:11-19",
-    verseText: "Were there not ten cleansed? but where are the nine?"
+    verseText: "Were there not ten cleansed? But where are the nine?"
   },
   {
     id: 9039,
@@ -660,7 +660,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Mark 7:31-37",
-    verseText: "Ephphatha, that is, Be opened."
+    verseText: "Ephphatha, that is, 'Be opened.'"
   },
   {
     id: 9040,
@@ -677,7 +677,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Luke 22:50-51; John 18:10-11",
-    verseText: "Suffer ye thus far."
+    verseText: "Permit even this."
   },
   {
     id: 9041,
@@ -694,7 +694,7 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 28:1-10; 1 Corinthians 15:14-20",
-    verseText: "He is not here: for he is risen."
+    verseText: "He is not here; for He is risen."
   },
   {
     id: 9042,
@@ -711,6 +711,6 @@ const miraclesQuestions = [
     ],
     answer: 1,
     reference: "John 20:30-31; Hebrews 2:3-4",
-    verseText: "These are written, that ye might believe."
+    verseText: "But these are written that you may believe."
   }
 ];

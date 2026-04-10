@@ -14,7 +14,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 12:1-7; 13:14-17; 17:8",
-    verseText: "Unto thy seed will I give this land."
+    verseText: "To your descendants I will give this land."
   },
   {
     id: 12002,
@@ -25,7 +25,7 @@ const geographyQuestions = [
     choices: ["Egypt", "Canaan", "Moab", "Edom"],
     answer: 1,
     reference: "Genesis 12:5",
-    verseText: "They went forth to go into the land of Canaan."
+    verseText: "They departed to go to the land of Canaan."
   },
   {
     id: 12003,
@@ -36,7 +36,7 @@ const geographyQuestions = [
     choices: ["Jordan", "Jabbok", "Euphrates", "Nile"],
     answer: 2,
     reference: "Genesis 15:18",
-    verseText: "Unto the great river, the river Euphrates."
+    verseText: "To the great river, the River Euphrates."
   },
   {
     id: 12004,
@@ -52,7 +52,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 12:10; 37:28; 46:1-7; Exodus 1:1-14",
-    verseText: "Joseph was brought down to Egypt."
+    verseText: "Now Joseph had been taken down to Egypt."
   },
   {
     id: 12005,
@@ -68,7 +68,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 28:10-22; 35:1-15",
-    verseText: "He called the name of that place Bethel."
+    verseText: "And he called the name of that place Bethel."
   },
   {
     id: 12006,
@@ -76,10 +76,10 @@ const geographyQuestions = [
     category: "Patriarchal World",
     difficulty: "Advanced",
     question: "What earlier name did Jacob say belonged to the place he later called Bethel?",
-    choices: ["Penuel", "Luz", "Hebron", "Beer-sheba"],
+    choices: ["Penuel", "Luz", "Hebron", "Beersheba"],
     answer: 1,
     reference: "Genesis 28:19",
-    verseText: "The name of that city was called Luz at the first."
+    verseText: "But the name of that city had been Luz previously."
   },
   {
     id: 12007,
@@ -95,7 +95,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 32:22-31",
-    verseText: "Jacob called the name of the place Peniel."
+    verseText: "So Jacob called the name of the place Peniel."
   },
   {
     id: 12008,
@@ -111,7 +111,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 13:18; 23:17-20; 35:27",
-    verseText: "Abraham dwelt in the plain of Mamre, which is in Hebron."
+    verseText: "Abram dwelt by the terebinth trees of Mamre, which are in Hebron."
   },
   {
     id: 12009,
@@ -122,14 +122,14 @@ const geographyQuestions = [
     choices: ["Shechem", "Machpelah", "Bethel", "Gerar"],
     answer: 1,
     reference: "Genesis 23:17-20; 49:29-32",
-    verseText: "The field of Ephron... in Machpelah."
+    verseText: "The field of Ephron which was in Machpelah."
   },
   {
     id: 12010,
     game: "Geography",
     category: "Patriarchal World",
     difficulty: "Advanced",
-    question: "Why is Beer-sheba significant in patriarchal narratives?",
+    question: "Why is Beersheba significant in patriarchal narratives?",
     choices: [
       "It was the main Philistine capital",
       "It often functions as a covenantal and southern-boundary location tied to Abraham, Isaac, and Jacob",
@@ -138,7 +138,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 21:31-33; 26:23-25; 46:1-5",
-    verseText: "Therefore he called that place Beer-sheba."
+    verseText: "Therefore he called that place Beersheba."
   },
 
   {
@@ -155,7 +155,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 1:13-14; 20:2; Deuteronomy 5:6",
-    verseText: "I am the LORD thy God, which brought thee out of the land of Egypt."
+    verseText: "I am the LORD your God, who brought you out of the land of Egypt."
   },
   {
     id: 12012,
@@ -166,7 +166,7 @@ const geographyQuestions = [
     choices: ["Sea of Galilee", "Dead Sea", "Mediterranean Sea", "Red Sea"],
     answer: 3,
     reference: "Exodus 14:21-22",
-    verseText: "The children of Israel went into the midst of the sea upon the dry ground."
+    verseText: "So the children of Israel went into the midst of the sea on the dry ground."
   },
   {
     id: 12013,
@@ -182,7 +182,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 14:13-31; 15:1-19",
-    verseText: "Israel saw the Egyptians dead upon the sea shore."
+    verseText: "Israel saw the Egyptians dead on the seashore."
   },
   {
     id: 12014,
@@ -193,7 +193,7 @@ const geographyQuestions = [
     choices: ["Mount Carmel", "Mount Sinai", "Mount Tabor", "Mount Hor"],
     answer: 1,
     reference: "Exodus 19:1-3",
-    verseText: "They came into the wilderness of Sinai."
+    verseText: "They came to the Wilderness of Sinai."
   },
   {
     id: 12015,
@@ -221,18 +221,18 @@ const geographyQuestions = [
       "Wilderness of Paran",
       "Wilderness of Shur",
       "Wilderness of Judah",
-      "Wilderness of Bethaven"
+      "Wilderness of Beth Aven"
     ],
     answer: 0,
     reference: "Numbers 13:3, 26; 14:33-34",
-    verseText: "Moses sent them from the wilderness of Paran."
+    verseText: "Moses sent them from the Wilderness of Paran."
   },
   {
     id: 12017,
     game: "Geography",
     category: "Exodus and Wilderness",
     difficulty: "Advanced",
-    question: "Why is Kadesh-barnea important in Israel's geography of failure?",
+    question: "Why is Kadesh Barnea important in Israel's geography of failure?",
     choices: [
       "It was the site of Solomon's coronation",
       "It became the key threshold location where unbelief turned near-entry into prolonged judgment",
@@ -241,7 +241,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Numbers 13:26; 14:1-35; Deuteronomy 1:19-46",
-    verseText: "Ye would not go up, but rebelled."
+    verseText: "Nevertheless you would not go up, but rebelled."
   },
   {
     id: 12018,
@@ -252,7 +252,7 @@ const geographyQuestions = [
     choices: ["Mount Hor", "Mount Nebo", "Mount Ebal", "Mount Gerizim"],
     answer: 0,
     reference: "Numbers 20:22-29",
-    verseText: "Aaron shall be gathered unto his people."
+    verseText: "Aaron shall be gathered to his people."
   },
   {
     id: 12019,
@@ -263,7 +263,7 @@ const geographyQuestions = [
     choices: ["Mount Hor", "Mount Nebo", "Mount Sinai", "Mount Tabor"],
     answer: 1,
     reference: "Deuteronomy 34:1-4",
-    verseText: "Moses went up... unto the mountain of Nebo."
+    verseText: "Then Moses went up... to Mount Nebo."
   },
   {
     id: 12020,
@@ -279,7 +279,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 32:48-52; 34:1-5",
-    verseText: "I have caused thee to see it with thine eyes, but thou shalt not go over thither."
+    verseText: "I have caused you to see it with your eyes, but you shall not cross over there."
   },
 
   {
@@ -291,7 +291,7 @@ const geographyQuestions = [
     choices: ["Euphrates", "Jordan", "Jabbok", "Kishon"],
     answer: 1,
     reference: "Joshua 3:14-17",
-    verseText: "The people passed over right against Jericho."
+    verseText: "The people crossed over opposite Jericho."
   },
   {
     id: 12022,
@@ -307,7 +307,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Joshua 3-4; 2 Kings 2:6-14; Matthew 3:13-17",
-    verseText: "Israel passed over this Jordan on dry land."
+    verseText: "Israel crossed over this Jordan on dry land."
   },
   {
     id: 12023,
@@ -334,7 +334,7 @@ const geographyQuestions = [
     ],
     answer: 0,
     reference: "Joshua 5:13-15; 6:1-27",
-    verseText: "The LORD hath given into your hand Jericho."
+    verseText: "I have given Jericho into your hand."
   },
   {
     id: 12025,
@@ -345,7 +345,7 @@ const geographyQuestions = [
     choices: ["Bethel", "Ai", "Gibeon", "Lachish"],
     answer: 1,
     reference: "Joshua 7:2-5",
-    verseText: "The men of Ai smote of them about thirty and six men."
+    verseText: "The men of Ai struck down about thirty-six men."
   },
   {
     id: 12026,
@@ -361,7 +361,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Joshua 6-7",
-    verseText: "Israel hath sinned... therefore they could not stand before their enemies."
+    verseText: "Israel has sinned... therefore they could not stand before their enemies."
   },
   {
     id: 12027,
@@ -377,7 +377,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 11:29; Joshua 8:30-35",
-    verseText: "Mount Ebal... mount Gerizim."
+    verseText: "Mount Ebal... Mount Gerizim."
   },
   {
     id: 12028,
@@ -393,7 +393,7 @@ const geographyQuestions = [
     ],
     answer: 0,
     reference: "Joshua 8:30-35",
-    verseText: "He read all the words of the law, the blessings and cursings."
+    verseText: "He read all the words of the law, the blessings and the cursings."
   },
   {
     id: 12029,
@@ -420,7 +420,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Joshua 13:8; Numbers 32:1-42",
-    verseText: "The Reubenites and the Gadites have received their inheritance."
+    verseText: "The Reubenites and the Gadites received their inheritance."
   },
 
   {
@@ -448,7 +448,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Joshua 18:1; 1 Samuel 1:3; Jeremiah 7:12-14",
-    verseText: "Go ye now unto my place which was in Shiloh."
+    verseText: "But go now to My place which was in Shiloh."
   },
   {
     id: 12033,
@@ -456,17 +456,17 @@ const geographyQuestions = [
     category: "Sacred Centers",
     difficulty: "Advanced",
     question: "Where did the ark remain for many years in the house of Abinadab before David brought it toward Jerusalem?",
-    choices: ["Shiloh", "Kirjath-jearim", "Bethel", "Ramah"],
+    choices: ["Shiloh", "Kirjath Jearim", "Bethel", "Ramah"],
     answer: 1,
     reference: "1 Samuel 7:1-2; 2 Samuel 6:1-3",
-    verseText: "They brought it into the house of Abinadab in the hill."
+    verseText: "They brought it into the house of Abinadab on the hill."
   },
   {
     id: 12034,
     game: "Geography",
     category: "Sacred Centers",
     difficulty: "Advanced",
-    question: "Why is Kirjath-jearim significant in the ark narrative?",
+    question: "Why is Kirjath Jearim significant in the ark narrative?",
     choices: [
       "It was the site of the exile return altar",
       "It marks the ark's long separation from a central sanctuary before Davidic re-centering in Jerusalem",
@@ -475,7 +475,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 7:1-2; 2 Samuel 6:1-12",
-    verseText: "The ark abode in Kirjath-jearim a long time."
+    verseText: "The ark remained in Kirjath Jearim a long time."
   },
   {
     id: 12035,
@@ -483,10 +483,10 @@ const geographyQuestions = [
     category: "Sacred Centers",
     difficulty: "Advanced",
     question: "What town was especially associated with Elkanah, Hannah, and Samuel?",
-    choices: ["Ramah", "Shiloh", "Bethlehem", "Mizpeh"],
+    choices: ["Ramah", "Shiloh", "Bethlehem", "Mizpah"],
     answer: 0,
     reference: "1 Samuel 1:19; 7:17",
-    verseText: "They came to their house to Ramah."
+    verseText: "They returned and came to their house at Ramah."
   },
   {
     id: 12036,
@@ -497,7 +497,7 @@ const geographyQuestions = [
     choices: ["Hebron", "Samaria", "Jerusalem", "Shechem"],
     answer: 2,
     reference: "2 Samuel 5:6-9",
-    verseText: "David took the strong hold of Zion."
+    verseText: "David took the stronghold of Zion."
   },
   {
     id: 12037,
@@ -513,7 +513,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 5:6-10; 1 Kings 8; Psalm 132; Isaiah 2:1-4",
-    verseText: "The same is the city of David."
+    verseText: "That is, the City of David."
   },
   {
     id: 12038,
@@ -524,7 +524,7 @@ const geographyQuestions = [
     choices: ["Mount Sinai", "Mount Moriah", "Mount Ebal", "Mount Gilboa"],
     answer: 1,
     reference: "2 Chronicles 3:1",
-    verseText: "Then Solomon began to build the house of the LORD... in mount Moriah."
+    verseText: "Solomon began to build the house of the LORD... on Mount Moriah."
   },
   {
     id: 12039,
@@ -540,7 +540,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 22:2; 2 Chronicles 3:1",
-    verseText: "In mount Moriah."
+    verseText: "On Mount Moriah."
   },
   {
     id: 12040,
@@ -551,7 +551,7 @@ const geographyQuestions = [
     choices: ["Valley of Elah", "Kidron Valley", "Valley of Siddim", "Valley of Achor"],
     answer: 1,
     reference: "2 Samuel 15:23; John 18:1; Joel 3:2",
-    verseText: "All the country wept with a loud voice, and all the people passed over."
+    verseText: "All the country wept with a loud voice, and all the people crossed over."
   },
 
   {
@@ -563,7 +563,7 @@ const geographyQuestions = [
     choices: ["Tirzah", "Samaria", "Dan", "Megiddo"],
     answer: 1,
     reference: "1 Kings 16:24",
-    verseText: "He built on the hill, and called the name of the city... Samaria."
+    verseText: "He built on the hill... and called the name of the city Samaria."
   },
   {
     id: 12042,
@@ -579,7 +579,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 16:24-33; 2 Kings 17:24-29; John 4:4-9",
-    verseText: "The king of Assyria brought men from Babylon... and placed them in the cities of Samaria."
+    verseText: "Then the king of Assyria brought people from Babylon... and placed them in the cities of Samaria."
   },
   {
     id: 12043,
@@ -590,7 +590,7 @@ const geographyQuestions = [
     choices: ["Valley of Elah", "Valley of Jezreel", "Kidron Valley", "Valley of Siddim"],
     answer: 0,
     reference: "1 Samuel 17:2",
-    verseText: "They pitched by the valley of Elah."
+    verseText: "They encamped in the Valley of Elah."
   },
   {
     id: 12044,
@@ -606,7 +606,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 17",
-    verseText: "The battle is the LORD'S."
+    verseText: "For the battle is the LORD's."
   },
   {
     id: 12045,
@@ -617,7 +617,7 @@ const geographyQuestions = [
     choices: ["Mount Carmel", "Mount Tabor", "Mount Hermon", "Mount Gerizim"],
     answer: 0,
     reference: "1 Kings 18:19-20",
-    verseText: "Gather to me all Israel unto mount Carmel."
+    verseText: "Gather all Israel to me on Mount Carmel."
   },
   {
     id: 12046,
@@ -633,7 +633,7 @@ const geographyQuestions = [
     ],
     answer: 0,
     reference: "1 Kings 18:20-39",
-    verseText: "The God that answereth by fire, let him be God."
+    verseText: "The God who answers by fire, He is God."
   },
   {
     id: 12047,
@@ -644,7 +644,7 @@ const geographyQuestions = [
     choices: ["Mountains of Ararat", "Mount Gilboa", "Mount Seir", "Mount Nebo"],
     answer: 1,
     reference: "1 Samuel 31:1-6",
-    verseText: "The men of Israel fled... and fell down slain in mount Gilboa."
+    verseText: "The men of Israel fled... and fell slain on Mount Gilboa."
   },
   {
     id: 12048,
@@ -660,7 +660,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 31:1-8; 2 Samuel 1:21",
-    verseText: "Ye mountains of Gilboa, let there be no dew."
+    verseText: "O mountains of Gilboa, let there be no dew."
   },
   {
     id: 12049,
@@ -671,7 +671,7 @@ const geographyQuestions = [
     choices: ["Judah", "Samaria", "Edom", "Moab"],
     answer: 1,
     reference: "1 Kings 16:29-33; 21:1",
-    verseText: "Ahab... reigned over Israel in Samaria."
+    verseText: "Now Ahab... reigned over Israel in Samaria."
   },
   {
     id: 12050,
@@ -687,7 +687,7 @@ const geographyQuestions = [
     ],
     answer: 0,
     reference: "1 Kings 21; 2 Kings 9-10; Hosea 1:4-5",
-    verseText: "I will avenge the blood of Jezreel."
+    verseText: "I will avenge the bloodshed of Jezreel."
   },
 
   {
@@ -699,7 +699,7 @@ const geographyQuestions = [
     choices: ["Assyria", "Babylon", "Egypt", "Persia"],
     answer: 1,
     reference: "2 Kings 25:8-11; Jeremiah 25:11",
-    verseText: "He carried away... to Babylon."
+    verseText: "He carried them away to Babylon."
   },
   {
     id: 12052,
@@ -737,7 +737,7 @@ const geographyQuestions = [
     choices: ["Chebar", "Jordan", "Abana", "Kishon"],
     answer: 0,
     reference: "Ezekiel 1:1-3",
-    verseText: "As I was among the captives by the river of Chebar."
+    verseText: "As I was among the captives by the River Chebar."
   },
   {
     id: 12055,
@@ -753,7 +753,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 1:1-28; 11:16",
-    verseText: "Yet will I be to them as a little sanctuary."
+    verseText: "Yet I will be a little sanctuary for them."
   },
   {
     id: 12056,
@@ -764,7 +764,7 @@ const geographyQuestions = [
     choices: ["Samaria", "Jerusalem", "Hebron", "Damascus"],
     answer: 1,
     reference: "Ezra 1:1-5; Nehemiah 2:17-18",
-    verseText: "Let us build up the wall of Jerusalem."
+    verseText: "Come and let us build the wall of Jerusalem."
   },
   {
     id: 12057,
@@ -780,7 +780,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Ezra 3; Nehemiah 2-6; Haggai 2; Zechariah 2",
-    verseText: "Who is left among you that saw this house in her first glory?"
+    verseText: "Who is left among you who saw this temple in its former glory?"
   },
   {
     id: 12058,
@@ -807,7 +807,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Nehemiah 2:17; 6:15",
-    verseText: "Come, and let us build up the wall of Jerusalem."
+    verseText: "Come and let us build the wall of Jerusalem."
   },
   {
     id: 12060,
@@ -823,7 +823,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Nehemiah 1:3; 2:17-20; 6:15-16",
-    verseText: "The wall of Jerusalem also is broken down."
+    verseText: "The wall of Jerusalem is also broken down."
   },
 
   {
@@ -835,7 +835,7 @@ const geographyQuestions = [
     choices: ["Nazareth", "Jerusalem", "Bethlehem", "Capernaum"],
     answer: 2,
     reference: "Matthew 2:1; Luke 2:4-7",
-    verseText: "Jesus was born in Bethlehem of Judaea."
+    verseText: "Jesus was born in Bethlehem of Judea."
   },
   {
     id: 12062,
@@ -851,7 +851,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Micah 5:2; Matthew 2:1-6; Luke 2:4",
-    verseText: "Out of thee shall come a Governor."
+    verseText: "Out of you shall come a Ruler."
   },
   {
     id: 12063,
@@ -878,7 +878,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "John 1:46; Luke 1:26-27; Matthew 2:23",
-    verseText: "Can there any good thing come out of Nazareth?"
+    verseText: "Can anything good come out of Nazareth?"
   },
   {
     id: 12065,
@@ -905,7 +905,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 9:1-2; Matthew 4:13-16",
-    verseText: "The people which sat in darkness saw great light."
+    verseText: "The people who sat in darkness have seen a great light."
   },
   {
     id: 12067,
@@ -932,7 +932,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Matthew 4:13; 11:23-24; Mark 1:21-34; John 6:24-59",
-    verseText: "Thou, Capernaum, which art exalted unto heaven..."
+    verseText: "And you, Capernaum, who are exalted to heaven..."
   },
   {
     id: 12069,
@@ -943,7 +943,7 @@ const geographyQuestions = [
     choices: ["Dead Sea", "Mediterranean Sea", "Sea of Galilee", "Red Sea"],
     answer: 2,
     reference: "Matthew 4:18; Mark 4:1; John 6:1",
-    verseText: "Walking by the sea of Galilee."
+    verseText: "Walking by the Sea of Galilee."
   },
   {
     id: 12070,
@@ -959,7 +959,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Matthew 4:18-22; 8:23-27; 14:22-33; John 21:1-14",
-    verseText: "Jesus walked by the sea of Galilee."
+    verseText: "Jesus, walking by the Sea of Galilee."
   },
 
   {
@@ -971,7 +971,7 @@ const geographyQuestions = [
     choices: ["Jericho", "Sychar", "Bethsaida", "Emmaus"],
     answer: 1,
     reference: "John 4:5-6",
-    verseText: "Then cometh he to a city of Samaria, which is called Sychar."
+    verseText: "So He came to a city of Samaria which is called Sychar."
   },
   {
     id: 12072,
@@ -987,18 +987,18 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "John 4:4-42",
-    verseText: "He must needs go through Samaria."
+    verseText: "But He needed to go through Samaria."
   },
   {
     id: 12073,
     game: "Geography",
     category: "Gospels",
     difficulty: "Advanced",
-    question: "Which mountain near Shechem/Samaria was associated with Samaritan worship claims in John 4?",
+    question: "Which mountain near Shechem was associated with Samaritan worship claims in John 4?",
     choices: ["Mount Carmel", "Mount Gerizim", "Mount Tabor", "Mount Moriah"],
     answer: 1,
     reference: "John 4:20",
-    verseText: "Our fathers worshipped in this mountain."
+    verseText: "Our fathers worshiped on this mountain."
   },
   {
     id: 12074,
@@ -1009,7 +1009,7 @@ const geographyQuestions = [
     choices: ["Bethphage", "Bethsaida", "Bethany", "Emmaus"],
     answer: 2,
     reference: "John 11:1; Luke 10:38-42",
-    verseText: "Now a certain man was sick, named Lazarus, of Bethany."
+    verseText: "Now a certain man was sick, Lazarus of Bethany."
   },
   {
     id: 12075,
@@ -1025,7 +1025,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "John 11; 12:1-8; Luke 24:50",
-    verseText: "Jesus loved Martha, and her sister, and Lazarus."
+    verseText: "Jesus loved Martha and her sister and Lazarus."
   },
   {
     id: 12076,
@@ -1036,7 +1036,7 @@ const geographyQuestions = [
     choices: ["Bethsaida", "Bethphage", "Sychar", "Nain"],
     answer: 1,
     reference: "Matthew 21:1; Mark 11:1; Luke 19:29",
-    verseText: "When they drew nigh unto Jerusalem, and were come to Bethphage."
+    verseText: "Now when they drew near Jerusalem, and came to Bethphage."
   },
   {
     id: 12077,
@@ -1063,7 +1063,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Luke 18:35-43; 19:1-10",
-    verseText: "Jesus entered and passed through Jericho."
+    verseText: "Then Jesus entered and passed through Jericho."
   },
   {
     id: 12079,
@@ -1074,7 +1074,7 @@ const geographyQuestions = [
     choices: ["Mount Carmel", "Mount of Olives", "Mount Tabor", "Mount Ebal"],
     answer: 1,
     reference: "Luke 19:29, 37; Matthew 24:3",
-    verseText: "He was come nigh... at the mount called the mount of Olives."
+    verseText: "When He came near... at the mountain called Olivet."
   },
   {
     id: 12080,
@@ -1090,7 +1090,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Matthew 21:1; 24:3; Luke 22:39; Acts 1:12",
-    verseText: "As he was wont, he went to the mount of Olives."
+    verseText: "He went to the Mount of Olives, as He was accustomed."
   },
 
   {
@@ -1118,7 +1118,7 @@ const geographyQuestions = [
     choices: ["Jerusalem", "Antioch", "Ephesus", "Corinth"],
     answer: 1,
     reference: "Acts 11:19-26; 13:1-3",
-    verseText: "In the church that was at Antioch."
+    verseText: "Now in the church that was at Antioch."
   },
   {
     id: 12083,
@@ -1134,7 +1134,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Acts 11:20-26; 13:1-3; 14:26-28",
-    verseText: "The disciples were called Christians first in Antioch."
+    verseText: "The disciples were first called Christians in Antioch."
   },
   {
     id: 12084,
@@ -1156,7 +1156,7 @@ const geographyQuestions = [
     choices: ["Troas", "Lystra", "Ephesus", "Philippi"],
     answer: 2,
     reference: "Acts 19:1-10, 26; 20:17-38",
-    verseText: "All they which dwelt in Asia heard the word."
+    verseText: "All who dwelt in Asia heard the word of the Lord."
   },
   {
     id: 12086,
@@ -1172,7 +1172,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Acts 19; 20:17-38",
-    verseText: "So mightily grew the word of God and prevailed."
+    verseText: "So the word of the Lord grew mightily and prevailed."
   },
   {
     id: 12087,
@@ -1183,7 +1183,7 @@ const geographyQuestions = [
     choices: ["Athens", "Philippi", "Thessalonica", "Berea"],
     answer: 1,
     reference: "Acts 16:12-40",
-    verseText: "We were in that city abiding certain days."
+    verseText: "We were staying in that city for some days."
   },
   {
     id: 12088,
@@ -1199,18 +1199,18 @@ const geographyQuestions = [
     ],
     answer: 0,
     reference: "Acts 16:9-12",
-    verseText: "Come over into Macedonia, and help us."
+    verseText: "Come over to Macedonia and help us."
   },
   {
     id: 12089,
     game: "Geography",
     category: "Acts and Early Church",
     difficulty: "Advanced",
-    question: "What island was identified as Melita after Paul's shipwreck?",
-    choices: ["Cyprus", "Crete", "Melita", "Patmos"],
+    question: "What island was identified as Malta after Paul's shipwreck?",
+    choices: ["Cyprus", "Crete", "Malta", "Patmos"],
     answer: 2,
     reference: "Acts 28:1",
-    verseText: "Then they knew that the island was called Melita."
+    verseText: "They learned that the island was called Malta."
   },
   {
     id: 12090,
@@ -1226,7 +1226,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Acts 1:8; 23:11; 28:16-31",
-    verseText: "So must thou bear witness also at Rome."
+    verseText: "You must also bear witness at Rome."
   },
 
   {
@@ -1238,7 +1238,7 @@ const geographyQuestions = [
     choices: ["Red Sea", "Sea of Galilee", "Dead Sea", "Mediterranean Sea"],
     answer: 2,
     reference: "Joshua 3:16; Genesis 14:3",
-    verseText: "The salt sea."
+    verseText: "The Salt Sea."
   },
   {
     id: 12092,
@@ -1254,7 +1254,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 14:3; 19:24-29; Deuteronomy 29:23",
-    verseText: "Brimstone, and salt, and burning."
+    verseText: "Brimstone, salt, and burning."
   },
   {
     id: 12093,
@@ -1270,7 +1270,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 16-17; Deuteronomy 8:2-3; Hosea 2:14; Matthew 4:1",
-    verseText: "To prove thee, to know what was in thine heart."
+    verseText: "To humble you and test you, to know what was in your heart."
   },
   {
     id: 12094,
@@ -1286,7 +1286,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 30:1-5; Ezra 1-3; Isaiah 40:1-11; Ezekiel 36-37",
-    verseText: "The LORD thy God will turn thy captivity."
+    verseText: "Then the LORD your God will bring you back from captivity."
   },
   {
     id: 12095,
@@ -1302,7 +1302,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 19; 1 Kings 18; Psalm 24:3; Isaiah 2:2-3; Matthew 5:1",
-    verseText: "Come up to me into the mount."
+    verseText: "Come up to Me on the mountain."
   },
   {
     id: 12096,
@@ -1318,7 +1318,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "Genesis 3:23-24; Exodus 25-40; 2 Kings 25; Psalm 137; Revelation 21-22",
-    verseText: "He drove out the man."
+    verseText: "So He drove out the man."
   },
   {
     id: 12097,
@@ -1334,7 +1334,7 @@ const geographyQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 5:7; Psalm 2:6; 48:1-2; Isaiah 2:2-3; Hebrews 12:22",
-    verseText: "Yet have I set my king upon my holy hill of Zion."
+    verseText: "Yet I have set My King on My holy hill of Zion."
   },
   {
     id: 12098,

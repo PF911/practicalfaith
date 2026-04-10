@@ -14,7 +14,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Genesis 15:6; Genesis 17:10-11; Romans 4:9-12",
-    verseText: "He believed in the LORD; and he counted it to him for righteousness."
+    verseText: "And he believed in the LORD, and He accounted it to him for righteousness."
   },
   {
     id: 7002,
@@ -22,7 +22,7 @@ const oldTestamentQuestions = [
     testament: "Old Testament",
     category: "Torah",
     difficulty: "Advanced",
-    question: "What is the theological force of God's self-identification as 'I AM THAT I AM' in Exodus 3?",
+    question: "What is the theological force of God's self-identification as 'I AM WHO I AM' in Exodus 3?",
     choices: [
       "It reveals God as one tribal deity among many",
       "It emphasizes God's self-existence and unbounded being",
@@ -31,7 +31,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Exodus 3:13-15",
-    verseText: "I AM THAT I AM."
+    verseText: "I AM WHO I AM."
   },
   {
     id: 7003,
@@ -48,7 +48,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Exodus 7:13; Exodus 8:15; Exodus 9:12; Exodus 10:1",
-    verseText: "Pharaoh hardened his heart... and the LORD hardened the heart of Pharaoh."
+    verseText: "Pharaoh's heart grew hard... and the LORD hardened the heart of Pharaoh."
   },
   {
     id: 7004,
@@ -82,7 +82,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Exodus 19:5-6",
-    verseText: "Ye shall be unto me a kingdom of priests, and an holy nation."
+    verseText: "You shall be to Me a kingdom of priests and a holy nation."
   },
   {
     id: 7006,
@@ -99,7 +99,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Exodus 32:1-8",
-    verseText: "These be thy gods, O Israel, which brought thee up out of the land of Egypt."
+    verseText: "This is your god, O Israel, that brought you out of the land of Egypt!"
   },
   {
     id: 7007,
@@ -116,7 +116,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 10:10-11; Leviticus 11:44-45",
-    verseText: "Put difference between holy and unholy, and between unclean and clean."
+    verseText: "That you may distinguish between holy and unholy, and between unclean and clean."
   },
   {
     id: 7008,
@@ -133,7 +133,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 16:16, 30, 34",
-    verseText: "To make an atonement for the children of Israel for all their sins once a year."
+    verseText: "To make atonement for the children of Israel, for all their sins, once a year."
   },
   {
     id: 7009,
@@ -150,7 +150,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Numbers 20:7-12",
-    verseText: "Ye believed me not, to sanctify me in the eyes of the children of Israel."
+    verseText: "Because you did not believe Me, to hallow Me in the eyes of the children of Israel."
   },
   {
     id: 7010,
@@ -167,7 +167,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 6:4-9",
-    verseText: "Hear, O Israel: The LORD our God is one LORD."
+    verseText: "Hear, O Israel: The LORD our God, the LORD is one!"
   },
   {
     id: 7011,
@@ -184,7 +184,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 5:15; Deuteronomy 8:11-20",
-    verseText: "Beware that thou forget not the LORD thy God."
+    verseText: "Beware that you do not forget the LORD your God."
   },
   {
     id: 7012,
@@ -201,7 +201,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Joshua 6:2-5, 20",
-    verseText: "The LORD said unto Joshua, See, I have given into thine hand Jericho."
+    verseText: "See! I have given Jericho into your hand."
   },
   {
     id: 7013,
@@ -218,7 +218,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Joshua 7:1, 11-12, 20-26",
-    verseText: "Israel hath sinned."
+    verseText: "Israel has sinned."
   },
   {
     id: 7014,
@@ -226,7 +226,7 @@ const oldTestamentQuestions = [
     testament: "Old Testament",
     category: "Conquest",
     difficulty: "Advanced",
-    question: "What is the point of Joshua's statement, 'choose you this day whom ye will serve'?",
+    question: "What is the point of Joshua's statement, 'Choose for yourselves this day whom you will serve'?",
     choices: [
       "Israel was free to combine Yahweh worship with local gods",
       "Covenant loyalty required decisive exclusive allegiance",
@@ -235,7 +235,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Joshua 24:14-24",
-    verseText: "Choose you this day whom ye will serve."
+    verseText: "Choose for yourselves this day whom you will serve."
   },
   {
     id: 7015,
@@ -246,13 +246,13 @@ const oldTestamentQuestions = [
     question: "What refrain interprets the moral chaos of the book of Judges?",
     choices: [
       "There was no prophet in the land",
-      "Every man did that which was right in his own eyes",
+      "Everyone did what was right in his own eyes",
       "The nations were stronger than God",
       "Israel had become permanently pagan"
     ],
     answer: 1,
     reference: "Judges 17:6; Judges 21:25",
-    verseText: "Every man did that which was right in his own eyes."
+    verseText: "Everyone did what was right in his own eyes."
   },
   {
     id: 7016,
@@ -269,7 +269,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Judges 6:36-40",
-    verseText: "Let not thine anger be hot against me, and I will speak but this once."
+    verseText: "Do not be angry with me, and I will speak but this once."
   },
   {
     id: 7017,
@@ -286,7 +286,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Judges 11:30-40; Deuteronomy 12:31",
-    verseText: "Jephthah uttered all his words before the LORD."
+    verseText: "Jephthah spoke all his words before the LORD."
   },
   {
     id: 7018,
@@ -303,7 +303,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ruth 3:9-13",
-    verseText: "Spread therefore thy skirt over thine handmaid; for thou art a near kinsman."
+    verseText: "Take your maidservant under your wing, for you are a close relative."
   },
   {
     id: 7019,
@@ -320,7 +320,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ruth 4:17-22",
-    verseText: "Obed... begat Jesse, and Jesse begat David."
+    verseText: "Obed begot Jesse, and Jesse begot David."
   },
   {
     id: 7020,
@@ -337,7 +337,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 2:1-10",
-    verseText: "The LORD maketh poor, and maketh rich: he bringeth low, and lifteth up."
+    verseText: "The LORD makes poor and makes rich; He brings low and lifts up."
   },
   {
     id: 7021,
@@ -354,7 +354,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 8:4-20; Deuteronomy 17:14-20",
-    verseText: "They have rejected me, that I should not reign over them."
+    verseText: "They have rejected Me, that I should not reign over them."
   },
   {
     id: 7022,
@@ -388,7 +388,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "1 Samuel 16:6-13",
-    verseText: "Man looketh on the outward appearance, but the LORD looketh on the heart."
+    verseText: "Man looks at the outward appearance, but the LORD looks at the heart."
   },
   {
     id: 7024,
@@ -405,7 +405,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 24:3-12",
-    verseText: "I will not put forth mine hand against my lord; for he is the LORD'S anointed."
+    verseText: "I will not stretch out my hand against my lord, for he is the LORD's anointed."
   },
   {
     id: 7025,
@@ -422,7 +422,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 7:12-16",
-    verseText: "Thine house and thy kingdom shall be established for ever before thee."
+    verseText: "Your house and your kingdom shall be established forever before you."
   },
   {
     id: 7026,
@@ -439,7 +439,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 12:1-14",
-    verseText: "Thou art the man."
+    verseText: "You are the man!"
   },
   {
     id: 7027,
@@ -456,7 +456,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "1 Kings 3:5-14",
-    verseText: "Give therefore thy servant an understanding heart to judge thy people."
+    verseText: "Give to Your servant an understanding heart to judge Your people."
   },
   {
     id: 7028,
@@ -473,7 +473,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 11:1-13",
-    verseText: "His wives turned away his heart after other gods."
+    verseText: "His wives turned his heart after other gods."
   },
   {
     id: 7029,
@@ -490,7 +490,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 18:20-39",
-    verseText: "The LORD, he is the God; the LORD, he is the God."
+    verseText: "The LORD, He is God! The LORD, He is God!"
   },
   {
     id: 7030,
@@ -507,7 +507,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 19:11-18",
-    verseText: "After the fire a still small voice."
+    verseText: "And after the fire a still small voice."
   },
   {
     id: 7031,
@@ -524,7 +524,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 12:26-33",
-    verseText: "Behold thy gods, O Israel."
+    verseText: "Behold your gods, O Israel!"
   },
   {
     id: 7032,
@@ -541,7 +541,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 19:14-19, 32-37",
-    verseText: "O LORD God of Israel... thou art the God, even thou alone."
+    verseText: "O LORD God of Israel... You are God, You alone."
   },
   {
     id: 7033,
@@ -558,7 +558,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 22:8-13; 23:1-3",
-    verseText: "Great is the wrath of the LORD that is kindled against us."
+    verseText: "Great is the wrath of the LORD that is aroused against us."
   },
   {
     id: 7034,
@@ -575,7 +575,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Chronicles 22; 2 Chronicles 7; 2 Chronicles 29",
-    verseText: "The house that is to be builded for the LORD must be exceeding magnifical."
+    verseText: "The house to be built for the LORD must be exceedingly magnificent."
   },
   {
     id: 7035,
@@ -592,7 +592,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Chronicles 13:7-10; 15:13-15",
-    verseText: "The LORD our God made a breach upon us, for that we sought him not after the due order."
+    verseText: "Because we did not consult Him about the proper order."
   },
   {
     id: 7036,
@@ -626,7 +626,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ezra 9:1-4, 10-14",
-    verseText: "The holy seed have mingled themselves with the people of those lands."
+    verseText: "The holy seed has mixed with the peoples of those lands."
   },
   {
     id: 7038,
@@ -643,7 +643,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Nehemiah 8:1-12",
-    verseText: "They read in the book in the law of God distinctly, and gave the sense."
+    verseText: "So they read distinctly from the book, in the Law of God; and they gave the sense."
   },
   {
     id: 7039,
@@ -677,7 +677,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Job 4:7-8; Job 8:3-6; Job 42:7",
-    verseText: "Ye have not spoken of me the thing that is right, as my servant Job hath."
+    verseText: "You have not spoken of Me what is right, as My servant Job has."
   },
   {
     id: 7041,
@@ -694,7 +694,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Job 38-42",
-    verseText: "Where wast thou when I laid the foundations of the earth?"
+    verseText: "Where were you when I laid the foundations of the earth?"
   },
   {
     id: 7042,
@@ -711,7 +711,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ecclesiastes 1:2-3; 12:13-14",
-    verseText: "Vanity of vanities... all is vanity."
+    verseText: "Vanity of vanities... All is vanity."
   },
   {
     id: 7043,
@@ -728,7 +728,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Psalm 2:6-12",
-    verseText: "Thou art my Son; this day have I begotten thee."
+    verseText: "You are My Son, today I have begotten You."
   },
   {
     id: 7044,
@@ -745,7 +745,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Psalm 22:1-31",
-    verseText: "My God, my God, why hast thou forsaken me?"
+    verseText: "My God, My God, why have You forsaken Me?"
   },
   {
     id: 7045,
@@ -762,7 +762,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Psalm 110:1-4",
-    verseText: "Sit thou at my right hand."
+    verseText: "Sit at My right hand."
   },
   {
     id: 7046,
@@ -779,7 +779,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 6:1-8",
-    verseText: "Woe is me! for I am undone."
+    verseText: "Woe is me, for I am undone!"
   },
   {
     id: 7047,
@@ -796,7 +796,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 7:10-17",
-    verseText: "Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."
+    verseText: "Behold, the virgin shall conceive and bear a Son, and shall call His name Immanuel."
   },
   {
     id: 7048,
@@ -813,7 +813,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 40:1-5",
-    verseText: "Comfort ye, comfort ye my people."
+    verseText: "Comfort, yes, comfort My people!"
   },
   {
     id: 7049,
@@ -830,7 +830,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 52:13-53:12",
-    verseText: "He was wounded for our transgressions."
+    verseText: "But He was wounded for our transgressions."
   },
   {
     id: 7050,
@@ -847,7 +847,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 7:1-15",
-    verseText: "Trust ye not in lying words, saying, The temple of the LORD."
+    verseText: "Do not trust in these lying words, saying, 'The temple of the LORD.'"
   },
   {
     id: 7051,
@@ -864,7 +864,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 31:31-34",
-    verseText: "I will put my law in their inward parts, and write it in their hearts."
+    verseText: "I will put My law in their minds, and write it on their hearts."
   },
   {
     id: 7052,
@@ -881,7 +881,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 10-11",
-    verseText: "The glory of the LORD departed from off the threshold of the house."
+    verseText: "Now the glory of the LORD departed from the threshold of the temple."
   },
   {
     id: 7053,
@@ -915,7 +915,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Daniel 2:31-45",
-    verseText: "The God of heaven shall set up a kingdom, which shall never be destroyed."
+    verseText: "The God of heaven will set up a kingdom which shall never be destroyed."
   },
   {
     id: 7055,
@@ -932,7 +932,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Daniel 9:2-19",
-    verseText: "We have sinned, and have committed iniquity."
+    verseText: "We have sinned and committed iniquity."
   },
   {
     id: 7056,
@@ -949,7 +949,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Jonah 3:10-4:11",
-    verseText: "I knew that thou art a gracious God, and merciful."
+    verseText: "I know that You are a gracious and merciful God."
   },
   {
     id: 7057,
@@ -983,7 +983,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Malachi 1:6-14; 2:1-9",
-    verseText: "Ye offer polluted bread upon mine altar."
+    verseText: "You offer defiled food on My altar."
   },
   {
     id: 7059,
@@ -1000,7 +1000,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Genesis 1:26-28",
-    verseText: "Let us make man in our image, after our likeness."
+    verseText: "Let Us make man in Our image, according to Our likeness."
   },
   {
     id: 7060,
@@ -1017,7 +1017,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "Genesis 3:1-5",
-    verseText: "Yea, hath God said...?"
+    verseText: "Has God indeed said...?"
   },
   {
     id: 7061,
@@ -1034,7 +1034,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "Genesis 3:15",
-    verseText: "He shall bruise thy head, and thou shalt bruise his heel."
+    verseText: "He shall bruise your head, and you shall bruise His heel."
   },
   {
     id: 7062,
@@ -1051,7 +1051,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Genesis 11:1-9",
-    verseText: "Let us make us a name."
+    verseText: "Let us make a name for ourselves."
   },
   {
     id: 7063,
@@ -1068,7 +1068,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "Genesis 22:1-14; Hebrews 11:17-19",
-    verseText: "God will provide himself a lamb."
+    verseText: "God will provide for Himself the lamb for a burnt offering."
   },
   {
     id: 7064,
@@ -1085,7 +1085,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Genesis 32:24-30",
-    verseText: "Thy name shall be called no more Jacob, but Israel."
+    verseText: "Your name shall no longer be called Jacob, but Israel."
   },
   {
     id: 7065,
@@ -1102,7 +1102,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Genesis 50:19-21",
-    verseText: "Ye thought evil against me; but God meant it unto good."
+    verseText: "You meant evil against me; but God meant it for good."
   },
   {
     id: 7066,
@@ -1119,7 +1119,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Exodus 16:4, 16-30; Deuteronomy 8:2-3",
-    verseText: "That I may prove them, whether they will walk in my law, or no."
+    verseText: "That I may test them, whether they will walk in My law or not."
   },
   {
     id: 7067,
@@ -1136,7 +1136,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Leviticus 10:1-3",
-    verseText: "I will be sanctified in them that come nigh me."
+    verseText: "By those who come near Me I must be regarded as holy."
   },
   {
     id: 7068,
@@ -1153,7 +1153,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Numbers 16:1-35",
-    verseText: "Ye take too much upon you."
+    verseText: "You take too much upon yourselves!"
   },
   {
     id: 7069,
@@ -1170,7 +1170,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "Numbers 21:4-9; 2 Kings 18:4",
-    verseText: "When he looked upon the serpent of brass, he lived."
+    verseText: "When he looked at the bronze serpent, he lived."
   },
   {
     id: 7070,
@@ -1187,7 +1187,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 27-30",
-    verseText: "I have set before thee life and death, blessing and cursing."
+    verseText: "I have set before you life and death, blessing and cursing."
   },
   {
     id: 7071,
@@ -1216,12 +1216,12 @@ const oldTestamentQuestions = [
     choices: [
       "His physical blindness mirrors long-standing spiritual blindness and compromised consecration",
       "He never had unusual strength",
-      "He was a faithful Nazarite in every respect",
+      "He was a faithful Nazirite in every respect",
       "He defeated the Philistines without divine empowerment"
     ],
     answer: 0,
     reference: "Judges 13-16",
-    verseText: "He wist not that the LORD was departed from him."
+    verseText: "He did not know that the LORD had departed from him."
   },
   {
     id: 7073,
@@ -1238,7 +1238,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Samuel 4:1-11",
-    verseText: "Let us fetch the ark... that, when it cometh among us, it may save us."
+    verseText: "Let us bring the ark... that when it comes among us it may save us."
   },
   {
     id: 7074,
@@ -1255,7 +1255,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 8:22-53",
-    verseText: "Behold, the heaven and heaven of heavens cannot contain thee."
+    verseText: "Behold, heaven and the heaven of heavens cannot contain You."
   },
   {
     id: 7075,
@@ -1272,7 +1272,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "1 Kings 22:5-28",
-    verseText: "What the LORD saith unto me, that will I speak."
+    verseText: "Whatever the LORD says to me, that I will speak."
   },
   {
     id: 7076,
@@ -1289,7 +1289,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "2 Kings 5:1-19",
-    verseText: "Now I know that there is no God in all the earth, but in Israel."
+    verseText: "Indeed, now I know that there is no God in all the earth, except in Israel."
   },
   {
     id: 7077,
@@ -1306,7 +1306,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "2 Chronicles 16:7-12",
-    verseText: "Yet in his disease he sought not to the LORD, but to the physicians."
+    verseText: "Yet in his disease he did not seek the LORD, but the physicians."
   },
   {
     id: 7078,
@@ -1340,7 +1340,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Proverbs 8:22-36",
-    verseText: "When he prepared the heavens, I was there."
+    verseText: "When He prepared the heavens, I was there."
   },
   {
     id: 7080,
@@ -1357,7 +1357,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Hosea 1-3",
-    verseText: "The land hath committed great whoredom, departing from the LORD."
+    verseText: "The land has committed great harlotry by departing from the LORD."
   },
   {
     id: 7081,
@@ -1374,7 +1374,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Joel 2:28-32",
-    verseText: "I will pour out my spirit upon all flesh."
+    verseText: "I will pour out My Spirit on all flesh."
   },
   {
     id: 7082,
@@ -1391,7 +1391,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Amos 5:21-24",
-    verseText: "Let judgment run down as waters, and righteousness as a mighty stream."
+    verseText: "But let justice run down like water, and righteousness like a mighty stream."
   },
   {
     id: 7083,
@@ -1408,7 +1408,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Micah 6:6-8",
-    verseText: "What doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+    verseText: "What does the LORD require of you but to do justly, to love mercy, and to walk humbly with your God?"
   },
   {
     id: 7084,
@@ -1425,7 +1425,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "Nahum 1:2-8; Nahum 3:1-7",
-    verseText: "The LORD is slow to anger, and great in power, and will not at all acquit the wicked."
+    verseText: "The LORD is slow to anger and great in power, and will not at all acquit the wicked."
   },
   {
     id: 7085,
@@ -1442,7 +1442,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 3:16-21; Ezekiel 33:1-9",
-    verseText: "I have made thee a watchman."
+    verseText: "Son of man, I have made you a watchman."
   },
   {
     id: 7086,
@@ -1459,7 +1459,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Daniel 3:16-18",
-    verseText: "But if not, be it known unto thee, O king, that we will not serve thy gods."
+    verseText: "But if not, let it be known to you, O king, that we do not serve your gods."
   },
   {
     id: 7087,
@@ -1476,7 +1476,7 @@ const oldTestamentQuestions = [
     ],
     answer: 0,
     reference: "Daniel 4:28-37",
-    verseText: "The most High ruleth in the kingdom of men."
+    verseText: "The Most High rules in the kingdom of men."
   },
   {
     id: 7088,
@@ -1510,7 +1510,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Esther 4:14; Esther 6:1-13",
-    verseText: "Who knoweth whether thou art come to the kingdom for such a time as this?"
+    verseText: "Yet who knows whether you have come to the kingdom for such a time as this?"
   },
   {
     id: 7090,
@@ -1527,7 +1527,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Esther 5-7",
-    verseText: "Hang him thereon."
+    verseText: "Hang him on it!"
   },
   {
     id: 7091,
@@ -1561,7 +1561,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Psalm 73:1-28",
-    verseText: "Until I went into the sanctuary of God; then understood I their end."
+    verseText: "Until I went into the sanctuary of God; then I understood their end."
   },
   {
     id: 7093,
@@ -1578,7 +1578,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Proverbs 31:10-31",
-    verseText: "A woman that feareth the LORD, she shall be praised."
+    verseText: "A woman who fears the LORD, she shall be praised."
   },
   {
     id: 7094,
@@ -1595,7 +1595,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 11:1-5; Jeremiah 23:5; Zechariah 3:8",
-    verseText: "There shall come forth a rod out of the stem of Jesse."
+    verseText: "There shall come forth a Rod from the stem of Jesse."
   },
   {
     id: 7095,
@@ -1629,7 +1629,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 36:25-27",
-    verseText: "A new heart also will I give you, and a new spirit will I put within you."
+    verseText: "I will give you a new heart and put a new spirit within you."
   },
   {
     id: 7097,
@@ -1641,12 +1641,12 @@ const oldTestamentQuestions = [
     choices: [
       "They were rebuilding the temple too quickly",
       "They prioritized personal security while neglecting the house of the LORD",
-      "They had become wealthy through obedience",
-      "They refused all agriculture"
+      "They prayed too much",
+      "They had become militaristic"
     ],
     answer: 1,
     reference: "Haggai 1:2-11",
-    verseText: "Is it time for you, O ye, to dwell in your cieled houses, and this house lie waste?"
+    verseText: "Is it time for you to dwell in your paneled houses, and this temple to lie in ruins?"
   },
   {
     id: 7098,
@@ -1663,7 +1663,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Zechariah 3:1-10",
-    verseText: "I have caused thine iniquity to pass from thee."
+    verseText: "I have removed your iniquity from you."
   },
   {
     id: 7099,
@@ -1671,7 +1671,7 @@ const oldTestamentQuestions = [
     testament: "Old Testament",
     category: "Minor Prophets",
     difficulty: "Advanced",
-    question: "Why is the promise 'not by might, nor by power, but by my spirit' so important in Zechariah?",
+    question: "Why is the promise 'Not by might nor by power, but by My Spirit' so important in Zechariah?",
     choices: [
       "It denies the value of all human effort",
       "It grounds post-exilic restoration in divine empowerment rather than human strength",
@@ -1680,7 +1680,7 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Zechariah 4:6-10",
-    verseText: "Not by might, nor by power, but by my spirit, saith the LORD of hosts."
+    verseText: "Not by might nor by power, but by My Spirit, says the LORD of hosts."
   },
   {
     id: 7100,
@@ -1697,6 +1697,6 @@ const oldTestamentQuestions = [
     ],
     answer: 1,
     reference: "Exodus 34:6-7; Deuteronomy 7:9; Psalm 103:8-18; Isaiah 1:16-20; Jeremiah 31:31-34",
-    verseText: "The LORD, The LORD God, merciful and gracious... keeping mercy for thousands."
+    verseText: "The LORD, the LORD God, merciful and gracious... maintaining mercy for thousands."
   }
 ];

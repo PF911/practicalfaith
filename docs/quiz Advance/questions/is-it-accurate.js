@@ -7,7 +7,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "1 Timothy 6:10",
-    verseText: "For the love of money is the root of all kinds of evil."
+    verseText: "For the love of money is a root of all kinds of evil."
   },
   {
     id: "as002",
@@ -27,7 +27,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "Matthew 7:1-5; John 7:24; 1 Corinthians 5:12-13",
-    verseText: "Judge not according to the appearance, but judge righteous judgment."
+    verseText: "Do not judge according to appearance, but judge with righteous judgment."
   },
   {
     id: "as004",
@@ -37,7 +37,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Matthew 5:5",
-    verseText: "Blessed are the meek: for they shall inherit the earth."
+    verseText: "Blessed are the meek, for they shall inherit the earth."
   },
   {
     id: "as005",
@@ -67,7 +67,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "2 Corinthians 5:6-8",
-    verseText: "Absent from the body, and to be present with the Lord."
+    verseText: "to be absent from the body and to be present with the Lord."
   },
   {
     id: "as008",
@@ -87,7 +87,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Matthew 4:4; Deuteronomy 8:3",
-    verseText: "Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God."
+    verseText: "Man shall not live by bread alone, but by every word that proceeds from the mouth of God."
   },
   {
     id: "as010",
@@ -97,7 +97,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 2,
     reference: "Proverbs 13:24",
-    verseText: "He that spareth his rod hateth his son."
+    verseText: "He who spares his rod hates his son."
   },
   {
     id: "as011",
@@ -117,7 +117,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "Matthew 7:7; 1 John 5:14",
-    verseText: "If we ask any thing according to his will, he heareth us."
+    verseText: "If we ask anything according to His will, He hears us."
   },
   {
     id: "as013",
@@ -127,7 +127,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Ecclesiastes 10:19",
-    verseText: "A feast is made for laughter... but money answereth all things."
+    verseText: "A feast is made for laughter... but money answers everything."
   },
   {
     id: "as014",
@@ -137,7 +137,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "Matthew 6:22-23",
-    verseText: "The light of the body is the eye."
+    verseText: "The lamp of the body is the eye."
   },
   {
     id: "as015",
@@ -147,7 +147,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "Romans 8:28",
-    verseText: "To them that love God, to them who are the called according to his purpose."
+    verseText: "To those who love God, to those who are the called according to His purpose."
   },
   {
     id: "as016",
@@ -157,7 +157,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "Matthew 17:20; 21:21",
-    verseText: "If ye have faith as a grain of mustard seed..."
+    verseText: "If you have faith as a mustard seed..."
   },
   {
     id: "as017",
@@ -167,7 +167,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Mark 2:27",
-    verseText: "The sabbath was made for man, and not man for the sabbath."
+    verseText: "The Sabbath was made for man, and not man for the Sabbath."
   },
   {
     id: "as018",
@@ -177,7 +177,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "1 Corinthians 10:13; 2 Corinthians 1:8-9",
-    verseText: "He will... make a way to escape."
+    verseText: "He will also make the way of escape."
   },
   {
     id: "as019",
@@ -207,7 +207,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "Proverbs 16:18",
-    verseText: "Pride goeth before destruction, and an haughty spirit before a fall."
+    verseText: "Pride goes before destruction, and a haughty spirit before a fall."
   },
   {
     id: "as022",
@@ -217,7 +217,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "John 8:7",
-    verseText: "He that is without sin among you, let him first cast a stone at her."
+    verseText: "He who is without sin among you, let him throw a stone at her first."
   },
   {
     id: "as023",
@@ -227,7 +227,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "John 1:12; Galatians 3:26; Ephesians 2:1-3",
-    verseText: "As many as received him, to them gave he power to become the sons of God."
+    verseText: "But as many as received Him, to them He gave the right to become children of God."
   },
   {
     id: "as024",
@@ -237,7 +237,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "1 Peter 4:8; Proverbs 10:12",
-    verseText: "Charity shall cover the multitude of sins."
+    verseText: "Love will cover a multitude of sins."
   },
   {
     id: "as025",
@@ -257,7 +257,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Romans 6:23",
-    verseText: "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."
+    verseText: "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
   },
   {
     id: "as027",
@@ -267,7 +267,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Matthew 7:12; Luke 6:31",
-    verseText: "All things whatsoever ye would that men should do to you, do ye even so to them."
+    verseText: "Whatever you want men to do to you, do also to them."
   },
   {
     id: "as028",
@@ -307,7 +307,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "1 Samuel 16:7",
-    verseText: "Man looketh on the outward appearance, but the LORD looketh on the heart."
+    verseText: "Man looks at the outward appearance, but the LORD looks at the heart."
   },
   {
     id: "as032",
@@ -317,7 +317,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "Matthew 7:7; Luke 18:1-8",
-    verseText: "Men ought always to pray, and not to faint."
+    verseText: "Men always ought to pray and not lose heart."
   },
   {
     id: "as033",
@@ -327,7 +327,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "2 Corinthians 3:6",
-    verseText: "The letter killeth, but the spirit giveth life."
+    verseText: "The letter kills, but the Spirit gives life."
   },
   {
     id: "as034",
@@ -337,7 +337,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Matthew 5:48",
-    verseText: "Be ye therefore perfect, even as your Father which is in heaven is perfect."
+    verseText: "Therefore you shall be perfect, just as your Father in heaven is perfect."
   },
   {
     id: "as035",
@@ -375,9 +375,9 @@ const isItAccurateQuestions = [
     difficulty: "Advanced",
     question: "True, False, Not Stated, or Misquoted: 'The love of money is the root of all kinds of evil.'",
     choices: ["True", "False", "Not Stated", "Misquoted"],
-    answer: 0,
+    answer: 3,
     reference: "1 Timothy 6:10",
-    verseText: "For the love of money is the root of all kinds of evil."
+    verseText: "For the love of money is a root of all kinds of evil."
   },
   {
     id: "as039",
@@ -397,7 +397,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "Psalm 46:10",
-    verseText: "Be still, and know that I am God: I will be exalted among the heathen."
+    verseText: "Be still, and know that I am God; I will be exalted among the nations."
   },
   {
     id: "as041",
@@ -417,7 +417,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "Proverbs 29:18",
-    verseText: "Where there is no vision, the people perish: but he that keepeth the law, happy is he."
+    verseText: "Where there is no revelation, the people cast off restraint; but happy is he who keeps the law."
   },
   {
     id: "as043",
@@ -437,7 +437,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Hebrews 12:6; Proverbs 3:12",
-    verseText: "Whom the Lord loveth he chasteneth."
+    verseText: "For whom the LORD loves He chastens."
   },
   {
     id: "as045",
@@ -457,7 +457,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "James 4:7",
-    verseText: "Submit yourselves therefore to God. Resist the devil, and he will flee from you."
+    verseText: "Therefore submit to God. Resist the devil and he will flee from you."
   },
   {
     id: "as047",
@@ -487,7 +487,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Proverbs 27:17",
-    verseText: "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."
+    verseText: "As iron sharpens iron, so a man sharpens the countenance of his friend."
   },
   {
     id: "as050",
@@ -507,7 +507,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Matthew 12:34; Luke 6:45",
-    verseText: "Out of the abundance of the heart the mouth speaketh."
+    verseText: "Out of the abundance of the heart the mouth speaks."
   },
   {
     id: "as052",
@@ -527,7 +527,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Ephesians 2:8-9",
-    verseText: "For by grace are ye saved through faith."
+    verseText: "For by grace you have been saved through faith."
   },
   {
     id: "as054",
@@ -537,7 +537,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 1,
     reference: "Habakkuk 1:13; Genesis 6:5; Job 34:21",
-    verseText: "Thou art of purer eyes than to behold evil... yet Scripture repeatedly says God sees wickedness."
+    verseText: "You are of purer eyes than to behold evil... yet Scripture repeatedly says God sees wickedness."
   },
   {
     id: "as055",
@@ -557,7 +557,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Matthew 6:21",
-    verseText: "For where your treasure is, there will your heart be also."
+    verseText: "For where your treasure is, there your heart will be also."
   },
   {
     id: "as057",
@@ -597,7 +597,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Luke 16:10",
-    verseText: "He that is faithful in that which is least is faithful also in much."
+    verseText: "He who is faithful in what is least is also faithful in much."
   },
   {
     id: "as061",
@@ -647,7 +647,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Proverbs 17:22",
-    verseText: "A merry heart doeth good like a medicine: but a broken spirit drieth the bones."
+    verseText: "A merry heart does good, like medicine, but a broken spirit dries the bones."
   },
   {
     id: "as066",
@@ -657,7 +657,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Proverbs 17:22",
-    verseText: "A merry heart doeth good like a medicine."
+    verseText: "A merry heart does good, like medicine."
   },
   {
     id: "as067",
@@ -727,7 +727,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Romans 4:15",
-    verseText: "Where no law is, there is no transgression."
+    verseText: "But where there is no law there is no transgression."
   },
   {
     id: "as074",
@@ -747,7 +747,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Galatians 5:9; 1 Corinthians 5:6",
-    verseText: "A little leaven leaveneth the whole lump."
+    verseText: "A little leaven leavens the whole lump."
   },
   {
     id: "as076",
@@ -757,7 +757,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "2 Corinthians 12:9",
-    verseText: "My grace is sufficient for thee."
+    verseText: "My grace is sufficient for you."
   },
   {
     id: "as077",
@@ -777,7 +777,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Philippians 1:21",
-    verseText: "For to me to live is Christ, and to die is gain."
+    verseText: "For to me, to live is Christ, and to die is gain."
   },
   {
     id: "as079",
@@ -807,7 +807,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Joel 2:32; Romans 10:13",
-    verseText: "Whosoever shall call upon the name of the Lord shall be saved."
+    verseText: "Whoever calls on the name of the LORD shall be saved."
   },
   {
     id: "as082",
@@ -827,7 +827,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "1 John 4:18",
-    verseText: "Perfect love casteth out fear."
+    verseText: "Perfect love casts out fear."
   },
   {
     id: "as084",
@@ -837,7 +837,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Psalm 4:4; Ephesians 4:26",
-    verseText: "Be ye angry, and sin not."
+    verseText: "Be angry, and do not sin."
   },
   {
     id: "as085",
@@ -847,7 +847,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Proverbs 15:1",
-    verseText: "A soft answer turneth away wrath."
+    verseText: "A soft answer turns away wrath."
   },
   {
     id: "as086",
@@ -855,9 +855,9 @@ const isItAccurateQuestions = [
     difficulty: "Advanced",
     question: "True, False, Not Stated, or Misquoted: 'The laborer is worthy of his hire.'",
     choices: ["True", "False", "Not Stated", "Misquoted"],
-    answer: 0,
+    answer: 3,
     reference: "Luke 10:7; 1 Timothy 5:18",
-    verseText: "The labourer is worthy of his hire."
+    verseText: "The laborer is worthy of his wages."
   },
   {
     id: "as087",
@@ -865,9 +865,9 @@ const isItAccurateQuestions = [
     difficulty: "Advanced",
     question: "True, False, Not Stated, or Misquoted: 'The law was our schoolmaster to bring us unto Christ.'",
     choices: ["True", "False", "Not Stated", "Misquoted"],
-    answer: 0,
+    answer: 3,
     reference: "Galatians 3:24",
-    verseText: "The law was our schoolmaster to bring us unto Christ."
+    verseText: "The law was our tutor to bring us to Christ."
   },
   {
     id: "as088",
@@ -877,7 +877,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "John 8:11",
-    verseText: "Neither do I condemn thee: go, and sin no more."
+    verseText: "Neither do I condemn you; go and sin no more."
   },
   {
     id: "as089",
@@ -897,7 +897,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 3,
     reference: "Leviticus 18:22",
-    verseText: "Thou shalt not lie with mankind, as with womankind."
+    verseText: "You shall not lie with a male as with a woman."
   },
   {
     id: "as091",
@@ -907,7 +907,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Deuteronomy 25:4; 1 Corinthians 9:9",
-    verseText: "Thou shalt not muzzle the ox when he treadeth out the corn."
+    verseText: "You shall not muzzle an ox while it treads out the grain."
   },
   {
     id: "as092",
@@ -917,7 +917,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Romans 3:23",
-    verseText: "For all have sinned, and come short of the glory of God."
+    verseText: "For all have sinned and fall short of the glory of God."
   },
   {
     id: "as093",
@@ -927,7 +927,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Proverbs 30:6",
-    verseText: "Add thou not unto his words."
+    verseText: "Do not add to His words."
   },
   {
     id: "as094",
@@ -935,9 +935,9 @@ const isItAccurateQuestions = [
     difficulty: "Advanced",
     question: "True, False, Not Stated, or Misquoted: 'The kingdom of God is not meat and drink; but righteousness, and peace, and joy in the Holy Ghost.'",
     choices: ["True", "False", "Not Stated", "Misquoted"],
-    answer: 0,
+    answer: 3,
     reference: "Romans 14:17",
-    verseText: "The kingdom of God is not meat and drink."
+    verseText: "For the kingdom of God is not eating and drinking, but righteousness and peace and joy in the Holy Spirit."
   },
   {
     id: "as095",
@@ -947,7 +947,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Luke 9:23",
-    verseText: "Take up his cross daily, and follow me."
+    verseText: "Take up his cross daily, and follow Me."
   },
   {
     id: "as096",
@@ -957,7 +957,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Mark 9:40; Luke 9:50",
-    verseText: "He that is not against us is on our part."
+    verseText: "For he who is not against us is on our side."
   },
   {
     id: "as097",
@@ -977,7 +977,7 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "1 Corinthians 13:1",
-    verseText: "I am become as sounding brass, or a tinkling cymbal."
+    verseText: "I have become sounding brass or a clanging cymbal."
   },
   {
     id: "as099",
@@ -997,6 +997,6 @@ const isItAccurateQuestions = [
     choices: ["True", "False", "Not Stated", "Misquoted"],
     answer: 0,
     reference: "Romans 10:17",
-    verseText: "So then faith cometh by hearing, and hearing by the word of God."
+    verseText: "So then faith comes by hearing, and hearing by the word of God."
   }
 ];

@@ -14,7 +14,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:10-17",
-    verseText: "Because it is given unto you to know the mysteries of the kingdom of heaven, but to them it is not given."
+    verseText: "Because it has been given to you to know the mysteries of the kingdom of heaven, but to them it has not been given."
   },
   {
     id: 10002,
@@ -31,7 +31,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:3-23",
-    verseText: "When any one heareth the word of the kingdom, and understandeth it not..."
+    verseText: "When anyone hears the word of the kingdom, and does not understand it..."
   },
   {
     id: 10003,
@@ -48,7 +48,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:20-21",
-    verseText: "Anon with joy receiveth it; yet hath he not root in himself."
+    verseText: "Immediately receives it with joy; yet he has no root in himself."
   },
   {
     id: 10004,
@@ -65,7 +65,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:22",
-    verseText: "The care of this world, and the deceitfulness of riches, choke the word."
+    verseText: "The cares of this world and the deceitfulness of riches choke the word."
   },
   {
     id: 10005,
@@ -82,7 +82,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:23",
-    verseText: "Which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty."
+    verseText: "Who indeed bears fruit and produces: some a hundredfold, some sixty, some thirty."
   },
   {
     id: 10006,
@@ -116,7 +116,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:31-32",
-    verseText: "Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs."
+    verseText: "Which indeed is the least of all the seeds; but when it is grown it is greater than the herbs."
   },
   {
     id: 10008,
@@ -133,7 +133,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:33",
-    verseText: "Till the whole was leavened."
+    verseText: "Till it was all leavened."
   },
   {
     id: 10009,
@@ -150,7 +150,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:44",
-    verseText: "For joy thereof goeth and selleth all that he hath, and buyeth that field."
+    verseText: "For joy over it he goes and sells all that he has and buys that field."
   },
   {
     id: 10010,
@@ -167,7 +167,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:45-46",
-    verseText: "When he had found one pearl of great price, went and sold all that he had, and bought it."
+    verseText: "When he had found one pearl of great price, went and sold all that he had and bought it."
   },
   {
     id: 10011,
@@ -184,7 +184,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:47-50",
-    verseText: "So shall it be at the end of the world."
+    verseText: "So it will be at the end of the age."
   },
   {
     id: 10012,
@@ -201,7 +201,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:51-52",
-    verseText: "Bringeth forth out of his treasure things new and old."
+    verseText: "Brings out of his treasure things new and old."
   },
   {
     id: 10013,
@@ -218,7 +218,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 20:1-16",
-    verseText: "Is thine eye evil, because I am good?"
+    verseText: "Is your eye evil because I am good?"
   },
   {
     id: 10014,
@@ -235,7 +235,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 21:28-32",
-    verseText: "Whether of them twain did the will of his father?"
+    verseText: "Which of the two did the will of his father?"
   },
   {
     id: 10015,
@@ -252,7 +252,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 21:33-46",
-    verseText: "They caught him, and cast him out of the vineyard, and slew him."
+    verseText: "They caught him, cast him out of the vineyard, and killed him."
   },
   {
     id: 10016,
@@ -260,7 +260,7 @@ const parablesQuestions = [
     testament: "New Testament",
     category: "Kingdom",
     difficulty: "Advanced",
-    question: "Why is the stone rejected by the builders relevant to the Wicked Husbandmen parable?",
+    question: "Why is the rejected stone relevant to the Wicked Husbandmen parable?",
     choices: [
       "It shows the rejected Son becomes central in God's redemptive plan",
       "It proves temple construction failed permanently",
@@ -269,7 +269,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 21:42",
-    verseText: "The stone which the builders rejected, the same is become the head of the corner."
+    verseText: "The stone which the builders rejected has become the chief cornerstone."
   },
   {
     id: 10017,
@@ -286,7 +286,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 22:1-14",
-    verseText: "Many are called, but few are chosen."
+    verseText: "For many are called, but few are chosen."
   },
   {
     id: 10018,
@@ -303,7 +303,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 22:11-13",
-    verseText: "Friend, how camest thou in hither not having a wedding garment?"
+    verseText: "Friend, how did you come in here without a wedding garment?"
   },
   {
     id: 10019,
@@ -320,7 +320,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 24:45-51",
-    verseText: "Blessed is that servant, whom his lord when he cometh shall find so doing."
+    verseText: "Blessed is that servant whom his master, when he comes, will find so doing."
   },
   {
     id: 10020,
@@ -337,7 +337,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 25:1-13",
-    verseText: "Watch therefore, for ye know neither the day nor the hour."
+    verseText: "Watch therefore, for you know neither the day nor the hour."
   },
   {
     id: 10021,
@@ -354,7 +354,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 25:14-30",
-    verseText: "Thou hast been faithful over a few things, I will make thee ruler over many things."
+    verseText: "You were faithful over a few things, I will make you ruler over many things."
   },
   {
     id: 10022,
@@ -371,7 +371,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 25:24-30",
-    verseText: "Thou wicked and slothful servant."
+    verseText: "You wicked and lazy servant!"
   },
   {
     id: 10023,
@@ -388,7 +388,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 10:25-37",
-    verseText: "Which now of these three, thinkest thou, was neighbour unto him that fell among the thieves?"
+    verseText: "So which of these three do you think was neighbor to him who fell among the thieves?"
   },
   {
     id: 10024,
@@ -405,7 +405,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 11:5-13",
-    verseText: "Though he will not rise and give him, because he is his friend, yet because of his importunity he will rise."
+    verseText: "Yet because of his persistence he will rise and give him as many as he needs."
   },
   {
     id: 10025,
@@ -422,7 +422,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 12:16-21",
-    verseText: "So is he that layeth up treasure for himself, and is not rich toward God."
+    verseText: "So is he who lays up treasure for himself, and is not rich toward God."
   },
   {
     id: 10026,
@@ -439,7 +439,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 12:35-40",
-    verseText: "Be ye therefore ready also: for the Son of man cometh at an hour when ye think not."
+    verseText: "Therefore you also be ready, for the Son of Man is coming at an hour you do not expect."
   },
   {
     id: 10027,
@@ -456,7 +456,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 13:6-9",
-    verseText: "If it bear fruit, well: and if not, then after that thou shalt cut it down."
+    verseText: "And if it bears fruit, well. But if not, after that you can cut it down."
   },
   {
     id: 10028,
@@ -473,7 +473,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 14:7-11",
-    verseText: "Whosoever exalteth himself shall be abased; and he that humbleth himself shall be exalted."
+    verseText: "For whoever exalts himself will be humbled, and he who humbles himself will be exalted."
   },
   {
     id: 10029,
@@ -490,7 +490,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 14:15-24",
-    verseText: "For I say unto you, That none of those men which were bidden shall taste of my supper."
+    verseText: "For I say to you that none of those men who were invited shall taste my supper."
   },
   {
     id: 10030,
@@ -507,7 +507,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 14:28-33",
-    verseText: "Whosoever he be of you that forsaketh not all that he hath, he cannot be my disciple."
+    verseText: "Whoever of you does not forsake all that he has cannot be My disciple."
   },
   {
     id: 10031,
@@ -524,7 +524,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 15:1-32",
-    verseText: "There is joy in the presence of the angels of God over one sinner that repenteth."
+    verseText: "There is joy in the presence of the angels of God over one sinner who repents."
   },
   {
     id: 10032,
@@ -541,7 +541,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:4-7",
-    verseText: "Until he find it."
+    verseText: "Until he finds it."
   },
   {
     id: 10033,
@@ -558,7 +558,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:8-10",
-    verseText: "Doth not light a candle, and sweep the house, and seek diligently till she find it?"
+    verseText: "Does not light a lamp, sweep the house, and search carefully until she finds it?"
   },
   {
     id: 10034,
@@ -575,7 +575,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:17-24",
-    verseText: "This my son was dead, and is alive again; he was lost, and is found."
+    verseText: "For this my son was dead and is alive again; he was lost and is found."
   },
   {
     id: 10035,
@@ -592,7 +592,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:25-32",
-    verseText: "Lo, these many years do I serve thee."
+    verseText: "Lo, these many years I have been serving you."
   },
   {
     id: 10036,
@@ -609,7 +609,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 16:1-13",
-    verseText: "The children of this world are in their generation wiser than the children of light."
+    verseText: "The sons of this world are more shrewd in their generation than the sons of light."
   },
   {
     id: 10037,
@@ -626,7 +626,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 16:10-12",
-    verseText: "He that is faithful in that which is least is faithful also in much."
+    verseText: "He who is faithful in what is least is also faithful in much."
   },
   {
     id: 10038,
@@ -643,7 +643,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 16:19-31",
-    verseText: "If they hear not Moses and the prophets, neither will they be persuaded, though one rose from the dead."
+    verseText: "If they do not hear Moses and the prophets, neither will they be persuaded though one rise from the dead."
   },
   {
     id: 10039,
@@ -660,7 +660,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 18:1-8",
-    verseText: "Men ought always to pray, and not to faint."
+    verseText: "Men always ought to pray and not lose heart."
   },
   {
     id: 10040,
@@ -694,7 +694,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 19:11-27",
-    verseText: "Occupy till I come."
+    verseText: "Do business till I come."
   },
   {
     id: 10042,
@@ -711,7 +711,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 19:27",
-    verseText: "Those mine enemies, which would not that I should reign over them, bring hither, and slay them before me."
+    verseText: "But bring here those enemies of mine, who did not want me to reign over them, and slay them before me."
   },
   {
     id: 10043,
@@ -728,7 +728,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 7:24-27; Luke 6:47-49",
-    verseText: "Whosoever heareth these sayings of mine, and doeth them..."
+    verseText: "Whoever hears these sayings of Mine, and does them..."
   },
   {
     id: 10044,
@@ -745,7 +745,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Mark 4:26-29",
-    verseText: "The seed should spring and grow up, he knoweth not how."
+    verseText: "The seed should sprout and grow, he himself does not know how."
   },
   {
     id: 10045,
@@ -762,7 +762,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Mark 4:21-25",
-    verseText: "For there is nothing hid, which shall not be manifested."
+    verseText: "For there is nothing hidden which will not be revealed."
   },
   {
     id: 10046,
@@ -796,7 +796,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 18:2-8",
-    verseText: "Shall not God avenge his own elect, which cry day and night unto him?"
+    verseText: "And shall God not avenge His own elect who cry out day and night to Him?"
   },
   {
     id: 10048,
@@ -813,7 +813,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 18:9-12",
-    verseText: "God, I thank thee, that I am not as other men are."
+    verseText: "God, I thank You that I am not like other men."
   },
   {
     id: 10049,
@@ -830,7 +830,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 18:13-14",
-    verseText: "God be merciful to me a sinner."
+    verseText: "God, be merciful to me a sinner!"
   },
   {
     id: 10050,
@@ -847,7 +847,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 20:10-15",
-    verseText: "Didst not thou agree with me for a penny?"
+    verseText: "Did you not agree with me for a denarius?"
   },
   {
     id: 10051,
@@ -864,7 +864,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 21:43",
-    verseText: "The kingdom of God shall be taken from you, and given to a nation bringing forth the fruits thereof."
+    verseText: "The kingdom of God will be taken from you and given to a nation bearing the fruits of it."
   },
   {
     id: 10052,
@@ -881,7 +881,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 14:18-20",
-    verseText: "And they all with one consent began to make excuse."
+    verseText: "But they all with one accord began to make excuses."
   },
   {
     id: 10053,
@@ -898,7 +898,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 14:26-33",
-    verseText: "So likewise, whosoever he be of you that forsaketh not all that he hath, he cannot be my disciple."
+    verseText: "Whoever of you does not forsake all that he has cannot be My disciple."
   },
   {
     id: 10054,
@@ -915,7 +915,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 16:9",
-    verseText: "That, when ye fail, they may receive you into everlasting habitations."
+    verseText: "That when you fail, they may receive you into an everlasting home."
   },
   {
     id: 10055,
@@ -943,13 +943,13 @@ const parablesQuestions = [
     question: "What key question concludes the persistent widow parable?",
     choices: [
       "Whether the judge was legal",
-      "Whether the Son of man shall find faith on the earth at His coming",
+      "Whether the Son of Man shall find faith on the earth at His coming",
       "Whether widows should lead Israel",
       "Whether justice exists at all"
     ],
     answer: 1,
     reference: "Luke 18:8",
-    verseText: "When the Son of man cometh, shall he find faith on the earth?"
+    verseText: "When the Son of Man comes, will He really find faith on the earth?"
   },
   {
     id: 10057,
@@ -1000,7 +1000,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:18-23; Mark 4:13-20",
-    verseText: "Hear ye therefore the parable of the sower."
+    verseText: "Therefore hear the parable of the sower."
   },
   {
     id: 10060,
@@ -1017,7 +1017,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:20",
-    verseText: "When he was yet a great way off, his father saw him, and had compassion, and ran."
+    verseText: "But when he was still a great way off, his father saw him and had compassion, and ran."
   },
   {
     id: 10061,
@@ -1034,7 +1034,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:28-30",
-    verseText: "He was angry, and would not go in."
+    verseText: "But he was angry and would not go in."
   },
   {
     id: 10062,
@@ -1051,7 +1051,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 24:48-49",
-    verseText: "And shall begin to smite his fellowservants, and to eat and drink with the drunken."
+    verseText: "And begins to beat his fellow servants, and to eat and drink with the drunkards."
   },
   {
     id: 10063,
@@ -1068,7 +1068,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 25:6-10",
-    verseText: "At midnight there was a cry made, Behold, the bridegroom cometh."
+    verseText: "And at midnight a cry was heard: 'Behold, the bridegroom is coming!'"
   },
   {
     id: 10064,
@@ -1085,7 +1085,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 25:8-12",
-    verseText: "I know you not."
+    verseText: "I do not know you."
   },
   {
     id: 10065,
@@ -1102,7 +1102,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 25:14-30",
-    verseText: "After a long time the lord of those servants cometh, and reckoneth with them."
+    verseText: "After a long time the lord of those servants came and settled accounts with them."
   },
   {
     id: 10066,
@@ -1119,7 +1119,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 10:34-35",
-    verseText: "Went to him, and bound up his wounds."
+    verseText: "And went to him and bandaged his wounds."
   },
   {
     id: 10067,
@@ -1136,7 +1136,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 11:8",
-    verseText: "Because of his importunity he will rise and give him as many as he needeth."
+    verseText: "Yet because of his persistence he will rise and give him as many as he needs."
   },
   {
     id: 10068,
@@ -1153,7 +1153,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 12:17-19",
-    verseText: "I will pull down my barns, and build greater."
+    verseText: "I will pull down my barns and build greater."
   },
   {
     id: 10069,
@@ -1170,7 +1170,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 16:19-25",
-    verseText: "There was a certain rich man, which was clothed in purple and fine linen, and fared sumptuously every day."
+    verseText: "There was a certain rich man who was clothed in purple and fine linen and fared sumptuously every day."
   },
   {
     id: 10070,
@@ -1187,7 +1187,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:36",
-    verseText: "Declare unto us the parable of the tares of the field."
+    verseText: "Explain to us the parable of the tares of the field."
   },
   {
     id: 10071,
@@ -1204,7 +1204,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:18-23",
-    verseText: "He that received seed into the good ground is he that heareth the word, and understandeth it."
+    verseText: "But he who received seed on the good ground is he who hears the word and understands it."
   },
   {
     id: 10072,
@@ -1221,7 +1221,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 22:5-7",
-    verseText: "They made light of it."
+    verseText: "But they made light of it."
   },
   {
     id: 10073,
@@ -1238,7 +1238,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 21:23-32",
-    verseText: "The publicans and the harlots go into the kingdom of God before you."
+    verseText: "Tax collectors and harlots enter the kingdom of God before you."
   },
   {
     id: 10074,
@@ -1255,7 +1255,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:31-32",
-    verseText: "Son, thou art ever with me, and all that I have is thine."
+    verseText: "Son, you are always with me, and all that I have is yours."
   },
   {
     id: 10075,
@@ -1263,7 +1263,7 @@ const parablesQuestions = [
     testament: "New Testament",
     category: "Mercy",
     difficulty: "Advanced",
-    question: "Why does Jesus end the Good Samaritan with 'Go, and do thou likewise'?",
+    question: "Why does Jesus end the Good Samaritan with 'Go and do likewise'?",
     choices: [
       "To turn doctrine into neighbor-love shaped by mercy",
       "To exalt Samaria politically",
@@ -1272,7 +1272,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 10:37",
-    verseText: "Go, and do thou likewise."
+    verseText: "Go and do likewise."
   },
   {
     id: 10076,
@@ -1289,7 +1289,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 11:5-13; Luke 18:1-8",
-    verseText: "How much more shall your heavenly Father give the Holy Spirit to them that ask him?"
+    verseText: "How much more will your heavenly Father give the Holy Spirit to those who ask Him!"
   },
   {
     id: 10077,
@@ -1306,7 +1306,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 25:14-30; Luke 19:11-27",
-    verseText: "Unto one he gave five talents... / He called his ten servants, and delivered them ten pounds."
+    verseText: "To one he gave five talents... / He called ten of his servants, delivered to them ten minas."
   },
   {
     id: 10078,
@@ -1323,7 +1323,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:42, 50; Matthew 22:13; Matthew 25:30",
-    verseText: "There shall be wailing and gnashing of teeth."
+    verseText: "There will be wailing and gnashing of teeth."
   },
   {
     id: 10079,
@@ -1340,7 +1340,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:11",
-    verseText: "It is given unto you to know the mysteries of the kingdom of heaven."
+    verseText: "It has been given to you to know the mysteries of the kingdom of heaven."
   },
   {
     id: 10080,
@@ -1357,7 +1357,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 13:1-9",
-    verseText: "Except ye repent, ye shall all likewise perish."
+    verseText: "Unless you repent you will all likewise perish."
   },
   {
     id: 10081,
@@ -1374,7 +1374,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 14:8-11",
-    verseText: "Go and sit down in the lowest room."
+    verseText: "Go and sit down in the lowest place."
   },
   {
     id: 10082,
@@ -1382,7 +1382,7 @@ const parablesQuestions = [
     testament: "New Testament",
     category: "Grace",
     difficulty: "Advanced",
-    question: "What is the father's statement, 'it was meet that we should make merry,' teaching in Luke 15?",
+    question: "What is the father's statement, 'It was right that we should make merry,' teaching in Luke 15?",
     choices: [
       "Grace toward the repentant is not optional but fitting to the father's heart",
       "Celebration excuses sin",
@@ -1391,7 +1391,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 15:32",
-    verseText: "It was meet that we should make merry, and be glad."
+    verseText: "It was right that we should make merry and be glad."
   },
   {
     id: 10083,
@@ -1408,7 +1408,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 16:13",
-    verseText: "Ye cannot serve God and mammon."
+    verseText: "You cannot serve God and mammon."
   },
   {
     id: 10084,
@@ -1442,7 +1442,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:32; Ezekiel 17:23",
-    verseText: "The birds of the air come and lodge in the branches thereof."
+    verseText: "The birds of the air come and nest in its branches."
   },
   {
     id: 10086,
@@ -1450,7 +1450,7 @@ const parablesQuestions = [
     testament: "New Testament",
     category: "Revelation",
     difficulty: "Advanced",
-    question: "What does Jesus mean by, 'Who hath ears to hear, let him hear'?",
+    question: "What does Jesus mean by, 'He who has ears to hear, let him hear'?",
     choices: [
       "Mere physical hearing is enough",
       "Kingdom teaching demands responsive spiritual perception",
@@ -1459,7 +1459,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:9; Mark 4:9",
-    verseText: "Who hath ears to hear, let him hear."
+    verseText: "He who has ears to hear, let him hear!"
   },
   {
     id: 10087,
@@ -1476,7 +1476,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 10:29-37",
-    verseText: "And who is my neighbour?"
+    verseText: "And who is my neighbor?"
   },
   {
     id: 10088,
@@ -1493,7 +1493,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 24:48; Matthew 25:5, 19",
-    verseText: "While the bridegroom tarried..."
+    verseText: "But while the bridegroom was delayed..."
   },
   {
     id: 10089,
@@ -1510,7 +1510,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:44-46",
-    verseText: "Sold all that he had, and bought it."
+    verseText: "Sold all that he had and bought it."
   },
   {
     id: 10090,
@@ -1527,7 +1527,7 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Luke 15:6, 9, 23-24, 32",
-    verseText: "Rejoice with me; for I have found..."
+    verseText: "Rejoice with me, for I have found..."
   },
   {
     id: 10091,
@@ -1544,7 +1544,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 18:13",
-    verseText: "Would not lift up so much as his eyes unto heaven, but smote upon his breast."
+    verseText: "Would not so much as raise his eyes to heaven, but beat his breast."
   },
   {
     id: 10092,
@@ -1561,7 +1561,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 7:24-27",
-    verseText: "And great was the fall of it."
+    verseText: "And great was its fall."
   },
   {
     id: 10093,
@@ -1578,7 +1578,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 6:46-49",
-    verseText: "Why call ye me, Lord, Lord, and do not the things which I say?"
+    verseText: "But why do you call Me 'Lord, Lord,' and not do the things which I say?"
   },
   {
     id: 10094,
@@ -1595,7 +1595,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13:23; Luke 8:15",
-    verseText: "Bring forth fruit with patience."
+    verseText: "Bear fruit with patience."
   },
   {
     id: 10095,
@@ -1612,7 +1612,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 21:45-46; Luke 15:1-2",
-    verseText: "When the chief priests and Pharisees had heard his parables, they perceived that he spake of them."
+    verseText: "When the chief priests and Pharisees heard His parables, they perceived that He was speaking of them."
   },
   {
     id: 10096,
@@ -1629,7 +1629,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 13; Mark 4",
-    verseText: "The kingdom of heaven is like unto..."
+    verseText: "The kingdom of heaven is like..."
   },
   {
     id: 10097,
@@ -1646,7 +1646,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 11:5-13; Luke 18:1-8",
-    verseText: "Men ought always to pray, and not to faint."
+    verseText: "Men always ought to pray and not lose heart."
   },
   {
     id: 10098,
@@ -1663,7 +1663,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Matthew 20:1-16; Luke 15:25-32",
-    verseText: "Is it not lawful for me to do what I will with mine own?"
+    verseText: "Is it not lawful for me to do what I wish with my own things?"
   },
   {
     id: 10099,
@@ -1680,7 +1680,7 @@ const parablesQuestions = [
     ],
     answer: 0,
     reference: "Luke 14:11; Luke 16:25; Luke 18:14; Matthew 20:16",
-    verseText: "Many that are first shall be last; and the last shall be first."
+    verseText: "So the last will be first, and the first last."
   },
   {
     id: 10100,
@@ -1697,6 +1697,6 @@ const parablesQuestions = [
     ],
     answer: 1,
     reference: "Matthew 13:9, 23; Luke 8:18; Luke 15:7; Luke 18:14; Matthew 25:13, 21",
-    verseText: "Who hath ears to hear, let him hear."
+    verseText: "He who has ears to hear, let him hear!"
   }
 ];

@@ -14,7 +14,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 31:31-34",
-    verseText: "I will put my law in their inward parts, and write it in their hearts."
+    verseText: "I will put My law in their minds, and write it on their hearts."
   },
   {
     id: 13002,
@@ -31,7 +31,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 6:1-13",
-    verseText: "Woe is me! for I am undone; because I am a man of unclean lips."
+    verseText: "Woe is me, for I am undone! Because I am a man of unclean lips."
   },
   {
     id: 13003,
@@ -48,7 +48,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Isaiah 7:10-17",
-    verseText: "Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."
+    verseText: "Behold, the virgin shall conceive and bear a Son, and shall call His name Immanuel."
   },
   {
     id: 13004,
@@ -65,7 +65,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 9:6-7",
-    verseText: "His name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace."
+    verseText: "And His name will be called Wonderful, Counselor, Mighty God, Everlasting Father, Prince of Peace."
   },
   {
     id: 13005,
@@ -82,7 +82,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 11:1-5",
-    verseText: "There shall come forth a rod out of the stem of Jesse, and a Branch shall grow out of his roots."
+    verseText: "There shall come forth a Rod from the stem of Jesse, and a Branch shall grow out of his roots."
   },
   {
     id: 13006,
@@ -99,7 +99,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 40:1-5",
-    verseText: "Comfort ye, comfort ye my people, saith your God."
+    verseText: "Comfort, yes, comfort My people!" says your God."
   },
   {
     id: 13007,
@@ -116,7 +116,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 52:13-53:12",
-    verseText: "He was wounded for our transgressions, he was bruised for our iniquities."
+    verseText: "But He was wounded for our transgressions, He was bruised for our iniquities."
   },
   {
     id: 13008,
@@ -133,7 +133,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 7:1-15",
-    verseText: "Trust ye not in lying words, saying, The temple of the LORD."
+    verseText: "Do not trust in these lying words, saying, 'The temple of the LORD.'"
   },
   {
     id: 13009,
@@ -167,7 +167,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 6:13-14; Jeremiah 23:16-22",
-    verseText: "They have healed also the hurt of the daughter of my people slightly, saying, Peace, peace; when there is no peace."
+    verseText: "They have also healed the hurt of My people slightly, saying, 'Peace, peace!' when there is no peace."
   },
   {
     id: 13011,
@@ -184,7 +184,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Ezekiel 2:8-3:3",
-    verseText: "Son of man, eat that thou findest; eat this roll, and go speak unto the house of Israel."
+    verseText: "Son of man, eat what you find; eat this scroll, and go, speak to the house of Israel."
   },
   {
     id: 13012,
@@ -201,7 +201,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 3:16-21; Ezekiel 33:1-9",
-    verseText: "I have made thee a watchman unto the house of Israel."
+    verseText: "Son of man, I have made you a watchman for the house of Israel."
   },
   {
     id: 13013,
@@ -218,7 +218,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 10-11",
-    verseText: "Then the glory of the LORD departed from off the threshold of the house."
+    verseText: "Now the glory of the LORD departed from the threshold of the temple."
   },
   {
     id: 13014,
@@ -252,7 +252,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 36:25-27",
-    verseText: "A new heart also will I give you, and a new spirit will I put within you."
+    verseText: "I will give you a new heart and put a new spirit within you."
   },
   {
     id: 13016,
@@ -269,7 +269,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 2:31-45",
-    verseText: "The God of heaven shall set up a kingdom, which shall never be destroyed."
+    verseText: "The God of heaven will set up a kingdom which shall never be destroyed."
   },
   {
     id: 13017,
@@ -286,7 +286,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 9:2-19",
-    verseText: "We have sinned, and have committed iniquity."
+    verseText: "We have sinned and committed iniquity."
   },
   {
     id: 13018,
@@ -303,7 +303,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 7:13-14",
-    verseText: "There was given him dominion, and glory, and a kingdom."
+    verseText: "Then to Him was given dominion and glory and a kingdom."
   },
   {
     id: 13019,
@@ -320,7 +320,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Hosea 1-3",
-    verseText: "The land hath committed great whoredom, departing from the LORD."
+    verseText: "The land has committed great harlotry by departing from the LORD."
   },
   {
     id: 13020,
@@ -337,7 +337,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Joel 2:28-32",
-    verseText: "I will pour out my spirit upon all flesh."
+    verseText: "I will pour out My Spirit on all flesh."
   },
   {
     id: 13021,
@@ -354,7 +354,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Amos 5:21-24",
-    verseText: "Let judgment run down as waters, and righteousness as a mighty stream."
+    verseText: "But let justice run down like water, and righteousness like a mighty stream."
   },
   {
     id: 13022,
@@ -371,7 +371,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Obadiah 10-14",
-    verseText: "For thy violence against thy brother Jacob shame shall cover thee."
+    verseText: "For your violence against your brother Jacob, shame shall cover you."
   },
   {
     id: 13023,
@@ -388,7 +388,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jonah 4:1-4",
-    verseText: "I knew that thou art a gracious God, and merciful."
+    verseText: "I know that You are a gracious and merciful God."
   },
   {
     id: 13024,
@@ -405,7 +405,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Micah 6:6-8",
-    verseText: "What doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+    verseText: "What does the LORD require of you but to do justly, to love mercy, and to walk humbly with your God?"
   },
   {
     id: 13025,
@@ -422,7 +422,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Micah 5:2",
-    verseText: "Out of thee shall he come forth unto me that is to be ruler in Israel."
+    verseText: "Out of you shall come forth to Me the One to be Ruler in Israel."
   },
   {
     id: 13026,
@@ -439,7 +439,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Nahum 1:2-8; Nahum 3:1-7",
-    verseText: "The LORD is slow to anger, and great in power, and will not at all acquit the wicked."
+    verseText: "The LORD is slow to anger and great in power, and will not at all acquit the wicked."
   },
   {
     id: 13027,
@@ -490,7 +490,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Haggai 1:2-11",
-    verseText: "Is it time for you, O ye, to dwell in your cieled houses, and this house lie waste?"
+    verseText: "Is it time for you yourselves to dwell in your paneled houses, and this temple to lie in ruins?"
   },
   {
     id: 13030,
@@ -507,7 +507,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Haggai 1:13; Haggai 2:3-5",
-    verseText: "I am with you, saith the LORD."
+    verseText: "I am with you, says the LORD."
   },
   {
     id: 13031,
@@ -524,7 +524,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Zechariah 3:1-10",
-    verseText: "I have caused thine iniquity to pass from thee."
+    verseText: "I have removed your iniquity from you."
   },
   {
     id: 13032,
@@ -532,7 +532,7 @@ const prophecyQuestions = [
     testament: "Old Testament",
     category: "Zechariah",
     difficulty: "Advanced",
-    question: "What does 'Not by might, nor by power, but by my spirit' emphasize in Zechariah 4?",
+    question: "What does 'Not by might nor by power, but by My Spirit' emphasize in Zechariah 4?",
     choices: [
       "Human effort is worthless in every sense",
       "God's restoration advances by divine empowerment rather than mere human strength",
@@ -541,7 +541,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Zechariah 4:6-10",
-    verseText: "Not by might, nor by power, but by my spirit, saith the LORD of hosts."
+    verseText: "Not by might nor by power, but by My Spirit, says the LORD of hosts."
   },
   {
     id: 13033,
@@ -549,7 +549,7 @@ const prophecyQuestions = [
     testament: "Old Testament",
     category: "Zechariah",
     difficulty: "Advanced",
-    question: "Why is the king entering Jerusalem 'lowly, and riding upon an ass' significant?",
+    question: "Why is the king entering Jerusalem 'lowly, and riding on a donkey' significant?",
     choices: [
       "It shows weakness without authority",
       "It portrays a humble yet righteous king unlike worldly conquerors",
@@ -558,7 +558,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Zechariah 9:9",
-    verseText: "Thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass."
+    verseText: "Behold, your King is coming to you; He is just and having salvation, lowly and riding on a donkey."
   },
   {
     id: 13034,
@@ -566,7 +566,7 @@ const prophecyQuestions = [
     testament: "Old Testament",
     category: "Zechariah",
     difficulty: "Advanced",
-    question: "What is the force of Zechariah's statement, 'they shall look upon me whom they have pierced'?",
+    question: "What is the force of Zechariah's statement, 'they will look on Me whom they pierced'?",
     choices: [
       "It merges divine identity, rejection, and mourning in a striking prophetic image",
       "It concerns military armor only",
@@ -575,7 +575,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Zechariah 12:10",
-    verseText: "They shall look upon me whom they have pierced, and they shall mourn for him."
+    verseText: "They will look on Me whom they pierced. Yes, they will mourn for Him."
   },
   {
     id: 13035,
@@ -592,7 +592,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Malachi 1:6-14; Malachi 2:1-9",
-    verseText: "Ye offer polluted bread upon mine altar."
+    verseText: "You offer defiled food on My altar."
   },
   {
     id: 13036,
@@ -609,7 +609,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Malachi 3:1-3",
-    verseText: "Behold, I will send my messenger, and he shall prepare the way before me."
+    verseText: "Behold, I send My messenger, and he will prepare the way before Me."
   },
   {
     id: 13037,
@@ -643,7 +643,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 1:2-20; Micah 6:1-8; Hosea 4:1-3",
-    verseText: "The LORD hath a controversy with his people."
+    verseText: "The LORD has a complaint against His people."
   },
   {
     id: 13039,
@@ -660,7 +660,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 44:9-20; Jeremiah 10:1-16; Hosea 8:4-6",
-    verseText: "They have made them idols, that they may be cut off."
+    verseText: "From their silver and gold they made idols for themselves — that they might be cut off."
   },
   {
     id: 13040,
@@ -694,7 +694,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 10:20-22; Micah 2:12; Zephaniah 3:12-13",
-    verseText: "The remnant shall return."
+    verseText: "The remnant will return."
   },
   {
     id: 13042,
@@ -711,7 +711,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 18:18-22; Jeremiah 23:16-22; 1 Kings 22:13-28",
-    verseText: "What the LORD saith unto me, that will I speak."
+    verseText: "Whatever the LORD says to me, that I will speak."
   },
   {
     id: 13043,
@@ -728,7 +728,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 1-2; Jeremiah 30-33; Hosea 11; Amos 9",
-    verseText: "I will not execute the fierceness of mine anger... for I am God, and not man."
+    verseText: "I will not execute the fierceness of My anger... For I am God, and not man."
   },
   {
     id: 13044,
@@ -745,7 +745,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "2 Samuel 7:12-16; Isaiah 9:7; Jeremiah 23:5",
-    verseText: "Thine house and thy kingdom shall be established for ever before thee."
+    verseText: "Your house and your kingdom shall be established forever before you."
   },
   {
     id: 13045,
@@ -762,7 +762,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 23:5-6",
-    verseText: "I will raise unto David a righteous Branch."
+    verseText: "I will raise to David a Branch of righteousness."
   },
   {
     id: 13046,
@@ -779,7 +779,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Psalm 110:1-4",
-    verseText: "Sit thou at my right hand."
+    verseText: "Sit at My right hand."
   },
   {
     id: 13047,
@@ -796,7 +796,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Psalm 22:1-31",
-    verseText: "My God, my God, why hast thou forsaken me?"
+    verseText: "My God, My God, why have You forsaken Me?"
   },
   {
     id: 13048,
@@ -813,7 +813,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 49:5-6; Isaiah 52:13-53:12",
-    verseText: "By his knowledge shall my righteous servant justify many; for he shall bear their iniquities."
+    verseText: "By His knowledge My righteous Servant shall justify many, for He shall bear their iniquities."
   },
   {
     id: 13049,
@@ -830,7 +830,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 13-23; Jeremiah 46-51; Amos 1-2; Obadiah",
-    verseText: "The LORD hath a controversy with the nations."
+    verseText: "The LORD has a controversy with the nations."
   },
   {
     id: 13050,
@@ -847,7 +847,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 2:2-4; Isaiah 49:6; Zechariah 8:20-23",
-    verseText: "All nations shall flow unto it."
+    verseText: "And all nations shall flow to it."
   },
   {
     id: 13051,
@@ -864,7 +864,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Isaiah 44:9-20",
-    verseText: "He feedeth on ashes: a deceived heart hath turned him aside."
+    verseText: "He feeds on ashes; a deceived heart has turned him aside."
   },
   {
     id: 13052,
@@ -881,7 +881,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Jeremiah 9:1; Jeremiah 13:17",
-    verseText: "Mine eye shall weep sore, and run down with tears."
+    verseText: "My eyes will weep bitterly and run down with tears."
   },
   {
     id: 13053,
@@ -898,7 +898,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 19:1-11",
-    verseText: "Even so will I break this people and this city, as one breaketh a potter's vessel."
+    verseText: "Even so I will break this people and this city, as one breaks a potter's vessel."
   },
   {
     id: 13054,
@@ -915,7 +915,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Ezekiel 2:1; Ezekiel 3:1; Ezekiel 37:3",
-    verseText: "Son of man, stand upon thy feet."
+    verseText: "Son of man, stand on your feet."
   },
   {
     id: 13055,
@@ -932,7 +932,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 7:8, 20-27; Daniel 8:9-14, 23-25",
-    verseText: "He shall speak great words against the most High."
+    verseText: "He shall speak pompous words against the Most High."
   },
   {
     id: 13056,
@@ -949,7 +949,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 7:1-8, 17",
-    verseText: "These great beasts, which are four, are four kings."
+    verseText: "Those great beasts, which are four, are four kings."
   },
   {
     id: 13057,
@@ -957,7 +957,7 @@ const prophecyQuestions = [
     testament: "Old Testament",
     category: "Minor Prophets",
     difficulty: "Advanced",
-    question: "What is the prophetic significance of the repeated call, 'Return unto me'?",
+    question: "What is the prophetic significance of the repeated call, 'Return to Me'?",
     choices: [
       "It offers sentimental religion without moral change",
       "It summons covenant repentance as the proper response to divine warning and mercy",
@@ -966,7 +966,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Zechariah 1:3; Malachi 3:7; Joel 2:12-13",
-    verseText: "Turn ye even to me with all your heart."
+    verseText: "Turn to Me with all your heart."
   },
   {
     id: 13058,
@@ -983,7 +983,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 20:2-4; Jeremiah 13:1-11; Ezekiel 4-5; Hosea 1",
-    verseText: "This evil people... shall even be as this girdle, which is good for nothing."
+    verseText: "This evil people... shall be just like this sash which is profitable for nothing."
   },
   {
     id: 13059,
@@ -1000,7 +1000,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 28-30; Jeremiah 11; Daniel 9; Hosea 8",
-    verseText: "They have transgressed my covenant."
+    verseText: "They have transgressed My covenant."
   },
   {
     id: 13060,
@@ -1017,7 +1017,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Joel 2:12-13; Isaiah 1:16-20; Hosea 6:1-6",
-    verseText: "Rend your heart, and not your garments."
+    verseText: "So rend your heart, and not your garments."
   },
   {
     id: 13061,
@@ -1034,7 +1034,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 44:28-45:4",
-    verseText: "Thus saith the LORD to his anointed, to Cyrus."
+    verseText: "Thus says the LORD to His anointed, to Cyrus."
   },
   {
     id: 13062,
@@ -1068,7 +1068,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 18:1-10",
-    verseText: "As the clay is in the potter's hand, so are ye in mine hand."
+    verseText: "Look, as the clay is in the potter's hand, so are you in My hand."
   },
   {
     id: 13064,
@@ -1076,7 +1076,7 @@ const prophecyQuestions = [
     testament: "Old Testament",
     category: "Ezekiel",
     difficulty: "Advanced",
-    question: "Why is the promise that God acts 'for my holy name's sake' so important in Ezekiel?",
+    question: "Why is the promise that God acts 'for My holy name's sake' so important in Ezekiel?",
     choices: [
       "It makes Israel's response irrelevant",
       "It roots restoration in God's own reputation and covenant faithfulness, not Israel's merit",
@@ -1085,7 +1085,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 36:22-23",
-    verseText: "I do not this for your sakes, O house of Israel, but for mine holy name's sake."
+    verseText: "I do not do this for your sake, O house of Israel, but for My holy name's sake."
   },
   {
     id: 13065,
@@ -1102,7 +1102,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 12:1-3",
-    verseText: "Many of them that sleep in the dust of the earth shall awake."
+    verseText: "And many of those who sleep in the dust of the earth shall awake."
   },
   {
     id: 13066,
@@ -1110,7 +1110,7 @@ const prophecyQuestions = [
     testament: "Old Testament",
     category: "Hosea",
     difficulty: "Advanced",
-    question: "What is the force of Hosea 6:6, 'I desired mercy, and not sacrifice'?",
+    question: "What is the force of Hosea 6:6, 'I desire mercy and not sacrifice'?",
     choices: [
       "Sacrifice was always unlawful",
       "Covenant loyalty and true knowledge of God outweigh empty ritual performance",
@@ -1119,7 +1119,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Hosea 6:6",
-    verseText: "I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings."
+    verseText: "For I desire mercy and not sacrifice, and the knowledge of God more than burnt offerings."
   },
   {
     id: 13067,
@@ -1136,7 +1136,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Amos 3:1-2",
-    verseText: "You only have I known of all the families of the earth: therefore I will punish you."
+    verseText: "You only have I known of all the families of the earth; therefore I will punish you."
   },
   {
     id: 13068,
@@ -1153,7 +1153,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Habakkuk 2:6-20",
-    verseText: "Woe to him that increaseth that which is not his!"
+    verseText: "Woe to him who increases what is not his!"
   },
   {
     id: 13069,
@@ -1170,7 +1170,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Zechariah 1-6",
-    verseText: "My words and my statutes... did they not take hold of your fathers?"
+    verseText: "Surely My words and My statutes... did they not overtake your fathers?"
   },
   {
     id: 13070,
@@ -1187,7 +1187,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Malachi 4:1-3",
-    verseText: "Unto you that fear my name shall the Sun of righteousness arise with healing in his wings."
+    verseText: "But to you who fear My name the Sun of Righteousness shall arise with healing in His wings."
   },
   {
     id: 13071,
@@ -1204,7 +1204,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 20:7-10; Amos 7:10-17; 2 Chronicles 36:15-16",
-    verseText: "They mocked the messengers of God, and despised his words."
+    verseText: "But they mocked the messengers of God, despised His words."
   },
   {
     id: 13072,
@@ -1221,7 +1221,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Amos 5:18-20; Jeremiah 7:4-10",
-    verseText: "Woe unto you that desire the day of the LORD!"
+    verseText: "Woe to you who desire the day of the LORD!"
   },
   {
     id: 13073,
@@ -1238,7 +1238,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 36:25-27; Zechariah 13:1; Jeremiah 33:8",
-    verseText: "Then will I sprinkle clean water upon you, and ye shall be clean."
+    verseText: "Then I will sprinkle clean water on you, and you shall be clean."
   },
   {
     id: 13074,
@@ -1255,7 +1255,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Isaiah 1:11-17; Amos 5:21-24; Micah 3:9-12",
-    verseText: "Cease to do evil; Learn to do well; seek judgment."
+    verseText: "Cease to do evil, learn to do good; seek justice."
   },
   {
     id: 13075,
@@ -1272,7 +1272,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Deuteronomy 18:9-22; Isaiah 41:21-29; Jeremiah 27:9-10",
-    verseText: "The prophet, which shall presume to speak a word in my name... even that prophet shall die."
+    verseText: "But the prophet who presumes to speak a word in My name... that prophet shall die."
   },
   {
     id: 13076,
@@ -1289,7 +1289,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Psalm 110:4; Zechariah 6:12-13",
-    verseText: "He shall be a priest upon his throne."
+    verseText: "He shall be a priest on His throne."
   },
   {
     id: 13077,
@@ -1306,7 +1306,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Ezekiel 34:1-24; Micah 5:4; Zechariah 11",
-    verseText: "I will set up one shepherd over them, and he shall feed them, even my servant David."
+    verseText: "I will establish one shepherd over them, and he shall feed them — My servant David."
   },
   {
     id: 13078,
@@ -1340,7 +1340,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 1:21-23; Jeremiah 22:13-17; Amos 2:6-8",
-    verseText: "They sell the righteous for silver, and the poor for a pair of shoes."
+    verseText: "They sell the righteous for silver, and the poor for a pair of sandals."
   },
   {
     id: 13080,
@@ -1374,7 +1374,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Luke 24:27, 44-47; Matthew 1:22-23; Acts 2:16-21",
-    verseText: "Beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself."
+    verseText: "And beginning at Moses and all the Prophets, He expounded to them in all the Scriptures the things concerning Himself."
   },
   {
     id: 13082,
@@ -1391,7 +1391,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Malachi 4:5-6; Luke 1:16-17; Matthew 11:13-14",
-    verseText: "He shall go before him in the spirit and power of Elias."
+    verseText: "He will also go before Him in the spirit and power of Elijah."
   },
   {
     id: 13083,
@@ -1408,7 +1408,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Luke 4:16-21",
-    verseText: "This day is this scripture fulfilled in your ears."
+    verseText: "Today this Scripture is fulfilled in your hearing."
   },
   {
     id: 13084,
@@ -1425,7 +1425,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Zechariah 9:9; Matthew 21:4-5; John 12:14-15",
-    verseText: "Behold, thy King cometh unto thee."
+    verseText: "Behold, your King is coming to you."
   },
   {
     id: 13085,
@@ -1442,7 +1442,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Joel 2:28-32; Acts 2:16-21",
-    verseText: "This is that which was spoken by the prophet Joel."
+    verseText: "But this is what was spoken by the prophet Joel."
   },
   {
     id: 13086,
@@ -1459,7 +1459,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Isaiah 53; Acts 8:32-35; 1 Peter 2:21-25",
-    verseText: "He bare our sins in his own body on the tree."
+    verseText: "Who Himself bore our sins in His own body on the tree."
   },
   {
     id: 13087,
@@ -1476,7 +1476,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jonah 1:17; Matthew 12:39-41",
-    verseText: "So shall the Son of man be three days and three nights in the heart of the earth."
+    verseText: "So will the Son of Man be three days and three nights in the heart of the earth."
   },
   {
     id: 13088,
@@ -1493,7 +1493,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Psalm 110:1-4; Acts 2:34-36; Hebrews 5:5-10",
-    verseText: "The LORD said unto my Lord, Sit thou on my right hand."
+    verseText: "The LORD said to my Lord, 'Sit at My right hand.'"
   },
   {
     id: 13089,
@@ -1510,7 +1510,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6-13",
-    verseText: "This cup is the new testament in my blood."
+    verseText: "This cup is the new covenant in My blood."
   },
   {
     id: 13090,
@@ -1578,7 +1578,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "John 13:19; John 20:30-31; 2 Peter 1:19-21",
-    verseText: "We have also a more sure word of prophecy."
+    verseText: "And so we have the prophetic word confirmed."
   },
   {
     id: 13094,
@@ -1595,7 +1595,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Luke 24:25-27, 44-47",
-    verseText: "All things must be fulfilled, which were written... concerning me."
+    verseText: "All things must be fulfilled which were written... concerning Me."
   },
   {
     id: 13095,
@@ -1629,7 +1629,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Daniel 7-12; Zechariah 1-6",
-    verseText: "The saints of the most High shall take the kingdom."
+    verseText: "But the saints of the Most High shall receive the kingdom."
   },
   {
     id: 13097,
@@ -1646,7 +1646,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Exodus 34:6-7; Isaiah 6; Jeremiah 9:23-24; Hosea 11",
-    verseText: "The LORD, The LORD God, merciful and gracious."
+    verseText: "The LORD, the LORD God, merciful and gracious."
   },
   {
     id: 13098,
@@ -1663,7 +1663,7 @@ const prophecyQuestions = [
     ],
     answer: 0,
     reference: "Jeremiah 7:4-10; Amos 5:18-24; Micah 3:9-12",
-    verseText: "Trust ye not in lying words."
+    verseText: "Do not trust in these lying words."
   },
   {
     id: 13099,
@@ -1680,7 +1680,7 @@ const prophecyQuestions = [
     ],
     answer: 1,
     reference: "Isaiah 40; Jeremiah 30-33; Ezekiel 36-37; Zechariah 8",
-    verseText: "I know the thoughts that I think toward you... thoughts of peace, and not of evil."
+    verseText: "For I know the thoughts that I think toward you... thoughts of peace and not of evil."
   },
   {
     id: 13100,

@@ -29,11 +29,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'God will provide himself a lamb for a burnt offering,' on the way to the mountain of sacrifice?",
+    question: "Who said, 'God will provide for Himself the lamb for a burnt offering,' on the way to the mountain of sacrifice?",
     choices: ["Abraham", "Isaac", "Jacob", "Moses"],
     answer: 0,
     reference: "Genesis 22:8",
-    verseText: "God will provide himself a lamb for a burnt offering."
+    verseText: "God will provide for Himself the lamb for a burnt offering."
   },
   {
     id: 14004,
@@ -41,11 +41,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'I will not let thee go, except thou bless me,' during an all-night struggle that ended with a new name?",
+    question: "Who said, 'I will not let You go unless You bless me!' during an all-night struggle that ended with a new name?",
     choices: ["Jacob", "Esau", "Moses", "Joshua"],
     answer: 0,
     reference: "Genesis 32:26",
-    verseText: "I will not let thee go, except thou bless me."
+    verseText: "I will not let You go unless You bless me!"
   },
   {
     id: 14005,
@@ -53,11 +53,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Ye thought evil against me; but God meant it unto good,' interpreting his suffering through providence?",
+    question: "Who said, 'You meant evil against me; but God meant it for good,' interpreting his suffering through providence?",
     choices: ["Joseph", "Judah", "Benjamin", "Moses"],
     answer: 0,
     reference: "Genesis 50:20",
-    verseText: "Ye thought evil against me; but God meant it unto good."
+    verseText: "You meant evil against me; but God meant it for good."
   },
   {
     id: 14006,
@@ -65,11 +65,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who heard the divine declaration, 'I AM THAT I AM,' after asking God's name at the burning bush?",
+    question: "Who heard the divine declaration, 'I AM WHO I AM,' after asking God's name at the burning bush?",
     choices: ["Moses", "Aaron", "Joshua", "Isaiah"],
     answer: 0,
     reference: "Exodus 3:13-14",
-    verseText: "I AM THAT I AM."
+    verseText: "I AM WHO I AM."
   },
   {
     id: 14007,
@@ -77,11 +77,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Who is on the LORD'S side? let him come unto me,' at the crisis of the golden calf?",
+    question: "Who said, 'Whoever is on the LORD's side — come to me!' at the crisis of the golden calf?",
     choices: ["Moses", "Aaron", "Joshua", "Phinehas"],
     answer: 0,
     reference: "Exodus 32:26",
-    verseText: "Who is on the LORD'S side? let him come unto me."
+    verseText: "Whoever is on the LORD's side — come to me!"
   },
   {
     id: 14008,
@@ -89,11 +89,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Would God that all the LORD'S people were prophets,' showing a vision larger than personal status?",
+    question: "Who said, 'Oh, that all the LORD's people were prophets,' showing a vision larger than personal status?",
     choices: ["Moses", "Joshua", "Aaron", "Samuel"],
     answer: 0,
     reference: "Numbers 11:29",
-    verseText: "Would God that all the LORD'S people were prophets."
+    verseText: "Oh, that all the LORD's people were prophets."
   },
   {
     id: 14009,
@@ -113,11 +113,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who was greeted with, 'The LORD is with thee, thou mighty man of valour,' while hiding from Midianite oppression?",
+    question: "Who was greeted with, 'The LORD is with you, you mighty man of valor!' while hiding from Midianite oppression?",
     choices: ["Gideon", "Barak", "Jephthah", "Samson"],
     answer: 0,
     reference: "Judges 6:12",
-    verseText: "The LORD is with thee, thou mighty man of valour."
+    verseText: "The LORD is with you, you mighty man of valor!"
   },
   {
     id: 14011,
@@ -125,11 +125,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Whither thou goest, I will go,' binding herself to Naomi, Israel, and Israel's God?",
+    question: "Who said, 'Wherever you go, I will go,' binding herself to Naomi, Israel, and Israel's God?",
     choices: ["Ruth", "Orpah", "Naomi", "Hannah"],
     answer: 0,
     reference: "Ruth 1:16",
-    verseText: "Whither thou goest, I will go."
+    verseText: "Wherever you go, I will go."
   },
   {
     id: 14012,
@@ -149,11 +149,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Speak; for thy servant heareth,' after repeated nighttime calls from the LORD?",
+    question: "Who said, 'Speak, for Your servant hears,' after repeated nighttime calls from the LORD?",
     choices: ["Samuel", "Eli", "David", "Solomon"],
     answer: 0,
     reference: "1 Samuel 3:10",
-    verseText: "Speak; for thy servant heareth."
+    verseText: "Speak, for Your servant hears."
   },
   {
     id: 14014,
@@ -173,11 +173,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'The LORD looketh on the heart,' when evaluating Jesse's sons and teaching how divine choice differs from human sight?",
+    question: "Who said, 'The LORD looks at the heart,' when evaluating Jesse's sons and teaching how divine choice differs from human sight?",
     choices: ["Samuel", "David", "Nathan", "Moses"],
     answer: 0,
     reference: "1 Samuel 16:7",
-    verseText: "Man looketh on the outward appearance, but the LORD looketh on the heart."
+    verseText: "Man looks at the outward appearance, but the LORD looks at the heart."
   },
   {
     id: 14016,
@@ -185,11 +185,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'The battle is the LORD'S,' before fighting a champion whose defeat would vindicate God's name?",
+    question: "Who said, 'The battle is the LORD's,' before fighting a champion whose defeat would vindicate God's name?",
     choices: ["David", "Jonathan", "Samuel", "Saul"],
     answer: 0,
     reference: "1 Samuel 17:47",
-    verseText: "The battle is the LORD'S."
+    verseText: "For the battle is the LORD's."
   },
   {
     id: 14017,
@@ -197,11 +197,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who lamented, 'How are the mighty fallen!' in a poem over Saul and Jonathan?",
+    question: "Who lamented, 'How the mighty have fallen!' in a poem over Saul and Jonathan?",
     choices: ["David", "Abner", "Samuel", "Jonathan"],
     answer: 0,
     reference: "2 Samuel 1:19",
-    verseText: "How are the mighty fallen!"
+    verseText: "How the mighty have fallen!"
   },
   {
     id: 14018,
@@ -209,11 +209,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Thou art the man,' exposing royal guilt through a parable rather than direct accusation at first?",
+    question: "Who said, 'You are the man!' exposing royal guilt through a parable rather than direct accusation at first?",
     choices: ["Nathan", "Gad", "Samuel", "Ahijah"],
     answer: 0,
     reference: "2 Samuel 12:7",
-    verseText: "Thou art the man."
+    verseText: "You are the man!"
   },
   {
     id: 14019,
@@ -221,11 +221,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who prayed, 'Give therefore thy servant an understanding heart,' when invited by God to ask for what he desired?",
+    question: "Who prayed, 'Give to Your servant an understanding heart,' when invited by God to ask for what he desired?",
     choices: ["Solomon", "David", "Hezekiah", "Josiah"],
     answer: 0,
     reference: "1 Kings 3:9",
-    verseText: "Give therefore thy servant an understanding heart."
+    verseText: "Give to Your servant an understanding heart."
   },
   {
     id: 14020,
@@ -233,11 +233,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'The heaven and heaven of heavens cannot contain thee,' during temple dedication, thus affirming that God exceeds sacred space?",
+    question: "Who said, 'Heaven and the heaven of heavens cannot contain You,' during temple dedication, affirming that God exceeds sacred space?",
     choices: ["Solomon", "David", "Isaiah", "Ezra"],
     answer: 0,
     reference: "1 Kings 8:27",
-    verseText: "The heaven and heaven of heavens cannot contain thee."
+    verseText: "Behold, heaven and the heaven of heavens cannot contain You."
   },
   {
     id: 14021,
@@ -245,11 +245,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'How long halt ye between two opinions?' on Mount Carmel in a showdown over covenant loyalty?",
+    question: "Who said, 'How long will you falter between two opinions?' on Mount Carmel in a showdown over covenant loyalty?",
     choices: ["Elijah", "Elisha", "Micaiah", "Amos"],
     answer: 0,
     reference: "1 Kings 18:21",
-    verseText: "How long halt ye between two opinions?"
+    verseText: "How long will you falter between two opinions?"
   },
   {
     id: 14022,
@@ -257,11 +257,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'I have not troubled Israel; but thou, and thy father's house, have,' turning Ahab's accusation back upon him?",
+    question: "Who said, 'I have not troubled Israel, but you and your father's house have,' turning Ahab's accusation back upon him?",
     choices: ["Elijah", "Micaiah", "Elisha", "Jehu"],
     answer: 0,
     reference: "1 Kings 18:18",
-    verseText: "I have not troubled Israel; but thou, and thy father's house, have."
+    verseText: "I have not troubled Israel, but you and your father's house have."
   },
   {
     id: 14023,
@@ -269,11 +269,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who confessed, 'There is no God in all the earth, but in Israel,' after a humbling cleansing in the Jordan?",
+    question: "Who confessed, 'There is no God in all the earth, except in Israel,' after a humbling cleansing in the Jordan?",
     choices: ["Naaman", "Rahab", "Nebuchadnezzar", "Cyrus"],
     answer: 0,
     reference: "2 Kings 5:15",
-    verseText: "There is no God in all the earth, but in Israel."
+    verseText: "Indeed, now I know that there is no God in all the earth, except in Israel."
   },
   {
     id: 14024,
@@ -281,7 +281,7 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'The zeal of the LORD of hosts shall do this,' in a messianic prophecy about the coming ruler?",
+    question: "Who said, 'The zeal of the LORD of hosts will perform this,' in a messianic prophecy about the coming ruler?",
     choices: ["Isaiah", "Jeremiah", "Ezekiel", "Micah"],
     answer: 0,
     reference: "Isaiah 9:7",
@@ -293,11 +293,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who responded, 'Here am I; send me,' after seeing the LORD high and lifted up and being cleansed at the altar?",
+    question: "Who responded, 'Here am I! Send me,' after seeing the LORD high and lifted up and being cleansed at the altar?",
     choices: ["Isaiah", "Jeremiah", "Samuel", "Ezekiel"],
     answer: 0,
     reference: "Isaiah 6:8",
-    verseText: "Here am I; send me."
+    verseText: "Here am I! Send me."
   },
   {
     id: 14026,
@@ -305,11 +305,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who conveyed the divine question, 'Can a woman forget her sucking child?' as part of a promise that Zion had not been forsaken?",
+    question: "Who conveyed the divine question, 'Can a woman forget her nursing child?' as part of a promise that Zion had not been forsaken?",
     choices: ["The LORD through Isaiah", "Isaiah", "Jeremiah", "Hosea"],
     answer: 0,
     reference: "Isaiah 49:15",
-    verseText: "Can a woman forget her sucking child?"
+    verseText: "Can a woman forget her nursing child?"
   },
   {
     id: 14027,
@@ -341,11 +341,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'It is of the LORD'S mercies that we are not consumed,' in the middle of Jerusalem's lament?",
+    question: "Who wrote, 'Through the LORD's mercies we are not consumed,' in the middle of Jerusalem's lament?",
     choices: ["Jeremiah", "Baruch", "Isaiah", "Ezra"],
     answer: 0,
     reference: "Lamentations 3:22",
-    verseText: "It is of the LORD'S mercies that we are not consumed."
+    verseText: "Through the LORD's mercies we are not consumed."
   },
   {
     id: 14030,
@@ -353,11 +353,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who was repeatedly addressed as 'son of man' and told, 'I have made thee a watchman unto the house of Israel'?",
+    question: "Who was repeatedly addressed as 'son of man' and told, 'I have made you a watchman for the house of Israel'?",
     choices: ["Ezekiel", "Daniel", "Jeremiah", "Zechariah"],
     answer: 0,
     reference: "Ezekiel 3:17",
-    verseText: "I have made thee a watchman unto the house of Israel."
+    verseText: "Son of man, I have made you a watchman for the house of Israel."
   },
   {
     id: 14031,
@@ -365,11 +365,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'There is a God in heaven that revealeth secrets,' before explaining the king's dream of kingdoms?",
+    question: "Who said, 'There is a God in heaven who reveals secrets,' before explaining the king's dream of kingdoms?",
     choices: ["Daniel", "Joseph", "Ezra", "Mordecai"],
     answer: 0,
     reference: "Daniel 2:28",
-    verseText: "There is a God in heaven that revealeth secrets."
+    verseText: "There is a God in heaven who reveals secrets."
   },
   {
     id: 14032,
@@ -389,11 +389,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who declared, 'Let judgment run down as waters, and righteousness as a mighty stream,' condemning worship divorced from justice?",
+    question: "Who declared, 'But let justice run down like water, and righteousness like a mighty stream,' condemning worship divorced from justice?",
     choices: ["Amos", "Micah", "Hosea", "Isaiah"],
     answer: 0,
     reference: "Amos 5:24",
-    verseText: "Let judgment run down as waters, and righteousness as a mighty stream."
+    verseText: "But let justice run down like water, and righteousness like a mighty stream."
   },
   {
     id: 14034,
@@ -401,11 +401,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'What doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God'?",
+    question: "Who said, 'What does the LORD require of you but to do justly, to love mercy, and to walk humbly with your God?'",
     choices: ["Micah", "Amos", "Hosea", "Zephaniah"],
     answer: 0,
     reference: "Micah 6:8",
-    verseText: "What doth the LORD require of thee?"
+    verseText: "What does the LORD require of you?"
   },
   {
     id: 14035,
@@ -425,11 +425,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'The LORD is in his holy temple: let all the earth keep silence before him,' answering human arrogance with divine sovereignty?",
+    question: "Who said, 'The LORD is in His holy temple. Let all the earth keep silence before Him,' answering human arrogance with divine sovereignty?",
     choices: ["Habakkuk", "Zephaniah", "Isaiah", "David"],
     answer: 0,
     reference: "Habakkuk 2:20",
-    verseText: "The LORD is in his holy temple: let all the earth keep silence before him."
+    verseText: "The LORD is in His holy temple. Let all the earth keep silence before Him."
   },
   {
     id: 14037,
@@ -437,11 +437,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'The LORD gave, and the LORD hath taken away; blessed be the name of the LORD,' before any explanation of his suffering was given?",
+    question: "Who said, 'The LORD gave, and the LORD has taken away; Blessed be the name of the LORD,' before any explanation of his suffering was given?",
     choices: ["Job", "Eliphaz", "David", "Jeremiah"],
     answer: 0,
     reference: "Job 1:21",
-    verseText: "The LORD gave, and the LORD hath taken away; blessed be the name of the LORD."
+    verseText: "The LORD gave, and the LORD has taken away; Blessed be the name of the LORD."
   },
   {
     id: 14038,
@@ -449,11 +449,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Though he slay me, yet will I trust in him,' refusing to collapse into a simplistic view of God amid suffering?",
+    question: "Who said, 'Though He slay me, yet will I trust Him,' refusing to collapse into a simplistic view of God amid suffering?",
     choices: ["Job", "David", "Isaiah", "Habakkuk"],
     answer: 0,
     reference: "Job 13:15",
-    verseText: "Though he slay me, yet will I trust in him."
+    verseText: "Though He slay me, yet will I trust Him."
   },
   {
     id: 14039,
@@ -461,11 +461,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'I know that my redeemer liveth,' affirming hope beyond present affliction?",
+    question: "Who said, 'I know that my Redeemer lives,' affirming hope beyond present affliction?",
     choices: ["Job", "David", "Isaiah", "Daniel"],
     answer: 0,
     reference: "Job 19:25",
-    verseText: "I know that my redeemer liveth."
+    verseText: "For I know that my Redeemer lives."
   },
   {
     id: 14040,
@@ -477,7 +477,7 @@ const quotesQuestions = [
     choices: ["The Preacher", "Job", "David", "Asaph"],
     answer: 0,
     reference: "Ecclesiastes 1:1-2",
-    verseText: "Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity."
+    verseText: "'Vanity of vanities,' says the Preacher; 'all is vanity.'"
   },
   {
     id: 14041,
@@ -485,11 +485,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who urged, 'Remember now thy Creator in the days of thy youth,' as the close of a meditation on life's vapor?",
+    question: "Who urged, 'Remember your Creator in the days of your youth,' as the close of a meditation on life's vapor?",
     choices: ["The Preacher", "David", "Asaph", "Agur"],
     answer: 0,
     reference: "Ecclesiastes 12:1",
-    verseText: "Remember now thy Creator in the days of thy youth."
+    verseText: "Remember your Creator in the days of your youth."
   },
   {
     id: 14042,
@@ -521,11 +521,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who asked, 'Whom have I in heaven but thee?' after entering the sanctuary and reinterpreting the prosperity of the wicked?",
+    question: "Who asked, 'Whom have I in heaven but You?' after entering the sanctuary and reinterpreting the prosperity of the wicked?",
     choices: ["Asaph", "David", "Heman", "Ethan"],
     answer: 0,
     reference: "Psalm 73:25",
-    verseText: "Whom have I in heaven but thee?"
+    verseText: "Whom have I in heaven but You?"
   },
   {
     id: 14045,
@@ -533,11 +533,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Deep calleth unto deep,' in a psalm of thirst, exile, and remembered worship?",
+    question: "Who wrote, 'Deep calls unto deep,' in a psalm of thirst, exile, and remembered worship?",
     choices: ["The sons of Korah", "David", "Asaph", "Solomon"],
     answer: 0,
     reference: "Psalm 42:7",
-    verseText: "Deep calleth unto deep."
+    verseText: "Deep calls unto deep."
   },
   {
     id: 14046,
@@ -545,11 +545,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Whither shall I go from thy spirit?' while reflecting on God's inescapable presence and exhaustive knowledge?",
+    question: "Who wrote, 'Where can I go from Your Spirit?' while reflecting on God's inescapable presence and exhaustive knowledge?",
     choices: ["David", "Asaph", "Heman", "Moses"],
     answer: 0,
     reference: "Psalm 139:7",
-    verseText: "Whither shall I go from thy spirit?"
+    verseText: "Where can I go from Your Spirit?"
   },
   {
     id: 14047,
@@ -569,11 +569,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Trust in the LORD with all thine heart,' in wisdom literature that opposes self-reliance?",
+    question: "Who said, 'Trust in the LORD with all your heart,' in wisdom literature that opposes self-reliance?",
     choices: ["Solomon", "David", "Agur", "Job"],
     answer: 0,
     reference: "Proverbs 3:5",
-    verseText: "Trust in the LORD with all thine heart."
+    verseText: "Trust in the LORD with all your heart."
   },
   {
     id: 14049,
@@ -593,11 +593,11 @@ const quotesQuestions = [
     testament: "Old Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'A soft answer turneth away wrath,' in a book deeply concerned with speech ethics?",
+    question: "Who wrote, 'A soft answer turns away wrath,' in a book deeply concerned with speech ethics?",
     choices: ["Solomon", "David", "Agur", "Ethan"],
     answer: 0,
     reference: "Proverbs 15:1",
-    verseText: "A soft answer turneth away wrath."
+    verseText: "A soft answer turns away wrath."
   },
   {
     id: 14051,
@@ -605,11 +605,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Follow me, and I will make you fishers of men,' turning ordinary labor into a call to kingdom mission?",
+    question: "Who said, 'Follow Me, and I will make you fishers of men,' turning ordinary labor into a call to kingdom mission?",
     choices: ["Jesus", "Peter", "John", "Andrew"],
     answer: 0,
     reference: "Matthew 4:19",
-    verseText: "Follow me, and I will make you fishers of men."
+    verseText: "Follow Me, and I will make you fishers of men."
   },
   {
     id: 14052,
@@ -617,11 +617,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who answered temptation with, 'Man shall not live by bread alone,' showing Himself to be the faithful son where Israel failed?",
+    question: "Who answered temptation with, 'Man shall not live by bread alone,' showing Himself to be the faithful Son where Israel failed?",
     choices: ["Jesus", "John the Baptist", "Peter", "Paul"],
     answer: 0,
     reference: "Matthew 4:4",
-    verseText: "Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God."
+    verseText: "Man shall not live by bread alone, but by every word that proceeds from the mouth of God."
   },
   {
     id: 14053,
@@ -629,11 +629,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Blessed are the pure in heart: for they shall see God,' in a sermon that redefined righteousness from the inside out?",
+    question: "Who said, 'Blessed are the pure in heart, for they shall see God,' in a sermon that redefined righteousness from the inside out?",
     choices: ["Jesus", "James", "Peter", "John"],
     answer: 0,
     reference: "Matthew 5:8",
-    verseText: "Blessed are the pure in heart: for they shall see God."
+    verseText: "Blessed are the pure in heart, for they shall see God."
   },
   {
     id: 14054,
@@ -641,11 +641,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Ye are the salt of the earth,' immediately after describing the character of kingdom citizens?",
+    question: "Who said, 'You are the salt of the earth,' immediately after describing the character of kingdom citizens?",
     choices: ["Jesus", "Paul", "Peter", "John"],
     answer: 0,
     reference: "Matthew 5:13",
-    verseText: "Ye are the salt of the earth."
+    verseText: "You are the salt of the earth."
   },
   {
     id: 14055,
@@ -653,11 +653,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Lay not up for yourselves treasures upon earth,' contrasting visible wealth with heavenly reward?",
+    question: "Who said, 'Do not lay up for yourselves treasures on earth,' contrasting visible wealth with heavenly reward?",
     choices: ["Jesus", "James", "Paul", "Peter"],
     answer: 0,
     reference: "Matthew 6:19-20",
-    verseText: "Lay not up for yourselves treasures upon earth."
+    verseText: "Do not lay up for yourselves treasures on earth."
   },
   {
     id: 14056,
@@ -665,11 +665,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Seek ye first the kingdom of God, and his righteousness,' in a passage confronting anxious preoccupation with provision?",
+    question: "Who said, 'But seek first the kingdom of God and His righteousness,' in a passage confronting anxious preoccupation with provision?",
     choices: ["Jesus", "Paul", "John", "Peter"],
     answer: 0,
     reference: "Matthew 6:33",
-    verseText: "Seek ye first the kingdom of God, and his righteousness."
+    verseText: "But seek first the kingdom of God and His righteousness."
   },
   {
     id: 14057,
@@ -677,11 +677,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Judge not, that ye be not judged,' in a sermon that condemns hypocrisy rather than moral discernment itself?",
+    question: "Who said, 'Judge not, that you be not judged,' in a sermon that condemns hypocrisy rather than moral discernment itself?",
     choices: ["Jesus", "Paul", "Peter", "James"],
     answer: 0,
     reference: "Matthew 7:1-5",
-    verseText: "Judge not, that ye be not judged."
+    verseText: "Judge not, that you be not judged."
   },
   {
     id: 14058,
@@ -689,11 +689,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Come unto me, all ye that labour and are heavy laden,' claiming to give the rest that Israel longed for?",
+    question: "Who said, 'Come to Me, all you who labor and are heavy laden,' claiming to give the rest that Israel longed for?",
     choices: ["Jesus", "Peter", "Paul", "John"],
     answer: 0,
     reference: "Matthew 11:28-30",
-    verseText: "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+    verseText: "Come to Me, all you who labor and are heavy laden, and I will give you rest."
   },
   {
     id: 14059,
@@ -701,11 +701,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Thou art the Christ, the Son of the living God,' just before Jesus spoke of building His church?",
+    question: "Who said, 'You are the Christ, the Son of the living God,' just before Jesus spoke of building His church?",
     choices: ["Peter", "John", "Thomas", "Martha"],
     answer: 0,
     reference: "Matthew 16:16",
-    verseText: "Thou art the Christ, the Son of the living God."
+    verseText: "You are the Christ, the Son of the living God."
   },
   {
     id: 14060,
@@ -713,11 +713,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Upon this rock I will build my church,' in response to Peter's confession rather than to political power?",
+    question: "Who said, 'On this rock I will build My church,' in response to Peter's confession rather than to political power?",
     choices: ["Jesus", "Peter", "Paul", "John"],
     answer: 0,
     reference: "Matthew 16:18",
-    verseText: "Upon this rock I will build my church."
+    verseText: "On this rock I will build My church."
   },
   {
     id: 14061,
@@ -725,11 +725,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Get thee behind me, Satan,' after a disciple attempted to redirect Him away from the cross?",
+    question: "Who said, 'Get behind Me, Satan!' after a disciple attempted to redirect Him away from the cross?",
     choices: ["Jesus", "John the Baptist", "Paul", "James"],
     answer: 0,
     reference: "Matthew 16:23",
-    verseText: "Get thee behind me, Satan."
+    verseText: "Get behind Me, Satan!"
   },
   {
     id: 14062,
@@ -737,11 +737,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'This is my beloved Son, in whom I am well pleased,' identifying Jesus publicly at His baptism?",
+    question: "Who said, 'This is My beloved Son, in whom I am well pleased,' identifying Jesus publicly at His baptism?",
     choices: ["The Father", "John the Baptist", "Gabriel", "Peter"],
     answer: 0,
     reference: "Matthew 3:17",
-    verseText: "This is my beloved Son, in whom I am well pleased."
+    verseText: "This is My beloved Son, in whom I am well pleased."
   },
   {
     id: 14063,
@@ -749,11 +749,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Lord, if it be thou, bid me come unto thee on the water,' revealing both bold faith and unstable fear?",
+    question: "Who said, 'Lord, if it is You, command me to come to You on the water,' revealing both bold faith and unstable fear?",
     choices: ["Peter", "John", "Thomas", "Andrew"],
     answer: 0,
     reference: "Matthew 14:28",
-    verseText: "Lord, if it be thou, bid me come unto thee on the water."
+    verseText: "Lord, if it is You, command me to come to You on the water."
   },
   {
     id: 14064,
@@ -761,11 +761,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who asked, 'What shall I do then with Jesus which is called Christ?' while sitting in judgment yet failing to act justly?",
+    question: "Who asked, 'What then shall I do with Jesus who is called Christ?' while sitting in judgment yet failing to act justly?",
     choices: ["Pilate", "Herod", "Caiaphas", "Festus"],
     answer: 0,
     reference: "Matthew 27:22",
-    verseText: "What shall I do then with Jesus which is called Christ?"
+    verseText: "What then shall I do with Jesus who is called Christ?"
   },
   {
     id: 14065,
@@ -773,11 +773,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who cried, 'His blood be on us, and on our children,' in the crowd scene before Pilate?",
+    question: "Who cried, 'His blood be on us and on our children,' in the crowd scene before Pilate?",
     choices: ["The people before Pilate", "The disciples", "Roman soldiers", "The Sanhedrin alone"],
     answer: 0,
     reference: "Matthew 27:25",
-    verseText: "His blood be on us, and on our children."
+    verseText: "His blood be on us and on our children."
   },
   {
     id: 14066,
@@ -785,11 +785,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Truly this man was the Son of God,' moving from execution detail to startling confession at the cross?",
+    question: "Who said, 'Truly this Man was the Son of God!' moving from execution detail to startling confession at the cross?",
     choices: ["The centurion", "Pilate", "Joseph of Arimathaea", "Nicodemus"],
     answer: 0,
     reference: "Mark 15:39",
-    verseText: "Truly this man was the Son of God."
+    verseText: "Truly this Man was the Son of God!"
   },
   {
     id: 14067,
@@ -797,11 +797,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who sang, 'My soul doth magnify the Lord,' placing her personal calling within God's covenant mercy to Israel?",
+    question: "Who sang, 'My soul magnifies the Lord,' placing her personal calling within God's covenant mercy to Israel?",
     choices: ["Mary", "Elisabeth", "Anna", "Martha"],
     answer: 0,
     reference: "Luke 1:46-55",
-    verseText: "My soul doth magnify the Lord."
+    verseText: "My soul magnifies the Lord."
   },
   {
     id: 14068,
@@ -809,11 +809,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Blessed art thou among women,' recognizing the significance of Mary's child before birth narratives had fully unfolded?",
+    question: "Who said, 'Blessed are you among women,' recognizing the significance of Mary's child before birth narratives had fully unfolded?",
     choices: ["Elisabeth", "Anna", "Martha", "Mary Magdalene"],
     answer: 0,
     reference: "Luke 1:42-45",
-    verseText: "Blessed art thou among women."
+    verseText: "Blessed are you among women."
   },
   {
     id: 14069,
@@ -821,11 +821,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Lord, now lettest thou thy servant depart in peace,' after seeing the infant Messiah in the temple?",
+    question: "Who said, 'Lord, now You are letting Your servant depart in peace,' after seeing the infant Messiah in the temple?",
     choices: ["Simeon", "Zacharias", "Joseph", "Nicodemus"],
     answer: 0,
     reference: "Luke 2:29-32",
-    verseText: "Lord, now lettest thou thy servant depart in peace."
+    verseText: "Lord, now You are letting Your servant depart in peace."
   },
   {
     id: 14070,
@@ -833,11 +833,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who proclaimed, 'Prepare ye the way of the Lord,' as the wilderness herald of fulfillment?",
+    question: "Who proclaimed, 'Prepare the way of the LORD,' as the wilderness herald of fulfillment?",
     choices: ["John the Baptist", "Jesus", "Peter", "Isaiah in person"],
     answer: 0,
     reference: "Luke 3:4-6",
-    verseText: "Prepare ye the way of the Lord."
+    verseText: "Prepare the way of the LORD."
   },
   {
     id: 14071,
@@ -845,11 +845,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'This day is this scripture fulfilled in your ears,' applying Isaiah's promise directly to Himself in Nazareth?",
+    question: "Who said, 'Today this Scripture is fulfilled in your hearing,' applying Isaiah's promise directly to Himself in Nazareth?",
     choices: ["Jesus", "Peter", "Paul", "Stephen"],
     answer: 0,
     reference: "Luke 4:18-21",
-    verseText: "This day is this scripture fulfilled in your ears."
+    verseText: "Today this Scripture is fulfilled in your hearing."
   },
   {
     id: 14072,
@@ -857,11 +857,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'I am not worthy that thou shouldest enter under my roof,' combining humility with strong faith in Jesus' authority?",
+    question: "Who said, 'I am not worthy that You should enter under my roof,' combining humility with strong faith in Jesus' authority?",
     choices: ["The centurion", "Nicodemus", "Jairus", "Zacchaeus"],
     answer: 0,
     reference: "Luke 7:6-9",
-    verseText: "I am not worthy that thou shouldest enter under my roof."
+    verseText: "I am not worthy that You should enter under my roof."
   },
   {
     id: 14073,
@@ -869,11 +869,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who prayed, 'God be merciful to me a sinner,' in a parable contrasting repentance with self-righteousness?",
+    question: "Who prayed, 'God, be merciful to me a sinner!' in a parable contrasting repentance with self-righteousness?",
     choices: ["The publican", "The rich young ruler", "Zacchaeus", "Nicodemus"],
     answer: 0,
     reference: "Luke 18:13",
-    verseText: "God be merciful to me a sinner."
+    verseText: "God, be merciful to me a sinner!"
   },
   {
     id: 14074,
@@ -881,11 +881,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Remember me when thou comest into thy kingdom,' showing remarkable faith from a cross beside Jesus?",
+    question: "Who said, 'Lord, remember me when You come into Your kingdom,' showing remarkable faith from a cross beside Jesus?",
     choices: ["The repentant thief", "Peter", "John", "Joseph of Arimathaea"],
     answer: 0,
     reference: "Luke 23:42",
-    verseText: "Lord, remember me when thou comest into thy kingdom."
+    verseText: "Lord, remember me when You come into Your kingdom."
   },
   {
     id: 14075,
@@ -893,11 +893,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Father, forgive them; for they know not what they do,' praying mercy over His executioners?",
+    question: "Who said, 'Father, forgive them, for they do not know what they do,' praying mercy over His executioners?",
     choices: ["Jesus", "Stephen", "Peter", "John"],
     answer: 0,
     reference: "Luke 23:34",
-    verseText: "Father, forgive them; for they know not what they do."
+    verseText: "Father, forgive them, for they do not know what they do."
   },
   {
     id: 14076,
@@ -905,11 +905,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who cried, 'Behold the Lamb of God,' interpreting Jesus with sacrificial and redemptive language?",
+    question: "Who cried, 'Behold! The Lamb of God,' interpreting Jesus with sacrificial and redemptive language?",
     choices: ["John the Baptist", "Andrew", "Peter", "Philip"],
     answer: 0,
     reference: "John 1:29",
-    verseText: "Behold the Lamb of God."
+    verseText: "Behold! The Lamb of God."
   },
   {
     id: 14077,
@@ -917,11 +917,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Can there any good thing come out of Nazareth?' before becoming one of the Gospel's earliest clear confessors of Jesus?",
+    question: "Who said, 'Can anything good come out of Nazareth?' before becoming one of the Gospel's earliest clear confessors of Jesus?",
     choices: ["Nathanael", "Thomas", "Philip", "Nicodemus"],
     answer: 0,
     reference: "John 1:46-49",
-    verseText: "Can there any good thing come out of Nazareth?"
+    verseText: "Can anything good come out of Nazareth?"
   },
   {
     id: 14078,
@@ -929,11 +929,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Except a man be born again, he cannot see the kingdom of God,' reframing entrance into God's kingdom around spiritual rebirth?",
+    question: "Who said, 'Unless a man is born again, he cannot see the kingdom of God,' reframing entrance into God's kingdom around spiritual rebirth?",
     choices: ["Jesus", "John the Baptist", "Peter", "Paul"],
     answer: 0,
     reference: "John 3:3",
-    verseText: "Except a man be born again, he cannot see the kingdom of God."
+    verseText: "Unless one is born again, he cannot see the kingdom of God."
   },
   {
     id: 14079,
@@ -953,11 +953,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Sir, I perceive that thou art a prophet,' moving gradually toward fuller understanding at Jacob's well?",
+    question: "Who said, 'Sir, I perceive that You are a prophet,' moving gradually toward fuller understanding at Jacob's well?",
     choices: ["The Samaritan woman", "Martha", "Mary Magdalene", "Elisabeth"],
     answer: 0,
     reference: "John 4:19",
-    verseText: "Sir, I perceive that thou art a prophet."
+    verseText: "Sir, I perceive that You are a prophet."
   },
   {
     id: 14081,
@@ -965,11 +965,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Come, see a man, which told me all things that ever I did,' becoming an unexpected witness to her town?",
+    question: "Who said, 'Come, see a Man who told me all things that I ever did,' becoming an unexpected witness to her town?",
     choices: ["The Samaritan woman", "Mary Magdalene", "Martha", "Anna"],
     answer: 0,
     reference: "John 4:29",
-    verseText: "Come, see a man, which told me all things that ever I did."
+    verseText: "Come, see a Man who told me all things that I ever did."
   },
   {
     id: 14082,
@@ -989,11 +989,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Lord, to whom shall we go? thou hast the words of eternal life,' after many disciples withdrew?",
+    question: "Who said, 'Lord, to whom shall we go? You have the words of eternal life,' after many disciples withdrew?",
     choices: ["Peter", "John", "Thomas", "Andrew"],
     answer: 0,
     reference: "John 6:68-69",
-    verseText: "Lord, to whom shall we go? thou hast the words of eternal life."
+    verseText: "Lord, to whom shall we go? You have the words of eternal life."
   },
   {
     id: 14084,
@@ -1001,11 +1001,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Before Abraham was, I am,' using language that provoked a charge-worthy reaction from His hearers?",
+    question: "Who said, 'Before Abraham was, I AM,' using language that provoked a charge-worthy reaction from His hearers?",
     choices: ["Jesus", "John the Baptist", "Peter", "Paul"],
     answer: 0,
     reference: "John 8:58-59",
-    verseText: "Before Abraham was, I am."
+    verseText: "Before Abraham was, I AM."
   },
   {
     id: 14085,
@@ -1013,11 +1013,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'One thing I know, that, whereas I was blind, now I see,' testifying from experience in the face of hostile interrogation?",
+    question: "Who said, 'One thing I know: that though I was blind, now I see,' testifying from experience in the face of hostile interrogation?",
     choices: ["The man born blind", "Bartimaeus", "Thomas", "Peter"],
     answer: 0,
     reference: "John 9:25",
-    verseText: "One thing I know, that, whereas I was blind, now I see."
+    verseText: "One thing I know: that though I was blind, now I see."
   },
   {
     id: 14086,
@@ -1037,11 +1037,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'I am the resurrection, and the life,' before calling a dead man from the tomb?",
+    question: "Who said, 'I am the resurrection and the life,' before calling a dead man from the tomb?",
     choices: ["Jesus", "Martha", "John", "Peter"],
     answer: 0,
     reference: "John 11:25",
-    verseText: "I am the resurrection, and the life."
+    verseText: "I am the resurrection and the life."
   },
   {
     id: 14088,
@@ -1049,11 +1049,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who confessed, 'I believe that thou art the Christ, the Son of God,' just before Lazarus was raised?",
+    question: "Who confessed, 'I believe that You are the Christ, the Son of God,' just before Lazarus was raised?",
     choices: ["Martha", "Mary", "The Samaritan woman", "Joanna"],
     answer: 0,
     reference: "John 11:27",
-    verseText: "I believe that thou art the Christ, the Son of God."
+    verseText: "I believe that You are the Christ, the Son of God."
   },
   {
     id: 14089,
@@ -1061,11 +1061,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who protested, 'Lord, by this time he stinketh,' speaking from realism just before witnessing resurrection power?",
+    question: "Who protested, 'Lord, by this time there is a stench,' speaking from realism just before witnessing resurrection power?",
     choices: ["Martha", "Mary", "Mary Magdalene", "Salome"],
     answer: 0,
     reference: "John 11:39",
-    verseText: "Lord, by this time he stinketh."
+    verseText: "Lord, by this time there is a stench, for he has been dead four days."
   },
   {
     id: 14090,
@@ -1097,11 +1097,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who asked, 'Woman, why weepest thou?' to Mary Magdalene before she recognized the risen Lord?",
+    question: "Who asked, 'Woman, why are you weeping?' to Mary Magdalene before she recognized the risen Lord?",
     choices: ["Jesus", "Peter", "An angel", "John"],
     answer: 2,
     reference: "John 20:13",
-    verseText: "Woman, why weepest thou?"
+    verseText: "Woman, why are you weeping?"
   },
   {
     id: 14093,
@@ -1109,11 +1109,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Rabboni,' when grief turned to recognition at the empty tomb?",
+    question: "Who said, 'Rabboni!' when grief turned to recognition at the empty tomb?",
     choices: ["Mary Magdalene", "Martha", "Salome", "Joanna"],
     answer: 0,
     reference: "John 20:16",
-    verseText: "Rabboni."
+    verseText: "Rabboni!"
   },
   {
     id: 14094,
@@ -1121,11 +1121,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'My Lord and my God,' transforming doubt into one of the Gospel's clearest confessions?",
+    question: "Who said, 'My Lord and my God!' transforming doubt into one of the Gospel's clearest confessions?",
     choices: ["Thomas", "Peter", "John", "Martha"],
     answer: 0,
     reference: "John 20:28",
-    verseText: "My Lord and my God."
+    verseText: "My Lord and my God!"
   },
   {
     id: 14095,
@@ -1133,11 +1133,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who asked, 'Lovest thou me more than these?' in a restoration conversation that recommissioned a failed disciple to shepherd?",
+    question: "Who asked, 'Do you love Me more than these?' in a restoration conversation that recommissioned a failed disciple to shepherd?",
     choices: ["Jesus", "Peter", "John", "The Father"],
     answer: 0,
     reference: "John 21:15-17",
-    verseText: "Lovest thou me more than these?"
+    verseText: "Do you love Me more than these?"
   },
   {
     id: 14096,
@@ -1145,11 +1145,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Repent, and be baptized every one of you in the name of Jesus Christ,' answering the pierced conscience of Pentecost hearers?",
+    question: "Who said, 'Repent, and let every one of you be baptized in the name of Jesus Christ,' answering the pierced conscience of Pentecost hearers?",
     choices: ["Peter", "Paul", "John", "Stephen"],
     answer: 0,
     reference: "Acts 2:37-38",
-    verseText: "Repent, and be baptized every one of you in the name of Jesus Christ."
+    verseText: "Repent, and let every one of you be baptized in the name of Jesus Christ."
   },
   {
     id: 14097,
@@ -1157,11 +1157,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Silver and gold have I none,' before healing a lame man at the temple gate?",
+    question: "Who said, 'Silver and gold I do not have,' before healing a lame man at the temple gate?",
     choices: ["Peter", "Paul", "John", "Stephen"],
     answer: 0,
     reference: "Acts 3:6",
-    verseText: "Silver and gold have I none."
+    verseText: "Silver and gold I do not have."
   },
   {
     id: 14098,
@@ -1181,11 +1181,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Behold, I see the heavens opened, and the Son of man standing on the right hand of God,' just before martyrdom?",
+    question: "Who said, 'Look! I see the heavens opened and the Son of Man standing at the right hand of God!' just before martyrdom?",
     choices: ["Stephen", "Peter", "Paul", "John"],
     answer: 0,
     reference: "Acts 7:56",
-    verseText: "Behold, I see the heavens opened, and the Son of man standing on the right hand of God."
+    verseText: "Look! I see the heavens opened and the Son of Man standing at the right hand of God!"
   },
   {
     id: 14100,
@@ -1193,11 +1193,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who prayed, 'Lord, lay not this sin to their charge,' echoing his Lord while dying at the hands of his enemies?",
+    question: "Who prayed, 'Lord, do not charge them with this sin,' echoing his Lord while dying at the hands of his enemies?",
     choices: ["Stephen", "Paul", "Peter", "James"],
     answer: 0,
     reference: "Acts 7:60",
-    verseText: "Lord, lay not this sin to their charge."
+    verseText: "Lord, do not charge them with this sin."
   },
   {
     id: 14101,
@@ -1205,11 +1205,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who asked, 'Lord, what wilt thou have me to do?' after being confronted by the risen Christ on the Damascus road?",
+    question: "Who asked, 'Lord, what do You want me to do?' after being confronted by the risen Christ on the Damascus road?",
     choices: ["Saul of Tarsus", "Peter", "Cornelius", "Ananias"],
     answer: 0,
     reference: "Acts 9:3-6",
-    verseText: "Lord, what wilt thou have me to do?"
+    verseText: "Lord, what do You want me to do?"
   },
   {
     id: 14102,
@@ -1217,11 +1217,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Can any man forbid water, that these should not be baptized?' when the Spirit fell on Gentiles?",
+    question: "Who said, 'Can anyone forbid water, that these should not be baptized?' when the Spirit fell on Gentiles?",
     choices: ["Peter", "Paul", "Philip", "Barnabas"],
     answer: 0,
     reference: "Acts 10:44-48",
-    verseText: "Can any man forbid water, that these should not be baptized?"
+    verseText: "Can anyone forbid water, that these should not be baptized?"
   },
   {
     id: 14103,
@@ -1229,11 +1229,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'We also are men of like passions with you,' correcting a crowd that wanted to worship human messengers as gods?",
+    question: "Who said, 'We also are men with the same nature as you,' correcting a crowd that wanted to worship human messengers as gods?",
     choices: ["Paul and Barnabas", "Peter and John", "Silas and Timothy", "Apollos and Aquila"],
     answer: 0,
     reference: "Acts 14:14-15",
-    verseText: "We also are men of like passions with you."
+    verseText: "We also are men with the same nature as you."
   },
   {
     id: 14104,
@@ -1241,7 +1241,7 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who asked, 'What must I do to be saved?' after prison doors opened and his assumptions collapsed in one night?",
+    question: "Who asked, 'Sirs, what must I do to be saved?' after prison doors opened and his assumptions collapsed in one night?",
     choices: ["The Philippian jailer", "Cornelius", "The Ethiopian eunuch", "Lydia"],
     answer: 0,
     reference: "Acts 16:29-30",
@@ -1253,11 +1253,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who answered, 'Believe on the Lord Jesus Christ, and thou shalt be saved,' in reply to the Philippian jailer's question?",
+    question: "Who answered, 'Believe on the Lord Jesus Christ, and you will be saved,' in reply to the Philippian jailer's question?",
     choices: ["Paul and Silas", "Peter and John", "Barnabas and Mark", "James and Jude"],
     answer: 0,
     reference: "Acts 16:31",
-    verseText: "Believe on the Lord Jesus Christ, and thou shalt be saved."
+    verseText: "Believe on the Lord Jesus Christ, and you will be saved."
   },
   {
     id: 14106,
@@ -1265,11 +1265,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'In him we live, and move, and have our being,' in a Mars Hill address that confronted pagan religiosity with the true God?",
+    question: "Who said, 'In Him we live and move and have our being,' in a Mars Hill address that confronted pagan religiosity with the true God?",
     choices: ["Paul", "Peter", "Luke", "Apollos"],
     answer: 0,
     reference: "Acts 17:22-28",
-    verseText: "In him we live, and move, and have our being."
+    verseText: "In Him we live and move and have our being."
   },
   {
     id: 14107,
@@ -1301,11 +1301,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'For all have sinned, and come short of the glory of God,' in the middle of his argument for justification by grace?",
+    question: "Who wrote, 'For all have sinned and fall short of the glory of God,' in the middle of his argument for justification by grace?",
     choices: ["Paul", "Peter", "James", "John"],
     answer: 0,
     reference: "Romans 3:23-24",
-    verseText: "For all have sinned, and come short of the glory of God."
+    verseText: "For all have sinned and fall short of the glory of God."
   },
   {
     id: 14110,
@@ -1313,11 +1313,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'The wages of sin is death; but the gift of God is eternal life,' contrasting slavery to sin with union in Christ?",
+    question: "Who wrote, 'The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord,' contrasting slavery to sin with union in Christ?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Romans 6:23",
-    verseText: "The wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."
+    verseText: "The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
   },
   {
     id: 14111,
@@ -1325,11 +1325,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'If God be for us, who can be against us?' while celebrating the security of those in Christ?",
+    question: "Who wrote, 'If God is for us, who can be against us?' while celebrating the security of those in Christ?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Romans 8:31-39",
-    verseText: "If God be for us, who can be against us?"
+    verseText: "If God is for us, who can be against us?"
   },
   {
     id: 14112,
@@ -1337,7 +1337,7 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who urged believers to 'Present your bodies a living sacrifice,' translating gospel theology into embodied worship?",
+    question: "Who urged believers to 'present your bodies a living sacrifice,' translating gospel theology into embodied worship?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Romans 12:1",
@@ -1349,7 +1349,7 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God,' in a discussion about Christian liberty and conscience?",
+    question: "Who wrote, 'Therefore, whether you eat or drink, or whatever you do, do all to the glory of God,' in a discussion about Christian liberty and conscience?",
     choices: ["Paul", "Peter", "James", "John"],
     answer: 0,
     reference: "1 Corinthians 10:31",
@@ -1361,11 +1361,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Though I speak with the tongues of men and of angels, and have not charity,' showing that giftedness without love is empty?",
+    question: "Who wrote, 'Though I speak with the tongues of men and of angels, but have not love,' showing that giftedness without love is empty?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "1 Corinthians 13:1-3",
-    verseText: "Though I speak with the tongues of men and of angels, and have not charity."
+    verseText: "Though I speak with the tongues of men and of angels, but have not love."
   },
   {
     id: 14115,
@@ -1385,11 +1385,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who heard, 'My grace is sufficient for thee,' in answer to prayer about a persistent thorn?",
+    question: "Who heard, 'My grace is sufficient for you,' in answer to prayer about a persistent thorn?",
     choices: ["Paul", "Peter", "John", "An angel"],
     answer: 0,
     reference: "2 Corinthians 12:7-9",
-    verseText: "My grace is sufficient for thee."
+    verseText: "My grace is sufficient for you."
   },
   {
     id: 14117,
@@ -1409,11 +1409,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'God forbid that I should glory, save in the cross of our Lord Jesus Christ,' making the cross the only ground of boasting?",
+    question: "Who wrote, 'God forbid that I should boast except in the cross of our Lord Jesus Christ,' making the cross the only ground of boasting?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Galatians 6:14",
-    verseText: "God forbid that I should glory, save in the cross of our Lord Jesus Christ."
+    verseText: "God forbid that I should boast except in the cross of our Lord Jesus Christ."
   },
   {
     id: 14119,
@@ -1421,11 +1421,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'By grace are ye saved through faith,' placing salvation outside human merit and inside divine gift?",
+    question: "Who wrote, 'For by grace you have been saved through faith,' placing salvation outside human merit and inside divine gift?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Ephesians 2:8-10",
-    verseText: "By grace are ye saved through faith."
+    verseText: "For by grace you have been saved through faith."
   },
   {
     id: 14120,
@@ -1433,11 +1433,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who urged believers to 'Put on the whole armour of God,' framing Christian life as warfare against spiritual powers?",
+    question: "Who urged believers to 'Put on the whole armor of God,' framing Christian life as warfare against spiritual powers?",
     choices: ["Paul", "Peter", "James", "John"],
     answer: 0,
     reference: "Ephesians 6:10-18",
-    verseText: "Put on the whole armour of God."
+    verseText: "Put on the whole armor of God."
   },
   {
     id: 14121,
@@ -1445,11 +1445,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'For to me to live is Christ, and to die is gain,' turning imprisonment into theological testimony?",
+    question: "Who wrote, 'For to me, to live is Christ, and to die is gain,' turning imprisonment into theological testimony?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Philippians 1:20-21",
-    verseText: "For to me to live is Christ, and to die is gain."
+    verseText: "For to me, to live is Christ, and to die is gain."
   },
   {
     id: 14122,
@@ -1457,11 +1457,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Let this mind be in you, which was also in Christ Jesus,' grounding humility in Christ's descent and exaltation?",
+    question: "Who wrote, 'Let this mind be in you which was also in Christ Jesus,' grounding humility in Christ's descent and exaltation?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Philippians 2:5-11",
-    verseText: "Let this mind be in you, which was also in Christ Jesus."
+    verseText: "Let this mind be in you which was also in Christ Jesus."
   },
   {
     id: 14123,
@@ -1469,11 +1469,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'I can do all things through Christ which strengtheneth me,' in a context about contentment rather than limitless self-assertion?",
+    question: "Who wrote, 'I can do all things through Christ who strengthens me,' in a context about contentment rather than limitless self-assertion?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Philippians 4:11-13",
-    verseText: "I can do all things through Christ which strengtheneth me."
+    verseText: "I can do all things through Christ who strengthens me."
   },
   {
     id: 14124,
@@ -1505,11 +1505,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'God was manifest in the flesh,' in a verse celebrating the mystery of godliness?",
+    question: "Who wrote, 'God was manifested in the flesh,' in a verse celebrating the mystery of godliness?",
     choices: ["Paul", "Peter", "John", "Luke"],
     answer: 0,
     reference: "1 Timothy 3:16",
-    verseText: "God was manifest in the flesh."
+    verseText: "God was manifested in the flesh."
   },
   {
     id: 14127,
@@ -1517,11 +1517,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who urged, 'Study to shew thyself approved unto God,' in a pastoral letter about rightly handling the word of truth?",
+    question: "Who urged, 'Be diligent to present yourself approved to God,' in a pastoral letter about rightly handling the word of truth?",
     choices: ["Paul", "Peter", "James", "John"],
     answer: 0,
     reference: "2 Timothy 2:15",
-    verseText: "Study to shew thyself approved unto God."
+    verseText: "Be diligent to present yourself approved to God."
   },
   {
     id: 14128,
@@ -1529,11 +1529,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'I have fought a good fight, I have finished my course, I have kept the faith,' as martyrdom approached?",
+    question: "Who said, 'I have fought the good fight, I have finished the race, I have kept the faith,' as martyrdom approached?",
     choices: ["Paul", "Peter", "John", "Stephen"],
     answer: 0,
     reference: "2 Timothy 4:6-8",
-    verseText: "I have fought a good fight, I have finished my course, I have kept the faith."
+    verseText: "I have fought the good fight, I have finished the race, I have kept the faith."
   },
   {
     id: 14129,
@@ -1541,11 +1541,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Looking for that blessed hope,' tying ethics to the appearing of Christ?",
+    question: "Who wrote, 'Looking for the blessed hope,' tying ethics to the appearing of Christ?",
     choices: ["Paul", "Peter", "John", "James"],
     answer: 0,
     reference: "Titus 2:11-13",
-    verseText: "Looking for that blessed hope."
+    verseText: "Looking for the blessed hope."
   },
   {
     id: 14130,
@@ -1553,11 +1553,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Without faith it is impossible to please him,' in a chapter built around persevering trust across redemptive history?",
+    question: "Who wrote, 'Without faith it is impossible to please Him,' in a chapter built around persevering trust across redemptive history?",
     choices: ["The writer of Hebrews", "Paul", "Peter", "James"],
     answer: 0,
     reference: "Hebrews 11:1-6",
-    verseText: "Without faith it is impossible to please him."
+    verseText: "Without faith it is impossible to please Him."
   },
   {
     id: 14131,
@@ -1565,11 +1565,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Jesus Christ the same yesterday, and to day, and for ever,' in a letter exalting Christ's final priesthood?",
+    question: "Who wrote, 'Jesus Christ is the same yesterday, today, and forever,' in a letter exalting Christ's final priesthood?",
     choices: ["The writer of Hebrews", "Paul", "Peter", "John"],
     answer: 0,
     reference: "Hebrews 13:8",
-    verseText: "Jesus Christ the same yesterday, and to day, and for ever."
+    verseText: "Jesus Christ is the same yesterday, today, and forever."
   },
   {
     id: 14132,
@@ -1577,11 +1577,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Be ye doers of the word, and not hearers only,' insisting that reception of truth must become lived obedience?",
+    question: "Who wrote, 'But be doers of the word, and not hearers only,' insisting that reception of truth must become lived obedience?",
     choices: ["James", "Peter", "John", "Paul"],
     answer: 0,
     reference: "James 1:22",
-    verseText: "Be ye doers of the word, and not hearers only."
+    verseText: "But be doers of the word, and not hearers only."
   },
   {
     id: 14133,
@@ -1601,11 +1601,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'The tongue can no man tame,' in a warning about the destructive power of speech within the covenant community?",
+    question: "Who wrote, 'No man can tame the tongue,' in a warning about the destructive power of speech within the covenant community?",
     choices: ["James", "Peter", "Paul", "Jude"],
     answer: 0,
     reference: "James 3:5-10",
-    verseText: "The tongue can no man tame."
+    verseText: "No man can tame the tongue."
   },
   {
     id: 14135,
@@ -1613,11 +1613,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Draw nigh to God, and he will draw nigh to you,' as part of a call to repentance from worldliness?",
+    question: "Who wrote, 'Draw near to God and He will draw near to you,' as part of a call to repentance from worldliness?",
     choices: ["James", "Peter", "Paul", "John"],
     answer: 0,
     reference: "James 4:7-10",
-    verseText: "Draw nigh to God, and he will draw nigh to you."
+    verseText: "Draw near to God and He will draw near to you."
   },
   {
     id: 14136,
@@ -1625,11 +1625,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Casting all your care upon him; for he careth for you,' in the middle of exhortations to humble endurance?",
+    question: "Who wrote, 'Casting all your care upon Him, for He cares for you,' in the middle of exhortations to humble endurance?",
     choices: ["Peter", "Paul", "James", "John"],
     answer: 0,
     reference: "1 Peter 5:6-7",
-    verseText: "Casting all your care upon him; for he careth for you."
+    verseText: "Casting all your care upon Him, for He cares for you."
   },
   {
     id: 14137,
@@ -1637,11 +1637,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about,' framing suffering in spiritual conflict terms?",
+    question: "Who wrote, 'Be sober, be vigilant; because your adversary the devil walks about like a roaring lion,' framing suffering in spiritual conflict terms?",
     choices: ["Peter", "James", "Paul", "John"],
     answer: 0,
     reference: "1 Peter 5:8-9",
-    verseText: "Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about."
+    verseText: "Be sober, be vigilant; because your adversary the devil walks about like a roaring lion."
   },
   {
     id: 14138,
@@ -1649,11 +1649,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'We have not followed cunningly devised fables,' grounding apostolic proclamation in witnessed majesty?",
+    question: "Who wrote, 'For we did not follow cunningly devised fables,' grounding apostolic proclamation in witnessed majesty?",
     choices: ["Peter", "Paul", "John", "Luke"],
     answer: 0,
     reference: "2 Peter 1:16-18",
-    verseText: "We have not followed cunningly devised fables."
+    verseText: "For we did not follow cunningly devised fables."
   },
   {
     id: 14139,
@@ -1661,11 +1661,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'No prophecy of the scripture is of any private interpretation,' locating prophecy's origin in the Holy Ghost rather than human will?",
+    question: "Who wrote, 'No prophecy of Scripture is of any private interpretation,' locating prophecy's origin in the Holy Spirit rather than human will?",
     choices: ["Peter", "Paul", "John", "James"],
     answer: 0,
     reference: "2 Peter 1:20-21",
-    verseText: "No prophecy of the scripture is of any private interpretation."
+    verseText: "No prophecy of Scripture is of any private interpretation."
   },
   {
     id: 14140,
@@ -1673,11 +1673,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'God is light, and in him is no darkness at all,' joining theology to tests of fellowship and truth?",
+    question: "Who wrote, 'God is light, and in Him is no darkness at all,' joining theology to tests of fellowship and truth?",
     choices: ["John", "Peter", "Paul", "James"],
     answer: 0,
     reference: "1 John 1:5-7",
-    verseText: "God is light, and in him is no darkness at all."
+    verseText: "God is light, and in Him is no darkness at all."
   },
   {
     id: 14141,
@@ -1685,11 +1685,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'If we confess our sins, he is faithful and just to forgive us our sins,' connecting honesty about sin with divine cleansing?",
+    question: "Who wrote, 'If we confess our sins, He is faithful and just to forgive us our sins,' connecting honesty about sin with divine cleansing?",
     choices: ["John", "James", "Paul", "Peter"],
     answer: 0,
     reference: "1 John 1:9",
-    verseText: "If we confess our sins, he is faithful and just to forgive us our sins."
+    verseText: "If we confess our sins, He is faithful and just to forgive us our sins."
   },
   {
     id: 14142,
@@ -1697,11 +1697,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Love not the world, neither the things that are in the world,' warning against rival loves and passing desires?",
+    question: "Who wrote, 'Do not love the world or the things in the world,' warning against rival loves and passing desires?",
     choices: ["John", "Peter", "Paul", "James"],
     answer: 0,
     reference: "1 John 2:15-17",
-    verseText: "Love not the world, neither the things that are in the world."
+    verseText: "Do not love the world or the things in the world."
   },
   {
     id: 14143,
@@ -1721,11 +1721,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote, 'Perfect love casteth out fear,' in a discussion where confidence before God grows out of His prior love?",
+    question: "Who wrote, 'Perfect love casts out fear,' in a discussion where confidence before God grows out of His prior love?",
     choices: ["John", "Paul", "Peter", "James"],
     answer: 0,
     reference: "1 John 4:17-19",
-    verseText: "Perfect love casteth out fear."
+    verseText: "Perfect love casts out fear."
   },
   {
     id: 14145,
@@ -1733,11 +1733,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who wrote that believers should 'earnestly contend for the faith which was once delivered unto the saints'?",
+    question: "Who wrote that believers should 'earnestly contend for the faith which was once for all delivered to the saints'?",
     choices: ["Jude", "Peter", "John", "James"],
     answer: 0,
     reference: "Jude 1:3",
-    verseText: "Earnestly contend for the faith which was once delivered unto the saints."
+    verseText: "Earnestly contend for the faith which was once for all delivered to the saints."
   },
   {
     id: 14146,
@@ -1757,11 +1757,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who sang, 'Worthy is the Lamb that was slain,' interpreting redemptive victory through sacrificial death?",
+    question: "Who sang, 'Worthy is the Lamb who was slain,' interpreting redemptive victory through sacrificial death?",
     choices: ["Many angels around the throne", "The dragon's followers", "The merchants of Babylon", "The kings of the earth"],
     answer: 0,
     reference: "Revelation 5:11-12",
-    verseText: "Worthy is the Lamb that was slain."
+    verseText: "Worthy is the Lamb who was slain."
   },
   {
     id: 14148,
@@ -1769,11 +1769,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who declared, 'Now is come salvation, and strength, and the kingdom of our God,' after Satan was cast down?",
+    question: "Who declared, 'Now salvation, and strength, and the kingdom of our God...have come,' after Satan was cast down?",
     choices: ["A loud voice in heaven", "John", "Michael", "One of the elders"],
     answer: 0,
     reference: "Revelation 12:10",
-    verseText: "Now is come salvation, and strength, and the kingdom of our God."
+    verseText: "Now salvation, and strength, and the kingdom of our God...have come."
   },
   {
     id: 14149,
@@ -1781,11 +1781,11 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who said, 'Surely I come quickly,' in the final exchange of the canon's closing chapter?",
+    question: "Who said, 'Surely I am coming quickly,' in the final exchange of the canon's closing chapter?",
     choices: ["Jesus", "John", "An angel", "The Spirit and the bride"],
     answer: 0,
     reference: "Revelation 22:20",
-    verseText: "Surely I come quickly."
+    verseText: "Surely I am coming quickly."
   },
   {
     id: 14150,
@@ -1793,10 +1793,10 @@ const quotesQuestions = [
     testament: "New Testament",
     category: "Speaker and Setting",
     difficulty: "Advanced",
-    question: "Who replied, 'Even so, come, Lord Jesus,' answering the promise of Christ's coming with longing rather than fear?",
+    question: "Who replied, 'Amen. Even so, come, Lord Jesus!' answering the promise of Christ's coming with longing rather than fear?",
     choices: ["John", "Peter", "Paul", "Jude"],
     answer: 0,
     reference: "Revelation 22:20",
-    verseText: "Even so, come, Lord Jesus."
+    verseText: "Amen. Even so, come, Lord Jesus!"
   }
 ];
