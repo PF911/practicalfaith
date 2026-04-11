@@ -13,9 +13,10 @@ body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gr
 .app{position:relative;width:100%;max-width:430px;min-height:100vh;margin:0 auto;text-align:center;}
 
 /* ── Typography ─────────────────────────────────────────────────────────── */
-.title{font-family:'Fredoka One','Arial Black',sans-serif;color:var(--purple);line-height:1;margin:0;font-size:60px;letter-spacing:1px;text-shadow:2px 2px 4px rgba(0,0,0,.35);}
+.title{font-family:'Fredoka One','Arial Black',sans-serif;color:var(--purple);line-height:1.1;margin:0;font-size:52px;letter-spacing:1px;}
+.title .title-top{display:block;font-size:32px;letter-spacing:0px;white-space:nowrap;}
 .subtitle{font-family:'Fredoka One','Arial Black',sans-serif;font-size:28px;color:var(--purple);margin:8px 0 0;}
-.subline{font-size:22px;color:var(--purple);font-weight:900;margin:10px 0 0;text-shadow:2px 2px 4px rgba(0,0,0,.2);}
+.subline{font-size:32px;color:var(--purple);font-weight:900;margin:10px 0 0;}
 .level-subtitle{min-height:34px;}
 .level-note{color:var(--purple);font-size:18px;font-weight:700;margin:8px 0 14px;}
 
@@ -246,7 +247,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 .confetti{position:fixed;top:-12px;width:10px;height:16px;opacity:.95;pointer-events:none;animation:fall linear forwards;z-index:1200;}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.95;}}
 
-@media (max-width:420px){.title{font-size:52px}.subtitle{font-size:24px}.question-text{font-size:21px}}
+@media (max-width:420px){.title{font-size:44px}.title .title-top{font-size:20px}.subtitle{font-size:24px}.question-text{font-size:21px}}
 </style>
 </head>
 <body>
@@ -257,15 +258,15 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="menu" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">Choose Your Challenge</div>
 
   <button class="menu-btn" onclick="startDailyChallenge()">📅 <span>Daily Challenge</span></button>
 
-  <button class="menu-btn" onclick="currentCategory='Is It Accurate?'; selectLevel('Advanced')">🧠 <span>Is It Accurate?</span></button>
+  <button class="menu-btn" onclick="currentCategory='Is It Accurate?'; selectLevel('Advanced')"><img src="images/is--it-accurate.png" class="menu-icon"> <span>Is It Accurate?</span></button>
   <div class="cat-strip" data-category="Is It Accurate?"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Who Am I?'; selectLevel('Advanced')">🕵️ <span>Who Am I?</span></button>
+  <button class="menu-btn" onclick="currentCategory='Who Am I?'; selectLevel('Advanced')"><img src="images/who-ami.png" class="menu-icon"> <span>Who Am I?</span></button>
   <div class="cat-strip" data-category="Who Am I?"></div>
 
   <button class="menu-btn" onclick="currentCategory='General Bible Trivia'; selectLevel('Advanced')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
@@ -286,7 +287,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   <button class="menu-btn" onclick="currentCategory='Biblical Typology'; selectLevel('Advanced')">🧩 <span>Biblical Typology</span></button>
   <div class="cat-strip" data-category="Biblical Typology"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Miracles of Jesus'; selectLevel('Advanced')">✨ <span>Miracles of Jesus</span></button>
+  <button class="menu-btn" onclick="currentCategory='Miracles of Jesus'; selectLevel('Advanced')"><img src="images/miracles.png" class="menu-icon"> <span>Miracles of Jesus</span></button>
   <div class="cat-strip" data-category="Miracles of Jesus"></div>
 
   <button class="menu-btn" onclick="currentCategory='Old Testament Events'; selectLevel('Advanced')">📜 <span>Old Testament Events</span></button>
@@ -295,16 +296,16 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   <button class="menu-btn" onclick="currentCategory='Parables'; selectLevel('Advanced')">🌾 <span>Parables</span></button>
   <div class="cat-strip" data-category="Parables"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Bible Geography'; selectLevel('Advanced')">🗺️ <span>Bible Geography</span></button>
+  <button class="menu-btn" onclick="currentCategory='Bible Geography'; selectLevel('Advanced')"><img src="images/geography.png" class="menu-icon"> <span>Bible Geography</span></button>
   <div class="cat-strip" data-category="Bible Geography"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Apostles & Early Church'; selectLevel('Advanced')">⛪ <span>Apostles &amp; Early Church</span></button>
+  <button class="menu-btn" onclick="currentCategory='Apostles & Early Church'; selectLevel('Advanced')"><img src="images/apostles.png" class="menu-icon"> <span>Apostles &amp; Early Church</span></button>
   <div class="cat-strip" data-category="Apostles & Early Church"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Letters of the Apostles'; selectLevel('Advanced')">✉️ <span>Letters of the Apostles</span></button>
+  <button class="menu-btn" onclick="currentCategory='Letters of the Apostles'; selectLevel('Advanced')"><img src="images/letters.png" class="menu-icon"> <span>Letters of the Apostles</span></button>
   <div class="cat-strip" data-category="Letters of the Apostles"></div>
 
-  <button class="menu-btn" onclick="currentCategory='Names and Meanings'; selectLevel('Advanced')">📛 <span>Names and Meanings</span></button>
+  <button class="menu-btn" onclick="currentCategory='Names and Meanings'; selectLevel('Advanced')"><img src="images/names.png" class="menu-icon"> <span>Names and Meanings</span></button>
   <div class="cat-strip" data-category="Names and Meanings"></div>
 
   <div id="menuProgressSummary" class="menu-progress-summary" style="width:90%;max-width:350px;margin:10px auto 4px;text-align:left;"></div>
@@ -322,7 +323,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="levelMenu" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div id="levelCategory" class="subtitle level-subtitle"></div>
   <div class="subline">Choose Your Level</div>
   <div class="level-note">Advanced questions only</div>
@@ -334,7 +335,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="quizScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div id="quizCategory" class="subtitle level-subtitle"></div>
   <div id="quizLevel" class="level-note"></div>
   <div class="quiz-card">
@@ -367,7 +368,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="resultScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div id="resultCategory" class="subtitle level-subtitle"></div>
   <div id="resultLevel" class="level-note"></div>
   <div class="quiz-card">
@@ -388,14 +389,14 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="reviewScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">Answer Review</div>
   <div id="reviewList" class="review-list"></div>
   <div class="back-row"><button class="small-btn" onclick="showScreen('resultScreen')">← Back to Results</button></div>
 </section>
 
 <section id="completionScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">Category Complete</div>
   <div class="completion-card">
     <div class="completion-big">⭐ <span id="completionCategory"></span></div>
@@ -410,14 +411,14 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="highScoresScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">High Scores</div>
   <div id="scoresList" class="scores-list"></div>
   <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
 </section>
 
 <section id="statsScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">My Stats</div>
   <div id="statsList" class="stats-list"></div>
   <div class="achievements-heading">🏅 Achievements</div>
@@ -426,7 +427,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="myVersesScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">My Verses</div>
   <div class="level-note" style="font-size:15px;">Verses you've bookmarked during quizzes</div>
   <div id="myVersesList" class="verses-list"></div>
@@ -434,7 +435,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="settingsScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">Settings</div>
   <div class="settings-card">
     <div class="settings-row">
@@ -466,14 +467,14 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="progressScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">Category Progress</div>
   <div id="progressList" class="progress-list"></div>
   <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
 </section>
 
 <section id="aboutScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">App Features</div>
   <div class="quiz-card about-copy">
     <div style="font-size:20px;font-weight:900;margin-bottom:14px;text-align:center;">What this app includes</div>
@@ -699,7 +700,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 </section>
 
 <section id="dailyScreen" class="screen">
-  <h1 class="title">Practical Faith<br>Advanced Quiz</h1>
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
   <div class="subtitle">Daily Challenge</div>
   <div id="dailyDateLabel" class="level-note"></div>
   <div id="dailyProgressRow" class="daily-progress-row" style="display:none;">
