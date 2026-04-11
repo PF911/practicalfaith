@@ -242,12 +242,6 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
 .feature-label{font-size:16px;font-weight:900;color:var(--purple);line-height:1.2;}
 .feature-desc{font-size:14px;font-weight:700;color:#555;margin-top:2px;line-height:1.3;}
 
-/* ── Explanation (Why?) panel ───────────────────────────────────────────── */
-.why-row{margin-top:8px;display:none;}
-.why-btn{background:none;border:2px solid var(--purple);color:var(--purple);font-size:14px;font-weight:900;border-radius:10px;padding:5px 14px;cursor:pointer;font-family:'Nunito',Arial,sans-serif;}
-.why-panel{display:none;margin-top:8px;padding:10px 12px;background:#f0eafa;border:2px solid var(--purple);border-radius:12px;font-size:14px;font-weight:800;color:#3a1a6e;line-height:1.5;text-align:left;}
-.why-panel.open{display:block;}
-
 /* ── Confetti ────────────────────────────────────────────────────────────── */
 .confetti{position:fixed;top:-12px;width:10px;height:16px;opacity:.95;pointer-events:none;animation:fall linear forwards;z-index:1200;}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.95;}}
@@ -313,7 +307,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
   <button class="menu-btn" onclick="currentCategory='Names and Meanings'; selectLevel('Advanced')">📛 <span>Names and Meanings</span></button>
   <div class="cat-strip" data-category="Names and Meanings"></div>
 
-    <div id="menuProgressSummary" class="menu-progress-summary" style="width:90%;max-width:350px;margin:10px auto 4px;text-align:left;"></div>
+  <div id="menuProgressSummary" class="menu-progress-summary" style="width:90%;max-width:350px;margin:10px auto 4px;text-align:left;"></div>
 
   <div class="bottom">
     <button class="small-btn" onclick="openHighScores()">🏆 Scores</button>
@@ -336,7 +330,6 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     🎓 <span>Advanced</span>
   </button>
   <button id="practiceBtn" class="menu-btn practice-btn" style="display:none;" onclick="startPracticeMode()">🎯 <span>Practice Tough Questions</span></button>
-  <button id="unseenBtn" class="menu-btn practice-btn" style="display:none;" onclick="startUnseenMode()">📚 <span>Unseen Questions</span></button>
   <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
 </section>
 
@@ -364,10 +357,6 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     <div id="verseText" class="verse-text"></div>
     <div id="verseActionRow" class="verse-action-row" style="display:none;">
       <button id="showVerseBtn" class="verse-link" type="button" onclick="openVerseModal()">📖 <span>Click to See the Verse</span></button>
-    </div>
-    <div id="whyRow" class="why-row">
-      <button id="whyBtn" class="why-btn" type="button" onclick="toggleWhy()">💡 Why?</button>
-      <div id="whyPanel" class="why-panel"></div>
     </div>
     <button id="nextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextQuestion()">Next Question</button>
   </div>
@@ -681,23 +670,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
       </div>
     </div>
 
-    <div class="feature-item">
-      <div class="feature-icon">✉️</div>
-      <div class="feature-body">
-        <div class="feature-label">Letters of the Apostles</div>
-        <div class="feature-desc">Deep study of the NT epistles — Paul, Hebrews, Peter, James, John, and Jude</div>
-      </div>
-    </div>
-
-    <div class="feature-item">
-      <div class="feature-icon">📛</div>
-      <div class="feature-body">
-        <div class="feature-label">Names and Meanings</div>
-        <div class="feature-desc">Explore renaming events, name meanings, divine names, and place names across Scripture</div>
-      </div>
-    </div>
-
-        <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(107,47,189,.18);text-align:center;">
+    <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(107,47,189,.18);text-align:center;">
       <div style="font-weight:900;margin-bottom:6px;color:var(--purple);">
         Looking for more?
       </div>
@@ -746,10 +719,6 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
       <div id="dailyVerseRef" class="verse-ref"></div>
       <div id="dailyVerseActionRow" class="verse-action-row" style="display:none;">
         <button id="dailyShowVerseBtn" class="verse-link" type="button" onclick="openDailyVerseModal()">📖 <span>Click to See the Verse</span></button>
-      </div>
-      <div id="dailyWhyRow" class="why-row">
-        <button id="dailyWhyBtn" class="why-btn" type="button" onclick="toggleDailyWhy()">💡 Why?</button>
-        <div id="dailyWhyPanel" class="why-panel"></div>
       </div>
       <button id="dailyNextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextDailyQuestion()">Next Question</button>
     </div>
@@ -812,7 +781,7 @@ input:checked + .toggle-track:before{transform:translateX(24px);}
     <div style="background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid #ffc107;border-radius:16px;padding:18px 20px;width:100%;margin-bottom:24px;">
       <div style="font-size:22px;font-weight:900;color:var(--purple);margin-bottom:6px;">🏆 Pro Upgrade — $1.99</div>
       <div style="font-size:14px;color:#555;line-height:1.9;text-align:left;display:inline-block;">
-        <div>✅ 1,100+ questions unlocked</div>
+        <div>✅ 1,001+ questions unlocked</div>
         <div>✅ Advanced question set</div>
         <div>✅ Daily Challenge every day</div>
         <div>✅ Bookmarks &amp; verse saving</div>

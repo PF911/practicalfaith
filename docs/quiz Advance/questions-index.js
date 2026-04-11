@@ -35,6 +35,7 @@
     "Geography":     "Bible Geography",
     "Apostles":      "Apostles & Early Church",
     "Typology":      "Biblical Typology",
+    "Miracles":     "Miracles of Jesus",
     "Parables":      "Parables"
   };
 
