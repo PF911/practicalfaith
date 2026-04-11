@@ -35,7 +35,7 @@ const isItAccurateQuestions = [
     "id": 20003,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Judge not, that ye be not judged.' means believers must never evaluate doctrine or conduct.",
+    "question": "True, False, Not Stated, or Misquoted: 'Judge not, that you be not judged.' means believers must never evaluate doctrine or conduct.",
     "choices": [
       "True",
       "False",
@@ -195,7 +195,7 @@ const isItAccurateQuestions = [
     "id": 20013,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Money answereth all things.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Money answers all things.'",
     "choices": [
       "True",
       "False",
@@ -483,7 +483,7 @@ const isItAccurateQuestions = [
     "id": 20031,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Man looketh on the outward appearance, but the LORD looketh on the heart.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Man looks on the outward appearance, but the LORD looks on the heart.'",
     "choices": [
       "True",
       "False",
@@ -493,13 +493,13 @@ const isItAccurateQuestions = [
     "answer": 0,
     "reference": "1 Samuel 16:7",
     "verseText": "Man looks at the outward appearance, but the LORD looks at the heart.",
-    "explanation": "1 Samuel 16:7 says 'man looks at the outward appearance, but the LORD looks at the heart.' The KJV form in the question ('looketh') preserves the same text. The saying is accurate."
+    "explanation": "1 Samuel 16:7 says 'man looks at the outward appearance, but the LORD looks at the heart.' The modern form in the question preserves the same text. The saying is accurate."
   },
   {
     "id": 20032,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Ask, and it shall be given you; seek, and ye shall find.' guarantees immediate answers in the timing we prefer.",
+    "question": "True, False, Not Stated, or Misquoted: 'Ask, and it shall be given you; seek, and you shall find.' guarantees immediate answers in the timing we prefer.",
     "choices": [
       "True",
       "False",
@@ -515,7 +515,7 @@ const isItAccurateQuestions = [
     "id": 20033,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'The letter killeth, but the spirit giveth life.'",
+    "question": "True, False, Not Stated, or Misquoted: 'The letter kills, but the spirit gives life.'",
     "choices": [
       "True",
       "False",
@@ -531,7 +531,7 @@ const isItAccurateQuestions = [
     "id": 20034,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Be ye therefore perfect, even as your Father which is in heaven is perfect.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Be therefore perfect, even as your Father which is in heaven is perfect.'",
     "choices": [
       "True",
       "False",
@@ -675,7 +675,7 @@ const isItAccurateQuestions = [
     "id": 20044,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Whom the Lord loveth he chasteneth.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Whom the Lord loves he disciplines.'",
     "choices": [
       "True",
       "False",
@@ -739,7 +739,7 @@ const isItAccurateQuestions = [
     "id": 20048,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'The name of the LORD is a strong tower: the righteous runneth into it, and is safe.'",
+    "question": "True, False, Not Stated, or Misquoted: 'The name of the LORD is a strong tower: the righteous runs into it, and is safe.'",
     "choices": [
       "True",
       "False",
@@ -787,7 +787,7 @@ const isItAccurateQuestions = [
     "id": 20051,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Out of the abundance of the heart the mouth speaketh.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Out of the abundance of the heart the mouth speaks.'",
     "choices": [
       "True",
       "False",
@@ -819,7 +819,7 @@ const isItAccurateQuestions = [
     "id": 20053,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'By grace are ye saved through faith; and that not of yourselves: it is the gift of God.'",
+    "question": "True, False, Not Stated, or Misquoted: 'By grace are you saved through faith; and that not of yourselves: it is the gift of God.'",
     "choices": [
       "True",
       "False",
@@ -1011,7 +1011,7 @@ const isItAccurateQuestions = [
     "id": 20065,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'A merry heart doeth good like a medicine.'",
+    "question": "True, False, Not Stated, or Misquoted: 'A merry heart does good like a medicine.'",
     "choices": [
       "True",
       "False",
@@ -1155,7 +1155,7 @@ const isItAccurateQuestions = [
     "id": 20075,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'A little leaven leaveneth the whole lump.'",
+    "question": "True, False, Not Stated, or Misquoted: 'A little leaven leavens the whole lump.'",
     "choices": [
       "True",
       "False",
@@ -1171,7 +1171,7 @@ const isItAccurateQuestions = [
     "id": 20076,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'My grace is sufficient for thee: for my strength is made perfect in weakness.'",
+    "question": "True, False, Not Stated, or Misquoted: 'My grace is sufficient for you: for my strength is made perfect in weakness.'",
     "choices": [
       "True",
       "False",
@@ -1219,7 +1219,7 @@ const isItAccurateQuestions = [
     "id": 20079,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Let not your heart be troubled: ye believe in God, believe also in me.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Let not your heart be troubled: you believe in God, believe also in me.'",
     "choices": [
       "True",
       "False",
@@ -1283,7 +1283,7 @@ const isItAccurateQuestions = [
     "id": 20083,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Perfect love casteth out fear.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Perfect love casts out fear.'",
     "choices": [
       "True",
       "False",
@@ -1315,7 +1315,7 @@ const isItAccurateQuestions = [
     "id": 20085,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'A soft answer turneth away wrath.'",
+    "question": "True, False, Not Stated, or Misquoted: 'A soft answer turns away wrath.'",
     "choices": [
       "True",
       "False",
@@ -1331,7 +1331,7 @@ const isItAccurateQuestions = [
     "id": 20086,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'The laborer is worthy of his hire.'",
+    "question": "True, False, Not Stated, or Misquoted: 'The laborer is worthy of his wages.'",
     "choices": [
       "True",
       "False",
@@ -1341,7 +1341,7 @@ const isItAccurateQuestions = [
     "answer": 3,
     "reference": "Luke 10:7; 1 Timothy 5:18",
     "verseText": "The laborer is worthy of his wages.",
-    "explanation": "Luke 10:7 and 1 Timothy 5:18 say 'the laborer is worthy of his wages' (misthos — wage/reward). The popular form 'worthy of his hire' uses the KJV word for 'hire,' but hire and wages mean the same thing — this is a stylistic variant, not a substantive distortion. The answer Misquoted reflects that 'hire' vs 'wages' is a word-level substitution."
+    "explanation": "Luke 10:7 and 1 Timothy 5:18 say 'the laborer is worthy of his wages' (misthos — wage/reward). The popular form 'worthy of his wages' uses the KJV word for 'hire,' but hire and wages mean the same thing — this is a stylistic variant, not a substantive distortion. The answer Misquoted reflects that 'hire' vs 'wages' is a word-level substitution."
   },
   {
     "id": 20087,
@@ -1363,7 +1363,7 @@ const isItAccurateQuestions = [
     "id": 20088,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Neither do I condemn thee: go, and sin no more.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Neither do I condemn you: go, and sin no more.'",
     "choices": [
       "True",
       "False",
@@ -1411,7 +1411,7 @@ const isItAccurateQuestions = [
     "id": 20091,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Thou shalt not muzzle the ox when he treadeth out the corn.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Do not muzzle the ox when it treads out the grain.'",
     "choices": [
       "True",
       "False",
@@ -1443,7 +1443,7 @@ const isItAccurateQuestions = [
     "id": 20093,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Add thou not unto his words, lest he reprove thee, and thou be found a liar.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Add not to his words, lest he reprove you, and you be found a liar.'",
     "choices": [
       "True",
       "False",
@@ -1555,7 +1555,7 @@ const isItAccurateQuestions = [
     "id": 20100,
     "game": "Is It Accurate?",
     "difficulty": "Advanced",
-    "question": "True, False, Not Stated, or Misquoted: 'Faith cometh by hearing, and hearing by the word of God.'",
+    "question": "True, False, Not Stated, or Misquoted: 'Faith comes by hearing, and hearing by the word of God.'",
     "choices": [
       "True",
       "False",
