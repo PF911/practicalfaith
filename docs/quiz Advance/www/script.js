@@ -82,7 +82,11 @@ const PRO_KEY         = "bibleQuizPro";
 const FREE_USED_KEY   = "bibleQuizFreeUsed";
 
 // ─── Free tier limits ─────────────────────────────────────────────────────────
-const FREE_LIMITS = { Beginner: 25, Student: 5, Scholar: 3 };
+// Daily Challenge unchanged
+// Trivia fully open
+// All other categories: 10 total free questions, then lock
+
+const FREE_LIMIT_PER_CATEGORY = 10;
 
 function isProUnlocked(){
   try{ return localStorage.getItem(PRO_KEY) === 'true'; }catch(e){ return false; }
@@ -92,20 +96,25 @@ function getFreeUsed(){
   try{ return JSON.parse(localStorage.getItem(FREE_USED_KEY) || '{}'); }catch(e){ return {}; }
 }
 
-function addFreeUsed(level, count){
+function addFreeUsed(category, count){
+  if(isProUnlocked()) return;
+  if(category === 'Trivia') return;
+  if(category === 'Daily') return;
   try{
     const used = getFreeUsed();
-    used[level] = (used[level] || 0) + count;
+    used[category] = (used[category] || 0) + count;
     localStorage.setItem(FREE_USED_KEY, JSON.stringify(used));
   }catch(e){}
 }
 
-function freeLimitReached(level){
+function freeLimitReached(category){
   if(isProUnlocked()) return false;
-  if(!FREE_LIMITS[level]) return false;
+  if(category === 'Trivia') return false;
+  if(category === 'Daily') return false;
   const used = getFreeUsed();
-  return (used[level] || 0) >= FREE_LIMITS[level];
+  return (used[category] || 0) >= FREE_LIMIT_PER_CATEGORY;
 }
+
 function unlockPro(){
   try{ localStorage.setItem(PRO_KEY, 'true'); }catch(e){}
   try{ localStorage.removeItem(FREE_USED_KEY); }catch(e){}
@@ -116,23 +125,25 @@ function unlockPro(){
 }
 window.unlockPro = unlockPro;
 
-function showPaywall(level){
+function showPaywall(category){
   const msg = document.getElementById('paywallMessage');
   if(msg){
-    if(level === 'Daily'){
+    if(category === 'Daily'){
       msg.innerHTML = `You've used your <strong>free Daily Challenge</strong>.<br><br>
         Unlock <strong>Pro</strong> to get 5 new questions every day, build streaks, and track your daily progress —<br>
         <em>are you up for the challenge?</em>`;
+    } else if(category === 'Trivia'){
+      msg.innerHTML = `Trivia is fully open in the free version.`;
     } else {
-      const previewed = FREE_LIMITS[level] || 5;
-      msg.innerHTML = `You've completed your <strong>${previewed} free ${level} questions</strong>.<br><br>
-        You're just getting started. <strong>1,001+ questions</strong> across 3 levels are waiting —<br>
+      msg.innerHTML = `You've completed your <strong>10 free questions</strong> in <strong>${category}</strong>.<br><br>
+        Unlock <strong>Pro</strong> for full access to <strong>1,001+ questions</strong> across all categories —<br>
         <em>are you up for the challenge?</em>`;
     }
   }
   showScreen('paywallScreen');
 }
 window.showPaywall = showPaywall;
+
 const ACHIEVEMENT_KEY = "bibleQuizAchievements";
 const BOOKMARKS_KEY   = "bibleQuizBookmarks";
 const WRONG_KEY       = "bibleQuizWrongAnswers";
@@ -140,24 +151,24 @@ const SETTINGS_KEY    = "bibleQuizSettings";
 const TUTORIAL_KEY    = "bibleQuizTutorialSeen";
 
 // Quiz state
-let currentCategory        = '';
-let currentLevel           = '';
-let currentQuestions       = [];
-let currentQuestionIndex   = 0;
-let score                  = 0;
-let answered               = false;
-let correctStreak          = 0;
+let currentCategory         = '';
+let currentLevel            = '';
+let currentQuestions        = [];
+let currentQuestionIndex    = 0;
+let score                   = 0;
+let answered                = false;
+let correctStreak           = 0;
 let bestStreakThisQuiz      = 0;
-let attemptsThisQuestion   = 0;
-let disabledAnswers        = [];
-let currentVerseRef        = '';
-let currentVerseText       = '';
-let currentQuestion        = null;
+let attemptsThisQuestion    = 0;
+let disabledAnswers         = [];
+let currentVerseRef         = '';
+let currentVerseText        = '';
+let currentQuestion         = null;
 let categoryCompleteAtStart = false;
-let isPracticeMode         = false;
+let isPracticeMode          = false;
 
-// Quiz results (session only — for Review screen)
-let quizResults = [];   // [{q, wasCorrect, attemptsUsed}]
+// Quiz results
+let quizResults = [];
 
 // Timer state
 let timerInterval = null;
@@ -165,13 +176,13 @@ let timerValue    = 0;
 let timerDuration = 15;
 
 // Daily state
-let dailyQuestions    = [];
-let dailyIndex        = 0;
-let dailyScore        = 0;
-let dailyAnswers      = [];  // [{wasCorrect}]
-let dailyAnsweredCurrent = false;
-let dailyVerseRef     = '';
-let dailyVerseText    = '';
+let dailyQuestions        = [];
+let dailyIndex            = 0;
+let dailyScore            = 0;
+let dailyAnswers          = [];
+let dailyAnsweredCurrent  = false;
+let dailyVerseRef         = '';
+let dailyVerseText        = '';
 
 // ─── Navigation ──────────────────────────────────────────────────────────────
 
@@ -179,6 +190,7 @@ function showScreen(id){
   stopTimer();
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   const el = document.getElementById(id);
+  if(!el) return;
   el.classList.add("active");
   window.scrollTo(0, 0);
   document.body.scrollTop = 0;
@@ -194,17 +206,19 @@ function showScreen(id){
 
 function openLevelMenu(category){
   currentCategory = category;
-  document.getElementById('levelCategory').textContent = category;
-  // Show/hide Practice Tough Ones button
+  const levelCategory = document.getElementById('levelCategory');
+  if(levelCategory) levelCategory.textContent = category;
+
   const practiceBtn = document.getElementById('practiceBtn');
   if(practiceBtn){
     const wrongIds = loadWrongAnswers();
     const hasTough = Object.keys(wrongIds).some(id => {
-      const q = (typeof quizQuestions !== 'undefined') && quizQuestions.find(q => String(q.id) === id);
+      const q = (typeof quizQuestions !== 'undefined') && quizQuestions.find(item => String(item.id) === id);
       return q && q.game === category;
     });
     practiceBtn.style.display = hasTough ? 'flex' : 'none';
   }
+
   showScreen('levelMenu');
 }
 function openHighScores(){ renderHighScores(); showScreen('highScoresScreen'); }
@@ -212,26 +226,26 @@ function openStats(){ renderStats(); renderAchievements(); showScreen('statsScre
 function openAbout(){ showScreen('aboutScreen'); }
 function openMyVerses(){ renderMyVerses(); showScreen('myVersesScreen'); }
 function openSettings(){ renderSettingsUI(); showScreen('settingsScreen'); }
-// Expose ALL onclick-called functions on window to guarantee global scope
-window.openHighScores      = openHighScores;
-window.openStats           = openStats;
-window.openAbout           = openAbout;
-window.openMyVerses        = openMyVerses;
-window.openSettings        = openSettings;
-window.openLevelMenu       = openLevelMenu;
-window.showScreen          = showScreen;
-window.selectLevel         = selectLevel;
-window.submitAnswer        = submitAnswer;
-window.nextQuestion        = nextQuestion;
-window.restartLevel        = restartLevel;
+
+window.openHighScores = openHighScores;
+window.openStats = openStats;
+window.openAbout = openAbout;
+window.openMyVerses = openMyVerses;
+window.openSettings = openSettings;
+window.openLevelMenu = openLevelMenu;
+window.showScreen = showScreen;
+window.selectLevel = selectLevel;
+window.submitAnswer = submitAnswer;
+window.nextQuestion = nextQuestion;
+window.restartLevel = restartLevel;
 window.startDailyChallenge = startDailyChallenge;
-window.submitDailyAnswer   = submitDailyAnswer;
+window.submitDailyAnswer = submitDailyAnswer;
 window.openDailyVerseModal = openDailyVerseModal;
-window.closeDailyVerseModal= closeDailyVerseModal;
-window.openVerseModal      = openVerseModal;
-window.closeVerseModal     = closeVerseModal;
+window.closeDailyVerseModal = closeDailyVerseModal;
+window.openVerseModal = openVerseModal;
+window.closeVerseModal = closeVerseModal;
 window.closeAchievementPopup = closeAchievementPopup;
-window.openReview          = openReview;
+window.openReview = openReview;
 
 // ─── Progress Storage ────────────────────────────────────────────────────────
 
@@ -264,37 +278,44 @@ function getCategoryTotals(){
 }
 function isCategoryFullyComplete(category){
   const totals = getCategoryTotals();
-  const total  = Number(totals[category] || 0);
+  const total = Number(totals[category] || 0);
   if(total <= 0) return false;
   return getAnsweredCount(loadProgress(), category) >= total;
 }
 function getCategoryMedal(pct){
   if(pct >= 100) return "⭐";
-  if(pct >= 75)  return "🥇";
-  if(pct >= 50)  return "🥈";
-  if(pct >= 25)  return "🥉";
+  if(pct >= 75) return "🥇";
+  if(pct >= 50) return "🥈";
+  if(pct >= 25) return "🥉";
   return "";
 }
 
 // ─── Menu Progress ───────────────────────────────────────────────────────────
 
 function renderMenuProgress(){
-  const summary  = document.getElementById('menuProgressSummary');
+  const summary = document.getElementById('menuProgressSummary');
   const progress = loadProgress();
-  const totals   = getCategoryTotals();
+  const totals = getCategoryTotals();
   const categories = Object.keys(totals);
   let completedCategories = 0;
 
   document.querySelectorAll('.cat-strip').forEach(strip => {
     const category = strip.getAttribute('data-category');
-    const done     = getAnsweredCount(progress, category);
-    const total    = Number(totals[category] || 0);
-    if(total === 0){ strip.style.display = 'none'; strip.innerHTML = ''; return; }
+    const done = getAnsweredCount(progress, category);
+    const total = Number(totals[category] || 0);
+
+    if(total === 0){
+      strip.style.display = 'none';
+      strip.innerHTML = '';
+      return;
+    }
+
     strip.style.display = '';
-    const pct   = Math.min(100, Math.round((done / total) * 100));
+    const pct = Math.min(100, Math.round((done / total) * 100));
     if(pct === 100) completedCategories++;
     const medal = getCategoryMedal(pct);
     const badge = pct === 100 ? ' &nbsp;<span class="cat-strip-badge">🏆 Completed</span>' : '';
+
     strip.innerHTML = `
       <div class="cat-strip-head">
         <span>${medal ? medal + ' ' : ''}${done} / ${total} &nbsp; ${pct}%${badge}</span>
@@ -308,6 +329,7 @@ function renderMenuProgress(){
   if(summary){
     summary.textContent = `Categories Completed: ${completedCategories} / ${categories.length}`;
   }
+
   document.querySelectorAll('.cat-strip .progress-fill').forEach(fill => {
     const target = fill.getAttribute('data-width') || '0%';
     requestAnimationFrame(() => requestAnimationFrame(() => { fill.style.width = target; }));
@@ -324,19 +346,19 @@ function saveStats(stats){
 }
 function recordQuizStats(category, level, scoreVal, total, bestStreak){
   const stats = loadStats();
-  stats.totalQuizzes   = (stats.totalQuizzes   || 0) + 1;
-  stats.totalCorrect   = (stats.totalCorrect   || 0) + scoreVal;
+  stats.totalQuizzes   = (stats.totalQuizzes || 0) + 1;
+  stats.totalCorrect   = (stats.totalCorrect || 0) + scoreVal;
   stats.totalQuestions = (stats.totalQuestions || 0) + total;
   if(bestStreak > (stats.bestStreak || 0)) stats.bestStreak = bestStreak;
   if(!stats.highScores) stats.highScores = [];
   stats.highScores.push({ category, level, score: scoreVal, total, date: new Date().toLocaleDateString() });
-  stats.highScores.sort((a,b) => (b.score/b.total) - (a.score/a.total));
+  stats.highScores.sort((a, b) => (b.score / b.total) - (a.score / a.total));
   if(stats.highScores.length > 20) stats.highScores = stats.highScores.slice(0, 20);
   saveStats(stats);
 }
 function renderHighScores(){
   const stats = loadStats();
-  const list  = document.getElementById('scoresList');
+  const list = document.getElementById('scoresList');
   if(!list) return;
   const scores = stats.highScores || [];
   if(!scores.length){
@@ -353,11 +375,11 @@ function renderHighScores(){
 }
 function renderStats(){
   const stats = loadStats();
-  const list  = document.getElementById('statsList');
+  const list = document.getElementById('statsList');
   if(!list) return;
-  const total   = stats.totalQuestions || 0;
-  const correct = stats.totalCorrect   || 0;
-  const pct     = total > 0 ? Math.round((correct / total) * 100) : 0;
+  const total = stats.totalQuestions || 0;
+  const correct = stats.totalCorrect || 0;
+  const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   list.innerHTML = `
     <div class="stat-row"><div class="stat-label">Total Quizzes Played</div><div class="stat-value">${stats.totalQuizzes || 0}</div></div>
     <div class="stat-row"><div class="stat-label">Total Questions Answered</div><div class="stat-value">${total}</div></div>
@@ -369,7 +391,7 @@ function renderStats(){
 // ─── Streak Badge ─────────────────────────────────────────────────────────────
 
 function updateStreakBadge(){
-  const wrap  = document.getElementById('streakWrap');
+  const wrap = document.getElementById('streakWrap');
   const count = document.getElementById('streakCount');
   if(!wrap || !count) return;
   if(correctStreak >= 3){
@@ -394,10 +416,10 @@ function shuffleArray(array){
 }
 
 function scoreText(scoreVal, total){
-  if(scoreVal === total)                         return "🏆 Bible Master!";
-  if(scoreVal >= total - 1)                      return "⭐ Bible Scholar!";
-  if(scoreVal >= Math.ceil(total * 0.7))         return "📘 Solid Student!";
-  if(scoreVal >= Math.ceil(total * 0.5))         return "🌱 Getting Warmer!";
+  if(scoreVal === total) return "🏆 Bible Master!";
+  if(scoreVal >= total - 1) return "⭐ Bible Scholar!";
+  if(scoreVal >= Math.ceil(total * 0.7)) return "📘 Solid Student!";
+  if(scoreVal >= Math.ceil(total * 0.5)) return "🌱 Getting Warmer!";
   return "🔍 Keep Studying!";
 }
 
@@ -418,7 +440,7 @@ function renderSettingsUI(){
   const dur = document.getElementById('timerDuration');
   const row = document.getElementById('timerDurationRow');
   if(tog) tog.checked = s.timerEnabled;
-  if(dur) dur.value   = String(s.timerSeconds);
+  if(dur) dur.value = String(s.timerSeconds);
   if(row) row.style.display = s.timerEnabled ? 'flex' : 'none';
 }
 function onTimerToggleChange(){
@@ -437,7 +459,7 @@ function saveSettingsFromUI(){
   showScreen('menu');
 }
 window.onTimerToggleChange = onTimerToggleChange;
-window.saveSettingsFromUI  = saveSettingsFromUI;
+window.saveSettingsFromUI = saveSettingsFromUI;
 
 // ─── Timer ────────────────────────────────────────────────────────────────────
 
@@ -453,16 +475,16 @@ function startTimer(){
   if(!settings.timerEnabled) return;
 
   timerDuration = settings.timerSeconds || 15;
-  timerValue    = timerDuration;
+  timerValue = timerDuration;
 
-  const row   = document.getElementById('timerRow');
+  const row = document.getElementById('timerRow');
   const count = document.getElementById('timerCount');
-  const fill  = document.getElementById('timerFill');
+  const fill = document.getElementById('timerFill');
   if(!row || !count || !fill) return;
 
   row.style.display = 'flex';
   count.textContent = timerValue;
-  fill.style.width  = '100%';
+  fill.style.width = '100%';
   fill.style.background = '#3e9b4f';
 
   timerInterval = setInterval(() => {
@@ -492,11 +514,11 @@ function onTimerExpired(){
   buttons[q.answer].classList.add('correct');
 
   const feedback = document.getElementById('feedback');
-  feedback.textContent = '⏰ Time\'s Up!';
-  feedback.className   = 'feedback wrong';
+  feedback.textContent = "⏰ Time's Up!";
+  feedback.className = 'feedback wrong';
   updateStreakBadge();
 
-  currentVerseRef  = q.reference || '';
+  currentVerseRef = q.reference || '';
   currentVerseText = q.verseText || '';
   document.getElementById('verseRef').textContent = currentVerseRef;
   const verseRow = document.getElementById('verseActionRow');
@@ -507,7 +529,7 @@ function onTimerExpired(){
   quizResults.push({ q, wasCorrect: false, attemptsUsed: 0 });
 
   const nextBtn = document.getElementById('nextBtn');
-  nextBtn.textContent   = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
+  nextBtn.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
   nextBtn.style.display = 'flex';
 }
 
@@ -516,14 +538,14 @@ function onTimerExpired(){
 function saveGameState(){
   try{
     const state = {
-      category:           currentCategory,
-      level:              currentLevel,
-      questions:          currentQuestions,
-      questionIndex:      currentQuestionIndex,
-      score:              score,
-      correctStreak:      correctStreak,
+      category: currentCategory,
+      level: currentLevel,
+      questions: currentQuestions,
+      questionIndex: currentQuestionIndex,
+      score: score,
+      correctStreak: correctStreak,
       bestStreakThisQuiz: bestStreakThisQuiz,
-      isPracticeMode:     isPracticeMode
+      isPracticeMode: isPracticeMode
     };
     localStorage.setItem(SAVE_KEY, JSON.stringify(state));
   }catch(e){}
@@ -540,19 +562,19 @@ function confirmReset(){
   try{
     [STATS_KEY, DAILY_KEY, PROGRESS_KEY, SAVE_KEY, ACHIEVEMENT_KEY, BOOKMARKS_KEY, WRONG_KEY].forEach(k => localStorage.removeItem(k));
   }catch(e){}
-  const resumeBtn  = document.getElementById('resumeBtn');
+  const resumeBtn = document.getElementById('resumeBtn');
   const resumeNote = document.getElementById('resumeNote');
-  const resetBtn   = document.getElementById('resetBtn');
-  if(resumeBtn)  { resumeBtn.style.display  = 'none'; }
-  if(resumeNote) { resumeNote.style.display = 'none'; }
-  if(resetBtn)   { resetBtn.style.display   = 'none'; }
+  const resetBtn = document.getElementById('resetBtn');
+  if(resumeBtn) resumeBtn.style.display = 'none';
+  if(resumeNote) resumeNote.style.display = 'none';
+  if(resetBtn) resetBtn.style.display = 'none';
   try{ renderMenuProgress(); }catch(e){}
   alert('✅ All progress has been reset. Good luck starting fresh!');
 }
 window.confirmReset = confirmReset;
 
 function checkForSavedGame(){
-  const state    = loadGameState();
+  const state = loadGameState();
   const resetBtn = document.getElementById('resetBtn');
   const hasAnyData = !!(
     state ||
@@ -563,26 +585,30 @@ function checkForSavedGame(){
   if(resetBtn) resetBtn.style.display = hasAnyData ? 'block' : 'none';
   if(!state) return;
 
-  const resumeBtn  = document.getElementById('resumeBtn');
+  const resumeBtn = document.getElementById('resumeBtn');
   const resumeNote = document.getElementById('resumeNote');
   if(!resumeBtn) return;
 
-  const total = (state.questions && state.questions.length)
-    || (state.questionIds && state.questionIds.length) || 0;
-  if(!total){ clearGameState(); return; }
+  const total = (state.questions && state.questions.length) || (state.questionIds && state.questionIds.length) || 0;
+  if(!total){
+    clearGameState();
+    return;
+  }
 
   resumeBtn.style.display = 'block';
   resumeBtn.onclick = () => resumeLastQuiz();
   if(resumeNote){
     resumeNote.style.display = 'block';
-    resumeNote.textContent   =
-      `${state.category} · ${state.level} — Question ${(state.questionIndex || 0) + 1} of ${total}`;
+    resumeNote.textContent = `${state.category} · ${state.level} — Question ${(state.questionIndex || 0) + 1} of ${total}`;
   }
 }
 
 function resumeLastQuiz(){
   const state = loadGameState();
-  if(!state){ clearGameState(); return; }
+  if(!state){
+    clearGameState();
+    return;
+  }
 
   let questions = state.questions || [];
   if(!questions.length && state.questionIds && typeof quizQuestions !== 'undefined'){
@@ -590,18 +616,22 @@ function resumeLastQuiz(){
     quizQuestions.forEach(q => { if(q.id) idMap[String(q.id)] = q; });
     questions = state.questionIds.map(id => idMap[String(id)]).filter(Boolean);
   }
-  if(!questions.length){ clearGameState(); checkForSavedGame(); return; }
+  if(!questions.length){
+    clearGameState();
+    checkForSavedGame();
+    return;
+  }
 
-  currentCategory         = state.category        || '';
-  currentLevel            = state.level            || '';
-  currentQuestions        = questions;
-  currentQuestionIndex    = state.questionIndex    || 0;
-  score                   = state.score            || 0;
-  correctStreak           = state.correctStreak    || 0;
-  bestStreakThisQuiz      = state.bestStreakThisQuiz || 0;
-  isPracticeMode          = state.isPracticeMode   || false;
+  currentCategory = state.category || '';
+  currentLevel = state.level || '';
+  currentQuestions = questions;
+  currentQuestionIndex = state.questionIndex || 0;
+  score = state.score || 0;
+  correctStreak = state.correctStreak || 0;
+  bestStreakThisQuiz = state.bestStreakThisQuiz || 0;
+  isPracticeMode = state.isPracticeMode || false;
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
-  quizResults             = [];
+  quizResults = [];
 
   loadQuestion();
   showScreen('quizScreen');
@@ -640,15 +670,15 @@ function startPracticeMode(){
     return;
   }
 
-  isPracticeMode          = true;
-  currentLevel            = 'Practice';
+  isPracticeMode = true;
+  currentLevel = 'Practice';
   categoryCompleteAtStart = false;
-  currentQuestions        = pool;
-  currentQuestionIndex    = 0;
-  score                   = 0;
-  correctStreak           = 0;
-  bestStreakThisQuiz      = 0;
-  quizResults             = [];
+  currentQuestions = pool;
+  currentQuestionIndex = 0;
+  score = 0;
+  correctStreak = 0;
+  bestStreakThisQuiz = 0;
+  quizResults = [];
 
   loadQuestion();
   saveGameState();
@@ -659,14 +689,15 @@ window.startPracticeMode = startPracticeMode;
 // ─── Quiz Flow ────────────────────────────────────────────────────────────────
 
 function selectLevel(level){
+  level = 'Advanced';
+
   if(typeof quizQuestions === 'undefined' || !quizQuestions.length){
     alert('Questions failed to load. Please check your questions/ folder and questions-index.js are uploaded to the server.');
     return;
   }
 
-  // Block at the door if free limit already used up
-  if(freeLimitReached(level)){
-    showPaywall(level);
+  if(freeLimitReached(currentCategory)){
+    showPaywall(currentCategory);
     return;
   }
 
@@ -674,26 +705,35 @@ function selectLevel(level){
   isPracticeMode = false;
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
 
-  const allForLevel = shuffleArray(
-    quizQuestions.filter(q => q.game === currentCategory && q.difficulty === level)
+  const allForCategory = shuffleArray(
+    quizQuestions.filter(q => q.game === currentCategory)
   );
 
-  if(!allForLevel.length){
-    alert(`No "${level}" questions found for "${currentCategory}".\n\nTotal questions loaded: ${quizQuestions.length}\n\nCheck that your question files use the correct game name.`);
+  if(!allForCategory.length){
+    alert(`No questions found for "${currentCategory}".`);
     return;
   }
 
-  // Apply free tier limit if not pro
-  const used = isProUnlocked() ? 0 : (getFreeUsed()[level] || 0);
-  const remaining = isProUnlocked() ? QUESTIONS_PER_ROUND : Math.max(0, FREE_LIMITS[level] - used);
-  const limit = isProUnlocked() ? QUESTIONS_PER_ROUND : remaining;
-  currentQuestions = allForLevel.slice(0, limit);
+  let limit = QUESTIONS_PER_ROUND;
+
+  if(!isProUnlocked() && currentCategory !== 'Trivia'){
+    const used = getFreeUsed()[currentCategory] || 0;
+    const remaining = Math.max(0, FREE_LIMIT_PER_CATEGORY - used);
+    limit = Math.min(QUESTIONS_PER_ROUND, remaining);
+  }
+
+  currentQuestions = allForCategory.slice(0, limit);
+
+  if(!currentQuestions.length){
+    showPaywall(currentCategory);
+    return;
+  }
 
   currentQuestionIndex = 0;
-  score                = 0;
-  correctStreak        = 0;
-  bestStreakThisQuiz   = 0;
-  quizResults          = [];
+  score = 0;
+  correctStreak = 0;
+  bestStreakThisQuiz = 0;
+  quizResults = [];
 
   loadQuestion();
   saveGameState();
@@ -705,30 +745,38 @@ function renderQuestion(){
   currentQuestion = q;
 
   document.getElementById('quizCategory').textContent = currentCategory;
-  document.getElementById('quizLevel').textContent    =
-    isPracticeMode ? '🎯 Practice Mode' : currentLevel;
-  document.getElementById('quizMeta').textContent     =
-    'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
+  document.getElementById('quizLevel').textContent = isPracticeMode ? '🎯 Practice Mode' : currentLevel;
+  document.getElementById('quizMeta').textContent = 'Question ' + (currentQuestionIndex + 1) + ' of ' + currentQuestions.length;
 
   const labels = ['A) ','B) ','C) ','D) '];
   q.choices.forEach((choice, i) => {
-    const btn       = document.getElementById('answer' + i);
+    const btn = document.getElementById('answer' + i);
     btn.textContent = labels[i] + choice;
-    btn.className   = 'answer-btn';
-    btn.disabled    = false;
+    btn.className = 'answer-btn';
+    btn.disabled = false;
   });
 
   const qText = document.getElementById('questionText');
-  if(q.question.startsWith("Choose One:")){
-    qText.innerHTML =
-      `<span class="choose-tag">[Choose One]</span> ${q.question.replace("Choose One:", "").trim()}`;
+  let displayQuestion = q.question || '';
+
+  if(currentCategory === 'Is It Accurate?'){
+    displayQuestion = displayQuestion.replace(/^True,\s*False,\s*Not Stated,\s*or Misquoted:\s*/i, '');
+    displayQuestion = '[Choose One] ' + displayQuestion.trim();
+  }
+
+  if(currentCategory === 'Who Am I?'){
+    displayQuestion = displayQuestion.replace(/^Who am I\?\s*/i, '');
+  }
+
+  if(displayQuestion.startsWith("Choose One:")){
+    qText.innerHTML = `<span class="choose-tag">[Choose One]</span> ${displayQuestion.replace("Choose One:", "").trim()}`;
   } else {
-    qText.textContent = q.question;
+    qText.textContent = displayQuestion;
   }
 
   document.getElementById('feedback').textContent = '';
-  document.getElementById('feedback').className   = 'feedback';
-  document.getElementById('verseRef').textContent  = '';
+  document.getElementById('feedback').className = 'feedback';
+  document.getElementById('verseRef').textContent = '';
 
   const verseRow = document.getElementById('verseActionRow');
   if(verseRow) verseRow.style.display = 'none';
@@ -740,12 +788,12 @@ function renderQuestion(){
 }
 
 function loadQuestion(){
-  answered             = false;
+  answered = false;
   attemptsThisQuestion = 0;
-  disabledAnswers      = [];
-  currentVerseRef      = '';
-  currentVerseText     = '';
-  currentQuestion      = null;
+  disabledAnswers = [];
+  currentVerseRef = '';
+  currentVerseText = '';
+  currentQuestion = null;
   renderQuestion();
   startTimer();
 }
@@ -756,8 +804,8 @@ function submitAnswer(index){
   attemptsThisQuestion++;
   stopTimer();
 
-  const q        = currentQuestions[currentQuestionIndex];
-  const buttons  = document.querySelectorAll('#quizScreen .answer-btn');
+  const q = currentQuestions[currentQuestionIndex];
+  const buttons = document.querySelectorAll('#quizScreen .answer-btn');
   const feedback = document.getElementById('feedback');
 
   if(index === q.answer){
@@ -771,27 +819,25 @@ function submitAnswer(index){
     buttons.forEach(btn => btn.disabled = true);
     buttons[index].classList.add('correct');
     feedback.textContent = attemptsThisQuestion === 2 ? randomFrom(recoveryMessages) : randomFrom(correctMessages);
-    feedback.className   = 'feedback correct';
+    feedback.className = 'feedback correct';
     updateStreakBadge();
 
-    currentVerseRef  = q.reference || '';
+    currentVerseRef = q.reference || '';
     currentVerseText = q.verseText || '';
     document.getElementById('verseRef').textContent = currentVerseRef;
     const verseRow = document.getElementById('verseActionRow');
     if(verseRow) verseRow.style.display = currentVerseText ? 'flex' : 'none';
 
     recordQuestionProgress(q);
-    // In practice mode, remove from wrong list when answered correctly
     if(isPracticeMode) clearWrongAnswer(q);
     quizResults.push({ q, wasCorrect: true, attemptsUsed: attemptsThisQuestion });
 
     const nextBtn = document.getElementById('nextBtn');
-    nextBtn.textContent   = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
+    nextBtn.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
     nextBtn.style.display = 'flex';
     return;
   }
 
-  // Wrong answer
   playWrong();
   buttons[index].classList.add('wrong');
   buttons[index].disabled = true;
@@ -800,22 +846,21 @@ function submitAnswer(index){
   if(attemptsThisQuestion === 1){
     correctStreak = 0;
     feedback.textContent = randomFrom(tryAgainMessages);
-    feedback.className   = 'feedback wrong';
+    feedback.className = 'feedback wrong';
     updateStreakBadge();
-    startTimer(); // restart timer for second attempt
+    startTimer();
     return;
   }
 
-  // Second wrong attempt
-  answered      = true;
+  answered = true;
   correctStreak = 0;
   buttons[q.answer].classList.add('correct');
   buttons.forEach(btn => btn.disabled = true);
   feedback.textContent = randomFrom(incorrectMessages);
-  feedback.className   = 'feedback wrong';
+  feedback.className = 'feedback wrong';
   updateStreakBadge();
 
-  currentVerseRef  = q.reference || '';
+  currentVerseRef = q.reference || '';
   currentVerseText = q.verseText || '';
   document.getElementById('verseRef').textContent = currentVerseRef;
   const verseRow = document.getElementById('verseActionRow');
@@ -826,7 +871,7 @@ function submitAnswer(index){
   quizResults.push({ q, wasCorrect: false, attemptsUsed: attemptsThisQuestion });
 
   const nextBtn = document.getElementById('nextBtn');
-  nextBtn.textContent   = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
+  nextBtn.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'See Score' : 'Next Question';
   nextBtn.style.display = 'flex';
 }
 
@@ -850,34 +895,31 @@ function showResults(){
   renderMenuProgress();
 
   document.getElementById('resultCategory').textContent = currentCategory + (isPracticeMode ? ' (Practice)' : '');
-  document.getElementById('resultLevel').textContent    = isPracticeMode ? '🎯 Practice Mode' : currentLevel;
-  document.getElementById('scoreBig').textContent       = score + ' / ' + currentQuestions.length;
-  document.getElementById('scoreSub').textContent       = scoreText(score, currentQuestions.length);
+  document.getElementById('resultLevel').textContent = isPracticeMode ? '🎯 Practice Mode' : currentLevel;
+  document.getElementById('scoreBig').textContent = score + ' / ' + currentQuestions.length;
+  document.getElementById('scoreSub').textContent = scoreText(score, currentQuestions.length);
 
   const perfectBox = document.getElementById('perfectBox');
   if(perfectBox) perfectBox.style.display = score === currentQuestions.length ? 'block' : 'none';
 
-  // 🔥 Streak bonus
   const streakBonusBox = document.getElementById('streakBonusBox');
   if(streakBonusBox){
     let bonusMsg = '';
-    if(bestStreakThisQuiz >= 10)      bonusMsg = `🔥🔥🔥 Incredible! ${bestStreakThisQuiz}-question streak!`;
-    else if(bestStreakThisQuiz >= 7)  bonusMsg = `🔥🔥 Amazing! ${bestStreakThisQuiz}-question streak!`;
-    else if(bestStreakThisQuiz >= 5)  bonusMsg = `🔥 Hot streak! ${bestStreakThisQuiz} in a row!`;
-    else if(bestStreakThisQuiz >= 3)  bonusMsg = `🔥 ${bestStreakThisQuiz}-answer streak!`;
-    streakBonusBox.textContent   = bonusMsg;
+    if(bestStreakThisQuiz >= 10) bonusMsg = `🔥🔥🔥 Incredible! ${bestStreakThisQuiz}-question streak!`;
+    else if(bestStreakThisQuiz >= 7) bonusMsg = `🔥🔥 Amazing! ${bestStreakThisQuiz}-question streak!`;
+    else if(bestStreakThisQuiz >= 5) bonusMsg = `🔥 Hot streak! ${bestStreakThisQuiz} in a row!`;
+    else if(bestStreakThisQuiz >= 3) bonusMsg = `🔥 ${bestStreakThisQuiz}-answer streak!`;
+    streakBonusBox.textContent = bonusMsg;
     streakBonusBox.style.display = bonusMsg ? 'block' : 'none';
   }
 
-  // Difficulty up-sell
   const levelUpBox = document.getElementById('levelUpBox');
   if(levelUpBox){
     let upMsg = '';
     if(!isPracticeMode && score === currentQuestions.length){
-      if(currentLevel === 'Beginner')       upMsg = '🚀 Aced it! Ready to try Student level?';
-      else if(currentLevel === 'Student')   upMsg = '🎓 Mastered it! Try Scholar next!';
+      upMsg = '🚀 Great job! Ready for more?';
     }
-    levelUpBox.textContent   = upMsg;
+    levelUpBox.textContent = upMsg;
     levelUpBox.style.display = upMsg ? 'block' : 'none';
   }
 
@@ -888,11 +930,12 @@ function showResults(){
 
   checkOverallAchievements();
 
-  // Show paywall after free session ends (non-pro users)
-  if(!isProUnlocked() && !isPracticeMode && FREE_LIMITS[currentLevel]){
-    addFreeUsed(currentLevel, currentQuestions.length);
-    showScreen('paywallScreen');
-    return;
+  if(!isProUnlocked() && !isPracticeMode && currentCategory !== 'Trivia'){
+    addFreeUsed(currentCategory, currentQuestions.length);
+    if(freeLimitReached(currentCategory)){
+      showPaywall(currentCategory);
+      return;
+    }
   }
 
   showScreen('resultScreen');
@@ -902,18 +945,21 @@ function showResults(){
 
 function shareScore(){
   const category = document.getElementById('resultCategory').textContent || currentCategory;
-  const level    = document.getElementById('resultLevel').textContent    || currentLevel;
-  const scoreStr = document.getElementById('scoreBig').textContent       || (score + ' / ' + currentQuestions.length);
+  const level = document.getElementById('resultLevel').textContent || currentLevel;
+  const scoreStr = document.getElementById('scoreBig').textContent || (score + ' / ' + currentQuestions.length);
   const msg = `I scored ${scoreStr} on ${category} (${level}) in the Bible Quiz Challenge! Can you beat me? 📖🏆\nhttps://PracticalFaith.net/quiz`;
 
   if(navigator.share){
     navigator.share({ title: 'Bible Quiz Challenge', text: msg }).catch(() => {});
   } else {
-    // Fallback: copy to clipboard
     try{
       navigator.clipboard.writeText(msg).then(() => {
         const btn = document.getElementById('shareBtn');
-        if(btn){ const orig = btn.textContent; btn.textContent = '✅ Copied!'; setTimeout(() => btn.textContent = orig, 2000); }
+        if(btn){
+          const orig = btn.textContent;
+          btn.textContent = '✅ Copied!';
+          setTimeout(() => btn.textContent = orig, 2000);
+        }
       });
     }catch(e){
       prompt('Copy your score to share:', msg);
@@ -963,52 +1009,61 @@ function saveAchievements(a){
 }
 function getOverallPct(){
   const progress = loadProgress();
-  const totals   = getCategoryTotals();
-  const totalQ   = Object.values(totals).reduce((s,n) => s+n, 0);
+  const totals = getCategoryTotals();
+  const totalQ = Object.values(totals).reduce((s, n) => s + n, 0);
   if(totalQ === 0) return 0;
   const done = Object.keys(totals).reduce((s, cat) => s + getAnsweredCount(progress, cat), 0);
   return Math.round((done / totalQ) * 100);
 }
 function checkOverallAchievements(){
-  const pct    = getOverallPct();
+  const pct = getOverallPct();
   const earned = loadAchievements();
   const milestones = [
-    { key:'p25',  pct:25,  icon:'🥉', label:'Bronze Scholar — 25% complete!' },
-    { key:'p50',  pct:50,  icon:'🥈', label:'Silver Scholar — 50% complete!' },
-    { key:'p75',  pct:75,  icon:'🥇', label:'Gold Scholar — 75% complete!' },
-    { key:'p100', pct:100, icon:'🏆', label:'Bible Champion — 100% complete!' },
+    { key:'p25', pct:25, icon:'🥉', label:'Bronze Scholar — 25% complete!' },
+    { key:'p50', pct:50, icon:'🥈', label:'Silver Scholar — 50% complete!' },
+    { key:'p75', pct:75, icon:'🥇', label:'Gold Scholar — 75% complete!' },
+    { key:'p100', pct:100, icon:'🏆', label:'Bible Champion — 100% complete!' }
   ];
   let newMilestone = null;
   milestones.forEach(m => {
-    if(pct >= m.pct && !earned[m.key]){ earned[m.key] = true; newMilestone = m; }
+    if(pct >= m.pct && !earned[m.key]){
+      earned[m.key] = true;
+      newMilestone = m;
+    }
   });
-  if(newMilestone){ saveAchievements(earned); showAchievementPopup(newMilestone); }
+  if(newMilestone){
+    saveAchievements(earned);
+    showAchievementPopup(newMilestone);
+  }
 }
 function showAchievementPopup(milestone){
   const popup = document.getElementById('achievementPopup');
-  const icon  = document.getElementById('achievementIcon');
-  const msg   = document.getElementById('achievementMsg');
+  const icon = document.getElementById('achievementIcon');
+  const msg = document.getElementById('achievementMsg');
   if(!popup || !icon || !msg) return;
   icon.textContent = milestone.icon;
-  msg.textContent  = milestone.label;
+  msg.textContent = milestone.label;
   popup.classList.add('open');
   clearTimeout(popup._timer);
   popup._timer = setTimeout(() => popup.classList.remove('open'), 4000);
 }
 function closeAchievementPopup(){
   const popup = document.getElementById('achievementPopup');
-  if(popup){ clearTimeout(popup._timer); popup.classList.remove('open'); }
+  if(popup){
+    clearTimeout(popup._timer);
+    popup.classList.remove('open');
+  }
 }
 function renderAchievements(){
   const box = document.getElementById('achievementsList');
   if(!box) return;
-  const earned  = loadAchievements();
-  const pct     = getOverallPct();
+  const earned = loadAchievements();
+  const pct = getOverallPct();
   const milestones = [
-    { key:'p25',  pct:25,  icon:'🥉', label:'Bronze Scholar',  sub:'25% of all questions answered' },
-    { key:'p50',  pct:50,  icon:'🥈', label:'Silver Scholar',  sub:'50% of all questions answered' },
-    { key:'p75',  pct:75,  icon:'🥇', label:'Gold Scholar',    sub:'75% of all questions answered' },
-    { key:'p100', pct:100, icon:'🏆', label:'Bible Champion',  sub:'100% of all questions answered!' },
+    { key:'p25', pct:25, icon:'🥉', label:'Bronze Scholar', sub:'25% of all questions answered' },
+    { key:'p50', pct:50, icon:'🥈', label:'Silver Scholar', sub:'50% of all questions answered' },
+    { key:'p75', pct:75, icon:'🥇', label:'Gold Scholar', sub:'75% of all questions answered' },
+    { key:'p100', pct:100, icon:'🏆', label:'Bible Champion', sub:'100% of all questions answered!' }
   ];
   box.innerHTML = milestones.map(m => {
     const done = earned[m.key];
@@ -1031,16 +1086,30 @@ function showCategoryCompletion(){
 }
 
 function restartLevel(){
-  isPracticeMode          = false;
-  currentQuestionIndex    = 0;
-  score                   = 0;
-  correctStreak           = 0;
-  bestStreakThisQuiz      = 0;
-  quizResults             = [];
+  isPracticeMode = false;
+  currentQuestionIndex = 0;
+  score = 0;
+  correctStreak = 0;
+  bestStreakThisQuiz = 0;
+  quizResults = [];
   categoryCompleteAtStart = isCategoryFullyComplete(currentCategory);
+
+  let limit = QUESTIONS_PER_ROUND;
+  if(!isProUnlocked() && currentCategory !== 'Trivia'){
+    const used = getFreeUsed()[currentCategory] || 0;
+    const remaining = Math.max(0, FREE_LIMIT_PER_CATEGORY - used);
+    limit = Math.min(QUESTIONS_PER_ROUND, remaining);
+  }
+
   currentQuestions = shuffleArray(
-    quizQuestions.filter(q => q.game === currentCategory && q.difficulty === currentLevel)
-  ).slice(0, QUESTIONS_PER_ROUND);
+    quizQuestions.filter(q => q.game === currentCategory)
+  ).slice(0, limit);
+
+  if(!currentQuestions.length){
+    showPaywall(currentCategory);
+    return;
+  }
+
   loadQuestion();
   saveGameState();
   showScreen('quizScreen');
@@ -1079,7 +1148,7 @@ function updateBookmarkButton(q){
 window.toggleBookmark = toggleBookmark;
 
 function openVerseModal(){
-  document.getElementById('modalVerseRef').textContent  = currentVerseRef  || '';
+  document.getElementById('modalVerseRef').textContent = currentVerseRef || '';
   document.getElementById('modalVerseText').textContent = currentVerseText || '';
   const q = currentQuestion || (currentQuestions && currentQuestions[currentQuestionIndex]);
   updateBookmarkButton(q);
@@ -1121,10 +1190,10 @@ function launchConfetti(){
   const colors = ['#6b2fbd','#3f6fb4','#f39a3e','#3e9b4f','#c84545','#f7e8c4'];
   for(let i = 0; i < 90; i++){
     const piece = document.createElement('div');
-    piece.className               = 'confetti';
-    piece.style.left              = Math.random() * 100 + 'vw';
-    piece.style.background        = colors[Math.floor(Math.random() * colors.length)];
-    piece.style.transform         = `rotate(${Math.random() * 360}deg)`;
+    piece.className = 'confetti';
+    piece.style.left = Math.random() * 100 + 'vw';
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.transform = `rotate(${Math.random() * 360}deg)`;
     piece.style.animationDuration = (2.8 + Math.random() * 2.2) + 's';
     document.body.appendChild(piece);
     setTimeout(() => piece.remove(), 5500);
@@ -1160,7 +1229,7 @@ function pickDailyQuestions(){
   for(let i = 0; i < key.length; i++) hash = ((hash << 5) - hash) + key.charCodeAt(i);
   hash = Math.abs(hash);
   const total = quizQuestions.length;
-  const step  = Math.floor(total / 5);
+  const step = Math.floor(total / 5);
   const qs = [];
   for(let i = 0; i < 5; i++){
     qs.push(quizQuestions[(hash + i * step) % total]);
@@ -1169,17 +1238,18 @@ function pickDailyQuestions(){
 }
 
 function renderDailyProgress(){
-  const dotsEl    = document.getElementById('dailyAnswerDots');
+  const dotsEl = document.getElementById('dailyAnswerDots');
   const progressEl = document.getElementById('dailyProgressText');
-  const scoreEl   = document.getElementById('dailyScoreText');
-  const state     = loadDailyState();
-  const today     = getTodayKey();
+  const scoreEl = document.getElementById('dailyScoreText');
+  const state = loadDailyState();
+  const today = getTodayKey();
 
   if(progressEl) progressEl.textContent = `Question ${dailyIndex + 1} of ${dailyQuestions.length}`;
-  if(scoreEl)    scoreEl.textContent    = `Score: ${dailyScore}`;
+  if(scoreEl) scoreEl.textContent = `Score: ${dailyScore}`;
 
   if(dotsEl){
     const answers = (state.lastDate === today && state.answers) ? state.answers : dailyAnswers;
+    void answers;
     dotsEl.innerHTML = dailyQuestions.map((_, i) => {
       if(i < dailyAnswers.length){
         return `<span class="daily-dot ${dailyAnswers[i].wasCorrect ? 'dot-correct' : 'dot-wrong'}">${dailyAnswers[i].wasCorrect ? '✓' : '✗'}</span>`;
@@ -1191,7 +1261,6 @@ function renderDailyProgress(){
 }
 
 function startDailyChallenge(){
-  // Free users get day 1 only — check if they've already used their free daily
   if(!isProUnlocked()){
     const freeUsed = localStorage.getItem('bibleQuizFreeDailyUsed');
     if(freeUsed){
@@ -1201,17 +1270,16 @@ function startDailyChallenge(){
     localStorage.setItem('bibleQuizFreeDailyUsed', 'true');
   }
 
-  const today  = getTodayKey();
-  const state  = loadDailyState();
+  const today = getTodayKey();
+  const state = loadDailyState();
 
   document.getElementById('dailyDateLabel').textContent = formatTodayLabel();
   document.getElementById('dailyProgressRow').style.display = 'flex';
   document.getElementById('dailyAnswerDots').innerHTML = '';
 
-  // Already completed today
   if(state.lastDate === today && state.completedToday){
     const scoreStr = `${state.score || 0} / 5`;
-    document.getElementById('dailyStatusText').textContent  = '';
+    document.getElementById('dailyStatusText').textContent = '';
     document.getElementById('dailyQuestionWrap').style.display = 'none';
     const completeBox = document.getElementById('dailyCompleteBox');
     completeBox.style.display = 'block';
@@ -1221,7 +1289,6 @@ function startDailyChallenge(){
       <div style="font-size:18px;margin-top:6px;">🔥 Daily Streak: ${state.streak}</div>
       <div style="font-size:14px;margin-top:8px;color:#888;">Come back tomorrow for 5 new questions</div>
     `;
-    // Show completed dots
     const dotsEl = document.getElementById('dailyAnswerDots');
     if(dotsEl && state.answers){
       dotsEl.innerHTML = state.answers.map(a =>
@@ -1233,14 +1300,13 @@ function startDailyChallenge(){
     return;
   }
 
-  // Start fresh for today
-  dailyQuestions       = pickDailyQuestions();
-  dailyIndex           = 0;
-  dailyScore           = 0;
-  dailyAnswers         = [];
+  dailyQuestions = pickDailyQuestions();
+  dailyIndex = 0;
+  dailyScore = 0;
+  dailyAnswers = [];
   dailyAnsweredCurrent = false;
-  dailyVerseRef        = '';
-  dailyVerseText       = '';
+  dailyVerseRef = '';
+  dailyVerseText = '';
 
   document.getElementById('dailyCompleteBox').style.display = 'none';
 
@@ -1256,35 +1322,38 @@ function startDailyChallenge(){
 }
 
 function loadDailyQuestion(){
-  if(dailyIndex >= dailyQuestions.length){ finishDailyChallenge(); return; }
+  if(dailyIndex >= dailyQuestions.length){
+    finishDailyChallenge();
+    return;
+  }
   dailyAnsweredCurrent = false;
-  dailyVerseRef        = '';
-  dailyVerseText       = '';
+  dailyVerseRef = '';
+  dailyVerseText = '';
 
   const q = dailyQuestions[dailyIndex];
   renderDailyProgress();
 
-  document.getElementById('dailyStatusText').textContent          = '';
-  document.getElementById('dailyQuestionWrap').style.display      = 'block';
-  document.getElementById('dailyQuestionText').textContent        = q.question;
-  document.getElementById('dailyFeedback').textContent            = '';
-  document.getElementById('dailyFeedback').className              = 'feedback';
-  document.getElementById('dailyVerseRef').textContent            = '';
-  document.getElementById('dailyVerseActionRow').style.display    = 'none';
-  document.getElementById('dailyNextBtn').style.display           = 'none';
+  document.getElementById('dailyStatusText').textContent = '';
+  document.getElementById('dailyQuestionWrap').style.display = 'block';
+  document.getElementById('dailyQuestionText').textContent = q.question;
+  document.getElementById('dailyFeedback').textContent = '';
+  document.getElementById('dailyFeedback').className = 'feedback';
+  document.getElementById('dailyVerseRef').textContent = '';
+  document.getElementById('dailyVerseActionRow').style.display = 'none';
+  document.getElementById('dailyNextBtn').style.display = 'none';
 
   const labels = ['A) ','B) ','C) ','D) '];
   ['dailyAnswer0','dailyAnswer1','dailyAnswer2','dailyAnswer3'].forEach((id, i) => {
-    const btn       = document.getElementById(id);
+    const btn = document.getElementById(id);
     btn.textContent = labels[i] + (q.choices[i] || '');
-    btn.className   = 'answer-btn';
-    btn.disabled    = false;
+    btn.className = 'answer-btn';
+    btn.disabled = false;
   });
 }
 
 function submitDailyAnswer(index){
   if(dailyAnsweredCurrent) return;
-  const q       = dailyQuestions[dailyIndex];
+  const q = dailyQuestions[dailyIndex];
   const buttons = ['dailyAnswer0','dailyAnswer1','dailyAnswer2','dailyAnswer3'].map(id => document.getElementById(id));
   const feedback = document.getElementById('dailyFeedback');
 
@@ -1297,9 +1366,9 @@ function submitDailyAnswer(index){
     playCorrect();
     buttons[index].classList.add('correct');
     feedback.textContent = '✅ ' + randomFrom(correctMessages);
-    feedback.className   = 'feedback correct';
-    dailyVerseRef        = q.reference || '';
-    dailyVerseText       = q.verseText || '';
+    feedback.className = 'feedback correct';
+    dailyVerseRef = q.reference || '';
+    dailyVerseText = q.verseText || '';
     recordQuestionProgress(q);
     renderMenuProgress();
   } else {
@@ -1307,9 +1376,9 @@ function submitDailyAnswer(index){
     buttons[index].classList.add('wrong');
     buttons[q.answer].classList.add('correct');
     feedback.textContent = `❌ Correct answer: ${q.choices[q.answer]}`;
-    feedback.className   = 'feedback wrong';
-    dailyVerseRef        = q.reference  || '';
-    dailyVerseText       = q.verseText  || '';
+    feedback.className = 'feedback wrong';
+    dailyVerseRef = q.reference || '';
+    dailyVerseText = q.verseText || '';
     recordQuestionProgress(q);
     renderMenuProgress();
   }
@@ -1317,11 +1386,11 @@ function submitDailyAnswer(index){
   dailyAnswers.push({ wasCorrect });
   renderDailyProgress();
 
-  document.getElementById('dailyVerseRef').textContent          = dailyVerseRef;
-  document.getElementById('dailyVerseActionRow').style.display  = dailyVerseText ? 'flex' : 'none';
+  document.getElementById('dailyVerseRef').textContent = dailyVerseRef;
+  document.getElementById('dailyVerseActionRow').style.display = dailyVerseText ? 'flex' : 'none';
 
   const nextBtn = document.getElementById('dailyNextBtn');
-  nextBtn.textContent   = dailyIndex < dailyQuestions.length - 1 ? 'Next Question' : 'See Results';
+  nextBtn.textContent = dailyIndex < dailyQuestions.length - 1 ? 'Next Question' : 'See Results';
   nextBtn.style.display = 'flex';
 }
 
@@ -1348,20 +1417,23 @@ function finishDailyChallenge(){
   }
 
   saveDailyState({
-    lastDate:       today,
-    streak:         nextStreak,
+    lastDate: today,
+    streak: nextStreak,
     completedToday: true,
-    score:          dailyScore,
-    answers:        dailyAnswers,
-    questionIds:    dailyQuestions.map(q => q.id)
+    score: dailyScore,
+    answers: dailyAnswers,
+    questionIds: dailyQuestions.map(q => q.id)
   });
 
-  document.getElementById('dailyQuestionWrap').style.display  = 'none';
-  document.getElementById('dailyProgressRow').style.display   = 'none';
-  document.getElementById('dailyStatusText').textContent      = '';
+  document.getElementById('dailyQuestionWrap').style.display = 'none';
+  document.getElementById('dailyProgressRow').style.display = 'none';
+  document.getElementById('dailyStatusText').textContent = '';
 
-  const perfect    = dailyScore === dailyQuestions.length;
-  if(perfect){ playPerfect(); launchConfetti(); }
+  const perfect = dailyScore === dailyQuestions.length;
+  if(perfect){
+    playPerfect();
+    launchConfetti();
+  }
 
   const completeBox = document.getElementById('dailyCompleteBox');
   completeBox.style.display = 'block';
@@ -1372,7 +1444,6 @@ function finishDailyChallenge(){
     <div style="font-size:14px;margin-top:8px;color:#555;">Come back tomorrow for 5 new questions</div>
   `;
 
-  // Show final dots
   const dotsEl = document.getElementById('dailyAnswerDots');
   if(dotsEl){
     dotsEl.innerHTML = dailyAnswers.map(a =>
@@ -1383,7 +1454,7 @@ function finishDailyChallenge(){
 }
 
 function openDailyVerseModal(){
-  document.getElementById('dailyModalVerseRef').textContent  = dailyVerseRef  || '';
+  document.getElementById('dailyModalVerseRef').textContent = dailyVerseRef || '';
   document.getElementById('dailyModalVerseText').textContent = dailyVerseText || '';
   document.getElementById('dailyVerseModal').classList.add('open');
 }
@@ -1402,8 +1473,8 @@ const tutorialSlides = [
   },
   {
     icon: '🎓',
-    title: 'Three Difficulty Levels',
-    body: 'Start with Beginner to build your foundation, move to Student for deeper questions, or jump straight to Scholar for the toughest challenges!'
+    title: 'Advanced Bible Quiz',
+    body: 'Dive into challenging categories with deep questions designed for serious Bible study.'
   },
   {
     icon: '🏆',
@@ -1425,14 +1496,14 @@ function checkAndShowTutorial(){
 
 function renderTutorialSlide(){
   const slide = tutorialSlides[tutorialStep];
-  const icon  = document.getElementById('tutIcon');
+  const icon = document.getElementById('tutIcon');
   const title = document.getElementById('tutTitle');
-  const body  = document.getElementById('tutBody');
-  const dots  = document.getElementById('tutDots');
+  const body = document.getElementById('tutBody');
+  const dots = document.getElementById('tutDots');
   const nextBtn = document.getElementById('tutNextBtn');
-  if(icon)  icon.textContent  = slide.icon;
+  if(icon) icon.textContent = slide.icon;
   if(title) title.textContent = slide.title;
-  if(body)  body.textContent  = slide.body;
+  if(body) body.textContent = slide.body;
   if(nextBtn) nextBtn.textContent = tutorialStep < tutorialSlides.length - 1 ? 'Next →' : "Let's Go! 🚀";
   if(dots){
     dots.innerHTML = tutorialSlides.map((_, i) =>
@@ -1455,13 +1526,12 @@ function closeTutorial(){
   const overlay = document.getElementById('tutorialOverlay');
   if(overlay) overlay.classList.remove('open');
 }
-window.tutorialNext  = tutorialNext;
+window.tutorialNext = tutorialNext;
 window.closeTutorial = closeTutorial;
 
-// ─── IAP Stubs (replace with Capacitor IAP plugin for store submission) ───────
+// ─── IAP Stubs ────────────────────────────────────────────────────────────────
 
 function purchasePro(){
-  // TODO: Replace with Capacitor IAP plugin call
   if(confirm('This will simulate a Pro purchase for testing.\n\nIn the live app this triggers the App Store / Play Store payment.')){
     unlockPro();
   }
@@ -1469,7 +1539,6 @@ function purchasePro(){
 window.purchasePro = purchasePro;
 
 function restorePurchase(){
-  // TODO: Replace with Capacitor IAP restore call
   if(isProUnlocked()){
     alert('✅ Pro is already unlocked on this device!');
   } else {
@@ -1481,21 +1550,20 @@ window.restorePurchase = restorePurchase;
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
-
   const startBtn = document.getElementById('startBtn');
-  if(startBtn) startBtn.onclick = () => {
-    try{ renderMenuProgress(); }catch(e){}
-    showScreen('menu');
-  };
+  if(startBtn){
+    startBtn.onclick = () => {
+      try{ renderMenuProgress(); }catch(e){}
+      showScreen('menu');
+    };
+  }
 
   try{ initializeSoundToggle(); }catch(e){}
   try{ renderMenuProgress(); }catch(e){}
   try{ checkForSavedGame(); }catch(e){}
   try{ setTimeout(checkAndShowTutorial, 600); }catch(e){}
 
-  // Hide lock icons if already pro
   if(isProUnlocked()){
     document.querySelectorAll('.pro-lock').forEach(el => el.style.display = 'none');
   }
-
 });
