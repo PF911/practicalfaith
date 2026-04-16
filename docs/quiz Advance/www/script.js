@@ -1529,21 +1529,82 @@ function closeTutorial(){
 window.tutorialNext = tutorialNext;
 window.closeTutorial = closeTutorial;
 
-// ─── IAP Stubs ────────────────────────────────────────────────────────────────
+// ─── In-App Purchases (cordova-plugin-purchase) ───────────────────────────────
+
+const IAP_APPLE_ID  = 'com.practicalfaith.biblequiz.fullunlock';
+const IAP_GOOGLE_ID = 'unlock_full_version';
+
+function initIAP(){
+  if(typeof CdvPurchase === 'undefined') return;  // running in browser/desktop
+  const { store, ProductType, Platform } = CdvPurchase;
+
+  // Register the product on both platforms
+  store.register([
+    { id: IAP_APPLE_ID,  type: ProductType.NON_CONSUMABLE, platform: Platform.APPLE_APPSTORE },
+    { id: IAP_GOOGLE_ID, type: ProductType.NON_CONSUMABLE, platform: Platform.GOOGLE_PLAY }
+  ]);
+
+  // Handle approved → verify → finish → unlock
+  store.when()
+    .approved(transaction => transaction.verify())
+    .verified(receipt => receipt.finish())
+    .finished(transaction => {
+      const ids = transaction.products.map(p => p.id);
+      if(ids.includes(IAP_APPLE_ID) || ids.includes(IAP_GOOGLE_ID)){
+        unlockPro();
+      }
+    });
+
+  // Re-check on startup in case already purchased
+  store.when()
+    .productUpdated(product => {
+      if((product.id === IAP_APPLE_ID || product.id === IAP_GOOGLE_ID) && product.owned){
+        if(!isProUnlocked()) unlockPro();
+      }
+    });
+
+  store.initialize([Platform.APPLE_APPSTORE, Platform.GOOGLE_PLAY]);
+}
 
 function purchasePro(){
-  if(confirm('This will simulate a Pro purchase for testing.\n\nIn the live app this triggers the App Store / Play Store payment.')){
-    unlockPro();
+  if(typeof CdvPurchase === 'undefined'){
+    // Browser/simulator fallback
+    if(confirm('This will simulate a Pro purchase for testing.\n\nIn the live app this triggers the App Store / Play Store payment.')){
+      unlockPro();
+    }
+    return;
+  }
+  const { store } = CdvPurchase;
+  const product = store.get(IAP_APPLE_ID) || store.get(IAP_GOOGLE_ID);
+  if(product){
+    const offer = product.getOffer();
+    if(offer) offer.order().catch(err => {
+      if(err && err.code !== CdvPurchase.ErrorCode.PAYMENT_CANCELLED){
+        alert('Purchase failed. Please try again.');
+      }
+    });
+  } else {
+    alert('Store not ready yet. Please try again in a moment.');
   }
 }
 window.purchasePro = purchasePro;
 
 function restorePurchase(){
-  if(isProUnlocked()){
-    alert('✅ Pro is already unlocked on this device!');
-  } else {
-    alert('No previous purchase found.\n\nIf you purchased on another device, contact support@practicalfaith.net');
+  if(typeof CdvPurchase === 'undefined'){
+    if(isProUnlocked()){
+      alert('✅ Pro is already unlocked on this device!');
+    } else {
+      alert('No previous purchase found.\n\nIf you purchased on another device, contact support@practicalfaith.net');
+    }
+    return;
   }
+  CdvPurchase.store.restorePurchases()
+    .then(() => {
+      if(!isProUnlocked()){
+        alert('No previous purchase found.\n\nIf you purchased on another device, contact support@practicalfaith.net');
+      }
+    })
+    .catch(() => alert('Restore failed. Please try again.'));
 }
 window.restorePurchase = restorePurchase;
 
@@ -1562,6 +1623,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try{ renderMenuProgress(); }catch(e){}
   try{ checkForSavedGame(); }catch(e){}
   try{ setTimeout(checkAndShowTutorial, 600); }catch(e){}
+  try{ initIAP(); }catch(e){}
 
   if(isProUnlocked()){
     document.querySelectorAll('.pro-lock').forEach(el => el.style.display = 'none');
