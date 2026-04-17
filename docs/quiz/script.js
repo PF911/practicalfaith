@@ -1458,23 +1458,71 @@ function closeTutorial(){
 window.tutorialNext  = tutorialNext;
 window.closeTutorial = closeTutorial;
 
-// ─── IAP Stubs (replace with Capacitor IAP plugin for store submission) ───────
+
+// ─── IAP (cordova-plugin-purchase) ───────────────────────────────────────────
+
+const IAP_PRODUCT_ID = 'com.practicalfaith.biblequiz.fullunlock';
+let storeReady = false;
+
+function initIAP(){
+  if(typeof CdvPurchase === 'undefined') return;
+
+  const store       = CdvPurchase.store;
+  const ProductType = CdvPurchase.ProductType;
+  const Platform    = CdvPurchase.Platform;
+
+  store.register([
+    { id: IAP_PRODUCT_ID, type: ProductType.NON_CONSUMABLE, platform: Platform.APPLE_APPSTORE },
+    { id: IAP_PRODUCT_ID, type: ProductType.NON_CONSUMABLE, platform: Platform.GOOGLE_PLAY }
+  ]);
+
+  store.when()
+    .approved(transaction => { transaction.verify(); })
+    .verified(receipt    => { receipt.finish(); unlockPro(); })
+    .finished(transaction => { console.log('IAP transaction finished', transaction.transactionId); });
+
+  store.error(err => {
+    console.error('IAP error', err.code, err.message);
+    alert('Purchase error: ' + err.message);
+  });
+
+  store.initialize([Platform.APPLE_APPSTORE, Platform.GOOGLE_PLAY]).then(() => {
+    storeReady = true;
+  });
+}
 
 function purchasePro(){
-  // TODO: Replace with Capacitor IAP plugin call
-  if(confirm('This will simulate a Pro purchase for testing.\n\nIn the live app this triggers the App Store / Play Store payment.')){
-    unlockPro();
+  if(typeof CdvPurchase === 'undefined' || !storeReady){
+    alert('Store is not ready yet. Please try again in a moment.');
+    return;
   }
+  const store   = CdvPurchase.store;
+  const Platform = CdvPurchase.Platform;
+  const product = store.get(IAP_PRODUCT_ID, Platform.APPLE_APPSTORE)
+                || store.get(IAP_PRODUCT_ID, Platform.GOOGLE_PLAY);
+  if(!product){
+    alert('Product not found. Please check your internet connection and try again.');
+    return;
+  }
+  store.order(product).catch(err => {
+    console.error('Order failed', err);
+    alert('Could not start purchase: ' + (err.message || err));
+  });
 }
 window.purchasePro = purchasePro;
 
 function restorePurchase(){
-  // TODO: Replace with Capacitor IAP restore call
-  if(isProUnlocked()){
-    alert('✅ Pro is already unlocked on this device!');
-  } else {
-    alert('No previous purchase found.\n\nIf you purchased on another device, contact support@practicalfaith.net');
+  if(typeof CdvPurchase === 'undefined' || !storeReady){
+    alert('Store is not ready yet. Please try again in a moment.');
+    return;
   }
+  CdvPurchase.store.restorePurchases().then(() => {
+    if(!isProUnlocked()){
+      alert('No previous purchase found.\n\nIf you purchased on another device, contact support@practicalfaith.net');
+    }
+  }).catch(err => {
+    alert('Restore failed: ' + (err.message || err));
+  });
 }
 window.restorePurchase = restorePurchase;
 
@@ -1489,6 +1537,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   try{ initializeSoundToggle(); }catch(e){}
+  try{ initIAP(); }catch(e){ console.warn('IAP init skipped', e); }
   try{ renderMenuProgress(); }catch(e){}
   try{ checkForSavedGame(); }catch(e){}
   try{ setTimeout(checkAndShowTutorial, 600); }catch(e){}
