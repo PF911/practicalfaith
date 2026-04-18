@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practical Faith Bible Quiz: Advanced</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#6b2fbd;--blue:#3f6fb4;--orange1:#ffcf6e;--orange2:#f39a3e;--orange3:#e98026;--green:#3e9b4f;--red:#c84545;--cream:#f4eee4;}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;overflow:hidden;}
+body{font-family:'Nunito',Arial,sans-serif;min-height:100vh;background:linear-gradient(180deg,#f7c96b 0%,#f1ad4e 40%,#df8630 78%,#cf7021 100%);}
+.app{position:relative;width:100%;max-width:430px;min-height:100vh;margin:0 auto;text-align:center;}
+
+/* ── Typography ─────────────────────────────────────────────────────────── */
+.title{font-family:'Fredoka One','Arial Black',sans-serif;color:var(--purple);line-height:1.1;margin:0;font-size:52px;letter-spacing:1px;}
+.title .title-top{display:block;font-size:32px;letter-spacing:0px;white-space:nowrap;}
+.subtitle{font-family:'Fredoka One','Arial Black',sans-serif;font-size:28px;color:var(--purple);margin:8px 0 0;}
+.subline{font-size:32px;color:var(--purple);font-weight:900;margin:10px 0 0;}
+.level-subtitle{min-height:34px;}
+.level-note{color:var(--purple);font-size:18px;font-weight:700;margin:8px 0 14px;}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.primary-btn{background:var(--purple);color:white;border:none;font-family:'Nunito',Arial,sans-serif;font-size:20px;font-weight:800;padding:18px 28px;border-radius:40px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.2);margin-top:4px;}
+.secondary-btn{display:block;background:#eee;color:var(--purple);border:3px solid var(--purple);font-family:'Nunito',Arial,sans-serif;font-size:17px;font-weight:800;padding:14px 22px;border-radius:30px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin:12px auto 0;}
+.reset-btn{display:block;background:#ffffff;color:#a33;border:3px solid #a33;font-family:'Nunito',Arial,sans-serif;font-size:18px;font-weight:800;padding:14px 22px;border-radius:30px;cursor:pointer;width:80%;max-width:300px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin:12px auto 0;}
+.reset-btn:hover{background:#fff3f3;}
+.small-btn{flex:1;padding:10px 18px;min-height:50px;border-radius:16px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-weight:bold;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
+.menu-btn{width:90%;max-width:350px;margin:12px auto;padding:18px;border-radius:18px;border:3px solid var(--purple);background:#eee;font-size:20px;font-weight:bold;color:var(--purple);display:flex;align-items:center;justify-content:flex-start;gap:14px;cursor:pointer;}
+.pro-lock{font-size:14px;opacity:0.7;margin-left:4px;}
+.practice-btn{background:#f7e8c4;border-color:var(--orange3);color:var(--orange3);}
+
+/* ── Screens ──────────────────────────────────────────────────────────────── */
+.screen{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;max-width:430px;margin:0 auto;padding:28px 20px 20px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;}
+.screen.active{display:block;animation:screenFadeIn .3s ease;}
+@keyframes screenFadeIn{from{opacity:0;}to{opacity:1;}}
+#splash{
+  background:url('images/splash.png') center center / cover no-repeat;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  max-width:430px;
+  margin:0 auto;
+  padding:0;
+  overflow:hidden;
+}
+#splash .title,
+#splash .subtitle,
+#splash .subline,
+#splash .hero,
+#splash #resumeBtn,
+#splash #resumeNote,
+#splash #resetBtn {
+  display:none !important;
+}
+#splash #startBtn{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:6.3%;
+  width:58%;
+  height:9%;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  font-size:0;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+}
+
+/* ── Layout helpers ───────────────────────────────────────────────────────── */
+.hero{margin-top:10px;display:flex;justify-content:center;}
+.hero img{width:250px;max-width:100%;margin-bottom:-10px;}
+.resume-note{max-width:300px;margin:10px auto 0;color:var(--purple);font-size:15px;font-weight:800;line-height:1.25;}
+.menu-icon{width:52px;height:52px;object-fit:contain;flex-shrink:0;display:block;}
+.bottom{margin-top:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.back-row{width:90%;max-width:350px;margin:20px auto 0;}
+.back-row .small-btn{width:100%;}
+.icon-row{width:90%;max-width:350px;margin:14px auto 0;display:flex;justify-content:center;gap:10px;}
+
+/* ── Quiz card ──────────────────────────────────────────────────────────── */
+.quiz-card,.daily-card{width:90%;max-width:350px;margin:14px auto 0;padding:18px 16px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);}
+.quiz-top-row{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.quiz-meta{font-size:16px;font-weight:900;margin-bottom:6px;text-align:left;}
+.streak-wrap{font-size:18px;font-weight:900;color:var(--purple);background:#f7e8c4;border:3px solid var(--purple);border-radius:999px;padding:4px 10px;line-height:1;white-space:nowrap;display:inline-flex;align-items:center;gap:4px;}
+.progress-bar{width:100%;height:10px;background:#d6d6d6;border-radius:6px;margin:8px 0 14px;overflow:hidden;}
+.progress-fill{height:100%;width:0%;background:#6b2fbd;transition:width .35s ease;}
+.question-text{font-size:24px;font-weight:900;line-height:1.2;margin:6px 0 10px;}
+.choose-tag{
+  font-weight: 900;
+  color: #6b2fbd;
+  margin-right: 6px;
+}
+.answer-btn{width:100%;margin:10px 0;padding:14px 16px;border-radius:16px;border:3px solid var(--purple);background:#fff;color:var(--purple);font-size:18px;font-weight:800;text-align:left;cursor:pointer;}
+.answer-btn.correct{background:#dff3e3;border-color:var(--green);color:#1f6f31;}
+.answer-btn.wrong{background:#f9dede;border-color:var(--red);color:#8b2323;}
+.answer-btn:disabled{cursor:default;}
+.feedback{min-height:42px;font-size:21px;font-weight:900;margin-top:12px;line-height:1.2;}
+.feedback.correct{color:var(--green);}
+.feedback.wrong{color:var(--red);}
+.verse-ref{min-height:22px;font-size:15px;font-weight:800;margin-top:6px;color:var(--purple);}
+.verse-action-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:6px;}
+.verse-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;margin-top:2px;font-size:16px;font-weight:900;color:var(--purple);cursor:pointer;background:none;border:none;padding:0;box-shadow:none;text-decoration:none;}
+.verse-link:hover{text-decoration:underline;}
+.verse-text{display:none;}
+.quiz-next{margin-top:14px;background:var(--purple);border-color:var(--purple);color:#fff;}
+
+/* ── Timer ───────────────────────────────────────────────────────────────── */
+.timer-row{display:none;align-items:center;gap:10px;margin:4px 0 10px;width:100%;}
+.timer-count{font-size:22px;font-weight:900;color:var(--purple);min-width:28px;text-align:center;}
+.timer-bar-outer{flex:1;height:10px;background:#d6d6d6;border-radius:6px;overflow:hidden;}
+.timer-fill{height:100%;width:100%;background:var(--green);transition:width 1s linear, background .5s;}
+
+/* ── Result screen ───────────────────────────────────────────────────────── */
+.score-big{font-size:36px;color:var(--purple);font-weight:900;margin:14px 0 6px;}
+.score-sub{color:var(--purple);font-size:22px;font-weight:800;margin:0 0 16px;}
+.result-actions{width:90%;max-width:350px;margin:16px auto 0;display:flex;flex-direction:column;gap:12px;}
+.result-actions .small-btn{width:100%;min-height:54px;}
+.perfect-box{margin-top:14px;padding:12px 14px;border-radius:18px;background:#f7e8c4;border:3px solid var(--purple);font-size:18px;font-weight:900;color:var(--purple);display:none;}
+.streak-bonus-box{background:linear-gradient(135deg,#ff6b00,#ff9500);color:#fff;font-size:17px;font-weight:700;border-radius:14px;padding:12px 20px;margin:12px 0 0;text-align:center;box-shadow:0 3px 10px rgba(255,100,0,.35);}
+.level-up-box{background:linear-gradient(135deg,#6b2fbd,#3f6fb4);color:#fff;font-size:16px;font-weight:700;border-radius:14px;padding:10px 18px;margin:10px 0 0;text-align:center;}
+.share-btn{background:var(--blue);color:#fff;border:none;font-size:17px;font-weight:900;border-radius:14px;padding:12px 20px;margin:12px 0 0;cursor:pointer;width:100%;}
+
+/* ── Category completion ─────────────────────────────────────────────────── */
+.completion-card{width:90%;max-width:350px;margin:14px auto 0;padding:22px 16px;border-radius:20px;border:3px solid var(--purple);background:#f7e8c4;color:var(--purple);}
+.completion-big{font-size:34px;font-weight:900;line-height:1.05;margin:6px 0 10px;}
+.completion-sub{font-size:21px;font-weight:900;line-height:1.2;margin:0 0 10px;}
+.completion-copy{font-size:17px;font-weight:800;line-height:1.35;}
+
+/* ── Stats / Scores / Progress ───────────────────────────────────────────── */
+.stats-list,.scores-list,.progress-list{width:90%;max-width:350px;margin:14px auto 0;display:flex;flex-direction:column;gap:10px;}
+.stat-row,.score-row,.progress-row{background:#eee;border:3px solid var(--purple);border-radius:18px;padding:12px 14px;color:var(--purple);text-align:left;}
+.stat-label,.score-label,.progress-label{font-size:15px;font-weight:900;line-height:1.2;}
+.stat-value,.score-value{font-size:24px;font-weight:900;line-height:1.1;margin-top:4px;}
+.score-subline,.progress-subline{font-size:14px;font-weight:800;line-height:1.25;margin-top:4px;}
+.empty-note{width:90%;max-width:350px;margin:14px auto 0;padding:18px 16px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);font-size:18px;font-weight:800;}
+
+/* ── Category strips (menu) ──────────────────────────────────────────────── */
+.menu-progress-summary{font-size:13px;font-weight:900;color:var(--purple);opacity:.9;}
+.cat-strip{width:90%;max-width:350px;margin:4px auto 6px;padding:6px 12px 8px;background:rgba(244,238,228,.82);border:2px solid var(--purple);border-radius:14px;}
+.cat-strip-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:900;color:var(--purple);margin-bottom:4px;}
+.cat-strip-badge{display:inline-flex;align-items:center;padding:1px 7px;border-radius:999px;background:#f7e8c4;border:1.5px solid var(--purple);font-size:11px;font-weight:900;color:var(--purple);}
+.cat-strip .progress-bar{margin:0;height:8px;}
+
+/* ── Achievements ────────────────────────────────────────────────────────── */
+.achievements-heading{font-family:'Fredoka One','Arial Black',sans-serif;font-size:22px;color:var(--purple);text-align:center;margin:22px 0 4px;}
+.achievement-row{display:flex;align-items:center;gap:14px;padding:12px 16px;margin:6px auto;border-radius:14px;width:90%;max-width:350px;}
+.achievement-row.earned{background:linear-gradient(135deg,#f0e8ff,#e8f3ff);border:2px solid var(--purple);}
+.achievement-row.locked{background:#eee;border:2px solid #ccc;opacity:.55;filter:grayscale(.4);}
+.ach-icon{font-size:32px;flex-shrink:0;}
+.ach-text{flex:1;text-align:left;}
+.ach-label{font-weight:900;font-size:15px;color:#3a1a6e;}
+.ach-sub{font-size:13px;color:#777;margin-top:2px;}
+.ach-overall{text-align:center;margin:12px auto 0;width:90%;max-width:350px;font-size:15px;font-weight:900;color:var(--purple);padding:10px 16px;background:#f7e8c4;border-radius:12px;border:2px solid var(--purple);}
+
+/* ── Achievement unlock popup ────────────────────────────────────────────── */
+#achievementPopup{display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,.5);}
+#achievementPopup.open{display:flex;}
+.achievement-popup-card{background:#fff;border-radius:24px;padding:36px 28px 28px;text-align:center;max-width:300px;width:88%;box-shadow:0 8px 40px rgba(0,0,0,.35);animation:popIn .35s cubic-bezier(.34,1.56,.64,1);border:4px solid var(--purple);}
+@keyframes popIn{from{transform:scale(.7);opacity:0;}to{transform:scale(1);opacity:1;}}
+.ach-popup-icon{font-size:72px;line-height:1;margin-bottom:14px;}
+.ach-popup-title{font-family:'Fredoka One','Arial Black',sans-serif;font-size:22px;color:var(--purple);margin-bottom:8px;}
+.ach-popup-msg{font-size:16px;font-weight:800;color:#444;line-height:1.4;}
+.ach-popup-dismiss{margin-top:16px;font-size:13px;color:#aaa;}
+
+/* ── Verse modal ─────────────────────────────────────────────────────────── */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000;}
+.modal-backdrop.open{display:flex;}
+.modal-card{width:100%;max-width:380px;background:#f5efe6;border:4px solid var(--purple);border-radius:22px;padding:18px 16px;color:var(--purple);text-align:left;box-shadow:0 10px 30px rgba(0,0,0,.25);}
+.modal-title{font-family:'Fredoka One','Arial Black',sans-serif;font-size:24px;line-height:1.05;margin:0 0 8px;text-align:center;}
+.modal-ref{font-size:15px;font-weight:900;margin-bottom:10px;text-align:center;}
+.modal-verse{font-size:16px;line-height:1.45;font-weight:800;white-space:pre-wrap;}
+.modal-actions{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.bookmark-btn{background:#f7e8c4;border:2px solid var(--purple);color:var(--purple);font-size:15px;font-weight:800;border-radius:12px;padding:8px 16px;cursor:pointer;}
+
+/* ── Question review ─────────────────────────────────────────────────────── */
+.review-list{width:90%;max-width:350px;margin:14px auto 0;display:flex;flex-direction:column;gap:10px;}
+.review-row{border-radius:16px;padding:14px 16px;text-align:left;border:3px solid;}
+.review-row.correct{background:#dff3e3;border-color:var(--green);}
+.review-row.wrong{background:#f9dede;border-color:var(--red);}
+.review-num{font-size:14px;font-weight:900;margin-bottom:4px;opacity:.8;}
+.review-question{font-size:15px;font-weight:900;color:#333;margin-bottom:6px;line-height:1.3;}
+.review-answer{font-size:14px;font-weight:800;color:#1f6f31;}
+.review-row.wrong .review-answer{color:#8b2323;}
+.review-ref{font-size:12px;font-weight:700;color:#888;margin-top:4px;}
+
+/* ── My Verses ───────────────────────────────────────────────────────────── */
+.verses-list{width:90%;max-width:350px;margin:14px auto 0;display:flex;flex-direction:column;gap:12px;}
+.verse-bookmark-row{background:#f5efe6;border:3px solid var(--purple);border-radius:16px;padding:14px 16px;text-align:left;}
+.vb-ref{font-size:16px;font-weight:900;color:var(--purple);margin-bottom:4px;}
+.vb-text{font-size:15px;font-weight:800;line-height:1.4;color:#333;margin-bottom:6px;}
+.vb-game{font-size:12px;font-weight:700;color:#888;margin-bottom:8px;}
+.vb-remove{background:none;border:2px solid #c84545;color:#c84545;border-radius:10px;padding:5px 12px;font-size:13px;font-weight:800;cursor:pointer;}
+
+/* ── Settings ────────────────────────────────────────────────────────────── */
+.settings-card{width:90%;max-width:350px;margin:14px auto 0;padding:20px 18px;border-radius:20px;border:3px solid var(--purple);background:#eee;color:var(--purple);text-align:left;}
+.settings-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:2px solid rgba(107,47,189,.15);}
+.settings-row:last-child{border-bottom:none;}
+.settings-label{font-size:17px;font-weight:900;}
+.settings-sub{font-size:13px;font-weight:700;color:#888;margin-top:2px;}
+.toggle-switch{position:relative;width:52px;height:28px;flex-shrink:0;}
+.toggle-switch input{opacity:0;width:0;height:0;}
+.toggle-track{position:absolute;inset:0;background:#ccc;border-radius:999px;cursor:pointer;transition:.3s;}
+.toggle-track:before{content:'';position:absolute;height:20px;width:20px;left:4px;bottom:4px;background:#fff;border-radius:50%;transition:.3s;}
+input:checked + .toggle-track{background:var(--green);}
+input:checked + .toggle-track:before{transform:translateX(24px);}
+.duration-row{display:flex;align-items:center;gap:12px;}
+.duration-row select{font-size:16px;font-weight:800;color:var(--purple);border:2px solid var(--purple);border-radius:10px;padding:6px 12px;background:#fff;cursor:pointer;}
+
+/* ── Daily challenge ─────────────────────────────────────────────────────── */
+.daily-progress-row{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:350px;margin:8px auto 0;font-size:15px;font-weight:900;color:var(--purple);}
+.daily-answer-dots{display:flex;justify-content:center;gap:8px;margin:8px auto 0;width:90%;max-width:350px;flex-wrap:wrap;}
+.daily-dot{font-size:20px;font-weight:900;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;}
+.dot-correct{background:#dff3e3;color:var(--green);border:2px solid var(--green);}
+.dot-wrong{background:#f9dede;color:var(--red);border:2px solid var(--red);}
+.dot-current{background:#f7e8c4;color:var(--purple);border:2px solid var(--purple);}
+.dot-empty{background:#eee;color:#bbb;border:2px solid #ccc;}
+
+/* ── Tutorial overlay ────────────────────────────────────────────────────── */
+#tutorialOverlay{display:none;position:fixed;inset:0;z-index:10000;align-items:center;justify-content:center;background:rgba(0,0,0,.6);padding:24px;}
+#tutorialOverlay.open{display:flex;}
+.tutorial-card{background:#fff;border-radius:26px;padding:36px 28px 28px;text-align:center;max-width:320px;width:100%;box-shadow:0 10px 50px rgba(0,0,0,.4);border:4px solid var(--purple);}
+.tut-icon{font-size:68px;margin-bottom:16px;line-height:1;}
+.tut-title{font-family:'Fredoka One','Arial Black',sans-serif;font-size:22px;color:var(--purple);margin-bottom:12px;line-height:1.2;}
+.tut-body{font-size:16px;font-weight:800;color:#444;line-height:1.5;margin-bottom:22px;}
+.tut-dots{display:flex;justify-content:center;gap:8px;margin-bottom:20px;}
+.tut-dot{width:10px;height:10px;border-radius:50%;background:#ddd;}
+.tut-dot.active{background:var(--purple);}
+.tut-actions{display:flex;gap:10px;justify-content:center;}
+.tut-next-btn{background:var(--purple);color:#fff;border:none;font-family:'Fredoka One',Arial,sans-serif;font-size:19px;padding:12px 28px;border-radius:30px;cursor:pointer;flex:1;}
+.tut-skip-btn{background:none;border:2px solid #ccc;color:#aaa;font-size:15px;font-weight:800;padding:12px 16px;border-radius:30px;cursor:pointer;}
+
+/* ── About text ──────────────────────────────────────────────────────────── */
+.about-copy{font-size:17px;font-weight:800;line-height:1.35;}
+.feature-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:13px;padding-bottom:13px;border-bottom:1px solid rgba(107,47,189,.12);}
+.feature-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.feature-icon{font-size:22px;flex-shrink:0;width:28px;text-align:center;line-height:1.3;}
+.feature-body{flex:1;text-align:left;}
+.feature-label{font-size:16px;font-weight:900;color:var(--purple);line-height:1.2;}
+.feature-desc{font-size:14px;font-weight:700;color:#555;margin-top:2px;line-height:1.3;}
+
+/* ── Confetti ────────────────────────────────────────────────────────────── */
+.confetti{position:fixed;top:-12px;width:10px;height:16px;opacity:.95;pointer-events:none;animation:fall linear forwards;z-index:1200;}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.95;}}
+
+@media (max-width:420px){.title{font-size:44px}.title .title-top{font-size:20px}.subtitle{font-size:24px}.question-text{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<section id="splash" class="screen active">
+  <button id="startBtn" class="primary-btn" aria-label="Begin">Begin</button>
+</section>
+
+<section id="menu" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">Choose Your Challenge</div>
+
+  <button class="menu-btn" onclick="startDailyChallenge()">📅 <span>Daily Challenge</span></button>
+
+  <button class="menu-btn" onclick="currentCategory='Is It Accurate?'; selectLevel('Advanced')"><img src="images/is--it-accurate.png" class="menu-icon"> <span>Is It Accurate?</span></button>
+  <div class="cat-strip" data-category="Is It Accurate?"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Who Am I?'; selectLevel('Advanced')"><img src="images/who-ami.png" class="menu-icon"> <span>Who Am I?</span></button>
+  <div class="cat-strip" data-category="Who Am I?"></div>
+
+  <button class="menu-btn" onclick="currentCategory='General Bible Trivia'; selectLevel('Advanced')"><img src="images/cap.png" class="menu-icon"> <span>General Bible Trivia</span></button>
+  <div class="cat-strip" data-category="General Bible Trivia"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Who said it?'; selectLevel('Advanced')"><img src="images/phone.png" class="menu-icon"> <span>Who said it?</span></button>
+  <div class="cat-strip" data-category="Who said it?"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Bible Timeline'; selectLevel('Advanced')"><img src="images/timeline.png" class="menu-icon"> <span>Bible Timeline</span></button>
+  <div class="cat-strip" data-category="Bible Timeline"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Finish the Verse'; selectLevel('Advanced')"><img src="images/verses.png" class="menu-icon"> <span>Finish the Verse</span></button>
+  <div class="cat-strip" data-category="Finish the Verse"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Prophecy Quiz'; selectLevel('Advanced')"><img src="images/prophecy.png" class="menu-icon"> <span>Prophecy Quiz</span></button>
+  <div class="cat-strip" data-category="Prophecy Quiz"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Biblical Typology'; selectLevel('Advanced')">🧩 <span>Biblical Typology</span></button>
+  <div class="cat-strip" data-category="Biblical Typology"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Miracles of Jesus'; selectLevel('Advanced')"><img src="images/miracles.png" class="menu-icon"> <span>Miracles of Jesus</span></button>
+  <div class="cat-strip" data-category="Miracles of Jesus"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Old Testament Events'; selectLevel('Advanced')">📜 <span>Old Testament Events</span></button>
+  <div class="cat-strip" data-category="Old Testament Events"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Parables'; selectLevel('Advanced')">🌾 <span>Parables</span></button>
+  <div class="cat-strip" data-category="Parables"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Bible Geography'; selectLevel('Advanced')"><img src="images/geography.png" class="menu-icon"> <span>Bible Geography</span></button>
+  <div class="cat-strip" data-category="Bible Geography"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Apostles & Early Church'; selectLevel('Advanced')"><img src="images/apostles.png" class="menu-icon"> <span>Apostles &amp; Early Church</span></button>
+  <div class="cat-strip" data-category="Apostles & Early Church"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Letters of the Apostles'; selectLevel('Advanced')"><img src="images/letters.png" class="menu-icon"> <span>Letters of the Apostles</span></button>
+  <div class="cat-strip" data-category="Letters of the Apostles"></div>
+
+  <button class="menu-btn" onclick="currentCategory='Names and Meanings'; selectLevel('Advanced')"><img src="images/names.png" class="menu-icon"> <span>Names and Meanings</span></button>
+  <div class="cat-strip" data-category="Names and Meanings"></div>
+
+  <div id="menuProgressSummary" class="menu-progress-summary" style="width:90%;max-width:350px;margin:10px auto 4px;text-align:left;"></div>
+
+  <div class="bottom">
+    <button class="small-btn" onclick="openHighScores()">🏆 Scores</button>
+    <button class="small-btn" onclick="openStats()">📊 Stats</button>
+    <button class="small-btn" onclick="openMyVerses()">📖 Verses</button>
+  </div>
+
+  <div class="bottom" style="margin-top:8px;">
+    <button class="small-btn" onclick="openSettings()">⚙️ Settings</button>
+    <button class="small-btn" onclick="openAbout()">✨ Features</button>
+  </div>
+</section>
+
+<section id="levelMenu" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div id="levelCategory" class="subtitle level-subtitle"></div>
+  <div class="subline">Choose Your Level</div>
+  <div class="level-note">Advanced questions only</div>
+  <button class="menu-btn" onclick="selectLevel('Advanced')">
+    🎓 <span>Advanced</span>
+  </button>
+  <button id="practiceBtn" class="menu-btn practice-btn" style="display:none;" onclick="startPracticeMode()">🎯 <span>Practice Tough Questions</span></button>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="quizScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div id="quizCategory" class="subtitle level-subtitle"></div>
+  <div id="quizLevel" class="level-note"></div>
+  <div class="quiz-card">
+    <div class="quiz-top-row">
+      <div id="quizMeta" class="quiz-meta"></div>
+      <div id="streakWrap" class="streak-wrap" style="display:none;">🔥 <span id="streakCount">0</span></div>
+    </div>
+    <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+    <div id="timerRow" class="timer-row">
+      <span id="timerCount" class="timer-count">15</span>
+      <div class="timer-bar-outer"><div id="timerFill" class="timer-fill"></div></div>
+    </div>
+    <div id="questionText" class="question-text"></div>
+    <button class="answer-btn" id="answer0" onclick="submitAnswer(0)"></button>
+    <button class="answer-btn" id="answer1" onclick="submitAnswer(1)"></button>
+    <button class="answer-btn" id="answer2" onclick="submitAnswer(2)"></button>
+    <button class="answer-btn" id="answer3" onclick="submitAnswer(3)"></button>
+    <div id="feedback" class="feedback"></div>
+    <div id="verseRef" class="verse-ref"></div>
+    <div id="verseText" class="verse-text"></div>
+    <div id="verseActionRow" class="verse-action-row" style="display:none;">
+      <button id="showVerseBtn" class="verse-link" type="button" onclick="openVerseModal()">📖 <span>Click to See the Verse</span></button>
+    </div>
+    <button id="nextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextQuestion()">Next Question</button>
+  </div>
+  <div class="icon-row">
+    <button id="soundToggleBtn" class="small-btn" type="button" onclick="toggleSound()" style="background:#16a34a;border:3px solid #15803d;color:#ffffff;">🔊 Sound is On</button>
+  </div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="resultScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div id="resultCategory" class="subtitle level-subtitle"></div>
+  <div id="resultLevel" class="level-note"></div>
+  <div class="quiz-card">
+    <div class="subline" style="margin-top:0;">Quiz Complete</div>
+    <div id="scoreBig" class="score-big"></div>
+    <div id="scoreSub" class="score-sub"></div>
+    <div id="perfectBox" class="perfect-box">💯 Perfect Score!</div>
+    <div id="streakBonusBox" class="streak-bonus-box" style="display:none;"></div>
+    <div id="levelUpBox" class="level-up-box" style="display:none;"></div>
+    <button id="shareBtn" class="share-btn" onclick="shareScore()">📤 Share My Score</button>
+  </div>
+  <div class="result-actions">
+    <button class="small-btn" onclick="openReview()">📋 Review My Answers</button>
+    <button class="small-btn" onclick="restartLevel()">🔁 Play This Level Again</button>
+    <button class="small-btn" onclick="showScreen('levelMenu')">📚 Choose Another Level</button>
+    <button class="small-btn" onclick="showScreen('menu')">🏠 Back to Menu</button>
+  </div>
+</section>
+
+<section id="reviewScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">Answer Review</div>
+  <div id="reviewList" class="review-list"></div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('resultScreen')">← Back to Results</button></div>
+</section>
+
+<section id="completionScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">Category Complete</div>
+  <div class="completion-card">
+    <div class="completion-big">⭐ <span id="completionCategory"></span></div>
+    <div class="completion-sub">🏆 Completed</div>
+    <div id="completionCopy" class="completion-copy"></div>
+  </div>
+  <div class="result-actions">
+    <button class="small-btn" onclick="showScreen('menu')">🏠 Back to Menu</button>
+    <button class="small-btn" onclick="showScreen('levelMenu')">📚 Choose Another Level</button>
+    <button class="small-btn" onclick="restartLevel()">🔁 Play This Level Again</button>
+  </div>
+</section>
+
+<section id="highScoresScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">High Scores</div>
+  <div id="scoresList" class="scores-list"></div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="statsScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">My Stats</div>
+  <div id="statsList" class="stats-list"></div>
+  <div class="achievements-heading">🏅 Achievements</div>
+  <div id="achievementsList"></div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="myVersesScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">My Verses</div>
+  <div class="level-note" style="font-size:15px;">Verses you've bookmarked during quizzes</div>
+  <div id="myVersesList" class="verses-list"></div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="settingsScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">Settings</div>
+  <div class="settings-card">
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">⏱ Timer Mode</div>
+        <div class="settings-sub">Countdown timer per question</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="timerToggle" onchange="onTimerToggleChange()">
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+    <div class="settings-row" id="timerDurationRow" style="display:none;">
+      <div class="settings-label">Seconds per question</div>
+      <div class="duration-row">
+        <select id="timerDuration">
+          <option value="10">10 sec</option>
+          <option value="15" selected>15 sec</option>
+          <option value="20">20 sec</option>
+          <option value="30">30 sec</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div style="width:90%;max-width:350px;margin:20px auto 0;">
+    <button class="primary-btn" style="width:100%;font-size:18px;" onclick="saveSettingsFromUI()">Save Settings</button>
+  </div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="progressScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">Category Progress</div>
+  <div id="progressList" class="progress-list"></div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="aboutScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">App Features</div>
+  <div class="quiz-card about-copy">
+    <div style="font-size:20px;font-weight:900;margin-bottom:14px;text-align:center;">What this app includes</div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📚</div>
+      <div class="feature-body">
+        <div class="feature-label">1,001+ Questions</div>
+        <div class="feature-desc">A deep advanced Bible quiz built for serious study</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🎓</div>
+      <div class="feature-body">
+        <div class="feature-label">Advanced Bible Quiz Collection</div>
+        <div class="feature-desc">A focused challenge for stronger biblical knowledge and deeper reflection</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🧠</div>
+      <div class="feature-body">
+        <div class="feature-label">Is It Accurate?</div>
+        <div class="feature-desc">Test common sayings, quotations, and Bible misconceptions</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🕵️</div>
+      <div class="feature-body">
+        <div class="feature-label">Who Am I?</div>
+        <div class="feature-desc">Identify Bible characters from clues and descriptions</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📘</div>
+      <div class="feature-body">
+        <div class="feature-label">General Bible Trivia</div>
+        <div class="feature-desc">Advanced questions for serious Bible students</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📣</div>
+      <div class="feature-body">
+        <div class="feature-label">Who Said It?</div>
+        <div class="feature-desc">Compare familiar sayings against what Scripture actually says</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🕰️</div>
+      <div class="feature-body">
+        <div class="feature-label">Bible Timeline</div>
+        <div class="feature-desc">Follow the sequence of major biblical people and events</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📖</div>
+      <div class="feature-body">
+        <div class="feature-label">Finish the Verse</div>
+        <div class="feature-desc">Complete key verses and test biblical recall</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🔮</div>
+      <div class="feature-body">
+        <div class="feature-label">Prophecy Quiz</div>
+        <div class="feature-desc">Explore prophetic themes, promises, and fulfillment</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🧩</div>
+      <div class="feature-body">
+        <div class="feature-label">Biblical Typology</div>
+        <div class="feature-desc">Trace patterns, shadows, and fulfillments across Scripture</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">✨</div>
+      <div class="feature-body">
+        <div class="feature-label">Miracles of Jesus</div>
+        <div class="feature-desc">Study signs, wonders, and what they reveal</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📜</div>
+      <div class="feature-body">
+        <div class="feature-label">Old Testament Events</div>
+        <div class="feature-desc">Review major events and themes from the Old Testament</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🌾</div>
+      <div class="feature-body">
+        <div class="feature-label">Parables</div>
+        <div class="feature-desc">Test your understanding of Jesus’ parables and teachings</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🗺️</div>
+      <div class="feature-body">
+        <div class="feature-label">Bible Geography</div>
+        <div class="feature-desc">Recognize places, regions, and lands of Scripture</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">⛪</div>
+      <div class="feature-body">
+        <div class="feature-label">Apostles &amp; Early Church</div>
+        <div class="feature-desc">Learn about the apostles and the growth of the early church</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📅</div>
+      <div class="feature-body">
+        <div class="feature-label">Daily Challenge</div>
+        <div class="feature-desc">5 new questions every day with a daily streak</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📋</div>
+      <div class="feature-body">
+        <div class="feature-label">Answer Review</div>
+        <div class="feature-desc">See which questions you got right or wrong after each quiz</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📤</div>
+      <div class="feature-body">
+        <div class="feature-label">Share Your Score</div>
+        <div class="feature-desc">Challenge friends with one tap</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">⏱</div>
+      <div class="feature-body">
+        <div class="feature-label">Timer Mode</div>
+        <div class="feature-desc">Optional countdown per question for added challenge</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🎯</div>
+      <div class="feature-body">
+        <div class="feature-label">Practice Tough Questions</div>
+        <div class="feature-desc">Review the ones you've missed</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🔥</div>
+      <div class="feature-body">
+        <div class="feature-label">Streak Bonuses &amp; Category Medals</div>
+        <div class="feature-desc">Earn 🥉🥈🥇⭐ as you progress through the quiz categories</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🏅</div>
+      <div class="feature-body">
+        <div class="feature-label">Achievement Milestones</div>
+        <div class="feature-desc">Bronze through Bible Champion</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">▶️</div>
+      <div class="feature-body">
+        <div class="feature-label">Resume Last Quiz</div>
+        <div class="feature-desc">Pick up right where you left off</div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🔊</div>
+      <div class="feature-body">
+        <div class="feature-label">Sound Effects</div>
+        <div class="feature-desc">With Sound On / Off control</div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(107,47,189,.18);text-align:center;">
+      <div style="font-weight:900;margin-bottom:6px;color:var(--purple);">
+        Looking for more?
+      </div>
+
+      <a href="https://practicalfaith.net/quiz_links.html" target="_blank"
+         style="display:inline-block;margin-top:8px;padding:12px 24px;
+         background:var(--purple);color:#fff;
+         font-family:'Nunito',Arial,sans-serif;font-weight:800;
+         font-size:18px;border-radius:30px;text-decoration:none;
+         box-shadow:0 4px 12px rgba(107,47,189,.35);">
+        📘 Try the Original Bible Quiz
+      </a>
+
+      <div style="font-size:14px;color:#888;margin-top:8px;">
+        A broader quiz with foundational questions
+      </div>
+    </div>
+
+    <div style="margin-top:18px;padding-top:12px;border-top:2px solid rgba(107,47,189,.18);text-align:center;">
+      <div style="font-weight:900;margin-bottom:6px;color:var(--purple);">More Bible Teaching</div>
+      <a href="https://PracticalFaith.net" target="_blank" style="display:inline-block;margin-top:8px;padding:12px 24px;background:var(--purple);color:#fff;font-family:'Nunito',Arial,sans-serif;font-weight:800;font-size:18px;border-radius:30px;text-decoration:none;box-shadow:0 4px 12px rgba(107,47,189,.35);">🌐 Visit PracticalFaith.net</a>
+      <div style="font-size:14px;color:#888;margin-top:8px;">Sermons, teaching videos &amp; theology books</div>
+    </div>
+  </div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+<section id="dailyScreen" class="screen">
+  <h1 class="title"><span class="title-top">Practical Faith</span>Advanced Quiz</h1>
+  <div class="subtitle">Daily Challenge</div>
+  <div id="dailyDateLabel" class="level-note"></div>
+  <div id="dailyProgressRow" class="daily-progress-row" style="display:none;">
+    <span id="dailyProgressText">Question 1 of 5</span>
+    <span id="dailyScoreText">Score: 0</span>
+  </div>
+  <div id="dailyAnswerDots" class="daily-answer-dots"></div>
+  <div class="daily-card">
+    <div id="dailyStatusText" class="question-text" style="font-size:22px;"></div>
+    <div id="dailyQuestionWrap" style="display:none;">
+      <div id="dailyQuestionText" class="question-text"></div>
+      <button class="answer-btn" id="dailyAnswer0" onclick="submitDailyAnswer(0)"></button>
+      <button class="answer-btn" id="dailyAnswer1" onclick="submitDailyAnswer(1)"></button>
+      <button class="answer-btn" id="dailyAnswer2" onclick="submitDailyAnswer(2)"></button>
+      <button class="answer-btn" id="dailyAnswer3" onclick="submitDailyAnswer(3)"></button>
+      <div id="dailyFeedback" class="feedback"></div>
+      <div id="dailyVerseRef" class="verse-ref"></div>
+      <div id="dailyVerseActionRow" class="verse-action-row" style="display:none;">
+        <button id="dailyShowVerseBtn" class="verse-link" type="button" onclick="openDailyVerseModal()">📖 <span>Click to See the Verse</span></button>
+      </div>
+      <button id="dailyNextBtn" class="small-btn quiz-next" style="display:none;" onclick="nextDailyQuestion()">Next Question</button>
+    </div>
+    <div id="dailyCompleteBox" class="perfect-box" style="display:none;"></div>
+  </div>
+  <div class="back-row"><button class="small-btn" onclick="showScreen('menu')">← Back to Menu</button></div>
+</section>
+
+</div>
+
+<div id="dailyVerseModal" class="modal-backdrop" onclick="closeDailyVerseModal(event)">
+  <div class="modal-card" onclick="event.stopPropagation()">
+    <div class="modal-title">Verse</div>
+    <div id="dailyModalVerseRef" class="modal-ref"></div>
+    <div id="dailyModalVerseText" class="modal-verse"></div>
+    <div class="modal-actions"><button class="small-btn" type="button" onclick="closeDailyVerseModal()">Close</button></div>
+  </div>
+</div>
+
+<div id="verseModal" class="modal-backdrop" onclick="closeVerseModal(event)">
+  <div class="modal-card" onclick="event.stopPropagation()">
+    <div class="modal-title">📖 Verse</div>
+    <div id="modalVerseRef" class="modal-ref"></div>
+    <div id="modalVerseText" class="modal-verse"></div>
+    <div class="modal-actions">
+      <button id="bookmarkBtn" class="bookmark-btn" onclick="toggleBookmark(currentQuestion || (currentQuestions && currentQuestions[currentQuestionIndex]))">🔖 Bookmark Verse</button>
+      <button class="small-btn" type="button" onclick="closeVerseModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<div id="achievementPopup" onclick="closeAchievementPopup()">
+  <div class="achievement-popup-card" onclick="event.stopPropagation()">
+    <div id="achievementIcon" class="ach-popup-icon"></div>
+    <div class="ach-popup-title">Achievement Unlocked!</div>
+    <div id="achievementMsg" class="ach-popup-msg"></div>
+    <div class="ach-popup-dismiss">Tap anywhere to dismiss</div>
+  </div>
+</div>
+
+<div id="tutorialOverlay">
+  <div class="tutorial-card">
+    <div id="tutIcon" class="tut-icon">📖</div>
+    <div id="tutTitle" class="tut-title"></div>
+    <div id="tutBody" class="tut-body"></div>
+    <div id="tutDots" class="tut-dots"></div>
+    <div class="tut-actions">
+      <button class="tut-skip-btn" onclick="closeTutorial()">Skip</button>
+      <button id="tutNextBtn" class="tut-next-btn" onclick="tutorialNext()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<section id="paywallScreen" class="screen">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0 0 40px;text-align:center;">
+    <div style="font-size:52px;margin-bottom:12px;">📖</div>
+    <h2 style="font-size:26px;font-weight:900;color:var(--purple);margin-bottom:8px;">Unlock the Full Bible<br>Quiz Challenge!</h2>
+    <p id="paywallMessage" style="font-size:16px;color:#444;line-height:1.6;margin:16px 0 24px;"></p>
+
+    <div style="background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid #ffc107;border-radius:16px;padding:18px 20px;width:100%;margin-bottom:24px;">
+      <div style="font-size:22px;font-weight:900;color:var(--purple);margin-bottom:6px;">🏆 Pro Upgrade — $1.99</div>
+      <div style="font-size:14px;color:#555;line-height:1.9;text-align:left;display:inline-block;">
+        <div>✅ 1,001+ questions unlocked</div>
+        <div>✅ Advanced question set</div>
+        <div>✅ Daily Challenge every day</div>
+        <div>✅ Bookmarks &amp; verse saving</div>
+        <div>✅ Full stats &amp; achievements</div>
+        <div>✅ All future content updates</div>
+      </div>
+    </div>
+
+    <button class="primary-btn" style="width:100%;font-size:18px;padding:16px;margin-bottom:12px;" onclick="purchasePro()">
+      🔓 Unlock Pro — $1.99
+    </button>
+    <button class="small-btn" style="width:100%;" onclick="restorePurchase()">
+      Restore Purchase
+    </button>
+    <button class="small-btn" style="width:100%;margin-top:8px;" onclick="showScreen('menu')">
+      ← Back to Menu
+    </button>
+  </div>
+</section>
+
+<script src="questions/trivia.js"></script>
+<script src="questions/quotes.js"></script>
+<script src="questions/timeline.js"></script>
+<script src="questions/verses.js"></script>
+<script src="questions/prophecy.js"></script>
+<script src="questions/typology.js"></script>
+<script src="questions/miracles.js"></script>
+<script src="questions/oldtestament.js"></script>
+<script src="questions/parables.js"></script>
+<script src="questions/geography.js"></script>
+<script src="questions/apostles.js"></script>
+<script src="questions/is-it-accurate.js"></script>
+<script src="questions/who-am-i.js"></script>
+<script src="questions/letters.js"></script>
+<script src="questions/names.js"></script>
+<script src="questions-index.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
