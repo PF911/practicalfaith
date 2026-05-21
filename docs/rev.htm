@@ -312,9 +312,57 @@ href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Barlow
     .app-grid, .m3u-grid { grid-template-columns: 1fr; }
     .backup-card { flex-direction: column; text-align: center; }
   }
-</style>
+.app-icon1 {    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-info1 {flex: 1; min-width: 0; }
+.app-name1 {    font-weight: 700;
+    font-size: .95rem;
+    color: #1a5fa8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card1 {    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color .2s, transform .15s, box-shadow .2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.card-top1 {    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.dl-btn1 {    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background: var(--dl-btn);
+    color: var(--dl-text);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: .8rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(26,95,168,.2);
+    transition: background .2s, border-color .2s;
+    margin-top: auto;
+}
+    </style>
   </head>
-  <body>
+<body>
     <!-- ════════════════════════════════ HEADER ═══ -->
     <header>
       <h1><span></span> REV’S HOT BOX</h1>
@@ -670,6 +718,24 @@ href="https://www.dropbox.com/scl/fi/u09nov36euhv9eobg6l6b/MX-Player-Pro.apk?rlk
         <div class="card">
           <div class="card-top">
             <div class="app-icon"> <img
+src="https://www.dropbox.com/scl/fi/ycubhcdu4j03dybvyopzr/nuvio.png?rlkey=cogskmwm0wtuj2uxsvkuiarpr&st=f37hsbec&raw=1"
+                alt=""
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="icon-fallback" style="display:none">▶️</span>
+            </div>
+            <div class="app-info">
+              <div class="app-name">Nuvio</div>
+              <div class="app-desc">Complete streaming app<br>Pre-programed Movies - Series - Live TV</div>
+            </div>
+          </div>
+          <a class="dl-btn"
+href="https://www.dropbox.com/scl/fi/u09nov36euhv9eobg6l6b/MX-Player-Pro.apk?rlkey=457lpil7iazwhl73wofxi21z8&amp;st=w1epsfim&amp;raw=1">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5"><path d="M12
+                5v14M5 12l7 7 7-7"></path></svg> Download APK </a> </div>
+        <div class="card">
+          <div class="card-top">
+            <div class="app-icon"> <img
 src="https://www.dropbox.com/scl/fi/s9pubikj0gtt3vdpgz8bz/onstream.png?rlkey=m59r9ocjhpjmmzwrvouvkbnyj&amp;st=usnwzobw&amp;raw=1"
                 alt=""
 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -701,6 +767,24 @@ onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
           </div>
           <a class="dl-btn"
 href="https://www.dropbox.com/scl/fi/mbm5mo1gt2fx8mgznnb5u/SmartTubeNext_11.73.apk?rlkey=63z768rb0s1qrr7afh9ro3dng&amp;st=g2137erx&amp;dl=1">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5"><path d="M12
+                5v14M5 12l7 7 7-7"></path></svg> Download APK </a> </div>
+        <div class="card">
+          <div class="card-top">
+            <div class="app-icon"> <img
+src="https://www.dropbox.com/scl/fi/e3l3dzex8gbu7c8lzve4m/stremio.png?rlkey=yqnselp4bdritil7dpzift2bu&st=fk6vi92f&raw=1"
+                alt=""
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="icon-fallback" style="display:none">▶️</span>
+            </div>
+            <div class="app-info">
+              <div class="app-name">Stremio</div>
+              <div class="app-desc"><span style="font-size: 12.48px;">Complete streaming app</span><br style="font-size: 12.48px;"><span style="font-size: 12.48px;">Pre-programed Movies - Series - Live TV</span></div>
+            </div>
+          </div>
+          <a class="dl-btn"
+href="https://www.dropbox.com/scl/fi/9ihrp79bpjrt22cc4x66d/Stremio.apk?rlkey=gxa8iyox4153snt916clfx8j8&st=7m8yj4vm&raw=1">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2.5"><path d="M12
                 5v14M5 12l7 7 7-7"></path></svg> Download APK </a> </div>
@@ -1056,23 +1140,6 @@ href="https://www.dropbox.com/s/oci44tqszbatqrv/Launch%20on%20Boot.apk?dl=0">
               stroke="currentColor" stroke-width="2.5"><path d="M12
                 5v14M5 12l7 7 7-7"></path></svg> Download APK </a> </div>
         <!-- ─── TDUK Screensaver Manager ─── -->
-        <div class="card">
-          <div class="card-top">
-            <div class="app-icon"> <img src="pngs/TDUKssManager.png"
-                alt=""
-onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <span class="icon-fallback" style="display:none">🌌</span>
-            </div>
-            <div class="app-info">
-              <div class="app-name">TDUK Screensaver Manager</div>
-              <div class="app-desc">Use with Aerial Dream Screensaver</div>
-            </div>
-          </div>
-          <a class="dl-btn"
-href="https://www.dropbox.com/s/41iq4qk0u2vobuu/TDUK_SS_Manager.apk?raw=1">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5"><path d="M12
-                5v14M5 12l7 7 7-7"></path></svg> Download APK </a> </div>
         <!-- ─── TroyPoint App ─── -->
         <div class="card">
           <div class="card-top">
@@ -1095,8 +1162,11 @@ href="https://www.dropbox.com/s/vwd8ks68gu1a21a/TROYPOINT_5.0.4.apk?raw=1">
         <!-- ─── USTV ─── -->
         <!-- ─── WPS Office ─── -->
         <!-- ════ ADD NEW APK CARDS HERE ════ --> </div>
-      <!-- /app-grid -->
-      <!-- ═══════════════════════════ M3Us ═══ -->
+      <p><!-- /app-grid -->
+        <!-- Launch on Boot ─── -->
+      </p>
+      <p>═══════════════════════════ M3Us ═══ -->
+      </p>
       <div class="section-head">
         <h2><span style="font-family: var(--mono); font-size: 1.05rem;
             letter-spacing: 0.15em;">SQUAREHOME BACKUPs</span></h2>
